@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-02-25T15:54:20+08:00</updated>
+  <updated>2014-02-25T16:31:39+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,25 +14,39 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Introduction About View]]></title>
+    <title type="html"><![CDATA[视图简介]]></title>
     <link href="http://balloonsys.github.io/blog/2014/02/25/introduction-about-view/"/>
     <updated>2014-02-25T15:50:00+08:00</updated>
     <id>http://balloonsys.github.io/blog/2014/02/25/introduction-about-view</id>
-    <content type="html"><![CDATA[<h3>Views</h3>
+    <content type="html"><![CDATA[<p>一个视图可以拥有多个子视图，但父视图只能有一个。</p>
 
 <h2>The Window</h2>
 
+<p>视图结构的最顶层是应用的Window对象，生命周期与应用一致。</p>
+
 <h2>Experimenting With Views</h2>
+
+<p>说点什么吧</p>
 
 <h2>Subview and Superview</h2>
 
+<p>说点什么吧</p>
+
 <h2>Layout</h2>
 
-<h1>Autoresizing</h1>
+<p>说点什么吧</p>
 
-<h1>Autolayout</h1>
+<h3>Autoresizing</h3>
 
-<h1>Constraints in the Nib</h1>
+<p>说点什么吧</p>
+
+<h3>Autolayout</h3>
+
+<p>说点什么吧</p>
+
+<h3>Constraints in the Nib</h3>
+
+<p>说点什么吧</p>
 ]]></content>
   </entry>
   
