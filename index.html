@@ -103,9 +103,9 @@
 <p>当应用启动时，UIApplicationMain会创建一个appDelegate实例。App Delegate会“持有”一个window实例（strong型）。所以window对象的生命周期与应用一致。</p>
 
 <p>获得window实例有三种方式：
-* view.window
-* [UIApplication sharedApplication].delegate.window
-* [UIApplication sharedApplication].keyWindow</p>
+&ndash; view.window
+&ndash; [UIApplication sharedApplication].delegate.window
+&ndash; [UIApplication sharedApplication].keyWindow</p>
 
 <p>需要注意的是keyWindow有可能发生变化，比如当显示UIAlertView时，keyWindow为该弹出框！</p>
 
