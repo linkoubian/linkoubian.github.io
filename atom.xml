@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-02-26T20:07:44+08:00</updated>
+  <updated>2014-02-26T20:09:20+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Balloonsys Inc.]]></name>
@@ -42,18 +42,20 @@
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
 </pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="nl">insertSubview:atIndex:</span>
+</span><span class='line'><span class="nl">insertSubview:belowSubview:</span>
+</span><span class='line'><span class="nl">exchangeSubviewAtIndex:withSubviewAtIndex:</span>
+</span><span class='line'><span class="nl">bringSubviewToFront:</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="nl">insertSubview:belowSubview:</span>
-</span></code></pre></td></tr></table></div></figure>
+<ol>
+<li>将父视图的所有子视图移除掉，可以用下面两种写法：</li>
+</ol>
 
-
-<p>exchangeSubviewAtIndex:withSubviewAtIndex:<br/>
-bringSubviewToFront:<br/>
-5. 将父视图的所有子视图移除掉，可以用下面两种写法：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

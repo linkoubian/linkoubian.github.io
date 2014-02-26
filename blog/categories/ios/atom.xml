@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-02-26T20:07:44+08:00</updated>
+  <updated>2014-02-26T20:09:20+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Balloonsys Inc.]]></name>
@@ -40,12 +40,10 @@
 <li>与视图结构相关的几个方法：
 <code>objc  
 insertSubview:atIndex:
-</code>
-<code>objc
 insertSubview:belowSubview:
-</code>
-exchangeSubviewAtIndex:withSubviewAtIndex:<br/>
-bringSubviewToFront:</li>
+exchangeSubviewAtIndex:withSubviewAtIndex:
+bringSubviewToFront:
+</code></li>
 <li>将父视图的所有子视图移除掉，可以用下面两种写法：<br/>
 <code>objc
 for (UIView *v in view.subviews)
