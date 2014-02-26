@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-02-26T19:29:16+08:00</updated>
+  <updated>2014-02-26T19:30:17+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Balloonsys Inc.]]></name>
@@ -24,7 +24,7 @@
 
 <p>当应用启动时，UIApplicationMain会创建一个appDelegate实例。App Delegate会“持有”一个window实例（strong型）。所以window对象的生命周期与应用一致。</p>
 
-<p>获得window实例有三种方式：
+<p>获得window实例有三种方式：<br/>
 1. view.window<br/>
 2. [UIApplication sharedApplication].delegate.window <br/>
 3. [UIApplication sharedApplication].keyWindow</p>
