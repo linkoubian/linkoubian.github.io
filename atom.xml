@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-02-26T20:42:12+08:00</updated>
+  <updated>2014-02-26T23:13:33+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Balloonsys Inc.]]></name>
@@ -56,6 +56,21 @@ bringSubviewToFront:<br/>
 <p>Opaque，不是用来影响视图的显示，而是用于绘图系统的一个hint值，以便绘制更加高效。</p>
 
 <h2>Bounds, Center and Frame</h2>
+
+<p>Bounds代表的是视图自身的坐标系，而frame表示的是该视图在父视图中得位置。</p>
+
+<p>改变bounds的宽高，会影响其frame，保持不变的是center值。改变bounds的origin值，相当于说该视图坐标系左上角那个点的值被改变，因此其坐标系的原点移到其他位置了。而子视图是在父视图的坐标系里定位的，所以子视图会因父视图的origin变化而逆向变化。</p>
+
+<p>Center是视图bounds的中心点在父视图中的位置。Center加bounds相当于frame。</p>
+
+<p>假如v2是v1的子视图，要想把v2放在v1的中心，可以这么做，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">v2</span><span class="p">.</span><span class="n">center</span> <span class="o">=</span> <span class="p">[</span><span class="n">v1</span> <span class="nl">convertPoint:</span><span class="n">v1</span><span class="p">.</span><span class="n">center</span> <span class="nl">fromView:</span><span class="n">v1</span><span class="p">.</span><span class="n">superview</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Transform</h2>
 
 <h2>Layout</h2>
 
