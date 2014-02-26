@@ -99,13 +99,13 @@
 
 <p>当应用启动时，UIApplicationMain会创建一个appDelegate实例。App Delegate会“持有”一个window实例（strong型）。所以window对象的生命周期与应用一致。</p>
 
-<h1>使用storyboard</h1>
+<h3>使用storyboard</h3>
 
 <p>如果appDelegate的window属性是nil，UIApplicationMain会实例化一个window并设到appDelegate中。如果appDelegate的window不是nil，则UIApplicationMain直接使用这个window实例作为app的主窗口。</p>
 
 <p>所以，如果需要实例化自定义的Window对象并作为app的主窗口的话，只需在appDelegate中重写window的getter方法。</p>
 
-<h1>不用storyboard</h1>
+<h3>不用storyboard</h3>
 
 <p>直接在appDelegate中创建window的实例。所以，此时如果需要实例化自定义的Window对象，仅仅在创建实例时用自定义类型即可。</p>
 
