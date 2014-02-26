@@ -116,7 +116,7 @@
 insertSubview:atIndex:<br/>
 insertSubview:belowSubview:<br/>
 exchangeSubviewAtIndex:withSubviewAtIndex:<br/>
-bringSubviewToFront:
+bringSubviewToFront:<br/>
 5. 将父视图的所有子视图移除掉，可以用下面这种写法：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -128,7 +128,7 @@ bringSubviewToFront:
 
 <p>Alpha，可理解为相对于父视图的不透明度。所以即使一个视图的alpha值为1，它也有可能是透明的。</p>
 
-<p>Opaque，不影响视图的显示，它是让绘图系统更加高效的一个hint值。</p>
+<p>Opaque，不是用来影响视图的显示，而是用于绘图系统的一个hint值，以便绘制更加高效。</p>
 
 <h2>Bounds, Center and Frame</h2>
 
