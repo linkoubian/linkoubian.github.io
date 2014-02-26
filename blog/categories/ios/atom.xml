@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-02-26T20:02:21+08:00</updated>
+  <updated>2014-02-26T20:04:20+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Balloonsys Inc.]]></name>
@@ -37,11 +37,11 @@
 <li>限制子视图只在父视图区域内绘制，可设置父视图的clipsToBounds属性</li>
 <li>判断一个视图是不是另一个的子孙视图，可以用isDescendantOfView:</li>
 <li>子视图从父视图中移除掉，会被“释放”。若后续需使用，可另行“持有”</li>
-<li>与视图结构相关的几个方法：</li>
-<li>insertSubview:atIndex:</li>
-<li>insertSubview:belowSubview:</li>
-<li>exchangeSubviewAtIndex:withSubviewAtIndex:</li>
-<li>bringSubviewToFront:</li>
+<li>与视图结构相关的几个方法：<br/>
+insertSubview:atIndex:<br/>
+insertSubview:belowSubview:<br/>
+exchangeSubviewAtIndex:withSubviewAtIndex:<br/>
+bringSubviewToFront:</li>
 <li>将父视图的所有子视图移除掉，可以用下面两种写法：<br/>
 <code>objc
 for (UIView *v in view.subviews)
