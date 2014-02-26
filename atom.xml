@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-02-26T20:18:59+08:00</updated>
+  <updated>2014-02-26T20:39:09+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Balloonsys Inc.]]></name>
@@ -33,23 +33,29 @@
 
 <h2>Subview and Superview</h2>
 
-<ol>
-<li>限制子视图只在父视图区域内绘制，可设置父视图的clipsToBounds属性</li>
-<li>判断一个视图是不是另一个的子孙视图，可以用isDescendantOfView:</li>
-<li>子视图从父视图中移除掉，会被“释放”。若后续需使用，可另行“持有”</li>
-<li>与视图结构相关的几个方法：<br/>
+<p>关于父子视图间的常见操作主要有：<br/>
+1. 限制子视图只在父视图区域内绘制，可设置父视图的clipsToBounds属性<br/>
+2. 判断一个视图是不是另一个的子孙视图，可以用isDescendantOfView:<br/>
+3. 子视图从父视图中移除掉，会被“释放”。若后续需使用，可另行“持有”<br/>
+4. 与视图结构相关的几个方法：<br/>
 insertSubview:atIndex:<br/>
 insertSubview:belowSubview:<br/>
 exchangeSubviewAtIndex:withSubviewAtIndex:<br/>
-bringSubviewToFront:</li>
-<li>将父视图的所有子视图移除掉，可以用下面这种写法：</li>
-</ol>
-
+bringSubviewToFront:
+5. 将父视图的所有子视图移除掉，可以用下面这种写法：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">view</span><span class="p">.</span><span class="n">subviews</span> <span class="nl">makeObjectPerformSelector:</span><span class="k">@selector</span><span class="p">(</span><span class="n">removeFromSuperView</span><span class="p">)];</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<h2>Visibility and Opacity</h2>
+
+<p>Alpha，可理解为相对于父视图的不透明度。所以即使一个视图的alpha值为1，它也有可能是透明的。</p>
+
+<p>Opaque，不影响视图的显示，它是让绘图系统更加高效的一个hint值。</p>
+
+<h2>Bounds, Center and Frame</h2>
 
 <h2>Layout</h2>
 
