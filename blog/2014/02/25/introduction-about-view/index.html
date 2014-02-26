@@ -9,7 +9,7 @@
   <meta name="author" content="Balloonsys Inc.">
 
   
-  <meta name="description" content="本文是对iOS的视图用法的一些小结。 The Window 当应用启动时，UIApplicationMain会创建一个appDelegate实例。App Delegate会“持有”一个window实例（strong型）。所以window对象的生命周期与应用一致。 获得window实例有三种方式 &hellip;">
+  <meta name="description" content="本文是对iOS的视图用法的一些小结。 The Window 当应用启动时，UIApplicationMain会创建一个appDelegate实例。App Delegate会“持有”一个window实例（strong型）。所以window对象的生命周期与应用一致。 获得window实例有三种方式： &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -100,9 +100,9 @@
 <p>当应用启动时，UIApplicationMain会创建一个appDelegate实例。App Delegate会“持有”一个window实例（strong型）。所以window对象的生命周期与应用一致。</p>
 
 <p>获得window实例有三种方式：
-&ndash; view.window
-&ndash; [UIApplication sharedApplication].delegate.window
-&ndash; [UIApplication sharedApplication].keyWindow</p>
+1. view.window<br/>
+2. [UIApplication sharedApplication].delegate.window<br/>
+3. [UIApplication sharedApplication].keyWindow</p>
 
 <p>需要注意的是keyWindow有可能发生变化，比如当显示UIAlertView时，keyWindow为该弹出框！</p>
 
