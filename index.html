@@ -9,7 +9,7 @@
   <meta name="author" content="Balloonsys Inc.">
 
   
-  <meta name="description" content="本文是对iOS的视图用法的一些小结。 The Window 当应用启动时，UIApplicationMain会创建一个appDelegate实例。App Delegate会“持有”一个window实例（strong型）。所以window对象的生命周期与应用一致。 使用storyboard &hellip;">
+  <meta name="description" content="本文是对iOS的视图用法的一些小结。 The Window 当应用启动时，UIApplicationMain会创建一个appDelegate实例。App Delegate会“持有”一个window实例（strong型）。所以window对象的生命周期与应用一致。 获得window实例有三种方式： &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -102,15 +102,12 @@
 
 <p>当应用启动时，UIApplicationMain会创建一个appDelegate实例。App Delegate会“持有”一个window实例（strong型）。所以window对象的生命周期与应用一致。</p>
 
-<h3>使用storyboard</h3>
+<p>获得window实例有三种方式：
+1. view.window
+2. [UIApplication sharedApplication].delegate.window
+3. [UIApplication sharedApplication].keyWindow</p>
 
-<p>如果appDelegate的window属性是nil，UIApplicationMain会实例化一个window并设到appDelegate中。如果appDelegate的window不是nil，则UIApplicationMain直接使用这个window实例作为app的主窗口。</p>
-
-<p>所以，如果需要实例化自定义的Window对象并作为app的主窗口的话，只需在appDelegate中重写window的getter方法。</p>
-
-<h3>不用storyboard</h3>
-
-<p>直接在appDelegate中创建window的实例。所以，此时如果需要实例化自定义的Window对象，仅仅在创建实例时用自定义类型即可。</p>
+<p>需要注意的是keyWindow有可能发生变化，比如当显示UIAlertView时，keyWindow为该弹出框！</p>
 
 <h2>Experimenting With Views</h2>
 
