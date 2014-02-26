@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-02-26T19:25:25+08:00</updated>
+  <updated>2014-02-26T19:29:16+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Balloonsys Inc.]]></name>
@@ -26,14 +26,14 @@
 
 <p>获得window实例有三种方式：
 1. view.window<br/>
-2. [UIApplication sharedApplication].delegate.window<br/>
+2. [UIApplication sharedApplication].delegate.window <br/>
 3. [UIApplication sharedApplication].keyWindow</p>
 
 <p>需要注意的是keyWindow有可能发生变化，比如当显示UIAlertView时，keyWindow为该弹出框！</p>
 
 <h2>Experimenting With Views</h2>
 
-<p>说点什么吧?</p>
+<p>说点什么吧</p>
 
 <h2>Subview and Superview</h2>
 
