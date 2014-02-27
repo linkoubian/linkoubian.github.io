@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-02-26T23:13:33+08:00</updated>
+  <updated>2014-02-27T09:40:07+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Balloonsys Inc.]]></name>
@@ -37,12 +37,18 @@
 1. 限制子视图只在父视图区域内绘制，可设置父视图的clipsToBounds属性<br/>
 2. 判断一个视图是不是另一个的子孙视图，可以用isDescendantOfView:<br/>
 3. 子视图从父视图中移除掉，会被“释放”。若后续需使用，可另行“持有”<br/>
-4. 与视图结构相关的几个方法：<br/>
-insertSubview:atIndex:<br/>
-insertSubview:belowSubview:<br/>
-exchangeSubviewAtIndex:withSubviewAtIndex:<br/>
-bringSubviewToFront:<br/>
-5. 将父视图的所有子视图移除掉，可以用下面这种写法：</p>
+4. 与视图结构相关的几个方法：</p>
+
+<pre><code>insertSubview:atIndex:  
+insertSubview:belowSubview:  
+exchangeSubviewAtIndex:withSubviewAtIndex:  
+bringSubviewToFront:  
+</code></pre>
+
+<ol>
+<li>将父视图的所有子视图移除掉，可以用下面这种写法：</li>
+</ol>
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">view</span><span class="p">.</span><span class="n">subviews</span> <span class="nl">makeObjectPerformSelector:</span><span class="k">@selector</span><span class="p">(</span><span class="n">removeFromSuperView</span><span class="p">)];</span>
@@ -57,7 +63,7 @@ bringSubviewToFront:<br/>
 
 <h2>Bounds, Center and Frame</h2>
 
-<p>Bounds代表的是视图自身的坐标系，而frame表示的是该视图在父视图中得位置。</p>
+<p>Bounds代表的是视图自身的坐标系，而frame表示的是该视图在父视图中的位置。</p>
 
 <p>改变bounds的宽高，会影响其frame，保持不变的是center值。改变bounds的origin值，相当于说该视图坐标系左上角那个点的值被改变，因此其坐标系的原点移到其他位置了。而子视图是在父视图的坐标系里定位的，所以子视图会因父视图的origin变化而逆向变化。</p>
 
