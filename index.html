@@ -150,6 +150,37 @@ bringSubviewToFront:<br/>
 
 <h2>Transform</h2>
 
+<p>将视图v顺时针旋转45°，可以设置其transform属性为CGAffineTransformMakeRotation(45*M_PI/180.0)。此时v的frame是旋转后的v的外接矩形。其子视图虽然也跟着旋转，但子视图的frame并无变化，因为v的bounds不变（即v自身的坐标系不变）。</p>
+
+<p>拉伸函数CGAffineTransformMakeScale会使得视图的frame发生变化，但其bounds保持不变。子视图的frame、bounds、center值均保持不变。</p>
+
+<p>组合若干变换应用到视图上，下面代码先将v旋转，然后在沿着自身坐标系的x轴方向平移100个点。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">v</span><span class="p">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">CGAffineTransformMakeRotation</span><span class="p">(</span><span class="mi">45</span> <span class="o">*</span> <span class="n">M_PI</span><span class="o">/</span><span class="mf">180.0</span><span class="p">);</span>
+</span><span class='line'><span class="n">v</span><span class="p">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">CGAffineTransformTranslate</span><span class="p">(</span><span class="n">v2</span><span class="p">.</span><span class="n">transform</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>也可以使用CGAffineTransformConcat组合多个变换，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">CGAffineTransform</span> <span class="n">r</span> <span class="o">=</span> <span class="n">CGAffineTransformMakeRotation</span><span class="p">(</span><span class="mi">45</span> <span class="o">*</span> <span class="n">M_PI</span><span class="o">/</span><span class="mf">180.0</span><span class="p">);</span>
+</span><span class='line'><span class="n">CGAffineTransform</span> <span class="n">t</span> <span class="o">=</span> <span class="n">CGAffineTransformMakeTranslation</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'><span class="n">v</span><span class="p">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">CGAffineTransformConcat</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">r</span><span class="p">);</span> <span class="c1">// not r,t</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>撤销组合变换中的某个变换，只需再次叠加其反变换。比如需要将v在新位置逆时针旋转45°，只需执行下面这行代码，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">v</span><span class="p">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">CGAffineTransformConcat</span><span class="p">(</span><span class="n">CGAffineTransformInvert</span><span class="p">(</span><span class="n">r</span><span class="p">),</span> <span class="n">v</span><span class="p">.</span><span class="n">transform</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
 <h2>Layout</h2>
 
 <p>说点什么吧</p>
