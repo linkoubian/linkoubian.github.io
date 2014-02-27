@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>闲暇时开发的应用 - Balloonsys Inc.</title>
+  <title>与Auto Layout相关的各种知识点 - Balloonsys Inc.</title>
   <meta name="author" content="Balloonsys Inc.">
 
   
-  <meta name="description" content="闲暇时开发的应用 Feb 25th, 2014 杭州公共自行车助手 杭州的公共自行车服务，非常便利，可以说走几十米就是一个租赁点。然而便利的同时亦有苦恼。有时在小区门口借了辆“小红车”去上班，但是到了科技园准备还车时，时常为了一个“坑”而苦苦寻觅。 如果能基于位置搜索到附近的租赁点， &hellip;">
+  <meta name="description" content="Auto Layout不光为设计不同尺寸的界面带来了便利，在应用的多语言支持方面也有广泛使用。
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/apps">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2014/02/27/hacking-auto-layout">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -66,48 +67,15 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">闲暇时开发的应用</h1>
-    <p class="meta">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-25T19:52:00+08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2014</time></p>
-  </header>
-  
-  <h2>杭州公共自行车助手</h2>
-
-<p>杭州的公共自行车服务，非常便利，可以说走几十米就是一个租赁点。然而便利的同时亦有苦恼。有时在小区门口借了辆“小红车”去上班，但是到了科技园准备还车时，时常为了一个“坑”而苦苦寻觅。</p>
-
-<p>如果能基于位置搜索到附近的租赁点，同时还能知道剩余的车辆及空位数，该多好啊！于是，工作之余开发了“爱骑车”这个iPhone应用。</p>
-
-<p>除了实时的剩余车辆等信息，还提供负责该服务点的管理人员联系方式，以便不时之需（如市民卡故障无法还车等）。</p>
-
-<p><img src="/imags/appstore.png">(<a href="https://itunes.apple.com/us/app/ibike-hangzhou/id778689760?ls=1&amp;mt=8">https://itunes.apple.com/us/app/ibike-hangzhou/id778689760?ls=1&amp;mt=8</a>)</p>
-
-<h2>手机满充提醒</h2>
-
-<p>多年的诺基亚使用经验，让我习惯于在充满电时听到那清脆的一声“滴”。换了iPhone之后，经常充满电又过了个把小时都不知道。也有时候想充满电再出门，然后反反复复的去打开屏幕看一下当前电量。</p>
-
-<p>就这样一个满充时的提醒，非常简单的功能，相信不少朋友会需要吧？</p>
-
-<p><a href="https://itunes.apple.com/us/app/battery-full-charge-alarm/id827700187?ls=1&amp;mt=8">前往AppStore下载</a></p>
-
-  
-    <footer>
+    
+      <h1 class="entry-title">与Auto Layout相关的各种知识点</h1>
+    
+    
       <p class="meta">
         
-        
 
 
 
@@ -119,21 +87,58 @@
   
 
 
-<time datetime="2014-02-25T19:52:00+08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2014</time>
+<time datetime="2014-02-27T15:17:15+08:00" pubdate data-updated="true">Feb 27<span>th</span>, 2014</time>
         
       </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Auto Layout不光为设计不同尺寸的界面带来了便利，在应用的多语言支持方面也有广泛使用。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
       
-        <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://balloonsys.github.io/apps/index.html" data-via="" data-counturl="http://balloonsys.github.io/apps/index.html" >Tweet</a>
+
+<span class="byline author vcard">Posted by <span class="fn">Balloonsys Inc.</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-27T15:17:15+08:00" pubdate data-updated="true">Feb 27<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://balloonsys.github.io/blog/2014/02/27/hacking-auto-layout/" data-via="" data-counturl="http://balloonsys.github.io/blog/2014/02/27/hacking-auto-layout/" >Tweet</a>
   
   
   
 </div>
 
+    
+    <p class="meta">
       
-    </footer>
-  
+        <a class="basic-alignment left" href="/blog/2014/02/25/introduction-about-view/" title="Previous Post: 关于View的用法简介">&laquo; 关于View的用法简介</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
