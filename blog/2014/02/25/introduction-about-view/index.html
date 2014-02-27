@@ -180,19 +180,15 @@ bringSubviewToFront:<br/>
 
 <h2>Layout</h2>
 
-<p>说点什么吧</p>
+<p>Xcode 5的视图编辑器支持预览不同尺寸不同方向的屏幕效果。打开视图文件，切换到Assistant Editor模式，即左边视图编辑器右边代码。在代码区域的上方导航条中，选择Preview。此时右下方会出现一组界面预览按钮。</p>
 
-<h3>Autoresizing</h3>
+<p>Autoresizing发生在layoutSubviews执行之前，所以手动设置布局可放在layoutSubviews方法中。</p>
 
-<p>说点什么吧</p>
+<p>自定义的view，如果需要支持Auto-layout，需要在requiresConstraintBasedLayout返回YES。</p>
 
-<h3>Autolayout</h3>
+<h3>Constraints</h3>
 
-<p>说点什么吧</p>
-
-<h3>Constraints in the Nib</h3>
-
-<p>说点什么吧</p>
+<p>约束是用NSLayoutConstraint表示的。两个视图之间存在约束，并不要求这两个视图有父子关系或兄弟关系，只需要有共同的祖先。</p>
 </div>
 
 
