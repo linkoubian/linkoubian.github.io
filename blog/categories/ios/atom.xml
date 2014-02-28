@@ -4,10 +4,10 @@
   <title><![CDATA[Category: iOS | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-02-28T16:26:25+08:00</updated>
+  <updated>2014-02-28T20:27:46+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
-    <name><![CDATA[Balloonsys Inc.]]></name>
+    <name><![CDATA[Linkou Bian]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -19,6 +19,9 @@
     <updated>2014-02-25T15:50:00+08:00</updated>
     <id>http://balloonsys.github.io/blog/2014/02/25/introduction-about-view</id>
     <content type="html"><![CDATA[<p>本文主要针对iOS的视图相关的用法作一些介绍。</p>
+
+<!--more-->
+
 
 <h2>The Window</h2>
 
@@ -74,7 +77,8 @@ v2.center = [v1 convertPoint:v1.center fromView:v1.superview];
 
 <p>组合若干变换应用到视图上，下面代码先将v旋转，然后在沿着自身坐标系的x轴方向平移100个点。
 <code>objc
-v.transform = CGAffineTransformMakeRotation(45 * M_PI/180.0);v.transform = CGAffineTransformTranslate(v2.transform, 100, 0);
+v.transform = CGAffineTransformMakeRotation(45 * M_PI/180.0);
+v.transform = CGAffineTransformTranslate(v2.transform, 100, 0);
 </code></p>
 
 <p>也可以使用CGAffineTransformConcat组合多个变换，

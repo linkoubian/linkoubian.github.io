@@ -4,10 +4,10 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-02-28T16:26:25+08:00</updated>
+  <updated>2014-02-28T20:27:46+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
-    <name><![CDATA[Balloonsys Inc.]]></name>
+    <name><![CDATA[Linkou Bian]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -19,6 +19,9 @@
     <updated>2014-02-28T16:22:38+08:00</updated>
     <id>http://balloonsys.github.io/blog/2014/02/28/make-money-from-ad</id>
     <content type="html"><![CDATA[<p>年前做的一款关于公共自行车租赁的APP，自我感觉还是比较实用的。为了造福杭城更多的iPhone用户，新版本打算采用免费+iAP（去广告）的方式发行。所以，今天便研究了下iAd及AdMob两种广告平台的集成方法。</p>
+
+<!--more-->
+
 
 <h2>AdMob</h2>
 
@@ -47,6 +50,9 @@
     <updated>2014-02-25T15:50:00+08:00</updated>
     <id>http://balloonsys.github.io/blog/2014/02/25/introduction-about-view</id>
     <content type="html"><![CDATA[<p>本文主要针对iOS的视图相关的用法作一些介绍。</p>
+
+<!--more-->
+
 
 <h2>The Window</h2>
 
