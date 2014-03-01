@@ -4,7 +4,7 @@
   <title><![CDATA[Category: IAP | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/iap/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-01T21:11:09+08:00</updated>
+  <updated>2014-03-01T21:27:49+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -26,6 +26,8 @@
 <p>昨天给APP集成了<a href="http://balloonsys.com/blog/2014/02/28/make-money-from-ad/">广告服务</a>。碰到有洁癖的用户，被抱怨是免不了的。所以今天抓紧学习IAP相关的开发技术后，又马不停蹄的增加了付费去广告的功能。</p>
 
 <h2>创建IAP商品</h2>
+
+<p>用户只需为“去除广告”这个服务付费一次，并可永久性的免除广告的烦扰。所以这种情况下，“去除广告”应被看成Non-Consumable商品。而游戏中常见的“金币”是用完还需重新购买，属于快速消耗品，对应iTunes Connect后台里的Consumable商品。</p>
 
 <h2>参考资料</h2>
 

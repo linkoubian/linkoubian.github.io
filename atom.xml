@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-01T21:11:09+08:00</updated>
+  <updated>2014-03-01T21:27:49+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -26,6 +26,8 @@
 <p>昨天给APP集成了<a href="http://balloonsys.com/blog/2014/02/28/make-money-from-ad/">广告服务</a>。碰到有洁癖的用户，被抱怨是免不了的。所以今天抓紧学习IAP相关的开发技术后，又马不停蹄的增加了付费去广告的功能。</p>
 
 <h2>创建IAP商品</h2>
+
+<p>用户只需为“去除广告”这个服务付费一次，并可永久性的免除广告的烦扰。所以这种情况下，“去除广告”应被看成Non-Consumable商品。而游戏中常见的“金币”是用完还需重新购买，属于快速消耗品，对应iTunes Connect后台里的Consumable商品。</p>
 
 <h2>参考资料</h2>
 
@@ -164,15 +166,11 @@ bringSubviewToFront:<br/>
 
 <h2>Layout</h2>
 
-<p>Xcode 5的视图编辑器支持预览不同尺寸不同方向的屏幕效果。打开视图文件，切换到Assistant Editor模式，即左边视图编辑器右边代码。在代码区域的上方导航条中，选择Preview。此时右下方会出现一组界面预览按钮。</p>
+<p>布局除了手动设置布局以及Autoresizing之外，还有自iOS 6引入的Auto-layout。</p>
 
-<p>Autoresizing发生在layoutSubviews执行之前，所以手动设置布局可放在layoutSubviews方法中。</p>
+<p>Autoresizing发生在layoutSubviews执行之前，所以手动设置布局可放在layoutSubviews方法中。自定义的view，如果需要支持Auto-layout，需要在requiresConstraintBasedLayout返回YES。</p>
 
-<p>自定义的view，如果需要支持Auto-layout，需要在requiresConstraintBasedLayout返回YES。</p>
-
-<h3>Constraints</h3>
-
-<p>约束是用NSLayoutConstraint表示的。两个视图之间存在约束，并不要求这两个视图有父子关系或兄弟关系，只需要有共同的祖先。</p>
+<p>关于Auto-layout的内容比较多，另行总结！</p>
 ]]></content>
   </entry>
   
