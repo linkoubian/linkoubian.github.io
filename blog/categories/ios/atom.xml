@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-01T20:59:05+08:00</updated>
+  <updated>2014-03-01T21:02:14+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -18,12 +18,12 @@
     <link href="http://balloonsys.github.io/blog/2014/03/01/in-app-purchasing-a-freemium-model/"/>
     <updated>2014-03-01T20:12:22+08:00</updated>
     <id>http://balloonsys.github.io/blog/2014/03/01/in-app-purchasing-a-freemium-model</id>
-    <content type="html"><![CDATA[<p>In-App Purchasing是一种目前比较常见的定价策略。软件可以免费安装并使用，但如果需要更多或更高级的功能等需要付费，及<a href="http://en.wikipedia.org/wiki/Freemium">Freemium</a>。</p>
+    <content type="html"><![CDATA[<p>In-App Purchasing是一种目前比较常见的定价策略。软件可以免费安装并使用，但如果需要更多或更高级的功能则需要付费，即<a href="http://en.wikipedia.org/wiki/Freemium">Freemium</a>模式。</p>
 
 <!--more-->
 
 
-<p>之前给APP<a href="http://balloonsys.com/blog/2014/02/28/make-money-from-ad/">集成广告服务</a>后，估计会引来部分用户的抱怨。所以今天抓紧学习IAP相关的开发技术后，马不停蹄的实现了付费去广告的功能。</p>
+<p>昨天给APP集成了<a href="http://balloonsys.com/blog/2014/02/28/make-money-from-ad/">广告服务</a>。碰到有洁癖的用户，被抱怨是免不了的。所以今天抓紧学习IAP相关的开发技术后，又马不停蹄的增加了付费去广告的功能。</p>
 
 <h2>创建IAP“商品”</h2>
 
