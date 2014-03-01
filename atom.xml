@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-01T22:39:30+08:00</updated>
+  <updated>2014-03-01T22:43:39+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -33,7 +33,9 @@
 
 <p>注意创建IAP商品时遇到的Hosting Content with Apple这一项，此处选择No。关于这个Hosting Content的用法，可以参考这篇<a href="http://www.techotopia.com/index.php/Configuring_and_Creating_App_Store_Hosted_Content_for_iOS_6_In-App_Purchases">文章</a>。</p>
 
-<p>添加好名为“remove_ads”的商品后，该IAP的状态为“”。同时系统提示我说“你的首个IAP必须与新版APP一起提交，请在Version Detail页面选中相关的IAP后点击准备上传按钮”。</p>
+<p>添加好名为“remove_ads”的商品后，该IAP的状态为“Ready to Submit”。同时系统提示我说“你的首个IAP必须与新版APP一起提交，请在Version Detail页面选中相关的IAP后点击准备上传按钮”。</p>
+
+<p>收到这样的提示，略有惊喜。因为添加IAP时，该APP有个update还在等待review，而IAP是下个release的内容，当时有点担心此次的操作会影响等待审核的版本。结果证明担心是多余的。</p>
 
 <h2>设置工程</h2>
 
