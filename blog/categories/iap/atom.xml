@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: IAP | Balloonsys Inc.]]></title>
+  <link href="http://balloonsys.github.io/blog/categories/iap/atom.xml" rel="self"/>
+  <link href="http://balloonsys.github.io/"/>
+  <updated>2014-03-01T20:55:43+08:00</updated>
+  <id>http://balloonsys.github.io/</id>
+  <author>
+    <name><![CDATA[Linkou Bian]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[In-App Purchasing: A Freemium Model]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/03/01/in-app-purchasing-a-freemium-model/"/>
+    <updated>2014-03-01T20:12:22+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/03/01/in-app-purchasing-a-freemium-model</id>
+    <content type="html"><![CDATA[<p>In-App Purchasing是一种目前比较常见的定价策略。软件可以免费安装并使用，但如果需要更多或更高级的功能等需要付费，及<a href="http://en.wikipedia.org/wiki/Freemium">Freemium</a>。</p>
+
+<!--more-->
+
+
+<p>之前给APP<a href="http://balloonsys.com/blog/2014/02/28/make-money-from-ad/">集成广告服务</a>后，估计会引来部分用户的抱怨。所以今天抓紧学习IAP相关的开发技术后，马不停蹄的实现了付费去广告的功能。</p>
+
+<h2>创建IAP“商品”</h2>
+
+<h2>参考资料</h2>
+
+<p>如果想系统并深入的学习IAP的开发技术，可以阅读下列文章，
+1. <a href="http://www.raywenderlich.com/21081/introduction-to-in-app-purchases-in-ios-6-tutorial">IAP入门</a>
+2. <a href="http://www.raywenderlich.com/23266/in-app-purchases-in-ios-6-tutorial-consumables-and-receipt-validation">IAP进阶</a>
+3. <a href="https://developer.apple.com/in-app-purchase/">官方文档</a>
+如果你需要快速了解IAP并应用到项目中的话，不妨读读<a href="http://brianflove.com/author/blove/">Brian Love</a>的这篇<a href="http://brianflove.com/2013/02/11/in-app-purchasing-in-ios-6/">文章</a>。</p>
+]]></content>
+  </entry>
+  
+</feed>
