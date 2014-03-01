@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-01T21:27:49+08:00</updated>
+  <updated>2014-03-01T22:39:30+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,11 +29,32 @@
 
 <p>用户只需为“去除广告”这个服务付费一次，并可永久性的免除广告的烦扰。所以这种情况下，“去除广告”应被看成Non-Consumable商品。而游戏中常见的“金币”是用完还需重新购买，属于快速消耗品，对应iTunes Connect后台里的Consumable商品。</p>
 
+<p>商品的ID可采用APP_ID.PRODUCT_NAME的格式，该ID讲在编码时用到。</p>
+
+<p>注意创建IAP商品时遇到的Hosting Content with Apple这一项，此处选择No。关于这个Hosting Content的用法，可以参考这篇<a href="http://www.techotopia.com/index.php/Configuring_and_Creating_App_Store_Hosted_Content_for_iOS_6_In-App_Purchases">文章</a>。</p>
+
+<p>添加好名为“remove_ads”的商品后，该IAP的状态为“”。同时系统提示我说“你的首个IAP必须与新版APP一起提交，请在Version Detail页面选中相关的IAP后点击准备上传按钮”。</p>
+
+<h2>设置工程</h2>
+
+<p>在构建目标的Capabilities页面，开启In-App Purchase功能。Xcode会自动为当前的App ID增加相关权限，同时链接StoreKit框架。</p>
+
+<p>IAP所涉及到的交互流程主要有如下几步，<br/>
+1. 首先向苹果服务器发起请求（含有商品ID集合）以获得商品信息<br/>
+2. 客户端以自定义的方式展示返回的商品<br/>
+3. 用户选中某个商品，触发支付请求，请求被加到支付队列<br/>
+4. 支付被苹果处理后，会发出Transaction Updated事件<br/>
+5. 客户端设置的交易监听者根据Transaction的状态执行不同逻辑</p>
+
+<p>收到Transaction Updated事件后，无论Transaction的状态是completed、failed还是restore，都需要调用finishTransaction以通知苹果服务器相关的通知已收到，否则会不停的收到Transaction Updated事件。</p>
+
+<h2>开始编码</h2>
+
 <h2>参考资料</h2>
 
 <p>如果想系统并深入的学习IAP的开发技术，可以阅读下列文章，  <br/>
 1. <a href="http://www.raywenderlich.com/u/rwenderlich">Ray Wenderlich</a>提供的<a href="http://www.raywenderlich.com/21081/introduction-to-in-app-purchases-in-ios-6-tutorial">IAP入门教程</a><br/>
-2. <a href="http://www.raywenderlich.com/23266/in-app-purchases-in-ios-6-tutorial-consumables-and-receipt-validation">Ray Wenderlich</a>提供的IAP进阶教程<br/>
+2. <a href="http://www.raywenderlich.com/u/rwenderlich">Ray Wenderlich</a>提供的<a href="http://www.raywenderlich.com/23266/in-app-purchases-in-ios-6-tutorial-consumables-and-receipt-validation">IAP进阶教程</a><br/>
 3. 苹果官方提供的开发<a href="https://developer.apple.com/in-app-purchase/">文档</a></p>
 
 <p>如果你需要快速了解IAP并应用到项目中的话，不妨读读<a href="http://brianflove.com/author/blove/">Brian Love</a>的这篇<a href="http://brianflove.com/2013/02/11/in-app-purchasing-in-ios-6/">文章</a>。</p>
