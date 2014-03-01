@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-01T21:05:17+08:00</updated>
+  <updated>2014-03-01T21:11:09+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,10 +29,10 @@
 
 <h2>参考资料</h2>
 
-<p>如果想系统并深入的学习IAP的开发技术，可以阅读下列文章，<br/>
-1. IAP入门 <a href="http://www.raywenderlich.com/21081/introduction-to-in-app-purchases-in-ios-6-tutorial  ">http://www.raywenderlich.com/21081/introduction-to-in-app-purchases-in-ios-6-tutorial  </a>
-2. IAP进阶 <a href="http://www.raywenderlich.com/23266/in-app-purchases-in-ios-6-tutorial-consumables-and-receipt-validation  ">http://www.raywenderlich.com/23266/in-app-purchases-in-ios-6-tutorial-consumables-and-receipt-validation  </a>
-3. 官方文档 <a href="https://developer.apple.com/in-app-purchase/">https://developer.apple.com/in-app-purchase/</a></p>
+<p>如果想系统并深入的学习IAP的开发技术，可以阅读下列文章，  <br/>
+1. <a href="http://www.raywenderlich.com/u/rwenderlich">Ray Wenderlich</a>提供的<a href="http://www.raywenderlich.com/21081/introduction-to-in-app-purchases-in-ios-6-tutorial">IAP入门教程</a><br/>
+2. <a href="http://www.raywenderlich.com/23266/in-app-purchases-in-ios-6-tutorial-consumables-and-receipt-validation">Ray Wenderlich</a>提供的IAP进阶教程<br/>
+3. 苹果官方提供的开发<a href="https://developer.apple.com/in-app-purchase/">文档</a></p>
 
 <p>如果你需要快速了解IAP并应用到项目中的话，不妨读读<a href="http://brianflove.com/author/blove/">Brian Love</a>的这篇<a href="http://brianflove.com/2013/02/11/in-app-purchasing-in-ios-6/">文章</a>。</p>
 ]]></content>
