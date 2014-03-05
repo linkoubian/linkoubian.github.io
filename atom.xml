@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-05T21:37:20+08:00</updated>
+  <updated>2014-03-05T21:52:04+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,21 +14,25 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Objective-C Programming (BNR)]]></title>
+    <title type="html"><![CDATA[Objective-C Programming (BNR培训教程)]]></title>
     <link href="http://balloonsys.github.io/blog/2014/03/05/obj-c-programming/"/>
     <updated>2014-03-05T21:22:44+08:00</updated>
     <id>http://balloonsys.github.io/blog/2014/03/05/obj-c-programming</id>
-    <content type="html"><![CDATA[<p>据说The Big Nerd Ranch Guide系列教程都很不错，于是到<a href="http://www.ppurl.com">皮皮书屋</a>下载了一份BNR出品的关于Obj-C的电子书。ePub格式，在iPad、Mac上阅读都有着很不错的体验。</p>
+    <content type="html"><![CDATA[<p>据说The Big Nerd Ranch Guide系列教程都很不错，于是到<a href="http://www.ppurl.com/2013/11/objective-c-programming-the-big-nerd-ranch-guide-second-edition-epub.html">皮皮书屋</a>下载了一份BNR出品的关于Obj-C的电子书。ePub格式，在iPad、Mac上阅读都有着很不错的体验。</p>
 
 <!--more-->
 
 
-<p>直接在电子书里记笔记的习惯还没有养成，依旧习惯于在iA Writer里记录一些知识点以备日后查看。</p>
+<p>直接在电子书里记笔记的习惯还没有养成，依旧习惯于在<a href="http://www.iawriter.com/mac/">iA Writer</a>里记录一些知识点以备日后查看。</p>
 
 <ol>
+<li>在C的函数里使用BOOL类型，需要#include &lt;objc/objc.h></li>
+<li>sleep函数是在unistd.h头文件中声明的</li>
+<li>EXIT_SUCCESS等程序退出标志，是在stdlib.h中声明的</li>
 <li>全局变量可以在多个文件中访问到；静态变量仅当前文件可以访问</li>
 <li>NSInteger在32位系统上占32位，在64位系统上占64位</li>
 <li>在格式化输出NSInteger时，需强类型转换成long，然后用%ld打印</li>
+<li>求绝对值可以用stdlib.h中的abs()函数</li>
 <li></li>
 </ol>
 
