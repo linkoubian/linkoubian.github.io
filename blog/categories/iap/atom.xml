@@ -4,7 +4,7 @@
   <title><![CDATA[Category: IAP | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/iap/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-02T02:07:56+08:00</updated>
+  <updated>2014-03-05T21:37:20+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -152,9 +152,8 @@ self.productsRequest.delegate = self;
 2. <a href="http://www.raywenderlich.com/u/rwenderlich">Ray Wenderlich</a>提供的<a href="http://www.raywenderlich.com/23266/in-app-purchases-in-ios-6-tutorial-consumables-and-receipt-validation">IAP进阶教程</a><br/>
 3. 苹果官方提供的开发<a href="https://developer.apple.com/in-app-purchase/">文档</a></p>
 
-<p>如果你需要快速了解IAP的话，不妨读读<a href="http://brianflove.com/author/blove/">Brian Love</a>的这篇<a href="http://brianflove.com/2013/02/11/in-app-purchasing-in-ios-6/">文章</a>。</p>
-
-<p>如果你需要快速实现IAP的话，不妨试试<a href="http://mattt.me">Mattt Thompson</a>的开源库<a href="https://github.com/mattt/CargoBay">CargoBay</a>。</p>
+<p>如果你需要快速了解IAP的话，不妨读读<a href="http://brianflove.com/author/blove/">Brian Love</a>的这篇<a href="http://brianflove.com/2013/02/11/in-app-purchasing-in-ios-6/">文章</a>。
+如果你需要快速实现IAP的话，不妨试试<a href="http://mattt.me">Mattt Thompson</a>的开源库<a href="https://github.com/mattt/CargoBay">CargoBay</a>。</p>
 ]]></content>
   </entry>
   
