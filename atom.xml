@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-05T21:52:04+08:00</updated>
+  <updated>2014-03-05T21:58:45+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Objective-C Programming (BNR培训教程)]]></title>
+    <title type="html"><![CDATA[BNR出品的Obj-C教程)]]></title>
     <link href="http://balloonsys.github.io/blog/2014/03/05/obj-c-programming/"/>
     <updated>2014-03-05T21:22:44+08:00</updated>
     <id>http://balloonsys.github.io/blog/2014/03/05/obj-c-programming</id>
-    <content type="html"><![CDATA[<p>据说The Big Nerd Ranch Guide系列教程都很不错，于是到<a href="http://www.ppurl.com/2013/11/objective-c-programming-the-big-nerd-ranch-guide-second-edition-epub.html">皮皮书屋</a>下载了一份BNR出品的关于Obj-C的电子书。ePub格式，在iPad、Mac上阅读都有着很不错的体验。</p>
+    <content type="html"><![CDATA[<p>据说The Big Nerd Ranch Guide系列教程都很不错，于是到<a href="http://www.ppurl.com/2013/11/objective-c-programming-the-big-nerd-ranch-guide-second-edition-epub.html">皮皮书屋</a>下载了一份BNR出品的关于Obj-C的电子书。在iPad、Mac上阅读ePub格式的文档，有着很不错的体验。</p>
 
 <!--more-->
 
