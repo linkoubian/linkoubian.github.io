@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-05T21:58:45+08:00</updated>
+  <updated>2014-03-06T23:00:18+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[BNR出品的Obj-C教程)]]></title>
+    <title type="html"><![CDATA[BNR出品的Obj-C教程]]></title>
     <link href="http://balloonsys.github.io/blog/2014/03/05/obj-c-programming/"/>
     <updated>2014-03-05T21:22:44+08:00</updated>
     <id>http://balloonsys.github.io/blog/2014/03/05/obj-c-programming</id>
@@ -33,7 +33,9 @@
 <li>NSInteger在32位系统上占32位，在64位系统上占64位</li>
 <li>在格式化输出NSInteger时，需强类型转换成long，然后用%ld打印</li>
 <li>求绝对值可以用stdlib.h中的abs()函数</li>
-<li></li>
+<li>使用readline函数，需要链接libreadline，然后导入主头文件</li>
+<li>字符串转数字可以用stdlib.h中的atoi()函数</li>
+<li>sizeof()返回size_t类型的数据，可以用%zu格式化输出</li>
 </ol>
 
 ]]></content>
