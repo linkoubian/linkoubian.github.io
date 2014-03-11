@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-11T23:09:57+08:00</updated>
+  <updated>2014-03-11T23:10:21+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -368,7 +368,7 @@
 
 <p><img src="http://balloonsys.github.io/images/Paw_HTTP_Client.png" alt="Paw HTTP Client" /></p>
 
-<h2>参考资料</h2>
+<h2>说明</h2>
 
 <p>本文是根据<a href="http://blog.miguelgrinberg.com/post/about-me">Miguel Grinberg</a>写的这篇<a href="http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask">文章</a>翻译并整理的。</p>
 ]]></content>
