@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-06T23:00:18+08:00</updated>
+  <updated>2014-03-11T19:55:24+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,142 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[基于Flask设计RESTful API]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask/"/>
+    <updated>2014-03-11T19:12:58+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask</id>
+    <content type="html"><![CDATA[<p>Flask是一个Python WEB开发框架。在接下来的“西子快讯”APP开发过程中，我打算拿它来做RESTful API。虽然之前对Python并不了解，对Flask更是陌生，但爱折腾的本性促使我不断去学习。于是今天看blog、看文档，小有收获，略记一二。</p>
+
+<!--more-->
+
+
+<h2>准备工作</h2>
+
+<p>确保机器上已经安装了Python、Pip、Virtualenv等工具。如果默认的Pip安装源比较慢，可以用v2ex的试试。具体方法是在~/.pip/下创建一个名为pip.conf的文件，输入新的pip源。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[global]
+</span><span class='line'>index-url = http://pypi.v2ex.com/simple</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>安装Flask</h2>
+
+<p>为了不影响系统的Python环境，我们用Virtualenv虚拟一个运行环境，然后在此环境下开发一个名为todo的小应用（纯RESTful API，JSON格式数据）。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd ~/Desktop
+</span><span class='line'>mkdir todo-api
+</span><span class='line'>cd todo-api
+</span><span class='line'>virtualenv venv
+</span><span class='line'>. venv/bin/activate</span></code></pre></td></tr></table></div></figure>
+
+
+<p>此时命令行窗口应出现(venv)mbpr2013:todo-api linkoubian$ 这样的提示符，注意最左边的venv表明当前运行的是虚拟出来的环境。</p>
+
+<p>这时执行pip install flask便可在venv下安装flask模块。</p>
+
+<h2>测试Flask是否正常工作</h2>
+
+<p>编写一个Hello World程序，如下：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span><span class='line'>  <span class="k">return</span> <span class="s">&quot;Hello, World!&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class='line'>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>保存为~/Desktop/todo-api/app.py，添加(chmod)可执行权限后，通过python app.py运行。此时打开浏览器，访问localhost:5000即可看到Hello, World!</p>
+
+<h2>开始设计RESTful API</h2>
+
+<h3>获取所有的tasks</h3>
+
+<p>一个task由id、title、description、done等属性构成，获取task列表的url可以设计成/todo/tasks。具体代码如下，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">u&#39;Buy groceries&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">u&#39;Milk, Cheese, Pizza, Fruit, Tylenol&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">u&#39;Learn Python&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">u&#39;Need to find a good Python tutorial on the web&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/todo/tasks&#39;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;GET&#39;</span><span class="p">])</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_tasks</span><span class="p">():</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;tasks&#39;</span><span class="p">:</span> <span class="n">tasks</span><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class='line'>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>因为Flask运行在debug模式下会自动reload，所以代码写完后保存文件即可。</p>
+
+<p>Mac上有一款名为<a href="https://itunes.apple.com/app/id584653203?ls=1&amp;mt=12">Paw</a>的HTTP Client，算是我见过、用过的各种API测试工具中的佼佼者，力荐。</p>
+
+<p>打开Paw，在url里输入<a href="http://localhost:5000/todo/tasks%EF%BC%8C%E9%80%89%E6%8B%A9GET%EF%BC%8C%E6%95%B2CMD+Enter%E5%8D%B3%E5%8F%AF%E5%90%AC%E5%88%B0%E8%A1%A8%E7%A4%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%B8%85%E8%84%86%E6%8F%90%E7%A4%BA%E9%9F%B3%E3%80%82Paw%E9%99%A4%E4%BA%86%E6%8F%90%E4%BE%9B%E5%8E%9F%E7%94%9F%E7%9A%84HTTP%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F%EF%BC%8C%E8%BF%98%E6%8F%90%E4%BE%9B%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%90%8E%E6%B5%8F%E8%A7%88%E5%8A%9F%E8%83%BD%EF%BC%8C%E9%80%89%E6%8B%A9JSON%E6%A0%BC%E5%BC%8F%E5%8D%B3%E5%8F%AF%E3%80%82">http://localhost:5000/todo/tasks%EF%BC%8C%E9%80%89%E6%8B%A9GET%EF%BC%8C%E6%95%B2CMD+Enter%E5%8D%B3%E5%8F%AF%E5%90%AC%E5%88%B0%E8%A1%A8%E7%A4%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%B8%85%E8%84%86%E6%8F%90%E7%A4%BA%E9%9F%B3%E3%80%82Paw%E9%99%A4%E4%BA%86%E6%8F%90%E4%BE%9B%E5%8E%9F%E7%94%9F%E7%9A%84HTTP%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F%EF%BC%8C%E8%BF%98%E6%8F%90%E4%BE%9B%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%90%8E%E6%B5%8F%E8%A7%88%E5%8A%9F%E8%83%BD%EF%BC%8C%E9%80%89%E6%8B%A9JSON%E6%A0%BC%E5%BC%8F%E5%8D%B3%E5%8F%AF%E3%80%82</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[BNR出品的Obj-C教程]]></title>
@@ -229,6 +365,12 @@
 <h2>iAd &amp; AdMob</h2>
 
 <p>如果是手动编写代码以同时支持iAd和AdMob可参考<a href="http://www.apptite.be/tutorial_mixing_ads.php">这里</a>。另外Github上有一个开源库<a href="https://github.com/larsacus/LARSAdController">LARSAdController</a>，使用起来非常方便。</p>
+
+<h2>收益</h2>
+
+<p>集成AdMob的版本尚未上架，自己在手机上对着开发者证书安装的APP里的广告变着法子点击（换不同的VPN服务器、重置IDFA），竟然也能收获三十来刀。但这是冒着被封号的危险，谨慎啊！</p>
+
+<p>这里有篇关于AdMob的<a href="http://blog.sina.com.cn/s/blog_7193dd920101keay.html">经验贴</a>，很有料。</p>
 ]]></content>
   </entry>
   
