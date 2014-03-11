@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Python | Balloonsys Inc.]]></title>
+  <link href="http://balloonsys.github.io/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://balloonsys.github.io/"/>
+  <updated>2014-03-11T23:33:59+08:00</updated>
+  <id>http://balloonsys.github.io/</id>
+  <author>
+    <name><![CDATA[Linkou Bian]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[基于Flask设计RESTful API]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask/"/>
+    <updated>2014-03-11T19:12:58+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask</id>
+    <content type="html"><![CDATA[<p>Flask是一个Python WEB开发框架。在接下来的“西子快讯”APP开发过程中，我打算拿它来做RESTful API。虽然之前对Python并不了解，对Flask更是陌生，但爱折腾的本性促使我不断去学习。于是今天看blog、看文档，小有收获，略记一二。</p>
+
+<!--more-->
+
+
+<h2>准备工作</h2>
+
+<p>确保机器上已经安装了Python、Pip、Virtualenv等工具。如果默认的Pip安装源比较慢，可以用v2ex的试试。具体方法是在~/.pip/下创建一个名为pip.conf的文件，输入新的pip源。
+<code>
+[global]
+index-url = http://pypi.v2ex.com/simple
+</code></p>
+
+<h2>安装Flask</h2>
+
+<p>为了不影响系统的Python环境，我们用Virtualenv虚拟一个运行环境，然后在此环境下开发一个名为todo的小应用（纯RESTful API，JSON格式的数据）。</p>
+
+<p><code>
+cd ~/Desktop
+mkdir todo-api
+cd todo-api
+virtualenv venv
+. venv/bin/activate
+</code></p>
+
+<p>此时命令行窗口应出现(venv)mbpr2013:todo-api linkoubian$ 这样的提示符，注意最左边的venv表明当前运行的是虚拟出来的环境。工作完成后打算退出venv，只需执行deactivate命令即可。</p>
+
+<p>这时执行pip install flask便可在venv下安装flask模块。</p>
+
+<h2>测试Flask是否正常工作</h2>
+
+<p>编写一个Hello World程序，如下：
+``` python
+from flask import Flask</p>
+
+<p>app = Flask(<strong>name</strong>)</p>
+
+<p>@app.route(&lsquo;/&rsquo;)
+def index():</p>
+
+<pre><code>return "Hello, World!"
+</code></pre>
+
+<p>if <strong>name</strong> == &lsquo;<strong>main</strong>&rsquo;:</p>
+
+<pre><code>app.run(debug = True)
+</code></pre>
+
+<p>```
+保存为~/Desktop/todo-api/app.py，添加可执行权限后，敲python app.py开始运行Flask。此时打开浏览器，访问localhost:5000即可看到Hello, World!</p>
+
+<h2>开始设计RESTful API</h2>
+
+<h3>获取所有的tasks</h3>
+
+<p>一个task由id、title、description、done等属性构成，获取task列表的url可以设计成/todo/tasks。具体代码如下，
+``` python
+from flask import Flask, jsonify</p>
+
+<p>app = Flask(<strong>name</strong>)</p>
+
+<p>tasks = [</p>
+
+<pre><code>{
+    'id': 1,
+    'title': u'Buy groceries',
+    'description': u'Milk, Cheese, Pizza, Fruit, Tylenol',
+    'done': False
+},
+{
+    'id': 2,
+    'title': u'Learn Python',
+    'description': u'Need to find a good Python tutorial on the web',
+    'done': False
+},
+</code></pre>
+
+<p>]</p>
+
+<p>@app.route(&lsquo;/todo/tasks&rsquo;, methods = [&lsquo;GET&rsquo;])
+def get_tasks():</p>
+
+<pre><code>return jsonify({'tasks': tasks})
+</code></pre>
+
+<p>if <strong>name</strong> == &lsquo;<strong>main</strong>&rsquo;:</p>
+
+<pre><code>app.run(debug = True)
+</code></pre>
+
+<p>```
+因为Flask运行在debug模式下会自动reload，所以代码写完后保存文件即可。</p>
+
+<p>Mac上有一款名为<a href="https://itunes.apple.com/app/id584653203?ls=1&amp;mt=12">Paw</a>的HTTP Client，算是我见过、用过的各种API测试工具中的佼佼者，力荐。</p>
+
+<p>打开Paw，在url里输入<a href="http://localhost:5000/todo/tasks">http://localhost:5000/todo/tasks</a>，选择GET，敲CMD+Enter即可听到表示成功的清脆提示音。Paw除了提供原生的HTTP响应格式，还提供格式化后浏览功能，选择JSON格式即可。</p>
+
+<p>上面这段代码还是比较清晰好懂的，首先创建一个task数组，初始化两个task对象放进去。指定GET方式请求/todo/tasks资源时执行get_tasks方法，具体是把前面创建的tasks数组以JSON的格式返回。而将Python的数组转成JSON格式是通过Flask的jsonify函数实现的。</p>
+
+<h3>根据id获得特定task</h3>
+
+<p>通常我们将id放在URL中，然后对应的处理函数从URL中得到id以从数据源（此处为task数组，存在内存中）中查询相应地entity（此处为task）。</p>
+
+<p>``` python
+@app.route(&lsquo;/todo/tasks/&lt;int:task_id>&rsquo;, methods = [&lsquo;GET&rsquo;])
+def get_task(task_id):</p>
+
+<pre><code>task = filter(lambda t: t['id'] == task_id, tasks)
+if len(task) == 0:
+    abort(404)
+return jsonify({'task': task[0]})
+</code></pre>
+
+<p>```</p>
+
+<p>为了正常使用abort函数，需要从flask模块import一下。通过Paw测试<a href="http://localhost:5000/todo/tasks/1">http://localhost:5000/todo/tasks/1</a>，发现一切正常。</p>
+
+<p>访问<a href="http://localhost:5000/todo/tasks/0">http://localhost:5000/todo/tasks/0</a>时，返回一段出错的HTML，这是Flask对404的默认处理，我们可以自己定义一个返回JSON格式的错误消息。</p>
+
+<p>``` python
+@app.errorhandler(404)
+def not_found(error):</p>
+
+<pre><code>return make_response(jsonify( { 'error': 'Not found' } ), 404)
+</code></pre>
+
+<p>```</p>
+
+<p>我们用make_response函数，将构造好的JSON作为404错误的响应，返回给客户端。</p>
+
+<h3>创建一个task</h3>
+
+<p>URL仍然用/todo/tasks，但HTTP方法为POST。根据Request对象中的数据构造一个新的task对象，插入数据源即可。</p>
+
+<p>``` python
+@app.route(&lsquo;/todo/tasks&rsquo;, methods = [&lsquo;POST&rsquo;])
+def create_task():</p>
+
+<pre><code>if not request.json or not 'title' in request.json:
+    abort(400)
+task = {
+    'id': tasks[-1]['id'] + 1,
+    'title': request.json['title'],
+    'description': request.json.get('description', ''),
+    'done': False
+}
+tasks.append(task)
+return jsonify({'task': task}), 201
+</code></pre>
+
+<p>```</p>
+
+<p>另外，我们需要定义一个400的处理器，类似于404，</p>
+
+<p>``` python
+@app.errorhandler(400)
+def not_found(error):</p>
+
+<pre><code>return make_response(jsonify( { 'error': 'Bad request' } ), 400)
+</code></pre>
+
+<p>```</p>
+
+<p>在Paw中，POST请求<a href="http://localhost:5000/todo/tasks">http://localhost:5000/todo/tasks</a>，同时Header里加一个Content-Type，值为application/json，Body里加入一段文本内容{&ldquo;title&rdquo;: &ldquo;Buy a cell phone&rdquo;}，敲CMD+Enter执行。</p>
+
+<p>根据REST Cookbook一书的建议，可以在返回的新增task里加入一个uri字段。为此，建一个名为make_public_task的函数，如下，</p>
+
+<p>``` python
+def make_public_task(task):</p>
+
+<pre><code>new_task = {}
+for field in task:
+    new_task[field] = task[field]
+    if field == 'id':
+        new_task['uri'] = url_for('get_task', task_id = task['id'], _external = True)
+
+return new_task
+</code></pre>
+
+<p>```</p>
+
+<p>另外，create_task中改为，</p>
+
+<p><code>python
+return jsonify({'task': make_public_task(task)}), 201
+</code></p>
+
+<p>get_tasks中改为，
+<code>python
+return jsonify({'tasks': map(make_public_task, tasks)})
+</code></p>
+
+<p>get_task中改为，
+<code>python
+return jsonify({'tasks': map(make_public_task, tasks)})
+</code></p>
+
+<h3>更新一个task</h3>
+
+<p>显然此时的HTTP方法为PUT，相应的url和获取task类似。</p>
+
+<p>``` python</p>
+
+<p>@app.route(&lsquo;/todo/tasks/&lt;int:task_id>&rsquo;, methods = [&lsquo;PUT&rsquo;])
+def update_task(task_id):</p>
+
+<pre><code>task = filter(lambda t: t['id'] == task_id, tasks)
+if len(task) == 0:
+    abort(404)
+if not request.json:
+    abort(400)
+if 'title' in request.json and type(request.json['title']) != unicode:
+    abort(400)
+if 'description' in request.json and type(request.json['description']) is not unicode:
+    abort(400)
+if 'done' in request.json and type(request.json['done']) is not bool:
+    abort(400)
+task[0]['title'] = request.json.get('title', task[0]['title'])
+task[0]['description'] = request.json.get('description', task[0]['description'])
+task[0]['done'] = request.json.get('done', task[0]['done'])
+return jsonify( { 'task': make_public_task(task[0]) } )
+</code></pre>
+
+<p>```</p>
+
+<h3>删除一个task</h3>
+
+<p>``` python
+@app.route(&lsquo;/todo/tasks/&lt;int:task_id>&rsquo;, methods = [&lsquo;DELETE&rsquo;])
+def delete_task(task_id):</p>
+
+<pre><code>task = filter(lambda t: t['id'] == task_id, tasks)
+if len(task) == 0:
+    abort(404)
+tasks.remove(task[0])
+return jsonify( { 'result': True } )
+</code></pre>
+
+<p>```</p>
+
+<p>修改Python源文件后，Flask会reload，这将导致上一次create的task丢失，所以直接尝试delete之前增加的task可能会报404资源找不到错误。</p>
+
+<h2>为WEB服务增加安全机制</h2>
+
+<p>基于Flask的HTTBasicAuth扩展，定义两个函数如下，
+``` python
+auth = HTTPBasicAuth()</p>
+
+<p>@auth.get_password
+def get_password(username):</p>
+
+<pre><code>if username == 'linkoubian':
+    return '7c4a8d09ca3762af61e59520943dc26494f8941b'
+return None
+</code></pre>
+
+<p>@auth.error_handler
+def unauthorized():</p>
+
+<pre><code>return make_response(jsonify( { 'error': 'Unauthorized access' } ), 401)
+</code></pre>
+
+<p>```</p>
+
+<p>其中get_password方法是返回指定用户的密码信息（通常是从数据库用户表查询得到），当此处返回的值和客户端传递的值匹配时（匹配过程由HTTPBasicAuth完成）成功，否则执行error_handler返回错误信息。</p>
+
+<p>定义完校验相关的代码，还需将校验逻辑应用到需要校验的WEB服务。比如，希望只有授权用户才可以修改或删除task，则可以在update_task及delete_task方法上面加上@auth.login_required即可。</p>
+
+<p>此时在Paw中需添加Authorization头，值为HTTP Basic Auth，在username及password文本框中分布输入信息，敲CMD+Enter进行测试。</p>
+
+<p><img src="http://farm8.staticflickr.com/7353/13084949405_9b2319d18f_o.png" alt="Paw HTTP Client" /></p>
+
+<h2>说明</h2>
+
+<p>本文是根据<a href="http://blog.miguelgrinberg.com/post/about-me">Miguel Grinberg</a>写的这篇<a href="http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask">文章</a>翻译并整理的。</p>
+]]></content>
+  </entry>
+  
+</feed>
