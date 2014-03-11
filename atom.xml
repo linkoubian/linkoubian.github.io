@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-11T20:05:59+08:00</updated>
+  <updated>2014-03-11T20:35:42+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -146,6 +146,44 @@
 <p>Mac上有一款名为<a href="https://itunes.apple.com/app/id584653203?ls=1&amp;mt=12">Paw</a>的HTTP Client，算是我见过、用过的各种API测试工具中的佼佼者，力荐。</p>
 
 <p>打开Paw，在url里输入<a href="http://localhost:5000/todo/tasks">http://localhost:5000/todo/tasks</a>，选择GET，敲CMD+Enter即可听到表示成功的清脆提示音。Paw除了提供原生的HTTP响应格式，还提供格式化后浏览功能，选择JSON格式即可。</p>
+
+<p>上面这段代码还是比较清晰好懂的，首先创建一个task数组，初始化两个task对象放进去。指定GET方式请求/todo/tasks资源时执行get_tasks方法，具体是把前面创建的tasks数组以JSON的格式返回。而将Python的数组转成JSON格式是通过Flask的jsonify函数实现的。</p>
+
+<h3>根据id获得特定task</h3>
+
+<p>通常我们将id放在URL中，然后对应的处理函数从URL中得到id以从数据源（此处为task数组，存在内存中）中查询相应地entity（此处为task）。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/todo/tasks/&lt;int:task_id&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;GET&#39;</span><span class="p">])</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">):</span>
+</span><span class='line'>  <span class="n">task</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">task_id</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>      <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">]})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>为了正常使用abort函数，需要从flask模块import一下。通过Paw测试<a href="http://localhost:5000/todo/tasks/1">http://localhost:5000/todo/tasks/1</a>，发现一切正常。</p>
+
+<p>访问<a href="http://localhost:5000/todo/tasks/0">http://localhost:5000/todo/tasks/0</a>时，返回一段出错的HTML，这是Flask对404的默认处理，我们可以自己定义一个返回JSON格式的错误消息。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.errorhandler</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">not_found</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">make_response</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;error&#39;</span><span class="p">:</span> <span class="s">&#39;Not found&#39;</span> <span class="p">}</span> <span class="p">),</span> <span class="mi">404</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>我们用make_response函数，将构造好的JSON作为404错误的响应，返回给客户端。</p>
+
+<h3>创建一个task</h3>
 ]]></content>
   </entry>
   
