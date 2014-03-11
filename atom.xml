@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-11T23:10:21+08:00</updated>
+  <updated>2014-03-11T23:29:24+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -366,7 +366,7 @@
 
 <p>此时在Paw中需添加Authorization头，值为HTTP Basic Auth，在username及password文本框中分布输入信息，敲CMD+Enter进行测试。</p>
 
-<p><img src="http://balloonsys.github.io/images/Paw_HTTP_Client.png" alt="Paw HTTP Client" /></p>
+<p><img src="http://farm8.staticflickr.com/7353/13084949405_2b3641edca_z.jpg" alt="Paw HTTP Client" /></p>
 
 <h2>说明</h2>
 
