@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-11T19:55:24+08:00</updated>
+  <updated>2014-03-11T20:05:59+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -35,7 +35,7 @@
 
 <h2>安装Flask</h2>
 
-<p>为了不影响系统的Python环境，我们用Virtualenv虚拟一个运行环境，然后在此环境下开发一个名为todo的小应用（纯RESTful API，JSON格式数据）。</p>
+<p>为了不影响系统的Python环境，我们用Virtualenv虚拟一个运行环境，然后在此环境下开发一个名为todo的小应用（纯RESTful API，JSON格式的数据）。</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -49,7 +49,7 @@
 </span><span class='line'>. venv/bin/activate</span></code></pre></td></tr></table></div></figure>
 
 
-<p>此时命令行窗口应出现(venv)mbpr2013:todo-api linkoubian$ 这样的提示符，注意最左边的venv表明当前运行的是虚拟出来的环境。</p>
+<p>此时命令行窗口应出现(venv)mbpr2013:todo-api linkoubian$ 这样的提示符，注意最左边的venv表明当前运行的是虚拟出来的环境。工作完成后打算退出venv，只需执行deactivate命令即可。</p>
 
 <p>这时执行pip install flask便可在venv下安装flask模块。</p>
 
@@ -80,7 +80,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>保存为~/Desktop/todo-api/app.py，添加(chmod)可执行权限后，通过python app.py运行。此时打开浏览器，访问localhost:5000即可看到Hello, World!</p>
+<p>保存为~/Desktop/todo-api/app.py，添加可执行权限后，敲python app.py开始运行Flask。此时打开浏览器，访问localhost:5000即可看到Hello, World!</p>
 
 <h2>开始设计RESTful API</h2>
 
@@ -145,7 +145,7 @@
 
 <p>Mac上有一款名为<a href="https://itunes.apple.com/app/id584653203?ls=1&amp;mt=12">Paw</a>的HTTP Client，算是我见过、用过的各种API测试工具中的佼佼者，力荐。</p>
 
-<p>打开Paw，在url里输入<a href="http://localhost:5000/todo/tasks%EF%BC%8C%E9%80%89%E6%8B%A9GET%EF%BC%8C%E6%95%B2CMD+Enter%E5%8D%B3%E5%8F%AF%E5%90%AC%E5%88%B0%E8%A1%A8%E7%A4%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%B8%85%E8%84%86%E6%8F%90%E7%A4%BA%E9%9F%B3%E3%80%82Paw%E9%99%A4%E4%BA%86%E6%8F%90%E4%BE%9B%E5%8E%9F%E7%94%9F%E7%9A%84HTTP%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F%EF%BC%8C%E8%BF%98%E6%8F%90%E4%BE%9B%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%90%8E%E6%B5%8F%E8%A7%88%E5%8A%9F%E8%83%BD%EF%BC%8C%E9%80%89%E6%8B%A9JSON%E6%A0%BC%E5%BC%8F%E5%8D%B3%E5%8F%AF%E3%80%82">http://localhost:5000/todo/tasks%EF%BC%8C%E9%80%89%E6%8B%A9GET%EF%BC%8C%E6%95%B2CMD+Enter%E5%8D%B3%E5%8F%AF%E5%90%AC%E5%88%B0%E8%A1%A8%E7%A4%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%B8%85%E8%84%86%E6%8F%90%E7%A4%BA%E9%9F%B3%E3%80%82Paw%E9%99%A4%E4%BA%86%E6%8F%90%E4%BE%9B%E5%8E%9F%E7%94%9F%E7%9A%84HTTP%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F%EF%BC%8C%E8%BF%98%E6%8F%90%E4%BE%9B%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%90%8E%E6%B5%8F%E8%A7%88%E5%8A%9F%E8%83%BD%EF%BC%8C%E9%80%89%E6%8B%A9JSON%E6%A0%BC%E5%BC%8F%E5%8D%B3%E5%8F%AF%E3%80%82</a></p>
+<p>打开Paw，在url里输入<a href="http://localhost:5000/todo/tasks">http://localhost:5000/todo/tasks</a>，选择GET，敲CMD+Enter即可听到表示成功的清脆提示音。Paw除了提供原生的HTTP响应格式，还提供格式化后浏览功能，选择JSON格式即可。</p>
 ]]></content>
   </entry>
   
