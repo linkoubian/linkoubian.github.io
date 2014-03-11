@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-11T23:00:04+08:00</updated>
+  <updated>2014-03-11T23:09:57+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -360,12 +360,13 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>其中get_password方法是从用户表里查询指定用户的密码信息，当此处返回的值和客户端传递的值匹配时，校验成功。</p>
+<p>其中get_password方法是返回指定用户的密码信息（通常是从数据库用户表查询得到），当此处返回的值和客户端传递的值匹配时（匹配过程由HTTPBasicAuth完成）成功，否则执行error_handler返回错误信息。</p>
 
 <p>定义完校验相关的代码，还需将校验逻辑应用到需要校验的WEB服务。比如，希望只有授权用户才可以修改或删除task，则可以在update_task及delete_task方法上面加上@auth.login_required即可。</p>
 
-<p>此时在Paw中需添加Authorization头，值为HTTP Basic Auth，在username及password文本框中分布输入信息，敲CMD+Enter进行测试。
-<img src="http://balloonsys.github.io/images/Paw_HTTP_Client.png" alt="Paw HTTP Client" /></p>
+<p>此时在Paw中需添加Authorization头，值为HTTP Basic Auth，在username及password文本框中分布输入信息，敲CMD+Enter进行测试。</p>
+
+<p><img src="http://balloonsys.github.io/images/Paw_HTTP_Client.png" alt="Paw HTTP Client" /></p>
 
 <h2>参考资料</h2>
 
