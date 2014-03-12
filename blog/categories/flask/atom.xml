@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Flask | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/flask/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-12T14:01:38+08:00</updated>
+  <updated>2014-03-12T14:19:42+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -20,21 +20,23 @@
     <id>http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension</id>
     <content type="html"><![CDATA[<p>今天尝试用Flask的RESTful插件改造昨天写的API，使之更清晰明了。</p>
 
+<!--more-->
+
+
 <h2>准备工作</h2>
 
-<ol>
-<li>进入昨天创建的虚拟开发环境venv，<br/>
+<p>进入昨天创建的虚拟开发环境venv，<br/>
 <code>
 . venv/bin/activate
-</code></li>
-<li>安装flask-restful，
+</code>
+安装flask-restful，
 <code>
 pip install flask-restful
-</code></li>
-</ol>
+</code></p>
 
+<h2>开始改造</h2>
 
-<h2>代码基础机构</h2>
+<h3>代码基础机构</h3>
 
 <p>首先搭好Flask-Restful的代码框架，然后往里面填写代码，避免思路被打断。</p>
 
@@ -113,18 +115,109 @@ api.add_resource(TaskAPI, &lsquo;/todo/tasks/&lt;int:id>&rsquo;, endpoint = &lsq
 
 <p>```</p>
 
+<h3>提取验证逻辑</h3>
+
 <p>然后为TaskListAPI及TaskAPI这两个资源分别添加初始化方法，以处理数据验证等。</p>
 
-<p>``` python TaskListAPI的初始化方法
-def <strong>init</strong>(self):</p>
+<p>``` python TaskListAPI的初始化方法</p>
 
-<pre><code>    self.reqparse = reqparse.RequestParser()
+<pre><code>def __init__(self):
+    self.reqparse = reqparse.RequestParser()
     self.reqparse.add_argument('title', type = str, required = True, help = 'No task title provided', location = 'json')
     self.reqparse.add_argument('description', type = str, default = "", location = 'json')
     super(TaskListAPI, self).__init__()
 </code></pre>
 
 <p>```</p>
+
+<p>``` python TaskAPI的初始化方法</p>
+
+<pre><code>def __init__(self):
+    self.reqparse = reqparse.RequestParser()
+    self.reqparse.add_argument('title', type = str, location = 'json')
+    self.reqparse.add_argument('description', type = str, location = 'json')
+    self.reqparse.add_argument('done', type = bool, location = 'json')
+    super(TaskAPI, self).__init__()
+</code></pre>
+
+<p>```</p>
+
+<p>注意RequestParser默认是从request.values中取值的，所以此处我们要指定location为json，以从request.json中解析传递过来的数据。</p>
+
+<h3>重构新增task的代码</h3>
+
+<p>``` python 旧的代码
+def create_task():</p>
+
+<pre><code>if not request.json or not 'title' in request.json:
+    abort(400)
+task = {
+    'id': tasks[-1]['id'] + 1,
+    'title': request.json['title'],
+    'description': request.json.get('description', ""),
+    'done': False
+}
+tasks.append(task)
+return jsonify( { 'task': make_public_task(task) } )
+</code></pre>
+
+<p>```</p>
+
+<p>``` python 新的代码</p>
+
+<pre><code>def post(self):
+    args = self.reqparse.parse_args()
+    task = {
+        'id': tasks[-1]['id'] + 1,
+        'title': args['title'],
+        'description': args['description'],
+        'done': False
+    }
+    tasks.append(task)
+    return { 'task': make_public_task(task) }
+</code></pre>
+
+<p>```</p>
+
+<p>不光数据验证相关的代码被移除了，description的默认值也不必在新代码里体现。由于Flask-Restful会自动将数据转成JSON格式，所以jsonify函数也可不必调用。</p>
+
+<p>另外，Flask-Restful插件提供的marshal功能，可以优雅的完成make_public_task的功能。只需定义一个数据模板，
+``` python
+task_fields = {</p>
+
+<pre><code>'id': fields.Integer,
+'title': fields.String,
+'description': fields.String,
+'done': fields.Boolean,
+'uri': fields.Url('task', absolute=True)
+</code></pre>
+
+<p>}
+```
+然后将make_public_task(task)替换成marshal(task, task_fields)即可。</p>
+
+<h3>重构更新task的代码</h3>
+
+<p>原来代码中有大段的验证逻辑，现在可以统统去掉，只需如下编写方法即可，
+``` python</p>
+
+<pre><code>def put(self, id):
+    task = filter(lambda t: t['id'] == id, tasks)
+    if len(task) == 0:
+        abort(404)
+    task = task[0]
+    args = self.reqparse.parse_args()
+    for k, v in args.iteritems():
+        if v != None:
+            task[k] = v
+    return { 'task': marshal(task, task_fields) }
+</code></pre>
+
+<p>```</p>
+
+<h2>说明</h2>
+
+<p>本文是根据<a href="http://blog.miguelgrinberg.com/post/about-me">Miguel Grinberg</a>写的这篇<a href="http://blog.miguelgrinberg.com/post/designing-a-restful-api-using-flask-restful">文章</a>翻译并整理的。</p>
 ]]></content>
   </entry>
   
