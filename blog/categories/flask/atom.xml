@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Flask | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/flask/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-12T00:03:54+08:00</updated>
+  <updated>2014-03-12T14:01:38+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,121 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[利用Flask的RESTful插件简化API的开发]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension/"/>
+    <updated>2014-03-12T13:45:07+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension</id>
+    <content type="html"><![CDATA[<p>今天尝试用Flask的RESTful插件改造昨天写的API，使之更清晰明了。</p>
+
+<h2>准备工作</h2>
+
+<ol>
+<li>进入昨天创建的虚拟开发环境venv，<br/>
+<code>
+. venv/bin/activate
+</code></li>
+<li>安装flask-restful，
+<code>
+pip install flask-restful
+</code></li>
+</ol>
+
+
+<h2>代码基础机构</h2>
+
+<p>首先搭好Flask-Restful的代码框架，然后往里面填写代码，避免思路被打断。</p>
+
+<p>在app = Flask(<strong>name</strong>)下方加入一行api = Api(app)，该api实例将用来注册路由。</p>
+
+<p>``` python
+from flask import Flask, jsonify, abort, request, url_for
+from flask.ext.httpauth import HTTPBasicAuth
+from flask.ext.restful import Api, Resource</p>
+
+<p>app = Flask(<strong>name</strong>)
+api = Api(app)
+auth = HTTPBasicAuth()</p>
+
+<p>@auth.get_password
+def get_password(username):</p>
+
+<pre><code>if username == 'linkoubian':
+    return '7c4a8d09ca3762af61e59520943dc26494f8941b'
+return None
+</code></pre>
+
+<p>@auth.error_handler
+def unauthorized():</p>
+
+<pre><code>return make_response(jsonify( { 'error': 'Unauthorized access' } ), 403)
+# return 403 instead of 401 to prevent browsers from displaying the default auth dialog
+</code></pre>
+
+<p>tasks = [</p>
+
+<pre><code>{
+    'id': 1,
+    'title': u'Buy groceries',
+    'description': u'Milk, Cheese, Pizza, Fruit, Tylenol', 
+    'done': False
+},
+{
+    'id': 2,
+    'title': u'Learn Python',
+    'description': u'Need to find a good Python tutorial on the web', 
+    'done': False
+}
+</code></pre>
+
+<p>]</p>
+
+<p>class TaskListAPI(Resource):</p>
+
+<pre><code>def get(self):
+    pass
+
+def post(self):
+    pass
+</code></pre>
+
+<p>class TaskAPI(Resource):</p>
+
+<pre><code>def get(self, id):
+    pass
+
+def put(self, id):
+    pass
+
+def delete(self, id):
+    pass
+</code></pre>
+
+<p>api.add_resource(TaskListAPI, &lsquo;/todo/tasks&rsquo;, endpoint = &lsquo;tasks&rsquo;)
+api.add_resource(TaskAPI, &lsquo;/todo/tasks/&lt;int:id>&rsquo;, endpoint = &lsquo;task&rsquo;)</p>
+
+<p>if <strong>name</strong> == &lsquo;<strong>main</strong>&rsquo;:</p>
+
+<pre><code>app.run(debug = True)
+</code></pre>
+
+<p>```</p>
+
+<p>然后为TaskListAPI及TaskAPI这两个资源分别添加初始化方法，以处理数据验证等。</p>
+
+<p>``` python TaskListAPI的初始化方法
+def <strong>init</strong>(self):</p>
+
+<pre><code>    self.reqparse = reqparse.RequestParser()
+    self.reqparse.add_argument('title', type = str, required = True, help = 'No task title provided', location = 'json')
+    self.reqparse.add_argument('description', type = str, default = "", location = 'json')
+    super(TaskListAPI, self).__init__()
+</code></pre>
+
+<p>```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[基于Flask设计RESTful API]]></title>

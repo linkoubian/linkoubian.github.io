@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-12T00:03:54+08:00</updated>
+  <updated>2014-03-12T14:01:38+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,171 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[利用Flask的RESTful插件简化API的开发]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension/"/>
+    <updated>2014-03-12T13:45:07+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension</id>
+    <content type="html"><![CDATA[<p>今天尝试用Flask的RESTful插件改造昨天写的API，使之更清晰明了。</p>
+
+<h2>准备工作</h2>
+
+<ol>
+<li>进入昨天创建的虚拟开发环境venv，</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>. venv/bin/activate</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>安装flask-restful，</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>pip install flask-restful</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>代码基础机构</h2>
+
+<p>首先搭好Flask-Restful的代码框架，然后往里面填写代码，避免思路被打断。</p>
+
+<p>在app = Flask(<strong>name</strong>)下方加入一行api = Api(app)，该api实例将用来注册路由。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span><span class="p">,</span> <span class="n">abort</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">url_for</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">flask.ext.httpauth</span> <span class="kn">import</span> <span class="n">HTTPBasicAuth</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">flask.ext.restful</span> <span class="kn">import</span> <span class="n">Api</span><span class="p">,</span> <span class="n">Resource</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+</span><span class='line'><span class="n">api</span> <span class="o">=</span> <span class="n">Api</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</span><span class='line'><span class="n">auth</span> <span class="o">=</span> <span class="n">HTTPBasicAuth</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@auth.get_password</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_password</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">username</span> <span class="o">==</span> <span class="s">&#39;linkoubian&#39;</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">return</span> <span class="s">&#39;7c4a8d09ca3762af61e59520943dc26494f8941b&#39;</span>
+</span><span class='line'>    <span class="k">return</span> <span class="bp">None</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@auth.error_handler</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">unauthorized</span><span class="p">():</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">make_response</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;error&#39;</span><span class="p">:</span> <span class="s">&#39;Unauthorized access&#39;</span> <span class="p">}</span> <span class="p">),</span> <span class="mi">403</span><span class="p">)</span>
+</span><span class='line'>    <span class="c"># return 403 instead of 401 to prevent browsers from displaying the default auth dialog</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">u&#39;Buy groceries&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">u&#39;Milk, Cheese, Pizza, Fruit, Tylenol&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">u&#39;Learn Python&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">u&#39;Need to find a good Python tutorial on the web&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">TaskListAPI</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">pass</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">pass</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">TaskAPI</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">pass</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">pass</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">pass</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">TaskListAPI</span><span class="p">,</span> <span class="s">&#39;/todo/tasks&#39;</span><span class="p">,</span> <span class="n">endpoint</span> <span class="o">=</span> <span class="s">&#39;tasks&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">TaskAPI</span><span class="p">,</span> <span class="s">&#39;/todo/tasks/&lt;int:id&gt;&#39;</span><span class="p">,</span> <span class="n">endpoint</span> <span class="o">=</span> <span class="s">&#39;task&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后为TaskListAPI及TaskAPI这两个资源分别添加初始化方法，以处理数据验证等。</p>
+
+<figure class='code'><figcaption><span>TaskListAPI的初始化方法</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span> <span class="o">=</span> <span class="n">reqparse</span><span class="o">.</span><span class="n">RequestParser</span><span class="p">()</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;title&#39;</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">str</span><span class="p">,</span> <span class="n">required</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">help</span> <span class="o">=</span> <span class="s">&#39;No task title provided&#39;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;json&#39;</span><span class="p">)</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;description&#39;</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">str</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;json&#39;</span><span class="p">)</span>
+</span><span class='line'>        <span class="nb">super</span><span class="p">(</span><span class="n">TaskListAPI</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[基于Flask设计RESTful API]]></title>
