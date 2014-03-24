@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 3rd-party-lib | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/3rd-party-lib/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-24T17:11:12+08:00</updated>
+  <updated>2014-03-24T17:19:05+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,7 +29,7 @@
 
 <p>经过一番Google，在Github里找到了<a href="https://github.com/nicklockwood/iCarousel">iCarousel</a>这个控件，其示例代码中含不少例子，不过大部分例子的效果都是CoverFlow风格。但其中的Paging Example给了我灵感，把iCarousel View的高度设小一点，再额外加个page control及text label不就刚好么？欣喜之余，快速打开该示例的代码仔细阅读。</p>
 
-<p>OK，下面详细介绍如何基于iCarousel构建新闻头条。</p>
+<p>下面详细介绍如何基于iCarousel构建新闻头条。</p>
 
 <h2>iCarousel简介</h2>
 
@@ -96,7 +96,7 @@ return view;
 
 <p>}
 ```
-上面代码中的headlineNews是自定义的一个属性，数组类型，用来存从远程服务器获得的头条新闻列表，其中img字段为对应图片的URL。当加载cell view时headlineNews可能还没有数据，所以上述代码做了个判断，即if (index &lt; self.headlineNews.count)。</p>
+上面代码中的headlineNews是一个数组，用来存从远程服务器获得的头条新闻（Model）列表，其中img属性（头条新闻的字段）为对应图片的URL。当加载cell view时headlineNews可能还没有数据，所以上述代码做了个判断，即if (index &lt; self.headlineNews.count)。</p>
 
 <p>当远端数据加载完毕，我们可以调用[self.headlinesView reloadData]以更新界面。</p>
 
@@ -120,13 +120,13 @@ return view;
 <p>}
 ```</p>
 
-<p>当点击某一个cell view时，需要展示新闻详情页面。而跳转的逻辑可以放在carousel:didSelectItemAtIndex:中。</p>
+<p>点击某一个cell view时，需要展示新闻详情页面。跳转的逻辑可以放在carousel:didSelectItemAtIndex:中。</p>
 
 <h2>添加新闻标题</h2>
 
 <p>标题（Label）与当前页指示控件（page control）并不属于iCarousel的cell view，因为整个滑动过程中只有一个Label和一个Page Control。所以我们可以在Storyboard中拖放相应控件作为iCarousel的子视图，再设置属性即可。</p>
 
-<p>当滑动后，到达新页面时，需要设置Label及Current Page。这个过程可以在carouselCurrentItemIndexDidChange:中实现。</p>
+<p>当滑动后，到达新页面时，可以在carouselCurrentItemIndexDidChange:中设置Label及Current Page。</p>
 ]]></content>
   </entry>
   
