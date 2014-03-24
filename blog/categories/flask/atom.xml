@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Flask | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/flask/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-03-12T14:19:42+08:00</updated>
+  <updated>2014-03-24T17:11:12+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[利用Flask的RESTful插件简化API的开发]]></title>
+    <title type="html"><![CDATA[利用Flask的RESTful插件简化API开发]]></title>
     <link href="http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension/"/>
     <updated>2014-03-12T13:45:07+08:00</updated>
     <id>http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension</id>

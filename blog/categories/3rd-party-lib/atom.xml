@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: iOS, | Balloonsys Inc.]]></title>
-  <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
+  <title><![CDATA[Category: 3rd-party-lib | Balloonsys Inc.]]></title>
+  <link href="http://balloonsys.github.io/blog/categories/3rd-party-lib/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
   <updated>2014-03-24T17:11:12+08:00</updated>
   <id>http://balloonsys.github.io/</id>
