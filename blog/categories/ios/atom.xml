@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-04T16:55:13+08:00</updated>
+  <updated>2014-04-04T16:56:07+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -54,14 +54,10 @@
 <h2>第三方服务</h2>
 
 <p>为自己、为别人开发iPhone应用的过程中，也使用过不少第三方服务。一直持续使用的有：<br/>
-1. 私有代码托管<br/>
-<a href="https://bitbucket.org  ">https://bitbucket.org  </a>
-2. 收集崩溃日志<br/>
-<a href="https://www.crashlytics.com  ">https://www.crashlytics.com  </a>
-3. 测试版本分发<br/>
-<a href="https://testflightapp.com  ">https://testflightapp.com  </a>
-4. 数据统计分析<br/>
-<a href="http://www.appannie.com">http://www.appannie.com</a></p>
+1. 私有代码托管 <a href="https://bitbucket.org  ">https://bitbucket.org  </a>
+2. 收集崩溃日志 <a href="https://www.crashlytics.com  ">https://www.crashlytics.com  </a>
+3. 测试版本分发 <a href="https://testflightapp.com  ">https://testflightapp.com  </a>
+4. 数据统计分析 <a href="http://www.appannie.com">http://www.appannie.com</a></p>
 ]]></content>
   </entry>
   
