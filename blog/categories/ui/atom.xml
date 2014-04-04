@@ -4,7 +4,7 @@
   <title><![CDATA[Category: UI, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ui/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-04T16:43:44+08:00</updated>
+  <updated>2014-04-04T16:48:04+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[基于模板引擎的新闻内容展示]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/04/04/template-engine-in-action/"/>
+    <updated>2014-04-04T16:45:39+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/04/04/template-engine-in-action</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[基于iCarousel构建新闻头条]]></title>

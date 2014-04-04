@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tools | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-04T16:43:44+08:00</updated>
+  <updated>2014-04-04T16:48:04+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -20,6 +20,9 @@
     <id>http://balloonsys.github.io/blog/2014/04/04/ios-dev-tools</id>
     <content type="html"><![CDATA[<p>这个虚拟的Balloonsys工作室，总算发展到两位工程师了。</p>
 
+<!--more-->
+
+
 <h2>发展历史</h2>
 
 <p>2010年8月第一次为成都一家公司做兼职开发，仅持续两周
@@ -29,13 +32,13 @@
 <h2>第三方服务</h2>
 
 <p>为自己、为别人开发iPhone应用的过程中，也使用过不少第三方服务。一直持续使用的有：<br/>
-1. 私有代码托管
+1. 私有代码托管<br/>
 <a href="https://bitbucket.org  ">https://bitbucket.org  </a>
-2. 收集崩溃日志
+2. 收集崩溃日志<br/>
 <a href="https://www.crashlytics.com  ">https://www.crashlytics.com  </a>
-3. 测试版本分发
+3. 测试版本分发<br/>
 <a href="https://testflightapp.com  ">https://testflightapp.com  </a>
-4. 数据统计分析
+4. 数据统计分析<br/>
 <a href="http://www.appannie.com">http://www.appannie.com</a></p>
 ]]></content>
   </entry>
