@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 3rd-party-lib | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/3rd-party-lib/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-04T16:48:04+08:00</updated>
+  <updated>2014-04-04T16:55:13+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -18,7 +18,20 @@
     <link href="http://balloonsys.github.io/blog/2014/04/04/template-engine-in-action/"/>
     <updated>2014-04-04T16:45:39+08:00</updated>
     <id>http://balloonsys.github.io/blog/2014/04/04/template-engine-in-action</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>在为杭州市城管委开发贴心城管客户端时，城管动态这个模块的新闻展示是把新闻分成标题、时间、贴图、正文等部分，分别展示内容的。</p>
+
+<!--more-->
+
+
+<p>这样做的局限性不言而喻，不能图文并茂随心所欲的在文章内部嵌入图片且图片数量有一定的限制，而且服务端在发布新闻时也不方便做文章格式的编辑等。</p>
+
+<p>在设计西子快讯时，便尝试了基于模板引擎的新闻内容展示。其实这样做，开发工作量并不大，因为开源社区有了很好地模板引擎。</p>
+
+<h2>思路</h2>
+
+<h2>开发</h2>
+
+<h2>后记</h2>
 ]]></content>
   </entry>
   
