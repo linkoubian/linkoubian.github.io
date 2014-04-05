@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 3rd-party-lib | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/3rd-party-lib/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-05T23:45:07+08:00</updated>
+  <updated>2014-04-05T23:59:00+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -43,8 +43,8 @@
 <h3>HTML模板</h3>
 
 <p>准备好一个名为template.html文件，
-```html
-<html></p>
+<code>``html
+</code><html></p>
 
 <pre><code>&lt;head&gt;&lt;link href='news.css' rel='stylesheet' type='text/css' /&gt;&lt;/head&gt;
 &lt;body class=""&gt;
@@ -62,7 +62,7 @@
 &lt;/body&gt;
 </code></pre>
 
-<p></html>
+<p></html>`
 ```</p>
 
 <h3>显示样式</h3>
