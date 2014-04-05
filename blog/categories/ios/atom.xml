@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-06T00:13:14+08:00</updated>
+  <updated>2014-04-06T00:19:56+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -25,7 +25,7 @@
 
 <p>这样做的局限性不言而喻，不能图文并茂随心所欲的在文章内部嵌入图片且图片数量有一定的限制，而且服务端在发布新闻时也不方便做文章格式的编辑等。</p>
 
-<p>在设计西子快讯时，便尝试了基于模板引擎的新闻内容展示。其实这样做，开发工作量并不大，因为开源社区有了很好地模板引擎。</p>
+<p>在设计西子快讯时，便尝试了基于模板引擎的新闻内容展示。其实这样做，开发工作量并不大，因为开源社区有了高质量的模板引擎。</p>
 
 <h2>思路</h2>
 
@@ -46,11 +46,11 @@
 
 <h3>显示样式</h3>
 
-<p>news.css就不给出了，找个前端设计师结合项目需要提供一个即可。手动替换掉template.html中的参数，加上自己的news.css，便可在桌面浏览器里测试下效果。一切OKay的话，请继续阅读本文。</p>
+<p>news.css也不给出了，找个前端设计师结合项目需要提供一个即可。手动替换掉template.html中的参数，加上自己的news.css，便可在桌面浏览器里测试下效果。一切OKay的话，请继续阅读本文。</p>
 
 <h3>替换模板参数</h3>
 
-<p>我选择的模板引擎室MGTemplateEngine，到Github下载代码加入到Xcode工程里，写如下几行代码即可。
+<p>我选择的模板引擎是MGTemplateEngine，到Github下载源代码加入到Xcode工程里，然后编写如下几行代码即可。
 <code>objc
 MGTemplateEngine *engine = [MGTemplateEngine templateEngine];
 [engine setMatcher:[ICUTemplateMatcher matcherWithTemplateEngine:engine]];
@@ -72,15 +72,15 @@ NSString *newsContentHTML = [engine processTemplateInFileAtPath:templatePath wit
 
 <pre><code>&lt;script type="text/javascript"&gt;
     function extend_image(element){
-        var imgTag = element.getElementsByTagName("IMG")[0]
-        var url=imgTag.getAttribute("src")
-        location.href="image://?url="+url
+        var imgTag = element.getElementsByTagName("IMG")[0];
+        var url=imgTag.getAttribute("src");
+        location.href="image://?url="+url;
     }
 &lt;/script&gt;
 </code></pre>
 
 <p>```
-然后在<img/>标签外增加<a onclick="extend_image(this)">即可。</p>
+然后在img标签外增加点击调用extend_image(this)相关的HTML代码即可。</p>
 
 <p>用户点击图片后，WebView的委托方法webView:shouldStartLoadWithRequest:navigationType:会被调用。我们可以解析reqeust的URL字符串来做相应的处理。
 ```objc
