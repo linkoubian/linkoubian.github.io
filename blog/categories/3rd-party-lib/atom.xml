@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 3rd-party-lib | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/3rd-party-lib/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-06T00:06:22+08:00</updated>
+  <updated>2014-04-06T00:13:14+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -42,28 +42,7 @@
 
 <h3>HTML模板</h3>
 
-<p>准备好一个名为template.html文件，
-```html
-<html></p>
-
-<pre><code>&lt;head&gt;&lt;link href='news.css' rel='stylesheet' type='text/css' /&gt;&lt;/head&gt;
-&lt;body class="\"&gt;
-&lt;div id="realBody"&gt;
-    &lt;div&gt;
-        &lt;div id='title'&gt;\&lt;/div&gt;
-        &lt;div id='subtitle'&gt;\　编辑：\&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div&gt;
-                &lt;img src="\" style="width:100%;" desc=""/&gt;
-        \
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-</code></pre>
-
-<p></html>
-```</p>
+<p>准备好一个名为template.html文件，需要动态替换的部分用模板标签标识。</p>
 
 <h3>显示样式</h3>
 
@@ -82,9 +61,9 @@ NSString *newsContentHTML = [engine processTemplateInFileAtPath:templatePath wit
 
 <p>processTemplateInFileAtPath:withVariables中得variables参数是个字典，key对应template.html中的参数。注意示例代码中并没有把variables参数写完整。</p>
 
-<p>另外html中的参数对应的字符串应带有HTML标签，这样处理后的html内容放到WebView中显示效果会相对好很多。西子快讯便是这样设计与实现的。</p>
+<p>另外html中的body_content参数对应的字符串应带有HTML标签，这样处理后的html内容放到WebView中显示效果会相对好很多。西子快讯便是这样设计与实现的。</p>
 
-<p>除了在新闻顶部固定的位置显示新闻配图外，我们也可以参数对应的字符串中提供image标签及图片url以在文章任意位置插入图片。</p>
+<p>除了在新闻顶部固定的位置显示新闻配图外，我们也可以body_content参数对应的字符串中提供img标签以在文章任意位置插入图片。</p>
 
 <h3>操作新闻内的多媒体文件</h3>
 
@@ -94,14 +73,14 @@ NSString *newsContentHTML = [engine processTemplateInFileAtPath:templatePath wit
 <pre><code>&lt;script type="text/javascript"&gt;
     function extend_image(element){
         var imgTag = element.getElementsByTagName("IMG")[0]
-        var url=imgTag.getAttribute("src");
+        var url=imgTag.getAttribute("src")
         location.href="image://?url="+url
     }
 &lt;/script&gt;
 </code></pre>
 
-<p><code>``
-然后在</code><img src=""/>`标签外增加<a onclick="extend_image(this)">即可。</p>
+<p>```
+然后在<img/>标签外增加<a onclick="extend_image(this)">即可。</p>
 
 <p>用户点击图片后，WebView的委托方法webView:shouldStartLoadWithRequest:navigationType:会被调用。我们可以解析reqeust的URL字符串来做相应的处理。
 ```objc
