@@ -171,16 +171,16 @@
 </pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">MGTemplateEngine</span> <span class="o">*</span><span class="n">engine</span> <span class="o">=</span> <span class="p">[</span><span class="n">MGTemplateEngine</span> <span class="n">templateEngine</span><span class="p">];</span>
 </span><span class='line'><span class="p">[</span><span class="n">engine</span> <span class="nl">setMatcher:</span><span class="p">[</span><span class="n">ICUTemplateMatcher</span> <span class="nl">matcherWithTemplateEngine:</span><span class="n">engine</span><span class="p">]];</span>
 </span><span class='line'><span class="n">NSString</span> <span class="o">*</span><span class="n">templatePath</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">pathForResource:</span><span class="s">@&quot;template&quot;</span> <span class="nl">ofType:</span><span class="s">@&quot;html&quot;</span><span class="p">];</span>
-</span><span class='line'><span class="n">NSString</span> <span class="o">*</span><span class="n">newsContentHTML</span> <span class="o">=</span> <span class="p">[</span><span class="n">engine</span> <span class="nl">processTemplateInFileAtPath:</span><span class="n">templatePath</span> <span class="nl">withVariables:</span><span class="err">@</span><span class="p">{</span><span class="s">@&quot;title&quot;</span><span class="o">:</span> <span class="s">@&quot;Template based News client&quot;</span><span class="p">,</span> <span class="s">@&quot;editor&quot;</span><span class="o">:</span> <span class="s">@&quot;Linkou Bian&quot;</span><span class="p">},</span> <span class="p">...];</span>
+</span><span class='line'><span class="n">NSString</span> <span class="o">*</span><span class="n">newsContentHTML</span> <span class="o">=</span> <span class="p">[</span><span class="n">engine</span> <span class="nl">processTemplateInFileAtPath:</span><span class="n">templatePath</span> <span class="nl">withVariables:</span><span class="err">@</span><span class="p">{</span><span class="s">@&quot;title&quot;</span><span class="o">:</span> <span class="s">@&quot;Template based News client&quot;</span><span class="p">,</span> <span class="s">@&quot;editor&quot;</span><span class="o">:</span> <span class="s">@&quot;Linkou Bian&quot;</span><span class="p">}];</span>
 </span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">newsContentWebView</span> <span class="nl">loadHTMLString:</span><span class="n">newsContentHTML</span> <span class="nl">baseURL:</span><span class="p">[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="n">resourceURL</span><span class="p">]];</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>processTemplateInFileAtPath:withVariables中得variables参数是个字典，key对应template.html中的参数，注意示例代码并没有写完整。</p>
+<p>processTemplateInFileAtPath:withVariables中得variables参数是个字典，key对应template.html中的参数。注意示例代码中并没有把variables参数写完整。</p>
 
-<p>需要注意的是html中的参数对应的字符串应带有HTML标签，这样处理后的html内容放到WebView中显示效果会相对好很多。西子快讯便是这样设计与实现的。</p>
+<p>另外html中的&#8220;参数对应的字符串应带有HTML标签，这样处理后的html内容放到WebView中显示效果会相对好很多。西子快讯便是这样设计与实现的。</p>
 
-<p>除了在新闻顶部固定的位置显示新闻配图外，我们也可以在参数对应的字符串中提供image标签及图片url以在文章任意位置插入图片。</p>
+<p>除了在新闻顶部固定的位置显示新闻配图外，我们也可以在&#8220;参数对应的字符串中提供image标签及图片url以在文章任意位置插入图片。</p>
 
 <h3>操作新闻内的多媒体文件</h3>
 
@@ -203,7 +203,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>然后在<img src=""/>标签外增加<a onclick="extend_image(this)">即可。</p>
+<p>然后在<code>&lt;img src=""/&gt;</code>标签外增加<a onclick="extend_image(this)">即可。</p>
 
 <p>用户点击图片后，WebView的委托方法webView:shouldStartLoadWithRequest:navigationType:会被调用。我们可以解析reqeust的URL字符串来做相应的处理。</p>
 
