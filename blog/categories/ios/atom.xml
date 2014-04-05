@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-06T00:32:01+08:00</updated>
+  <updated>2014-04-06T00:33:00+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -63,7 +63,7 @@ NSString *newsContentHTML = [engine processTemplateInFileAtPath:templatePath wit
 
 <p>另外html中的body_content参数对应的字符串应带有HTML标签，这样处理后的html内容放到WebView中显示效果会相对好很多。西子快讯便是这样设计与实现的。</p>
 
-<p>除了在新闻顶部固定的位置显示新闻配图外，我们也可以body_content参数对应的字符串中提供img标签以在文章任意位置插入图片。</p>
+<p>除了在新闻顶部固定的位置显示新闻配图外，我们也可以在body_content参数对应的字符串中提供img标签以在文章任意位置插入图片。</p>
 
 <h3>操作新闻内的多媒体文件</h3>
 
