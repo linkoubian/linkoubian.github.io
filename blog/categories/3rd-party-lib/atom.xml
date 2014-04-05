@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 3rd-party-lib | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/3rd-party-lib/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-06T00:02:40+08:00</updated>
+  <updated>2014-04-06T00:06:22+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -43,26 +43,26 @@
 <h3>HTML模板</h3>
 
 <p>准备好一个名为template.html文件，
-<code>``html
-</code><html></p>
+```html
+<html></p>
 
 <pre><code>&lt;head&gt;&lt;link href='news.css' rel='stylesheet' type='text/css' /&gt;&lt;/head&gt;
-&lt;body class=""&gt;
+&lt;body class="\"&gt;
 &lt;div id="realBody"&gt;
     &lt;div&gt;
-        &lt;div id='title'&gt;&lt;/div&gt;
-        &lt;div id='subtitle'&gt;　编辑：&lt;/div&gt;
+        &lt;div id='title'&gt;\&lt;/div&gt;
+        &lt;div id='subtitle'&gt;\　编辑：\&lt;/div&gt;
     &lt;/div&gt;
 
     &lt;div&gt;
-                &lt;img src="" style="width:100%;" desc=""/&gt;
-        
+                &lt;img src="\" style="width:100%;" desc=""/&gt;
+        \
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;/body&gt;
 </code></pre>
 
-<p></html>`
+<p></html>
 ```</p>
 
 <h3>显示样式</h3>
@@ -82,9 +82,9 @@ NSString *newsContentHTML = [engine processTemplateInFileAtPath:templatePath wit
 
 <p>processTemplateInFileAtPath:withVariables中得variables参数是个字典，key对应template.html中的参数。注意示例代码中并没有把variables参数写完整。</p>
 
-<p>另外html中的<code></code>参数对应的字符串应带有HTML标签，这样处理后的html内容放到WebView中显示效果会相对好很多。西子快讯便是这样设计与实现的。</p>
+<p>另外html中的参数对应的字符串应带有HTML标签，这样处理后的html内容放到WebView中显示效果会相对好很多。西子快讯便是这样设计与实现的。</p>
 
-<p>除了在新闻顶部固定的位置显示新闻配图外，我们也可以在<code></code>参数对应的字符串中提供image标签及图片url以在文章任意位置插入图片。</p>
+<p>除了在新闻顶部固定的位置显示新闻配图外，我们也可以参数对应的字符串中提供image标签及图片url以在文章任意位置插入图片。</p>
 
 <h3>操作新闻内的多媒体文件</h3>
 
