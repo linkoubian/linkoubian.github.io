@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 3rd-party-lib | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/3rd-party-lib/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-06T00:29:50+08:00</updated>
+  <updated>2014-04-06T00:32:01+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -99,7 +99,7 @@ return NO;
 
 <h2>后记</h2>
 
-<p>个人认为采用这种方式的灵活性主要体现在，
+<p>个人认为采用这种方式的灵活性主要体现在，<br/>
 1. 可以定义多套显示风格（如白天、黑夜），然后将样式名传给模板<br/>
 2. 可以预设多套字体、字号（medium、large等），然后将样式名传给模板<br/>
 3. 基于自定义URL及WebView的delegate方法，实现HTML与ObjC的交互</p>
