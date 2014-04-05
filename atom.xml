@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-04T16:59:21+08:00</updated>
+  <updated>2014-04-05T23:45:07+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[基于模板引擎的新闻内容展示]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/04/04/template-engine-in-action/"/>
-    <updated>2014-04-04T16:45:39+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/04/04/template-engine-in-action</id>
+    <link href="http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action/"/>
+    <updated>2014-04-05T18:45:39+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action</id>
     <content type="html"><![CDATA[<p>在为杭州市城管委开发贴心城管客户端时，城管动态这个模块的新闻展示是把新闻分成标题、时间、贴图、正文等部分，分别展示内容的。</p>
 
 <!--more-->
@@ -29,9 +29,133 @@
 
 <h2>思路</h2>
 
+<ol>
+<li>根据新闻的ID从服务端获得News实例对象（含标题、附图、正文等信息）</li>
+<li>将获得的新闻各属性信息填充到APP内的HTML模板文件中</li>
+<li>HTML模板可以指定CSS样式（同样存放在APP内）</li>
+<li>经过模板引擎的处理得到最终的HTML内容</li>
+<li>将处理后的HTML内容加载到WebView控件显示即可</li>
+</ol>
+
+
 <h2>开发</h2>
 
+<h3>HTML模板</h3>
+
+<p>准备好一个名为template.html文件，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;html&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;head&gt;&lt;link</span> <span class="na">href=</span><span class="s">&#39;news.css&#39;</span> <span class="na">rel=</span><span class="s">&#39;stylesheet&#39;</span> <span class="na">type=</span><span class="s">&#39;text/css&#39;</span> <span class="nt">/&gt;&lt;/head&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;realBody&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;div&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;title&#39;</span><span class="nt">&gt;</span><span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;subtitle&#39;</span><span class="nt">&gt;</span>　编辑：<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="nt">&lt;div&gt;</span>
+</span><span class='line'>                  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;&quot;</span> <span class="na">style=</span><span class="s">&quot;width:100%;&quot;</span> <span class="na">desc=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>            
+</span><span class='line'>        <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/body&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>显示样式</h3>
+
+<p>news.css就不给出了，找个前端设计师结合项目需要提供一个即可。手动替换掉template.html中的参数，加上自己的news.css，便可在桌面浏览器里测试下效果。一切OKay的话，请继续阅读本文。</p>
+
+<h3>替换模板参数</h3>
+
+<p>我选择的模板引擎室MGTemplateEngine，到Github下载代码加入到Xcode工程里，写如下几行代码即可。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">MGTemplateEngine</span> <span class="o">*</span><span class="n">engine</span> <span class="o">=</span> <span class="p">[</span><span class="n">MGTemplateEngine</span> <span class="n">templateEngine</span><span class="p">];</span>
+</span><span class='line'><span class="p">[</span><span class="n">engine</span> <span class="nl">setMatcher:</span><span class="p">[</span><span class="n">ICUTemplateMatcher</span> <span class="nl">matcherWithTemplateEngine:</span><span class="n">engine</span><span class="p">]];</span>
+</span><span class='line'><span class="n">NSString</span> <span class="o">*</span><span class="n">templatePath</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">pathForResource:</span><span class="s">@&quot;template&quot;</span> <span class="nl">ofType:</span><span class="s">@&quot;html&quot;</span><span class="p">];</span>
+</span><span class='line'><span class="n">NSString</span> <span class="o">*</span><span class="n">newsContentHTML</span> <span class="o">=</span> <span class="p">[</span><span class="n">engine</span> <span class="nl">processTemplateInFileAtPath:</span><span class="n">templatePath</span> <span class="nl">withVariables:</span><span class="err">@</span><span class="p">{</span><span class="s">@&quot;title&quot;</span><span class="o">:</span> <span class="s">@&quot;Template based News client&quot;</span><span class="p">,</span> <span class="s">@&quot;editor&quot;</span><span class="o">:</span> <span class="s">@&quot;Linkou Bian&quot;</span><span class="p">},</span> <span class="p">...];</span>
+</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">newsContentWebView</span> <span class="nl">loadHTMLString:</span><span class="n">newsContentHTML</span> <span class="nl">baseURL:</span><span class="p">[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="n">resourceURL</span><span class="p">]];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>processTemplateInFileAtPath:withVariables中得variables参数是个字典，key对应template.html中的参数，注意示例代码并没有写完整。</p>
+
+<p>需要注意的是html中的参数对应的字符串应带有HTML标签，这样处理后的html内容放到WebView中显示效果会相对好很多。西子快讯便是这样设计与实现的。</p>
+
+<p>除了在新闻顶部固定的位置显示新闻配图外，我们也可以在参数对应的字符串中提供image标签及图片url以在文章任意位置插入图片。</p>
+
+<h3>操作新闻内的多媒体文件</h3>
+
+<p>如果需要点击图片以全屏展示，实现起来也非常简单。首先在template.html中加入一段JavaScript，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="kd">function</span> <span class="nx">extend_image</span><span class="p">(</span><span class="nx">element</span><span class="p">){</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">imgTag</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;IMG&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">url</span><span class="o">=</span><span class="nx">imgTag</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;image://?url=&quot;</span><span class="o">+</span><span class="nx">url</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后在<img src=""/>标签外增加<a onclick="extend_image(this)">即可。</p>
+
+<p>用户点击图片后，WebView的委托方法webView:shouldStartLoadWithRequest:navigationType:会被调用。我们可以解析reqeust的URL字符串来做相应的处理。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">if</span> <span class="p">([</span><span class="n">url</span> <span class="nl">hasPrefix:</span><span class="s">@&quot;image://&quot;</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">NSString</span> <span class="o">*</span><span class="n">imageURL</span> <span class="o">=</span> <span class="p">[</span><span class="n">url</span> <span class="nl">substringFromIndex:</span><span class="p">[</span><span class="s">@&quot;image://?url=&quot;</span> <span class="n">length</span><span class="p">]];</span>
+</span><span class='line'>    <span class="c1">// Present a new view controller and display the image full sreen</span>
+</span><span class='line'>    <span class="c1">// ...</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">NO</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>虽然西子快讯尚未支持视频播放，但我觉得也可以采用类似的方案处理。</p>
+
 <h2>后记</h2>
+
+<p>个人认为采用这种方式的灵活性主要体现在，
+1. 可以定义多套显示风格（如白天、黑夜），然后将样式名传给模板<br/>
+2. 可以预设多套字体、字号（medium、large等），然后将样式名传给模板<br/>
+3. 基于自定义URL及WebView的delegate方法，实现HTML与ObjC的交互</p>
+
+<p>另外，除了MGTemplateEngine外，还有其他的模板引擎可以使用，比如GRMustache。至于孰优孰劣，什么场合选择哪个，截止目前我并没有做任何研究，等接到下一个需要模板引擎的项目再说吧。</p>
 ]]></content>
   </entry>
   

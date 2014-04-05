@@ -4,7 +4,7 @@
   <title><![CDATA[Category: UI, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ui/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-04T16:59:21+08:00</updated>
+  <updated>2014-04-05T23:45:07+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[基于模板引擎的新闻内容展示]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/04/04/template-engine-in-action/"/>
-    <updated>2014-04-04T16:45:39+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/04/04/template-engine-in-action</id>
+    <link href="http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action/"/>
+    <updated>2014-04-05T18:45:39+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action</id>
     <content type="html"><![CDATA[<p>在为杭州市城管委开发贴心城管客户端时，城管动态这个模块的新闻展示是把新闻分成标题、时间、贴图、正文等部分，分别展示内容的。</p>
 
 <!--more-->
@@ -29,9 +29,103 @@
 
 <h2>思路</h2>
 
+<ol>
+<li>根据新闻的ID从服务端获得News实例对象（含标题、附图、正文等信息）</li>
+<li>将获得的新闻各属性信息填充到APP内的HTML模板文件中</li>
+<li>HTML模板可以指定CSS样式（同样存放在APP内）</li>
+<li>经过模板引擎的处理得到最终的HTML内容</li>
+<li>将处理后的HTML内容加载到WebView控件显示即可</li>
+</ol>
+
+
 <h2>开发</h2>
 
+<h3>HTML模板</h3>
+
+<p>准备好一个名为template.html文件，
+```html
+<html></p>
+
+<pre><code>&lt;head&gt;&lt;link href='news.css' rel='stylesheet' type='text/css' /&gt;&lt;/head&gt;
+&lt;body class=""&gt;
+&lt;div id="realBody"&gt;
+    &lt;div&gt;
+        &lt;div id='title'&gt;&lt;/div&gt;
+        &lt;div id='subtitle'&gt;　编辑：&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+                &lt;img src="" style="width:100%;" desc=""/&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<p></html>
+```</p>
+
+<h3>显示样式</h3>
+
+<p>news.css就不给出了，找个前端设计师结合项目需要提供一个即可。手动替换掉template.html中的参数，加上自己的news.css，便可在桌面浏览器里测试下效果。一切OKay的话，请继续阅读本文。</p>
+
+<h3>替换模板参数</h3>
+
+<p>我选择的模板引擎室MGTemplateEngine，到Github下载代码加入到Xcode工程里，写如下几行代码即可。
+<code>objc
+MGTemplateEngine *engine = [MGTemplateEngine templateEngine];
+[engine setMatcher:[ICUTemplateMatcher matcherWithTemplateEngine:engine]];
+NSString *templatePath = [[NSBundle mainBundle] pathForResource:@"template" ofType:@"html"];
+NSString *newsContentHTML = [engine processTemplateInFileAtPath:templatePath withVariables:@{@"title": @"Template based News client", @"editor": @"Linkou Bian"}, ...];
+[self.newsContentWebView loadHTMLString:newsContentHTML baseURL:[[NSBundle mainBundle] resourceURL]];
+</code></p>
+
+<p>processTemplateInFileAtPath:withVariables中得variables参数是个字典，key对应template.html中的参数，注意示例代码并没有写完整。</p>
+
+<p>需要注意的是html中的参数对应的字符串应带有HTML标签，这样处理后的html内容放到WebView中显示效果会相对好很多。西子快讯便是这样设计与实现的。</p>
+
+<p>除了在新闻顶部固定的位置显示新闻配图外，我们也可以在参数对应的字符串中提供image标签及图片url以在文章任意位置插入图片。</p>
+
+<h3>操作新闻内的多媒体文件</h3>
+
+<p>如果需要点击图片以全屏展示，实现起来也非常简单。首先在template.html中加入一段JavaScript，
+```javascript</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+    function extend_image(element){
+        var imgTag = element.getElementsByTagName("IMG")[0]
+        var url=imgTag.getAttribute("src");
+        location.href="image://?url="+url
+    }
+&lt;/script&gt;
+</code></pre>
+
+<p>```
+然后在<img src=""/>标签外增加<a onclick="extend_image(this)">即可。</p>
+
+<p>用户点击图片后，WebView的委托方法webView:shouldStartLoadWithRequest:navigationType:会被调用。我们可以解析reqeust的URL字符串来做相应的处理。
+```objc
+if ([url hasPrefix:@&ldquo;image://&rdquo;]) {</p>
+
+<pre><code>NSString *imageURL = [url substringFromIndex:[@"image://?url=" length]];
+// Present a new view controller and display the image full sreen
+// ...
+return NO;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>虽然西子快讯尚未支持视频播放，但我觉得也可以采用类似的方案处理。</p>
+
 <h2>后记</h2>
+
+<p>个人认为采用这种方式的灵活性主要体现在，
+1. 可以定义多套显示风格（如白天、黑夜），然后将样式名传给模板<br/>
+2. 可以预设多套字体、字号（medium、large等），然后将样式名传给模板<br/>
+3. 基于自定义URL及WebView的delegate方法，实现HTML与ObjC的交互</p>
+
+<p>另外，除了MGTemplateEngine外，还有其他的模板引擎可以使用，比如GRMustache。至于孰优孰劣，什么场合选择哪个，截止目前我并没有做任何研究，等接到下一个需要模板引擎的项目再说吧。</p>
 ]]></content>
   </entry>
   
