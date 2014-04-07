@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-08T00:30:23+08:00</updated>
+  <updated>2014-04-08T00:31:36+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -137,7 +137,7 @@ return NO;
 <p>当一个关于APP的Idea萌生后，我会在草稿本上大致画出轮廓，想好每一页的交互，然后用下面的软件工具落地： <br/>
 1. 网络请求分析 <a href="http://www.portswigger.net/burp/download.html">http://www.portswigger.net/burp/download.html</a> <br/>
 2. 软件原型设计 <a href="http://www.apple.com/cn/mac/keynote/">http://www.apple.com/cn/mac/keynote/</a> <br/>
-3. 接口服务文档 <a href="http://www.apple.com/cn/mac/pages/">http://www.apple.com/cn/mac/pages/</a>
+3. 接口服务文档 <a href="http://www.apple.com/cn/mac/pages/">http://www.apple.com/cn/mac/pages/</a> <br/>
 4. 模拟接口实现 <a href="http://www.sublimetext.com">http://www.sublimetext.com</a> <br/>
 5. 测试一下接口 <a href="http://luckymarmot.com/paw">http://luckymarmot.com/paw</a>
 6. 买点现成图标 <a href="https://www.iconfinder.com">https://www.iconfinder.com</a> <br/>
