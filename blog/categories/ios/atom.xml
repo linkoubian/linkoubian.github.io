@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-08T15:25:04+08:00</updated>
+  <updated>2014-04-08T15:27:28+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -69,7 +69,7 @@ return [super hitTest:point withEvent:event];
 <p>}
 ```</p>
 
-<p>紧接着，把Button的父视图，及跟view对应的类设为刚创建的类型。运行，测试，看到效果了吧?!</p>
+<p>紧接着，把Button的父视图，即根视图view对应的类设为刚创建的类型。运行，测试，看到效果了吧?!</p>
 
 <h2>后记</h2>
 
