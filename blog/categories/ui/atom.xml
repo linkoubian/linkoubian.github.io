@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: UI, | Balloonsys Inc.]]></title>
+  <title><![CDATA[Category: UI | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ui/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-08T00:33:42+08:00</updated>
+  <updated>2014-04-08T15:25:04+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,214 +14,66 @@
 
   
   <entry>
-    <title type="html"><![CDATA[基于模板引擎的新闻内容展示]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action/"/>
-    <updated>2014-04-05T18:45:39+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action</id>
-    <content type="html"><![CDATA[<p>在为杭州市城管委开发贴心城管客户端时，城管动态这个模块的新闻展示是把新闻分成标题、时间、贴图、正文等部分，分别展示内容的。</p>
+    <title type="html"><![CDATA[hitTest示例]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/04/08/hit-test-sample/"/>
+    <updated>2014-04-08T14:53:20+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/04/08/hit-test-sample</id>
+    <content type="html"><![CDATA[<p>早上翻看Github本周排名靠前的Objective-C开源项目，瞄了几眼<a href="https://github.com/wpsteak/PWParallaxScrollView">PWParallaxScrollView</a>的代码。发现其在ScrollView中嵌入Button，然后为了使得Button能接受点击事件是借助- hitTest:withEvent:实现的。</p>
 
-<!--more-->
+<p>一番Google，大致知道hitTest是干嘛的了。顺道写个Sample，改变默认的消息响应流。</p>
 
+<h2>准备</h2>
 
-<p>这样做的局限性不言而喻，不能图文并茂随心所欲的在文章内部嵌入图片且图片数量有一定的限制，而且服务端在发布新闻时也不方便做文章格式的编辑等。</p>
+<p>建立一个Single VC的工程，添加两个有部分重叠的Button，分别关联上touchUpInSide处理方法。</p>
 
-<p>在设计西子快讯时，便尝试了基于模板引擎的新闻内容展示。其实这样做，开发工作量并不大，因为开源社区有了高质量的模板引擎。</p>
+<p>```objc
+&ndash; (IBAction)buttonAPressed:(id)sender
+{</p>
 
-<h2>思路</h2>
-
-<ol>
-<li>根据新闻的ID从服务端获得News实例对象（含标题、附图、正文等信息）</li>
-<li>将获得的新闻各属性信息填充到APP内的HTML模板文件中</li>
-<li>HTML模板可以指定CSS样式（同样存放在APP内）</li>
-<li>经过模板引擎的处理得到最终的HTML内容</li>
-<li>将处理后的HTML内容加载到WebView控件显示即可</li>
-</ol>
-
-
-<h2>开发</h2>
-
-<h3>HTML模板</h3>
-
-<p>准备好一个名为template.html文件，需要动态替换的部分用模板标签标识。</p>
-
-<h3>显示样式</h3>
-
-<p>news.css也不给出了，找个前端设计师结合项目需要提供一个即可。手动替换掉template.html中的参数，加上自己的news.css，便可在桌面浏览器里测试下效果。一切OKay的话，请继续阅读本文。</p>
-
-<h3>替换模板参数</h3>
-
-<p>我选择的模板引擎是MGTemplateEngine，到Github下载源代码加入到Xcode工程里，然后编写如下几行代码即可。
-<code>objc
-MGTemplateEngine *engine = [MGTemplateEngine templateEngine];
-[engine setMatcher:[ICUTemplateMatcher matcherWithTemplateEngine:engine]];
-NSString *templatePath = [[NSBundle mainBundle] pathForResource:@"template" ofType:@"html"];
-NSString *newsContentHTML = [engine processTemplateInFileAtPath:templatePath withVariables:@{@"title": @"Template based News client", @"editor": @"Linkou Bian"}];
-[self.newsContentWebView loadHTMLString:newsContentHTML baseURL:[[NSBundle mainBundle] resourceURL]];
-</code></p>
-
-<p>processTemplateInFileAtPath:withVariables中得variables参数是个字典，key对应template.html中的参数。注意示例代码中并没有把variables参数写完整。</p>
-
-<p>另外html中的body_content参数对应的字符串应带有HTML标签，这样处理后的html内容放到WebView中显示效果会相对好很多。西子快讯便是这样设计与实现的。</p>
-
-<p>除了在新闻顶部固定的位置显示新闻配图外，我们也可以在body_content参数对应的字符串中提供img标签以在文章任意位置插入图片。</p>
-
-<h3>操作新闻内的多媒体文件</h3>
-
-<p>如果需要点击图片以全屏展示，实现起来也非常简单。首先在template.html中加入一段JavaScript，
-```javascript</p>
-
-<pre><code>&lt;script type="text/javascript"&gt;
-    function extend_image(element){
-        var imgTag = element.getElementsByTagName("IMG")[0];
-        var url=imgTag.getAttribute("src");
-        location.href="image://?url="+url;
-    }
-&lt;/script&gt;
+<pre><code>NSLog(@"You pressed button A");
 </code></pre>
 
-<p>```
-然后在img标签外增加点击调用extend_image(this)相关的HTML代码即可。</p>
+<p>}</p>
 
-<p>用户点击图片后，WebView的委托方法webView:shouldStartLoadWithRequest:navigationType:会被调用。我们可以解析reqeust的URL字符串来做相应的处理。
+<ul>
+<li>(IBAction)buttonBPressed:(id)sender
+{
+  NSLog(@&ldquo;You pressed button B&rdquo;);
+}
+```</li>
+</ul>
+
+
+<p>因为Button B(tag为102)是叠在Button A(tag为101)上面的，所以在重叠区域点击，控制台输出的是You pressed button B。这种情况下，如果希望收到消息的是Button A呢？那就用hitTest吧！</p>
+
+<h2>实现</h2>
+
+<p>建立一个UIView的子类，然后重写- hitTest:withEvent:方法，
 ```objc
-if ([url hasPrefix:@&ldquo;image://&rdquo;]) {</p>
+&ndash; (UIView <em>)hitTest:(CGPoint)point withEvent:(UIEvent </em>)event
+{</p>
 
-<pre><code>NSString *imageURL = [url substringFromIndex:[@"image://?url=" length]];
-// Present a new view controller and display the image full sreen
-// ...
-return NO;
+<pre><code>for (UIView* subview in self.subviews) {
+    CGPoint convertedPoint = [self convertPoint:point toView:subview];
+    UIView *result = [subview hitTest:convertedPoint withEvent:event];
+
+    if (result.tag == 101){
+        return result;
+        break;
+    }
+}
+
+return [super hitTest:point withEvent:event];
 </code></pre>
 
 <p>}
 ```</p>
 
-<p>虽然西子快讯尚未支持视频播放，但我觉得也可以采用类似的方案处理。</p>
+<p>紧接着，把Button的父视图，及跟view对应的类设为刚创建的类型。运行，测试，看到效果了吧?!</p>
 
 <h2>后记</h2>
 
-<p>个人认为采用这种方式的灵活性主要体现在，<br/>
-1. 可以定义多套显示风格（如白天、黑夜），然后将样式名传给模板<br/>
-2. 可以预设多套字体、字号（medium、large等），然后将样式名传给模板<br/>
-3. 基于自定义URL及WebView的delegate方法，实现HTML与ObjC的交互</p>
-
-<p>另外，除了MGTemplateEngine外，还有其他的模板引擎可以使用，比如GRMustache。至于孰优孰劣，什么场合选择哪个，截止目前我并没有做任何研究，等接到下一个需要模板引擎的项目再说吧。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[基于iCarousel构建新闻头条]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/03/24/news-headline-in-action/"/>
-    <updated>2014-03-24T16:25:24+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/03/24/news-headline-in-action</id>
-    <content type="html"><![CDATA[<p>市面上大部分新闻客户端的布局，都是顶部放一个可以左右滑动的头条，下方是新闻列表。像网易新闻的头条部分，通常是新闻与广告穿插。因为近期正在开发类似的一个APP，现总结头条部分的构建步骤。</p>
-
-<!--more-->
-
-
-<h2>技术选型</h2>
-
-<p>去code4app.com上搜索ScrollView相关的代码，会找到一些类似的代码示例，比如这个<a href="http://code4app.com/ios/EScrollerView/51935e166803fac572000003">EScrollView</a>。如果是本着学习的出发点，借鉴其思路并酌情修改其代码以满足自身项目需求，也不是难事。但如果要用在商业项目里，并期望获得足够的灵活性可能还需花费很多精力。</p>
-
-<p>经过一番Google，在Github里找到了<a href="https://github.com/nicklockwood/iCarousel">iCarousel</a>这个控件，其示例代码中含不少例子，不过大部分例子的效果都是CoverFlow风格。但其中的Paging Example给了我灵感，把iCarousel View的高度设小一点，再额外加个page control及text label不就刚好么？欣喜之余，快速打开该示例的代码仔细阅读。</p>
-
-<p>下面详细介绍如何基于iCarousel构建新闻头条。</p>
-
-<h2>iCarousel简介</h2>
-
-<h3>定制iCarousel视图</h3>
-
-<p>拖一个UIView到View Controller的顶部，大小为320X190，类名设置为iCarousel，连接到一个名为headlinesView的Outlet。</p>
-
-<p>在viewDidLoad中调用如下方法，
-``` objc
-&ndash; (void)setupHeadlinesView
-{</p>
-
-<pre><code>self.headlinesView.type = iCarouselTypeLinear;
-self.headlinesView.pagingEnabled = YES;
-self.headlinesView.dataSource = self;
-self.headlinesView.delegate = self;
-</code></pre>
-
-<p>}
-```
-此处关键的一个属性便是pagingEnabled，设置后刚好符合期望的效果。</p>
-
-<h3>为iCarousel提供数据</h3>
-
-<p>iCarousel采用类似于table view的设计方式，提供了不少datasource及delegate方法。</p>
-
-<p>下面这个方法告诉iCarousel共有几个cell item，
-``` objc
-&ndash; (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
-{</p>
-
-<pre><code>return kCoundOfHeadlineNews;
-</code></pre>
-
-<p>}
-```</p>
-
-<p>当需要加载某个cell view时，会调用viewForItemAtIndex，我们需在该方法里确保用于显示新闻头条图片的imageView被构建并设置相应地image。
-``` objc
-&ndash; (UIView <em>)carousel:(iCarousel </em>)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
-{</p>
-
-<pre><code>UIImageView *headlineImageView = nil;
-
-// Create new view if no view is available for recycling
-if (view == nil) {
-    view = [[UIView alloc] initWithFrame:self.headlinesView.bounds];
-    headlineImageView = [[UIImageView alloc] initWithFrame:view.bounds];
-    [headlineImageView setImage:[UIImage imageNamed:@"Headline_Placehold"]];
-    headlineImageView.tag = kHeadlineImageViewTag;
-    [view addSubview:headlineImageView];
-}
-else {
-    headlineImageView = (UIImageView *)[view viewWithTag:kHeadlineImageViewTag];
-}
-
-// Load image for headline news
-if (index &lt; self.headlineNews.count) {
-    [headlineImageView setImageWithURL:[NSURL URLWithString:[self.headlineNews[index] img]]];
-}
-
-return view;
-</code></pre>
-
-<p>}
-```
-上面代码中的headlineNews是一个数组，用来存从远程服务器获得的头条新闻（Model）列表，其中img属性（头条新闻的字段）为对应图片的URL。当加载cell view时headlineNews可能还没有数据，所以上述代码做了个判断，即if (index &lt; self.headlineNews.count)。</p>
-
-<p>当远端数据加载完毕，我们可以调用[self.headlinesView reloadData]以更新界面。</p>
-
-<p>另外，往Image View设置远程图片，可以用SDWebImage提供的方法setImageWithURL，该框架可以有效的管理图片的缓存。</p>
-
-<h3>定制iCarousel的行为</h3>
-
-<p>当头条新闻滑到最后一页时，通常需要能够回到第一页。iCarousel提供了一个delegate方法以定制该控件的属性。
-``` objc
-&ndash; (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value
-{</p>
-
-<pre><code>switch (option) {
-    case iCarouselOptionWrap:
-        return YES;
-    default:
-        return value;
-}
-</code></pre>
-
-<p>}
-```</p>
-
-<p>点击某一个cell view时，需要展示新闻详情页面。跳转的逻辑可以放在carousel:didSelectItemAtIndex:中。</p>
-
-<h2>添加新闻标题</h2>
-
-<p>标题（Label）与当前页指示控件（page control）并不属于iCarousel的cell view，因为整个滑动过程中只有一个Label和一个Page Control。所以我们可以在Storyboard中拖放相应控件作为iCarousel的子视图，再设置属性即可。</p>
-
-<p>当滑动后，到达新页面时，可以在carouselCurrentItemIndexDidChange:中设置Label及Current Page。</p>
+<p>源代码里有乾坤，不注意看就错过了:&ndash;)</p>
 ]]></content>
   </entry>
   
