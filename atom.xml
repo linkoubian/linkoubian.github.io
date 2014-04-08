@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-04-08T15:27:28+08:00</updated>
+  <updated>2014-04-08T15:33:30+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -19,6 +19,9 @@
     <updated>2014-04-08T14:53:20+08:00</updated>
     <id>http://balloonsys.github.io/blog/2014/04/08/hit-test-sample</id>
     <content type="html"><![CDATA[<p>早上翻看Github本周排名靠前的Objective-C开源项目，瞄了几眼<a href="https://github.com/wpsteak/PWParallaxScrollView">PWParallaxScrollView</a>的代码。发现其在ScrollView中嵌入Button，然后为了使得Button能接受点击事件是借助- hitTest:withEvent:实现的。</p>
+
+<!--more-->
+
 
 <p>一番Google，大致知道hitTest是干嘛的了。顺道写个Sample，改变默认的消息响应流。</p>
 
