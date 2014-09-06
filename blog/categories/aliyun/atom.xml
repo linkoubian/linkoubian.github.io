@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Aliyun | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/aliyun/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-06T12:36:43+08:00</updated>
+  <updated>2014-09-06T12:38:17+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -37,7 +37,7 @@
 <p>cat /etc/redhat-release
 ```</p>
 
-<p>根据服务器信息CentOS release 6.5 (Final)，到<a href="https://about.gitlab.com/downloads/">GitLab | Package downloads</a>下载对应的<a href="https://downloads-packages.s3.amazonaws.com/centos-6.5/gitlab-7.2.1_omnibus-1.el6.x86_64.rpm">rpm</a></p>
+<p>根据服务器信息CentOS release 6.5 (Final)，到<a href="https://about.gitlab.com/downloads/">GitLab | Package downloads</a>下载对应的<a href="https://downloads-packages.s3.amazonaws.com/centos-6.5/gitlab-7.2.1_omnibus-1.el6.x86_64.rpm">RPM</a></p>
 
 <p>用curl下载比较慢，所以我改用迅雷下载，然后scp到服务器主目录下。
 ```sh</p>
@@ -48,7 +48,7 @@
 scp gitlab.tar.gz user_name@ip_address:~/
 ```</p>
 
-<p>登录服务器，加压rpm文件
+<p>登录服务器，解压rpm文件
 <code>sh
 ssh &lt;YOUR_USERNAME&gt;@&lt;YOUR_SERVER_IP&gt;
 tar -zxvf gitlab.tar.gz
