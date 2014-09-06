@@ -5,11 +5,16 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: IAP - Balloonsys Inc.</title>
+  <title>Install GitLab on CentOS 6.5 - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="Category: IAP">
+  <meta name="description" content="公司新申请了一台阿里云服务器来部署项目测试坏境。看着服务器那么高的配置，便打算在上面搭建GitLab，以告别间歇性龟速的Bitbucket服务。当然喽，作为个人私有项目托管，我还是坚持使用BB的。 准备 查看服务器系统环境，以下载对应的GitLab包。 1
+2
+3
+4
+5
+# 查看内核版本 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.ioblog/categories/iap">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -67,35 +72,102 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: IAP</h1>
+    
+      <h1 class="entry-title">Install GitLab on CentOS 6.5</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-06T11:32:15+08:00" pubdate data-updated="true">Sep 6<span>th</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>公司新申请了一台阿里云服务器来部署项目测试坏境。看着服务器那么高的配置，便打算在上面搭建GitLab，以告别间歇性龟速的Bitbucket服务。当然喽，作为个人私有项目托管，我还是坚持使用BB的。</p>
 
-  
-  <h2>2014</h2>
-
-<article>
-  
-<h1><a href="/blog/2014/03/01/in-app-purchasing-a-freemium-model/">移动应用的Freemium模式</a></h1>
-<time datetime="2014-03-01T20:12:22+08:00" pubdate><span class='month'>Mar</span> <span class='day'>01</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/iap/'>IAP</a>, <a class='category' href='/blog/categories/ios/'>iOS</a></span>
-</footer>
+<!--more-->
 
 
-</article>
+<h2>准备</h2>
+
+<p>查看服务器系统环境，以下载对应的GitLab包。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># 查看内核版本</span>
+</span><span class='line'>uname -r
+</span><span class='line'>
+</span><span class='line'><span class="c"># 查看发行版本</span>
+</span><span class='line'>cat /etc/redhat-release
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-06T11:32:15+08:00" pubdate data-updated="true">Sep 6<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/aliyun/'>Aliyun</a>, <a class='category' href='/blog/categories/centos/'>CentOS,</a>, <a class='category' href='/blog/categories/gitlab/'>GitLab,</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/04/08/hit-test-sample/" title="Previous Post: hitTest示例">&laquo; hitTest示例</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

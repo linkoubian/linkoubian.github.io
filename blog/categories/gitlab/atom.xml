@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: GitLab, | Balloonsys Inc.]]></title>
+  <link href="http://balloonsys.github.io/blog/categories/gitlab/atom.xml" rel="self"/>
+  <link href="http://balloonsys.github.io/"/>
+  <updated>2014-09-06T11:39:14+08:00</updated>
+  <id>http://balloonsys.github.io/</id>
+  <author>
+    <name><![CDATA[Linkou Bian]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Install GitLab on CentOS 6.5]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5/"/>
+    <updated>2014-09-06T11:32:15+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5</id>
+    <content type="html"><![CDATA[<p>公司新申请了一台阿里云服务器来部署项目测试坏境。看着服务器那么高的配置，便打算在上面搭建GitLab，以告别间歇性龟速的Bitbucket服务。当然喽，作为个人私有项目托管，我还是坚持使用BB的。</p>
+
+<!--more-->
+
+
+<h2>准备</h2>
+
+<p>查看服务器系统环境，以下载对应的GitLab包。
+```sh</p>
+
+<h1>查看内核版本</h1>
+
+<p>uname -r</p>
+
+<h1>查看发行版本</h1>
+
+<p>cat /etc/redhat-release
+```</p>
+]]></content>
+  </entry>
+  
+</feed>
