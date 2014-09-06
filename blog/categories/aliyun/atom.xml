@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Aliyun | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/aliyun/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-06T12:40:50+08:00</updated>
+  <updated>2014-09-06T12:41:30+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -106,8 +106,8 @@ nginx[&lsquo;listen_address&rsquo;] = &lsquo;&lt;YOUR_SERVER_IP>&rsquo;</p>
 
 <ol>
 <li>启动GitLab组件: gitlab-ctl start</li>
-<li>停止GitLab组件：gitlab-ctl stop</li>
-<li>重启GitLab组件：gitlab-ctl restart</li>
+<li>停止GitLab组件: gitlab-ctl stop</li>
+<li>重启GitLab组件: gitlab-ctl restart</li>
 </ol>
 
 ]]></content>
