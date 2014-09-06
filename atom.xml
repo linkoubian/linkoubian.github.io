@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-06T12:38:17+08:00</updated>
+  <updated>2014-09-06T12:40:50+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -121,6 +121,8 @@
 </span><span class='line'>gitlab_rails<span class="o">[</span><span class="s1">&#39;backup_keep_time&#39;</span><span class="o">]</span> <span class="o">=</span> 604800
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>修改完配置文件，再次执行sudo gitlab-ctl reconfigure，等执行完成后打开浏览器，此时应该就可以访问GitLab了。</p>
 
 <h2>更多</h2>
 
