@@ -9,12 +9,13 @@
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="公司新申请了一台阿里云服务器来部署项目测试坏境。看着服务器那么高的配置，便打算在上面搭建GitLab，以告别间歇性龟速的Bitbucket服务。当然喽，作为个人私有项目托管，我还是坚持使用BB的。 准备 查看服务器系统环境，以下载对应的GitLab包。 1
+  <meta name="description" content="公司买了一台阿里云服务器部署项目测试坏境。看着服务器那么高的配置，便打算在上面搭建GitLab，以告别间歇性龟速的Bitbucket服务。当然喽，作为个人私有项目托管，我依然推荐使用BB。 准备 查看服务器系统环境，以下载对应的GitLab包。 1
 2
 3
 4
 #查看内核版本
-uname &hellip;">
+uname -r
+# &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,7 +100,7 @@ uname &hellip;">
   </header>
 
 
-<div class="entry-content"><p>公司新申请了一台阿里云服务器来部署项目测试坏境。看着服务器那么高的配置，便打算在上面搭建GitLab，以告别间歇性龟速的Bitbucket服务。当然喽，作为个人私有项目托管，我还是坚持使用BB的。</p>
+<div class="entry-content"><p>公司买了一台阿里云服务器部署项目测试坏境。看着服务器那么高的配置，便打算在上面搭建GitLab，以告别间歇性龟速的Bitbucket服务。当然喽，作为个人私有项目托管，我依然推荐使用BB。</p>
 
 <!--more-->
 
@@ -174,7 +175,7 @@ uname &hellip;">
 
 <p>在浏览器地址栏输入服务器ip，以访问GitLab。管理员用户名为root，初始密码为5iveL!fe，首次登录后会要求改密码。</p>
 
-<h1>问题</h1>
+<h2>问题</h2>
 
 <p>当我在服务器安装之前，现在本地的虚拟机跑了一遍，很正常。但是当安装到真实地服务器时，访问GitLab遇到502错误。</p>
 
@@ -203,7 +204,7 @@ uname &hellip;">
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h1>更多</h1>
+<h2>更多</h2>
 
 <p>启动GitLab组件: gitlab-ctl start
 停止GitLab组件：gitlab-ctl stop
