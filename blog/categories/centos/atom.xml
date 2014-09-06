@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CentOS, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/centos/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-06T12:34:32+08:00</updated>
+  <updated>2014-09-06T12:35:59+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -102,9 +102,12 @@ nginx[&lsquo;listen_address&rsquo;] = &lsquo;&lt;YOUR_SERVER_IP>&rsquo;</p>
 
 <h2>更多</h2>
 
-<p>启动GitLab组件: gitlab-ctl start
-停止GitLab组件：gitlab-ctl stop
-重启GitLab组件：gitlab-ctl restart</p>
+<ol>
+<li>启动GitLab组件: gitlab-ctl start</li>
+<li>停止GitLab组件：gitlab-ctl stop</li>
+<li>重启GitLab组件：gitlab-ctl restart</li>
+</ol>
+
 ]]></content>
   </entry>
   
