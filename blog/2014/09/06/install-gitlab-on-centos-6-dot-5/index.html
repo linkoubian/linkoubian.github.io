@@ -11,8 +11,10 @@
   
   <meta name="description" content="公司新申请了一台阿里云服务器来部署项目测试坏境。看着服务器那么高的配置，便打算在上面搭建GitLab，以告别间歇性龟速的Bitbucket服务。当然喽，作为个人私有项目托管，我还是坚持使用BB的。 准备 查看服务器系统环境，以下载对应的GitLab包。 1
 2
-uname -r
-cat /etc/ &hellip;">
+3
+4
+#查看内核版本
+uname &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -108,7 +110,11 @@ cat /etc/ &hellip;">
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>uname -r
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#查看内核版本</span>
+</span><span class='line'>uname -r
+</span><span class='line'><span class="c">#查看发行版本</span>
 </span><span class='line'>cat /etc/redhat-release
 </span></code></pre></td></tr></table></div></figure>
 

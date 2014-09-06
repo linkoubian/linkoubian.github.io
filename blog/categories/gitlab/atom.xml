@@ -4,7 +4,7 @@
   <title><![CDATA[Category: GitLab, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/gitlab/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-06T12:05:12+08:00</updated>
+  <updated>2014-09-06T12:07:12+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -26,10 +26,16 @@
 <h2>准备</h2>
 
 <p>查看服务器系统环境，以下载对应的GitLab包。
-<code>sh
-uname -r
-cat /etc/redhat-release
-</code></p>
+```sh</p>
+
+<h1>查看内核版本</h1>
+
+<p>uname -r</p>
+
+<h1>查看发行版本</h1>
+
+<p>cat /etc/redhat-release
+```</p>
 ]]></content>
   </entry>
   
