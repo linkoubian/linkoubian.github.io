@@ -4,7 +4,7 @@
   <title><![CDATA[Category: GitLab, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/gitlab/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-06T12:07:12+08:00</updated>
+  <updated>2014-09-06T12:27:39+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -36,6 +36,71 @@
 
 <p>cat /etc/redhat-release
 ```</p>
+
+<p>根据服务器信息CentOS release 6.5 (Final)，到<a href="https://about.gitlab.com/downloads/">GitLab | Package downloads</a>下载对应的<a href="https://downloads-packages.s3.amazonaws.com/centos-6.5/gitlab-7.2.1_omnibus-1.el6.x86_64.rpm">rpm</a></p>
+
+<p>用curl下载比较慢，所以我改用迅雷下载，然后scp到服务器主目录下。
+```sh</p>
+
+<h1>打包上传</h1>
+
+<p>tar -zcvf gitlab.tar.gz gitlab-7.2.1_omnibus-1.el6.x86_64.rpm
+scp gitlab.tar.gz user_name@ip_address:~/
+```</p>
+
+<p>登录服务器，加压rpm文件
+<code>sh
+ssh &lt;YOUR_USERNAME&gt;@&lt;YOUR_SERVER_IP&gt;
+tar -zxvf gitlab.tar.gz
+</code></p>
+
+<h2>安装</h2>
+
+<p><code>sh
+sudo yum install openssh-server
+sudo yum install postfix
+sudo service postfix start
+sudo chkconfig postfix on
+sudo rpm -i gitlab-7.2.1_omnibus-1.el6.x86_64.rpm
+</code></p>
+
+<h2>配置</h2>
+
+<p><code>sh
+sudo -e /etc/gitlab/gitlab.rb
+</code></p>
+
+<p>将external_url设成服务器ip地址，然后执行
+<code>sh
+sudo gitlab-ctl reconfigure
+sudo lokkit -s http -s ssh
+</code></p>
+
+<p>在浏览器地址栏输入服务器ip，以访问GitLab。管理员用户名为root，初始密码为5iveL!fe，首次登录后会要求改密码。</p>
+
+<h1>问题</h1>
+
+<p>当我在服务器安装之前，现在本地的虚拟机跑了一遍，很正常。但是当安装到真实地服务器时，访问GitLab遇到502错误。</p>
+
+<p>在命令行执行sudo gitlab-ctl tail可看到错误信息，原来是因为8080端口已被项目测试环境占用导致unicorn无法启动。</p>
+
+<p>所以，很自然的想到去修改GitLab的配置文件。最终的配置信息如下：
+```sh</p>
+
+<h1>Change the external_url to the address your users will type in their browser</h1>
+
+<p>external_url &lsquo;<a href="http://">http://</a>&lt;YOUR_SERVER_IP>:8888&rsquo;
+redis[&lsquo;port&rsquo;] = 6379
+postgresql[&lsquo;port&rsquo;] = 5432
+unicorn[&lsquo;port&rsquo;] = 9999
+nginx[&lsquo;listen_address&rsquo;] = &lsquo;&lt;YOUR_SERVER_IP>&rsquo;</p>
+
+<h1>Limit backup lifetime to 7 days</h1>
+
+<p>gitlab_rails[&lsquo;backup_keep_time&rsquo;] = 604800
+```</p>
+
+<p>-EOF-</p>
 ]]></content>
   </entry>
   
