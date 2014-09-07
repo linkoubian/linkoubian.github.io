@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CentOS, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/centos/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-07T16:55:30+08:00</updated>
+  <updated>2014-09-07T17:08:47+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -34,7 +34,7 @@ chmod +x bitnami-redmine-2.5.2-2-linux-x64-installer.run
 sudo ./bitnami-redmine-2.5.2-2-linux-x64-installer.run
 </code></p>
 
-<p>根据想到的提示，选择语言、组件等，非常简单。端口么，本人设的8081，如果启用了防火墙，或许你还需要做如下配置：
+<p>根据相应的提示，选择语言、所需的组件等，非常简单。端口么，本人设的8081，如果启用了防火墙，或许你还需要做如下配置：
 <code>sh
 sudo vi /etc/sysconfig/iptables
 </code></p>
@@ -48,42 +48,38 @@ sudo vi /etc/sysconfig/iptables
 sudo vi /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml
 </code></p>
 
-<p>然后在External issue trackers部分，如下设置Redmine地址即可：
-```sh
-  ## External issues trackers
-  issues_tracker:</p>
+<p>然后在External issue trackers部分，配置一下Redmine地址即可：
+```sh</p>
 
-<pre><code>  redmine:
-    title: "Redmine"
-#   ## If not nil, link 'Issues' on project page will be replaced with this
-#   ## Use placeholders:
-#   ##  :project_id        - GitLab project identifier
-#   ##  :issues_tracker_id - Project Name or Id in external issue tracker
-    project_url: "http://172.16.198.129:8081/redmine/projects/:issues_tracker_id"
-#
-#   ## If not nil, links from /#\d/ entities from commit messages will replaced with this
-#   ## Use placeholders:
-#   ##  :project_id        - GitLab project identifier
-#   ##  :issues_tracker_id - Project Name or Id in external issue tracker
-#   ##  :id                - Issue id (from commit messages)
-    issues_url: "http://172.16.198.129:8081/redmine/issues/:id"
-#
-#   ## If not nil, links to creating new issues will be replaced with this
-#   ## Use placeholders:
-#   ##  :project_id        - GitLab project identifier
-#   ##  :issues_tracker_id - Project Name or Id in external issue tracker
-    new_issue_url: "http://172.16.198.129:8081/redmine/projects/:issues_tracker_id/issues/new"
+<h2>External issues trackers</h2>
+
+<p>issues_tracker:</p>
+
+<pre><code>redmine:
+  title: "Redmine"
+  project_url: "http://&lt;ip_address&gt;:8081/redmine/projects/:issues_tracker_id"
+  issues_url: "http://&lt;ip_address&gt;:8081/redmine/issues/:id"
+  new_issue_url: "http://&lt;ip_address&gt;:8081/redmine/projects/:issues_tracker_id/issues/new"
 </code></pre>
 
 <p>```</p>
 
-<p>在浏览器打开GitLab中具体的项目，设置页面里便可以选择Issue跟踪系统了。选择Redmine，同时讲Redmine里对应项目的名称填在Project name or id in issues tracker字段。</p>
+<p>在浏览器中访问GitLab具体某个项目，此时项目的设置页面里已经可以选择Issue跟踪系统了。我们选择Redmine，同时将Redmine里对应的项目名称填在Project name or id in issues tracker区域。</p>
 
-<p>OK，Redmine的安装、与GitLab的集成到此为止，在GitLab里点击Issue标签就会自动跳转到Redmine里了。</p>
+<p>OK，Redmine的安装、与GitLab的集成，均已大功告成，在GitLab里点击Issue标签会自动跳转到Redmine。</p>
 
 <h2>后记</h2>
 
 <p>至于如何将每次commit消息里的Fixes #issue_id和Redmine里的issue关联，暂时还没有研究。</p>
+
+<p>另外需要注意的是，直接在gitlab.yml中做的修改会随执行sudo gitlab-ctl reconfigure的执行而丢失。按照gitlab.yml文件顶部的说法，应在gitlab.rb文件中配置，但具体怎么在这个文件里配Redmine，暂时也没有研究。</p>
+
+<p>暂时没有研究的事实是，研究了一小会儿后无功而返，也不想再花更多时间在上面，毕竟不影响我正常使用GitLab及Redmine。</p>
+
+<ul>
+<li>EOF &ndash;</li>
+</ul>
+
 ]]></content>
   </entry>
   
