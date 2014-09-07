@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CentOS, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/centos/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-07T17:08:47+08:00</updated>
+  <updated>2014-09-07T17:09:57+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -75,19 +75,14 @@ sudo vi /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml
 <p>另外需要注意的是，直接在gitlab.yml中做的修改会随执行sudo gitlab-ctl reconfigure的执行而丢失。按照gitlab.yml文件顶部的说法，应在gitlab.rb文件中配置，但具体怎么在这个文件里配Redmine，暂时也没有研究。</p>
 
 <p>暂时没有研究的事实是，研究了一小会儿后无功而返，也不想再花更多时间在上面，毕竟不影响我正常使用GitLab及Redmine。</p>
-
-<ul>
-<li>EOF &ndash;</li>
-</ul>
-
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[在CentOS 6.5环境下安装GitLab]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5+2/"/>
+    <link href="http://balloonsys.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5/"/>
     <updated>2014-09-06T11:32:15+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5 2</id>
+    <id>http://balloonsys.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5</id>
     <content type="html"><![CDATA[<p>公司买了一台阿里云服务器部署项目测试坏境。看着服务器那么高的配置，便打算在上面搭建GitLab，以告别间歇性龟速的Bitbucket服务。当然喽，作为个人私有项目托管，我依然推荐使用BB。</p>
 
 <!--more-->
