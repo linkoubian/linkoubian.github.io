@@ -4,7 +4,7 @@
   <title><![CDATA[Category: VMWare | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/vmware/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-07T17:09:57+08:00</updated>
+  <updated>2014-09-07T17:11:19+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -74,7 +74,7 @@ sudo vi /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml
 
 <p>另外需要注意的是，直接在gitlab.yml中做的修改会随执行sudo gitlab-ctl reconfigure的执行而丢失。按照gitlab.yml文件顶部的说法，应在gitlab.rb文件中配置，但具体怎么在这个文件里配Redmine，暂时也没有研究。</p>
 
-<p>暂时没有研究的事实是，研究了一小会儿后无功而返，也不想再花更多时间在上面，毕竟不影响我正常使用GitLab及Redmine。</p>
+<p>&ldquo;暂时没有研究"的事实是，研究了一小会儿后无功而返，也不想再花更多时间在上面，毕竟不影响我正常使用GitLab及Redmine。</p>
 ]]></content>
   </entry>
   
