@@ -24,7 +24,7 @@ uname -r
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5+2">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -206,6 +206,15 @@ uname -r
 
 <p>修改完配置文件，再次执行sudo gitlab-ctl reconfigure，等执行完成后打开浏览器，此时应该就可以访问GitLab了。</p>
 
+<p>若访问被防火墙拦截（比如我在Mac上访问虚拟机里安装的CentOS），则执行下面操作即可：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>sudo vi /etc/sysconfig/iptables
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后加入-A INPUT -m state &mdash;state NEW -m tcp -p tcp &mdash;dport 8888 -j ACCEPT</p>
+
 <h2>更多</h2>
 
 <ol>
@@ -241,7 +250,7 @@ uname -r
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/aliyun/'>Aliyun</a>, <a class='category' href='/blog/categories/centos/'>CentOS,</a>, <a class='category' href='/blog/categories/gitlab/'>GitLab,</a>
+    <a class='category' href='/blog/categories/aliyun/'>Aliyun,</a>, <a class='category' href='/blog/categories/centos/'>CentOS,</a>, <a class='category' href='/blog/categories/gitlab/'>GitLab,</a>, <a class='category' href='/blog/categories/vmware/'>VMWare</a>
   
 </span>
 
@@ -260,6 +269,8 @@ uname -r
         <a class="basic-alignment left" href="/blog/2014/04/08/hit-test-sample/" title="Previous Post: hitTest示例">&laquo; hitTest示例</a>
       
       
+        <a class="basic-alignment right" href="/blog/2014/09/07/install-redmine-on-centos-6-dot-5/" title="Next Post: 在CentOS 6.5环境下安装Redmine">在CentOS 6.5环境下安装Redmine &raquo;</a>
+      
     </p>
   </footer>
 </article>
@@ -273,7 +284,11 @@ uname -r
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/09/06/install-gitlab-on-centos-6-dot-5/">在CentOS 6.5环境下安装GitLab</a>
+        <a href="/blog/2014/09/07/install-redmine-on-centos-6-dot-5/">在CentOS 6.5环境下安装Redmine</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/06/install-gitlab-on-centos-6-dot-5+2/">在CentOS 6.5环境下安装GitLab</a>
       </li>
     
       <li class="post">
@@ -286,10 +301,6 @@ uname -r
     
       <li class="post">
         <a href="/blog/2014/04/04/ios-dev-tools/">做iOS外包开发用到的工具</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/24/news-headline-in-action/">基于iCarousel构建新闻头条</a>
       </li>
     
   </ul>
