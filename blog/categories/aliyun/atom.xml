@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Aliyun, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/aliyun/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-07T17:18:09+08:00</updated>
+  <updated>2014-09-21T04:20:05+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -182,6 +182,15 @@ sudo vi /etc/sysconfig/iptables
 <li>重启GitLab组件: gitlab-ctl restart</li>
 </ol>
 
+
+<h2>补记 Sep 19th</h2>
+
+<p>今天pull代码时遇到“the requested url returned error 500”这样的错误，到服务端用sudo gitlab-ctl tail查看了下得知是因为“PostgreSQL&rsquo;s request for a shared memory segment exceeded available memory”。</p>
+
+<p>解决的办法是在Gitlab配置文件里加上下面这一行，然后reconfigure即可。
+<code>sh
+postgresql['shared_buffers'] = "400MB"
+</code></p>
 ]]></content>
   </entry>
   

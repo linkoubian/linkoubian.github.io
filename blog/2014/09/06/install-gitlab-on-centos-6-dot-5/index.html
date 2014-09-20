@@ -223,6 +223,19 @@ uname -r
 <li>重启GitLab组件: gitlab-ctl restart</li>
 </ol>
 
+
+<h2>补记 Sep 19th</h2>
+
+<p>今天pull代码时遇到“the requested url returned error 500”这样的错误，到服务端用sudo gitlab-ctl tail查看了下得知是因为“PostgreSQL&rsquo;s request for a shared memory segment exceeded available memory”。</p>
+
+<p>解决的办法是在Gitlab配置文件里加上下面这一行，然后reconfigure即可。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>postgresql<span class="o">[</span><span class="s1">&#39;shared_buffers&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;400MB&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
 
 
@@ -284,6 +297,10 @@ uname -r
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/09/21/install-samba-server-on-centos-6-dot-5/">“在CentOS 6.5环境下安装Samba服务以共享文档”</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/09/07/install-redmine-on-centos-6-dot-5/">在CentOS 6.5环境下安装Redmine</a>
       </li>
     
@@ -297,10 +314,6 @@ uname -r
     
       <li class="post">
         <a href="/blog/2014/04/05/template-engine-in-action/">基于模板引擎的新闻内容展示</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/04/ios-dev-tools/">做iOS外包开发用到的工具</a>
       </li>
     
   </ul>

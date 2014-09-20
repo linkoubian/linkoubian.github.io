@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: File | Balloonsys Inc.]]></title>
+  <link href="http://balloonsys.github.io/blog/categories/file/atom.xml" rel="self"/>
+  <link href="http://balloonsys.github.io/"/>
+  <updated>2014-09-21T04:20:05+08:00</updated>
+  <id>http://balloonsys.github.io/</id>
+  <author>
+    <name><![CDATA[Linkou Bian]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[“在CentOS 6.5环境下安装Samba服务以共享文档”]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/09/21/install-samba-server-on-centos-6-dot-5/"/>
+    <updated>2014-09-21T03:25:06+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/09/21/install-samba-server-on-centos-6-dot-5</id>
+    <content type="html"><![CDATA[<p>Samba是一套使用SMB(Server Message Block)协议的应用程序，通过支持这个协议，Samba允许Linux服务器与Windows系统之间进行通信。所以，采用Samba可以支持Mac、Windows系统访问CentOS服务器上的共享文档。</p>
+
+<!--more-->
+
+
+<p>Samba服务器包括两个后台应用程序：Smbd和Nmbd。Smbd是Samba的核心，主要负责建立Linux Samba服务器与Samba客户机之间的对话，验证用户身份并提供对文件和打印系统的访问；Nmbd主要负责对外发布Linux Samba服务器可以提供的NetBIOS名称和浏览服务。</p>
+
+<h2>安装</h2>
+
+<p>yum install samba samba-client samba-common</p>
+
+<h2>查看版本</h2>
+
+<p>smbd &mdash;version</p>
+
+<h2>自动启动</h2>
+
+<p>chkconfig smb on
+chkconfig nmb on</p>
+
+<h2>防火墙配置</h2>
+
+<p>iptables -I INPUT 4 -m state &mdash;state NEW -m udp -p udp &mdash;dport 137 -j ACCEPT
+iptables -I INPUT 5 -m state &mdash;state NEW -m udp -p udp &mdash;dport 138 -j ACCEPT
+iptables -I INPUT 6 -m state &mdash;state NEW -m tcp -p tcp &mdash;dport 139 -j ACCEPT</p>
+
+<h2>创建共享目录，设置用户组及目录权限</h2>
+
+<p>mkdir -p /data/samba/doc</p>
+
+<p>useradd sc
+groupadd smbgrp
+usermod -a -G smbgrp sc
+smbpasswd -a smbuser</p>
+
+<p>chown -R sc:smbgrp doc/
+chmod -R 777 /data/samba/doc</p>
+
+<h2>SAMBA配置</h2>
+
+<p>mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
+vi /etc/samba/smb.conf</p>
+
+<p>[global]
+workgroup = WORKGROUP
+;security = share
+map to guest = bad user
+[Share]
+path = /data/samba/doc
+valid users = @smbgrp
+guest ok = no
+writable = yes
+browsable = yes</p>
+
+<h2>启动服务</h2>
+
+<p>service smb restart
+service nmb restart</p>
+
+<h2>访问共享目录</h2>
+
+<p>XP: \SERVER_IP\Share
+Mac: smb:\ SERVER_IP\Share</p>
+]]></content>
+  </entry>
+  
+</feed>
