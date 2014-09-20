@@ -4,7 +4,7 @@
   <title><![CDATA[Category: File | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/file/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-21T04:20:05+08:00</updated>
+  <updated>2014-09-21T04:22:59+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[“在CentOS 6.5环境下安装Samba服务以共享文档”]]></title>
+    <title type="html"><![CDATA[在CentOS 6.5环境下安装Samba服务]]></title>
     <link href="http://balloonsys.github.io/blog/2014/09/21/install-samba-server-on-centos-6-dot-5/"/>
     <updated>2014-09-21T03:25:06+08:00</updated>
     <id>http://balloonsys.github.io/blog/2014/09/21/install-samba-server-on-centos-6-dot-5</id>
@@ -27,26 +27,35 @@
 
 <h2>安装</h2>
 
-<p>yum install samba samba-client samba-common</p>
+<p><code>sh
+yum install samba samba-client samba-common
+</code></p>
 
 <h2>查看版本</h2>
 
-<p>smbd &mdash;version</p>
+<p><code>sh
+smbd --version
+</code></p>
 
 <h2>自动启动</h2>
 
-<p>chkconfig smb on
-chkconfig nmb on</p>
+<p><code>sh
+chkconfig smb on
+chkconfig nmb on
+</code></p>
 
 <h2>防火墙配置</h2>
 
-<p>iptables -I INPUT 4 -m state &mdash;state NEW -m udp -p udp &mdash;dport 137 -j ACCEPT
-iptables -I INPUT 5 -m state &mdash;state NEW -m udp -p udp &mdash;dport 138 -j ACCEPT
-iptables -I INPUT 6 -m state &mdash;state NEW -m tcp -p tcp &mdash;dport 139 -j ACCEPT</p>
+<p><code>sh
+iptables -I INPUT 4 -m state --state NEW -m udp -p udp --dport 137 -j ACCEPT
+iptables -I INPUT 5 -m state --state NEW -m udp -p udp --dport 138 -j ACCEPT
+iptables -I INPUT 6 -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT
+</code></p>
 
 <h2>创建共享目录，设置用户组及目录权限</h2>
 
-<p>mkdir -p /data/samba/doc</p>
+<p>```sh
+mkdir -p /data/samba/doc</p>
 
 <p>useradd sc
 groupadd smbgrp
@@ -54,14 +63,18 @@ usermod -a -G smbgrp sc
 smbpasswd -a smbuser</p>
 
 <p>chown -R sc:smbgrp doc/
-chmod -R 777 /data/samba/doc</p>
+chmod -R 777 /data/samba/doc
+```</p>
 
 <h2>SAMBA配置</h2>
 
-<p>mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
-vi /etc/samba/smb.conf</p>
+<p><code>sh
+mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
+vi /etc/samba/smb.conf
+</code></p>
 
-<p>[global]
+<p><code>sh
+[global]
 workgroup = WORKGROUP
 ;security = share
 map to guest = bad user
@@ -70,12 +83,15 @@ path = /data/samba/doc
 valid users = @smbgrp
 guest ok = no
 writable = yes
-browsable = yes</p>
+browsable = yes
+</code></p>
 
 <h2>启动服务</h2>
 
-<p>service smb restart
-service nmb restart</p>
+<p><code>sh
+service smb restart
+service nmb restart
+</code></p>
 
 <h2>访问共享目录</h2>
 

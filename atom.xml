@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-21T04:20:05+08:00</updated>
+  <updated>2014-09-21T04:22:59+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[“在CentOS 6.5环境下安装Samba服务以共享文档”]]></title>
+    <title type="html"><![CDATA[在CentOS 6.5环境下安装Samba服务]]></title>
     <link href="http://balloonsys.github.io/blog/2014/09/21/install-samba-server-on-centos-6-dot-5/"/>
     <updated>2014-09-21T03:25:06+08:00</updated>
     <id>http://balloonsys.github.io/blog/2014/09/21/install-samba-server-on-centos-6-dot-5</id>
@@ -27,55 +27,103 @@
 
 <h2>安装</h2>
 
-<p>yum install samba samba-client samba-common</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>yum install samba samba-client samba-common
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>查看版本</h2>
 
-<p>smbd &mdash;version</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>smbd --version
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>自动启动</h2>
 
-<p>chkconfig smb on
-chkconfig nmb on</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>chkconfig smb on
+</span><span class='line'>chkconfig nmb on
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>防火墙配置</h2>
 
-<p>iptables -I INPUT 4 -m state &mdash;state NEW -m udp -p udp &mdash;dport 137 -j ACCEPT
-iptables -I INPUT 5 -m state &mdash;state NEW -m udp -p udp &mdash;dport 138 -j ACCEPT
-iptables -I INPUT 6 -m state &mdash;state NEW -m tcp -p tcp &mdash;dport 139 -j ACCEPT</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>iptables -I INPUT 4 -m state --state NEW -m udp -p udp --dport 137 -j ACCEPT
+</span><span class='line'>iptables -I INPUT 5 -m state --state NEW -m udp -p udp --dport 138 -j ACCEPT
+</span><span class='line'>iptables -I INPUT 6 -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>创建共享目录，设置用户组及目录权限</h2>
 
-<p>mkdir -p /data/samba/doc</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>mkdir -p /data/samba/doc
+</span><span class='line'>
+</span><span class='line'>useradd sc
+</span><span class='line'>groupadd smbgrp
+</span><span class='line'>usermod -a -G smbgrp sc
+</span><span class='line'>smbpasswd -a smbuser
+</span><span class='line'>
+</span><span class='line'>chown -R sc:smbgrp doc/
+</span><span class='line'>chmod -R 777 /data/samba/doc
+</span></code></pre></td></tr></table></div></figure>
 
-<p>useradd sc
-groupadd smbgrp
-usermod -a -G smbgrp sc
-smbpasswd -a smbuser</p>
-
-<p>chown -R sc:smbgrp doc/
-chmod -R 777 /data/samba/doc</p>
 
 <h2>SAMBA配置</h2>
 
-<p>mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
-vi /etc/samba/smb.conf</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
+</span><span class='line'>vi /etc/samba/smb.conf
+</span></code></pre></td></tr></table></div></figure>
 
-<p>[global]
-workgroup = WORKGROUP
-;security = share
-map to guest = bad user
-[Share]
-path = /data/samba/doc
-valid users = @smbgrp
-guest ok = no
-writable = yes
-browsable = yes</p>
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="o">[</span>global<span class="o">]</span>
+</span><span class='line'><span class="nv">workgroup</span> <span class="o">=</span> WORKGROUP
+</span><span class='line'>;<span class="nv">security</span> <span class="o">=</span> share
+</span><span class='line'>map to <span class="nv">guest</span> <span class="o">=</span> bad user
+</span><span class='line'><span class="o">[</span>Share<span class="o">]</span>
+</span><span class='line'><span class="nv">path</span> <span class="o">=</span> /data/samba/doc
+</span><span class='line'>valid <span class="nv">users</span> <span class="o">=</span> @smbgrp
+</span><span class='line'>guest <span class="nv">ok</span> <span class="o">=</span> no
+</span><span class='line'><span class="nv">writable</span> <span class="o">=</span> yes
+</span><span class='line'><span class="nv">browsable</span> <span class="o">=</span> yes
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>启动服务</h2>
 
-<p>service smb restart
-service nmb restart</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>service smb restart
+</span><span class='line'>service nmb restart
+</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>访问共享目录</h2>
 
