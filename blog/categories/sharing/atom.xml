@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Sharing | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/sharing/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-21T04:22:59+08:00</updated>
+  <updated>2014-09-21T04:27:52+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -95,7 +95,7 @@ service nmb restart
 
 <h2>访问共享目录</h2>
 
-<p>XP: \SERVER_IP\Share
+<p>XP: \SERVER_IP\Share <br/>
 Mac: smb:\ SERVER_IP\Share</p>
 ]]></content>
   </entry>
