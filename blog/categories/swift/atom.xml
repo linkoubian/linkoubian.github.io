@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Swift | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/swift/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-21T23:06:32+08:00</updated>
+  <updated>2014-09-21T23:16:00+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -45,7 +45,7 @@
 
 <h2>数值类型</h2>
 
-<p>浮点数与整数运算，需要显示的转换类型。Int.max + 1会直接报错而不是变成一个负数。</p>
+<p>浮点数与整数运算，需要显式的转换类型。Int.max + 1会直接报错而不是变成一个负数。</p>
 
 <h2>逻辑类型</h2>
 
@@ -57,7 +57,7 @@
 
 <p>如果将元组product拆解成单个元素以方便访问，可以这么做：let (name, price) = product。这时，我们除了使用product.0访问商品名，还可以直接用name。</p>
 
-<p>综合上述两点，我们在声明并赋值元组时，可以一步到位：var product = (name: “iPhone 6”, price: 6000)。</p>
+<p>我们在声明并赋值元组时，还可以指定“属性名”：var product = (name: “iPhone 6”, price: 6000)。</p>
 
 <h2>字符串操作</h2>
 
@@ -74,14 +74,16 @@
 
 <h3>while循环</h3>
 
-<p>var i = 0
+<p>```sh
+var i = 0
 while i &lt; 5 {</p>
 
 <pre><code>println(“\(i)”)
 i++
 </code></pre>
 
-<p>}</p>
+<p>}
+```</p>
 
 <h3>if语句</h3>
 
@@ -91,7 +93,7 @@ i++
 
 <p>Swift中，switch可以使用任何类型，不需要break语句，如果case不完备则必须有default语句。</p>
 
-<p>case可以这么写：case “up”, “down”: println(“you pressed up or down”)。case还可以这么写：case 1..&lt;10: println(“between 1 and 10, not include 10”)。</p>
+<p>case可以这么写：case “up”, “down”: println(“you pressed up or down”)。case还可以这么写：case 1..&lt;10: println(“between 1 and 10, 10 not included”)。</p>
 
 <p>— EOF —</p>
 ]]></content>
