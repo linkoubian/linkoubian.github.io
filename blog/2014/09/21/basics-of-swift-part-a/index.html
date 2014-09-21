@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Swift 语言基础（上） - Balloonsys Inc.</title>
+  <meta name="author" content="Linkou Bian">
+
+  
+  <meta name="description" content="周五花了54刀买了RW网站上的Swift by Tutorials，共261页。平均一页1块多软妹币啊！！！朋友圈有评论说：“很庆幸，只需要看两三百页，得其精髓，最怕书长！”。深以为然！ 从Hello World开始 为了耍耍Swift，首先得打开Xcode 6。在弹出的工程模板里选哪一个呢？ &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2014/09/21/basics-of-swift-part-a">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts 
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+-->
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Balloonsys Inc.</a></h1>
+  
+    <h2>Just a blog now.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:balloonsys.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">首页</a></li>
+  <li><a href="/blog/archives">所有文章</a></li>
+  <li><a href="/apps">App Store</a></li>
+  <li><a href="http://weibo.com/bianlinkou" target="_blank">我的微博</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Swift 语言基础（上）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-21T22:59:56+08:00" pubdate data-updated="true">Sep 21<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>周五花了54刀买了RW网站上的Swift by Tutorials，共261页。平均一页1块多软妹币啊！！！朋友圈有评论说：“很庆幸，只需要看两三百页，得其精髓，最怕书长！”。深以为然！</p>
+
+<!--more-->
+
+
+<h2>从Hello World开始</h2>
+
+<p>为了耍耍Swift，首先得打开Xcode 6。在弹出的工程模板里选哪一个呢？这是个问题！</p>
+
+<p>暂时的答案是，一个都不选，关掉！然后在File/New菜单中选择Playground即可。</p>
+
+<p>啥都不说了，在打开的playground编辑区，直接输入println(“Hello World”)吧，此时便可以在右侧看到即时效果。</p>
+
+<p>如果想看程序的运行结果，可以在View/Assistant中选择Show Assistant Editor。</p>
+
+<h2>变量&amp;常量</h2>
+
+<p>声明一个变量的方式：var str: String = “Hello World”，其中类型可以省略。</p>
+
+<p>需要注意的是，类型可以省略不写，不代表Swift是动态类型语言。比如尝试给str变量赋23这样的整数值，就会报错。其类型由首次赋值推断出，此过程为Type Inference。</p>
+
+<p>前面我们解释了类型可以省略不写，现在我们谈谈此处省略的String。此String相当于Obj-C的NSMutableString，是可变的。所以你可以进行这样的操作，str = str + “, I love you!”。</p>
+
+<p>那如何创建一个“不可变”的字符串呢？将var换成let即可。使用let后，我们既不可以str = “Hello Swift”，也不可以str.append。</p>
+
+<h2>数值类型</h2>
+
+<p>浮点数与整数运算，需要显示的转换类型。Int.max + 1会直接报错而不是变成一个负数。</p>
+
+<h2>逻辑类型</h2>
+
+<p>var knowsSwift: Bool = true。此处只可以赋值true或者false，不像其他语言可以使用0或非0值。</p>
+
+<h2>元组</h2>
+
+<p>var product = (“iPhone 6”, 6000)。要输出商品名，我们可以使用println(product.0)。如果加价，可以这么写：product.1 += 100。</p>
+
+<p>如果将元组product拆解成单个元素以方便访问，可以这么做：let (name, price) = product。这时，我们除了使用product.0访问商品名，还可以直接用name。</p>
+
+<p>综合上述两点，我们在声明并赋值元组时，可以一步到位：var product = (name: “iPhone 6”, price: 6000)。</p>
+
+<h2>字符串操作</h2>
+
+<p>输出product的信息，我们可以这么做：println(&ldquo;Price of (product.name) is (product.price)&rdquo;)。此为Swift的String Interpolation特性。相对于NSLog的format参数，方便不少。</p>
+
+<p>另外，我们在使用String Interpolation时，还可以直接操作相关的变量。比如println(&ldquo;Price of (product.name) is (product.price + 100)”)。</p>
+
+<h2>控制流</h2>
+
+<h3>for循环</h3>
+
+<p>for i in 1…5 {println (“(i)”)}
+其中…为闭区间操作符（Closed Range Operator），相当于Range(start: 1, end: 6)。</p>
+
+<h2>while循环</h2>
+
+<p>var i = 0
+while i &lt; 5 {</p>
+
+<pre><code>println(“\(i)”)
+i++
+</code></pre>
+
+<p>}</p>
+
+<h2>if语句</h2>
+
+<p>即使待执行的只有一行代码，也需要{}。</p>
+
+<h2>switch语句</h2>
+
+<p>Swift中，switch可以使用任何类型，不需要break语句，如果case不完备则必须有default语句。</p>
+
+<p>case可以这么写：case “up”, “down”: println(“you pressed up or down”)。case还可以这么写：case 1..&lt;10: println(“between 1 and 10, not include 10”)。</p>
+
+<p>— EOF —</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-21T22:59:56+08:00" pubdate data-updated="true">Sep 21<span>st</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/swift/'>Swift</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/09/21/install-samba-server-on-centos-6-dot-5/" title="Previous Post: 在CentOS 6.5环境下安装Samba服务">&laquo; 在CentOS 6.5环境下安装Samba服务</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/21/basics-of-swift-part-a/">Swift 语言基础（上）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/21/install-samba-server-on-centos-6-dot-5/">在CentOS 6.5环境下安装Samba服务</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/07/install-redmine-on-centos-6-dot-5/">在CentOS 6.5环境下安装Redmine</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/06/install-gitlab-on-centos-6-dot-5/">在CentOS 6.5环境下安装GitLab</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/08/hit-test-sample/">hitTest示例</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Linkou Bian -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
