@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Swift | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/swift/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2014-09-23T10:23:04+08:00</updated>
+  <updated>2014-09-23T10:25:01+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,7 +29,7 @@
 
 <p>所以引入Optional Type，可以理解为对另一个类型的装箱（由本人引自Java的术语）。String?便是一个Optional Type，它是对String的包装。声明时不需要赋值为nil：var str: String?。此时println打印出nil。如果赋值为“Hello World”，打印Optional(“Hello World”)。</p>
 
-<h3>手动拆箱（）</h3>
+<h3>手动拆箱（Manual Unwrapping）</h3>
 
 <p>若需要拆箱，可以if let unwrappedStr = str {}。如果str为nil，if分支的代码块不会执行。值得注意的是，1）想要获得Optional Type所封装的那个值，必须用if语句拆箱；2）unwrappedStr的作用域为if代码块。</p>
 
@@ -46,17 +46,17 @@
 <p>声明一个Optional Type：var str: String?
 可选消息链：let upperStr = str?.uppercaseString</p>
 
-<p>1）可选链可以级联多次，这样便客观的降低if嵌逃层级
+<p>1）可选链可以级联多次，这样便客观的降低if嵌逃层级 <br/>
 2）使用Optional Chaining代码更简洁</p>
 
 <h2>集合</h2>
 
-<p>1) 无论是数组还是字典，都是用[]
-注：ObjC里字典用的是{}
-2）默认情况下，数组只能放同一类型的元素，除非显示或隐式声明为[AnyObject]类型
-3）将字典某key对应的值设为nil，即为删除
-4）字典的value为Optional Type
-5）数组、字典，都是拷贝赋值
+<p>1) 无论是数组还是字典，都是用[] <br/>
+注：ObjC里字典用的是{} <br/>
+2）默认情况下，数组只能放同一类型的元素，除非显示或隐式声明为[AnyObject]类型 <br/>
+3）将字典某key对应的值设为nil，即为删除 <br/>
+4）字典的value为Optional Type <br/>
+5）数组、字典，都是拷贝赋值 <br/>
 6）使用let声明的常量集合，不可以append、remove</p>
 ]]></content>
   </entry>
