@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Hit-testing, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/hit-testing/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-03-26T01:53:26+08:00</updated>
+  <updated>2015-03-26T01:55:55+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,7 +29,7 @@
 
 <h3>剖析问题</h3>
 
-<p>因为没有安装iOS 7模拟器，就在手上的一台装有iOS 7系统的iPad Mini上运行。无法利用Color Blended Layer分析视图，便给Cell嵌套的各个子View分别设置了不同的背景色。最后发现在iPad上，content view只有一小块，目测仅320*44的样子，并没有期望的那么大（在iPhone上也没有覆盖到出状况的那个按钮范围啦）。此时基本可以判断出：<strong><font color=‘red’>子View在父视图边界之外，对其触摸无法被检测</font></strong>。但这终究是表面结论，问题的本质是什么呢？</p>
+<p>因为没有安装iOS 7模拟器，就在手上的一台装有iOS 7系统的iPad Mini上运行。无法利用Color Blended Layer分析视图，便给Cell嵌套的各个子View分别设置了不同的背景色。最后发现在iPad上，content view只有一小块，目测仅320*44的样子，并没有期望的那么大（在iPhone上也没有覆盖到出状况的那个按钮范围啦）。此时基本可以判断出：<strong><span style=“color:red”>子View在父视图边界之外，对其触摸无法被检测</span></strong>。但这终究是表面结论，问题的本质是什么呢？</p>
 
 <p>对于IOS设备用户来说，操作设备的方式主要有三种：触摸屏幕、晃动设备、通过遥控设施控制设备。对应的事件类型有以下三种：<br/>
 &ndash; 触屏事件（Touch Event）<br/>
@@ -64,7 +64,7 @@
 
 <p>借助View的隐藏方法recursiveDescription，可以打印视图的层次结构。调用该方法时可以给View临时加下方法声明，或者借助于performSelector去调用。</p>
 
-<p>最终在iOS 7上我们发现：<strong><font colour=“red”>cell与contentView之间多了一层UITableViewCellScrollView</font></strong>。</p>
+<p>最终在iOS 7上我们发现：<strong>cell与contentView之间多了一层UITableViewCellScrollView</strong>。</p>
 
 <p>考虑到scroll view有bounds和content size之分，脑补一下：调用table view cell的layout方法去调整scroll view的bounds是有必要的，否则往content view加子view只影响到scroll view的content size。注意这一块纯粹是脑补而来，但iOS 7多出来的这个scroll view必然是此处必须调用table view cell的layout方法之根源，这一点毋庸置疑。</p>
 
