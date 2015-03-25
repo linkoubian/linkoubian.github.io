@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-03-26T01:51:04+08:00</updated>
+  <updated>2015-03-26T01:53:26+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -64,7 +64,7 @@
 
 <p>借助View的隐藏方法recursiveDescription，可以打印视图的层次结构。调用该方法时可以给View临时加下方法声明，或者借助于performSelector去调用。</p>
 
-<p>最终在iOS 7上我们发现：<strong><font color=‘red’>cell与contentView之间多了一层UITableViewCellScrollView</font></strong>。</p>
+<p>最终在iOS 7上我们发现：<strong><font colour=“red”>cell与contentView之间多了一层UITableViewCellScrollView</font></strong>。</p>
 
 <p>考虑到scroll view有bounds和content size之分，脑补一下：调用table view cell的layout方法去调整scroll view的bounds是有必要的，否则往content view加子view只影响到scroll view的content size。注意这一块纯粹是脑补而来，但iOS 7多出来的这个scroll view必然是此处必须调用table view cell的layout方法之根源，这一点毋庸置疑。</p>
 
