@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Chain | Balloonsys Inc.]]></title>
-  <link href="http://balloonsys.github.io/blog/categories/chain/atom.xml" rel="self"/>
+  <title><![CDATA[Category: ResponderChain | Balloonsys Inc.]]></title>
+  <link href="http://balloonsys.github.io/blog/categories/responderchain/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-03-26T01:56:31+08:00</updated>
+  <updated>2015-03-26T02:00:36+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
