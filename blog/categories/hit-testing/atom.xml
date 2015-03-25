@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Hit-testing | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/hit-testing/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-03-26T02:18:42+08:00</updated>
+  <updated>2015-03-26T02:21:28+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -60,7 +60,7 @@
 
 <p>但iOS 7上content view没有自动调整，需要调用table view cell的layoutSubViews方法才行。说明iOS 7里table view cell的layout方法做了特别处理。</p>
 
-<p>为何要特别处理？先大胆的猜测是跟cell的视图结构有关。本来嘛，从6到7时Cell滑动删除的样式就变了。但光猜测是不够的，我们可以一探其cell结构之究竟。</p>
+<p>为何要特别处理？先大胆的猜测是跟cell的视图结构有关。本来嘛，从6到7时Cell滑动删除的样式都变了。但光猜测是不够的，我们可以一探其cell结构之究竟。</p>
 
 <p>借助View的隐藏方法recursiveDescription，可以打印视图的层次结构。调用该方法时可以给View临时加下方法声明，或者借助于performSelector去调用。</p>
 
