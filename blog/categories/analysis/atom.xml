@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Analysis, | Balloonsys Inc.]]></title>
+  <link href="http://balloonsys.github.io/blog/categories/analysis/atom.xml" rel="self"/>
+  <link href="http://balloonsys.github.io/"/>
+  <updated>2015-03-26T01:30:33+08:00</updated>
+  <id>http://balloonsys.github.io/</id>
+  <author>
+    <name><![CDATA[Linkou Bian]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[“关于自定义表视图Cell一个bug分析”]]></title>
+    <link href="http://balloonsys.github.io/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/"/>
+    <updated>2015-03-25T23:02:19+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell</id>
+    <content type="html"><![CDATA[<p>今天同事A遇到一个问题：包含一个按钮的TableView Cell，在iOS 6、iOS 8上点击按钮正常工作，但是在iOS 7上却无反应。同事B帮忙review了下代码发现，自定义的Cell在layout时，没有像平常那样调用一下[super layoutSubviews]。</p>
+
+<p>&lt;!—more—></p>
+
+<p>到这里本来事情也就过去了，但坐在旁边的我听了这个过程后，心中仍有几个疙瘩未解。</p>
+
+<h1>iOS 7上点击按钮，为何没有响应？</h1>
+
+<h2>剖析问题</h2>
+
+<p>因为没有安装iOS 7模拟器，就在手上的一台装有iOS 7系统的iPad Mini上运行。无法利用Color Blended Layer分析视图，便给Cell嵌套的各个子View分别设置了不同的背景色。最后发现在iPad上，content view只有一小块，目测仅320*44的样子，并没有期望的那么大（在iPhone上也没有覆盖到出状况的那个按钮范围啦）。此时基本可以判断出：<strong>子View在父视图边界之外，对其触摸无法被检测</strong>。但这终究是表面结论，问题的本质是什么呢？</p>
+
+<p>对于IOS设备用户来说，操作设备的方式主要有三种：触摸屏幕、晃动设备、通过遥控设施控制设备。对应的事件类型有以下三种：<br/>
+&ndash; 触屏事件（Touch Event）<br/>
+&ndash; 运动事件（Motion Event）<br/>
+&ndash; 远端控制事件（Remote-Control Event）</p>
+
+<p>点击按钮属于Touch Event，故接下来重点讨论触摸事件。</p>
+
+<p>当应用发生触摸事件后，系统会将该事件添加至一个由UIApplication单例管理的事件队列。然后UIApplication会把触摸事件发给应用的key window对象，该window对象尝试将事件传递给事件所发生的那个view。这个view就是所谓的hit-test view。寻找hit-test view的过程叫hit-testing。</p>
+
+<h3>传递</h3>
+
+<p>具体说来，当table view是window的根视图，因此window首先对table view进行hit-test；显然用户点击范围在table view内，因此pointInside:withEvent:返回了YES，继续检查table view的子视图；为简化问题，假设仅有两个cell，分别称为CellA、CellB，点击范围不在CellA中，因此CellA的pointInside:withEvent返回NO，对应的hitTest:withEvent:返回nil；点击范围“看起来”在CellB中，但是，但是啊，CellB的content view没有期望的那么大，没有“包含”按钮范围，所以pointInside:withEvent：也是返回NO（注意：会在view的所有子view中递归调用hitTest:withEvent:，但在CellB上第一次调用pointInside:withEvent:方法时就返回NO的时候不会也没必要继续在cell的子视图上递归了）。所以，此处触摸事件的hit-test view是table view，而不是期望的button。</p>
+
+<h3>响应</h3>
+
+<p>table view（作为first responder）作为此时的hit-test view，但它并没有处理触摸事件，所以事件被传递给table view的next responder，此处为table view所在的controller。如果在controller里，实现了didSelectRow方法，则事件在此被处理掉；否则一直往next responder传递，到了window也处理不了则传递给application（相应链的最后一环）。如果application对象仍然无法处理，则系统会丢弃该事件。</p>
+
+<p>以上便解释了第一个问题，即iOS 7上按钮关联的事件代码为何没有执行。</p>
+
+<h2>解决问题</h2>
+
+<p>方案一，在自定义Cell里重写hitTest:withEvent:方法，轮到检查按钮这个子view时，返回按钮视图。</p>
+
+<p>方案二，既然问题出在content view没有期望的大上，就应该“尽量”让他如期望的那样大，即在cell的layoutSubViews时调用super方法。</p>
+
+<h1>为何iOS 8正常，就iOS 7掉链子？</h1>
+
+<h2>剖析问题</h2>
+
+<p>iOS 6、8上自定义的cell既然能够正常设置content view的大小，说明content view本来是可以自动按照需要去设置自身大小的。毕竟，你在自定义的cell里都没有去特意为content view布局。</p>
+
+<p>但iOS 7上content view没有自动调整，需要调用table view cell的layoutSubViews方法才行。说明iOS 7里table view cell的layout方法做了特别处理。</p>
+
+<p>为何要特别处理？先大胆的猜测是根cell的视图结构有关。本来嘛，从6到7时Cell滑动删除的样式就变了。光猜测是不够的，我们可以一探其cell结构之究竟。</p>
+
+<p>借助View的隐藏方法recursiveDescription，可以打印视图的层次结构。调用该方法时可以给View临时加下方法声明，或者借助于performSelector去调用。</p>
+
+<p>最终在iOS 7上我们发现：<strong>cell与contentView之间多了一层UITableViewCellScrollView</strong>。</p>
+
+<p>考虑到scroll view有bounds和content size之分，脑补一下调用table view cell的layout方法去调整scroll view的bounds是有必要的，否则往content view加子view只影响到scroll view的content size。注意这一块纯粹是脑补而来，但iOS 7多出来的这个scroll view必然是此处必须调用table view cell的layout方法的根源，这一点毋庸置疑。</p>
+
+<p>明天到公司可以继续做个实验，打印scroll view的bounds及content size，以验证我的猜想。</p>
+
+<h2>解决问题</h2>
+
+<p>根据以上分析，该BUG场景下，明显应该采用方案二。</p>
+
+<p>同时获得的教训是，苹果对其基础框架的实现是会有调整的，我们应该按照API的使用习惯来编码，比如调用super的viewDidLoad、layoutSubviews等不能少。否则，客户代码便会因框架代码的调整而受到影响。</p>
+
+<h1>参考资料</h1>
+
+<ol>
+<li><a href="https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/event_delivery_responder_chain/event_delivery_responder_chain.html#//apple_ref/doc/uid/TP40009541-CH4-SW2">Event Delivery: The Responder Chain</a></li>
+<li><a href="http://nsdifficult.com/blog/20140314/event/">事件传递之响应链</a></li>
+<li><a href="http://balloonsys.com/blog/2014/04/08/hit-test-sample/">hitTest示例</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>
