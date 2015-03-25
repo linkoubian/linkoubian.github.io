@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-03-26T02:00:36+08:00</updated>
+  <updated>2015-03-26T02:03:09+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -76,7 +76,7 @@
 
 <p>同时获得的教训是，苹果对其基础框架的实现是会有调整的，我们应该按照API的使用习惯来编码，比如调用super的viewDidLoad、layoutSubviews等不能少。否则，客户代码便会因框架代码的调整而受到影响。</p>
 
-<p>再把开头说过的结论再小结一遍：在当前view的bounds之外的触摸不会被接收，即使它是当前view的subview。当你把当前view的clipToBounds属性设置成false，并且把subView移动到当前view的bounds之外的时候，这种情况就会出现。</p>
+<p>再把开头说过的结论再小结一遍：<strong>在当前view的bounds之外的触摸不会被接收，即使它是当前view的subview。当你把当前view的clipToBounds属性设置成false，并且把subView移动到当前view的bounds之外的时候，这种情况就会出现</strong>。</p>
 
 <h2>参考资料</h2>
 
