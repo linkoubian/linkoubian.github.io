@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>“关于自定义表视图Cell一个bug分析” - Balloonsys Inc.</title>
+  <title>关于自定义表视图Cell一个bug分析 - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="今天同事A遇到一个问题：包含一个按钮的TableView Cell，在iOS 6、iOS 8上点击按钮正常工作，但是在iOS 7上却无反应。同事B帮忙review了下代码发现，自定义的Cell在layout时，没有像平常那样调用一下[super layoutSubviews]。 &lt;!— &hellip;">
+  <meta name="description" content="今天同事A遇到一个问题：包含一个按钮的TableView Cell，在iOS 6、iOS 8上点击按钮正常工作，但是在iOS 7上却无反应。同事B帮忙review了下代码发现，自定义的Cell在layout时，没有像平常那样调用一下[super layoutSubviews]。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">“关于自定义表视图Cell一个bug分析”</h1>
+      <h1 class="entry-title">关于自定义表视图Cell一个bug分析</h1>
     
     
       <p class="meta">
@@ -96,11 +96,12 @@
 
 <div class="entry-content"><p>今天同事A遇到一个问题：包含一个按钮的TableView Cell，在iOS 6、iOS 8上点击按钮正常工作，但是在iOS 7上却无反应。同事B帮忙review了下代码发现，自定义的Cell在layout时，没有像平常那样调用一下[super layoutSubviews]。</p>
 
-<p>&lt;!—more—></p>
+<!--more-->
+
 
 <p>到这里本来事情也就过去了，但坐在旁边的我听了这个过程后，心中仍有几个疙瘩未解。</p>
 
-<h1>iOS 7上点击按钮，为何没有响应？</h1>
+<h1>iOS 7上点击Cell中的按钮，为何没有响应？</h1>
 
 <h2>剖析问题</h2>
 
@@ -154,6 +155,8 @@
 <p>根据以上分析，该BUG场景下，明显应该采用方案二。</p>
 
 <p>同时获得的教训是，苹果对其基础框架的实现是会有调整的，我们应该按照API的使用习惯来编码，比如调用super的viewDidLoad、layoutSubviews等不能少。否则，客户代码便会因框架代码的调整而受到影响。</p>
+
+<p>再把开头说过的结论再小结一遍：在当前view的bounds之外的触摸不会被接收，即使它是当前view的subview。当你把当前view的clipToBounds属性设置成false，并且把subView移动到当前view的bounds之外的时候，这种情况就会出现。</p>
 
 <h1>参考资料</h1>
 
@@ -222,7 +225,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/">“关于自定义表视图Cell一个bug分析”</a>
+        <a href="/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/">关于自定义表视图Cell一个bug分析</a>
       </li>
     
       <li class="post">
