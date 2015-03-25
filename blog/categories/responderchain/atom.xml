@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ResponderChain | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/responderchain/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-03-26T02:03:09+08:00</updated>
+  <updated>2015-03-26T02:09:09+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[关于自定义表视图Cell一个bug分析]]></title>
+    <title type="html"><![CDATA[关于自定义表视图Cell遇到的一个bug]]></title>
     <link href="http://balloonsys.github.io/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/"/>
     <updated>2015-03-25T23:02:19+08:00</updated>
     <id>http://balloonsys.github.io/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell</id>
