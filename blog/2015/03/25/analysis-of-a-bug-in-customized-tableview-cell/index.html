@@ -142,7 +142,7 @@
 
 <p>最终在iOS 7上我们发现：<strong>cell与contentView之间多了一层UITableViewCellScrollView</strong>。</p>
 
-<p>给这个Scroll View设置背景色，发现它的bounds是期望的大小。可以猜测，不调用super的layout方法时，table view cell的直接子视图的大小会自动调整好（table view的宽、cell的高），但iOS 7上其直接子视图是Scroll View，Scroll View的大小调整好了，但是Scroll View的子视图（Content View）的大小需要我们自己保证。</p>
+<p>给这个Scroll View设置背景色，发现它的bounds是期望的大小。可以猜测，不调用super的layout方法时，table view cell的根视图的大小会自动调整好（table view的宽、cell的高），但iOS 7上其根视图是Scroll View，Scroll View的大小调整好了，但是Scroll View的子视图（Content View）的大小需要我们自己保证。</p>
 
 <h3>解决问题</h3>
 
