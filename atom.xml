@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-07-04T23:28:11+08:00</updated>
+  <updated>2015-07-04T23:34:34+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -20,7 +20,8 @@
     <id>http://balloonsys.github.io/blog/2015/07/04/avoid-nested-push-animation</id>
     <content type="html"><![CDATA[<p>在iOS 8里使用UINavigationController把一个页面Push出来后，很短的时间内再次Push一个页面，并没有太大问题，两个页面相继显示。但在iOS 7里运行会遇到nested push animation can result in corrupted navigation bar问题。</p>
 
-<p>&lt;!—more—></p>
+<!--more-->
+
 
 <h2>模拟项目</h2>
 
@@ -34,9 +35,13 @@
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
 </pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">UIViewController</span> <span class="o">*</span><span class="n">detailPage</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIViewController</span> <span class="n">new</span><span class="p">];</span>
 </span><span class='line'><span class="n">UIViewController</span> <span class="o">*</span><span class="n">anotherPage</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIViewController</span> <span class="n">new</span><span class="p">];</span>
+</span><span class='line'>
 </span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">pushViewController:</span><span class="n">detailPage</span> <span class="nl">animated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'>
 </span><span class='line'><span class="n">dispatch_after</span><span class="p">(</span><span class="n">dispatch_time</span><span class="p">(</span><span class="n">DISPATCH_TIME_NOW</span><span class="p">,</span> <span class="mf">0.3</span> <span class="o">*</span> <span class="n">NSEC_PER_SEC</span><span class="p">),</span> <span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
 </span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">pushViewController:</span><span class="n">anotherPage</span> <span class="nl">animated:</span><span class="n">YES</span><span class="p">];</span>
 </span><span class='line'><span class="p">});</span>
@@ -49,7 +54,7 @@
 
 <p>实际项目里有两个基于View实现的控件，点击时首先缩放一下控件里的图标，然后push一个页面。当点击控件A后，若快速点击控件B，就会发生nested push问题。</p>
 
-<p>方法二中控件带有一定时长的缩放动画，给了用户足够的反应时间去连续点击。而方法一中是基于GCD代码模拟，可精确控制nested push的间隔。代码在<a href="https://github.com/balloonsys/PushVC">PushVC示例Initial Commit</a></p>
+<p>方法二中控件带有一定时长的缩放动画，给了用户足够的反应时间去连续点击。而方法一中是基于GCD代码模拟，可精确控制nested push的间隔。代码在 <a href="https://github.com/balloonsys/PushVC">PushVC示例之Initial Commit</a></p>
 
 <h2>问题剖析</h2>
 
@@ -68,7 +73,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>所以，我们可以基于UINavigationController建立NavController，增加一个名为inTransition的BOOL属性。将NavController的delegate指向自身，实现上述两个delegate方法。在willShow中将inTransition置为YES，在didShow中置为NO。接下来重写pushViewController:animated方法：</p>
+<p>所以，我们可以基于UINavigationController建立NavController，增加一个名为inTransition的BOOL属性。将NavController的delegate指向自身，并实现上述两个delegate方法。在willShow中将inTransition置为YES，在didShow中置为NO。接下来重写pushViewController:animated方法：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -91,11 +96,11 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>此时运行模拟项目（基于方法二），快速点击两个控件后，控制台会出现“Ignore push request when top page is still animating”消息，说明使用NavController可以像iOS 6的UINavigationController那样成功避免Nested Push问题。</p>
+<p>此时运行模拟项目，快速点击两个控件后，控制台会出现“Ignore push request when top page is still animating”消息，说明使用NavController可以像iOS 6的UINavigationController那样成功避免Nested Push问题。</p>
 
-<p>如前分析，我们可以在UI层做控制，避免在Push过程中发起Push请求。仔细分析一下，第二次Push请求可能在控件的动画过程中发起，也可能在第一次Push过程中发起。所以，控件（示例中是基于View实现的）是否响应事件（示例中是基于tapGesture实现的）需要考虑两个条件。</p>
+<p>如前分析，我们也可以在UI层做控制，避免在Push过程中发起Push请求。仔细分析一下，第二次Push请求可能在控件的动画过程中发起，也可能在第一次Push过程中发起。所以，控件（示例中是基于View实现的）是否响应事件（示例中是基于tapGesture实现的）需要考虑两个条件。</p>
 
-<h2>代码实现</h2>
+<h2>前端控制</h2>
 
 <p>如何在动画过程中，避免另一个控件发起Push请求？我们可以在第一个控件的动画过程中，忽略触摸事件即可。核心代码是UIApplication的beginIgnoringInteractionEvents和endIgnoringInteractionEvents方法。主要代码如下：</p>
 
