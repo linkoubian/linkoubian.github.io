@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Navigation | Balloonsys Inc.]]></title>
-  <link href="http://balloonsys.github.io/blog/categories/navigation/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Nested-Push | Balloonsys Inc.]]></title>
+  <link href="http://balloonsys.github.io/blog/categories/nested-push/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
   <updated>2015-07-04T23:38:32+08:00</updated>
   <id>http://balloonsys.github.io/</id>

@@ -130,7 +130,7 @@
 
 <p>实际项目里有两个基于View实现的控件，点击时首先缩放一下控件里的图标，然后push一个页面。当点击控件A后，若快速点击控件B，就会发生nested push问题。</p>
 
-<p>方法二中控件带有一定时长的缩放动画，给了用户足够的反应时间去连续点击。而方法一中是基于GCD代码模拟，可精确控制nested push的间隔。代码在 <a href="https://github.com/balloonsys/PushVC">PushVC示例之Initial Commit</a></p>
+<p>方法二中控件带有一定时长的缩放动画，给了用户足够的反应时间去连续点击。而方法一中是基于GCD代码模拟，可精确控制nested push的间隔。示例代码参见<a href="https://github.com/balloonsys/PushVC">PushVC示例之Initial Commit</a></p>
 
 <h2>问题剖析</h2>
 
@@ -256,7 +256,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>完整的代码可以从Github获得，(PushVC)[<a href="https://github.com/balloonsys/PushVC">https://github.com/balloonsys/PushVC</a>]。</p>
+<p>完整的代码可以从Github获得，<a href="https://github.com/balloonsys/PushVC">PushVC之最新commit</a>。</p>
+
+<p><strong>注</strong>：至于如何在不同commit之间切换代码，本文不再赘述。</p>
 
 <h2>参考资料</h2>
 
@@ -292,7 +294,7 @@
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/navigation/'>Navigation</a>, <a class='category' href='/blog/categories/ios/'>iOS</a>
+    <a class='category' href='/blog/categories/navigation/'>Navigation</a>, <a class='category' href='/blog/categories/nested-push/'>Nested-Push</a>, <a class='category' href='/blog/categories/ios/'>iOS</a>
   
 </span>
 
