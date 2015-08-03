@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reading | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reading/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-08-02T23:49:23+08:00</updated>
+  <updated>2015-08-03T08:30:27+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -39,17 +39,17 @@
 
 <p>这是国外一个比较好的培训机构（BNR）出品的书，质量上乘。入门时若是借助此书，或许基本功可以更扎实些。他们家有一本<a href="http://book.douban.com/subject/19962787/">Objective-C编程</a>，是学习Objective-C的优秀教程，我是在手机上断断续续看完的。</p>
 
-<p>离开前司，英文原版虽未看完，但也不得不归还。后来买了中译本，逐篇读完。其中第24章讲得程序状态恢复，是我之前不曾了解的内容。此书一直拖到2015年年中才读完，略微汗颜。</p>
+<p>离开前司，英文原版虽未看完，但也不得不归还。后来买了中译本，逐篇读完。其中第24章讲的程序状态恢复，是我之前不曾了解的内容。此书一直拖到2015年年中才读完，略微汗颜。</p>
 
 <p><img src="http://img3.douban.com/lpic/s27970290.jpg" alt="iOS Programming 4th Edition" /></p>
 
 <h2>2013年（iOS 7 announced on June 10）</h2>
 
-<h3><a href="http://book.douban.com/subject/12890783/">IOS6 Programming Pushing the Limits</a></h3>
+<h3><a href="http://book.douban.com/subject/12890783/">iOS 6 Programming Pushing the Limits</a></h3>
 
 <p>在Amazon.cn上买的原版书，该书干货多多，读起来偶尔会有点吃力，但多花点时间非常值得。关于缓存的设计，我直接用在了给绿城物业做的APP中。</p>
 
-<p><img src="http://img3.douban.com/lpic/s24216653.jpg" alt="IOS6 Programming Pushing the Limits" /></p>
+<p><img src="http://img3.douban.com/lpic/s24216653.jpg" alt="iOS 6 Programming Pushing the Limits" /></p>
 
 <h2>2012年（iOS 6 announced on June 11）</h2>
 
@@ -71,7 +71,7 @@
 
 <h3><a href="http://book.douban.com/subject/4886880/">iPhone for Programmers: An App-Driven Approach</a></h3>
 
-<p>这本书中文么叫iPhone应用程序开发名家解析，里面包含了好几个完整的小例子（基于3.x SDK）。这一年，我以某个例子为基础开发了若干自己的APP并发布到App Store（排名还不错哦）。</p>
+<p>这本书中文名叫iPhone应用程序开发名家解析，里面包含了好几个完整的小例子（基于3.x SDK）。这一年，我以某个例子为基础开发了若干自己的APP并发布到App Store（排名还不错哦）。</p>
 
 <p><img src="http://img3.douban.com/lpic/s4529615.jpg" alt="iPhone for Programmers: An App-Driven Approach" /></p>
 
