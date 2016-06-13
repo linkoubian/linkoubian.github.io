@@ -12,29 +12,26 @@ categories: CentOS, GitLab, Aliyun, VMWare
 ## 准备
 查看服务器系统环境，以下载对应的GitLab包。
 ```sh
-#查看内核版本
-uname -r
-#查看发行版本
-cat /etc/redhat-release
+uname -r #查看内核版本
+cat /etc/redhat-release #查看发行版本
 ```
 
 根据服务器信息CentOS release 6.5 (Final)，到[GitLab | Package downloads](https://about.gitlab.com/downloads/)下载对应的[RPM](https://downloads-packages.s3.amazonaws.com/centos-6.5/gitlab-7.2.1_omnibus-1.el6.x86_64.rpm)
 
 用curl下载比较慢，所以我改用迅雷下载，然后scp到服务器主目录下。
-```sh
-#打包上传
+```sh 
 tar -zcvf gitlab.tar.gz gitlab-7.2.1_omnibus-1.el6.x86_64.rpm
 scp gitlab.tar.gz user_name@ip_address:~/
 ```
 
 登录服务器，解压rpm文件
-```sh
+```sh 
 ssh <YOUR_USERNAME>@<YOUR_SERVER_IP>
 tar -zxvf gitlab.tar.gz
 ```
 
 ## 安装
-```sh
+```sh 
 sudo yum install openssh-server
 sudo yum install postfix
 sudo service postfix start
@@ -43,12 +40,12 @@ sudo rpm -i gitlab-7.2.1_omnibus-1.el6.x86_64.rpm
 ```
 
 ## 配置
-```sh
+```sh 
 sudo -e /etc/gitlab/gitlab.rb
 ```
 
 将external_url设成服务器ip地址，然后执行
-```sh
+```sh 
 sudo gitlab-ctl reconfigure
 sudo lokkit -s http -s ssh
 ```
@@ -61,8 +58,7 @@ sudo lokkit -s http -s ssh
 在命令行执行sudo gitlab-ctl tail可看到错误信息，原来是因为8080端口被项目测试环境占用，unicorn无法启动。
 
 所以，很自然的想到去修改GitLab的配置文件。最终的配置信息如下：
-```sh
-#Change the external_url to the address your users will type in their browser
+```sh 
 external_url 'http://<YOUR_SERVER_IP>:8888'
 redis['port'] = 6379
 postgresql['port'] = 5432
@@ -76,7 +72,7 @@ gitlab_rails['backup_keep_time'] = 604800
 修改完配置文件，再次执行sudo gitlab-ctl reconfigure，等执行完成后打开浏览器，此时应该就可以访问GitLab了。
 
 若访问被防火墙拦截（比如我在Mac上访问虚拟机里安装的CentOS），则执行下面操作即可：
-```sh
+```sh 
 sudo vi /etc/sysconfig/iptables
 ```
 
@@ -91,7 +87,7 @@ sudo vi /etc/sysconfig/iptables
 今天pull代码时遇到“the requested url returned error 500”这样的错误，到服务端用sudo gitlab-ctl tail查看了下得知是因为“PostgreSQL's request for a shared memory segment exceeded available memory”。
 
 解决的办法是在Gitlab配置文件里加上下面这一行，然后reconfigure即可。
-```sh
+```sh 
 postgresql['shared_buffers'] = "400MB"
 ```
 

@@ -33,7 +33,6 @@ sudo vi /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml
 
 然后在External issue trackers部分，配置一下Redmine地址即可：
 ```sh
-## External issues trackers
 issues_tracker:
     redmine:
       title: "Redmine"
