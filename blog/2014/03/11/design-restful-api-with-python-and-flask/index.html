@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>基于Flask设计RESTful API - Balloonsys Inc.</title>
+  <meta name="author" content="Linkou Bian">
+
+  
+  <meta name="description" content="Flask是一个Python WEB开发框架。接下来一段闲暇时间打算做的“西子快讯”项目中，我打算拿它来做RESTful API。虽然之前对Python并不了解，对Flask更是陌生，但爱折腾的本性促使我不断去学习。于是今天看blog、看文档，小有收获，略记一二。 准备工作 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Balloonsys Inc.</a></h1>
+  
+    <h2>Just a blog now.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="balloonsys.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">基于Flask设计RESTful API</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-03-11T19:12:58+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:12 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Flask是一个Python WEB开发框架。接下来一段闲暇时间打算做的“西子快讯”项目中，我打算拿它来做RESTful API。虽然之前对Python并不了解，对Flask更是陌生，但爱折腾的本性促使我不断去学习。于是今天看blog、看文档，小有收获，略记一二。</p>
+
+<!--more-->
+
+
+<h2>准备工作</h2>
+
+<p>确保机器上已经安装了Python、Pip、Virtualenv等工具。如果默认的Pip安装源比较慢，可以用v2ex的试试。具体方法是在~/.pip/下创建一个名为pip.conf的文件，输入新的pip源。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[global]
+</span><span class='line'>index-url = http://pypi.v2ex.com/simple</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>安装Flask</h2>
+
+<p>为了不影响系统的Python环境，我们用Virtualenv虚拟一个运行环境，然后在此环境下开发一个名为todo的示例小应用（纯RESTful API，JSON格式的数据）。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd ~/Desktop
+</span><span class='line'>mkdir todo-api
+</span><span class='line'>cd todo-api
+</span><span class='line'>virtualenv venv
+</span><span class='line'>. venv/bin/activate</span></code></pre></td></tr></table></div></figure>
+
+
+<p>此时命令行窗口应出现(venv)mbpr2013:todo-api linkoubian$ 这样的提示符，注意最左边的venv表明当前运行的是虚拟出来的环境。工作完成后打算退出venv，只需执行deactivate命令即可。</p>
+
+<p>这时执行pip install flask便可在venv下安装flask模块。</p>
+
+<h2>测试Flask是否正常工作</h2>
+
+<p>编写一个Hello World程序，如下：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span><span class='line'>  <span class="k">return</span> <span class="s">&quot;Hello, World!&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class='line'>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>保存为~/Desktop/todo-api/app.py，添加可执行权限后，敲python app.py开始运行Flask。此时打开浏览器，访问localhost:5000即可看到Hello, World!</p>
+
+<h2>开始设计RESTful API</h2>
+
+<h3>获取所有的tasks</h3>
+
+<p>一个task由id、title、description、done等属性构成，获取task列表的url可以设计成/todo/tasks。具体代码如下，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">u&#39;Buy groceries&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">u&#39;Milk, Cheese, Pizza, Fruit, Tylenol&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">u&#39;Learn Python&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">u&#39;Need to find a good Python tutorial on the web&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/todo/tasks&#39;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;GET&#39;</span><span class="p">])</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_tasks</span><span class="p">():</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;tasks&#39;</span><span class="p">:</span> <span class="n">tasks</span><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class='line'>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>因为Flask运行在debug模式下会自动reload，所以代码写完后保存文件即可。</p>
+
+<p>Mac上有一款名为<a href="https://itunes.apple.com/app/id584653203?ls=1&amp;mt=12">Paw</a>的HTTP Client，算是我见过、用过的各种API测试工具中的佼佼者，力荐。</p>
+
+<p>打开Paw，在url里输入<a href="http://localhost:5000/todo/tasks">http://localhost:5000/todo/tasks</a>，选择GET，敲CMD+Enter即可听到表示成功的清脆提示音。Paw除了提供原生的HTTP响应格式，还提供格式化后浏览功能，选择JSON格式即可。</p>
+
+<p>上面这段代码还是比较清晰好懂的，首先创建一个task数组，初始化两个task对象放进去。指定GET方式请求/todo/tasks资源时执行get_tasks方法，具体是把前面创建的tasks数组以JSON的格式返回。而将Python的数组转成JSON格式是通过Flask的jsonify函数实现的。</p>
+
+<h3>根据id获得特定task</h3>
+
+<p>通常我们将id放在URL中，然后对应的处理函数从URL中得到id以从数据源（此处为task数组，存在内存中）中查询相应地entity（此处为task）。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/todo/tasks/&lt;int:task_id&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;GET&#39;</span><span class="p">])</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">):</span>
+</span><span class='line'>  <span class="n">task</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">task_id</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>      <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">]})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>为了正常使用abort函数，需要从flask模块import一下。通过Paw测试<a href="http://localhost:5000/todo/tasks/1">http://localhost:5000/todo/tasks/1</a>，发现一切正常。</p>
+
+<p>访问<a href="http://localhost:5000/todo/tasks/0">http://localhost:5000/todo/tasks/0</a>时，返回一段出错的HTML，这是Flask对404的默认处理，我们可以自己定义一个返回JSON格式的错误消息。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.errorhandler</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">not_found</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">make_response</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;error&#39;</span><span class="p">:</span> <span class="s">&#39;Not found&#39;</span> <span class="p">}</span> <span class="p">),</span> <span class="mi">404</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>我们用make_response函数，将构造好的JSON作为404错误的响应，返回给客户端。</p>
+
+<h3>创建一个task</h3>
+
+<p>URL仍然用/todo/tasks，但HTTP方法为POST。根据Request对象中的数据构造一个新的task对象，插入数据源即可。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/todo/tasks&#39;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;POST&#39;</span><span class="p">])</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">create_task</span><span class="p">():</span>
+</span><span class='line'>  <span class="k">if</span> <span class="ow">not</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span> <span class="ow">or</span> <span class="ow">not</span> <span class="s">&#39;title&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">:</span>
+</span><span class='line'>      <span class="n">abort</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">task</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>      <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="n">tasks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s">&#39;title&#39;</span><span class="p">],</span>
+</span><span class='line'>      <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;description&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">),</span>
+</span><span class='line'>      <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">task</span><span class="p">}),</span> <span class="mi">201</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>另外，我们需要定义一个400的处理器，类似于404，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.errorhandler</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">not_found</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">make_response</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;error&#39;</span><span class="p">:</span> <span class="s">&#39;Bad request&#39;</span> <span class="p">}</span> <span class="p">),</span> <span class="mi">400</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在Paw中，POST请求<a href="http://localhost:5000/todo/tasks">http://localhost:5000/todo/tasks</a>，同时Header里加一个Content-Type，值为application/json，Body里加入一段文本内容{&ldquo;title&rdquo;: &ldquo;Buy a cell phone&rdquo;}，敲CMD+Enter执行。</p>
+
+<p>根据REST Cookbook一书的建议，可以在返回的新增task里加入一个uri字段。为此，建一个名为make_public_task的函数，如下，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">make_public_task</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
+</span><span class='line'>  <span class="n">new_task</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span class='line'>  <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">task</span><span class="p">:</span>
+</span><span class='line'>      <span class="n">new_task</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">=</span> <span class="n">task</span><span class="p">[</span><span class="n">field</span><span class="p">]</span>
+</span><span class='line'>      <span class="k">if</span> <span class="n">field</span> <span class="o">==</span> <span class="s">&#39;id&#39;</span><span class="p">:</span>
+</span><span class='line'>          <span class="n">new_task</span><span class="p">[</span><span class="s">&#39;uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">url_for</span><span class="p">(</span><span class="s">&#39;get_task&#39;</span><span class="p">,</span> <span class="n">task_id</span> <span class="o">=</span> <span class="n">task</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">],</span> <span class="n">_external</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">return</span> <span class="n">new_task</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>另外，create_task中改为，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">make_public_task</span><span class="p">(</span><span class="n">task</span><span class="p">)}),</span> <span class="mi">201</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>get_tasks中改为，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;tasks&#39;</span><span class="p">:</span> <span class="nb">map</span><span class="p">(</span><span class="n">make_public_task</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>get_task中改为，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;tasks&#39;</span><span class="p">:</span> <span class="nb">map</span><span class="p">(</span><span class="n">make_public_task</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>更新一个task</h3>
+
+<p>显然此时的HTTP方法为PUT，相应的url和获取task类似。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/todo/tasks/&lt;int:task_id&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;PUT&#39;</span><span class="p">])</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">update_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">task</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">task_id</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="ow">not</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="s">&#39;title&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s">&#39;title&#39;</span><span class="p">])</span> <span class="o">!=</span> <span class="nb">unicode</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="s">&#39;description&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s">&#39;description&#39;</span><span class="p">])</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">unicode</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="s">&#39;done&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s">&#39;done&#39;</span><span class="p">])</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">bool</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;title&#39;</span><span class="p">,</span> <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;title&#39;</span><span class="p">])</span>
+</span><span class='line'>    <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;description&#39;</span><span class="p">,</span> <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;description&#39;</span><span class="p">])</span>
+</span><span class='line'>    <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;done&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;done&#39;</span><span class="p">,</span> <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;done&#39;</span><span class="p">])</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">make_public_task</span><span class="p">(</span><span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">}</span> <span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>删除一个task</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/todo/tasks/&lt;int:task_id&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;DELETE&#39;</span><span class="p">])</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">delete_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">task</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">task_id</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">tasks</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;result&#39;</span><span class="p">:</span> <span class="bp">True</span> <span class="p">}</span> <span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>修改Python源文件后，Flask会reload，这将导致上一次create的task丢失，所以直接尝试delete之前增加的task可能会报404资源找不到错误。</p>
+
+<h2>为WEB服务增加安全机制</h2>
+
+<p>基于Flask的HTTBasicAuth扩展，定义两个函数如下，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">auth</span> <span class="o">=</span> <span class="n">HTTPBasicAuth</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@auth.get_password</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_password</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">username</span> <span class="o">==</span> <span class="s">&#39;linkoubian&#39;</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">return</span> <span class="s">&#39;7c4a8d09ca3762af61e59520943dc26494f8941b&#39;</span>
+</span><span class='line'>    <span class="k">return</span> <span class="bp">None</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@auth.error_handler</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">unauthorized</span><span class="p">():</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">make_response</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;error&#39;</span><span class="p">:</span> <span class="s">&#39;Unauthorized access&#39;</span> <span class="p">}</span> <span class="p">),</span> <span class="mi">401</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>其中get_password方法是返回指定用户的密码信息（通常是从数据库用户表查询得到），当此处返回的值和客户端传递的值匹配时（匹配过程由HTTPBasicAuth完成）成功，否则执行error_handler返回错误信息。</p>
+
+<p>定义完校验相关的代码，还需将校验逻辑应用到需要校验的WEB服务。比如，希望只有授权用户才可以修改或删除task，则可以在update_task及delete_task方法上面加上@auth.login_required即可。</p>
+
+<p>此时在Paw中需添加Authorization头，值为HTTP Basic Auth，在username及password文本框中分布输入信息，敲CMD+Enter进行测试。</p>
+
+<p><img src="http://farm8.staticflickr.com/7353/13084949405_9b2319d18f_o.png" alt="Paw HTTP Client" /></p>
+
+<h2>说明</h2>
+
+<p>本文是根据<a href="http://blog.miguelgrinberg.com/post/about-me">Miguel Grinberg</a>写的这篇<a href="http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask">文章</a>翻译并整理的。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-03-11T19:12:58+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:12 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/flask/'>flask</a>, <a class='category' href='/blog/categories/python/'>python,</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/03/05/obj-c-programming/" title="Previous Post: BNR出品的Obj-C教程">&laquo; BNR出品的Obj-C教程</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/03/12/update-restful-api-with-flask-restful-extension/" title="Next Post: 利用Flask的RESTful插件简化API开发">利用Flask的RESTful插件简化API开发 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/06/12/tech-notes-1/">平安好房iOS开发团队技术周报（第一期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/02/books-for-ios-programming/">这些年读过的iOS开发类图书</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/04/avoid-nested-push-animation/">Avoid Nested Push Animation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/">关于自定义表视图Cell遇到的一个bug</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/30/2014-summary/">2014 回顾</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Linkou Bian -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-06-14T01:45:17+08:00</updated>
+  <updated>2016-06-14T01:57:31+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -76,6 +76,1923 @@ that need to be addressed like testing or business analysis; there are no except
 rule</p></blockquote>
 
 <p>@end</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[这些年读过的iOS开发类图书]]></title>
+    <link href="http://balloonsys.github.io/blog/2015/08/02/books-for-ios-programming/"/>
+    <updated>2015-08-02T22:18:45+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2015/08/02/books-for-ios-programming</id>
+    <content type="html"><![CDATA[<p>本文记录一下自2009年夏天接触iOS开发以来读过的书，仅是当时读完后不觉得后悔的那部分。</p>
+
+<!--more-->
+
+
+<h2>2015年（iOS 9 announced on June 8）</h2>
+
+<h3><a href="http://book.douban.com/subject/26279783/">Programming iOS 8</a></h3>
+
+<p>第二次在Amazon.com海淘技术书籍，一个月都没收到货，联系Amazon.com后他们用DHL重新发货，一周内收到。拿到书吓了一跳，太厚了！！！</p>
+
+<p>作者是个博士，写的东西比较深入。该书还有一本姊妹篇，叫<a href="http://book.douban.com/subject/25929842/">iOS 8 Programming Fundamentals with Swift</a>。上半年我在Mac上挑着看的，已读完Chapter 2、3、4、5、10、11、12、13，对掌握Swift大有裨益。</p>
+
+<p><img src="http://img4.douban.com/lpic/s28069906.jpg" alt="Programming iOS 8" /></p>
+
+<h2>2014年（iOS 8 announced on June 2）</h2>
+
+<h3><a href="http://book.douban.com/subject/26287812/">iOS Programming 4th Edition</a></h3>
+
+<p>这是国外一个比较好的培训机构（BNR）出品的书，质量上乘。入门时若是借助此书，或许基本功可以更扎实些。他们家有一本<a href="http://book.douban.com/subject/19962787/">Objective-C编程</a>，是学习Objective-C的优秀教程，我是在手机上断断续续看完的。</p>
+
+<p>离开前司，英文原版虽未看完，但也不得不归还。后来买了中译本，逐篇读完。其中第24章讲的程序状态恢复，是我之前不曾了解的内容。此书一直拖到2015年年中才读完，略微汗颜。</p>
+
+<p><img src="http://img3.douban.com/lpic/s27970290.jpg" alt="iOS Programming 4th Edition" /></p>
+
+<h2>2013年（iOS 7 announced on June 10）</h2>
+
+<h3><a href="http://book.douban.com/subject/12890783/">iOS 6 Programming Pushing the Limits</a></h3>
+
+<p>在Amazon.cn上买的原版书，该书干货多多，读起来偶尔会有点吃力，但多花点时间非常值得。关于缓存的设计，我直接用在了给绿城物业做的APP中。</p>
+
+<p><img src="http://img3.douban.com/lpic/s24216653.jpg" alt="iOS 6 Programming Pushing the Limits" /></p>
+
+<h2>2012年（iOS 6 announced on June 11）</h2>
+
+<h3><a href="http://book.douban.com/subject/10750982/">iOS 5 By Tutorials</a></h3>
+
+<p>第一次在Amazon.com海淘英文技术书籍。上下两卷，内容丰富，案例详实。但作者众多，个别章节写得不够好，然并不妨碍此书在我心中的地位。其中ARC、Storyboard、UIKit Customization等章节深入仔细的研读过。</p>
+
+<p><img src="http://img3.douban.com/lpic/s9117190.jpg" alt="iOS 5 By Tutorials" /></p>
+
+<h2>2011年（iOS 5 previewed on June 6）</h2>
+
+<h3><a href="http://book.douban.com/subject/6697217/">iOS 4 in Action</a></h3>
+
+<p>这一年的十月份在加州出差，期间在Amazon.com买了这本书（另外还买了本关于Cocos-2d的）。书么，中规中矩，不算差。第一次读英文原版的iOS教程，知识点并没记住太多。</p>
+
+<p><img src="http://img3.douban.com/lpic/s6752591.jpg" alt="iOS 4 in Action" /></p>
+
+<h2>2010年（iOS 4 available on June 21）</h2>
+
+<h3><a href="http://book.douban.com/subject/4886880/">iPhone for Programmers: An App-Driven Approach</a></h3>
+
+<p>这本书中文名叫iPhone应用程序开发名家解析，里面包含了好几个完整的小例子（基于3.x SDK）。这一年，我以某些例子为基础开发了若干自己的APP并发布到App Store（排名还不错哦）。</p>
+
+<p><img src="http://img3.douban.com/lpic/s4529615.jpg" alt="iPhone for Programmers: An App-Driven Approach" /></p>
+
+<h2>2009年（iPhone OS 3.0 available on June 17）</h2>
+
+<h3><a href="http://book.douban.com/subject/3604295/">iPhone开发基础教程</a></h3>
+
+<p>拿到本科学位证书没两个月，买了此书。2009年夏天那会儿，iOS中文资料并不多（下半年此书更新到3.0 SDK）。</p>
+
+<p>作者讲解颇为细致，即使没有Objective-C的基础知识，照着书中的代码练练，很快就上手了。</p>
+
+<p><img src="http://img4.douban.com/lpic/s3664046.jpg" alt="iPhone开发基础教程" /></p>
+
+<h2>后记</h2>
+
+<p>回头等定做的书架到了，把这些书顺序排列。每当瞥过书脊，应有一种好的回味。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Avoid Nested Push Animation]]></title>
+    <link href="http://balloonsys.github.io/blog/2015/07/04/avoid-nested-push-animation/"/>
+    <updated>2015-07-04T21:28:39+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2015/07/04/avoid-nested-push-animation</id>
+    <content type="html"><![CDATA[<p>在iOS 8里使用UINavigationController把一个页面Push出来后，很短的时间内再次Push一个页面，并没有太大问题，两个页面相继显示。但在iOS 7里运行会遇到nested push animation can result in corrupted navigation bar问题。</p>
+
+<!--more-->
+
+
+<h2>模拟项目</h2>
+
+<h3>方法一</h3>
+
+<p>给一个按钮添加点击事件，在事件响应里：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">UIViewController</span> <span class="o">*</span><span class="n">detailPage</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIViewController</span> <span class="n">new</span><span class="p">];</span>
+</span><span class='line'><span class="n">UIViewController</span> <span class="o">*</span><span class="n">anotherPage</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIViewController</span> <span class="n">new</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">pushViewController:</span><span class="n">detailPage</span> <span class="nl">animated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">dispatch_after</span><span class="p">(</span><span class="n">dispatch_time</span><span class="p">(</span><span class="n">DISPATCH_TIME_NOW</span><span class="p">,</span> <span class="mf">0.3</span> <span class="o">*</span> <span class="n">NSEC_PER_SEC</span><span class="p">),</span> <span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">pushViewController:</span><span class="n">anotherPage</span> <span class="nl">animated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这样一点击此按钮，便可模拟本文着重讨论的问题。</p>
+
+<h3>方法二</h3>
+
+<p>实际项目里有两个基于View实现的控件，点击时首先缩放一下控件里的图标，然后push一个页面。当点击控件A后，若快速点击控件B，就会发生nested push问题。</p>
+
+<p>方法二中控件带有一定时长的缩放动画，给了用户足够的反应时间去连续点击。而方法一中是基于GCD代码模拟，可精确控制nested push的间隔。示例代码参见<a href="https://github.com/balloonsys/PushVC">PushVC示例之Initial Commit</a></p>
+
+<h2>问题剖析</h2>
+
+<p>首先，从UINavigationController这一层面考虑，在第一个push的动画还没完成，到来的第二个push请求，是否可以忽略？印象中貌似iOS 6就是这么处理的。</p>
+
+<p>然后，我们也可以从UI层面控制，尽量不要在push过程中发起第二次push请求。</p>
+
+<h2>解决方案</h2>
+
+<p>UINavigationController在push过程中，如何忽略其他push请求呢？查看其Delegate，发现其中有如下两个方法：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="nf">navigationController:willShowViewController:animated:</span>
+</span><span class='line'><span class="k">-</span> <span class="nf">navigationController:didShowViewController:animated:</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>所以，我们可以基于UINavigationController建立NavController，增加一个名为inTransition的BOOL属性。将NavController的delegate指向自身，并实现上述两个delegate方法。在willShow中将inTransition置为YES，在didShow中置为NO。接下来重写pushViewController:animated方法：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pushViewController:</span><span class="p">(</span><span class="n">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">viewController</span> <span class="nf">animated:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">animated</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">inTransition</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">NSLog</span><span class="p">(</span><span class="err">@“</span><span class="n">Ignore</span> <span class="n">push</span> <span class="n">request</span> <span class="n">when</span> <span class="n">top</span> <span class="n">page</span> <span class="n">is</span> <span class="n">still</span> <span class="n">animating</span><span class="err">”</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">[</span><span class="n">super</span> <span class="nl">pushViewController:</span><span class="n">viewController</span> <span class="nl">animated:</span><span class="n">animated</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>此时运行模拟项目，快速点击两个控件后，控制台会出现“Ignore push request when top page is still animating”消息，说明使用NavController可以像iOS 6的UINavigationController那样成功避免Nested Push问题。</p>
+
+<p>如前分析，我们也可以在UI层做控制，避免在Push过程中发起Push请求。仔细分析一下，第二次Push请求可能在控件的动画过程中发起，也可能在第一次Push过程中发起。所以，控件（示例中是基于View实现的）是否响应事件（示例中是基于tapGesture实现的）需要考虑两个条件。</p>
+
+<h2>前端控制</h2>
+
+<p>如何在动画过程中，避免另一个控件发起Push请求？我们可以在第一个控件的动画过程中，忽略触摸事件即可。核心代码是UIApplication的beginIgnoringInteractionEvents和endIgnoringInteractionEvents方法。主要代码如下：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">tapped</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">iconView</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">([</span><span class="n">self</span><span class="p">.</span><span class="n">iconView</span><span class="p">.</span><span class="n">layer</span> <span class="nl">animationForKey:</span><span class="n">TAP_ANIMATION_KEY</span><span class="p">]</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>            <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">iconView</span><span class="p">.</span><span class="n">layer</span> <span class="nl">addAnimation:</span><span class="p">[</span><span class="n">self</span> <span class="n">tapAnimation</span><span class="p">]</span> <span class="nl">forKey:</span><span class="n">TAP_ANIMATION_KEY</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="p">[[</span><span class="n">UIApplication</span> <span class="n">sharedApplication</span><span class="p">]</span> <span class="n">beginIgnoringInteractionEvents</span><span class="p">];</span>
+</span><span class='line'>            <span class="n">self</span><span class="p">.</span><span class="n">inAnimating</span> <span class="o">=</span> <span class="n">YES</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="n">NSLog</span><span class="p">(</span><span class="err">@“</span><span class="n">Do</span> <span class="n">NOT</span> <span class="n">tap</span> <span class="n">until</span> <span class="n">animation</span> <span class="k">for</span> <span class="o">%</span><span class="err">@</span> <span class="n">stopped</span><span class="err">”</span><span class="p">,</span> <span class="n">self</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">super</span> <span class="n">tapped</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">animationDidStop:</span><span class="p">(</span><span class="n">CAAnimation</span> <span class="o">*</span><span class="p">)</span><span class="nv">anim</span> <span class="nf">finished:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">flag</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">[[</span><span class="n">UIApplication</span> <span class="n">sharedApplication</span><span class="p">]</span> <span class="n">endIgnoringInteractionEvents</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">inAnimating</span> <span class="o">=</span> <span class="n">NO</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">[</span><span class="n">super</span> <span class="n">tapped</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>当然也可以判断是否有其他控件处于inAnimating状态，以决定是否忽略当前控件的触摸事件（gestureRecognizer:shouldReceiveTouch:）。</p>
+
+<p>如何避免在Push过程中再次发送Push请求呢？我们可以在UIGestureRecognizerDelegate方法（方法名前面刚刚提过）中判断：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">gestureRecognizer:</span><span class="p">(</span><span class="n">UIGestureRecognizer</span> <span class="o">*</span><span class="p">)</span><span class="nv">recogniser</span> <span class="nf">shouldReceiveTouch:</span><span class="p">(</span><span class="n">UITouch</span> <span class="o">*</span><span class="p">)</span><span class="nv">touch</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">if</span> <span class="p">([</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">isKindOfClass:</span><span class="p">[</span><span class="n">NavController</span> <span class="n">class</span><span class="p">]])</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">NavController</span> <span class="o">*</span><span class="n">nav</span> <span class="o">=</span> <span class="p">(</span><span class="n">NavController</span> <span class="o">*</span><span class="p">)</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">return</span> <span class="o">!</span><span class="n">nav</span><span class="p">.</span><span class="n">inTransition</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">YES</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>完整的代码可以从Github获得，<a href="https://github.com/balloonsys/PushVC">PushVC之最新commit</a>。</p>
+
+<p><strong>注</strong>：至于如何在不同commit之间切换代码，本文不再赘述。</p>
+
+<h2>参考资料</h2>
+
+<ol>
+<li>苹果官方文档：<a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UINavigationControllerDelegate_Protocol/">UINavigationControllerDelegate</a></li>
+<li>苹果官方文档：<a href="https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/multitouch_background/multitouch_background.html">Turn off delivery of touch events for a period</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[关于自定义表视图Cell遇到的一个bug]]></title>
+    <link href="http://balloonsys.github.io/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/"/>
+    <updated>2015-03-25T23:02:19+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell</id>
+    <content type="html"><![CDATA[<p>今天同事A遇到一个问题：包含一个按钮的TableView Cell，在iOS 6、iOS 8上点击按钮正常工作，但是在iOS 7上却无反应。同事B帮忙review了下代码发现，自定义的Cell在layout时，没有像平常那样调用一下[super layoutSubviews]。</p>
+
+<!--more-->
+
+
+<p>到这里本来事情也就过去了，但坐在旁边的我听了后，心中仍有几个疙瘩未解。</p>
+
+<h2>iOS 7上点击Cell中的按钮，为何没有响应？</h2>
+
+<h3>剖析问题</h3>
+
+<p>因为没有安装iOS 7模拟器，就在手上的一台装有iOS 7系统的iPad Mini上运行。无法利用Color Blended Layer分析视图，便给Cell嵌套的各个子View分别设置了不同的背景色。最后发现在iPad上，content view只有一小块，目测仅320*44的样子，并没有期望的那么大（在iPhone上也没有覆盖到出状况的那个按钮范围啦）。此时基本可以判断出：<strong>子View在父视图边界之外，对其触摸无法被检测</strong>。但这终究是表面结论，问题的本质是什么呢？</p>
+
+<p>对于iOS设备用户来说，操作设备的方式主要有三种：触摸屏幕、晃动设备、远程控制设备。对应的事件类型有以下三种：<br/>
+- 触屏事件（Touch Event）<br/>
+- 运动事件（Motion Event）<br/>
+- 远端控制事件（Remote-Control Event）</p>
+
+<p>点击按钮属于Touch Event，故接下来重点讨论触摸事件。</p>
+
+<p>当应用发生触摸事件后，系统会将该事件添加至一个由UIApplication单例管理的事件队列。然后UIApplication会把触摸事件发给应用的key window对象，该window对象尝试将事件传递给事件所发生的那个view。这个view就是所谓的hit-test view。寻找hit-test view的过程叫hit-testing。</p>
+
+<p>具体说来，此处table view是window的根视图，因此window首先对table view进行hit-test；显然用户点击范围在table view内，因此pointInside:withEvent:返回了YES，继续检查table view的子视图；为简化问题，假设仅有两个cell，分别称为CellA、CellB，点击范围不在CellA中，因此CellA的pointInside:withEvent返回NO，对应的hitTest:withEvent:返回nil；点击范围“看起来”在CellB中，但是，但是啊，CellB的content view没有期望的那么大，没有“包含”按钮范围，所以pointInside:withEvent：也是返回NO（注意：hitTest:withEvent:会在view的所有子view中递归调用，但在CellB上第一次调用pointInside:withEvent:方法时就返回NO的时候不会也没必要继续在该cell的子视图上递归了）。所以，此处触摸事件的hit-test view是table view，而不是期望的button。</p>
+
+<p>table view（作为first responder）作为此时的hit-test view，但它并没有处理触摸事件，所以事件被传递给table view的next responder，此处为table view所在的controller。如果在controller里，实现了didSelectRow方法，则事件在此被处理掉；否则一直往next responder传递，到了window也处理不了则传递给application（响应链的最后一环）。如果application对象仍然无法处理，则系统会丢弃该事件。</p>
+
+<p>以上通过分析事件的传递及响应，解释了第一个问题，即iOS 7上按钮关联的事件代码为何没有执行。</p>
+
+<h3>解决问题</h3>
+
+<p>方案一，在自定义Cell里重写hitTest:withEvent:方法，轮到检查按钮这个子view时，返回按钮视图。</p>
+
+<p>方案二，既然问题出在content view没有期望的大上，就应该“尽量”让他如期望的那样大，即在cell的layoutSubViews时调用super方法。</p>
+
+<h2>为何iOS 8正常，就iOS 7掉链子？</h2>
+
+<h3>剖析问题</h3>
+
+<p>iOS 6、8上自定义的cell既然能够正常设置content view的大小，说明content view本来是可以自动按照需要去设置自身大小的。毕竟，你在自定义的cell里都没有去特意为content view布局（未调super的layout方法）。</p>
+
+<p>但iOS 7上content view没有自动调整，需要调用table view cell的layoutSubViews方法才行。说明iOS 7里table view cell的layout方法做了特别处理。</p>
+
+<p>为何要特别处理？先大胆的猜测是跟cell的视图结构有关。本来嘛，从6到7时Cell滑动删除的样式都变了。但光猜测是不够的，我们可以一探其cell结构之究竟。</p>
+
+<p>借助View的隐藏方法recursiveDescription，可以打印视图的层次结构。调用该方法时可以给View临时加下方法声明。</p>
+
+<p>最终在iOS 7上我们发现：<strong>cell与contentView之间多了一层UITableViewCellScrollView</strong>。</p>
+
+<p>给这个Scroll View设置背景色，发现它的bounds是期望的大小。可以猜测，不调用super的layout方法时，table view cell的根视图的大小会自动调整好（table view的宽、cell的高），但iOS 7上其根视图是Scroll View，Scroll View的大小调整好了，但是Scroll View的子视图（Content View）的大小需要我们自己保证。</p>
+
+<h3>解决问题</h3>
+
+<p>根据以上分析，该BUG场景下，明显应该采用方案二。</p>
+
+<p>同时获得的教训是，苹果对其基础框架的实现是会有调整的，我们应该按照API的使用习惯来编码，比如调用super的viewDidLoad、layoutSubviews等不能少。否则，客户代码便会因框架代码的调整而受到影响。</p>
+
+<p>再把开头说过的结论小结一遍：<strong>在当前view的bounds之外的触摸不会被接收，即使它是当前view的sub view。当你把当前view的clipToBounds属性设置成false，并且把subView移动到当前view的bounds之外的时候，这种情况就会出现</strong>。</p>
+
+<h2>参考资料</h2>
+
+<ol>
+<li>苹果官方文档：<a href="https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/event_delivery_responder_chain/event_delivery_responder_chain.html#//apple_ref/doc/uid/TP40009541-CH4-SW2">Event Delivery: The Responder Chain</a></li>
+<li>网络上的译文：<a href="http://nsdifficult.com/blog/20140314/event/">事件传递之响应链</a></li>
+<li>一年前我写过的一篇关于hitTest文章：<a href="http://balloonsys.com/blog/2014/04/08/hit-test-sample/">hitTest示例</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[2014 回顾]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/12/30/2014-summary/"/>
+    <updated>2014-12-30T14:39:15+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/12/30/2014-summary</id>
+    <content type="html"><![CDATA[<p>匆匆2014，仅剩明日。</p>
+
+<!--more-->
+
+
+<h2>工作</h2>
+
+<h3>第一波求职，无果</h3>
+
+<p>去年五月份离开工作多年的道富后，加入浙大计算机学院王老师的公司，负责杭州市城管委的一个移动客户端项目。虽然收入有所增长，但技术方面依然吃的老本。技术上未有长进，不过见识还是宽广了许多。综合考虑后觉得政府项目不是我所喜欢的，于是2014年春节之后便开始关注一些新的机会。</p>
+
+<p>2014年2月21日上午11点，蘑菇街主客户端，和其技术面试官聊得不开心；下午2点，金山网络的PhotoGrid产品，笔试题好多，答得有挫败感；下午4点，同花顺，感觉面试我的两批人，面相都比较苦逼，提供的Offer也不是很满意，直接就拒了他们。</p>
+
+<h3>第二波求职，贼船</h3>
+
+<p>后来四月份在拉勾上又投了几家公司，回复率比较高。去其中两家面过，一个是丽子美妆（原娜拉化妆品商城）。我很不喜欢这家公司，大老远去面试，结果说技术负责人出差了。但是和他们家的HR比较聊得来。另一家是绿城物业集团投资的团队，为绿城的园区做线下线上服务的。这跟我之前做智慧城市、智慧社区的经历还是比较契合的，而且考虑到绿城的招牌，五一节刚过便加入了这家公司。</p>
+
+<p>三位工程师加班加点一个半月把产品做出来了，但很快就发现这个公司的诸多问题。12月份，最初的三位工程师之一、负责JAVA端开发的兄弟，离开了团队。下个月，我也将离开。</p>
+
+<h3>第三波机会，憧憬</h3>
+
+<p>十二月份，蘑菇街支付团队的技术负责人（东大校友）约我去聊聊，后来一路下来拿到了Offer；平安好房的学长（以前在柯达也是同事）帮我内推，也很顺利的拿到了Offer。</p>
+
+<p>对比手头的两个机会，个人更倾向于平安。主要考虑到这么几个方面：<br/>
+1. 薪资，上来就压价的HR vs. 给你涨价的HR<br/>
+2. 团队，JAVA面试官 vs. 非常资深的iOS工程师<br/>
+3. 距离，杭州>>>盐城 vs. 上海>>>盐城</p>
+
+<p><strong>今年获得的最大教训是，不要冒然加入一个不知底细的小公司！</strong></p>
+
+<p>工作了五六年（2008.07开始全职实习），依然在求职、换城市，说起来略感惭愧。不过，在毕业后的第一个五年里（2009~2014），完成了买房、结婚、生娃等一系列重大事项，另外还准备好了装修款，个人对此还是很满意满足的。毕竟这些对于一个毫无家庭根基的人来讲，并不是轻而易举之事。</p>
+
+<h2>生活</h2>
+
+<p>春节时在老家摆了喜酒，很简单的走了个过场。四月份签了一份外包合同，五月份交付。五月份把杭州公共自行车助手（iPhone客户端）转让给了上海一家公司。六月份把多年前写的一款iPhone小游戏转让给了上海同一家公司。哈，业余兼职也是我生活的一部分:-)</p>
+
+<p>七月底，喜得一女。生之前若干次产检、陪产一周、后续复检，我已经对浙江省妇保相当熟悉了。我妈、岳母也来杭州帮忙照顾了一阵。十一月，老婆孩子随我妈一起回老家。</p>
+
+<p>下半年忙于公司项目，无精力打造自己的APP。有了小孩之后，空暇时间捉襟见肘。看书时间也少了许多。</p>
+
+<p>年底搬离住了五年的紫金港，损失了一个月的押金（两千多）。在朋友家打地铺以度过在杭的最后几周。</p>
+
+<h2>学习</h2>
+
+<p>今年读完的书有：<br/>
+- Objective C Programming by BNR<br/>
+- 明朝那些事儿 共7册</p>
+
+<p>在读的书有：<br/>
+- iOS 6 by tutorials THIRD EDITION<br/>
+- 无为而治</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Swift 语言基础（下）]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/09/23/basics-of-swift-part-b/"/>
+    <updated>2014-09-23T10:11:08+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/09/23/basics-of-swift-part-b</id>
+    <content type="html"><![CDATA[<p>本文主要记录Swift中关于Optional Type、集合等知识点。</p>
+
+<!--more-->
+
+
+<h2>可选类型（Optional Type）</h2>
+
+<p>处于安全的设计考量，在Swift中未初始化的String不可以println。声明时设为nil后，println也不行，因为nil不是STR。</p>
+
+<p>所以引入Optional Type，可以理解为对另一个类型的装箱（由本人引自Java的术语）。String?便是一个Optional Type，它是对String的包装。声明时不需要赋值为nil：var str: String?。此时println打印出nil。如果赋值为“Hello World”，打印Optional(“Hello World”)。</p>
+
+<h3>手动拆箱（Manual Unwrapping）</h3>
+
+<p>若需要拆箱，可以if let unwrappedStr = str {}。如果str为nil，if分支的代码块不会执行。值得注意的是，1）想要获得Optional Type所封装的那个值，必须用if语句拆箱；2）unwrappedStr的作用域为if代码块。</p>
+
+<h3>强制拆箱（Forced Unwrapping）</h3>
+
+<p>如果明确的知道Optional Type包含一个值，则可以使用强制拆箱（Forced Unwrapping）。具体写法是这样的：println(str!)。不必经过前面提到的if就可以拿到被包含的值。</p>
+
+<h3>隐式拆箱（Implicit Unwrapping）</h3>
+
+<p>强制拆包是声明Optional Type时用？，访问被包含的值时加个！。而隐式拆箱与之不同的是，声明时用！，访问被包含的值时什么都不需要加，就好像没有使用过Optional Type似的。</p>
+
+<h3>可选链（Optional Chaining）</h3>
+
+<p>声明一个Optional Type：var str: String?
+可选消息链：let upperStr = str?.uppercaseString</p>
+
+<p>1）可选链可以级联多次，这样便客观的降低if嵌逃层级 <br/>
+2）使用Optional Chaining代码更简洁</p>
+
+<h2>集合</h2>
+
+<p>1) 无论是数组还是字典，都是用[] <br/>
+注：ObjC里字典用的是{} <br/>
+2）默认情况下，数组只能放同一类型的元素，除非显示或隐式声明为[AnyObject]类型 <br/>
+3）将字典某key对应的值设为nil，即为删除 <br/>
+4）字典的value为Optional Type <br/>
+5）数组、字典，都是拷贝赋值 <br/>
+6）使用let声明的常量集合，不可以append、remove</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Swift 语言基础（上）]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/09/21/basics-of-swift-part-a/"/>
+    <updated>2014-09-21T22:59:56+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/09/21/basics-of-swift-part-a</id>
+    <content type="html"><![CDATA[<p>周五花了54刀买了RW网站上的Swift by Tutorials，共261页。平均一页1块多软妹币啊！！！朋友圈有评论说：“很庆幸，只需要看两三百页，得其精髓，最怕书长！”。深以为然！</p>
+
+<!--more-->
+
+
+<p>本系列文章，为Swift by Tutorials的读书笔记。</p>
+
+<h2>从Hello World开始</h2>
+
+<p>为了耍耍Swift，首先得打开Xcode 6。在弹出的工程模板里选哪一个呢？这是个问题！</p>
+
+<p>暂时的答案是，一个都不选，关掉！然后在File/New菜单中选择Playground即可。</p>
+
+<p>啥都不说了，在打开的playground编辑区，直接输入println(“Hello World”)吧，此时便可以在右侧看到即时效果。</p>
+
+<p>如果想看程序的运行结果，可以在View/Assistant中选择Show Assistant Editor。</p>
+
+<h2>变量&amp;常量</h2>
+
+<p>声明一个变量的方式：var str: String = “Hello World”，其中类型可以省略。</p>
+
+<p>需要注意的是，类型可以省略不写，不代表Swift是动态类型语言。比如尝试给str变量赋23这样的整数值，就会报错。其类型由首次赋值推断出，此过程为Type Inference。</p>
+
+<p>前面我们解释了类型可以省略不写，现在我们谈谈此处省略的String。此String相当于Obj-C的NSMutableString，是可变的。所以你可以进行这样的操作，str = str + “, I love you!”。</p>
+
+<p>那如何创建一个“不可变”的字符串呢？将var换成let即可。使用let后，我们既不可以str = “Hello Swift”，也不可以str.append。</p>
+
+<h2>数值类型</h2>
+
+<p>浮点数与整数运算，需要显式的转换类型。Int.max + 1会直接报错而不是变成一个负数。</p>
+
+<h2>逻辑类型</h2>
+
+<p>var knowsSwift: Bool = true。此处只可以赋值true或者false，不像其他语言可以使用0或非0值。</p>
+
+<h2>元组</h2>
+
+<p>var product = (“iPhone 6”, 6000)。要输出商品名，我们可以使用println(product.0)。如果加价，可以这么写：product.1 += 100。</p>
+
+<p>如果将元组product拆解成单个元素以方便访问，可以这么做：let (name, price) = product。这时，我们除了使用product.0访问商品名，还可以直接用name。</p>
+
+<p>我们在声明并赋值元组时，还可以指定“属性名”：var product = (name: “iPhone 6”, price: 6000)。</p>
+
+<h2>字符串操作</h2>
+
+<p>输出product的信息，我们可以这么做：println(&ldquo;Price of (product.name) is (product.price)&rdquo;)。此为Swift的String Interpolation特性。相对于NSLog的format参数，方便不少。</p>
+
+<p>另外，我们在使用String Interpolation时，还可以直接操作相关的变量。比如println(&ldquo;Price of (product.name) is (product.price + 100)”)。</p>
+
+<h2>控制流</h2>
+
+<h3>for循环</h3>
+
+<p>for i in 1…5 {println (“(i)”)}
+其中…为闭区间操作符（Closed Range Operator），相当于Range(start: 1, end: 6)。</p>
+
+<h3>while循环</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>var <span class="nv">i</span> <span class="o">=</span> 0
+</span><span class='line'><span class="k">while </span>i &lt; 5 <span class="o">{</span>
+</span><span class='line'>  println<span class="o">(</span>“<span class="se">\(</span>i<span class="o">)</span>”<span class="o">)</span>
+</span><span class='line'>  i++
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>if语句</h3>
+
+<p>即使待执行的只有一行代码，也需要{}。</p>
+
+<h3>switch语句</h3>
+
+<p>Swift中，switch可以使用任何类型，不需要break语句，如果case不完备则必须有default语句。</p>
+
+<p>case可以这么写：case “up”, “down”: println(“you pressed up or down”)。case还可以这么写：case 1..&lt;10: println(“between 1 and 10, 10 not included”)。</p>
+
+<p>— EOF —</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[hitTest示例]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/04/08/hit-test-sample/"/>
+    <updated>2014-04-08T14:53:20+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/04/08/hit-test-sample</id>
+    <content type="html"><![CDATA[<p>早上翻看Github本周排名靠前的Objective-C开源项目，瞄了几眼<a href="https://github.com/wpsteak/PWParallaxScrollView">PWParallaxScrollView</a>的代码。发现其在ScrollView中嵌入Button，然后为了使得Button能接受点击事件是借助- hitTest:withEvent:实现的。</p>
+
+<!--more-->
+
+
+<p>一番Google，大致知道hitTest是干嘛的了。顺道写个Sample，改变默认的消息响应流。</p>
+
+<h2>准备</h2>
+
+<p>建立一个Single VC的工程，添加两个有部分重叠的Button，分别关联上touchUpInSide处理方法。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">buttonAPressed:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;You pressed button A&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">buttonBPressed:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;You pressed button B&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>因为Button B(tag为102)是叠在Button A(tag为101)上面的，所以在重叠区域点击，控制台输出的是You pressed button B。这种情况下，如果希望收到消息的是Button A呢？那就用hitTest吧！</p>
+
+<h2>实现</h2>
+
+<p>建立一个UIView的子类，然后重写- hitTest:withEvent:方法，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nf">hitTest:</span><span class="p">(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">point</span> <span class="nf">withEvent:</span><span class="p">(</span><span class="n">UIEvent</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="n">UIView</span><span class="o">*</span> <span class="n">subview</span> <span class="k">in</span> <span class="n">self</span><span class="p">.</span><span class="n">subviews</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">CGPoint</span> <span class="n">convertedPoint</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span> <span class="nl">convertPoint:</span><span class="n">point</span> <span class="nl">toView:</span><span class="n">subview</span><span class="p">];</span>
+</span><span class='line'>        <span class="n">UIView</span> <span class="o">*</span><span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">subview</span> <span class="nl">hitTest:</span><span class="n">convertedPoint</span> <span class="nl">withEvent:</span><span class="n">event</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">tag</span> <span class="o">==</span> <span class="mi">101</span><span class="p">){</span>
+</span><span class='line'>            <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+</span><span class='line'>            <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="p">[</span><span class="n">super</span> <span class="nl">hitTest:</span><span class="n">point</span> <span class="nl">withEvent:</span><span class="n">event</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>紧接着，把Button的父视图，即根视图view对应的类设为刚创建的类型。运行，测试，看到效果了吧?!</p>
+
+<h2>后记</h2>
+
+<p>源代码里有乾坤，不注意看就错过了:-)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[基于模板引擎的新闻内容展示]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action/"/>
+    <updated>2014-04-05T18:45:39+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action</id>
+    <content type="html"><![CDATA[<p>在为杭州市城管委开发贴心城管客户端时，城管动态这个模块的新闻展示是把新闻分成标题、时间、贴图、正文等部分，分别展示内容的。</p>
+
+<!--more-->
+
+
+<p>这样做的局限性不言而喻，不能图文并茂随心所欲的在文章内部嵌入图片且图片数量有一定的限制，而且服务端在发布新闻时也不方便做文章格式的编辑等。</p>
+
+<p>在设计西子快讯时，便尝试了基于模板引擎的新闻内容展示。其实这样做，开发工作量并不大，因为开源社区有了高质量的模板引擎。</p>
+
+<h2>思路</h2>
+
+<ol>
+<li>根据新闻的ID从服务端获得News实例对象（含标题、附图、正文等信息）</li>
+<li>将获得的新闻各属性信息填充到APP内的HTML模板文件中</li>
+<li>HTML模板可以指定CSS样式（同样存放在APP内）</li>
+<li>经过模板引擎的处理得到最终的HTML内容</li>
+<li>将处理后的HTML内容加载到WebView控件显示即可</li>
+</ol>
+
+
+<h2>开发</h2>
+
+<h3>HTML模板</h3>
+
+<p>准备好一个名为template.html文件，需要动态替换的部分用模板标签标识。</p>
+
+<h3>显示样式</h3>
+
+<p>news.css也不给出了，找个前端设计师结合项目需要提供一个即可。手动替换掉template.html中的参数，加上自己的news.css，便可在桌面浏览器里测试下效果。一切OKay的话，请继续阅读本文。</p>
+
+<h3>替换模板参数</h3>
+
+<p>我选择的模板引擎是MGTemplateEngine，到Github下载源代码加入到Xcode工程里，然后编写如下几行代码即可。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">MGTemplateEngine</span> <span class="o">*</span><span class="n">engine</span> <span class="o">=</span> <span class="p">[</span><span class="n">MGTemplateEngine</span> <span class="n">templateEngine</span><span class="p">];</span>
+</span><span class='line'><span class="p">[</span><span class="n">engine</span> <span class="nl">setMatcher:</span><span class="p">[</span><span class="n">ICUTemplateMatcher</span> <span class="nl">matcherWithTemplateEngine:</span><span class="n">engine</span><span class="p">]];</span>
+</span><span class='line'><span class="n">NSString</span> <span class="o">*</span><span class="n">templatePath</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">pathForResource:</span><span class="s">@&quot;template&quot;</span> <span class="nl">ofType:</span><span class="s">@&quot;html&quot;</span><span class="p">];</span>
+</span><span class='line'><span class="n">NSString</span> <span class="o">*</span><span class="n">newsContentHTML</span> <span class="o">=</span> <span class="p">[</span><span class="n">engine</span> <span class="nl">processTemplateInFileAtPath:</span><span class="n">templatePath</span> <span class="nl">withVariables:</span><span class="err">@</span><span class="p">{</span><span class="s">@&quot;title&quot;</span><span class="o">:</span> <span class="s">@&quot;Template based News client&quot;</span><span class="p">,</span> <span class="s">@&quot;editor&quot;</span><span class="o">:</span> <span class="s">@&quot;Linkou Bian&quot;</span><span class="p">}];</span>
+</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">newsContentWebView</span> <span class="nl">loadHTMLString:</span><span class="n">newsContentHTML</span> <span class="nl">baseURL:</span><span class="p">[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="n">resourceURL</span><span class="p">]];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>processTemplateInFileAtPath:withVariables中得variables参数是个字典，key对应template.html中的参数。注意示例代码中并没有把variables参数写完整。</p>
+
+<p>另外html中的body_content参数对应的字符串应带有HTML标签，这样处理后的html内容放到WebView中显示效果会相对好很多。西子快讯便是这样设计与实现的。</p>
+
+<p>除了在新闻顶部固定的位置显示新闻配图外，我们也可以在body_content参数对应的字符串中提供img标签以在文章任意位置插入图片。</p>
+
+<h3>操作新闻内的多媒体文件</h3>
+
+<p>如果需要点击图片以全屏展示，实现起来也非常简单。首先在template.html中加入一段JavaScript，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="kd">function</span> <span class="nx">extend_image</span><span class="p">(</span><span class="nx">element</span><span class="p">){</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">imgTag</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;IMG&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">url</span><span class="o">=</span><span class="nx">imgTag</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;image://?url=&quot;</span><span class="o">+</span><span class="nx">url</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后在img标签外增加点击调用extend_image(this)相关的HTML代码即可。</p>
+
+<p>用户点击图片后，WebView的委托方法webView:shouldStartLoadWithRequest:navigationType:会被调用。我们可以解析reqeust的URL字符串来做相应的处理。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">if</span> <span class="p">([</span><span class="n">url</span> <span class="nl">hasPrefix:</span><span class="s">@&quot;image://&quot;</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">NSString</span> <span class="o">*</span><span class="n">imageURL</span> <span class="o">=</span> <span class="p">[</span><span class="n">url</span> <span class="nl">substringFromIndex:</span><span class="p">[</span><span class="s">@&quot;image://?url=&quot;</span> <span class="n">length</span><span class="p">]];</span>
+</span><span class='line'>    <span class="c1">// Present a new view controller and display the image full sreen</span>
+</span><span class='line'>    <span class="c1">// ...</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">NO</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>虽然西子快讯尚未支持视频播放，但我觉得也可以采用类似的方案处理。</p>
+
+<h2>后记</h2>
+
+<p>个人认为采用这种方式的灵活性主要体现在，<br/>
+1. 可以定义多套显示风格（如白天、黑夜），然后将样式名传给模板<br/>
+2. 可以预设多套字体、字号（medium、large等），然后将样式名传给模板<br/>
+3. 基于自定义URL及WebView的delegate方法，实现HTML与ObjC的交互</p>
+
+<p>另外，除了MGTemplateEngine外，还有其他的模板引擎可以使用，比如GRMustache。至于孰优孰劣，什么场合选择哪个，截止目前我并没有做任何研究，等接到下一个需要模板引擎的项目再说吧。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[做iOS外包开发用到的工具]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/04/04/ios-dev-tools/"/>
+    <updated>2014-04-04T16:27:54+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/04/04/ios-dev-tools</id>
+    <content type="html"><![CDATA[<p>这个虚拟的Balloonsys工作室，总算发展到两位工程师了。</p>
+
+<!--more-->
+
+
+<h2>发展历史</h2>
+
+<p>2010年8月第一次为成都一家公司做兼职开发，仅持续两周<br/>
+2012年9月帮杭州一家公司发布应用<br/>
+2014年4月终于签下了第一份APP开发合同</p>
+
+<h2>第三方服务</h2>
+
+<p>为自己、为别人开发iPhone应用的过程中，也使用过不少第三方服务。一直持续使用的有：<br/>
+1. 私有代码托管 <a href="https://bitbucket.org">https://bitbucket.org</a> <br/>
+2. 收集崩溃日志 <a href="https://www.crashlytics.com">https://www.crashlytics.com</a> <br/>
+3. 测试版本分发 <a href="https://testflightapp.com">https://testflightapp.com</a> <br/>
+4. 数据统计分析 <a href="http://www.appannie.com">http://www.appannie.com</a></p>
+
+<h2>软件工具</h2>
+
+<p>当一个关于APP的Idea萌生后，我会在草稿本上大致画出轮廓，想好每一页的交互，然后用下面的软件工具落地： <br/>
+1. 网络请求分析 <a href="http://www.portswigger.net/burp/download.html">http://www.portswigger.net/burp/download.html</a> <br/>
+2. 软件原型设计 <a href="http://www.apple.com/cn/mac/keynote/">http://www.apple.com/cn/mac/keynote/</a> <br/>
+3. 接口服务文档 <a href="http://www.apple.com/cn/mac/pages/">http://www.apple.com/cn/mac/pages/</a> <br/>
+4. 模拟接口实现 <a href="http://www.sublimetext.com">http://www.sublimetext.com</a> <br/>
+5. 测试一下接口 <a href="http://luckymarmot.com/paw">http://luckymarmot.com/paw</a> <br/>
+6. 买点现成图标 <a href="https://www.iconfinder.com">https://www.iconfinder.com</a> <br/>
+7. 编辑矢量图标 <a href="http://www.bohemiancoding.com/sketch/">http://www.bohemiancoding.com/sketch/</a></p>
+
+<p>在Mac上启动Burp后，把iPhone的代理服务器设置为MBPR的IP，端口为Burp中设置的那个。这样就可以在Burp中方便的看到手机上的网络请求详情。通过这种方式，我获得了不少第三方应用的API，然后开发了两款“非官方”的客户端。</p>
+
+<p>利用Keynote做原型设计，这是从公司的咨询顾问那里学来的。感觉速度快，效果也很不错。在开发西子快讯前，我便用Keynote做了一份演示原型。</p>
+
+<p>通常后端服务返回JSON格式的数据，为方便的观察API的Response，我喜欢用Paw这个工具，个人感觉比Post Man好用很多。</p>
+
+<p>做客户端开发，对图标的需求还是蛮大的，按钮、菜单、启动图标等等。Icon Finder这个网站不光提供免费的图标下载，还有付费的图标，也不贵，而且提供SVG格式。利用Sketch，可以轻松修改颜色、大小等。</p>
+
+<h2>个人小结</h2>
+
+<p>荀子在劝学篇里说，“君子生非异也，善假于物也”！没错，做APP开发就是要善假于物也！</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[基于iCarousel构建新闻头条]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/03/24/news-headline-in-action/"/>
+    <updated>2014-03-24T16:25:24+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/03/24/news-headline-in-action</id>
+    <content type="html"><![CDATA[<p>市面上大部分新闻客户端的布局，都是顶部放一个可以左右滑动的头条，下方是新闻列表。像网易新闻的头条部分，通常是新闻与广告穿插。因为近期正在开发类似的一个APP，现总结头条部分的构建步骤。</p>
+
+<!--more-->
+
+
+<h2>技术选型</h2>
+
+<p>去code4app.com上搜索ScrollView相关的代码，会找到一些类似的代码示例，比如这个<a href="http://code4app.com/ios/EScrollerView/51935e166803fac572000003">EScrollView</a>。如果是本着学习的出发点，借鉴其思路并酌情修改其代码以满足自身项目需求，也不是难事。但如果要用在商业项目里，并期望获得足够的灵活性可能还需花费很多精力。</p>
+
+<p>经过一番Google，在Github里找到了<a href="https://github.com/nicklockwood/iCarousel">iCarousel</a>这个控件，其示例代码中含不少例子，不过大部分例子的效果都是CoverFlow风格。但其中的Paging Example给了我灵感，把iCarousel View的高度设小一点，再额外加个page control及text label不就刚好么？欣喜之余，快速打开该示例的代码仔细阅读。</p>
+
+<p>下面详细介绍如何基于iCarousel构建新闻头条。</p>
+
+<h2>iCarousel简介</h2>
+
+<h3>定制iCarousel视图</h3>
+
+<p>拖一个UIView到View Controller的顶部，大小为320X190，类名设置为iCarousel，连接到一个名为headlinesView的Outlet。</p>
+
+<p>在viewDidLoad中调用如下方法，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setupHeadlinesView</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">headlinesView</span><span class="p">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">iCarouselTypeLinear</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">headlinesView</span><span class="p">.</span><span class="n">pagingEnabled</span> <span class="o">=</span> <span class="n">YES</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">headlinesView</span><span class="p">.</span><span class="n">dataSource</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">headlinesView</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>此处关键的一个属性便是pagingEnabled，设置后刚好符合期望的效果。</p>
+
+<h3>为iCarousel提供数据</h3>
+
+<p>iCarousel采用类似于table view的设计方式，提供了不少datasource及delegate方法。</p>
+
+<p>下面这个方法告诉iCarousel共有几个cell item，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nf">numberOfItemsInCarousel:</span><span class="p">(</span><span class="n">iCarousel</span> <span class="o">*</span><span class="p">)</span><span class="nv">carousel</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">kCoundOfHeadlineNews</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>当需要加载某个cell view时，会调用viewForItemAtIndex，我们需在该方法里确保用于显示新闻头条图片的imageView被构建并设置相应地image。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nf">carousel:</span><span class="p">(</span><span class="n">iCarousel</span> <span class="o">*</span><span class="p">)</span><span class="nv">carousel</span> <span class="nf">viewForItemAtIndex:</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">index</span> <span class="nf">reusingView:</span><span class="p">(</span><span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">view</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">UIImageView</span> <span class="o">*</span><span class="n">headlineImageView</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Create new view if no view is available for recycling</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">view</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">view</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">self</span><span class="p">.</span><span class="n">headlinesView</span><span class="p">.</span><span class="n">bounds</span><span class="p">];</span>
+</span><span class='line'>        <span class="n">headlineImageView</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIImageView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">];</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">headlineImageView</span> <span class="nl">setImage:</span><span class="p">[</span><span class="n">UIImage</span> <span class="nl">imageNamed:</span><span class="s">@&quot;Headline_Placehold&quot;</span><span class="p">]];</span>
+</span><span class='line'>        <span class="n">headlineImageView</span><span class="p">.</span><span class="n">tag</span> <span class="o">=</span> <span class="n">kHeadlineImageViewTag</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">view</span> <span class="nl">addSubview:</span><span class="n">headlineImageView</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">headlineImageView</span> <span class="o">=</span> <span class="p">(</span><span class="n">UIImageView</span> <span class="o">*</span><span class="p">)[</span><span class="n">view</span> <span class="nl">viewWithTag:</span><span class="n">kHeadlineImageViewTag</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// Load image for headline news</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">self</span><span class="p">.</span><span class="n">headlineNews</span><span class="p">.</span><span class="n">count</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">headlineImageView</span> <span class="nl">setImageWithURL:</span><span class="p">[</span><span class="n">NSURL</span> <span class="nl">URLWithString:</span><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">headlineNews</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="n">img</span><span class="p">]]];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">view</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>上面代码中的headlineNews是一个数组，用来存从远程服务器获得的头条新闻（Model）列表，其中img属性（头条新闻的字段）为对应图片的URL。当加载cell view时headlineNews可能还没有数据，所以上述代码做了个判断，即if (index &lt; self.headlineNews.count)。</p>
+
+<p>当远端数据加载完毕，我们可以调用[self.headlinesView reloadData]以更新界面。</p>
+
+<p>另外，往Image View设置远程图片，可以用SDWebImage提供的方法setImageWithURL，该框架可以有效的管理图片的缓存。</p>
+
+<h3>定制iCarousel的行为</h3>
+
+<p>当头条新闻滑到最后一页时，通常需要能够回到第一页。iCarousel提供了一个delegate方法以定制该控件的属性。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nf">carousel:</span><span class="p">(</span><span class="n">iCarousel</span> <span class="o">*</span><span class="p">)</span><span class="nv">carousel</span> <span class="nf">valueForOption:</span><span class="p">(</span><span class="n">iCarouselOption</span><span class="p">)</span><span class="nv">option</span> <span class="nf">withDefault:</span><span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">value</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">switch</span> <span class="p">(</span><span class="n">option</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">case</span> <span class="nl">iCarouselOptionWrap:</span>
+</span><span class='line'>            <span class="k">return</span> <span class="n">YES</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">default</span><span class="o">:</span>
+</span><span class='line'>            <span class="k">return</span> <span class="n">value</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>点击某一个cell view时，需要展示新闻详情页面。跳转的逻辑可以放在carousel:didSelectItemAtIndex:中。</p>
+
+<h2>添加新闻标题</h2>
+
+<p>标题（Label）与当前页指示控件（page control）并不属于iCarousel的cell view，因为整个滑动过程中只有一个Label和一个Page Control。所以我们可以在Storyboard中拖放相应控件作为iCarousel的子视图，再设置属性即可。</p>
+
+<p>当滑动后，到达新页面时，可以在carouselCurrentItemIndexDidChange:中设置Label及Current Page。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[利用Flask的RESTful插件简化API开发]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension/"/>
+    <updated>2014-03-12T13:45:07+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension</id>
+    <content type="html"><![CDATA[<p>今天尝试用Flask的RESTful插件改造昨天写的API，使之更清晰明了。</p>
+
+<!--more-->
+
+
+<h2>准备工作</h2>
+
+<p>进入昨天创建的虚拟开发环境venv，</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>. venv/bin/activate</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安装flask-restful，</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>pip install flask-restful</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>开始改造</h2>
+
+<h3>代码基础机构</h3>
+
+<p>首先搭好Flask-Restful的代码框架，然后往里面填写代码，避免思路被打断。</p>
+
+<p>在app = Flask(<strong>name</strong>)下方加入一行api = Api(app)，该api实例将用来注册路由。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span><span class="p">,</span> <span class="n">abort</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">url_for</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">flask.ext.httpauth</span> <span class="kn">import</span> <span class="n">HTTPBasicAuth</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">flask.ext.restful</span> <span class="kn">import</span> <span class="n">Api</span><span class="p">,</span> <span class="n">Resource</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+</span><span class='line'><span class="n">api</span> <span class="o">=</span> <span class="n">Api</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</span><span class='line'><span class="n">auth</span> <span class="o">=</span> <span class="n">HTTPBasicAuth</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@auth.get_password</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_password</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">username</span> <span class="o">==</span> <span class="s">&#39;linkoubian&#39;</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">return</span> <span class="s">&#39;7c4a8d09ca3762af61e59520943dc26494f8941b&#39;</span>
+</span><span class='line'>    <span class="k">return</span> <span class="bp">None</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@auth.error_handler</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">unauthorized</span><span class="p">():</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">make_response</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;error&#39;</span><span class="p">:</span> <span class="s">&#39;Unauthorized access&#39;</span> <span class="p">}</span> <span class="p">),</span> <span class="mi">403</span><span class="p">)</span>
+</span><span class='line'>    <span class="c"># return 403 instead of 401 to prevent browsers from displaying the default auth dialog</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">u&#39;Buy groceries&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">u&#39;Milk, Cheese, Pizza, Fruit, Tylenol&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">u&#39;Learn Python&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">u&#39;Need to find a good Python tutorial on the web&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">TaskListAPI</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">pass</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">pass</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">TaskAPI</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">pass</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">pass</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">pass</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">TaskListAPI</span><span class="p">,</span> <span class="s">&#39;/todo/tasks&#39;</span><span class="p">,</span> <span class="n">endpoint</span> <span class="o">=</span> <span class="s">&#39;tasks&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">TaskAPI</span><span class="p">,</span> <span class="s">&#39;/todo/tasks/&lt;int:id&gt;&#39;</span><span class="p">,</span> <span class="n">endpoint</span> <span class="o">=</span> <span class="s">&#39;task&#39;</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>提取验证逻辑</h3>
+
+<p>然后为TaskListAPI及TaskAPI这两个资源分别添加初始化方法，以处理数据验证等。</p>
+
+<figure class='code'><figcaption><span>TaskListAPI的初始化方法</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span> <span class="o">=</span> <span class="n">reqparse</span><span class="o">.</span><span class="n">RequestParser</span><span class="p">()</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;title&#39;</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">str</span><span class="p">,</span> <span class="n">required</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">help</span> <span class="o">=</span> <span class="s">&#39;No task title provided&#39;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;json&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;description&#39;</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">str</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;json&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="nb">super</span><span class="p">(</span><span class="n">TaskListAPI</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>TaskAPI的初始化方法</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span> <span class="o">=</span> <span class="n">reqparse</span><span class="o">.</span><span class="n">RequestParser</span><span class="p">()</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;title&#39;</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">str</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;json&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;description&#39;</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">str</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;json&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;done&#39;</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;json&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="nb">super</span><span class="p">(</span><span class="n">TaskAPI</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>注意RequestParser默认是从request.values中取值的，所以此处我们要指定location为json，以从request.json中解析传递过来的数据。</p>
+
+<h3>重构新增task的代码</h3>
+
+<figure class='code'><figcaption><span>旧的代码</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">create_task</span><span class="p">():</span>
+</span><span class='line'>    <span class="k">if</span> <span class="ow">not</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span> <span class="ow">or</span> <span class="ow">not</span> <span class="s">&#39;title&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">task</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="n">tasks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s">&#39;title&#39;</span><span class="p">],</span>
+</span><span class='line'>        <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;description&#39;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">),</span>
+</span><span class='line'>        <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">make_public_task</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="p">}</span> <span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>新的代码</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">args</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">task</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>        <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="n">tasks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>        <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="n">args</span><span class="p">[</span><span class="s">&#39;title&#39;</span><span class="p">],</span>
+</span><span class='line'>        <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="n">args</span><span class="p">[</span><span class="s">&#39;description&#39;</span><span class="p">],</span>
+</span><span class='line'>        <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">{</span> <span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">make_public_task</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>不光数据验证相关的代码被移除了，description的默认值也不必在新代码里体现。由于Flask-Restful会自动将数据转成JSON格式，所以jsonify函数也可不必调用。</p>
+
+<p>另外，Flask-Restful插件提供的marshal功能，可以优雅的完成make_public_task的功能。只需定义一个数据模板，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">task_fields</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span>
+</span><span class='line'>    <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="n">fields</span><span class="o">.</span><span class="n">String</span><span class="p">,</span>
+</span><span class='line'>    <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="n">fields</span><span class="o">.</span><span class="n">String</span><span class="p">,</span>
+</span><span class='line'>    <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="n">fields</span><span class="o">.</span><span class="n">Boolean</span><span class="p">,</span>
+</span><span class='line'>    <span class="s">&#39;uri&#39;</span><span class="p">:</span> <span class="n">fields</span><span class="o">.</span><span class="n">Url</span><span class="p">(</span><span class="s">&#39;task&#39;</span><span class="p">,</span> <span class="n">absolute</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后将make_public_task(task)替换成marshal(task, task_fields)即可。</p>
+
+<h3>重构更新task的代码</h3>
+
+<p>原来代码中有大段的验证逻辑，现在可以统统去掉，只需如下编写方法即可，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">task</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">id</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">task</span> <span class="o">=</span> <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'>    <span class="n">args</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">args</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">v</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+</span><span class='line'>            <span class="n">task</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">{</span> <span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">marshal</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">task_fields</span><span class="p">)</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>说明</h2>
+
+<p>本文是根据<a href="http://blog.miguelgrinberg.com/post/about-me">Miguel Grinberg</a>写的这篇<a href="http://blog.miguelgrinberg.com/post/designing-a-restful-api-using-flask-restful">文章</a>翻译并整理的。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[基于Flask设计RESTful API]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask/"/>
+    <updated>2014-03-11T19:12:58+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask</id>
+    <content type="html"><![CDATA[<p>Flask是一个Python WEB开发框架。接下来一段闲暇时间打算做的“西子快讯”项目中，我打算拿它来做RESTful API。虽然之前对Python并不了解，对Flask更是陌生，但爱折腾的本性促使我不断去学习。于是今天看blog、看文档，小有收获，略记一二。</p>
+
+<!--more-->
+
+
+<h2>准备工作</h2>
+
+<p>确保机器上已经安装了Python、Pip、Virtualenv等工具。如果默认的Pip安装源比较慢，可以用v2ex的试试。具体方法是在~/.pip/下创建一个名为pip.conf的文件，输入新的pip源。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[global]
+</span><span class='line'>index-url = http://pypi.v2ex.com/simple</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>安装Flask</h2>
+
+<p>为了不影响系统的Python环境，我们用Virtualenv虚拟一个运行环境，然后在此环境下开发一个名为todo的示例小应用（纯RESTful API，JSON格式的数据）。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd ~/Desktop
+</span><span class='line'>mkdir todo-api
+</span><span class='line'>cd todo-api
+</span><span class='line'>virtualenv venv
+</span><span class='line'>. venv/bin/activate</span></code></pre></td></tr></table></div></figure>
+
+
+<p>此时命令行窗口应出现(venv)mbpr2013:todo-api linkoubian$ 这样的提示符，注意最左边的venv表明当前运行的是虚拟出来的环境。工作完成后打算退出venv，只需执行deactivate命令即可。</p>
+
+<p>这时执行pip install flask便可在venv下安装flask模块。</p>
+
+<h2>测试Flask是否正常工作</h2>
+
+<p>编写一个Hello World程序，如下：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span><span class='line'>  <span class="k">return</span> <span class="s">&quot;Hello, World!&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class='line'>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>保存为~/Desktop/todo-api/app.py，添加可执行权限后，敲python app.py开始运行Flask。此时打开浏览器，访问localhost:5000即可看到Hello, World!</p>
+
+<h2>开始设计RESTful API</h2>
+
+<h3>获取所有的tasks</h3>
+
+<p>一个task由id、title、description、done等属性构成，获取task列表的url可以设计成/todo/tasks。具体代码如下，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">u&#39;Buy groceries&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">u&#39;Milk, Cheese, Pizza, Fruit, Tylenol&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>      <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">u&#39;Learn Python&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">u&#39;Need to find a good Python tutorial on the web&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/todo/tasks&#39;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;GET&#39;</span><span class="p">])</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_tasks</span><span class="p">():</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;tasks&#39;</span><span class="p">:</span> <span class="n">tasks</span><span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+</span><span class='line'>  <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>因为Flask运行在debug模式下会自动reload，所以代码写完后保存文件即可。</p>
+
+<p>Mac上有一款名为<a href="https://itunes.apple.com/app/id584653203?ls=1&amp;mt=12">Paw</a>的HTTP Client，算是我见过、用过的各种API测试工具中的佼佼者，力荐。</p>
+
+<p>打开Paw，在url里输入<a href="http://localhost:5000/todo/tasks">http://localhost:5000/todo/tasks</a>，选择GET，敲CMD+Enter即可听到表示成功的清脆提示音。Paw除了提供原生的HTTP响应格式，还提供格式化后浏览功能，选择JSON格式即可。</p>
+
+<p>上面这段代码还是比较清晰好懂的，首先创建一个task数组，初始化两个task对象放进去。指定GET方式请求/todo/tasks资源时执行get_tasks方法，具体是把前面创建的tasks数组以JSON的格式返回。而将Python的数组转成JSON格式是通过Flask的jsonify函数实现的。</p>
+
+<h3>根据id获得特定task</h3>
+
+<p>通常我们将id放在URL中，然后对应的处理函数从URL中得到id以从数据源（此处为task数组，存在内存中）中查询相应地entity（此处为task）。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/todo/tasks/&lt;int:task_id&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;GET&#39;</span><span class="p">])</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">):</span>
+</span><span class='line'>  <span class="n">task</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">task_id</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>      <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">]})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>为了正常使用abort函数，需要从flask模块import一下。通过Paw测试<a href="http://localhost:5000/todo/tasks/1">http://localhost:5000/todo/tasks/1</a>，发现一切正常。</p>
+
+<p>访问<a href="http://localhost:5000/todo/tasks/0">http://localhost:5000/todo/tasks/0</a>时，返回一段出错的HTML，这是Flask对404的默认处理，我们可以自己定义一个返回JSON格式的错误消息。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.errorhandler</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">not_found</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">make_response</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;error&#39;</span><span class="p">:</span> <span class="s">&#39;Not found&#39;</span> <span class="p">}</span> <span class="p">),</span> <span class="mi">404</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>我们用make_response函数，将构造好的JSON作为404错误的响应，返回给客户端。</p>
+
+<h3>创建一个task</h3>
+
+<p>URL仍然用/todo/tasks，但HTTP方法为POST。根据Request对象中的数据构造一个新的task对象，插入数据源即可。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/todo/tasks&#39;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;POST&#39;</span><span class="p">])</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">create_task</span><span class="p">():</span>
+</span><span class='line'>  <span class="k">if</span> <span class="ow">not</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span> <span class="ow">or</span> <span class="ow">not</span> <span class="s">&#39;title&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">:</span>
+</span><span class='line'>      <span class="n">abort</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">task</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>      <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="n">tasks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>      <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s">&#39;title&#39;</span><span class="p">],</span>
+</span><span class='line'>      <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;description&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">),</span>
+</span><span class='line'>      <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">task</span><span class="p">}),</span> <span class="mi">201</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>另外，我们需要定义一个400的处理器，类似于404，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.errorhandler</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">not_found</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">make_response</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;error&#39;</span><span class="p">:</span> <span class="s">&#39;Bad request&#39;</span> <span class="p">}</span> <span class="p">),</span> <span class="mi">400</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在Paw中，POST请求<a href="http://localhost:5000/todo/tasks">http://localhost:5000/todo/tasks</a>，同时Header里加一个Content-Type，值为application/json，Body里加入一段文本内容{&ldquo;title&rdquo;: &ldquo;Buy a cell phone&rdquo;}，敲CMD+Enter执行。</p>
+
+<p>根据REST Cookbook一书的建议，可以在返回的新增task里加入一个uri字段。为此，建一个名为make_public_task的函数，如下，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">make_public_task</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
+</span><span class='line'>  <span class="n">new_task</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span class='line'>  <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">task</span><span class="p">:</span>
+</span><span class='line'>      <span class="n">new_task</span><span class="p">[</span><span class="n">field</span><span class="p">]</span> <span class="o">=</span> <span class="n">task</span><span class="p">[</span><span class="n">field</span><span class="p">]</span>
+</span><span class='line'>      <span class="k">if</span> <span class="n">field</span> <span class="o">==</span> <span class="s">&#39;id&#39;</span><span class="p">:</span>
+</span><span class='line'>          <span class="n">new_task</span><span class="p">[</span><span class="s">&#39;uri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">url_for</span><span class="p">(</span><span class="s">&#39;get_task&#39;</span><span class="p">,</span> <span class="n">task_id</span> <span class="o">=</span> <span class="n">task</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">],</span> <span class="n">_external</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">return</span> <span class="n">new_task</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>另外，create_task中改为，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">make_public_task</span><span class="p">(</span><span class="n">task</span><span class="p">)}),</span> <span class="mi">201</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>get_tasks中改为，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;tasks&#39;</span><span class="p">:</span> <span class="nb">map</span><span class="p">(</span><span class="n">make_public_task</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>get_task中改为，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s">&#39;tasks&#39;</span><span class="p">:</span> <span class="nb">map</span><span class="p">(</span><span class="n">make_public_task</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)})</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>更新一个task</h3>
+
+<p>显然此时的HTTP方法为PUT，相应的url和获取task类似。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/todo/tasks/&lt;int:task_id&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;PUT&#39;</span><span class="p">])</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">update_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">task</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">task_id</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="ow">not</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="s">&#39;title&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s">&#39;title&#39;</span><span class="p">])</span> <span class="o">!=</span> <span class="nb">unicode</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="s">&#39;description&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s">&#39;description&#39;</span><span class="p">])</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">unicode</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="s">&#39;done&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span> <span class="ow">and</span> <span class="nb">type</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s">&#39;done&#39;</span><span class="p">])</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">bool</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;title&#39;</span><span class="p">,</span> <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;title&#39;</span><span class="p">])</span>
+</span><span class='line'>    <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;description&#39;</span><span class="p">,</span> <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;description&#39;</span><span class="p">])</span>
+</span><span class='line'>    <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;done&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;done&#39;</span><span class="p">,</span> <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;done&#39;</span><span class="p">])</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">make_public_task</span><span class="p">(</span><span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">}</span> <span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>删除一个task</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="nd">@app.route</span><span class="p">(</span><span class="s">&#39;/todo/tasks/&lt;int:task_id&gt;&#39;</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;DELETE&#39;</span><span class="p">])</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">delete_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">task</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">task_id</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">tasks</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;result&#39;</span><span class="p">:</span> <span class="bp">True</span> <span class="p">}</span> <span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>修改Python源文件后，Flask会reload，这将导致上一次create的task丢失，所以直接尝试delete之前增加的task可能会报404资源找不到错误。</p>
+
+<h2>为WEB服务增加安全机制</h2>
+
+<p>基于Flask的HTTBasicAuth扩展，定义两个函数如下，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">auth</span> <span class="o">=</span> <span class="n">HTTPBasicAuth</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@auth.get_password</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_password</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">username</span> <span class="o">==</span> <span class="s">&#39;linkoubian&#39;</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">return</span> <span class="s">&#39;7c4a8d09ca3762af61e59520943dc26494f8941b&#39;</span>
+</span><span class='line'>    <span class="k">return</span> <span class="bp">None</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@auth.error_handler</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">unauthorized</span><span class="p">():</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">make_response</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;error&#39;</span><span class="p">:</span> <span class="s">&#39;Unauthorized access&#39;</span> <span class="p">}</span> <span class="p">),</span> <span class="mi">401</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>其中get_password方法是返回指定用户的密码信息（通常是从数据库用户表查询得到），当此处返回的值和客户端传递的值匹配时（匹配过程由HTTPBasicAuth完成）成功，否则执行error_handler返回错误信息。</p>
+
+<p>定义完校验相关的代码，还需将校验逻辑应用到需要校验的WEB服务。比如，希望只有授权用户才可以修改或删除task，则可以在update_task及delete_task方法上面加上@auth.login_required即可。</p>
+
+<p>此时在Paw中需添加Authorization头，值为HTTP Basic Auth，在username及password文本框中分布输入信息，敲CMD+Enter进行测试。</p>
+
+<p><img src="http://farm8.staticflickr.com/7353/13084949405_9b2319d18f_o.png" alt="Paw HTTP Client" /></p>
+
+<h2>说明</h2>
+
+<p>本文是根据<a href="http://blog.miguelgrinberg.com/post/about-me">Miguel Grinberg</a>写的这篇<a href="http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask">文章</a>翻译并整理的。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[BNR出品的Obj-C教程]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/03/05/obj-c-programming/"/>
+    <updated>2014-03-05T21:22:44+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/03/05/obj-c-programming</id>
+    <content type="html"><![CDATA[<p>据说The Big Nerd Ranch Guide系列教程都很不错，于是到<a href="http://www.ppurl.com/2013/11/objective-c-programming-the-big-nerd-ranch-guide-second-edition-epub.html">皮皮书屋</a>下载了一份BNR出品的关于Obj-C的电子书。在iPad、Mac上阅读ePub格式的文档，有着很不错的体验。</p>
+
+<!--more-->
+
+
+<p>直接在电子书里记笔记的习惯还没有养成，依旧习惯于在<a href="http://www.iawriter.com/mac/">iA Writer</a>里记录一些知识点以备日后查看。</p>
+
+<ol>
+<li>在C的函数里使用BOOL类型，需要#include &lt;objc/objc.h></li>
+<li>sleep函数是在unistd.h头文件中声明的</li>
+<li>EXIT_SUCCESS等程序退出标志，是在stdlib.h中声明的</li>
+<li>全局变量可以在多个文件中访问到；静态变量仅当前文件可以访问</li>
+<li>NSInteger在32位系统上占32位，在64位系统上占64位</li>
+<li>在格式化输出NSInteger时，需强类型转换成long，然后用%ld打印</li>
+<li>求绝对值可以用stdlib.h中的abs()函数</li>
+<li>使用readline函数，需要链接libreadline，然后导入主头文件</li>
+<li>字符串转数字可以用stdlib.h中的atoi()函数</li>
+<li>sizeof()返回size_t类型的数据，可以用%zu格式化输出</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[移动应用的Freemium模式]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/03/01/in-app-purchasing-a-freemium-model/"/>
+    <updated>2014-03-01T20:12:22+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/03/01/in-app-purchasing-a-freemium-model</id>
+    <content type="html"><![CDATA[<p>In-App Purchasing是一种目前比较常见的定价策略。软件可以免费安装并使用，但如果需要更多或更高级的功能则需要付费，即<a href="http://en.wikipedia.org/wiki/Freemium">Freemium</a>模式。</p>
+
+<!--more-->
+
+
+<p>昨天给APP集成了<a href="http://balloonsys.com/blog/2014/02/28/make-money-from-ad/">广告服务</a>。碰到有洁癖的用户，被抱怨是免不了的。所以今天抓紧学习IAP相关的开发技术后，又马不停蹄的增加了付费去广告的功能。</p>
+
+<h2>创建IAP商品</h2>
+
+<p>用户只需为“去除广告”这个服务付费一次，并可永久性的免除广告的烦扰。所以这种情况下，“去除广告”应被看成Non-Consumable商品。而游戏中常见的“金币”是用完还需重新购买，属于快速消耗品，对应iTunes Connect后台里的Consumable商品。</p>
+
+<p>商品的ID可采用APP_ID.PRODUCT_NAME的格式，该ID将在编码时用到。</p>
+
+<p>注意创建IAP商品时遇到的Hosting Content with Apple这一项，此处选择No。关于这个Hosting Content的用法，可以参考这篇<a href="http://www.techotopia.com/index.php/Configuring_and_Creating_App_Store_Hosted_Content_for_iOS_6_In-App_Purchases">文章</a>。</p>
+
+<p>添加好名为“remove_ads”的商品后，该IAP的状态为“Ready to Submit”。同时系统提示我说“你的首个IAP必须与新版APP一起提交，请在Version Detail页面选中相关的IAP后点击准备上传按钮”。</p>
+
+<p>收到这样的提示，略有惊喜。因为添加IAP时，该APP有个update还在等待review，而IAP是下个release的内容，当时有点担心此次的操作会影响等待审核的版本。结果证明担心是多余的。</p>
+
+<h2>设置工程</h2>
+
+<p>在构建目标的Capabilities页面，开启In-App Purchase功能。Xcode会自动为当前的App ID增加相关权限，同时链接StoreKit框架。</p>
+
+<p>IAP所涉及到的交互流程主要有如下几步，<br/>
+1. APP首先向苹果服务器发起请求（含有商品ID集合）以获得商品信息<br/>
+2. 客户端以自定义的方式展示返回的商品<br/>
+3. 用户选中某个商品，触发支付请求，请求被加到支付队列<br/>
+4. 支付被苹果处理后，会发出Transaction Updated事件<br/>
+5. 客户端设置的交易监听者根据Transaction的状态执行不同逻辑</p>
+
+<p>收到Transaction Updated事件后，无论Transaction的状态是completed、failed还是restore，都需要调用finishTransaction以通知苹果服务器相关的通知已收到，否则会不停的收到Transaction Updated事件。</p>
+
+<h2>开始编码</h2>
+
+<h3>请求商品信息</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">productsRequest</span> <span class="o">=</span> <span class="p">[[</span><span class="n">SKProductsRequest</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithProductIdentifiers:</span><span class="n">self</span><span class="p">.</span><span class="n">productIdentifiers</span><span class="p">];</span>
+</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">productsRequest</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">productsRequest</span> <span class="n">start</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>当苹果服务器做出“成功”的响应时，会调用SKProductsRequestDelegate方法，从response里我们可以拿到products信息。</p>
+
+<h3>展示返回的商品</h3>
+
+<p>目前采用的是在“关于”页面，放一个静态的table view cell，用户点击后该cell后弹出ActionSheet，让用户选择是首次“购买”还是“恢复”曾经的交易。</p>
+
+<p>看似这个过程和上一步无关，这是因为此处只关心一个“Remove Ads”商品，也不需要显示服务端设定的商品价格等信息。其实此处ActionSheet所显示的选项内容，完全可以由之前获得的product信息构成。</p>
+
+<h3>选中商品，触发支付请求</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">SKPayment</span> <span class="o">*</span><span class="n">payment</span> <span class="o">=</span> <span class="p">[</span><span class="n">SKPayment</span> <span class="nl">paymentWithProduct:</span><span class="n">product</span><span class="p">];</span>
+</span><span class='line'><span class="p">[[</span><span class="n">SKPaymentQueue</span> <span class="n">defaultQueue</span><span class="p">]</span> <span class="nl">addPayment:</span><span class="n">payment</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>支付请求仅需被加到支付队列即可，StoreKit会完成剩余的工作。当交易的状态发生变化时，客户端APP会收到Transaction Updated事件。</p>
+
+<h3>监听交易状态变化</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">paymentQueue:</span><span class="p">(</span><span class="n">SKPaymentQueue</span> <span class="o">*</span><span class="p">)</span><span class="nv">queue</span> <span class="nf">updatedTransactions:</span><span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">transactions</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="n">SKPaymentTransaction</span> <span class="o">*</span><span class="n">transaction</span> <span class="k">in</span> <span class="n">transactions</span><span class="p">){</span>
+</span><span class='line'>      <span class="k">switch</span> <span class="p">(</span><span class="n">transaction</span><span class="p">.</span><span class="n">transactionState</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="k">case</span> <span class="nl">SKPaymentTransactionStatePurchased:</span>
+</span><span class='line'>              <span class="p">[</span><span class="n">self</span> <span class="nl">completeTransaction:</span><span class="n">transaction</span><span class="p">];</span>
+</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">case</span> <span class="nl">SKPaymentTransactionStateFailed:</span>
+</span><span class='line'>              <span class="p">[</span><span class="n">self</span> <span class="nl">failedTransaction:</span><span class="n">transaction</span><span class="p">];</span>
+</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">case</span> <span class="nl">SKPaymentTransactionStateRestored:</span>
+</span><span class='line'>              <span class="p">[</span><span class="n">self</span> <span class="nl">restoreTransaction:</span><span class="n">transaction</span><span class="p">];</span>
+</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>          <span class="k">default</span><span class="o">:</span>
+</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>处理商品交易</h3>
+
+<p>上面用到的completeTransaction等方法，一方面根据“交易”的状态去设置User Defaults中对应商品的状态（是否已购买）；另一方面调用finishTransaction以通知苹果服务器相关的通知已收到。</p>
+
+<p>示例代码如下，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">completeTransaction:</span><span class="p">(</span><span class="n">SKPaymentTransaction</span> <span class="o">*</span><span class="p">)</span><span class="nv">transaction</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="c1">// Cache purchased product.</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">purchasedProductIdentifiers</span> <span class="nl">addObject:</span><span class="n">productIdentifier</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Persist purchased product.</span>
+</span><span class='line'>  <span class="p">[[</span><span class="n">NSUserDefaults</span> <span class="n">standardUserDefaults</span><span class="p">]</span> <span class="nl">setBool:</span><span class="n">YES</span> <span class="nl">forKey:</span><span class="n">productIdentifier</span><span class="p">];</span>
+</span><span class='line'>  <span class="p">[[</span><span class="n">NSUserDefaults</span> <span class="n">standardUserDefaults</span><span class="p">]</span> <span class="n">synchronize</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Notify product purchased, so then UI can be updated accordingly</span>
+</span><span class='line'>  <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">postNotificationName:</span><span class="n">ProductPurchasedNotification</span> <span class="nl">object:</span><span class="n">productIdentifier</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Removes transaction from the queue.</span>
+</span><span class='line'>  <span class="p">[[</span><span class="n">SKPaymentQueue</span> <span class="n">defaultQueue</span><span class="p">]</span> <span class="nl">finishTransaction:</span><span class="n">transaction</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>其中ProductPurchasedNotification是一个自定义消息，收到该消息的控制器并可以做出适当的响应，比如隐藏掉购买按钮or修改按钮的文字or弹框提示用户“购买成功”&hellip;</p>
+
+<h2>问题分析</h2>
+
+<p>从打算加入一个IAP到跑通代码所需要的“必要劳动时间”，远超最初的估计。期间可能遇到的各种错误及相应地应对建议，可以参考<a href="http://www.weibo.com/onevcat">OneV&rsquo;s Den</a>的<a href="http://onevcat.com/2013/11/ios-iap-checklist/">文章</a>。</p>
+
+<h2>功能测试</h2>
+
+<p>IAP的测试，需要在iTunes Connect后台建立一个测试账号。从网络上获得的一点建议：使用之前最好退出平常使用的正式账号，另外也不要用测试账号去下载APP。原因不详，也不想以身试法，遵守就是了！</p>
+
+<h2>参考资料</h2>
+
+<p>如果想系统并深入的学习IAP的开发技术，可以阅读下列文章，  <br/>
+1. <a href="http://www.raywenderlich.com/u/rwenderlich">Ray Wenderlich</a>提供的<a href="http://www.raywenderlich.com/21081/introduction-to-in-app-purchases-in-ios-6-tutorial">IAP入门教程</a><br/>
+2. <a href="http://www.raywenderlich.com/u/rwenderlich">Ray Wenderlich</a>提供的<a href="http://www.raywenderlich.com/23266/in-app-purchases-in-ios-6-tutorial-consumables-and-receipt-validation">IAP进阶教程</a><br/>
+3. 苹果官方提供的开发<a href="https://developer.apple.com/in-app-purchase/">文档</a></p>
+
+<p>如果你需要快速了解IAP的话，不妨读读<a href="http://brianflove.com/author/blove/">Brian Love</a>的这篇<a href="http://brianflove.com/2013/02/11/in-app-purchasing-in-ios-6/">文章</a>。
+如果你需要快速实现IAP的话，不妨试试<a href="http://mattt.me">Mattt Thompson</a>的开源库<a href="https://github.com/mattt/CargoBay">CargoBay</a>。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[为应用添加广告支持]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/02/28/make-money-from-ad/"/>
+    <updated>2014-02-28T16:22:38+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/02/28/make-money-from-ad</id>
+    <content type="html"><![CDATA[<p>年前做的一款关于公共自行车租赁的APP，自我感觉还是比较实用的。为了造福杭城更多的iPhone用户，新版本打算采用免费+iAP（去广告）的方式发行。所以，今天便研究了下iAd及AdMob两种广告平台的集成方法。</p>
+
+<!--more-->
+
+
+<h2>AdMob</h2>
+
+<p>想要支持AdMob，需要首先注册账号，添加应用，然后便可获得Publisher ID。至于如何配置工程以支持AdMob，可以参考<a href="https://developers.google.com/mobile-ads-sdk/docs/#ios">这里</a>。</p>
+
+<h2>iAd &amp; AdMob</h2>
+
+<p>如果是手动编写代码以同时支持iAd和AdMob可参考<a href="http://www.apptite.be/tutorial_mixing_ads.php">这里</a>。另外Github上有一个开源库<a href="https://github.com/larsacus/LARSAdController">LARSAdController</a>，使用起来非常方便。</p>
+
+<h2>收益</h2>
+
+<p>集成AdMob的版本尚未上架，自己在手机上对着开发者证书安装的APP里的广告变着法子点击（换不同的VPN服务器、重置IDFA），竟然也能收获三十来刀。但这是冒着被封号的危险，谨慎啊！</p>
+
+<p>这里有篇关于AdMob的<a href="http://blog.sina.com.cn/s/blog_7193dd920101keay.html">经验贴</a>，很有料。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[与Auto Layout相关的各种知识点]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/02/27/hacking-auto-layout/"/>
+    <updated>2014-02-27T15:17:15+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/02/27/hacking-auto-layout</id>
+    <content type="html"><![CDATA[<p>Auto Layout不光为设计不同尺寸的界面带来了便利，在应用的多语言支持方面也有广泛使用。</p>
+
+<p>继续看书</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[关于View的用法简介]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/02/25/introduction-about-view/"/>
+    <updated>2014-02-25T15:50:00+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/02/25/introduction-about-view</id>
+    <content type="html"><![CDATA[<p>本文主要针对iOS的视图相关的用法作一些介绍。</p>
+
+<!--more-->
+
+
+<h2>The Window</h2>
+
+<p>当应用启动时，UIApplicationMain会创建一个appDelegate实例。App Delegate会“持有”一个window实例（strong型）。所以window对象的生命周期与应用一致。</p>
+
+<p>获得window实例有三种方式：<br/>
+1. view.window<br/>
+2. [UIApplication sharedApplication].delegate.window <br/>
+3. [UIApplication sharedApplication].keyWindow</p>
+
+<p>需要注意的是keyWindow有可能发生变化，比如当显示UIAlertView时，keyWindow为该弹出框！</p>
+
+<h2>Subview and Superview</h2>
+
+<p>关于父子视图间的常见操作主要有：<br/>
+1. 限制子视图只在父视图区域内绘制，可设置父视图的clipsToBounds属性<br/>
+2. 判断一个视图是不是另一个的子孙视图，可以用isDescendantOfView:<br/>
+3. 子视图从父视图中移除掉，会被“释放”。若后续需使用，可另行“持有”<br/>
+4. 与视图结构相关的几个方法：<br/>
+insertSubview:atIndex:<br/>
+insertSubview:belowSubview:<br/>
+exchangeSubviewAtIndex:withSubviewAtIndex:<br/>
+bringSubviewToFront:<br/>
+5. 将父视图的所有子视图移除掉，可以用下面这种写法：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">view</span><span class="p">.</span><span class="n">subviews</span> <span class="nl">makeObjectPerformSelector:</span><span class="k">@selector</span><span class="p">(</span><span class="n">removeFromSuperView</span><span class="p">)];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Visibility and Opacity</h2>
+
+<p>Alpha，可理解为相对于父视图的不透明度。所以即使一个视图的alpha值为1，它也有可能是透明的。</p>
+
+<p>Opaque，不是用来影响视图的显示，而是用于绘图系统的一个hint值，以便绘制更加高效。</p>
+
+<h2>Bounds, Center and Frame</h2>
+
+<p>Bounds代表的是视图自身的坐标系，而frame表示的是该视图在父视图中的位置。</p>
+
+<p>改变bounds的宽高，会影响其frame，保持不变的是center值。改变bounds的origin值，相当于说该视图坐标系左上角那个点的值被改变，因此其坐标系的原点移到其他位置了。而子视图是在父视图的坐标系里定位的，所以子视图会因父视图的origin变化而逆向变化。</p>
+
+<p>Center是视图bounds的中心点在父视图中的位置。Center加bounds相当于frame。</p>
+
+<p>假如v2是v1的子视图，要想把v2放在v1的中心，可以这么做，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">v2</span><span class="p">.</span><span class="n">center</span> <span class="o">=</span> <span class="p">[</span><span class="n">v1</span> <span class="nl">convertPoint:</span><span class="n">v1</span><span class="p">.</span><span class="n">center</span> <span class="nl">fromView:</span><span class="n">v1</span><span class="p">.</span><span class="n">superview</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Transform</h2>
+
+<p>将视图v顺时针旋转45°，可以设置其transform属性为CGAffineTransformMakeRotation(45*M_PI/180.0)。此时v的frame是旋转后的v的外接矩形。其子视图虽然也跟着旋转，但子视图的frame并无变化，因为v的bounds不变（即v自身的坐标系不变）。</p>
+
+<p>拉伸函数CGAffineTransformMakeScale会使得视图的frame发生变化，但其bounds保持不变。子视图的frame、bounds、center值均保持不变。</p>
+
+<p>组合若干变换应用到视图上，下面代码先将v旋转，然后在沿着自身坐标系的x轴方向平移100个点。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">v</span><span class="p">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">CGAffineTransformMakeRotation</span><span class="p">(</span><span class="mi">45</span> <span class="o">*</span> <span class="n">M_PI</span><span class="o">/</span><span class="mf">180.0</span><span class="p">);</span>
+</span><span class='line'><span class="n">v</span><span class="p">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">CGAffineTransformTranslate</span><span class="p">(</span><span class="n">v2</span><span class="p">.</span><span class="n">transform</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>也可以使用CGAffineTransformConcat组合多个变换，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">CGAffineTransform</span> <span class="n">r</span> <span class="o">=</span> <span class="n">CGAffineTransformMakeRotation</span><span class="p">(</span><span class="mi">45</span> <span class="o">*</span> <span class="n">M_PI</span><span class="o">/</span><span class="mf">180.0</span><span class="p">);</span>
+</span><span class='line'><span class="n">CGAffineTransform</span> <span class="n">t</span> <span class="o">=</span> <span class="n">CGAffineTransformMakeTranslation</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span><span class='line'><span class="n">v</span><span class="p">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">CGAffineTransformConcat</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">r</span><span class="p">);</span> <span class="c1">// not r,t</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>撤销组合变换中的某个变换，只需再次叠加其反变换。比如需要将v在新位置逆时针旋转45°，只需执行下面这行代码，</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">v</span><span class="p">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">CGAffineTransformConcat</span><span class="p">(</span><span class="n">CGAffineTransformInvert</span><span class="p">(</span><span class="n">r</span><span class="p">),</span> <span class="n">v</span><span class="p">.</span><span class="n">transform</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Layout</h2>
+
+<p>布局除了手动设置布局以及Autoresizing之外，还有自iOS 6引入的Auto-layout。</p>
+
+<p>Autoresizing发生在layoutSubviews执行之前，所以手动设置布局可放在layoutSubviews方法中。自定义的view，如果需要支持Auto-layout，需要在requiresConstraintBasedLayout返回YES。</p>
+
+<p>关于Auto-layout的内容比较多，另行总结！</p>
 ]]></content>
   </entry>
   

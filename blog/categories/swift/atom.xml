@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Swift | Balloonsys Inc.]]></title>
+  <link href="http://balloonsys.github.io/blog/categories/swift/atom.xml" rel="self"/>
+  <link href="http://balloonsys.github.io/"/>
+  <updated>2016-06-14T01:57:31+08:00</updated>
+  <id>http://balloonsys.github.io/</id>
+  <author>
+    <name><![CDATA[Linkou Bian]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Swift 语言基础（下）]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/09/23/basics-of-swift-part-b/"/>
+    <updated>2014-09-23T10:11:08+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/09/23/basics-of-swift-part-b</id>
+    <content type="html"><![CDATA[<p>本文主要记录Swift中关于Optional Type、集合等知识点。</p>
+
+<!--more-->
+
+
+<h2>可选类型（Optional Type）</h2>
+
+<p>处于安全的设计考量，在Swift中未初始化的String不可以println。声明时设为nil后，println也不行，因为nil不是STR。</p>
+
+<p>所以引入Optional Type，可以理解为对另一个类型的装箱（由本人引自Java的术语）。String?便是一个Optional Type，它是对String的包装。声明时不需要赋值为nil：var str: String?。此时println打印出nil。如果赋值为“Hello World”，打印Optional(“Hello World”)。</p>
+
+<h3>手动拆箱（Manual Unwrapping）</h3>
+
+<p>若需要拆箱，可以if let unwrappedStr = str {}。如果str为nil，if分支的代码块不会执行。值得注意的是，1）想要获得Optional Type所封装的那个值，必须用if语句拆箱；2）unwrappedStr的作用域为if代码块。</p>
+
+<h3>强制拆箱（Forced Unwrapping）</h3>
+
+<p>如果明确的知道Optional Type包含一个值，则可以使用强制拆箱（Forced Unwrapping）。具体写法是这样的：println(str!)。不必经过前面提到的if就可以拿到被包含的值。</p>
+
+<h3>隐式拆箱（Implicit Unwrapping）</h3>
+
+<p>强制拆包是声明Optional Type时用？，访问被包含的值时加个！。而隐式拆箱与之不同的是，声明时用！，访问被包含的值时什么都不需要加，就好像没有使用过Optional Type似的。</p>
+
+<h3>可选链（Optional Chaining）</h3>
+
+<p>声明一个Optional Type：var str: String?
+可选消息链：let upperStr = str?.uppercaseString</p>
+
+<p>1）可选链可以级联多次，这样便客观的降低if嵌逃层级 <br/>
+2）使用Optional Chaining代码更简洁</p>
+
+<h2>集合</h2>
+
+<p>1) 无论是数组还是字典，都是用[] <br/>
+注：ObjC里字典用的是{} <br/>
+2）默认情况下，数组只能放同一类型的元素，除非显示或隐式声明为[AnyObject]类型 <br/>
+3）将字典某key对应的值设为nil，即为删除 <br/>
+4）字典的value为Optional Type <br/>
+5）数组、字典，都是拷贝赋值 <br/>
+6）使用let声明的常量集合，不可以append、remove</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Swift 语言基础（上）]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/09/21/basics-of-swift-part-a/"/>
+    <updated>2014-09-21T22:59:56+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/09/21/basics-of-swift-part-a</id>
+    <content type="html"><![CDATA[<p>周五花了54刀买了RW网站上的Swift by Tutorials，共261页。平均一页1块多软妹币啊！！！朋友圈有评论说：“很庆幸，只需要看两三百页，得其精髓，最怕书长！”。深以为然！</p>
+
+<!--more-->
+
+
+<p>本系列文章，为Swift by Tutorials的读书笔记。</p>
+
+<h2>从Hello World开始</h2>
+
+<p>为了耍耍Swift，首先得打开Xcode 6。在弹出的工程模板里选哪一个呢？这是个问题！</p>
+
+<p>暂时的答案是，一个都不选，关掉！然后在File/New菜单中选择Playground即可。</p>
+
+<p>啥都不说了，在打开的playground编辑区，直接输入println(“Hello World”)吧，此时便可以在右侧看到即时效果。</p>
+
+<p>如果想看程序的运行结果，可以在View/Assistant中选择Show Assistant Editor。</p>
+
+<h2>变量&amp;常量</h2>
+
+<p>声明一个变量的方式：var str: String = “Hello World”，其中类型可以省略。</p>
+
+<p>需要注意的是，类型可以省略不写，不代表Swift是动态类型语言。比如尝试给str变量赋23这样的整数值，就会报错。其类型由首次赋值推断出，此过程为Type Inference。</p>
+
+<p>前面我们解释了类型可以省略不写，现在我们谈谈此处省略的String。此String相当于Obj-C的NSMutableString，是可变的。所以你可以进行这样的操作，str = str + “, I love you!”。</p>
+
+<p>那如何创建一个“不可变”的字符串呢？将var换成let即可。使用let后，我们既不可以str = “Hello Swift”，也不可以str.append。</p>
+
+<h2>数值类型</h2>
+
+<p>浮点数与整数运算，需要显式的转换类型。Int.max + 1会直接报错而不是变成一个负数。</p>
+
+<h2>逻辑类型</h2>
+
+<p>var knowsSwift: Bool = true。此处只可以赋值true或者false，不像其他语言可以使用0或非0值。</p>
+
+<h2>元组</h2>
+
+<p>var product = (“iPhone 6”, 6000)。要输出商品名，我们可以使用println(product.0)。如果加价，可以这么写：product.1 += 100。</p>
+
+<p>如果将元组product拆解成单个元素以方便访问，可以这么做：let (name, price) = product。这时，我们除了使用product.0访问商品名，还可以直接用name。</p>
+
+<p>我们在声明并赋值元组时，还可以指定“属性名”：var product = (name: “iPhone 6”, price: 6000)。</p>
+
+<h2>字符串操作</h2>
+
+<p>输出product的信息，我们可以这么做：println(&ldquo;Price of (product.name) is (product.price)&rdquo;)。此为Swift的String Interpolation特性。相对于NSLog的format参数，方便不少。</p>
+
+<p>另外，我们在使用String Interpolation时，还可以直接操作相关的变量。比如println(&ldquo;Price of (product.name) is (product.price + 100)”)。</p>
+
+<h2>控制流</h2>
+
+<h3>for循环</h3>
+
+<p>for i in 1…5 {println (“(i)”)}
+其中…为闭区间操作符（Closed Range Operator），相当于Range(start: 1, end: 6)。</p>
+
+<h3>while循环</h3>
+
+<pre><code class="sh">var i = 0
+while i &lt; 5 {
+    println(“\(i)”)
+    i++
+}
+</code></pre>
+
+<h3>if语句</h3>
+
+<p>即使待执行的只有一行代码，也需要{}。</p>
+
+<h3>switch语句</h3>
+
+<p>Swift中，switch可以使用任何类型，不需要break语句，如果case不完备则必须有default语句。</p>
+
+<p>case可以这么写：case “up”, “down”: println(“you pressed up or down”)。case还可以这么写：case 1..&lt;10: println(“between 1 and 10, 10 not included”)。</p>
+
+<p>— EOF —</p>
+]]></content>
+  </entry>
+  
+</feed>

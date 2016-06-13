@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ui | Balloonsys Inc.]]></title>
+  <link href="http://balloonsys.github.io/blog/categories/ui/atom.xml" rel="self"/>
+  <link href="http://balloonsys.github.io/"/>
+  <updated>2016-06-14T01:57:31+08:00</updated>
+  <id>http://balloonsys.github.io/</id>
+  <author>
+    <name><![CDATA[Linkou Bian]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[hitTest示例]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/04/08/hit-test-sample/"/>
+    <updated>2014-04-08T14:53:20+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/04/08/hit-test-sample</id>
+    <content type="html"><![CDATA[<p>早上翻看Github本周排名靠前的Objective-C开源项目，瞄了几眼<a href="https://github.com/wpsteak/PWParallaxScrollView">PWParallaxScrollView</a>的代码。发现其在ScrollView中嵌入Button，然后为了使得Button能接受点击事件是借助- hitTest:withEvent:实现的。</p>
+
+<!--more-->
+
+
+<p>一番Google，大致知道hitTest是干嘛的了。顺道写个Sample，改变默认的消息响应流。</p>
+
+<h2>准备</h2>
+
+<p>建立一个Single VC的工程，添加两个有部分重叠的Button，分别关联上touchUpInSide处理方法。</p>
+
+<pre><code class="objc">- (IBAction)buttonAPressed:(id)sender
+{
+    NSLog(@"You pressed button A");
+}
+
+- (IBAction)buttonBPressed:(id)sender
+{
+    NSLog(@"You pressed button B");
+}
+</code></pre>
+
+<p>因为Button B(tag为102)是叠在Button A(tag为101)上面的，所以在重叠区域点击，控制台输出的是You pressed button B。这种情况下，如果希望收到消息的是Button A呢？那就用hitTest吧！</p>
+
+<h2>实现</h2>
+
+<p>建立一个UIView的子类，然后重写- hitTest:withEvent:方法，
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">-</span> <span class="p">(</span><span class="bp">UIView</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nf">hitTest:</span><span class="p">(</span><span class="bp">CGPoint</span><span class="p">)</span><span class="nv">point</span> <span class="nf">withEvent:</span><span class="p">(</span><span class="bp">UIEvent</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">event</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="bp">UIView</span><span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span> <span class="n">subview</span> <span class="k">in</span> <span class="nb">self</span><span class="p">.</span><span class="n">subviews</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="bp">CGPoint</span> <span class="n">convertedPoint</span> <span class="o">=</span> <span class="p">[</span><span class="nb">self</span> <span class="nl">convertPoint</span><span class="p">:</span><span class="n">point</span> <span class="nl">toView</span><span class="p">:</span><span class="n">subview</span><span class="p">];</span>
+</span><span class='line'>        <span class="bp">UIView</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">subview</span> <span class="nl">hitTest</span><span class="p">:</span><span class="n">convertedPoint</span> <span class="nl">withEvent</span><span class="p">:</span><span class="n">event</span><span class="p">];</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>    <span class="k">if</span> <span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">tag</span> <span class="o">==</span> <span class="mi">101</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">break</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">return</span> <span class="p">[</span><span class="nb">super</span> <span class="nl">hitTest</span><span class="p">:</span><span class="n">point</span> <span class="nl">withEvent</span><span class="p">:</span><span class="n">event</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>紧接着，把Button的父视图，即根视图view对应的类设为刚创建的类型。运行，测试，看到效果了吧?!</p>
+
+<h2>后记</h2>
+
+<p>源代码里有乾坤，不注意看就错过了:-)</p>
+]]></content>
+  </entry>
+  
+</feed>
