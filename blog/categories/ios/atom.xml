@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: iOS, | Balloonsys Inc.]]></title>
+  <title><![CDATA[Category: Ios, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-08-03T08:30:27+08:00</updated>
+  <updated>2016-06-14T01:21:34+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,23 +29,16 @@
 
 <p>建立一个Single VC的工程，添加两个有部分重叠的Button，分别关联上touchUpInSide处理方法。</p>
 
-<p>```objc
-&ndash; (IBAction)buttonAPressed:(id)sender
-{</p>
-
-<pre><code>NSLog(@"You pressed button A");
-</code></pre>
-
-<p>}</p>
-
-<ul>
-<li>(IBAction)buttonBPressed:(id)sender
+<pre><code class="objc">- (IBAction)buttonAPressed:(id)sender
 {
-  NSLog(@&ldquo;You pressed button B&rdquo;);
+    NSLog(@"You pressed button A");
 }
-```</li>
-</ul>
 
+- (IBAction)buttonBPressed:(id)sender
+{
+    NSLog(@"You pressed button B");
+}
+</code></pre>
 
 <p>因为Button B(tag为102)是叠在Button A(tag为101)上面的，所以在重叠区域点击，控制台输出的是You pressed button B。这种情况下，如果希望收到消息的是Button A呢？那就用hitTest吧！</p>
 
@@ -53,14 +46,13 @@
 
 <p>建立一个UIView的子类，然后重写- hitTest:withEvent:方法，
 ```objc
-&ndash; (UIView <em>)hitTest:(CGPoint)point withEvent:(UIEvent </em>)event
-{</p>
+- (UIView <em>)hitTest:(CGPoint)point withEvent:(UIEvent </em>)event
+{
+    for (UIView<em> subview in self.subviews) {
+        CGPoint convertedPoint = [self convertPoint:point toView:subview];
+        UIView </em>result = [subview hitTest:convertedPoint withEvent:event];</p>
 
-<pre><code>for (UIView* subview in self.subviews) {
-    CGPoint convertedPoint = [self convertPoint:point toView:subview];
-    UIView *result = [subview hitTest:convertedPoint withEvent:event];
-
-    if (result.tag == 101){
+<pre><code>    if (result.tag == 101){
         return result;
         break;
     }
@@ -76,7 +68,7 @@ return [super hitTest:point withEvent:event];
 
 <h2>后记</h2>
 
-<p>源代码里有乾坤，不注意看就错过了:&ndash;)</p>
+<p>源代码里有乾坤，不注意看就错过了:-)</p>
 ]]></content>
   </entry>
   
@@ -135,32 +127,26 @@ NSString *newsContentHTML = [engine processTemplateInFileAtPath:templatePath wit
 <h3>操作新闻内的多媒体文件</h3>
 
 <p>如果需要点击图片以全屏展示，实现起来也非常简单。首先在template.html中加入一段JavaScript，
-```javascript</p>
-
-<pre><code>&lt;script type="text/javascript"&gt;
-    function extend_image(element){
-        var imgTag = element.getElementsByTagName("IMG")[0];
-        var url=imgTag.getAttribute("src");
-        location.href="image://?url="+url;
-    }
-&lt;/script&gt;
-</code></pre>
-
-<p>```
+<code>javascript
+    &lt;script type="text/javascript"&gt;
+        function extend_image(element){
+            var imgTag = element.getElementsByTagName("IMG")[0];
+            var url=imgTag.getAttribute("src");
+            location.href="image://?url="+url;
+        }
+    &lt;/script&gt;
+</code>
 然后在img标签外增加点击调用extend_image(this)相关的HTML代码即可。</p>
 
 <p>用户点击图片后，WebView的委托方法webView:shouldStartLoadWithRequest:navigationType:会被调用。我们可以解析reqeust的URL字符串来做相应的处理。
-```objc
-if ([url hasPrefix:@&ldquo;image://&rdquo;]) {</p>
-
-<pre><code>NSString *imageURL = [url substringFromIndex:[@"image://?url=" length]];
-// Present a new view controller and display the image full sreen
-// ...
-return NO;
-</code></pre>
-
-<p>}
-```</p>
+<code>objc
+if ([url hasPrefix:@"image://"]) {
+    NSString *imageURL = [url substringFromIndex:[@"image://?url=" length]];
+    // Present a new view controller and display the image full sreen
+    // ...
+    return NO;
+}
+</code></p>
 
 <p>虽然西子快讯尚未支持视频播放，但我觉得也可以采用类似的方案处理。</p>
 
@@ -249,18 +235,15 @@ return NO;
 <p>拖一个UIView到View Controller的顶部，大小为320X190，类名设置为iCarousel，连接到一个名为headlinesView的Outlet。</p>
 
 <p>在viewDidLoad中调用如下方法，
-``` objc
-&ndash; (void)setupHeadlinesView
-{</p>
-
-<pre><code>self.headlinesView.type = iCarouselTypeLinear;
-self.headlinesView.pagingEnabled = YES;
-self.headlinesView.dataSource = self;
-self.headlinesView.delegate = self;
-</code></pre>
-
-<p>}
-```
+<code>objc
+- (void)setupHeadlinesView
+{
+    self.headlinesView.type = iCarouselTypeLinear;
+    self.headlinesView.pagingEnabled = YES;
+    self.headlinesView.dataSource = self;
+    self.headlinesView.delegate = self;
+}
+</code>
 此处关键的一个属性便是pagingEnabled，设置后刚好符合期望的效果。</p>
 
 <h3>为iCarousel提供数据</h3>
@@ -268,24 +251,20 @@ self.headlinesView.delegate = self;
 <p>iCarousel采用类似于table view的设计方式，提供了不少datasource及delegate方法。</p>
 
 <p>下面这个方法告诉iCarousel共有几个cell item，
-``` objc
-&ndash; (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
-{</p>
-
-<pre><code>return kCoundOfHeadlineNews;
-</code></pre>
-
-<p>}
-```</p>
+<code>objc
+- (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
+{
+    return kCoundOfHeadlineNews;
+}
+</code></p>
 
 <p>当需要加载某个cell view时，会调用viewForItemAtIndex，我们需在该方法里确保用于显示新闻头条图片的imageView被构建并设置相应地image。
 ``` objc
-&ndash; (UIView <em>)carousel:(iCarousel </em>)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
-{</p>
+- (UIView <em>)carousel:(iCarousel </em>)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView <em>)view
+{
+    UIImageView </em>headlineImageView = nil;</p>
 
-<pre><code>UIImageView *headlineImageView = nil;
-
-// Create new view if no view is available for recycling
+<pre><code>// Create new view if no view is available for recycling
 if (view == nil) {
     view = [[UIView alloc] initWithFrame:self.headlinesView.bounds];
     headlineImageView = [[UIImageView alloc] initWithFrame:view.bounds];
@@ -316,20 +295,17 @@ return view;
 <h3>定制iCarousel的行为</h3>
 
 <p>当头条新闻滑到最后一页时，通常需要能够回到第一页。iCarousel提供了一个delegate方法以定制该控件的属性。
-``` objc
-&ndash; (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value
-{</p>
-
-<pre><code>switch (option) {
-    case iCarouselOptionWrap:
-        return YES;
-    default:
-        return value;
+<code>objc
+- (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value
+{
+    switch (option) {
+        case iCarouselOptionWrap:
+            return YES;
+        default:
+            return value;
+    }
 }
-</code></pre>
-
-<p>}
-```</p>
+</code></p>
 
 <p>点击某一个cell view时，需要展示新闻详情页面。跳转的逻辑可以放在carousel:didSelectItemAtIndex:中。</p>
 

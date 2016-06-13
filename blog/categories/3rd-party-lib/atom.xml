@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 3rd-party-lib | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/3rd-party-lib/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-08-03T08:30:27+08:00</updated>
+  <updated>2016-06-14T01:21:34+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -68,32 +68,26 @@ NSString *newsContentHTML = [engine processTemplateInFileAtPath:templatePath wit
 <h3>操作新闻内的多媒体文件</h3>
 
 <p>如果需要点击图片以全屏展示，实现起来也非常简单。首先在template.html中加入一段JavaScript，
-```javascript</p>
-
-<pre><code>&lt;script type="text/javascript"&gt;
-    function extend_image(element){
-        var imgTag = element.getElementsByTagName("IMG")[0];
-        var url=imgTag.getAttribute("src");
-        location.href="image://?url="+url;
-    }
-&lt;/script&gt;
-</code></pre>
-
-<p>```
+<code>javascript
+    &lt;script type="text/javascript"&gt;
+        function extend_image(element){
+            var imgTag = element.getElementsByTagName("IMG")[0];
+            var url=imgTag.getAttribute("src");
+            location.href="image://?url="+url;
+        }
+    &lt;/script&gt;
+</code>
 然后在img标签外增加点击调用extend_image(this)相关的HTML代码即可。</p>
 
 <p>用户点击图片后，WebView的委托方法webView:shouldStartLoadWithRequest:navigationType:会被调用。我们可以解析reqeust的URL字符串来做相应的处理。
-```objc
-if ([url hasPrefix:@&ldquo;image://&rdquo;]) {</p>
-
-<pre><code>NSString *imageURL = [url substringFromIndex:[@"image://?url=" length]];
-// Present a new view controller and display the image full sreen
-// ...
-return NO;
-</code></pre>
-
-<p>}
-```</p>
+<code>objc
+if ([url hasPrefix:@"image://"]) {
+    NSString *imageURL = [url substringFromIndex:[@"image://?url=" length]];
+    // Present a new view controller and display the image full sreen
+    // ...
+    return NO;
+}
+</code></p>
 
 <p>虽然西子快讯尚未支持视频播放，但我觉得也可以采用类似的方案处理。</p>
 
@@ -133,18 +127,15 @@ return NO;
 <p>拖一个UIView到View Controller的顶部，大小为320X190，类名设置为iCarousel，连接到一个名为headlinesView的Outlet。</p>
 
 <p>在viewDidLoad中调用如下方法，
-``` objc
-&ndash; (void)setupHeadlinesView
-{</p>
-
-<pre><code>self.headlinesView.type = iCarouselTypeLinear;
-self.headlinesView.pagingEnabled = YES;
-self.headlinesView.dataSource = self;
-self.headlinesView.delegate = self;
-</code></pre>
-
-<p>}
-```
+<code>objc
+- (void)setupHeadlinesView
+{
+    self.headlinesView.type = iCarouselTypeLinear;
+    self.headlinesView.pagingEnabled = YES;
+    self.headlinesView.dataSource = self;
+    self.headlinesView.delegate = self;
+}
+</code>
 此处关键的一个属性便是pagingEnabled，设置后刚好符合期望的效果。</p>
 
 <h3>为iCarousel提供数据</h3>
@@ -152,24 +143,20 @@ self.headlinesView.delegate = self;
 <p>iCarousel采用类似于table view的设计方式，提供了不少datasource及delegate方法。</p>
 
 <p>下面这个方法告诉iCarousel共有几个cell item，
-``` objc
-&ndash; (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
-{</p>
-
-<pre><code>return kCoundOfHeadlineNews;
-</code></pre>
-
-<p>}
-```</p>
+<code>objc
+- (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
+{
+    return kCoundOfHeadlineNews;
+}
+</code></p>
 
 <p>当需要加载某个cell view时，会调用viewForItemAtIndex，我们需在该方法里确保用于显示新闻头条图片的imageView被构建并设置相应地image。
 ``` objc
-&ndash; (UIView <em>)carousel:(iCarousel </em>)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
-{</p>
+- (UIView <em>)carousel:(iCarousel </em>)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView <em>)view
+{
+    UIImageView </em>headlineImageView = nil;</p>
 
-<pre><code>UIImageView *headlineImageView = nil;
-
-// Create new view if no view is available for recycling
+<pre><code>// Create new view if no view is available for recycling
 if (view == nil) {
     view = [[UIView alloc] initWithFrame:self.headlinesView.bounds];
     headlineImageView = [[UIImageView alloc] initWithFrame:view.bounds];
@@ -200,20 +187,17 @@ return view;
 <h3>定制iCarousel的行为</h3>
 
 <p>当头条新闻滑到最后一页时，通常需要能够回到第一页。iCarousel提供了一个delegate方法以定制该控件的属性。
-``` objc
-&ndash; (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value
-{</p>
-
-<pre><code>switch (option) {
-    case iCarouselOptionWrap:
-        return YES;
-    default:
-        return value;
+<code>objc
+- (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value
+{
+    switch (option) {
+        case iCarouselOptionWrap:
+            return YES;
+        default:
+            return value;
+    }
 }
-</code></pre>
-
-<p>}
-```</p>
+</code></p>
 
 <p>点击某一个cell view时，需要展示新闻详情页面。跳转的逻辑可以放在carousel:didSelectItemAtIndex:中。</p>
 

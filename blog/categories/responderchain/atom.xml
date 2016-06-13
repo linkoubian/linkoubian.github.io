@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: ResponderChain | Balloonsys Inc.]]></title>
+  <title><![CDATA[Category: Responderchain | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/responderchain/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-08-03T08:30:27+08:00</updated>
+  <updated>2016-06-14T01:21:34+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -32,9 +32,9 @@
 <p>因为没有安装iOS 7模拟器，就在手上的一台装有iOS 7系统的iPad Mini上运行。无法利用Color Blended Layer分析视图，便给Cell嵌套的各个子View分别设置了不同的背景色。最后发现在iPad上，content view只有一小块，目测仅320*44的样子，并没有期望的那么大（在iPhone上也没有覆盖到出状况的那个按钮范围啦）。此时基本可以判断出：<strong>子View在父视图边界之外，对其触摸无法被检测</strong>。但这终究是表面结论，问题的本质是什么呢？</p>
 
 <p>对于iOS设备用户来说，操作设备的方式主要有三种：触摸屏幕、晃动设备、远程控制设备。对应的事件类型有以下三种：<br/>
-&ndash; 触屏事件（Touch Event）<br/>
-&ndash; 运动事件（Motion Event）<br/>
-&ndash; 远端控制事件（Remote-Control Event）</p>
+- 触屏事件（Touch Event）<br/>
+- 运动事件（Motion Event）<br/>
+- 远端控制事件（Remote-Control Event）</p>
 
 <p>点击按钮属于Touch Event，故接下来重点讨论触摸事件。</p>
 

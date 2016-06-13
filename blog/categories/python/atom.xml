@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-08-03T08:30:27+08:00</updated>
+  <updated>2016-06-14T01:21:34+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -42,178 +42,141 @@ pip install flask-restful
 
 <p>在app = Flask(<strong>name</strong>)下方加入一行api = Api(app)，该api实例将用来注册路由。</p>
 
-<p>``` python
-from flask import Flask, jsonify, abort, request, url_for
+<pre><code class="python">from flask import Flask, jsonify, abort, request, url_for
 from flask.ext.httpauth import HTTPBasicAuth
-from flask.ext.restful import Api, Resource</p>
+from flask.ext.restful import Api, Resource
 
-<p>app = Flask(<strong>name</strong>)
+app = Flask(__name__)
 api = Api(app)
-auth = HTTPBasicAuth()</p>
+auth = HTTPBasicAuth()
 
-<p>@auth.get_password
-def get_password(username):</p>
+@auth.get_password
+def get_password(username):
+    if username == 'linkoubian':
+        return '7c4a8d09ca3762af61e59520943dc26494f8941b'
+    return None
 
-<pre><code>if username == 'linkoubian':
-    return '7c4a8d09ca3762af61e59520943dc26494f8941b'
-return None
+@auth.error_handler
+def unauthorized():
+    return make_response(jsonify( { 'error': 'Unauthorized access' } ), 403)
+    # return 403 instead of 401 to prevent browsers from displaying the default auth dialog
+
+tasks = [
+    {
+        'id': 1,
+        'title': u'Buy groceries',
+        'description': u'Milk, Cheese, Pizza, Fruit, Tylenol', 
+        'done': False
+    },
+    {
+        'id': 2,
+        'title': u'Learn Python',
+        'description': u'Need to find a good Python tutorial on the web', 
+        'done': False
+    }
+]
+
+class TaskListAPI(Resource):
+    def get(self):
+        pass
+
+    def post(self):
+        pass
+
+class TaskAPI(Resource):
+    def get(self, id):
+        pass
+
+    def put(self, id):
+        pass
+
+    def delete(self, id):
+        pass
+
+api.add_resource(TaskListAPI, '/todo/tasks', endpoint = 'tasks')
+api.add_resource(TaskAPI, '/todo/tasks/&lt;int:id&gt;', endpoint = 'task')
+
+if __name__ == '__main__':
+    app.run(debug = True)
 </code></pre>
-
-<p>@auth.error_handler
-def unauthorized():</p>
-
-<pre><code>return make_response(jsonify( { 'error': 'Unauthorized access' } ), 403)
-# return 403 instead of 401 to prevent browsers from displaying the default auth dialog
-</code></pre>
-
-<p>tasks = [</p>
-
-<pre><code>{
-    'id': 1,
-    'title': u'Buy groceries',
-    'description': u'Milk, Cheese, Pizza, Fruit, Tylenol', 
-    'done': False
-},
-{
-    'id': 2,
-    'title': u'Learn Python',
-    'description': u'Need to find a good Python tutorial on the web', 
-    'done': False
-}
-</code></pre>
-
-<p>]</p>
-
-<p>class TaskListAPI(Resource):</p>
-
-<pre><code>def get(self):
-    pass
-
-def post(self):
-    pass
-</code></pre>
-
-<p>class TaskAPI(Resource):</p>
-
-<pre><code>def get(self, id):
-    pass
-
-def put(self, id):
-    pass
-
-def delete(self, id):
-    pass
-</code></pre>
-
-<p>api.add_resource(TaskListAPI, &lsquo;/todo/tasks&rsquo;, endpoint = &lsquo;tasks&rsquo;)
-api.add_resource(TaskAPI, &lsquo;/todo/tasks/&lt;int:id>&rsquo;, endpoint = &lsquo;task&rsquo;)</p>
-
-<p>if <strong>name</strong> == &lsquo;<strong>main</strong>&rsquo;:</p>
-
-<pre><code>app.run(debug = True)
-</code></pre>
-
-<p>```</p>
 
 <h3>提取验证逻辑</h3>
 
 <p>然后为TaskListAPI及TaskAPI这两个资源分别添加初始化方法，以处理数据验证等。</p>
 
-<p>``` python TaskListAPI的初始化方法</p>
-
-<pre><code>def __init__(self):
-    self.reqparse = reqparse.RequestParser()
-    self.reqparse.add_argument('title', type = str, required = True, help = 'No task title provided', location = 'json')
-    self.reqparse.add_argument('description', type = str, default = "", location = 'json')
-    super(TaskListAPI, self).__init__()
+<pre><code class="python TaskListAPI的初始化方法">    def __init__(self):
+        self.reqparse = reqparse.RequestParser()
+        self.reqparse.add_argument('title', type = str, required = True, help = 'No task title provided', location = 'json')
+        self.reqparse.add_argument('description', type = str, default = "", location = 'json')
+        super(TaskListAPI, self).__init__()
 </code></pre>
 
-<p>```</p>
-
-<p>``` python TaskAPI的初始化方法</p>
-
-<pre><code>def __init__(self):
-    self.reqparse = reqparse.RequestParser()
-    self.reqparse.add_argument('title', type = str, location = 'json')
-    self.reqparse.add_argument('description', type = str, location = 'json')
-    self.reqparse.add_argument('done', type = bool, location = 'json')
-    super(TaskAPI, self).__init__()
+<pre><code class="python TaskAPI的初始化方法">    def __init__(self):
+        self.reqparse = reqparse.RequestParser()
+        self.reqparse.add_argument('title', type = str, location = 'json')
+        self.reqparse.add_argument('description', type = str, location = 'json')
+        self.reqparse.add_argument('done', type = bool, location = 'json')
+        super(TaskAPI, self).__init__()
 </code></pre>
-
-<p>```</p>
 
 <p>注意RequestParser默认是从request.values中取值的，所以此处我们要指定location为json，以从request.json中解析传递过来的数据。</p>
 
 <h3>重构新增task的代码</h3>
 
-<p>``` python 旧的代码
-def create_task():</p>
-
-<pre><code>if not request.json or not 'title' in request.json:
-    abort(400)
-task = {
-    'id': tasks[-1]['id'] + 1,
-    'title': request.json['title'],
-    'description': request.json.get('description', ""),
-    'done': False
-}
-tasks.append(task)
-return jsonify( { 'task': make_public_task(task) } )
-</code></pre>
-
-<p>```</p>
-
-<p>``` python 新的代码</p>
-
-<pre><code>def post(self):
-    args = self.reqparse.parse_args()
+<pre><code class="python 旧的代码">def create_task():
+    if not request.json or not 'title' in request.json:
+        abort(400)
     task = {
         'id': tasks[-1]['id'] + 1,
-        'title': args['title'],
-        'description': args['description'],
+        'title': request.json['title'],
+        'description': request.json.get('description', ""),
         'done': False
     }
     tasks.append(task)
-    return { 'task': make_public_task(task) }
+    return jsonify( { 'task': make_public_task(task) } )
 </code></pre>
 
-<p>```</p>
+<pre><code class="python 新的代码">    def post(self):
+        args = self.reqparse.parse_args()
+        task = {
+            'id': tasks[-1]['id'] + 1,
+            'title': args['title'],
+            'description': args['description'],
+            'done': False
+        }
+        tasks.append(task)
+        return { 'task': make_public_task(task) }
+</code></pre>
 
 <p>不光数据验证相关的代码被移除了，description的默认值也不必在新代码里体现。由于Flask-Restful会自动将数据转成JSON格式，所以jsonify函数也可不必调用。</p>
 
 <p>另外，Flask-Restful插件提供的marshal功能，可以优雅的完成make_public_task的功能。只需定义一个数据模板，
-``` python
-task_fields = {</p>
-
-<pre><code>'id': fields.Integer,
-'title': fields.String,
-'description': fields.String,
-'done': fields.Boolean,
-'uri': fields.Url('task', absolute=True)
-</code></pre>
-
-<p>}
-```
+<code>python
+task_fields = {
+    'id': fields.Integer,
+    'title': fields.String,
+    'description': fields.String,
+    'done': fields.Boolean,
+    'uri': fields.Url('task', absolute=True)
+}
+</code>
 然后将make_public_task(task)替换成marshal(task, task_fields)即可。</p>
 
 <h3>重构更新task的代码</h3>
 
 <p>原来代码中有大段的验证逻辑，现在可以统统去掉，只需如下编写方法即可，
-``` python</p>
-
-<pre><code>def put(self, id):
-    task = filter(lambda t: t['id'] == id, tasks)
-    if len(task) == 0:
-        abort(404)
-    task = task[0]
-    args = self.reqparse.parse_args()
-    for k, v in args.iteritems():
-        if v != None:
-            task[k] = v
-    return { 'task': marshal(task, task_fields) }
-</code></pre>
-
-<p>```</p>
+<code>python
+    def put(self, id):
+        task = filter(lambda t: t['id'] == id, tasks)
+        if len(task) == 0:
+            abort(404)
+        task = task[0]
+        args = self.reqparse.parse_args()
+        for k, v in args.iteritems():
+            if v != None:
+                task[k] = v
+        return { 'task': marshal(task, task_fields) }
+</code></p>
 
 <h2>说明</h2>
 
@@ -243,13 +206,12 @@ index-url = http://pypi.v2ex.com/simple
 
 <p>为了不影响系统的Python环境，我们用Virtualenv虚拟一个运行环境，然后在此环境下开发一个名为todo的示例小应用（纯RESTful API，JSON格式的数据）。</p>
 
-<p><code>
-cd ~/Desktop
+<pre><code>cd ~/Desktop
 mkdir todo-api
 cd todo-api
 virtualenv venv
 . venv/bin/activate
-</code></p>
+</code></pre>
 
 <p>此时命令行窗口应出现(venv)mbpr2013:todo-api linkoubian$ 这样的提示符，注意最左边的venv表明当前运行的是虚拟出来的环境。工作完成后打算退出venv，只需执行deactivate命令即可。</p>
 
@@ -264,17 +226,12 @@ from flask import Flask</p>
 <p>app = Flask(<strong>name</strong>)</p>
 
 <p>@app.route(&lsquo;/&rsquo;)
-def index():</p>
+def index():
+    return &ldquo;Hello, World!&rdquo;</p>
 
-<pre><code>return "Hello, World!"
-</code></pre>
-
-<p>if <strong>name</strong> == &lsquo;<strong>main</strong>&rsquo;:</p>
-
-<pre><code>app.run(debug = True)
-</code></pre>
-
-<p>```
+<p>if <strong>name</strong> == &lsquo;<strong>main</strong>&rsquo;:
+    app.run(debug = True)
+```
 保存为~/Desktop/todo-api/app.py，添加可执行权限后，敲python app.py开始运行Flask。此时打开浏览器，访问localhost:5000即可看到Hello, World!</p>
 
 <h2>开始设计RESTful API</h2>
@@ -287,36 +244,28 @@ from flask import Flask, jsonify</p>
 
 <p>app = Flask(<strong>name</strong>)</p>
 
-<p>tasks = [</p>
-
-<pre><code>{
-    'id': 1,
-    'title': u'Buy groceries',
-    'description': u'Milk, Cheese, Pizza, Fruit, Tylenol',
-    'done': False
-},
-{
-    'id': 2,
-    'title': u'Learn Python',
-    'description': u'Need to find a good Python tutorial on the web',
-    'done': False
-},
-</code></pre>
-
-<p>]</p>
+<p>tasks = [
+    {
+        &lsquo;id&rsquo;: 1,
+        &lsquo;title&rsquo;: u'Buy groceries',
+        &lsquo;description&rsquo;: u'Milk, Cheese, Pizza, Fruit, Tylenol',
+        &lsquo;done&rsquo;: False
+    },
+    {
+        &lsquo;id&rsquo;: 2,
+        &lsquo;title&rsquo;: u'Learn Python',
+        &lsquo;description&rsquo;: u'Need to find a good Python tutorial on the web',
+        &lsquo;done&rsquo;: False
+    },
+]</p>
 
 <p>@app.route(&lsquo;/todo/tasks&rsquo;, methods = [&lsquo;GET&rsquo;])
-def get_tasks():</p>
+def get_tasks():
+    return jsonify({&lsquo;tasks&rsquo;: tasks})</p>
 
-<pre><code>return jsonify({'tasks': tasks})
-</code></pre>
-
-<p>if <strong>name</strong> == &lsquo;<strong>main</strong>&rsquo;:</p>
-
-<pre><code>app.run(debug = True)
-</code></pre>
-
-<p>```
+<p>if <strong>name</strong> == &lsquo;<strong>main</strong>&rsquo;:
+    app.run(debug = True)
+```
 因为Flask运行在debug模式下会自动reload，所以代码写完后保存文件即可。</p>
 
 <p>Mac上有一款名为<a href="https://itunes.apple.com/app/id584653203?ls=1&amp;mt=12">Paw</a>的HTTP Client，算是我见过、用过的各种API测试工具中的佼佼者，力荐。</p>
@@ -329,30 +278,22 @@ def get_tasks():</p>
 
 <p>通常我们将id放在URL中，然后对应的处理函数从URL中得到id以从数据源（此处为task数组，存在内存中）中查询相应地entity（此处为task）。</p>
 
-<p>``` python
-@app.route(&lsquo;/todo/tasks/&lt;int:task_id>&rsquo;, methods = [&lsquo;GET&rsquo;])
-def get_task(task_id):</p>
-
-<pre><code>task = filter(lambda t: t['id'] == task_id, tasks)
-if len(task) == 0:
-    abort(404)
-return jsonify({'task': task[0]})
+<pre><code class="python">@app.route('/todo/tasks/&lt;int:task_id&gt;', methods = ['GET'])
+def get_task(task_id):
+    task = filter(lambda t: t['id'] == task_id, tasks)
+    if len(task) == 0:
+        abort(404)
+    return jsonify({'task': task[0]})
 </code></pre>
-
-<p>```</p>
 
 <p>为了正常使用abort函数，需要从flask模块import一下。通过Paw测试<a href="http://localhost:5000/todo/tasks/1">http://localhost:5000/todo/tasks/1</a>，发现一切正常。</p>
 
 <p>访问<a href="http://localhost:5000/todo/tasks/0">http://localhost:5000/todo/tasks/0</a>时，返回一段出错的HTML，这是Flask对404的默认处理，我们可以自己定义一个返回JSON格式的错误消息。</p>
 
-<p>``` python
-@app.errorhandler(404)
-def not_found(error):</p>
-
-<pre><code>return make_response(jsonify( { 'error': 'Not found' } ), 404)
+<pre><code class="python">@app.errorhandler(404)
+def not_found(error):
+    return make_response(jsonify( { 'error': 'Not found' } ), 404)
 </code></pre>
-
-<p>```</p>
 
 <p>我们用make_response函数，将构造好的JSON作为404错误的响应，返回给客户端。</p>
 
@@ -360,58 +301,45 @@ def not_found(error):</p>
 
 <p>URL仍然用/todo/tasks，但HTTP方法为POST。根据Request对象中的数据构造一个新的task对象，插入数据源即可。</p>
 
-<p>``` python
-@app.route(&lsquo;/todo/tasks&rsquo;, methods = [&lsquo;POST&rsquo;])
-def create_task():</p>
-
-<pre><code>if not request.json or not 'title' in request.json:
-    abort(400)
-task = {
-    'id': tasks[-1]['id'] + 1,
-    'title': request.json['title'],
-    'description': request.json.get('description', ''),
-    'done': False
-}
-tasks.append(task)
-return jsonify({'task': task}), 201
+<pre><code class="python">@app.route('/todo/tasks', methods = ['POST'])
+def create_task():
+    if not request.json or not 'title' in request.json:
+        abort(400)
+    task = {
+        'id': tasks[-1]['id'] + 1,
+        'title': request.json['title'],
+        'description': request.json.get('description', ''),
+        'done': False
+    }
+    tasks.append(task)
+    return jsonify({'task': task}), 201
 </code></pre>
-
-<p>```</p>
 
 <p>另外，我们需要定义一个400的处理器，类似于404，</p>
 
-<p>``` python
-@app.errorhandler(400)
-def not_found(error):</p>
-
-<pre><code>return make_response(jsonify( { 'error': 'Bad request' } ), 400)
+<pre><code class="python">@app.errorhandler(400)
+def not_found(error):
+    return make_response(jsonify( { 'error': 'Bad request' } ), 400)
 </code></pre>
-
-<p>```</p>
 
 <p>在Paw中，POST请求<a href="http://localhost:5000/todo/tasks">http://localhost:5000/todo/tasks</a>，同时Header里加一个Content-Type，值为application/json，Body里加入一段文本内容{&ldquo;title&rdquo;: &ldquo;Buy a cell phone&rdquo;}，敲CMD+Enter执行。</p>
 
 <p>根据REST Cookbook一书的建议，可以在返回的新增task里加入一个uri字段。为此，建一个名为make_public_task的函数，如下，</p>
 
-<p>``` python
-def make_public_task(task):</p>
+<pre><code class="python">def make_public_task(task):
+    new_task = {}
+    for field in task:
+        new_task[field] = task[field]
+        if field == 'id':
+            new_task['uri'] = url_for('get_task', task_id = task['id'], _external = True)
 
-<pre><code>new_task = {}
-for field in task:
-    new_task[field] = task[field]
-    if field == 'id':
-        new_task['uri'] = url_for('get_task', task_id = task['id'], _external = True)
-
-return new_task
+    return new_task
 </code></pre>
-
-<p>```</p>
 
 <p>另外，create_task中改为，</p>
 
-<p><code>python
-return jsonify({'task': make_public_task(task)}), 201
-</code></p>
+<pre><code class="python">return jsonify({'task': make_public_task(task)}), 201
+</code></pre>
 
 <p>get_tasks中改为，
 <code>python
@@ -427,44 +355,36 @@ return jsonify({'tasks': map(make_public_task, tasks)})
 
 <p>显然此时的HTTP方法为PUT，相应的url和获取task类似。</p>
 
-<p>``` python</p>
-
-<p>@app.route(&lsquo;/todo/tasks/&lt;int:task_id>&rsquo;, methods = [&lsquo;PUT&rsquo;])
-def update_task(task_id):</p>
-
-<pre><code>task = filter(lambda t: t['id'] == task_id, tasks)
-if len(task) == 0:
-    abort(404)
-if not request.json:
-    abort(400)
-if 'title' in request.json and type(request.json['title']) != unicode:
-    abort(400)
-if 'description' in request.json and type(request.json['description']) is not unicode:
-    abort(400)
-if 'done' in request.json and type(request.json['done']) is not bool:
-    abort(400)
-task[0]['title'] = request.json.get('title', task[0]['title'])
-task[0]['description'] = request.json.get('description', task[0]['description'])
-task[0]['done'] = request.json.get('done', task[0]['done'])
-return jsonify( { 'task': make_public_task(task[0]) } )
+<pre><code class="python">
+@app.route('/todo/tasks/&lt;int:task_id&gt;', methods = ['PUT'])
+def update_task(task_id):
+    task = filter(lambda t: t['id'] == task_id, tasks)
+    if len(task) == 0:
+        abort(404)
+    if not request.json:
+        abort(400)
+    if 'title' in request.json and type(request.json['title']) != unicode:
+        abort(400)
+    if 'description' in request.json and type(request.json['description']) is not unicode:
+        abort(400)
+    if 'done' in request.json and type(request.json['done']) is not bool:
+        abort(400)
+    task[0]['title'] = request.json.get('title', task[0]['title'])
+    task[0]['description'] = request.json.get('description', task[0]['description'])
+    task[0]['done'] = request.json.get('done', task[0]['done'])
+    return jsonify( { 'task': make_public_task(task[0]) } )
 </code></pre>
-
-<p>```</p>
 
 <h3>删除一个task</h3>
 
-<p>``` python
-@app.route(&lsquo;/todo/tasks/&lt;int:task_id>&rsquo;, methods = [&lsquo;DELETE&rsquo;])
-def delete_task(task_id):</p>
-
-<pre><code>task = filter(lambda t: t['id'] == task_id, tasks)
-if len(task) == 0:
-    abort(404)
-tasks.remove(task[0])
-return jsonify( { 'result': True } )
+<pre><code class="python">@app.route('/todo/tasks/&lt;int:task_id&gt;', methods = ['DELETE'])
+def delete_task(task_id):
+    task = filter(lambda t: t['id'] == task_id, tasks)
+    if len(task) == 0:
+        abort(404)
+    tasks.remove(task[0])
+    return jsonify( { 'result': True } )
 </code></pre>
-
-<p>```</p>
 
 <p>修改Python源文件后，Flask会reload，这将导致上一次create的task丢失，所以直接尝试delete之前增加的task可能会报404资源找不到错误。</p>
 
@@ -475,20 +395,15 @@ return jsonify( { 'result': True } )
 auth = HTTPBasicAuth()</p>
 
 <p>@auth.get_password
-def get_password(username):</p>
-
-<pre><code>if username == 'linkoubian':
-    return '7c4a8d09ca3762af61e59520943dc26494f8941b'
-return None
-</code></pre>
+def get_password(username):
+    if username == &lsquo;linkoubian&rsquo;:
+        return &lsquo;7c4a8d09ca3762af61e59520943dc26494f8941b&rsquo;
+    return None</p>
 
 <p>@auth.error_handler
-def unauthorized():</p>
-
-<pre><code>return make_response(jsonify( { 'error': 'Unauthorized access' } ), 401)
-</code></pre>
-
-<p>```</p>
+def unauthorized():
+    return make_response(jsonify( { &lsquo;error&rsquo;: &lsquo;Unauthorized access&rsquo; } ), 401)
+```</p>
 
 <p>其中get_password方法是返回指定用户的密码信息（通常是从数据库用户表查询得到），当此处返回的值和客户端传递的值匹配时（匹配过程由HTTPBasicAuth完成）成功，否则执行error_handler返回错误信息。</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Navigation | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/navigation/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-08-03T08:30:27+08:00</updated>
+  <updated>2016-06-14T01:21:34+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -28,44 +28,43 @@
 <h3>方法一</h3>
 
 <p>给一个按钮添加点击事件，在事件响应里：
-``` objc</p>
+``` objc
+    UIViewController <em>detailPage = [UIViewController new];
+    UIViewController </em>anotherPage = [UIViewController new];</p>
 
-<pre><code>UIViewController *detailPage = [UIViewController new];
-UIViewController *anotherPage = [UIViewController new];
-
-[self.navigationController pushViewController:detailPage animated:YES];
+<pre><code>[self.navigationController pushViewController:detailPage animated:YES];
 
 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
     [self.navigationController pushViewController:anotherPage animated:YES];
 });
 </code></pre>
 
-<p>```
-这样一点击此按钮，便可模拟本文着重讨论的问题。</p>
+<pre><code>这样一点击此按钮，便可模拟本文着重讨论的问题。
 
-<h3>方法二</h3>
+### 方法二
+实际项目里有两个基于View实现的控件，点击时首先缩放一下控件里的图标，然后push一个页面。当点击控件A后，若快速点击控件B，就会发生nested push问题。
 
-<p>实际项目里有两个基于View实现的控件，点击时首先缩放一下控件里的图标，然后push一个页面。当点击控件A后，若快速点击控件B，就会发生nested push问题。</p>
+方法二中控件带有一定时长的缩放动画，给了用户足够的反应时间去连续点击。而方法一中是基于GCD代码模拟，可精确控制nested push的间隔。示例代码参见[PushVC示例之Initial Commit](https://github.com/balloonsys/PushVC)
 
-<p>方法二中控件带有一定时长的缩放动画，给了用户足够的反应时间去连续点击。而方法一中是基于GCD代码模拟，可精确控制nested push的间隔。示例代码参见<a href="https://github.com/balloonsys/PushVC">PushVC示例之Initial Commit</a></p>
+## 问题剖析
+首先，从UINavigationController这一层面考虑，在第一个push的动画还没完成，到来的第二个push请求，是否可以忽略？印象中貌似iOS 6就是这么处理的。
 
-<h2>问题剖析</h2>
+然后，我们也可以从UI层面控制，尽量不要在push过程中发起第二次push请求。
 
-<p>首先，从UINavigationController这一层面考虑，在第一个push的动画还没完成，到来的第二个push请求，是否可以忽略？印象中貌似iOS 6就是这么处理的。</p>
+## 解决方案
+UINavigationController在push过程中，如何忽略其他push请求呢？查看其Delegate，发现其中有如下两个方法：
+</code></pre>
 
-<p>然后，我们也可以从UI层面控制，尽量不要在push过程中发起第二次push请求。</p>
+<ul>
+<li>navigationController:willShowViewController:animated:</li>
+<li>navigationController:didShowViewController:animated:
+```</li>
+</ul>
 
-<h2>解决方案</h2>
-
-<p>UINavigationController在push过程中，如何忽略其他push请求呢？查看其Delegate，发现其中有如下两个方法：
-<code>objc
-- navigationController:willShowViewController:animated:
-- navigationController:didShowViewController:animated:
-</code></p>
 
 <p>所以，我们可以基于UINavigationController建立NavController，增加一个名为inTransition的BOOL属性。将NavController的delegate指向自身，并实现上述两个delegate方法。在willShow中将inTransition置为YES，在didShow中置为NO。接下来重写pushViewController:animated方法：
 ``` objc
-&ndash; (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {</p>
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {</p>
 
 <pre><code>if (self.inTransition) {
     NSLog(@“Ignore push request when top page is still animating”);
@@ -86,7 +85,7 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_ge
 
 <p>如何在动画过程中，避免另一个控件发起Push请求？我们可以在第一个控件的动画过程中，忽略触摸事件即可。核心代码是UIApplication的beginIgnoringInteractionEvents和endIgnoringInteractionEvents方法。主要代码如下：
 ``` objc
-&ndash; (void)tapped {</p>
+- (void)tapped {</p>
 
 <pre><code>if (self.iconView) {
     if ([self.iconView.layer animationForKey:TAP_ANIMATION_KEY] == nil) {
@@ -121,7 +120,7 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_ge
 
 <p>如何避免在Push过程中再次发送Push请求呢？我们可以在UIGestureRecognizerDelegate方法（方法名前面刚刚提过）中判断：
 ``` objc
-&ndash; (BOOL)gestureRecognizer:(UIGestureRecognizer <em>)recogniser shouldReceiveTouch:(UITouch </em>)touch {</p>
+- (BOOL)gestureRecognizer:(UIGestureRecognizer <em>)recogniser shouldReceiveTouch:(UITouch </em>)touch {</p>
 
 <pre><code>if ([self.navigationController isKindOfClass:[NavController class]]) {
     NavController *nav = (NavController *)self.navigationController;

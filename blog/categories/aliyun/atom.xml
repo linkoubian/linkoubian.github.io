@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Aliyun, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/aliyun/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-08-03T08:30:27+08:00</updated>
+  <updated>2016-06-14T01:21:34+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,17 +29,16 @@
 
 <h2>安装</h2>
 
-<p><code>sh
-chmod +x bitnami-redmine-2.5.2-2-linux-x64-installer.run
-sudo ./bitnami-redmine-2.5.2-2-linux-x64-installer.run
-</code></p>
+<pre><code class="sh">chmod +x bitnami-redmine-2.5.2-2-linux-x64-installer.run
+sudo ./bitnami-redmine-2.5.2-2-linux-x64-installer.run 
+</code></pre>
 
 <p>根据相应的提示，选择语言、所需的组件等，非常简单。端口么，本人设的8081，如果启用了防火墙，或许你还需要做如下配置：
 <code>sh
 sudo vi /etc/sysconfig/iptables
 </code></p>
 
-<p>添加-A INPUT -m state &mdash;state NEW -m tcp -p tcp &mdash;dport 8081 -j ACCEPT这条记录即可。打开浏览器访问<a href="http://">http://</a>&lt;ip_address>:8081/redmine，应该就OKay了。</p>
+<p>添加-A INPUT -m state &ndash;state NEW -m tcp -p tcp &ndash;dport 8081 -j ACCEPT这条记录即可。打开浏览器访问<a href="http://">http://</a><ip_address>:8081/redmine，应该就OKay了。</p>
 
 <h2>集成</h2>
 
@@ -53,16 +52,13 @@ sudo vi /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml
 
 <h2>External issues trackers</h2>
 
-<p>issues_tracker:</p>
-
-<pre><code>redmine:
-  title: "Redmine"
-  project_url: "http://&lt;ip_address&gt;:8081/redmine/projects/:issues_tracker_id"
-  issues_url: "http://&lt;ip_address&gt;:8081/redmine/issues/:id"
-  new_issue_url: "http://&lt;ip_address&gt;:8081/redmine/projects/:issues_tracker_id/issues/new"
-</code></pre>
-
-<p>```</p>
+<p>issues_tracker:
+    redmine:
+      title: &ldquo;Redmine&rdquo;
+      project_url: &ldquo;<a href="http://">http://</a><ip_address>:8081/redmine/projects/:issues_tracker_id&rdquo;
+      issues_url: &ldquo;<a href="http://">http://</a><ip_address>:8081/redmine/issues/:id&rdquo;
+      new_issue_url: &ldquo;<a href="http://">http://</a><ip_address>:8081/redmine/projects/:issues_tracker_id/issues/new&rdquo;
+```</p>
 
 <p>在浏览器中访问GitLab具体某个项目，此时项目的设置页面里已经可以选择Issue跟踪系统了。我们选择Redmine，同时将Redmine里对应的项目名称填在Project name or id in issues tracker区域。</p>
 
@@ -121,19 +117,17 @@ tar -zxvf gitlab.tar.gz
 
 <h2>安装</h2>
 
-<p><code>sh
-sudo yum install openssh-server
+<pre><code class="sh">sudo yum install openssh-server
 sudo yum install postfix
 sudo service postfix start
 sudo chkconfig postfix on
 sudo rpm -i gitlab-7.2.1_omnibus-1.el6.x86_64.rpm
-</code></p>
+</code></pre>
 
 <h2>配置</h2>
 
-<p><code>sh
-sudo -e /etc/gitlab/gitlab.rb
-</code></p>
+<pre><code class="sh">sudo -e /etc/gitlab/gitlab.rb
+</code></pre>
 
 <p>将external_url设成服务器ip地址，然后执行
 <code>sh
@@ -154,11 +148,11 @@ sudo lokkit -s http -s ssh
 
 <h1>Change the external_url to the address your users will type in their browser</h1>
 
-<p>external_url &lsquo;<a href="http://">http://</a>&lt;YOUR_SERVER_IP>:8888&rsquo;
+<p>external_url &lsquo;<a href="http://">http://</a><YOUR_SERVER_IP>:8888&rsquo;
 redis[&lsquo;port&rsquo;] = 6379
 postgresql[&lsquo;port&rsquo;] = 5432
 unicorn[&lsquo;port&rsquo;] = 9999
-nginx[&lsquo;listen_address&rsquo;] = &lsquo;&lt;YOUR_SERVER_IP>&rsquo;</p>
+nginx[&lsquo;listen_address&rsquo;] = &lsquo;<YOUR_SERVER_IP>&rsquo;</p>
 
 <h1>Limit backup lifetime to 7 days</h1>
 
@@ -172,7 +166,7 @@ nginx[&lsquo;listen_address&rsquo;] = &lsquo;&lt;YOUR_SERVER_IP>&rsquo;</p>
 sudo vi /etc/sysconfig/iptables
 </code></p>
 
-<p>然后加入-A INPUT -m state &mdash;state NEW -m tcp -p tcp &mdash;dport 8888 -j ACCEPT</p>
+<p>然后加入-A INPUT -m state &ndash;state NEW -m tcp -p tcp &ndash;dport 8888 -j ACCEPT</p>
 
 <h2>更多</h2>
 

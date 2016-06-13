@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: UI | Balloonsys Inc.]]></title>
+  <title><![CDATA[Category: Ui | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ui/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-08-03T08:30:27+08:00</updated>
+  <updated>2016-06-14T01:21:34+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,23 +29,16 @@
 
 <p>建立一个Single VC的工程，添加两个有部分重叠的Button，分别关联上touchUpInSide处理方法。</p>
 
-<p>```objc
-&ndash; (IBAction)buttonAPressed:(id)sender
-{</p>
-
-<pre><code>NSLog(@"You pressed button A");
-</code></pre>
-
-<p>}</p>
-
-<ul>
-<li>(IBAction)buttonBPressed:(id)sender
+<pre><code class="objc">- (IBAction)buttonAPressed:(id)sender
 {
-  NSLog(@&ldquo;You pressed button B&rdquo;);
+    NSLog(@"You pressed button A");
 }
-```</li>
-</ul>
 
+- (IBAction)buttonBPressed:(id)sender
+{
+    NSLog(@"You pressed button B");
+}
+</code></pre>
 
 <p>因为Button B(tag为102)是叠在Button A(tag为101)上面的，所以在重叠区域点击，控制台输出的是You pressed button B。这种情况下，如果希望收到消息的是Button A呢？那就用hitTest吧！</p>
 
@@ -53,14 +46,13 @@
 
 <p>建立一个UIView的子类，然后重写- hitTest:withEvent:方法，
 ```objc
-&ndash; (UIView <em>)hitTest:(CGPoint)point withEvent:(UIEvent </em>)event
-{</p>
+- (UIView <em>)hitTest:(CGPoint)point withEvent:(UIEvent </em>)event
+{
+    for (UIView<em> subview in self.subviews) {
+        CGPoint convertedPoint = [self convertPoint:point toView:subview];
+        UIView </em>result = [subview hitTest:convertedPoint withEvent:event];</p>
 
-<pre><code>for (UIView* subview in self.subviews) {
-    CGPoint convertedPoint = [self convertPoint:point toView:subview];
-    UIView *result = [subview hitTest:convertedPoint withEvent:event];
-
-    if (result.tag == 101){
+<pre><code>    if (result.tag == 101){
         return result;
         break;
     }
@@ -76,7 +68,7 @@ return [super hitTest:point withEvent:event];
 
 <h2>后记</h2>
 
-<p>源代码里有乾坤，不注意看就错过了:&ndash;)</p>
+<p>源代码里有乾坤，不注意看就错过了:-)</p>
 ]]></content>
   </entry>
   

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: IAP | Balloonsys Inc.]]></title>
+  <title><![CDATA[Category: Iap | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/iap/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2015-08-03T08:30:27+08:00</updated>
+  <updated>2016-06-14T01:21:34+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -54,14 +54,10 @@
 
 <h3>请求商品信息</h3>
 
-<p>``` objc</p>
-
-<pre><code>self.productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:self.productIdentifiers];
-self.productsRequest.delegate = self;
-[self.productsRequest start];
+<pre><code class="objc">    self.productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:self.productIdentifiers];
+    self.productsRequest.delegate = self;
+    [self.productsRequest start];
 </code></pre>
-
-<p>```</p>
 
 <p>当苹果服务器做出“成功”的响应时，会调用SKProductsRequestDelegate方法，从response里我们可以拿到products信息。</p>
 
@@ -73,41 +69,33 @@ self.productsRequest.delegate = self;
 
 <h3>选中商品，触发支付请求</h3>
 
-<p>``` objc</p>
-
-<pre><code>SKPayment *payment = [SKPayment paymentWithProduct:product];
-[[SKPaymentQueue defaultQueue] addPayment:payment];
+<pre><code class="objc">    SKPayment *payment = [SKPayment paymentWithProduct:product];
+    [[SKPaymentQueue defaultQueue] addPayment:payment];
 </code></pre>
-
-<p>```</p>
 
 <p>支付请求仅需被加到支付队列即可，StoreKit会完成剩余的工作。当交易的状态发生变化时，客户端APP会收到Transaction Updated事件。</p>
 
 <h3>监听交易状态变化</h3>
 
-<p>``` objc
-&ndash; (void)paymentQueue:(SKPaymentQueue <em>)queue updatedTransactions:(NSArray </em>)transactions
-{</p>
-
-<pre><code>for (SKPaymentTransaction *transaction in transactions){
-    switch (transaction.transactionState) {
-        case SKPaymentTransactionStatePurchased:
-            [self completeTransaction:transaction];
-            break;
-        case SKPaymentTransactionStateFailed:
-            [self failedTransaction:transaction];
-            break;
-        case SKPaymentTransactionStateRestored:
-            [self restoreTransaction:transaction];
-            break;
-        default:
-            break;
+<pre><code class="objc">- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions
+{
+    for (SKPaymentTransaction *transaction in transactions){
+        switch (transaction.transactionState) {
+            case SKPaymentTransactionStatePurchased:
+                [self completeTransaction:transaction];
+                break;
+            case SKPaymentTransactionStateFailed:
+                [self failedTransaction:transaction];
+                break;
+            case SKPaymentTransactionStateRestored:
+                [self restoreTransaction:transaction];
+                break;
+            default:
+                break;
+        }
     }
 }
 </code></pre>
-
-<p>}
-```</p>
 
 <h3>处理商品交易</h3>
 
@@ -115,13 +103,12 @@ self.productsRequest.delegate = self;
 
 <p>示例代码如下，
 ``` objc
-&ndash; (void)completeTransaction:(SKPaymentTransaction *)transaction
-{</p>
+- (void)completeTransaction:(SKPaymentTransaction *)transaction
+{
+    // Cache purchased product.
+    [self.purchasedProductIdentifiers addObject:productIdentifier];</p>
 
-<pre><code>// Cache purchased product.
-[self.purchasedProductIdentifiers addObject:productIdentifier];
-
-// Persist purchased product.
+<pre><code>// Persist purchased product.
 [[NSUserDefaults standardUserDefaults] setBool:YES forKey:productIdentifier];
 [[NSUserDefaults standardUserDefaults] synchronize];
 

@@ -1,101 +1,158 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/02/25/introduction-about-view/</loc>
-        <lastmod>2014-03-01T21:16:31+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/02/27/hacking-auto-layout/</loc>
-        <lastmod>2014-02-28T20:55:50+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/02/28/make-money-from-ad/</loc>
-        <lastmod>2014-04-08T14:11:18+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/03/01/in-app-purchasing-a-freemium-model/</loc>
-        <lastmod>2014-03-02T02:23:00+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/03/05/obj-c-programming/</loc>
-        <lastmod>2014-03-06T23:00:03+08:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://balloonsys.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask/
-        </loc>
-        <lastmod>2014-03-11T23:44:59+08:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension/
-        </loc>
-        <lastmod>2014-03-12T14:22:36+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/03/24/news-headline-in-action/</loc>
-        <lastmod>2014-03-24T17:19:00+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/04/04/ios-dev-tools/</loc>
-        <lastmod>2014-04-16T20:01:58+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action/</loc>
-        <lastmod>2014-04-06T00:32:40+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/04/08/hit-test-sample/</loc>
-        <lastmod>2014-04-08T15:33:24+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5/</loc>
-        <lastmod>2014-09-19T11:40:10+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/09/07/install-redmine-on-centos-6-dot-5/</loc>
-        <lastmod>2014-09-07T17:17:56+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/09/21/basics-of-swift-part-a/</loc>
-        <lastmod>2014-09-23T10:12:15+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/09/23/basics-of-swift-part-b/</loc>
-        <lastmod>2015-02-02T12:49:24+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2014/12/30/2014-summary/</loc>
-        <lastmod>2014-12-31T09:38:26+08:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://balloonsys.github.io/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/
-        </loc>
-        <lastmod>2015-03-26T14:37:17+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2015/07/04/avoid-nested-push-animation/</loc>
-        <lastmod>2015-07-04T23:38:27+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/2015/08/02/books-for-ios-programming/</loc>
-        <lastmod>2015-08-03T08:30:01+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/apps/</loc>
-        <lastmod>2014-05-17T13:53:44+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/blog/archives/</loc>
-        <lastmod>2015-08-03T08:30:01+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/</loc>
-        <lastmod>2015-08-03T08:30:01+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://balloonsys.github.io/robots.txt</loc>
-        <lastmod>2014-02-25T16:42:15+08:00</lastmod>
-    </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://balloonsys.github.io/blog/2016/06/12/tech-notes-1/</loc>
+<lastmod>2016-06-12T05:18:37+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2015/08/02/books-for-ios-programming/</loc>
+<lastmod>2015-08-02T22:18:45+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2015/07/04/avoid-nested-push-animation/</loc>
+<lastmod>2015-07-04T21:28:39+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/</loc>
+<lastmod>2015-03-25T23:02:19+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/12/30/2014-summary/</loc>
+<lastmod>2014-12-30T14:39:15+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/09/23/basics-of-swift-part-b/</loc>
+<lastmod>2014-09-23T10:11:08+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/09/21/basics-of-swift-part-a/</loc>
+<lastmod>2014-09-21T22:59:56+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/09/07/install-redmine-on-centos-6-dot-5/</loc>
+<lastmod>2014-09-07T16:33:08+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5/</loc>
+<lastmod>2014-09-06T11:32:15+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/04/08/hit-test-sample/</loc>
+<lastmod>2014-04-08T14:53:20+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action/</loc>
+<lastmod>2014-04-05T18:45:39+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/04/04/ios-dev-tools/</loc>
+<lastmod>2014-04-04T16:27:54+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/03/24/news-headline-in-action/</loc>
+<lastmod>2014-03-24T16:25:24+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension/</loc>
+<lastmod>2014-03-12T13:45:07+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask/</loc>
+<lastmod>2014-03-11T19:12:58+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/03/05/obj-c-programming/</loc>
+<lastmod>2014-03-05T21:22:44+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/03/01/in-app-purchasing-a-freemium-model/</loc>
+<lastmod>2014-03-01T20:12:22+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/02/28/make-money-from-ad/</loc>
+<lastmod>2014-02-28T16:22:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/02/27/hacking-auto-layout/</loc>
+<lastmod>2014-02-27T15:17:15+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/2014/02/25/introduction-about-view/</loc>
+<lastmod>2014-02-25T15:50:00+08:00</lastmod>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/archives/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/apps/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/ios/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/iap/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/python/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/flask/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/ios/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/ui/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/3rd-party-lib/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/tools/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/ui/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/centos/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/gitlab/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/aliyun/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/vmware/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/swift/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/summary/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/hit-testing/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/responderchain/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/navigation/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/nested-push/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/book/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/reading/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/</loc>
+</url>
 </urlset>
