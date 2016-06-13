@@ -1,0 +1,64 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第一期）
+date: 2016-06-12 05:18:37 +0800
+comments: true
+categories: 技术周报 iOS
+---
+每天都会读一些iOS开发相关的技术文章，以及一些移动平台资讯。零散的转发链接不如汇聚成文。作为首期，明确下周报的标准：分享的每篇文章质量需上乘、且必须是自己读过的。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Phil Schiller: Apple making major changes to the App Store](http://daringfireball.net/2016/06/the_new_app_store)
+
+苹果公司高级副总裁Phil确认50%的APP一天内审核，90%的APP会在两天内审核。所以近期平安好房的版本提交后迅速上线，不是偶然。
+
+不只是期刊类应用可以按订阅收费，所有类型的APP均可以采用这种定价方式。而且，用户订阅一年后，开发者可以得到该用户所付金额的85%哦。
+
+另外一点就是关于搜索广告了，详见链接。顺便插一句，daringfireball网站的博主是自媒体赚钱典范:-)
+
+#### 2) [VP of Apple Pay: Apple Pay在欧洲及亚洲扩张](http://techcrunch.com/2016/05/26/apple-is-working-rapidly-to-launch-apple-pay-in-more-countries-in-asia-and-europe)
+
+说句题外话：Apple Pay在中国上线首日，我就去星巴克（员工熟悉度秒杀其他商户）体验了一把。刷完手机，需要再输入密码（此处的业务逻辑不赘述），手机相当于一张卡（我绑招行信用卡后，分配了个适用于该设备的虚拟卡号，Apple Watch对应另一个不同的虚拟卡号）。
+
+## 开发
+
+#### 1) [Core Data by Tutorials, Second Edition](https://www.raywenderlich.com/store/core-data-by-tutorials)
+
+iOS 9之后，Ray家的教程薄了许多，但质量依旧不赖。如果对Core Data不熟但想学习一下，建议翻看这本Core Data by Tutorials。如果了解一些，但对Core Data的版本化及历史数据迁移不熟，强烈推荐精读第六章Versioning and Migration（作者是Magical Record的作者）。阅读加实践，端午节期间我花了一个下午，很值。
+
+#### 2) [Using CocoaPods to Modularize a Big iOS App](http://product.hubspot.com/blog/architecting-a-large-ios-app-with-cocoapods)
+
+近期看了些对新浪微博、滴滴打车等技术人员的访谈文章，深感基于CocoaPods的模块化架构是比较流行的做法。两年前hubspot分享的这篇文章貌似是源头，他们还提供了实例代码（自己动手找），对理解这一架构思路很有帮助。接下来打算在好房也实践一下，多一点动手、少一些空谈！
+
+#### 3) [为遗留系统替换数据库](http://www.jianshu.com/p/d684693f1d77)
+
+系统级的重构，从来就不是个简单的活儿。好房APP在去年夏天做代码级的重构还引入了两个线上bug。该文作者采用先抽象数据访问层再替换数据库的思路值得借鉴。
+
+## 工具
+
+#### 1) [Minimizing your app’s Memory Footprint](https://developer.apple.com/library/ios/technotes/tn2434/_index.html)
+
+这是苹果近期释出的官方技术文档，教你如何优化APP的内存使用量。
+
+#### 2) [FBMemoryProfiler: Automatic memory leak detection on iOS](https://code.facebook.com/posts/583946315094347/automatic-memory-leak-detection-on-ios/)
+
+这是Facebook一个多月前推出的工具，用于查找内存泄露问题。上周我在平安好房APP集成了下FBMemoryProfiler，但其目前的实用性并不理想。建议看看官方这篇介绍原理的文章。目前那些人云亦云、东抄西摘的技术周报尚无人提及这新潮的“玩具”，本人仅发现途牛网的工程师对此有所关注。
+
+## 其他
+
+#### 1) [一款APP，从设计稿到切图](http://www.ui.cn/detail/67329.html)
+
+如果设计师能把这篇文章好好消化下，且能将一部分付诸行动，项目的推进无疑会更顺畅些。作为首期周报，会穿插一些有价值但可能不是刚过去一周的文章。
+
+#### 2）[The Scrum Guide](http://www.scrumguides.org/docs/scrumguide/v1/scrum-guide-us.pdf)
+
+多少公司、多少领导在扯敏捷开发的大旗？可能很多连软件工程、软件项目管理的门还没摸到呢，推荐看看这份简短的Scrum官方指南。其中有一段话还是很犀利的，好好体会吧。
+
+>Scrum recognizes no sub-teams in the Development Team, regardless of particular domains
+that need to be addressed like testing or business analysis; there are no exceptions to this
+rule
+
+@end

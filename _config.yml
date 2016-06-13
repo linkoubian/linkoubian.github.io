@@ -4,8 +4,8 @@
 
 url: http://balloonsys.github.io
 title: Balloonsys Inc.
-subtitle: Expert in Mobile Computing.
-author: Balloonsys Inc.
+subtitle: Just a blog now.
+author: Linkou Bian
 simple_search: http://google.com/search
 description:
 
@@ -70,7 +70,7 @@ github_skip_forks: true
 
 # Twitter
 twitter_user:
-twitter_tweet_button: true
+twitter_tweet_button: false
 
 # Google +1
 google_plus_one: false

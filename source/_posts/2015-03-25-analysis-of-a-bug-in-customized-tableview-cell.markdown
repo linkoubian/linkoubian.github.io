@@ -1,0 +1,62 @@
+---
+layout: post
+title: 关于自定义表视图Cell遇到的一个bug
+date: 2015-03-25 23:02:19 +0800
+comments: true
+categories: iOS Hit-testing ResponderChain
+---
+今天同事A遇到一个问题：包含一个按钮的TableView Cell，在iOS 6、iOS 8上点击按钮正常工作，但是在iOS 7上却无反应。同事B帮忙review了下代码发现，自定义的Cell在layout时，没有像平常那样调用一下[super layoutSubviews]。
+
+<!--more-->
+
+到这里本来事情也就过去了，但坐在旁边的我听了后，心中仍有几个疙瘩未解。
+
+## iOS 7上点击Cell中的按钮，为何没有响应？
+### 剖析问题
+因为没有安装iOS 7模拟器，就在手上的一台装有iOS 7系统的iPad Mini上运行。无法利用Color Blended Layer分析视图，便给Cell嵌套的各个子View分别设置了不同的背景色。最后发现在iPad上，content view只有一小块，目测仅320*44的样子，并没有期望的那么大（在iPhone上也没有覆盖到出状况的那个按钮范围啦）。此时基本可以判断出：**子View在父视图边界之外，对其触摸无法被检测**。但这终究是表面结论，问题的本质是什么呢？
+
+对于iOS设备用户来说，操作设备的方式主要有三种：触摸屏幕、晃动设备、远程控制设备。对应的事件类型有以下三种：  
+- 触屏事件（Touch Event）  
+- 运动事件（Motion Event）  
+- 远端控制事件（Remote-Control Event）  
+
+点击按钮属于Touch Event，故接下来重点讨论触摸事件。
+
+当应用发生触摸事件后，系统会将该事件添加至一个由UIApplication单例管理的事件队列。然后UIApplication会把触摸事件发给应用的key window对象，该window对象尝试将事件传递给事件所发生的那个view。这个view就是所谓的hit-test view。寻找hit-test view的过程叫hit-testing。
+
+具体说来，此处table view是window的根视图，因此window首先对table view进行hit-test；显然用户点击范围在table view内，因此pointInside:withEvent:返回了YES，继续检查table view的子视图；为简化问题，假设仅有两个cell，分别称为CellA、CellB，点击范围不在CellA中，因此CellA的pointInside:withEvent返回NO，对应的hitTest:withEvent:返回nil；点击范围“看起来”在CellB中，但是，但是啊，CellB的content view没有期望的那么大，没有“包含”按钮范围，所以pointInside:withEvent：也是返回NO（注意：hitTest:withEvent:会在view的所有子view中递归调用，但在CellB上第一次调用pointInside:withEvent:方法时就返回NO的时候不会也没必要继续在该cell的子视图上递归了）。所以，此处触摸事件的hit-test view是table view，而不是期望的button。
+
+table view（作为first responder）作为此时的hit-test view，但它并没有处理触摸事件，所以事件被传递给table view的next responder，此处为table view所在的controller。如果在controller里，实现了didSelectRow方法，则事件在此被处理掉；否则一直往next responder传递，到了window也处理不了则传递给application（响应链的最后一环）。如果application对象仍然无法处理，则系统会丢弃该事件。
+
+以上通过分析事件的传递及响应，解释了第一个问题，即iOS 7上按钮关联的事件代码为何没有执行。
+
+### 解决问题
+方案一，在自定义Cell里重写hitTest:withEvent:方法，轮到检查按钮这个子view时，返回按钮视图。
+
+方案二，既然问题出在content view没有期望的大上，就应该“尽量”让他如期望的那样大，即在cell的layoutSubViews时调用super方法。
+
+## 为何iOS 8正常，就iOS 7掉链子？
+### 剖析问题
+iOS 6、8上自定义的cell既然能够正常设置content view的大小，说明content view本来是可以自动按照需要去设置自身大小的。毕竟，你在自定义的cell里都没有去特意为content view布局（未调super的layout方法）。
+
+但iOS 7上content view没有自动调整，需要调用table view cell的layoutSubViews方法才行。说明iOS 7里table view cell的layout方法做了特别处理。
+
+为何要特别处理？先大胆的猜测是跟cell的视图结构有关。本来嘛，从6到7时Cell滑动删除的样式都变了。但光猜测是不够的，我们可以一探其cell结构之究竟。
+
+借助View的隐藏方法recursiveDescription，可以打印视图的层次结构。调用该方法时可以给View临时加下方法声明。
+
+最终在iOS 7上我们发现：**cell与contentView之间多了一层UITableViewCellScrollView**。
+
+给这个Scroll View设置背景色，发现它的bounds是期望的大小。可以猜测，不调用super的layout方法时，table view cell的根视图的大小会自动调整好（table view的宽、cell的高），但iOS 7上其根视图是Scroll View，Scroll View的大小调整好了，但是Scroll View的子视图（Content View）的大小需要我们自己保证。
+
+### 解决问题
+根据以上分析，该BUG场景下，明显应该采用方案二。
+
+同时获得的教训是，苹果对其基础框架的实现是会有调整的，我们应该按照API的使用习惯来编码，比如调用super的viewDidLoad、layoutSubviews等不能少。否则，客户代码便会因框架代码的调整而受到影响。
+
+再把开头说过的结论小结一遍：**在当前view的bounds之外的触摸不会被接收，即使它是当前view的sub view。当你把当前view的clipToBounds属性设置成false，并且把subView移动到当前view的bounds之外的时候，这种情况就会出现**。
+
+## 参考资料
+1. 苹果官方文档：[Event Delivery: The Responder Chain](https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/event_delivery_responder_chain/event_delivery_responder_chain.html#//apple_ref/doc/uid/TP40009541-CH4-SW2) 
+2. 网络上的译文：[事件传递之响应链](http://nsdifficult.com/blog/20140314/event/)  
+3. 一年前我写过的一篇关于hitTest文章：[hitTest示例](http://balloonsys.com/blog/2014/04/08/hit-test-sample/)  
