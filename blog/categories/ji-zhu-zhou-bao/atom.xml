@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-06-15T10:43:57+08:00</updated>
+  <updated>2016-06-15T10:48:22+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -18,7 +18,7 @@
     <link href="http://balloonsys.github.io/blog/2016/06/18/tech-notes-2/"/>
     <updated>2016-06-18T20:01:44+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/06/18/tech-notes-2</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括平安好房APP在模块化架构推进过程中遇到的一些有意思的技术问题。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括平安好房APP在模块化架构推进过程中遇到的一些有意思的技术问题，当然也有一点点关于WWDC 16的资讯（开发者版）。</p>
 
 <!--more-->
 
