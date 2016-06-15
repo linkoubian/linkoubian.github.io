@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>平安好房iOS开发团队技术周报（第二期） - Balloonsys Inc.</title>
+  <meta name="author" content="Linkou Bian">
+
+  
+  <meta name="description" content="本期周报主要包括平安好房APP在模块化架构推进过程中遇到的一些有意思的技术问题。 &lt;!—more—> 资讯 1) WWDC 2016 新系统发布会5分钟无废话版简介 苹果还宣布了一个为 Flash/SSD储存设备优化的新文件系统Apple File System（APFS）， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/06/18/tech-notes-2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Balloonsys Inc.</a></h1>
+  
+    <h2>Just a blog now.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="balloonsys.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第二期）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-06-18T20:01:44+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>8:01 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>本期周报主要包括平安好房APP在模块化架构推进过程中遇到的一些有意思的技术问题。</p>
+
+<p>&lt;!—more—></p>
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.mac52ipod.cn/post/apple-wwdc-2016-event-5-min-briefintroduction.php">WWDC 2016 新系统发布会5分钟无废话版简介</a></h4>
+
+<p>苹果还宣布了一个为 Flash/SSD储存设备优化的新文件系统Apple File System（APFS），希望对我那台老MBP有所帮助（前不久刚自己动手换了SSD）。APFS预计将在2017年发布，暂不会提供它的开源实现。</p>
+
+<p>技术人员的目光不要被各类媒体的无脑小编带偏，至于其他方面的更新，此处不表，冷嘲也好、热讽也罢。</p>
+
+<h4>2) <a href="https://zhuanlan.zhihu.com/p/21354243">关于 WWDC 16 总得说点什么</a></h4>
+
+<p>开发者记录的一些感想，作者曾在QQ音乐团队独立完成Apple Watch端第一个版本，目前在阿里巴巴。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://stackoverflow.com/questions/22018272/nsinvocation-returns-value-but-makes-app-crash-with-exc-bad-access">NSInvocation returns value but crash the app</a></h4>
+
+<p>在平安好房APP推进模块化架构过程中，对一些曾经使用MRC的代码做了ARC迁移。冷不丁的被NSInvocation调用给坑了一把。</p>
+
+<p>在ARC模式下，getReturnValue：仅仅是从invocation的返回值拷贝到指定的内存地址，如果返回值是一个NSObject对象的话，是没有处理内存管理的。而我们在定义returnValue时使用的是__strong类型的id类型，ARC就会假设该内存块已被retain（实际没有）。当returnValue出了定义域，被释放时，导致crash。</p>
+
+<h4>2) <a href="http://stackoverflow.com/questions/7017281/performselector-may-cause-a-leak-because-its-selector-is-unknown">performSelector may cause a leak because its selector is unknown</a></h4>
+
+<p>依旧是ARC迁移相关。在迁移到ARC之后，编译器给出了一个可能leak的警告。仔细研究后，决定采用SuppressPerformSelectorLeakWarning宏解决。</p>
+
+<h4>3) <a href="https://www.raywenderlich.com/126365/ios-frameworks-tutorial">Creating and Distributing iOS Frameworks</a></h4>
+
+<p>文章介绍了Framework模板的用法，特别是如何在项目中使用新建的Framework，其中的方案在好房统计SDK开发、架构演进过程中均实践过。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://ayjkdev.top/2016/01/10/cocoapods-questions/">CocoaPods中一些问题的解决</a></h4>
+
+<p>上一期周报提到过，目前不少公司模块化架构采用的CocoaPods方案。在使用CocoaPods的过程中难免遇到各类问题，翻翻这篇文章的总结，相信你会有些收获。</p>
+
+<h4>2) <a href="http://www.schukin.com/achieving-awesomeness-with-local-cocoapods/">Achieving Awesomeness with Local CocoaPods</a></h4>
+
+<p>作者（曾经是Twitter for Apple Watch的负责人）介绍了使用私有Pods的一些思考，有一段话非常赞同：</p>
+
+<blockquote><p>While this approach works great if your Pods are stable, I’ve found that this doesn’t work too well if your Pods are still in active development; keeping them in lockstep with your application code can be a huge pain, particularly on larger teams with multiple feature branches.</p></blockquote>
+
+<h4>3) <a href="http://soledad.me/blog/2015/12/21/octopress-and-el-capitan/">Octopress与El Capitan冲突问题解决方案</a></h4>
+
+<p>近一年没有写blog，近一年没有用Octopress，所以与El Capitan冲突的问题也是上周末才知道。</p>
+
+<p>小结一下：新系统下需要新的依赖库，而这些库需要ruby2.2.3的版本安装。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://zhuanlan.zhihu.com/p/21350212">注册在开曼的公司，其期权究竟能不能买？</a></h4>
+
+<h4>2) 文摘</h4>
+
+<p>人生的困扰大抵来自四个方面：不可避免的死亡，内心深处的孤独感，我们追求的自由以及生活并无显而易见的意义可言。</p>
+
+<p>@end</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-06-18T20:01:44+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>8:01 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/06/12/tech-notes-1/" title="Previous Post: 平安好房iOS开发团队技术周报（第一期）">&laquo; 平安好房iOS开发团队技术周报（第一期）</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/06/18/tech-notes-2/">平安好房iOS开发团队技术周报（第二期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/06/12/tech-notes-1/">平安好房iOS开发团队技术周报（第一期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/02/books-for-ios-programming/">这些年读过的iOS开发类图书</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/04/avoid-nested-push-animation/">Avoid Nested Push Animation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/">关于自定义表视图Cell遇到的一个bug</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Linkou Bian -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
