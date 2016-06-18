@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>平安好房iOS开发团队技术周报（第三期） - Balloonsys Inc.</title>
+  <meta name="author" content="Linkou Bian">
+
+  
+  <meta name="description" content="本期周报主要包括iOS 10的一些资讯，以及iOS一些常见问题的设计方案等。 资讯 1) 开发者所需要知道的iOS 10 SDK新特性 从应用开发者的角度看，iOS 10中并没有加入太多内容。 2) 关于iOS 10中ATS的问题 从2017年1月1日起， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/06/18/tech-notes-3/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Balloonsys Inc.</a></h1>
+  
+    <h2>Just a blog now.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="balloonsys.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第三期）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-06-18T10:50:14+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:50 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>本期周报主要包括iOS 10的一些资讯，以及iOS一些常见问题的设计方案等。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://onevcat.com/2016/06/ios-10-sdk/">开发者所需要知道的iOS 10 SDK新特性</a></h4>
+
+<p>从应用开发者的角度看，iOS 10中并没有加入太多内容。</p>
+
+<h4>2) <a href="https://onevcat.com/2016/06/ios-10-ats/">关于iOS 10中ATS的问题</a></h4>
+
+<p>从2017年1月1日起，所有的新提交app默认是不允许使用NSAllowsArbitraryLoads来绕过ATS限制的。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/0497afdad36d#">可复用而且高度解耦的用户统计埋点实现</a></h4>
+
+<p>该埋点方案和我上个月做的统计SDK思路比较一致。不同的在于用户点击事件，文中的做法是拦截UIControl的方法，而我倾向于由APP自行埋点。主要原因在于，被hook的范围较广，同时我们点击事件埋点时，有酌情传入参数的额外需求。</p>
+
+<h4>2) <a href="https://segmentfault.com/a/1190000005744865">iOS释放自注销模式设计</a></h4>
+
+<p>作者描述的问题的确是我们开发中的痛点，只不过我对这篇文章理解的还不够，毕竟工程师的层次也是有差异的:P</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://medium.com/swift-and-ios-writing/a-quick-look-at-uiviewpropertyanimator-a107fb9da5b5">iOS 10 UIKit Animations</a></h4>
+
+<p>我倒是对文章作者的开源库<a href="https://github.com/marmelroy/Interpolate">Interpolate</a>更感兴趣，哈哈！</p>
+
+<h4>2) <a href="https://luckymarmot.com/zh-hans/paw">Mac最先进的HTTP客户端</a></h4>
+
+<p>做iOS开发，联调API是件很麻烦的事情，特别是当提供API的是个开发新手。联调阶段我通常选用Paw而不是Postman。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://developer.apple.com/support/beta-software/install-ios-beta/">iOS beta Software Installation Guide</a></h4>
+
+<p>本周已采用Configuration Profile的方式安装了iOS 10的beta版，比Restore Image的方案更简便。</p>
+
+<h4>2) 观点</h4>
+
+<p>一流的人做事，二流的人评论，三流的人吐槽，四流、五流的人评论或者吐槽别人的评论或者吐槽… 除了第一类人，剩下的都不可能失败。</p>
+
+<p>@end</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-06-18T10:50:14+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:50 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/06/12/tech-notes-1/" title="Previous Post: 平安好房iOS开发团队技术周报（第一期）">&laquo; 平安好房iOS开发团队技术周报（第一期）</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2016/06/18/tech-notes-2/" title="Next Post: 平安好房iOS开发团队技术周报（第二期）">平安好房iOS开发团队技术周报（第二期） &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/06/18/tech-notes-2/">平安好房iOS开发团队技术周报（第二期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/06/18/tech-notes-3/">平安好房iOS开发团队技术周报（第三期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/06/12/tech-notes-1/">平安好房iOS开发团队技术周报（第一期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/02/books-for-ios-programming/">这些年读过的iOS开发类图书</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/04/avoid-nested-push-animation/">Avoid Nested Push Animation</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Linkou Bian -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

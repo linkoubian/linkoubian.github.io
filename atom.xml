@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-06-15T10:48:22+08:00</updated>
+  <updated>2016-06-18T11:52:18+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -76,6 +76,60 @@
 <h4>2) 文摘</h4>
 
 <p>人生的困扰大抵来自四个方面：不可避免的死亡，内心深处的孤独感，我们追求的自由以及生活并无显而易见的意义可言。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/06/18/tech-notes-3/"/>
+    <updated>2016-06-18T10:50:14+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/06/18/tech-notes-3</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括iOS 10的一些资讯，以及iOS一些常见问题的设计方案等。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://onevcat.com/2016/06/ios-10-sdk/">开发者所需要知道的iOS 10 SDK新特性</a></h4>
+
+<p>从应用开发者的角度看，iOS 10中并没有加入太多内容。</p>
+
+<h4>2) <a href="https://onevcat.com/2016/06/ios-10-ats/">关于iOS 10中ATS的问题</a></h4>
+
+<p>从2017年1月1日起，所有的新提交app默认是不允许使用NSAllowsArbitraryLoads来绕过ATS限制的。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/0497afdad36d#">可复用而且高度解耦的用户统计埋点实现</a></h4>
+
+<p>该埋点方案和我上个月做的统计SDK思路比较一致。不同的在于用户点击事件，文中的做法是拦截UIControl的方法，而我倾向于由APP自行埋点。主要原因在于，被hook的范围较广，同时我们点击事件埋点时，有酌情传入参数的额外需求。</p>
+
+<h4>2) <a href="https://segmentfault.com/a/1190000005744865">iOS释放自注销模式设计</a></h4>
+
+<p>作者描述的问题的确是我们开发中的痛点，只不过我对这篇文章理解的还不够，毕竟工程师的层次也是有差异的:P</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://medium.com/swift-and-ios-writing/a-quick-look-at-uiviewpropertyanimator-a107fb9da5b5">iOS 10 UIKit Animations</a></h4>
+
+<p>我倒是对文章作者的开源库<a href="https://github.com/marmelroy/Interpolate">Interpolate</a>更感兴趣，哈哈！</p>
+
+<h4>2) <a href="https://luckymarmot.com/zh-hans/paw">Mac最先进的HTTP客户端</a></h4>
+
+<p>做iOS开发，联调API是件很麻烦的事情，特别是当提供API的是个开发新手。联调阶段我通常选用Paw而不是Postman。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://developer.apple.com/support/beta-software/install-ios-beta/">iOS beta Software Installation Guide</a></h4>
+
+<p>本周已采用Configuration Profile的方式安装了iOS 10的beta版，比Restore Image的方案更简便。</p>
+
+<h4>2) 观点</h4>
+
+<p>一流的人做事，二流的人评论，三流的人吐槽，四流、五流的人评论或者吐槽别人的评论或者吐槽… 除了第一类人，剩下的都不可能失败。</p>
 
 <p>@end</p>
 ]]></content>
@@ -2155,17 +2209,6 @@ rule</p></blockquote>
 <p>集成AdMob的版本尚未上架，自己在手机上对着开发者证书安装的APP里的广告变着法子点击（换不同的VPN服务器、重置IDFA），竟然也能收获三十来刀。但这是冒着被封号的危险，谨慎啊！</p>
 
 <p>这里有篇关于AdMob的<a href="http://blog.sina.com.cn/s/blog_7193dd920101keay.html">经验贴</a>，很有料。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[与Auto Layout相关的各种知识点]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/02/27/hacking-auto-layout/"/>
-    <updated>2014-02-27T15:17:15+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/02/27/hacking-auto-layout</id>
-    <content type="html"><![CDATA[<p>Auto Layout不光为设计不同尺寸的界面带来了便利，在应用的多语言支持方面也有广泛使用。</p>
-
-<p>继续看书</p>
 ]]></content>
   </entry>
   
