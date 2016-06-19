@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-06-18T12:16:39+08:00</updated>
+  <updated>2016-06-19T21:41:53+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/06/22/tech-notes-4/"/>
+    <updated>2016-06-22T10:59:24+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/06/22/tech-notes-4</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.augustyniak.me/post/2016/06/wwdc-sessions-watching-guide/">WWDC Videos Watching Guide</a></h4>
+
+<p>另外也可以看一下百度Hi iOS团队写的<a href="http://baiduhidevios.github.io/2016/06/14/WWDC-2016-%E8%A7%82%E5%BD%B1%E6%8C%87%E5%8D%97/">WWDC 2016 观影指南</a></p>
+
+<h4>2) <a href=""></a></h4>
+
+<h2>开发</h2>
+
+<h4>1) <a href=""></a></h4>
+
+<h4>2) <a href=""></a></h4>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://revealapp.com/blog/reveal-common-tips-cn.html">Reveal常用技巧</a></h4>
+
+<p>通过Xcode中加断点的方式集成Reveal比较惊艳。iOS系统越狱之后使用Reveal查看别人App视图结构的过程可以参考这篇<a href="http://hihilong.com/2015/11/20/ios9-reveal-jailbreak-app/">文章</a>。</p>
+
+<p>另外，听云某位工程师在某版本Reveal的dylib不支持arm时制作支持arm版的<a href="http://blog.tingyun.com/web/article/detail/262">实践</a>（其实那个时间点最新的Reveal完全支持啊！！！）</p>
+
+<h4>2) <a href=""></a></h4>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://azureyu.com/iOSDevRecord.html">iOS独立开发记录</a></h4>
+
+<p>从想法、设计、开发到最终发布，总结个人开发APP的历程。</p>
+
+<h4>2) <a href="http://www.ruanyifeng.com/blog/2016/05/time-management.html">时间管理的七句话</a></h4>
+
+<p>网上有不少转载Facebook内部高效工作PPT指南的文章，配的中文不忍直视。推荐看这篇带注释的精华版。</p>
+
+<blockquote><p>不要同时做多件事，结果可能都没做好，还拖长了工作时间。</p></blockquote>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三期）]]></title>
@@ -128,6 +178,8 @@
 <h2>其他</h2>
 
 <h4>1) <a href="https://zhuanlan.zhihu.com/p/21350212">注册在开曼的公司，其期权究竟能不能买？</a></h4>
+
+<p>updated on June 19: 当事公司是青云，看其<a href="http://media.weibo.cn/article?id=2309403987980699197994">回应</a>。</p>
 
 <h4>2) 文摘</h4>
 
@@ -2185,32 +2237,6 @@ rule</p></blockquote>
 
 <p>如果你需要快速了解IAP的话，不妨读读<a href="http://brianflove.com/author/blove/">Brian Love</a>的这篇<a href="http://brianflove.com/2013/02/11/in-app-purchasing-in-ios-6/">文章</a>。
 如果你需要快速实现IAP的话，不妨试试<a href="http://mattt.me">Mattt Thompson</a>的开源库<a href="https://github.com/mattt/CargoBay">CargoBay</a>。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[为应用添加广告支持]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/02/28/make-money-from-ad/"/>
-    <updated>2014-02-28T16:22:38+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/02/28/make-money-from-ad</id>
-    <content type="html"><![CDATA[<p>年前做的一款关于公共自行车租赁的APP，自我感觉还是比较实用的。为了造福杭城更多的iPhone用户，新版本打算采用免费+iAP（去广告）的方式发行。所以，今天便研究了下iAd及AdMob两种广告平台的集成方法。</p>
-
-<!--more-->
-
-
-<h2>AdMob</h2>
-
-<p>想要支持AdMob，需要首先注册账号，添加应用，然后便可获得Publisher ID。至于如何配置工程以支持AdMob，可以参考<a href="https://developers.google.com/mobile-ads-sdk/docs/#ios">这里</a>。</p>
-
-<h2>iAd &amp; AdMob</h2>
-
-<p>如果是手动编写代码以同时支持iAd和AdMob可参考<a href="http://www.apptite.be/tutorial_mixing_ads.php">这里</a>。另外Github上有一个开源库<a href="https://github.com/larsacus/LARSAdController">LARSAdController</a>，使用起来非常方便。</p>
-
-<h2>收益</h2>
-
-<p>集成AdMob的版本尚未上架，自己在手机上对着开发者证书安装的APP里的广告变着法子点击（换不同的VPN服务器、重置IDFA），竟然也能收获三十来刀。但这是冒着被封号的危险，谨慎啊！</p>
-
-<p>这里有篇关于AdMob的<a href="http://blog.sina.com.cn/s/blog_7193dd920101keay.html">经验贴</a>，很有料。</p>
 ]]></content>
   </entry>
   

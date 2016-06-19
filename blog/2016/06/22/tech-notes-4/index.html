@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>为应用添加广告支持 - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第四期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="年前做的一款关于公共自行车租赁的APP，自我感觉还是比较实用的。为了造福杭城更多的iPhone用户，新版本打算采用免费+iAP（去广告）的方式发行。所以，今天便研究了下iAd及AdMob两种广告平台的集成方法。 AdMob 想要支持AdMob，需要首先注册账号，添加应用， &hellip;">
+  <meta name="description" content="本期周报主要包括 资讯 1) WWDC Videos Watching Guide 另外也可以看一下百度Hi iOS团队写的WWDC 2016 观影指南 2) 开发 1) 2) 工具 1) Reveal常用技巧 通过Xcode中加断点的方式集成Reveal比较惊艳。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2014/02/28/make-money-from-ad/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/06/22/tech-notes-4/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -68,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">为应用添加广告支持</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第四期）</h1>
     
     
       <p class="meta">
@@ -77,31 +77,55 @@
 
 
 
-<time class='entry-date' datetime='2014-02-28T16:22:38+08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>4:22 pm</span></time>
+<time class='entry-date' datetime='2016-06-22T10:59:24+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>10:59 am</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>年前做的一款关于公共自行车租赁的APP，自我感觉还是比较实用的。为了造福杭城更多的iPhone用户，新版本打算采用免费+iAP（去广告）的方式发行。所以，今天便研究了下iAd及AdMob两种广告平台的集成方法。</p>
+<div class="entry-content"><p>本期周报主要包括</p>
 
 <!--more-->
 
 
-<h2>AdMob</h2>
+<h2>资讯</h2>
 
-<p>想要支持AdMob，需要首先注册账号，添加应用，然后便可获得Publisher ID。至于如何配置工程以支持AdMob，可以参考<a href="https://developers.google.com/mobile-ads-sdk/docs/#ios">这里</a>。</p>
+<h4>1) <a href="http://www.augustyniak.me/post/2016/06/wwdc-sessions-watching-guide/">WWDC Videos Watching Guide</a></h4>
 
-<h2>iAd &amp; AdMob</h2>
+<p>另外也可以看一下百度Hi iOS团队写的<a href="http://baiduhidevios.github.io/2016/06/14/WWDC-2016-%E8%A7%82%E5%BD%B1%E6%8C%87%E5%8D%97/">WWDC 2016 观影指南</a></p>
 
-<p>如果是手动编写代码以同时支持iAd和AdMob可参考<a href="http://www.apptite.be/tutorial_mixing_ads.php">这里</a>。另外Github上有一个开源库<a href="https://github.com/larsacus/LARSAdController">LARSAdController</a>，使用起来非常方便。</p>
+<h4>2) <a href=""></a></h4>
 
-<h2>收益</h2>
+<h2>开发</h2>
 
-<p>集成AdMob的版本尚未上架，自己在手机上对着开发者证书安装的APP里的广告变着法子点击（换不同的VPN服务器、重置IDFA），竟然也能收获三十来刀。但这是冒着被封号的危险，谨慎啊！</p>
+<h4>1) <a href=""></a></h4>
 
-<p>这里有篇关于AdMob的<a href="http://blog.sina.com.cn/s/blog_7193dd920101keay.html">经验贴</a>，很有料。</p>
+<h4>2) <a href=""></a></h4>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://revealapp.com/blog/reveal-common-tips-cn.html">Reveal常用技巧</a></h4>
+
+<p>通过Xcode中加断点的方式集成Reveal比较惊艳。iOS系统越狱之后使用Reveal查看别人App视图结构的过程可以参考这篇<a href="http://hihilong.com/2015/11/20/ios9-reveal-jailbreak-app/">文章</a>。</p>
+
+<p>另外，听云某位工程师在某版本Reveal的dylib不支持arm时制作支持arm版的<a href="http://blog.tingyun.com/web/article/detail/262">实践</a>（其实那个时间点最新的Reveal完全支持啊！！！）</p>
+
+<h4>2) <a href=""></a></h4>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://azureyu.com/iOSDevRecord.html">iOS独立开发记录</a></h4>
+
+<p>从想法、设计、开发到最终发布，总结个人开发APP的历程。</p>
+
+<h4>2) <a href="http://www.ruanyifeng.com/blog/2016/05/time-management.html">时间管理的七句话</a></h4>
+
+<p>网上有不少转载Facebook内部高效工作PPT指南的文章，配的中文不忍直视。推荐看这篇带注释的精华版。</p>
+
+<blockquote><p>不要同时做多件事，结果可能都没做好，还拖长了工作时间。</p></blockquote>
+
+<p>@end</p>
 </div>
 
 
@@ -117,12 +141,12 @@
 
 
 
-<time class='entry-date' datetime='2014-02-28T16:22:38+08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>4:22 pm</span></time>
+<time class='entry-date' datetime='2016-06-22T10:59:24+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>10:59 am</span></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/ios/'>ios</a>
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
   
 </span>
 
@@ -138,10 +162,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/02/27/hacking-auto-layout/" title="Previous Post: 与Auto Layout相关的各种知识点">&laquo; 与Auto Layout相关的各种知识点</a>
+        <a class="basic-alignment left" href="/blog/2016/06/18/tech-notes-3/" title="Previous Post: 平安好房iOS开发团队技术周报（第三期）">&laquo; 平安好房iOS开发团队技术周报（第三期）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/03/01/in-app-purchasing-a-freemium-model/" title="Next Post: 移动应用的Freemium模式">移动应用的Freemium模式 &raquo;</a>
       
     </p>
   </footer>
