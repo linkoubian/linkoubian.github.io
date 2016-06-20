@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-06-19T21:41:53+08:00</updated>
+  <updated>2016-06-20T11:35:58+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,13 +29,11 @@
 
 <p>另外也可以看一下百度Hi iOS团队写的<a href="http://baiduhidevios.github.io/2016/06/14/WWDC-2016-%E8%A7%82%E5%BD%B1%E6%8C%87%E5%8D%97/">WWDC 2016 观影指南</a></p>
 
-<h4>2) <a href=""></a></h4>
-
 <h2>开发</h2>
 
-<h4>1) <a href=""></a></h4>
+<h4>1) <a href="http://www.jianshu.com/p/be79b8729bf8">iMessage App开发</a></h4>
 
-<h4>2) <a href=""></a></h4>
+<p>上周看<a href="https://twitter.com/jquave">Jason Newell</a>的文章<a href="http://jamesonquave.com/blog/creating-imessage-apps-with-xcode-8-tutorial-part-1/">Creating iMessage Apps on iOS 10 with Swift – Tutorial (Part 1)</a>做过一个iMessage Sticker，让用户发送平安『医食住行玩』这样的GIF动画。</p>
 
 <h2>工具</h2>
 
@@ -44,8 +42,6 @@
 <p>通过Xcode中加断点的方式集成Reveal比较惊艳。iOS系统越狱之后使用Reveal查看别人App视图结构的过程可以参考这篇<a href="http://hihilong.com/2015/11/20/ios9-reveal-jailbreak-app/">文章</a>。</p>
 
 <p>另外，听云某位工程师在某版本Reveal的dylib不支持arm时制作支持arm版的<a href="http://blog.tingyun.com/web/article/detail/262">实践</a>（其实那个时间点最新的Reveal完全支持啊！！！）</p>
-
-<h4>2) <a href=""></a></h4>
 
 <h2>其他</h2>
 
