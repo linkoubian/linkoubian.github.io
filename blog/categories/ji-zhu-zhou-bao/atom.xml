@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-06-20T18:09:20+08:00</updated>
+  <updated>2016-06-21T11:21:05+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,6 +29,10 @@
 
 <p>另外也可以看一下百度Hi iOS团队写的<a href="http://baiduhidevios.github.io/2016/06/14/WWDC-2016-%E8%A7%82%E5%BD%B1%E6%8C%87%E5%8D%97/">WWDC 2016 观影指南</a></p>
 
+<h4>2) <a href="http://www.theverge.com/2016/6/15/11940010/walt-mossberg-apple-wwdc-2016-recap-themes">Apple is still a world of its own</a></h4>
+
+<p>文中提到了an Apple executive匿名回答为何不提供Android版iMessage。一是卖出的设备足够多，已经有足够量级的数据支撑其AI；二是有助于卖出更多苹果设备。</p>
+
 <h2>开发</h2>
 
 <h4>1) <a href="https://developer.apple.com/library/prerelease/content/samplecode/IceCreamBuilder/Introduction/Intro.html">iMessage App开发</a></h4>
@@ -36,6 +40,14 @@
 <p>上周看<a href="https://twitter.com/jquave">Jason Newell</a>的文章<a href="http://jamesonquave.com/blog/creating-imessage-apps-with-xcode-8-tutorial-part-1/">Creating iMessage Apps on iOS 10 with Swift – Tutorial (Part 1)</a>做过一个iMessage Sticker，让用户发送平安『医食住行玩』这样的GIF动画。</p>
 
 <p>最好的案例非苹果的官方Sample莫属，请点击标题中的链接。</p>
+
+<h4>2) <a href="http://colin1994.github.io/2016/06/17/Call-Directory-Extension-Study/">来电黑名单</a></h4>
+
+<p>iOS 10中引入了CallKit，意味着现在可以通过 Call Directory Extension 来实现电话黑名单功能了。</p>
+
+<h4>3) <a href="http://jamesonquave.com/blog/adding-siri-to-ios-10-apps-in-swift-tutorial/">Intents Extension</a></h4>
+
+<p>把玩SiriKit，更多内容请见该文的<a href="http://jamesonquave.com/blog/sirikit-swift-3-resolutions-sirikit-tutorial-part-2/">下篇</a>。</p>
 
 <h2>工具</h2>
 
