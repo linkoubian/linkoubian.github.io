@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-06-21T11:21:05+08:00</updated>
+  <updated>2016-06-21T13:14:00+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/06/22/tech-notes-4/"/>
-    <updated>2016-06-22T10:59:24+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/06/22/tech-notes-4</id>
+    <link href="http://balloonsys.github.io/blog/2016/06/21/tech-notes-4/"/>
+    <updated>2016-06-21T13:13:13+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/06/21/tech-notes-4</id>
     <content type="html"><![CDATA[<p>本期周报主要包括iMessage Extension的开发、Reveal的使用等内容。</p>
 
 <!--more-->
@@ -47,7 +47,7 @@
 
 <h4>3) <a href="http://jamesonquave.com/blog/adding-siri-to-ios-10-apps-in-swift-tutorial/">Intents Extension</a></h4>
 
-<p>把玩SiriKit，更多内容请见该文的<a href="http://jamesonquave.com/blog/sirikit-swift-3-resolutions-sirikit-tutorial-part-2/">下篇</a>。</p>
+<p>把玩SiriKit，更多内容请见该文的<a href="http://jamesonquave.com/blog/sirikit-swift-3-resolutions-sirikit-tutorial-part-2/">下篇</a>。更翔实的<a href="https://developer.apple.com/library/prerelease/content/samplecode/UnicornChat/Introduction/Intro.html#//apple_ref/doc/uid/TP40017332-Intro-DontLinkElementID_2">案例</a>还是看苹果的吧。</p>
 
 <h2>工具</h2>
 
