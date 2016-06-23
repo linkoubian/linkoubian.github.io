@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-06-23T17:11:12+08:00</updated>
+  <updated>2016-06-23T17:13:45+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -63,7 +63,7 @@
 
 <h4>1) <a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a></h4>
 
-<p>自从转行做iOS开发以来，一直使用Git做代码版本管理。而Git分支的最佳实践，个人最推崇<a href="http://nvie.com/about/">Vincent Driessen</a>的方案。</p>
+<p>自从转行做iOS开发以来，一直使用Git做代码版本管理。而Git分支的最佳实践，个人最推崇<a href="http://nvie.com/about/">Vincent Driessen</a>的做法。之所以po这个，是因为昨天运维部宣讲了服务端代码分支的管理方案。</p>
 
 <h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MzA4ODgwNjk1MQ==&amp;mid=2653788317&amp;idx=1&amp;sn=b5ca8129c2ae99b37f1872d1bbe367c4">漫谈 Airbnb 支付的国际化</a></h4>
 
