@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>平安好房iOS开发团队技术周报（第五期） - Balloonsys Inc.</title>
+  <meta name="author" content="Linkou Bian">
+
+  
+  <meta name="description" content="本期周报主要包括Xcode扩展、Method Swizzle、Git分支实践等内容。 资讯 1) iOS 10 内核未加密 苹果发言人称: “The kernel cache doesn’t contain any user info, and by unencrypting it we’re &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/06/23/tech-notes-5/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Balloonsys Inc.</a></h1>
+  
+    <h2>Just a blog now.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="balloonsys.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第五期）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-06-23T16:31:43+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2016</span></span> <span class='time'>4:31 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>本期周报主要包括Xcode扩展、Method Swizzle、Git分支实践等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://daringfireball.net/linked/2016/06/22/ios-10-kernel">iOS 10 内核未加密</a></h4>
+
+<p>苹果发言人称: “The kernel cache doesn’t contain any user info, and by unencrypting it we’re able to optimize the operating system’s performance without compromising security.”</p>
+
+<h4>2) <a href="https://www.raywenderlich.com/135655/whats-new-swift-3">What’s New in Swift 3?</a></h4>
+
+<p>虽然暂时还没必要迁移至Swift 3（下半年还会有改动），但语言的主要变动还是需要了解的。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.russbishop.net/xcode-extensions">Xcode Source Editor Extension</a></h4>
+
+<p>在菜单触发插件，XCSourceEditorCommand 拦截到该消息。我们从 invocation 中拿到 buffer，根据当前行可以获取到需要的数据。我的<a href="https://github.com/balloonsys/PAXcodePlugin">示例</a>是直接增加一行NSLog代码，所以把数据设置回去即可。</p>
+
+<p>该教程不仅教你怎么做，还将可能遇到的问题及可尝试的解决方案写的很明白。我实现了一个打印当前方法名的插件，用以快速插入代码。另外，如果需要中文教程，可参看钟颖的<a href="https://zhuanlan.zhihu.com/p/21374552">文章</a>。</p>
+
+<h4>2) <a href="http://xiongzenghuidegithub.github.io/blog/2016/04/22/runtimeying-yong-fang-zhi-an-niu-lian-xu-dian-ji/">借助Runtime防止按钮连续点击</a></h4>
+
+<p>按钮连续点击的问题解决起来不难，使用Runtime交换SEL即可控制。</p>
+
+<h4>3) <a href="http://www.jianshu.com/p/cabec2786241">UICollectionView的自定义布局</a></h4>
+
+<p>这篇文章不是分享UICollectionView的详细使用教程，而是属于比较高级的使用技巧。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://simpholders.com">SimPholders</a></h4>
+
+<p>从menu快速访问iOS模拟器里的app目录。</p>
+
+<h4>2) <a href="https://www.sqlitepro.com">SQLPro for SQLite</a></h4>
+
+<p>移动端数据通常使用SQLite存储，若需要方便的管理其中的数据，请不要错过SQLPro for SQLite。另外插一句使用Core Data的经验，不同版本对应的sqlite文件最好本地保存一份。这样哪天需要测试数据迁移会省不少精力。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a></h4>
+
+<p>自从转行做iOS开发以来，一直使用Git做代码版本管理。而Git分支的最佳实践，个人最推崇<a href="http://nvie.com/about/">Vincent Driessen</a>的方案。</p>
+
+<h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MzA4ODgwNjk1MQ==&amp;mid=2653788317&amp;idx=1&amp;sn=b5ca8129c2ae99b37f1872d1bbe367c4">漫谈 Airbnb 支付的国际化</a></h4>
+
+<blockquote><p>为了让古巴人也可以在 Airbnb 上租房，我们使用了 VaCuba 这种支付方式，其本质就是人工开着游艇、驾着飞机、骑着自行车，将现金像送货那样送到房东的家里。</p></blockquote>
+
+<p>@end</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-06-23T16:31:43+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2016</span></span> <span class='time'>4:31 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/06/21/tech-notes-4/" title="Previous Post: 平安好房iOS开发团队技术周报（第四期）">&laquo; 平安好房iOS开发团队技术周报（第四期）</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/06/23/tech-notes-5/">平安好房iOS开发团队技术周报（第五期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/06/21/tech-notes-4/">平安好房iOS开发团队技术周报（第四期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/06/18/tech-notes-3/">平安好房iOS开发团队技术周报（第三期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/06/15/tech-notes-2/">平安好房iOS开发团队技术周报（第二期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/06/12/tech-notes-1/">平安好房iOS开发团队技术周报（第一期）</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Linkou Bian -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

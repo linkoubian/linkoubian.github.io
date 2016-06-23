@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-06-21T13:14:00+08:00</updated>
+  <updated>2016-06-23T17:11:12+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第五期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/06/23/tech-notes-5/"/>
+    <updated>2016-06-23T16:31:43+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/06/23/tech-notes-5</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括Xcode扩展、Method Swizzle、Git分支实践等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://daringfireball.net/linked/2016/06/22/ios-10-kernel">iOS 10 内核未加密</a></h4>
+
+<p>苹果发言人称: “The kernel cache doesn’t contain any user info, and by unencrypting it we’re able to optimize the operating system’s performance without compromising security.”</p>
+
+<h4>2) <a href="https://www.raywenderlich.com/135655/whats-new-swift-3">What’s New in Swift 3?</a></h4>
+
+<p>虽然暂时还没必要迁移至Swift 3（下半年还会有改动），但语言的主要变动还是需要了解的。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.russbishop.net/xcode-extensions">Xcode Source Editor Extension</a></h4>
+
+<p>在菜单触发插件，XCSourceEditorCommand 拦截到该消息。我们从 invocation 中拿到 buffer，根据当前行可以获取到需要的数据。我的<a href="https://github.com/balloonsys/PAXcodePlugin">示例</a>是直接增加一行NSLog代码，所以把数据设置回去即可。</p>
+
+<p>该教程不仅教你怎么做，还将可能遇到的问题及可尝试的解决方案写的很明白。我实现了一个打印当前方法名的插件，用以快速插入代码。另外，如果需要中文教程，可参看钟颖的<a href="https://zhuanlan.zhihu.com/p/21374552">文章</a>。</p>
+
+<h4>2) <a href="http://xiongzenghuidegithub.github.io/blog/2016/04/22/runtimeying-yong-fang-zhi-an-niu-lian-xu-dian-ji/">借助Runtime防止按钮连续点击</a></h4>
+
+<p>按钮连续点击的问题解决起来不难，使用Runtime交换SEL即可控制。</p>
+
+<h4>3) <a href="http://www.jianshu.com/p/cabec2786241">UICollectionView的自定义布局</a></h4>
+
+<p>这篇文章不是分享UICollectionView的详细使用教程，而是属于比较高级的使用技巧。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://simpholders.com">SimPholders</a></h4>
+
+<p>从menu快速访问iOS模拟器里的app目录。</p>
+
+<h4>2) <a href="https://www.sqlitepro.com">SQLPro for SQLite</a></h4>
+
+<p>移动端数据通常使用SQLite存储，若需要方便的管理其中的数据，请不要错过SQLPro for SQLite。另外插一句使用Core Data的经验，不同版本对应的sqlite文件最好本地保存一份。这样哪天需要测试数据迁移会省不少精力。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a></h4>
+
+<p>自从转行做iOS开发以来，一直使用Git做代码版本管理。而Git分支的最佳实践，个人最推崇<a href="http://nvie.com/about/">Vincent Driessen</a>的方案。</p>
+
+<h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MzA4ODgwNjk1MQ==&amp;mid=2653788317&amp;idx=1&amp;sn=b5ca8129c2ae99b37f1872d1bbe367c4">漫谈 Airbnb 支付的国际化</a></h4>
+
+<blockquote><p>为了让古巴人也可以在 Airbnb 上租房，我们使用了 VaCuba 这种支付方式，其本质就是人工开着游艇、驾着飞机、骑着自行车，将现金像送货那样送到房东的家里。</p></blockquote>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四期）]]></title>
@@ -27,7 +87,7 @@
 
 <h4>1) <a href="http://www.augustyniak.me/post/2016/06/wwdc-sessions-watching-guide/">WWDC Videos Watching Guide</a></h4>
 
-<p>另外也可以看一下百度Hi iOS团队写的<a href="http://baiduhidevios.github.io/2016/06/14/WWDC-2016-%E8%A7%82%E5%BD%B1%E6%8C%87%E5%8D%97/">WWDC 2016 观影指南</a></p>
+<p>另外也可以看一下百度Hi iOS团队写的<a href="http://baiduhidevios.github.io/2016/06/14/WWDC-2016-%E8%A7%82%E5%BD%B1%E6%8C%87%E5%8D%97/">WWDC 2016 观影指南</a>。</p>
 
 <h4>2) <a href="http://www.theverge.com/2016/6/15/11940010/walt-mossberg-apple-wwdc-2016-recap-themes">Apple is still a world of its own</a></h4>
 
@@ -2080,177 +2140,6 @@ rule</p></blockquote>
 <li>sizeof()返回size_t类型的数据，可以用%zu格式化输出</li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[移动应用的Freemium模式]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/03/01/in-app-purchasing-a-freemium-model/"/>
-    <updated>2014-03-01T20:12:22+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/03/01/in-app-purchasing-a-freemium-model</id>
-    <content type="html"><![CDATA[<p>In-App Purchasing是一种目前比较常见的定价策略。软件可以免费安装并使用，但如果需要更多或更高级的功能则需要付费，即<a href="http://en.wikipedia.org/wiki/Freemium">Freemium</a>模式。</p>
-
-<!--more-->
-
-
-<p>昨天给APP集成了<a href="http://balloonsys.com/blog/2014/02/28/make-money-from-ad/">广告服务</a>。碰到有洁癖的用户，被抱怨是免不了的。所以今天抓紧学习IAP相关的开发技术后，又马不停蹄的增加了付费去广告的功能。</p>
-
-<h2>创建IAP商品</h2>
-
-<p>用户只需为“去除广告”这个服务付费一次，并可永久性的免除广告的烦扰。所以这种情况下，“去除广告”应被看成Non-Consumable商品。而游戏中常见的“金币”是用完还需重新购买，属于快速消耗品，对应iTunes Connect后台里的Consumable商品。</p>
-
-<p>商品的ID可采用APP_ID.PRODUCT_NAME的格式，该ID将在编码时用到。</p>
-
-<p>注意创建IAP商品时遇到的Hosting Content with Apple这一项，此处选择No。关于这个Hosting Content的用法，可以参考这篇<a href="http://www.techotopia.com/index.php/Configuring_and_Creating_App_Store_Hosted_Content_for_iOS_6_In-App_Purchases">文章</a>。</p>
-
-<p>添加好名为“remove_ads”的商品后，该IAP的状态为“Ready to Submit”。同时系统提示我说“你的首个IAP必须与新版APP一起提交，请在Version Detail页面选中相关的IAP后点击准备上传按钮”。</p>
-
-<p>收到这样的提示，略有惊喜。因为添加IAP时，该APP有个update还在等待review，而IAP是下个release的内容，当时有点担心此次的操作会影响等待审核的版本。结果证明担心是多余的。</p>
-
-<h2>设置工程</h2>
-
-<p>在构建目标的Capabilities页面，开启In-App Purchase功能。Xcode会自动为当前的App ID增加相关权限，同时链接StoreKit框架。</p>
-
-<p>IAP所涉及到的交互流程主要有如下几步，<br/>
-1. APP首先向苹果服务器发起请求（含有商品ID集合）以获得商品信息<br/>
-2. 客户端以自定义的方式展示返回的商品<br/>
-3. 用户选中某个商品，触发支付请求，请求被加到支付队列<br/>
-4. 支付被苹果处理后，会发出Transaction Updated事件<br/>
-5. 客户端设置的交易监听者根据Transaction的状态执行不同逻辑</p>
-
-<p>收到Transaction Updated事件后，无论Transaction的状态是completed、failed还是restore，都需要调用finishTransaction以通知苹果服务器相关的通知已收到，否则会不停的收到Transaction Updated事件。</p>
-
-<h2>开始编码</h2>
-
-<h3>请求商品信息</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">productsRequest</span> <span class="o">=</span> <span class="p">[[</span><span class="n">SKProductsRequest</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithProductIdentifiers:</span><span class="n">self</span><span class="p">.</span><span class="n">productIdentifiers</span><span class="p">];</span>
-</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">productsRequest</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
-</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">productsRequest</span> <span class="n">start</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>当苹果服务器做出“成功”的响应时，会调用SKProductsRequestDelegate方法，从response里我们可以拿到products信息。</p>
-
-<h3>展示返回的商品</h3>
-
-<p>目前采用的是在“关于”页面，放一个静态的table view cell，用户点击后该cell后弹出ActionSheet，让用户选择是首次“购买”还是“恢复”曾经的交易。</p>
-
-<p>看似这个过程和上一步无关，这是因为此处只关心一个“Remove Ads”商品，也不需要显示服务端设定的商品价格等信息。其实此处ActionSheet所显示的选项内容，完全可以由之前获得的product信息构成。</p>
-
-<h3>选中商品，触发支付请求</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">SKPayment</span> <span class="o">*</span><span class="n">payment</span> <span class="o">=</span> <span class="p">[</span><span class="n">SKPayment</span> <span class="nl">paymentWithProduct:</span><span class="n">product</span><span class="p">];</span>
-</span><span class='line'><span class="p">[[</span><span class="n">SKPaymentQueue</span> <span class="n">defaultQueue</span><span class="p">]</span> <span class="nl">addPayment:</span><span class="n">payment</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>支付请求仅需被加到支付队列即可，StoreKit会完成剩余的工作。当交易的状态发生变化时，客户端APP会收到Transaction Updated事件。</p>
-
-<h3>监听交易状态变化</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">paymentQueue:</span><span class="p">(</span><span class="n">SKPaymentQueue</span> <span class="o">*</span><span class="p">)</span><span class="nv">queue</span> <span class="nf">updatedTransactions:</span><span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">transactions</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="k">for</span> <span class="p">(</span><span class="n">SKPaymentTransaction</span> <span class="o">*</span><span class="n">transaction</span> <span class="k">in</span> <span class="n">transactions</span><span class="p">){</span>
-</span><span class='line'>      <span class="k">switch</span> <span class="p">(</span><span class="n">transaction</span><span class="p">.</span><span class="n">transactionState</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>          <span class="k">case</span> <span class="nl">SKPaymentTransactionStatePurchased:</span>
-</span><span class='line'>              <span class="p">[</span><span class="n">self</span> <span class="nl">completeTransaction:</span><span class="n">transaction</span><span class="p">];</span>
-</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
-</span><span class='line'>          <span class="k">case</span> <span class="nl">SKPaymentTransactionStateFailed:</span>
-</span><span class='line'>              <span class="p">[</span><span class="n">self</span> <span class="nl">failedTransaction:</span><span class="n">transaction</span><span class="p">];</span>
-</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
-</span><span class='line'>          <span class="k">case</span> <span class="nl">SKPaymentTransactionStateRestored:</span>
-</span><span class='line'>              <span class="p">[</span><span class="n">self</span> <span class="nl">restoreTransaction:</span><span class="n">transaction</span><span class="p">];</span>
-</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
-</span><span class='line'>          <span class="k">default</span><span class="o">:</span>
-</span><span class='line'>              <span class="k">break</span><span class="p">;</span>
-</span><span class='line'>      <span class="p">}</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>处理商品交易</h3>
-
-<p>上面用到的completeTransaction等方法，一方面根据“交易”的状态去设置User Defaults中对应商品的状态（是否已购买）；另一方面调用finishTransaction以通知苹果服务器相关的通知已收到。</p>
-
-<p>示例代码如下，</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">completeTransaction:</span><span class="p">(</span><span class="n">SKPaymentTransaction</span> <span class="o">*</span><span class="p">)</span><span class="nv">transaction</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="c1">// Cache purchased product.</span>
-</span><span class='line'>  <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">purchasedProductIdentifiers</span> <span class="nl">addObject:</span><span class="n">productIdentifier</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c1">// Persist purchased product.</span>
-</span><span class='line'>  <span class="p">[[</span><span class="n">NSUserDefaults</span> <span class="n">standardUserDefaults</span><span class="p">]</span> <span class="nl">setBool:</span><span class="n">YES</span> <span class="nl">forKey:</span><span class="n">productIdentifier</span><span class="p">];</span>
-</span><span class='line'>  <span class="p">[[</span><span class="n">NSUserDefaults</span> <span class="n">standardUserDefaults</span><span class="p">]</span> <span class="n">synchronize</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c1">// Notify product purchased, so then UI can be updated accordingly</span>
-</span><span class='line'>  <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">postNotificationName:</span><span class="n">ProductPurchasedNotification</span> <span class="nl">object:</span><span class="n">productIdentifier</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c1">// Removes transaction from the queue.</span>
-</span><span class='line'>  <span class="p">[[</span><span class="n">SKPaymentQueue</span> <span class="n">defaultQueue</span><span class="p">]</span> <span class="nl">finishTransaction:</span><span class="n">transaction</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>其中ProductPurchasedNotification是一个自定义消息，收到该消息的控制器并可以做出适当的响应，比如隐藏掉购买按钮or修改按钮的文字or弹框提示用户“购买成功”&hellip;</p>
-
-<h2>问题分析</h2>
-
-<p>从打算加入一个IAP到跑通代码所需要的“必要劳动时间”，远超最初的估计。期间可能遇到的各种错误及相应地应对建议，可以参考<a href="http://www.weibo.com/onevcat">OneV&rsquo;s Den</a>的<a href="http://onevcat.com/2013/11/ios-iap-checklist/">文章</a>。</p>
-
-<h2>功能测试</h2>
-
-<p>IAP的测试，需要在iTunes Connect后台建立一个测试账号。从网络上获得的一点建议：使用之前最好退出平常使用的正式账号，另外也不要用测试账号去下载APP。原因不详，也不想以身试法，遵守就是了！</p>
-
-<h2>参考资料</h2>
-
-<p>如果想系统并深入的学习IAP的开发技术，可以阅读下列文章，  <br/>
-1. <a href="http://www.raywenderlich.com/u/rwenderlich">Ray Wenderlich</a>提供的<a href="http://www.raywenderlich.com/21081/introduction-to-in-app-purchases-in-ios-6-tutorial">IAP入门教程</a><br/>
-2. <a href="http://www.raywenderlich.com/u/rwenderlich">Ray Wenderlich</a>提供的<a href="http://www.raywenderlich.com/23266/in-app-purchases-in-ios-6-tutorial-consumables-and-receipt-validation">IAP进阶教程</a><br/>
-3. 苹果官方提供的开发<a href="https://developer.apple.com/in-app-purchase/">文档</a></p>
-
-<p>如果你需要快速了解IAP的话，不妨读读<a href="http://brianflove.com/author/blove/">Brian Love</a>的这篇<a href="http://brianflove.com/2013/02/11/in-app-purchasing-in-ios-6/">文章</a>。
-如果你需要快速实现IAP的话，不妨试试<a href="http://mattt.me">Mattt Thompson</a>的开源库<a href="https://github.com/mattt/CargoBay">CargoBay</a>。</p>
 ]]></content>
   </entry>
   
