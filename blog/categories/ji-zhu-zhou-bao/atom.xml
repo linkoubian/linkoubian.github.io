@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-06-25T12:42:57+08:00</updated>
+  <updated>2016-06-25T12:57:41+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -57,9 +57,9 @@
 
 <h2>其他</h2>
 
-<h4>1) <a href="http://buyersguide.macrumors.com">Buyer’s Guide</a></h4>
+<h4>1) <a href="https://github.com/linkedin/swift-style-guide">Swift Style Guide</a></h4>
 
-<p>MacRumors根据苹果硬件产品周期给出的购买建议    。</p>
+<p>据说LinkedIn用Swift重写了自家的app，这是他们的代码规范。</p>
 
 <h4>2) <a href="http://www.ituring.com.cn/book/397">写给大家看的设计书</a></h4>
 
