@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第三期） - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第六期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括iOS 10的一些资讯，以及iOS一些常见问题的设计方案等。 资讯 1) 开发者所需要知道的iOS 10 SDK新特性 从应用开发者的角度看，iOS 10中并没有加入太多内容。 2) 关于iOS 10中ATS的问题 从2017年1月1日起， &hellip;">
+  <meta name="description" content="本期周报主要包括iOS 10中通知相关的变化、Swift中try的用法、颜色与标注稿不一致的问题等。 资讯 1) Apple discontinues Thunderbolt Display 服役五年的 Thunderbolt Display已经正式停产， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/06/18/tech-notes-3/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/06/25/tech-notes-6/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -68,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第三期）</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第六期）</h1>
     
     
       <p class="meta">
@@ -77,59 +77,61 @@
 
 
 
-<time class='entry-date' datetime='2016-06-18T10:50:14+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:50 am</span></time>
+<time class='entry-date' datetime='2016-06-25T07:33:20+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>7:33 am</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括iOS 10的一些资讯，以及iOS一些常见问题的设计方案等。</p>
+<div class="entry-content"><p>本期周报主要包括iOS 10中通知相关的变化、Swift中try的用法、颜色与标注稿不一致的问题等。</p>
 
 <!--more-->
 
 
 <h2>资讯</h2>
 
-<h4>1) <a href="https://onevcat.com/2016/06/ios-10-sdk/">开发者所需要知道的iOS 10 SDK新特性</a></h4>
+<h4>1) <a href="http://www.loopinsight.com/2016/06/23/apple-discontinues-thunderbolt-display/">Apple discontinues Thunderbolt Display</a></h4>
 
-<p>从应用开发者的角度看，iOS 10中并没有加入太多内容。</p>
+<p>服役五年的 Thunderbolt Display已经正式停产，剩下的存货仍会在Apple线上商店与零售点销售。</p>
 
-<h4>2) <a href="https://onevcat.com/2016/06/ios-10-ats/">关于iOS 10中ATS的问题</a></h4>
+<h4>2) <a href="http://fichek.com/blog/wwdc16-notifications/">WWDC16 - New in Notifications</a></h4>
 
-<p>从2017年1月1日起，所有的新提交app默认是不允许使用NSAllowsArbitraryLoads来绕过ATS限制的。</p>
+<p>Notification相关的API从UIKit挪到了新的framework，<a href="http://fichek.com/contact/">Filip Radelic</a>对其变化做了很好的总结。</p>
 
 <h2>开发</h2>
 
-<h4>1) <a href="http://www.jianshu.com/p/0497afdad36d#">可复用而且高度解耦的用户统计埋点实现</a></h4>
+<h4>1) <a href="https://ashfurrow.com/blog/uicollectionview-unjustly-maligned/">UICollectionView: Unjustly Maligned</a></h4>
 
-<p>该埋点方案和我上个月做的统计SDK思路比较一致。不同的在于用户点击事件，文中的做法是拦截UIControl的方法，而我倾向于由APP自行埋点。主要原因在于，被hook的范围较广，同时我们点击事件埋点时，有酌情传入参数的额外需求。</p>
+<p>500px首个iPad版本、Artsy都出自本文作者<a href="https://ashfurrow.com/about/">Ash Furrow</a>之手。同时他也是iOS UICollectionView: The Complete Guide一书的作者。</p>
 
-<h4>2) <a href="https://segmentfault.com/a/1190000005744865">iOS释放自注销模式设计</a></h4>
+<p>Ash在文中介绍了如何用UICollectionView构建Artsy的页面。</p>
 
-<p>作者描述的问题的确是我们开发中的痛点，只不过我对这篇文章理解的还不够，毕竟工程师的层次也是有差异的:P</p>
+<h4>2) <a href="http://stackoverflow.com/a/32390612">Swift - try, try! &amp; try?的区别</a></h4>
+
+<p>guard let result = try? doSomething() else {}是一个较为常用的代码范式。另外这种范式下若有异常，会被『翻译』成nil，所以不会捕获到具体的出错原因。故适用于只关注成功或失败这一结果的场景。</p>
 
 <h2>工具</h2>
 
-<h4>1) <a href="https://medium.com/swift-and-ios-writing/a-quick-look-at-uiviewpropertyanimator-a107fb9da5b5">iOS 10 UIKit Animations</a></h4>
+<h4>1) <a href="http://jaykon.github.io/2014/06/17/ioskai-fa-zhong-de-yan-se-wen-ti/">iOS开发中的颜色问题</a></h4>
 
-<p>我倒是对文章作者的开源库<a href="https://github.com/marmelroy/Interpolate">Interpolate</a>更感兴趣，哈哈！</p>
+<p>设计师给的颜色值标注，设置到app里显示不一致？可能和色彩标准不同有关。比如设计师用的是Generic RBG或者Adobe RGB，而程序里是基于sRGB。</p>
 
-<h4>2) <a href="https://luckymarmot.com/zh-hans/paw">Mac最先进的HTTP客户端</a></h4>
+<h4>2) <a href="https://github.com/gskbyte/GSKStretchyHeaderView">GSKStretchyHeaderView</a></h4>
 
-<p>做iOS开发，联调API是件很麻烦的事情，特别是当提供API的是个开发新手。联调阶段我通常选用Paw而不是Postman。</p>
+<p>类似Twitter的弹性视图。</p>
 
 <h2>其他</h2>
 
-<h4>1) <a href="https://developer.apple.com/support/beta-software/install-ios-beta/">iOS beta Software Installation Guide</a></h4>
+<h4>1) <a href="http://buyersguide.macrumors.com">Buyer’s Guide</a></h4>
 
-<p>本周已采用Configuration Profile的方式安装了iOS 10的beta版，比Restore Image的方案更简便。</p>
+<p>MacRumors根据苹果硬件产品周期给出的购买建议    。</p>
 
-<h4>2) <a href="http://www.jianshu.com/p/080d109a9984">每个IT人都应该了解的工作观和商业思维</a></h4>
+<h4>2) <a href="http://www.ituring.com.cn/book/397">写给大家看的设计书</a></h4>
 
-<p>文中整理了来自37signals的两位联合创始人Rework一书的要点，个人特别喜欢这条：</p>
+<blockquote><p>如果要在简单表达和并不专业的设计之间做出选择，你应该选择简单表达。设计技能的逐步提高是从简单表达开始的。</p></blockquote>
 
-<blockquote><p>工作狂使得真正高效且不崇尚加班的员工感到无所适从，心怀愧疚，士气低落而且跟风加班，根本就不管到底有没有生产力。</p></blockquote>
+<p>iPhone的成功，降低了产品经理（大部分只有抄袭还抄不好的能力）的门槛；APP的泛滥，降低了软件工程师（鱼龙混杂，水货较多）的门槛；iOS 7开始，降低了设计师（大部分也就是个Photoshop熟练工）的门槛。</p>
 
 <p>@end</p>
 </div>
@@ -147,7 +149,7 @@
 
 
 
-<time class='entry-date' datetime='2016-06-18T10:50:14+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:50 am</span></time>
+<time class='entry-date' datetime='2016-06-25T07:33:20+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>7:33 am</span></time>
       
 
 <span class="categories">
@@ -168,10 +170,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/06/15/tech-notes-2/" title="Previous Post: 平安好房iOS开发团队技术周报（第二期）">&laquo; 平安好房iOS开发团队技术周报（第二期）</a>
+        <a class="basic-alignment left" href="/blog/2016/06/23/tech-notes-5/" title="Previous Post: 平安好房iOS开发团队技术周报（第五期）">&laquo; 平安好房iOS开发团队技术周报（第五期）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/06/21/tech-notes-4/" title="Next Post: 平安好房iOS开发团队技术周报（第四期）">平安好房iOS开发团队技术周报（第四期） &raquo;</a>
       
     </p>
   </footer>

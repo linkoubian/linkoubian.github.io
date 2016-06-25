@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-06-23T17:13:45+08:00</updated>
+  <updated>2016-06-25T12:42:57+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第六期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/06/25/tech-notes-6/"/>
+    <updated>2016-06-25T07:33:20+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/06/25/tech-notes-6</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括iOS 10中通知相关的变化、Swift中try的用法、颜色与标注稿不一致的问题等。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.loopinsight.com/2016/06/23/apple-discontinues-thunderbolt-display/">Apple discontinues Thunderbolt Display</a></h4>
+
+<p>服役五年的 Thunderbolt Display已经正式停产，剩下的存货仍会在Apple线上商店与零售点销售。</p>
+
+<h4>2) <a href="http://fichek.com/blog/wwdc16-notifications/">WWDC16 - New in Notifications</a></h4>
+
+<p>Notification相关的API从UIKit挪到了新的framework，<a href="http://fichek.com/contact/">Filip Radelic</a>对其变化做了很好的总结。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://ashfurrow.com/blog/uicollectionview-unjustly-maligned/">UICollectionView: Unjustly Maligned</a></h4>
+
+<p>500px首个iPad版本、Artsy都出自本文作者<a href="https://ashfurrow.com/about/">Ash Furrow</a>之手。同时他也是iOS UICollectionView: The Complete Guide一书的作者。</p>
+
+<p>Ash在文中介绍了如何用UICollectionView构建Artsy的页面。</p>
+
+<h4>2) <a href="http://stackoverflow.com/a/32390612">Swift - try, try! &amp; try?的区别</a></h4>
+
+<p>guard let result = try? doSomething() else {}是一个较为常用的代码范式。另外这种范式下若有异常，会被『翻译』成nil，所以不会捕获到具体的出错原因。故适用于只关注成功或失败这一结果的场景。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://jaykon.github.io/2014/06/17/ioskai-fa-zhong-de-yan-se-wen-ti/">iOS开发中的颜色问题</a></h4>
+
+<p>设计师给的颜色值标注，设置到app里显示不一致？可能和色彩标准不同有关。比如设计师用的是Generic RBG或者Adobe RGB，而程序里是基于sRGB。</p>
+
+<h4>2) <a href="https://github.com/gskbyte/GSKStretchyHeaderView">GSKStretchyHeaderView</a></h4>
+
+<p>类似Twitter的弹性视图。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://buyersguide.macrumors.com">Buyer’s Guide</a></h4>
+
+<p>MacRumors根据苹果硬件产品周期给出的购买建议    。</p>
+
+<h4>2) <a href="http://www.ituring.com.cn/book/397">写给大家看的设计书</a></h4>
+
+<blockquote><p>如果要在简单表达和并不专业的设计之间做出选择，你应该选择简单表达。设计技能的逐步提高是从简单表达开始的。</p></blockquote>
+
+<p>iPhone的成功，降低了产品经理（大部分只有抄袭还抄不好的能力）的门槛；APP的泛滥，降低了软件工程师（鱼龙混杂，水货较多）的门槛；iOS 7开始，降低了设计师（大部分也就是个Photoshop熟练工）的门槛。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第五期）]]></title>
@@ -2112,34 +2170,6 @@ rule</p></blockquote>
 <h2>说明</h2>
 
 <p>本文是根据<a href="http://blog.miguelgrinberg.com/post/about-me">Miguel Grinberg</a>写的这篇<a href="http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask">文章</a>翻译并整理的。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[BNR出品的Obj-C教程]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/03/05/obj-c-programming/"/>
-    <updated>2014-03-05T21:22:44+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/03/05/obj-c-programming</id>
-    <content type="html"><![CDATA[<p>据说The Big Nerd Ranch Guide系列教程都很不错，于是到<a href="http://www.ppurl.com/2013/11/objective-c-programming-the-big-nerd-ranch-guide-second-edition-epub.html">皮皮书屋</a>下载了一份BNR出品的关于Obj-C的电子书。在iPad、Mac上阅读ePub格式的文档，有着很不错的体验。</p>
-
-<!--more-->
-
-
-<p>直接在电子书里记笔记的习惯还没有养成，依旧习惯于在<a href="http://www.iawriter.com/mac/">iA Writer</a>里记录一些知识点以备日后查看。</p>
-
-<ol>
-<li>在C的函数里使用BOOL类型，需要#include &lt;objc/objc.h></li>
-<li>sleep函数是在unistd.h头文件中声明的</li>
-<li>EXIT_SUCCESS等程序退出标志，是在stdlib.h中声明的</li>
-<li>全局变量可以在多个文件中访问到；静态变量仅当前文件可以访问</li>
-<li>NSInteger在32位系统上占32位，在64位系统上占64位</li>
-<li>在格式化输出NSInteger时，需强类型转换成long，然后用%ld打印</li>
-<li>求绝对值可以用stdlib.h中的abs()函数</li>
-<li>使用readline函数，需要链接libreadline，然后导入主头文件</li>
-<li>字符串转数字可以用stdlib.h中的atoi()函数</li>
-<li>sizeof()返回size_t类型的数据，可以用%zu格式化输出</li>
-</ol>
-
 ]]></content>
   </entry>
   
