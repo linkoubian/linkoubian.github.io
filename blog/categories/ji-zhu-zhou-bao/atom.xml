@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-06-27T09:56:27+08:00</updated>
+  <updated>2016-06-27T09:57:43+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第六期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/06/25/tech-notes-6/"/>
-    <updated>2016-06-25T07:33:20+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/06/25/tech-notes-6</id>
+    <link href="http://balloonsys.github.io/blog/2016/06/27/tech-notes-6/"/>
+    <updated>2016-06-27T09:57:31+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/06/27/tech-notes-6</id>
     <content type="html"><![CDATA[<p>本期周报主要包括iOS 10中通知相关的变化、Swift中try的用法、颜色与标注稿不一致的问题等。</p>
 
 <!--more-->
