@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-06-27T09:57:43+08:00</updated>
+  <updated>2016-06-27T10:54:16+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -43,7 +43,7 @@
 
 <p>Ash在文中介绍了如何用UICollectionView构建Artsy的页面。</p>
 
-<p>另外有两篇文章不错，建议一读：<a href="https://adoptioncurve.net/archives/2016/06/collection-view-updates-in-ios10/">Collection View Updates in iOS10, Part 1</a>和<a href="https://adoptioncurve.net/archives/2016/06/collection-view-updates-in-ios10-part-2/">Collection View Updates in iOS10 Part 2</a>。</p>
+<p>另外有两篇文章不错，建议一读：<a href="https://adoptioncurve.net/archives/2016/06/collection-view-updates-in-ios10/">Collection View Updates in iOS10 Part 1</a>和<a href="https://adoptioncurve.net/archives/2016/06/collection-view-updates-in-ios10-part-2/">Collection View Updates in iOS10 Part 2</a>。</p>
 
 <h4>2) <a href="http://stackoverflow.com/a/32390612">Swift - try, try! &amp; try?的区别</a></h4>
 
@@ -57,7 +57,7 @@
 
 <h4>2) <a href="https://github.com/gskbyte/GSKStretchyHeaderView">GSKStretchyHeaderView</a></h4>
 
-<p>类似Twitter的弹性视图。</p>
+<p>类似Twitter个人中心页面的弹性视图。</p>
 
 <h2>其他</h2>
 
