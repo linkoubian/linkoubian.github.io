@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-07-01T14:32:53+08:00</updated>
+  <updated>2016-07-01T14:46:22+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,65 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第七期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/06/27/tech-notes-7/"/>
+    <updated>2016-06-27T14:46:10+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/06/27/tech-notes-7</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括试玩iOS 10 SDK时遇到的问题、处理把nil插入到NSDictionary里引起crash问题的方案等。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.cac.gov.cn/2016-06/28/c_1119123114.htm">网信办：App须对注册用户真实身份进行认证 不合规将被整改</a></h4>
+
+<p>另外，国家新闻出版广电总局办公厅印发了关于移动游戏出版服务管理的通知。现在，中国区App Store近日发出通告，移动游戏需要通过国家新闻出版广电总局的审批才可发布。在App审核信息部分的备注字段需要输入游戏类App的批准号码和批准日期。</p>
+
+<h4>2) <a href="http://www.recode.net/2016/6/30/12067578/spotify-apple-app-store-rejection">Spotify更新遭拒</a></h4>
+
+<p>Spotify不想和Apple分成，不使用苹果的订阅服务，这下子遇到麻烦了。</p>
+
+<h2>开发</h2>
+
+<h4>1) iOS 10 beta 1 SDK 初体验</h4>
+
+<p>本周我在实践iOS 10的部分新特性时遇到了不少问题，并且报了三个bug给苹果：
+a. CSSearchQuery 没能查出中文
+b. 把竖屏拍的照片添加到notification中，显示偏转90°
+c. widget移到Today Extension页面顶部，切换展开与收起，视图位置有偏移</p>
+
+<p>另外，在实践Today Extension时遇到tableview的delegate方法未执行的问题，可参考<a href="http://stackoverflow.com/a/28449837">StackOverflow</a>解决。</p>
+
+<h4>2) <a href="http://tech.glowing.com/cn/how-we-made-nsdictionary-nil-safe/">当 NSDictionary 遇见 nil</a></h4>
+
+<p>当把nil插入到NSDictionary里，会引起crash，简单粗暴的解决办法是插入之前加if判断，弊端是代码有bad smell。作者基于Method Swizzle提供了一个全局的处理方案。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/cyanzhong/xTextHandler/">xTextHandler</a></h4>
+
+<p>基于 Xcode Source Editor Extension 的插件集，提高 Xcode 文本处理的体验，你可以通过简单的几行代码扩展它。</p>
+
+<h4>2) <a href="http://wereadteam.github.io/2016/05/23/GYBootingProtection/">iOS 启动连续闪退保护方案</a></h4>
+
+<p>这是微信读书团队分享的方案。之前也看到某猫分享的『APP安全模式』，读起来都云山雾绕的，差评。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/61707af65a48">GMTC2016移动技术大会参会感想</a></h4>
+
+<p>没有参加过此类会议，看了链家网移动敏捷之术，感觉还挺不错的。</p>
+
+<h4>2) <a href="https://www.infoq.com/news/2016/03/agileindia-7sins-scrum">Seven Sins of Scrum and other Agile Antipatterns</a></h4>
+
+<blockquote><p>一些事情看上去是好主意，但在使用的时候会产生意想不到的后果。</p></blockquote>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第六期）]]></title>
@@ -130,65 +189,6 @@
 <h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MzA4ODgwNjk1MQ==&amp;mid=2653788317&amp;idx=1&amp;sn=b5ca8129c2ae99b37f1872d1bbe367c4">漫谈 Airbnb 支付的国际化</a></h4>
 
 <blockquote><p>为了让古巴人也可以在 Airbnb 上租房，我们使用了 VaCuba 这种支付方式，其本质就是人工开着游艇、驾着飞机、骑着自行车，将现金像送货那样送到房东的家里。</p></blockquote>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第七期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/06/22/tech-notes-7/"/>
-    <updated>2016-06-22T10:59:24+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/06/22/tech-notes-7</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括试玩iOS 10 SDK时遇到的问题、处理把nil插入到NSDictionary里引起crash问题的方案等。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.cac.gov.cn/2016-06/28/c_1119123114.htm">网信办：App须对注册用户真实身份进行认证 不合规将被整改</a></h4>
-
-<p>另外，国家新闻出版广电总局办公厅印发了关于移动游戏出版服务管理的通知。现在，中国区App Store近日发出通告，移动游戏需要通过国家新闻出版广电总局的审批才可发布。在App审核信息部分的备注字段需要输入游戏类App的批准号码和批准日期。</p>
-
-<h4>2) <a href="http://www.recode.net/2016/6/30/12067578/spotify-apple-app-store-rejection">Spotify更新遭拒</a></h4>
-
-<p>Spotify不想和Apple分成，不使用苹果的订阅服务，这下子遇到麻烦了。</p>
-
-<h2>开发</h2>
-
-<h4>1) iOS 10 beta 1 SDK 初体验</h4>
-
-<p>本周我在实践iOS 10的部分新特性时遇到了不少问题，并且报了三个bug给苹果：
-a. CSSearchQuery 没能查出中文
-b. 把竖屏拍的照片添加到notification中，显示偏转90°
-c. widget移到Today Extension页面顶部，切换展开与收起，视图位置有偏移</p>
-
-<p>另外，在实践Today Extension时遇到tableview的delegate方法未执行的问题，可参考<a href="http://stackoverflow.com/a/28449837">StackOverflow</a>解决。</p>
-
-<h4>2) <a href="http://tech.glowing.com/cn/how-we-made-nsdictionary-nil-safe/">当 NSDictionary 遇见 nil</a></h4>
-
-<p>当把nil插入到NSDictionary里，会引起crash，简单粗暴的解决办法是插入之前加if判断，弊端是代码有bad smell。作者基于Method Swizzle提供了一个全局的处理方案。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://github.com/cyanzhong/xTextHandler/">xTextHandler</a></h4>
-
-<p>基于 Xcode Source Editor Extension 的插件集，提高 Xcode 文本处理的体验，你可以通过简单的几行代码扩展它。</p>
-
-<h4>2) <a href="http://wereadteam.github.io/2016/05/23/GYBootingProtection/">iOS 启动连续闪退保护方案</a></h4>
-
-<p>这是微信读书团队分享的方案。之前也看到某猫分享的『APP安全模式』，读起来都云山雾绕的，差评。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/61707af65a48">GMTC2016移动技术大会参会感想</a></h4>
-
-<p>没有参加过此类会议，看了链家网移动敏捷之术，感觉还挺不错的。</p>
-
-<h4>2) <a href="https://www.infoq.com/news/2016/03/agileindia-7sins-scrum">Seven Sins of Scrum and other Agile Antipatterns</a></h4>
-
-<blockquote><p>一些事情看上去是好主意，但在使用的时候会产生意想不到的后果。</p></blockquote>
 
 <p>@end</p>
 ]]></content>

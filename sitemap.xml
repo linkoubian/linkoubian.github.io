@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://balloonsys.github.io/blog/2016/06/27/tech-notes-7/</loc>
+<lastmod>2016-06-27T14:46:10+08:00</lastmod>
+</url>
+<url>
 <loc>http://balloonsys.github.io/blog/2016/06/27/tech-notes-6/</loc>
 <lastmod>2016-06-27T09:57:31+08:00</lastmod>
 </url>
 <url>
 <loc>http://balloonsys.github.io/blog/2016/06/23/tech-notes-5/</loc>
 <lastmod>2016-06-23T16:31:43+08:00</lastmod>
-</url>
-<url>
-<loc>http://balloonsys.github.io/blog/2016/06/22/tech-notes-7/</loc>
-<lastmod>2016-06-22T10:59:24+08:00</lastmod>
 </url>
 <url>
 <loc>http://balloonsys.github.io/blog/2016/06/21/tech-notes-4/</loc>
@@ -178,5 +178,11 @@
 </url>
 <url>
 <loc>http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/posts/2/</loc>
+</url>
+<url>
+<loc>http://balloonsys.github.io/posts/3/</loc>
 </url>
 </urlset>
