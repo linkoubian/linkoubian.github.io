@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>平安好房iOS开发团队技术周报（第七期） - Balloonsys Inc.</title>
+  <meta name="author" content="Linkou Bian">
+
+  
+  <meta name="description" content="本期周报主要包括试玩iOS 10 SDK时遇到的问题、处理把nil插入到NSDictionary里引起crash问题的方案等。 资讯 1) 网信办：App须对注册用户真实身份进行认证 不合规将被整改 另外，国家新闻出版广电总局办公厅印发了关于移动游戏出版服务管理的通知。现在，中国区App &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/06/22/tech-notes-7/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Balloonsys Inc.</a></h1>
+  
+    <h2>Just a blog now.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="balloonsys.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第七期）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-06-22T10:59:24+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>10:59 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>本期周报主要包括试玩iOS 10 SDK时遇到的问题、处理把nil插入到NSDictionary里引起crash问题的方案等。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.cac.gov.cn/2016-06/28/c_1119123114.htm">网信办：App须对注册用户真实身份进行认证 不合规将被整改</a></h4>
+
+<p>另外，国家新闻出版广电总局办公厅印发了关于移动游戏出版服务管理的通知。现在，中国区App Store近日发出通告，移动游戏需要通过国家新闻出版广电总局的审批才可发布。在App审核信息部分的备注字段需要输入游戏类App的批准号码和批准日期。</p>
+
+<h4>2) <a href="http://www.recode.net/2016/6/30/12067578/spotify-apple-app-store-rejection">Spotify更新遭拒</a></h4>
+
+<p>Spotify不想和Apple分成，不使用苹果的订阅服务，这下子遇到麻烦了。</p>
+
+<h2>开发</h2>
+
+<h4>1) iOS 10 beta 1 SDK 初体验</h4>
+
+<p>本周我在实践iOS 10的部分新特性时遇到了不少问题，并且报了三个bug给苹果：
+a. CSSearchQuery 没能查出中文
+b. 把竖屏拍的照片添加到notification中，显示偏转90°
+c. widget移到Today Extension页面顶部，切换展开与收起，视图位置有偏移</p>
+
+<p>另外，在实践Today Extension时遇到tableview的delegate方法未执行的问题，可参考<a href="http://stackoverflow.com/a/28449837">StackOverflow</a>解决。</p>
+
+<h4>2) <a href="http://tech.glowing.com/cn/how-we-made-nsdictionary-nil-safe/">当 NSDictionary 遇见 nil</a></h4>
+
+<p>当把nil插入到NSDictionary里，会引起crash，简单粗暴的解决办法是插入之前加if判断，弊端是代码有bad smell。作者基于Method Swizzle提供了一个全局的处理方案。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/cyanzhong/xTextHandler/">xTextHandler</a></h4>
+
+<p>基于 Xcode Source Editor Extension 的插件集，提高 Xcode 文本处理的体验，你可以通过简单的几行代码扩展它。</p>
+
+<h4>2) <a href="http://wereadteam.github.io/2016/05/23/GYBootingProtection/">iOS 启动连续闪退保护方案</a></h4>
+
+<p>这是微信读书团队分享的方案。之前也看到某猫分享的『APP安全模式』，读起来都云山雾绕的，差评。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/61707af65a48">GMTC2016移动技术大会参会感想</a></h4>
+
+<p>没有参加过此类会议，看了链家网移动敏捷之术，感觉还挺不错的。</p>
+
+<h4>2) <a href="https://www.infoq.com/news/2016/03/agileindia-7sins-scrum">Seven Sins of Scrum and other Agile Antipatterns</a></h4>
+
+<blockquote><p>一些事情看上去是好主意，但在使用的时候会产生意想不到的后果。</p></blockquote>
+
+<p>@end</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-06-22T10:59:24+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>10:59 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/06/21/tech-notes-4/" title="Previous Post: 平安好房iOS开发团队技术周报（第四期）">&laquo; 平安好房iOS开发团队技术周报（第四期）</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2016/06/23/tech-notes-5/" title="Next Post: 平安好房iOS开发团队技术周报（第五期）">平安好房iOS开发团队技术周报（第五期） &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/06/27/tech-notes-6/">平安好房iOS开发团队技术周报（第六期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/06/23/tech-notes-5/">平安好房iOS开发团队技术周报（第五期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/06/22/tech-notes-7/">平安好房iOS开发团队技术周报（第七期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/06/21/tech-notes-4/">平安好房iOS开发团队技术周报（第四期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/06/18/tech-notes-3/">平安好房iOS开发团队技术周报（第三期）</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Linkou Bian -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
