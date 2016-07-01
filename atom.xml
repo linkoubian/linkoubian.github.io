@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-07-01T14:51:09+08:00</updated>
+  <updated>2016-07-01T14:52:33+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -37,7 +37,7 @@
 
 <h4>1) iOS 10 beta 1 SDK 初体验</h4>
 
-<p>本周我在实践iOS 10的部分新特性时遇到了不少问题，并且报了三个bug给苹果：
+<p>本周我在实践iOS 10的部分新特性时遇到了不少问题，并且报了三个bug给苹果： <br/>
 a. CSSearchQuery 没能查出中文 <br/>
 b. 把竖屏拍的照片添加到notification中，显示偏转90° <br/>
 c. widget移到Today Extension页面顶部，切换展开与收起，视图位置有偏移</p>
