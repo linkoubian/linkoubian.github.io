@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-07-01T14:46:22+08:00</updated>
+  <updated>2016-07-01T14:48:26+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第七期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/06/27/tech-notes-7/"/>
-    <updated>2016-06-27T14:46:10+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/06/27/tech-notes-7</id>
+    <link href="http://balloonsys.github.io/blog/2016/07/01/tech-notes-7/"/>
+    <updated>2016-07-01T14:46:10+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/07/01/tech-notes-7</id>
     <content type="html"><![CDATA[<p>本期周报主要包括试玩iOS 10 SDK时遇到的问题、处理把nil插入到NSDictionary里引起crash问题的方案等。</p>
 
 <!--more-->
