@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-07-01T14:52:33+08:00</updated>
+  <updated>2016-07-09T01:17:15+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,72 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tech Notes 8]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/07/08/tech-notes-8/"/>
+    <updated>2016-07-08T00:00:00+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/07/08/tech-notes-8</id>
+    <content type="html"><![CDATA[<hr />
+
+<p>layout: post
+title: 平安好房iOS开发团队技术周报（第八期）
+date: 2016-07-08 21:44:07 +0800
+comments: true
+categories: 技术周报 iOS
+—
+本期周报主要包括苹果开源压缩算法LZFSE、iOS 10中Privacy的变化、iCloud Core Data的境遇等。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://www.infoq.com/news/2016/07/apple-lzfse-lossless-opensource">Apple开源新的压缩算法LZFSE</a></h4>
+
+<p>苹果开源了新的无损压缩算法LZFSE，该算法是去年在iOS 9和OS X 10.10中引入的。按照苹果公司的说法，LZFE的压缩增益和ZLib level 5相同，但速度要快2~3倍，能源效率也更高。</p>
+
+<h4>2) <a href="http://useyourloaf.com/blog/privacy-settings-in-ios-10/">iOS 10 Privacy的变化</a></h4>
+
+<p>比如说如果要在iOS 10中使用相机拍照，那么你得先在info.plist中作相应的声明，否则app会crash。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://blog.csdn.net/chenyufeng1991/article/details/51771728">深拷贝与浅拷贝详解</a></h4>
+
+<p>通过一句话来解释：深拷贝就是内容拷贝，浅拷贝就是指针拷贝。</p>
+
+<h4>2) <a href="http://www.iosxxoo.com/2016/05/18/%E4%B8%BA%E4%BB%80%E4%B9%88Factory%E6%96%B9%E6%B3%95%E8%A6%81%E8%BF%94%E5%9B%9Einstancetype%E8%80%8C%E4%B8%8D%E6%98%AFid/">为什么你需要使用instancetype</a></h4>
+
+<p>不管何时，只要一个class要返回它相同的类实例，使用instancetype都是更加合适的。</p>
+
+<h4>3) <a href="http://mjtsai.com/blog/2016/06/17/the-deprecation-of-icloud-core-data/">The Deprecation of iCloud Core Data</a></h4>
+
+<p>看<a href="https://developer.apple.com/reference/coredata/nspersistentstorecoordinator">NSPersistentStoreCoordinator</a>有一些标记为Deprecated的方法，今年的WWDC上该变化几乎没有被提及。一直以来都没有触碰iCloud相关的API，估计以后也没这个必要了。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/Soulghost/SGUserGuide">SGUserGuide</a></h4>
+
+<p>一个用于制作多步骤用户操作引导的框架，基于AOP，对原工程几乎无任何侵入。</p>
+
+<h4>2) <a href="https://unsplash.com">Unsplash</a></h4>
+
+<p>Unsplash 是一个分享免费高质量照片的网站，都是真实的摄影师作品。图片多是风景和静物，用作公众号文章的封面再好不过，比如此文:P</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://news.ycombinator.com/item?id=11991479">Google为什么要把数十亿行代码放到一个库中</a></h4>
+
+<p>单体大型代码库虽然有许多好处，但构建这样一个庞大的单体代码库也有几个方面的问题需要权衡。Git社区强烈建议使用更多更小的代码库，谷歌的Android和Chrome团队就使用Git。</p>
+
+<h4>2) 豆瓣语录</h4>
+
+<blockquote><p>年轻人在大城市超负荷输出价值，同时也在为各种所谓『消费升级』的概念掏着腰包：出门必打车、每周要买花、每周要请家政……等等。『打最累的工，坐最贵的专车，买最新鲜的花，请最好的家政……』#有时候，青春是一种工业原料#</p></blockquote>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第七期）]]></title>
@@ -1581,297 +1647,6 @@ rule</p></blockquote>
 <p>标题（Label）与当前页指示控件（page control）并不属于iCarousel的cell view，因为整个滑动过程中只有一个Label和一个Page Control。所以我们可以在Storyboard中拖放相应控件作为iCarousel的子视图，再设置属性即可。</p>
 
 <p>当滑动后，到达新页面时，可以在carouselCurrentItemIndexDidChange:中设置Label及Current Page。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[利用Flask的RESTful插件简化API开发]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension/"/>
-    <updated>2014-03-12T13:45:07+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension</id>
-    <content type="html"><![CDATA[<p>今天尝试用Flask的RESTful插件改造昨天写的API，使之更清晰明了。</p>
-
-<!--more-->
-
-
-<h2>准备工作</h2>
-
-<p>进入昨天创建的虚拟开发环境venv，</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>. venv/bin/activate</span></code></pre></td></tr></table></div></figure>
-
-
-<p>安装flask-restful，</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>pip install flask-restful</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>开始改造</h2>
-
-<h3>代码基础机构</h3>
-
-<p>首先搭好Flask-Restful的代码框架，然后往里面填写代码，避免思路被打断。</p>
-
-<p>在app = Flask(<strong>name</strong>)下方加入一行api = Api(app)，该api实例将用来注册路由。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span><span class="p">,</span> <span class="n">abort</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">url_for</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">flask.ext.httpauth</span> <span class="kn">import</span> <span class="n">HTTPBasicAuth</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">flask.ext.restful</span> <span class="kn">import</span> <span class="n">Api</span><span class="p">,</span> <span class="n">Resource</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
-</span><span class='line'><span class="n">api</span> <span class="o">=</span> <span class="n">Api</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
-</span><span class='line'><span class="n">auth</span> <span class="o">=</span> <span class="n">HTTPBasicAuth</span><span class="p">()</span>
-</span><span class='line'>
-</span><span class='line'><span class="nd">@auth.get_password</span>
-</span><span class='line'><span class="k">def</span> <span class="nf">get_password</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">if</span> <span class="n">username</span> <span class="o">==</span> <span class="s">&#39;linkoubian&#39;</span><span class="p">:</span>
-</span><span class='line'>        <span class="k">return</span> <span class="s">&#39;7c4a8d09ca3762af61e59520943dc26494f8941b&#39;</span>
-</span><span class='line'>    <span class="k">return</span> <span class="bp">None</span>
-</span><span class='line'>
-</span><span class='line'><span class="nd">@auth.error_handler</span>
-</span><span class='line'><span class="k">def</span> <span class="nf">unauthorized</span><span class="p">():</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">make_response</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;error&#39;</span><span class="p">:</span> <span class="s">&#39;Unauthorized access&#39;</span> <span class="p">}</span> <span class="p">),</span> <span class="mi">403</span><span class="p">)</span>
-</span><span class='line'>    <span class="c"># return 403 instead of 401 to prevent browsers from displaying the default auth dialog</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-</span><span class='line'>        <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">u&#39;Buy groceries&#39;</span><span class="p">,</span>
-</span><span class='line'>        <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">u&#39;Milk, Cheese, Pizza, Fruit, Tylenol&#39;</span><span class="p">,</span>
-</span><span class='line'>        <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
-</span><span class='line'>    <span class="p">},</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-</span><span class='line'>        <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="s">u&#39;Learn Python&#39;</span><span class="p">,</span>
-</span><span class='line'>        <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">u&#39;Need to find a good Python tutorial on the web&#39;</span><span class="p">,</span>
-</span><span class='line'>        <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">]</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">class</span> <span class="nc">TaskListAPI</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class='line'>        <span class="k">pass</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class='line'>        <span class="k">pass</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">class</span> <span class="nc">TaskAPI</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-</span><span class='line'>        <span class="k">pass</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-</span><span class='line'>        <span class="k">pass</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-</span><span class='line'>        <span class="k">pass</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">TaskListAPI</span><span class="p">,</span> <span class="s">&#39;/todo/tasks&#39;</span><span class="p">,</span> <span class="n">endpoint</span> <span class="o">=</span> <span class="s">&#39;tasks&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">TaskAPI</span><span class="p">,</span> <span class="s">&#39;/todo/tasks/&lt;int:id&gt;&#39;</span><span class="p">,</span> <span class="n">endpoint</span> <span class="o">=</span> <span class="s">&#39;task&#39;</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-</span><span class='line'>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>提取验证逻辑</h3>
-
-<p>然后为TaskListAPI及TaskAPI这两个资源分别添加初始化方法，以处理数据验证等。</p>
-
-<figure class='code'><figcaption><span>TaskListAPI的初始化方法</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span> <span class="o">=</span> <span class="n">reqparse</span><span class="o">.</span><span class="n">RequestParser</span><span class="p">()</span>
-</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;title&#39;</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">str</span><span class="p">,</span> <span class="n">required</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">help</span> <span class="o">=</span> <span class="s">&#39;No task title provided&#39;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;json&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;description&#39;</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">str</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;json&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="nb">super</span><span class="p">(</span><span class="n">TaskListAPI</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>TaskAPI的初始化方法</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span> <span class="o">=</span> <span class="n">reqparse</span><span class="o">.</span><span class="n">RequestParser</span><span class="p">()</span>
-</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;title&#39;</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">str</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;json&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;description&#39;</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">str</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;json&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&#39;done&#39;</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;json&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="nb">super</span><span class="p">(</span><span class="n">TaskAPI</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>注意RequestParser默认是从request.values中取值的，所以此处我们要指定location为json，以从request.json中解析传递过来的数据。</p>
-
-<h3>重构新增task的代码</h3>
-
-<figure class='code'><figcaption><span>旧的代码</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">create_task</span><span class="p">():</span>
-</span><span class='line'>    <span class="k">if</span> <span class="ow">not</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span> <span class="ow">or</span> <span class="ow">not</span> <span class="s">&#39;title&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">:</span>
-</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">task</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>        <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="n">tasks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
-</span><span class='line'>        <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s">&#39;title&#39;</span><span class="p">],</span>
-</span><span class='line'>        <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;description&#39;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">),</span>
-</span><span class='line'>        <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">make_public_task</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="p">}</span> <span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span>新的代码</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class='line'>    <span class="n">args</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
-</span><span class='line'>    <span class="n">task</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>        <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="n">tasks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
-</span><span class='line'>        <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="n">args</span><span class="p">[</span><span class="s">&#39;title&#39;</span><span class="p">],</span>
-</span><span class='line'>        <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="n">args</span><span class="p">[</span><span class="s">&#39;description&#39;</span><span class="p">],</span>
-</span><span class='line'>        <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="bp">False</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">return</span> <span class="p">{</span> <span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">make_public_task</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>不光数据验证相关的代码被移除了，description的默认值也不必在新代码里体现。由于Flask-Restful会自动将数据转成JSON格式，所以jsonify函数也可不必调用。</p>
-
-<p>另外，Flask-Restful插件提供的marshal功能，可以优雅的完成make_public_task的功能。只需定义一个数据模板，</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">task_fields</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span>
-</span><span class='line'>    <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="n">fields</span><span class="o">.</span><span class="n">String</span><span class="p">,</span>
-</span><span class='line'>    <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="n">fields</span><span class="o">.</span><span class="n">String</span><span class="p">,</span>
-</span><span class='line'>    <span class="s">&#39;done&#39;</span><span class="p">:</span> <span class="n">fields</span><span class="o">.</span><span class="n">Boolean</span><span class="p">,</span>
-</span><span class='line'>    <span class="s">&#39;uri&#39;</span><span class="p">:</span> <span class="n">fields</span><span class="o">.</span><span class="n">Url</span><span class="p">(</span><span class="s">&#39;task&#39;</span><span class="p">,</span> <span class="n">absolute</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>然后将make_public_task(task)替换成marshal(task, task_fields)即可。</p>
-
-<h3>重构更新task的代码</h3>
-
-<p>原来代码中有大段的验证逻辑，现在可以统统去掉，只需如下编写方法即可，</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
-</span><span class='line'>    <span class="n">task</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">id</span><span class="p">,</span> <span class="n">tasks</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span><span class='line'>        <span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">task</span> <span class="o">=</span> <span class="n">task</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span><span class='line'>    <span class="n">args</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reqparse</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
-</span><span class='line'>    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">args</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
-</span><span class='line'>        <span class="k">if</span> <span class="n">v</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
-</span><span class='line'>            <span class="n">task</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
-</span><span class='line'>    <span class="k">return</span> <span class="p">{</span> <span class="s">&#39;task&#39;</span><span class="p">:</span> <span class="n">marshal</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">task_fields</span><span class="p">)</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>说明</h2>
-
-<p>本文是根据<a href="http://blog.miguelgrinberg.com/post/about-me">Miguel Grinberg</a>写的这篇<a href="http://blog.miguelgrinberg.com/post/designing-a-restful-api-using-flask-restful">文章</a>翻译并整理的。</p>
 ]]></content>
   </entry>
   

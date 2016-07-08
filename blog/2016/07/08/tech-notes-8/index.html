@@ -1,0 +1,58 @@
+<hr />
+
+<p>layout: post
+title: 平安好房iOS开发团队技术周报（第八期）
+date: 2016-07-08 21:44:07 +0800
+comments: true
+categories: 技术周报 iOS
+—
+本期周报主要包括苹果开源压缩算法LZFSE、iOS 10中Privacy的变化、iCloud Core Data的境遇等。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://www.infoq.com/news/2016/07/apple-lzfse-lossless-opensource">Apple开源新的压缩算法LZFSE</a></h4>
+
+<p>苹果开源了新的无损压缩算法LZFSE，该算法是去年在iOS 9和OS X 10.10中引入的。按照苹果公司的说法，LZFE的压缩增益和ZLib level 5相同，但速度要快2~3倍，能源效率也更高。</p>
+
+<h4>2) <a href="http://useyourloaf.com/blog/privacy-settings-in-ios-10/">iOS 10 Privacy的变化</a></h4>
+
+<p>比如说如果要在iOS 10中使用相机拍照，那么你得先在info.plist中作相应的声明，否则app会crash。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://blog.csdn.net/chenyufeng1991/article/details/51771728">深拷贝与浅拷贝详解</a></h4>
+
+<p>通过一句话来解释：深拷贝就是内容拷贝，浅拷贝就是指针拷贝。</p>
+
+<h4>2) <a href="http://www.iosxxoo.com/2016/05/18/%E4%B8%BA%E4%BB%80%E4%B9%88Factory%E6%96%B9%E6%B3%95%E8%A6%81%E8%BF%94%E5%9B%9Einstancetype%E8%80%8C%E4%B8%8D%E6%98%AFid/">为什么你需要使用instancetype</a></h4>
+
+<p>不管何时，只要一个class要返回它相同的类实例，使用instancetype都是更加合适的。</p>
+
+<h4>3) <a href="http://mjtsai.com/blog/2016/06/17/the-deprecation-of-icloud-core-data/">The Deprecation of iCloud Core Data</a></h4>
+
+<p>看<a href="https://developer.apple.com/reference/coredata/nspersistentstorecoordinator">NSPersistentStoreCoordinator</a>有一些标记为Deprecated的方法，今年的WWDC上该变化几乎没有被提及。一直以来都没有触碰iCloud相关的API，估计以后也没这个必要了。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/Soulghost/SGUserGuide">SGUserGuide</a></h4>
+
+<p>一个用于制作多步骤用户操作引导的框架，基于AOP，对原工程几乎无任何侵入。</p>
+
+<h4>2) <a href="https://unsplash.com">Unsplash</a></h4>
+
+<p>Unsplash 是一个分享免费高质量照片的网站，都是真实的摄影师作品。图片多是风景和静物，用作公众号文章的封面再好不过，比如此文:P</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://news.ycombinator.com/item?id=11991479">Google为什么要把数十亿行代码放到一个库中</a></h4>
+
+<p>单体大型代码库虽然有许多好处，但构建这样一个庞大的单体代码库也有几个方面的问题需要权衡。Git社区强烈建议使用更多更小的代码库，谷歌的Android和Chrome团队就使用Git。</p>
+
+<h4>2) 豆瓣语录</h4>
+
+<blockquote><p>年轻人在大城市超负荷输出价值，同时也在为各种所谓『消费升级』的概念掏着腰包：出门必打车、每周要买花、每周要请家政……等等。『打最累的工，坐最贵的专车，买最新鲜的花，请最好的家政……』#有时候，青春是一种工业原料#</p></blockquote>
+
+<p>@end</p>
