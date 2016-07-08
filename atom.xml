@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-07-09T01:17:15+08:00</updated>
+  <updated>2016-07-09T01:24:34+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,19 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Tech Notes 8]]></title>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第八期）]]></title>
     <link href="http://balloonsys.github.io/blog/2016/07/08/tech-notes-8/"/>
-    <updated>2016-07-08T00:00:00+08:00</updated>
+    <updated>2016-07-08T21:44:07+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/07/08/tech-notes-8</id>
-    <content type="html"><![CDATA[<hr />
-
-<p>layout: post
-title: 平安好房iOS开发团队技术周报（第八期）
-date: 2016-07-08 21:44:07 +0800
-comments: true
-categories: 技术周报 iOS
-—
-本期周报主要包括苹果开源压缩算法LZFSE、iOS 10中Privacy的变化、iCloud Core Data的境遇等。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括苹果开源压缩算法LZFSE、iOS 10中Privacy的变化、iCloud Core Data的境遇等。</p>
 
 <!--more-->
 
