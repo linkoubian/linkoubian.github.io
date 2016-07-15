@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://balloonsys.github.io/blog/2016/07/15/tech-notes-9/</loc>
+<lastmod>2016-07-15T22:59:18+08:00</lastmod>
+</url>
+<url>
 <loc>http://balloonsys.github.io/blog/2016/07/08/tech-notes-8/</loc>
 <lastmod>2016-07-08T21:44:07+08:00</lastmod>
 </url>

@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-07-09T01:24:34+08:00</updated>
+  <updated>2016-07-16T07:17:37+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第九期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/07/15/tech-notes-9/"/>
+    <updated>2016-07-15T22:59:18+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/07/15/tech-notes-9</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括iOS 10体现出的新设计风格、Facebook移动测试实验室解密、如何构建支持多线程的Core Data Stack等。当然也少不了对一些现象的不同观点（摘自网络）。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://www.punchkick.com/blog/2016/07/08/apples-design-style-ios-10-accessibility">Apple’s new design style in iOS 10 is a statement on accessibility</a> @Connor Mason</h4>
+
+<p>Anyway，这三大原则，即Clarity、Deference、Depth，让iOS系统有别于其他平台。</p>
+
+<h4>2) <a href="https://code.facebook.com/posts/300815046928882/the-mobile-device-lab-at-the-prineville-data-center/">Facebook lifts the veil on its mobile device testing lab</a> @Antoine Reversat</h4>
+
+<p>Facebook对外揭开了其移动测试实验室的面纱，该实验室当前有60个支架，每个支架上有32只手机，用于iOS测试的支架背后分别连着8台Mini。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://blog.leancloud.cn/2835/">iOS 性能优化：Instruments 工具的救命三招</a> @LeanCloud</h4>
+
+<p>随着项目的扩大和功能的增多，没经过认真调试和优化的代码，要么任性地卡顿运行，要么低调地崩溃了之。</p>
+
+<h4>2) <a href="https://www.bignerdranch.com/blog/introducing-the-big-nerd-ranch-core-data-stack/#shared_coordinator">Introducing the Core Data Stack</a> @Robert Edwards</h4>
+
+<p>本周花了些时间学习支持多线程的Core Data Stack设计方案，Big Nerd Ranch提的这个模型感觉不错。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/TBXark/TKRadarChart">TKRadarChart</a> @TBXark</h4>
+
+<p>Swift 实现的一个类似芝麻分解读页的雷达图。</p>
+
+<h4>2) <a href="https://itunes.apple.com/cn/app/iconkit-icon-resizer-for-app/id507135296">IconKit: The Icon Resizer for App Development</a> @Appersian</h4>
+
+<p>IconKit这款老牌图标快速生成软件支持从 iOS 6 到 iOS 10、watchOS 1-2、CarPlay, Messages 贴纸、Xcode 图标集的图标生成服务。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://twitter.com/kentzhu/status/753434825978109953">产品语录</a> @kentzhu</h4>
+
+<blockquote><p>很多老板会有一个误区，我的业务上不去是因为产品没做好，产品没做好体现在APP的界面不够高端大气上档次，体现在不能三步点击找到主功能……你一个卖货的不去上街吆喝，怪货架长得不好看有个毛用？</p></blockquote>
+
+<h4>2) <a href="http://weibo.com/1765732340/DENJO10bl?type=comment">软件工程方法语录</a> @钟颖</h4>
+
+<blockquote><p>也许让我对敏捷不舒服的原因是，我真的想看看敏捷教练到底做过什么不得了的项目。</p></blockquote>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第八期）]]></title>
@@ -1485,160 +1539,6 @@ rule</p></blockquote>
 <h2>个人小结</h2>
 
 <p>荀子在劝学篇里说，“君子生非异也，善假于物也”！没错，做APP开发就是要善假于物也！</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[基于iCarousel构建新闻头条]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/03/24/news-headline-in-action/"/>
-    <updated>2014-03-24T16:25:24+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/03/24/news-headline-in-action</id>
-    <content type="html"><![CDATA[<p>市面上大部分新闻客户端的布局，都是顶部放一个可以左右滑动的头条，下方是新闻列表。像网易新闻的头条部分，通常是新闻与广告穿插。因为近期正在开发类似的一个APP，现总结头条部分的构建步骤。</p>
-
-<!--more-->
-
-
-<h2>技术选型</h2>
-
-<p>去code4app.com上搜索ScrollView相关的代码，会找到一些类似的代码示例，比如这个<a href="http://code4app.com/ios/EScrollerView/51935e166803fac572000003">EScrollView</a>。如果是本着学习的出发点，借鉴其思路并酌情修改其代码以满足自身项目需求，也不是难事。但如果要用在商业项目里，并期望获得足够的灵活性可能还需花费很多精力。</p>
-
-<p>经过一番Google，在Github里找到了<a href="https://github.com/nicklockwood/iCarousel">iCarousel</a>这个控件，其示例代码中含不少例子，不过大部分例子的效果都是CoverFlow风格。但其中的Paging Example给了我灵感，把iCarousel View的高度设小一点，再额外加个page control及text label不就刚好么？欣喜之余，快速打开该示例的代码仔细阅读。</p>
-
-<p>下面详细介绍如何基于iCarousel构建新闻头条。</p>
-
-<h2>iCarousel简介</h2>
-
-<h3>定制iCarousel视图</h3>
-
-<p>拖一个UIView到View Controller的顶部，大小为320X190，类名设置为iCarousel，连接到一个名为headlinesView的Outlet。</p>
-
-<p>在viewDidLoad中调用如下方法，</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setupHeadlinesView</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">headlinesView</span><span class="p">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">iCarouselTypeLinear</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">headlinesView</span><span class="p">.</span><span class="n">pagingEnabled</span> <span class="o">=</span> <span class="n">YES</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">headlinesView</span><span class="p">.</span><span class="n">dataSource</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">self</span><span class="p">.</span><span class="n">headlinesView</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>此处关键的一个属性便是pagingEnabled，设置后刚好符合期望的效果。</p>
-
-<h3>为iCarousel提供数据</h3>
-
-<p>iCarousel采用类似于table view的设计方式，提供了不少datasource及delegate方法。</p>
-
-<p>下面这个方法告诉iCarousel共有几个cell item，</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nf">numberOfItemsInCarousel:</span><span class="p">(</span><span class="n">iCarousel</span> <span class="o">*</span><span class="p">)</span><span class="nv">carousel</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">kCoundOfHeadlineNews</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>当需要加载某个cell view时，会调用viewForItemAtIndex，我们需在该方法里确保用于显示新闻头条图片的imageView被构建并设置相应地image。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nf">carousel:</span><span class="p">(</span><span class="n">iCarousel</span> <span class="o">*</span><span class="p">)</span><span class="nv">carousel</span> <span class="nf">viewForItemAtIndex:</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">index</span> <span class="nf">reusingView:</span><span class="p">(</span><span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">view</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">UIImageView</span> <span class="o">*</span><span class="n">headlineImageView</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c1">// Create new view if no view is available for recycling</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">view</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="n">view</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">self</span><span class="p">.</span><span class="n">headlinesView</span><span class="p">.</span><span class="n">bounds</span><span class="p">];</span>
-</span><span class='line'>        <span class="n">headlineImageView</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIImageView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">];</span>
-</span><span class='line'>        <span class="p">[</span><span class="n">headlineImageView</span> <span class="nl">setImage:</span><span class="p">[</span><span class="n">UIImage</span> <span class="nl">imageNamed:</span><span class="s">@&quot;Headline_Placehold&quot;</span><span class="p">]];</span>
-</span><span class='line'>        <span class="n">headlineImageView</span><span class="p">.</span><span class="n">tag</span> <span class="o">=</span> <span class="n">kHeadlineImageViewTag</span><span class="p">;</span>
-</span><span class='line'>        <span class="p">[</span><span class="n">view</span> <span class="nl">addSubview:</span><span class="n">headlineImageView</span><span class="p">];</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>        <span class="n">headlineImageView</span> <span class="o">=</span> <span class="p">(</span><span class="n">UIImageView</span> <span class="o">*</span><span class="p">)[</span><span class="n">view</span> <span class="nl">viewWithTag:</span><span class="n">kHeadlineImageViewTag</span><span class="p">];</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c1">// Load image for headline news</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&lt;</span> <span class="n">self</span><span class="p">.</span><span class="n">headlineNews</span><span class="p">.</span><span class="n">count</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="p">[</span><span class="n">headlineImageView</span> <span class="nl">setImageWithURL:</span><span class="p">[</span><span class="n">NSURL</span> <span class="nl">URLWithString:</span><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">headlineNews</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="n">img</span><span class="p">]]];</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">return</span> <span class="n">view</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>上面代码中的headlineNews是一个数组，用来存从远程服务器获得的头条新闻（Model）列表，其中img属性（头条新闻的字段）为对应图片的URL。当加载cell view时headlineNews可能还没有数据，所以上述代码做了个判断，即if (index &lt; self.headlineNews.count)。</p>
-
-<p>当远端数据加载完毕，我们可以调用[self.headlinesView reloadData]以更新界面。</p>
-
-<p>另外，往Image View设置远程图片，可以用SDWebImage提供的方法setImageWithURL，该框架可以有效的管理图片的缓存。</p>
-
-<h3>定制iCarousel的行为</h3>
-
-<p>当头条新闻滑到最后一页时，通常需要能够回到第一页。iCarousel提供了一个delegate方法以定制该控件的属性。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nf">carousel:</span><span class="p">(</span><span class="n">iCarousel</span> <span class="o">*</span><span class="p">)</span><span class="nv">carousel</span> <span class="nf">valueForOption:</span><span class="p">(</span><span class="n">iCarouselOption</span><span class="p">)</span><span class="nv">option</span> <span class="nf">withDefault:</span><span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span><span class="nv">value</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="k">switch</span> <span class="p">(</span><span class="n">option</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">case</span> <span class="nl">iCarouselOptionWrap:</span>
-</span><span class='line'>            <span class="k">return</span> <span class="n">YES</span><span class="p">;</span>
-</span><span class='line'>        <span class="k">default</span><span class="o">:</span>
-</span><span class='line'>            <span class="k">return</span> <span class="n">value</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>点击某一个cell view时，需要展示新闻详情页面。跳转的逻辑可以放在carousel:didSelectItemAtIndex:中。</p>
-
-<h2>添加新闻标题</h2>
-
-<p>标题（Label）与当前页指示控件（page control）并不属于iCarousel的cell view，因为整个滑动过程中只有一个Label和一个Page Control。所以我们可以在Storyboard中拖放相应控件作为iCarousel的子视图，再设置属性即可。</p>
-
-<p>当滑动后，到达新页面时，可以在carouselCurrentItemIndexDidChange:中设置Label及Current Page。</p>
 ]]></content>
   </entry>
   
