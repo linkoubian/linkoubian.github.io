@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-07-16T07:17:37+08:00</updated>
+  <updated>2016-07-23T19:31:24+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,11 +14,73 @@
 
   
   <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/07/23/tech-notes-10/"/>
+    <updated>2016-07-23T12:19:53+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/07/23/tech-notes-10</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括iOS 10相关的交互动画详解、Auto Layout新特性，以及直播应用中的技术经验与架构分析等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://www.macstories.net/stories/exploring-the-app-stores-top-grossing-chart/">Exploring the App Store’s Top Grossing Chart</a> by Graham Spencer</h4>
+
+<p>通过对US App Store前200的iPhone应用进行分析，得到的结论是98.5%的APP免费，99%提供IAP，71%提供超过10个IAP，大部分的IAP定价在0.99~19.99美金。按类型来看，68%的是游戏、11%的是社交类应用，音乐类占7%。</p>
+
+<h4>2) <a href="https://bugreport.apple.com/">Apple SDK Bug Reporter</a></h4>
+
+<p>今年第一时间把玩了iOS 10的SDK，发现了不少bug并提给苹果。但是，体验很不好。得到的回复通常就是要截图、要示例代码。给他截图、给他代码后也不仔细看bug描述（对，此条资讯就是我的纯吐槽）。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/6ac70183631e">iOS交互动画详解</a> by seedante</h4>
+
+<p>WWDC 2016 Session 216介绍了iOS 10的新动画 API，让动画与交互无缝连接。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/2521c610fac3">Xcode 8 Auto Layout新特性</a> by halfrost</h4>
+
+<p>作者是原平安付工程师，一系列关于WWDC 2016 Session的笔记很棒，推荐都看看。</p>
+
+<h4>3) <a href="http://blog.seedlab.io/understanding-responder-chain/">Understanding Responder Chain</a> by seedlab</h4>
+
+<p>本文翻译并梳理了Cocoa Event Handling Guide中的 Responder Chain 部分。</p>
+
+<h4><a href="https://segmentfault.com/a/1190000005994317">揭秘直播移动APP技术实现</a> by fir.im</h4>
+
+<p>2016年直播似乎无处不在，作为一个开发者也许需要补充下关于直播技术点。本文整理了一些开发者对于直播实践项目中的技术经验与直播技术架构分析等内容，还有一些关于 iOS 、Android等相关开发干货。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://mdsb100-xiabigao.daoapp.io/2016/07/15/ios-cocoapodszu-jian-ping-hua-er-jin-zhi-hua-fang-an-ji-xiang-xi-jiao-cheng/">CocoaPods组件平滑二进制化解决方案</a> by 曹俊</h4>
+
+<p>二进制化指的是通过编译把组件的源码转换成静态库或动态库，以提高该组件在App项目中的编译速度。</p>
+
+<h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2650993379&amp;idx=1&amp;sn=69d0fe852fe2774ed1bfe4b9760e69a1">滴滴的组件化实践与优化</a> by 李贤辉</h4>
+
+<p>滴滴iOS技术负责人对组件化实践与优化的分享，包括地图业务模块解耦、界面解耦等内容。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://uxmovement.com/mobile/how-to-design-a-walkthrough-that-users-will-read/">How to Design a Walkthrough That Users Will Read</a> by anthony</h4>
+
+<p>引用文末一句：引导页应像便签一样简单易读。不过，核心功能大家熟的不能再熟且用户主要就是用其最核心的功能，那我觉得Walkthrough是多余的。比如导航，我的使用频率不高，偶尔在外打开查个路线，猝不及防的看到引导页，很烦的。</p>
+
+<h4>2) <a href="https://zhuanlan.zhihu.com/p/20498277">如何为 app 设计一个合适的搜索功能？</a> by 5key</h4>
+
+<p>我们可以在 apps 中看到各种各样的设计方案，但这些方案并非适合于每一块产品。作者以市面上常见的一些设计形式对搜索功能做一个深入的剖析。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第九期）]]></title>
     <link href="http://balloonsys.github.io/blog/2016/07/15/tech-notes-9/"/>
     <updated>2016-07-15T22:59:18+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/07/15/tech-notes-9</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括iOS 10体现出的新设计风格、Facebook移动测试实验室解密、如何构建支持多线程的Core Data Stack等。当然也少不了对一些现象的不同观点（摘自网络）。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括iOS 10体现出的新设计风格、Facebook移动测试实验室解密、如何构建支持多线程的Core Data Stack等。</p>
 
 <!--more-->
 
@@ -1490,55 +1552,6 @@ rule</p></blockquote>
 3. 基于自定义URL及WebView的delegate方法，实现HTML与ObjC的交互</p>
 
 <p>另外，除了MGTemplateEngine外，还有其他的模板引擎可以使用，比如GRMustache。至于孰优孰劣，什么场合选择哪个，截止目前我并没有做任何研究，等接到下一个需要模板引擎的项目再说吧。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[做iOS外包开发用到的工具]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/04/04/ios-dev-tools/"/>
-    <updated>2014-04-04T16:27:54+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/04/04/ios-dev-tools</id>
-    <content type="html"><![CDATA[<p>这个虚拟的Balloonsys工作室，总算发展到两位工程师了。</p>
-
-<!--more-->
-
-
-<h2>发展历史</h2>
-
-<p>2010年8月第一次为成都一家公司做兼职开发，仅持续两周<br/>
-2012年9月帮杭州一家公司发布应用<br/>
-2014年4月终于签下了第一份APP开发合同</p>
-
-<h2>第三方服务</h2>
-
-<p>为自己、为别人开发iPhone应用的过程中，也使用过不少第三方服务。一直持续使用的有：<br/>
-1. 私有代码托管 <a href="https://bitbucket.org">https://bitbucket.org</a> <br/>
-2. 收集崩溃日志 <a href="https://www.crashlytics.com">https://www.crashlytics.com</a> <br/>
-3. 测试版本分发 <a href="https://testflightapp.com">https://testflightapp.com</a> <br/>
-4. 数据统计分析 <a href="http://www.appannie.com">http://www.appannie.com</a></p>
-
-<h2>软件工具</h2>
-
-<p>当一个关于APP的Idea萌生后，我会在草稿本上大致画出轮廓，想好每一页的交互，然后用下面的软件工具落地： <br/>
-1. 网络请求分析 <a href="http://www.portswigger.net/burp/download.html">http://www.portswigger.net/burp/download.html</a> <br/>
-2. 软件原型设计 <a href="http://www.apple.com/cn/mac/keynote/">http://www.apple.com/cn/mac/keynote/</a> <br/>
-3. 接口服务文档 <a href="http://www.apple.com/cn/mac/pages/">http://www.apple.com/cn/mac/pages/</a> <br/>
-4. 模拟接口实现 <a href="http://www.sublimetext.com">http://www.sublimetext.com</a> <br/>
-5. 测试一下接口 <a href="http://luckymarmot.com/paw">http://luckymarmot.com/paw</a> <br/>
-6. 买点现成图标 <a href="https://www.iconfinder.com">https://www.iconfinder.com</a> <br/>
-7. 编辑矢量图标 <a href="http://www.bohemiancoding.com/sketch/">http://www.bohemiancoding.com/sketch/</a></p>
-
-<p>在Mac上启动Burp后，把iPhone的代理服务器设置为MBPR的IP，端口为Burp中设置的那个。这样就可以在Burp中方便的看到手机上的网络请求详情。通过这种方式，我获得了不少第三方应用的API，然后开发了两款“非官方”的客户端。</p>
-
-<p>利用Keynote做原型设计，这是从公司的咨询顾问那里学来的。感觉速度快，效果也很不错。在开发西子快讯前，我便用Keynote做了一份演示原型。</p>
-
-<p>通常后端服务返回JSON格式的数据，为方便的观察API的Response，我喜欢用Paw这个工具，个人感觉比Post Man好用很多。</p>
-
-<p>做客户端开发，对图标的需求还是蛮大的，按钮、菜单、启动图标等等。Icon Finder这个网站不光提供免费的图标下载，还有付费的图标，也不贵，而且提供SVG格式。利用Sketch，可以轻松修改颜色、大小等。</p>
-
-<h2>个人小结</h2>
-
-<p>荀子在劝学篇里说，“君子生非异也，善假于物也”！没错，做APP开发就是要善假于物也！</p>
 ]]></content>
   </entry>
   

@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>平安好房iOS开发团队技术周报（第十期） - Balloonsys Inc.</title>
+  <meta name="author" content="Linkou Bian">
+
+  
+  <meta name="description" content="本期周报主要包括iOS 10相关的交互动画详解、Auto Layout新特性，以及直播应用中的技术经验与架构分析等内容。 资讯 1) Exploring the App Store’s Top Grossing Chart by Graham Spencer 通过对US App &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/07/23/tech-notes-10/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Balloonsys Inc.</a></h1>
+  
+    <h2>Just a blog now.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="balloonsys.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第十期）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-07-23T12:19:53+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2016</span></span> <span class='time'>12:19 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>本期周报主要包括iOS 10相关的交互动画详解、Auto Layout新特性，以及直播应用中的技术经验与架构分析等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://www.macstories.net/stories/exploring-the-app-stores-top-grossing-chart/">Exploring the App Store’s Top Grossing Chart</a> by Graham Spencer</h4>
+
+<p>通过对US App Store前200的iPhone应用进行分析，得到的结论是98.5%的APP免费，99%提供IAP，71%提供超过10个IAP，大部分的IAP定价在0.99~19.99美金。按类型来看，68%的是游戏、11%的是社交类应用，音乐类占7%。</p>
+
+<h4>2) <a href="https://bugreport.apple.com/">Apple SDK Bug Reporter</a></h4>
+
+<p>今年第一时间把玩了iOS 10的SDK，发现了不少bug并提给苹果。但是，体验很不好。得到的回复通常就是要截图、要示例代码。给他截图、给他代码后也不仔细看bug描述（对，此条资讯就是我的纯吐槽）。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/6ac70183631e">iOS交互动画详解</a> by seedante</h4>
+
+<p>WWDC 2016 Session 216介绍了iOS 10的新动画 API，让动画与交互无缝连接。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/2521c610fac3">Xcode 8 Auto Layout新特性</a> by halfrost</h4>
+
+<p>作者是原平安付工程师，一系列关于WWDC 2016 Session的笔记很棒，推荐都看看。</p>
+
+<h4>3) <a href="http://blog.seedlab.io/understanding-responder-chain/">Understanding Responder Chain</a> by seedlab</h4>
+
+<p>本文翻译并梳理了Cocoa Event Handling Guide中的 Responder Chain 部分。</p>
+
+<h4><a href="https://segmentfault.com/a/1190000005994317">揭秘直播移动APP技术实现</a> by fir.im</h4>
+
+<p>2016年直播似乎无处不在，作为一个开发者也许需要补充下关于直播技术点。本文整理了一些开发者对于直播实践项目中的技术经验与直播技术架构分析等内容，还有一些关于 iOS 、Android等相关开发干货。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://mdsb100-xiabigao.daoapp.io/2016/07/15/ios-cocoapodszu-jian-ping-hua-er-jin-zhi-hua-fang-an-ji-xiang-xi-jiao-cheng/">CocoaPods组件平滑二进制化解决方案</a> by 曹俊</h4>
+
+<p>二进制化指的是通过编译把组件的源码转换成静态库或动态库，以提高该组件在App项目中的编译速度。</p>
+
+<h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2650993379&amp;idx=1&amp;sn=69d0fe852fe2774ed1bfe4b9760e69a1">滴滴的组件化实践与优化</a> by 李贤辉</h4>
+
+<p>滴滴iOS技术负责人对组件化实践与优化的分享，包括地图业务模块解耦、界面解耦等内容。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://uxmovement.com/mobile/how-to-design-a-walkthrough-that-users-will-read/">How to Design a Walkthrough That Users Will Read</a> by anthony</h4>
+
+<p>引用文末一句：引导页应像便签一样简单易读。不过，核心功能大家熟的不能再熟且用户主要就是用其最核心的功能，那我觉得Walkthrough是多余的。比如导航，我的使用频率不高，偶尔在外打开查个路线，猝不及防的看到引导页，很烦的。</p>
+
+<h4>2) <a href="https://zhuanlan.zhihu.com/p/20498277">如何为 app 设计一个合适的搜索功能？</a> by 5key</h4>
+
+<p>我们可以在 apps 中看到各种各样的设计方案，但这些方案并非适合于每一块产品。作者以市面上常见的一些设计形式对搜索功能做一个深入的剖析。</p>
+
+<p>@end</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-07-23T12:19:53+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2016</span></span> <span class='time'>12:19 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/07/15/tech-notes-9/" title="Previous Post: 平安好房iOS开发团队技术周报（第九期）">&laquo; 平安好房iOS开发团队技术周报（第九期）</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/07/23/tech-notes-10/">平安好房iOS开发团队技术周报（第十期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/07/15/tech-notes-9/">平安好房iOS开发团队技术周报（第九期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/07/08/tech-notes-8/">平安好房iOS开发团队技术周报（第八期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/07/01/tech-notes-7/">平安好房iOS开发团队技术周报（第七期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/06/27/tech-notes-6/">平安好房iOS开发团队技术周报（第六期）</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Linkou Bian -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

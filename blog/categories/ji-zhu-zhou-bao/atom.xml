@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-07-16T07:17:37+08:00</updated>
+  <updated>2016-07-23T19:31:24+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,11 +14,73 @@
 
   
   <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/07/23/tech-notes-10/"/>
+    <updated>2016-07-23T12:19:53+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/07/23/tech-notes-10</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括iOS 10相关的交互动画详解、Auto Layout新特性，以及直播应用中的技术经验与架构分析等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://www.macstories.net/stories/exploring-the-app-stores-top-grossing-chart/">Exploring the App Store’s Top Grossing Chart</a> by Graham Spencer</h4>
+
+<p>通过对US App Store前200的iPhone应用进行分析，得到的结论是98.5%的APP免费，99%提供IAP，71%提供超过10个IAP，大部分的IAP定价在0.99~19.99美金。按类型来看，68%的是游戏、11%的是社交类应用，音乐类占7%。</p>
+
+<h4>2) <a href="https://bugreport.apple.com/">Apple SDK Bug Reporter</a></h4>
+
+<p>今年第一时间把玩了iOS 10的SDK，发现了不少bug并提给苹果。但是，体验很不好。得到的回复通常就是要截图、要示例代码。给他截图、给他代码后也不仔细看bug描述（对，此条资讯就是我的纯吐槽）。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/6ac70183631e">iOS交互动画详解</a> by seedante</h4>
+
+<p>WWDC 2016 Session 216介绍了iOS 10的新动画 API，让动画与交互无缝连接。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/2521c610fac3">Xcode 8 Auto Layout新特性</a> by halfrost</h4>
+
+<p>作者是原平安付工程师，一系列关于WWDC 2016 Session的笔记很棒，推荐都看看。</p>
+
+<h4>3) <a href="http://blog.seedlab.io/understanding-responder-chain/">Understanding Responder Chain</a> by seedlab</h4>
+
+<p>本文翻译并梳理了Cocoa Event Handling Guide中的 Responder Chain 部分。</p>
+
+<h4><a href="https://segmentfault.com/a/1190000005994317">揭秘直播移动APP技术实现</a> by fir.im</h4>
+
+<p>2016年直播似乎无处不在，作为一个开发者也许需要补充下关于直播技术点。本文整理了一些开发者对于直播实践项目中的技术经验与直播技术架构分析等内容，还有一些关于 iOS 、Android等相关开发干货。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://mdsb100-xiabigao.daoapp.io/2016/07/15/ios-cocoapodszu-jian-ping-hua-er-jin-zhi-hua-fang-an-ji-xiang-xi-jiao-cheng/">CocoaPods组件平滑二进制化解决方案</a> by 曹俊</h4>
+
+<p>二进制化指的是通过编译把组件的源码转换成静态库或动态库，以提高该组件在App项目中的编译速度。</p>
+
+<h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2650993379&amp;idx=1&amp;sn=69d0fe852fe2774ed1bfe4b9760e69a1">滴滴的组件化实践与优化</a> by 李贤辉</h4>
+
+<p>滴滴iOS技术负责人对组件化实践与优化的分享，包括地图业务模块解耦、界面解耦等内容。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://uxmovement.com/mobile/how-to-design-a-walkthrough-that-users-will-read/">How to Design a Walkthrough That Users Will Read</a> by anthony</h4>
+
+<p>引用文末一句：引导页应像便签一样简单易读。不过，核心功能大家熟的不能再熟且用户主要就是用其最核心的功能，那我觉得Walkthrough是多余的。比如导航，我的使用频率不高，偶尔在外打开查个路线，猝不及防的看到引导页，很烦的。</p>
+
+<h4>2) <a href="https://zhuanlan.zhihu.com/p/20498277">如何为 app 设计一个合适的搜索功能？</a> by 5key</h4>
+
+<p>我们可以在 apps 中看到各种各样的设计方案，但这些方案并非适合于每一块产品。作者以市面上常见的一些设计形式对搜索功能做一个深入的剖析。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第九期）]]></title>
     <link href="http://balloonsys.github.io/blog/2016/07/15/tech-notes-9/"/>
     <updated>2016-07-15T22:59:18+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/07/15/tech-notes-9</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括iOS 10体现出的新设计风格、Facebook移动测试实验室解密、如何构建支持多线程的Core Data Stack等。当然也少不了对一些现象的不同观点（摘自网络）。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括iOS 10体现出的新设计风格、Facebook移动测试实验室解密、如何构建支持多线程的Core Data Stack等。</p>
 
 <!--more-->
 
@@ -241,66 +303,6 @@ c. widget移到Today Extension页面顶部，切换展开与收起，视图位�
 <blockquote><p>如果要在简单表达和并不专业的设计之间做出选择，你应该选择简单表达。设计技能的逐步提高是从简单表达开始的。</p></blockquote>
 
 <p>iPhone的成功，降低了产品经理（大部分只有抄袭还抄不好的能力）的门槛；APP的泛滥，降低了软件工程师（鱼龙混杂，水货较多）的门槛；iOS 7开始，降低了设计师（大部分也就是个Photoshop熟练工）的门槛。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第五期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/06/23/tech-notes-5/"/>
-    <updated>2016-06-23T16:31:43+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/06/23/tech-notes-5</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括Xcode扩展、Method Swizzle、Git分支实践等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://daringfireball.net/linked/2016/06/22/ios-10-kernel">iOS 10 内核未加密</a></h4>
-
-<p>苹果发言人称: “The kernel cache doesn’t contain any user info, and by unencrypting it we’re able to optimize the operating system’s performance without compromising security.”</p>
-
-<h4>2) <a href="https://www.raywenderlich.com/135655/whats-new-swift-3">What’s New in Swift 3?</a></h4>
-
-<p>虽然暂时还没必要迁移至Swift 3（下半年还会有改动），但语言的主要变动还是需要了解的。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://www.russbishop.net/xcode-extensions">Xcode Source Editor Extension</a></h4>
-
-<p>在菜单触发插件，XCSourceEditorCommand 拦截到该消息。我们从 invocation 中拿到 buffer，根据当前行可以获取到需要的数据。我的<a href="https://github.com/balloonsys/PAXcodePlugin">示例</a>是直接增加一行NSLog代码，所以把数据设置回去即可。</p>
-
-<p>该教程不仅教你怎么做，还将可能遇到的问题及可尝试的解决方案写的很明白。我实现了一个打印当前方法名的插件，用以快速插入代码。另外，如果需要中文教程，可参看钟颖的<a href="https://zhuanlan.zhihu.com/p/21374552">文章</a>。</p>
-
-<h4>2) <a href="http://xiongzenghuidegithub.github.io/blog/2016/04/22/runtimeying-yong-fang-zhi-an-niu-lian-xu-dian-ji/">借助Runtime防止按钮连续点击</a></h4>
-
-<p>按钮连续点击的问题解决起来不难，使用Runtime交换SEL即可控制。</p>
-
-<h4>3) <a href="http://www.jianshu.com/p/cabec2786241">UICollectionView的自定义布局</a></h4>
-
-<p>这篇文章不是分享UICollectionView的详细使用教程，而是属于比较高级的使用技巧。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://simpholders.com">SimPholders</a></h4>
-
-<p>从menu快速访问iOS模拟器里的app目录。</p>
-
-<h4>2) <a href="https://www.sqlitepro.com">SQLPro for SQLite</a></h4>
-
-<p>移动端数据通常使用SQLite存储，若需要方便的管理其中的数据，请不要错过SQLPro for SQLite。另外插一句使用Core Data的经验，不同版本对应的sqlite文件最好本地保存一份。这样哪天需要测试数据迁移会省不少精力。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a></h4>
-
-<p>自从转行做iOS开发以来，一直使用Git做代码版本管理。而Git分支的最佳实践，个人最推崇<a href="http://nvie.com/about/">Vincent Driessen</a>的做法。之所以po这个，是因为昨天运维部宣讲了服务端代码分支的管理方案。</p>
-
-<h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MzA4ODgwNjk1MQ==&amp;mid=2653788317&amp;idx=1&amp;sn=b5ca8129c2ae99b37f1872d1bbe367c4">漫谈 Airbnb 支付的国际化</a></h4>
-
-<blockquote><p>为了让古巴人也可以在 Airbnb 上租房，我们使用了 VaCuba 这种支付方式，其本质就是人工开着游艇、驾着飞机、骑着自行车，将现金像送货那样送到房东的家里。</p></blockquote>
 
 <p>@end</p>
 ]]></content>
