@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-07-23T19:31:24+08:00</updated>
+  <updated>2016-07-23T19:40:51+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,9 +29,9 @@
 
 <p>通过对US App Store前200的iPhone应用进行分析，得到的结论是98.5%的APP免费，99%提供IAP，71%提供超过10个IAP，大部分的IAP定价在0.99~19.99美金。按类型来看，68%的是游戏、11%的是社交类应用，音乐类占7%。</p>
 
-<h4>2) <a href="https://bugreport.apple.com/">Apple SDK Bug Reporter</a></h4>
+<h4>2) <a href="http://mobile.163.com/16/0723/00/BSK9RGNF0011179O.html">带你揭开苹果Fitness Lab的神秘面纱</a></h4>
 
-<p>今年第一时间把玩了iOS 10的SDK，发现了不少bug并提给苹果。但是，体验很不好。得到的回复通常就是要截图、要示例代码。给他截图、给他代码后也不仔细看bug描述（对，此条资讯就是我的纯吐槽）。</p>
+<p>Apple Watch的一个重要功能是健身追踪，这项功能测试的地方之一，就是Fitness Lab秘密实验室。其中一个数据指标是：截止到今天，Fitness Lab一共收集到16000人次的测试结果，总时长达到3万小时。</p>
 
 <h2>开发</h2>
 
