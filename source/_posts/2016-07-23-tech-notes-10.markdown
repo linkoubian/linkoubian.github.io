@@ -1,0 +1,60 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第十期）
+date: 2016-07-23 12:19:53 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括iOS 10相关的交互动画详解、Auto Layout新特性，以及直播应用中的技术经验与架构分析等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Exploring the App Store’s Top Grossing Chart](https://www.macstories.net/stories/exploring-the-app-stores-top-grossing-chart/) by Graham Spencer
+
+通过对US App Store前200的iPhone应用进行分析，得到的结论是98.5%的APP免费，99%提供IAP，71%提供超过10个IAP，大部分的IAP定价在0.99~19.99美金。按类型来看，68%的是游戏、11%的是社交类应用，音乐类占7%。
+
+#### 2) [带你揭开苹果Fitness Lab的神秘面纱](http://mobile.163.com/16/0723/00/BSK9RGNF0011179O.html) by 网易
+
+Apple Watch的一个重要功能是健身追踪，这项功能测试的地方之一，就是Fitness Lab秘密实验室。其中一个数据指标是：截止到今天，Fitness Lab一共收集到16000人次的测试结果，总时长达到3万小时。
+
+## 开发
+
+#### 1) [iOS交互动画详解](http://www.jianshu.com/p/6ac70183631e) by seedante
+
+WWDC 2016 Session 216介绍了iOS 10的新动画 API，让动画与交互无缝连接。
+
+#### 2) [Xcode 8 Auto Layout新特性](http://www.jianshu.com/p/2521c610fac3) by halfrost
+
+作者是原平安付工程师，一系列关于WWDC 2016 Session的笔记很棒，推荐都看看。
+
+#### 3) [Understanding Responder Chain](http://blog.seedlab.io/understanding-responder-chain/) by seedlab
+
+本文翻译并梳理了Cocoa Event Handling Guide中的 Responder Chain 部分。
+
+#### 4) [揭秘直播移动APP技术实现](https://segmentfault.com/a/1190000005994317) by fir.im
+
+2016年直播似乎无处不在，作为一个开发者也许需要补充下关于直播技术点。本文整理了一些开发者对于直播实践项目中的技术经验与直播技术架构分析等内容，还有一些关于 iOS 、Android等相关开发干货。
+
+## 工具
+
+#### 1) [CocoaPods组件平滑二进制化解决方案](http://mdsb100-xiabigao.daoapp.io/2016/07/15/ios-cocoapodszu-jian-ping-hua-er-jin-zhi-hua-fang-an-ji-xiang-xi-jiao-cheng/) by 曹俊
+
+二进制化指的是通过编译把组件的源码转换成静态库或动态库，以提高该组件在App项目中的编译速度。
+
+#### 2) [滴滴的组件化实践与优化](http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2650993379&idx=1&sn=69d0fe852fe2774ed1bfe4b9760e69a1) by 李贤辉
+
+滴滴iOS技术负责人对组件化实践与优化的分享，包括地图业务模块解耦、界面解耦等内容。
+
+## 其他
+
+#### 1) [How to Design a Walkthrough That Users Will Read](http://uxmovement.com/mobile/how-to-design-a-walkthrough-that-users-will-read/) by anthony
+
+引用文末一句：引导页应像便签一样简单易读。不过，核心功能大家熟的不能再熟且用户主要就是用其最核心的功能，那我觉得Walkthrough是多余的。比如导航，我的使用频率不高，偶尔在外打开查个路线，猝不及防的看到引导页，很烦的。
+
+#### 2) [如何为 app 设计一个合适的搜索功能？](https://zhuanlan.zhihu.com/p/20498277) by 5key
+
+我们可以在 apps 中看到各种各样的设计方案，但这些方案并非适合于每一块产品。作者以市面上常见的一些设计形式对搜索功能做一个深入的剖析。
+
+@end

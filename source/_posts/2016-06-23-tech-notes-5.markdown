@@ -1,0 +1,59 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第五期）
+date: 2016-06-23 16:31:43 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括Xcode扩展、Method Swizzle、Git分支实践等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [iOS 10 内核未加密](http://daringfireball.net/linked/2016/06/22/ios-10-kernel)
+
+苹果发言人称: “The kernel cache doesn’t contain any user info, and by unencrypting it we’re able to optimize the operating system’s performance without compromising security.”
+
+#### 2) [What’s New in Swift 3?](https://www.raywenderlich.com/135655/whats-new-swift-3)
+
+虽然暂时还没必要迁移至Swift 3（下半年还会有改动），但语言的主要变动还是需要了解的。
+
+
+## 开发
+
+#### 1) [Xcode Source Editor Extension](http://www.russbishop.net/xcode-extensions)
+
+在菜单触发插件，XCSourceEditorCommand 拦截到该消息。我们从 invocation 中拿到 buffer，根据当前行可以获取到需要的数据。我的[示例](https://github.com/balloonsys/PAXcodePlugin)是直接增加一行NSLog代码，所以把数据设置回去即可。
+
+该教程不仅教你怎么做，还将可能遇到的问题及可尝试的解决方案写的很明白。我实现了一个打印当前方法名的插件，用以快速插入代码。另外，如果需要中文教程，可参看钟颖的[文章](https://zhuanlan.zhihu.com/p/21374552)。
+
+#### 2) [借助Runtime防止按钮连续点击](http://xiongzenghuidegithub.github.io/blog/2016/04/22/runtimeying-yong-fang-zhi-an-niu-lian-xu-dian-ji/)
+
+按钮连续点击的问题解决起来不难，使用Runtime交换SEL即可控制。
+
+#### 3) [UICollectionView的自定义布局](http://www.jianshu.com/p/cabec2786241)
+
+这篇文章不是分享UICollectionView的详细使用教程，而是属于比较高级的使用技巧。
+
+## 工具
+
+#### 1) [SimPholders](https://simpholders.com)
+
+从menu快速访问iOS模拟器里的app目录。
+
+#### 2) [SQLPro for SQLite](https://www.sqlitepro.com)
+
+移动端数据通常使用SQLite存储，若需要方便的管理其中的数据，请不要错过SQLPro for SQLite。另外插一句使用Core Data的经验，不同版本对应的sqlite文件最好本地保存一份。这样哪天需要测试数据迁移会省不少精力。
+
+## 其他
+
+#### 1) [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
+
+自从转行做iOS开发以来，一直使用Git做代码版本管理。而Git分支的最佳实践，个人最推崇[Vincent Driessen](http://nvie.com/about/)的做法。之所以po这个，是因为昨天运维部宣讲了服务端代码分支的管理方案。
+
+#### 2) [漫谈 Airbnb 支付的国际化](http://mp.weixin.qq.com/s?__biz=MzA4ODgwNjk1MQ==&mid=2653788317&idx=1&sn=b5ca8129c2ae99b37f1872d1bbe367c4)
+
+>为了让古巴人也可以在 Airbnb 上租房，我们使用了 VaCuba 这种支付方式，其本质就是人工开着游艇、驾着飞机、骑着自行车，将现金像送货那样送到房东的家里。
+
+@end

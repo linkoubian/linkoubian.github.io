@@ -1,0 +1,54 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第三期）
+date: 2016-06-18 10:50:14 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括iOS 10的一些资讯，以及iOS一些常见问题的设计方案等。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [开发者所需要知道的iOS 10 SDK新特性](https://onevcat.com/2016/06/ios-10-sdk/)
+
+从应用开发者的角度看，iOS 10中并没有加入太多内容。
+
+#### 2) [关于iOS 10中ATS的问题](https://onevcat.com/2016/06/ios-10-ats/)
+
+从2017年1月1日起，所有的新提交app默认是不允许使用NSAllowsArbitraryLoads来绕过ATS限制的。
+
+## 开发
+
+#### 1) [可复用而且高度解耦的用户统计埋点实现](http://www.jianshu.com/p/0497afdad36d#)
+
+该埋点方案和我上个月做的统计SDK思路比较一致。不同的在于用户点击事件，文中的做法是拦截UIControl的方法，而我倾向于由APP自行埋点。主要原因在于，被hook的范围较广，同时我们点击事件埋点时，有酌情传入参数的额外需求。
+
+#### 2) [iOS释放自注销模式设计](https://segmentfault.com/a/1190000005744865)
+
+作者描述的问题的确是我们开发中的痛点，只不过我对这篇文章理解的还不够，毕竟工程师的层次也是有差异的:P
+
+## 工具
+
+#### 1) [iOS 10 UIKit Animations](https://medium.com/swift-and-ios-writing/a-quick-look-at-uiviewpropertyanimator-a107fb9da5b5)
+
+我倒是对文章作者的开源库[Interpolate](https://github.com/marmelroy/Interpolate)更感兴趣，哈哈！
+
+#### 2) [Mac最先进的HTTP客户端](https://luckymarmot.com/zh-hans/paw)
+
+做iOS开发，联调API是件很麻烦的事情，特别是当提供API的是个开发新手。联调阶段我通常选用Paw而不是Postman。
+
+## 其他
+
+#### 1) [iOS beta Software Installation Guide](https://developer.apple.com/support/beta-software/install-ios-beta/)
+
+本周已采用Configuration Profile的方式安装了iOS 10的beta版，比Restore Image的方案更简便。
+
+#### 2) [每个IT人都应该了解的工作观和商业思维](http://www.jianshu.com/p/080d109a9984)
+
+文中整理了来自37signals的两位联合创始人Rework一书的要点，个人特别喜欢这条：
+
+>工作狂使得真正高效且不崇尚加班的员工感到无所适从，心怀愧疚，士气低落而且跟风加班，根本就不管到底有没有生产力。
+
+@end

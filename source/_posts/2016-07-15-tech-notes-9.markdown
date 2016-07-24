@@ -1,0 +1,51 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第九期）
+date: 2016-07-15 22:59:18 +0800
+categories: 技术周报 iOS
+---
+本期周报主要包括iOS 10体现出的新设计风格、Facebook移动测试实验室解密、如何构建支持多线程的Core Data Stack等。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Apple’s new design style in iOS 10 is a statement on accessibility](https://www.punchkick.com/blog/2016/07/08/apples-design-style-ios-10-accessibility) @Connor Mason
+
+Anyway，这三大原则，即Clarity、Deference、Depth，让iOS系统有别于其他平台。
+
+#### 2) [Facebook lifts the veil on its mobile device testing lab](https://code.facebook.com/posts/300815046928882/the-mobile-device-lab-at-the-prineville-data-center/) @Antoine Reversat
+
+Facebook对外揭开了其移动测试实验室的面纱，该实验室当前有60个支架，每个支架上有32只手机，用于iOS测试的支架背后分别连着8台Mini。
+
+## 开发
+
+#### 1) [iOS 性能优化：Instruments 工具的救命三招](https://blog.leancloud.cn/2835/) @LeanCloud
+
+随着项目的扩大和功能的增多，没经过认真调试和优化的代码，要么任性地卡顿运行，要么低调地崩溃了之。
+
+#### 2) [Introducing the Core Data Stack](https://www.bignerdranch.com/blog/introducing-the-big-nerd-ranch-core-data-stack/#shared_coordinator) @Robert Edwards
+
+本周花了些时间学习支持多线程的Core Data Stack设计方案，Big Nerd Ranch提的这个模型感觉不错。
+
+## 工具
+
+#### 1) [TKRadarChart](https://github.com/TBXark/TKRadarChart) @TBXark
+
+Swift 实现的一个类似芝麻分解读页的雷达图。
+
+#### 2) [IconKit: The Icon Resizer for App Development](https://itunes.apple.com/cn/app/iconkit-icon-resizer-for-app/id507135296) @Appersian
+
+IconKit这款老牌图标快速生成软件支持从 iOS 6 到 iOS 10、watchOS 1-2、CarPlay, Messages 贴纸、Xcode 图标集的图标生成服务。
+
+## 其他
+
+#### 1) [产品语录](https://twitter.com/kentzhu/status/753434825978109953) @kentzhu
+
+>很多老板会有一个误区，我的业务上不去是因为产品没做好，产品没做好体现在APP的界面不够高端大气上档次，体现在不能三步点击找到主功能……你一个卖货的不去上街吆喝，怪货架长得不好看有个毛用？
+
+#### 2) [软件工程方法语录](http://weibo.com/1765732340/DENJO10bl?type=comment) @钟颖
+
+>也许让我对敏捷不舒服的原因是，我真的想看看敏捷教练到底做过什么不得了的项目。
+
+@end

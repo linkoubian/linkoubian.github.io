@@ -1,0 +1,60 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第六期）
+date: 2016-06-27 09:57:31 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括iOS 10中通知相关的变化、Swift中try的用法、颜色与标注稿不一致的问题等。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Apple discontinues Thunderbolt Display](http://www.loopinsight.com/2016/06/23/apple-discontinues-thunderbolt-display/)
+
+服役五年的 Thunderbolt Display已经正式停产，剩下的存货仍会在Apple线上商店与零售点销售。
+
+#### 2) [WWDC16 - New in Notifications](http://fichek.com/blog/wwdc16-notifications/)
+
+Notification相关的API从UIKit挪到了新的framework，[Filip Radelic](http://fichek.com/contact/)对其变化做了很好的总结。
+
+另附一篇介绍Notification的中文文章[iOS 10  推送Notification新特性](http://www.jianshu.com/p/9b720efe3779)。
+
+## 开发
+
+#### 1) [UICollectionView: Unjustly Maligned](https://ashfurrow.com/blog/uicollectionview-unjustly-maligned/)
+
+500px首个iPad版本、Artsy都出自本文作者[Ash Furrow](https://ashfurrow.com/about/)之手。同时他也是iOS UICollectionView: The Complete Guide一书的作者。
+
+Ash在文中介绍了如何用UICollectionView构建Artsy的页面。
+
+另外有两篇文章不错，建议一读：[Collection View Updates in iOS10 Part 1](https://adoptioncurve.net/archives/2016/06/collection-view-updates-in-ios10/)和[Collection View Updates in iOS10 Part 2](https://adoptioncurve.net/archives/2016/06/collection-view-updates-in-ios10-part-2/)。
+
+#### 2) [Swift - try, try! & try?的区别](http://stackoverflow.com/a/32390612)
+
+guard let result = try? doSomething() else {}是一个较为常用的代码范式。另外这种范式下若有异常，会被『翻译』成nil，所以不会捕获到具体的出错原因。故适用于只关注成功或失败这一结果的场景。
+
+## 工具
+
+#### 1) [iOS开发中的颜色问题](http://jaykon.github.io/2014/06/17/ioskai-fa-zhong-de-yan-se-wen-ti/)
+
+设计师给的颜色值标注，设置到app里显示不一致？可能和色彩标准不同有关。比如设计师用的是Generic RBG或者Adobe RGB，而程序里是基于sRGB。
+
+#### 2) [GSKStretchyHeaderView](https://github.com/gskbyte/GSKStretchyHeaderView)
+
+类似Twitter个人中心页面的弹性视图。
+
+## 其他
+
+#### 1) [Swift Style Guide](https://github.com/linkedin/swift-style-guide)
+
+据说LinkedIn用Swift重写了自家的app，这是他们的代码规范。
+
+#### 2) [写给大家看的设计书](http://www.ituring.com.cn/book/397)
+
+>如果要在简单表达和并不专业的设计之间做出选择，你应该选择简单表达。设计技能的逐步提高是从简单表达开始的。
+
+iPhone的成功，降低了产品经理（大部分只有抄袭还抄不好的能力）的门槛；APP的泛滥，降低了软件工程师（鱼龙混杂，水货较多）的门槛；iOS 7开始，降低了设计师（大部分也就是个Photoshop熟练工）的门槛。
+
+@end

@@ -1,0 +1,62 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第四期）
+date: 2016-06-21 13:13:13 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括iMessage Extension的开发、Reveal的使用等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [WWDC Videos Watching Guide](http://www.augustyniak.me/post/2016/06/wwdc-sessions-watching-guide/)
+
+另外也可以看一下百度Hi iOS团队写的[WWDC 2016 观影指南](http://baiduhidevios.github.io/2016/06/14/WWDC-2016-观影指南/)。
+
+#### 2) [Apple is still a world of its own](http://www.theverge.com/2016/6/15/11940010/walt-mossberg-apple-wwdc-2016-recap-themes)
+
+文中提到了an Apple executive匿名回答为何不提供Android版iMessage。一是卖出的设备足够多，已经有足够量级的数据支撑其AI；二是有助于卖出更多苹果设备。
+
+## 开发
+
+#### 1) [iMessage App开发](https://developer.apple.com/library/prerelease/content/samplecode/IceCreamBuilder/Introduction/Intro.html)
+
+上周看[Jason Newell](https://twitter.com/jquave)的文章[Creating iMessage Apps on iOS 10 with Swift – Tutorial (Part 1)](http://jamesonquave.com/blog/creating-imessage-apps-with-xcode-8-tutorial-part-1/)做过一个iMessage Sticker，让用户发送平安『医食住行玩』这样的GIF动画。
+
+最好的案例非苹果的官方Sample莫属，请点击标题中的链接。
+
+#### 2) [来电黑名单](http://colin1994.github.io/2016/06/17/Call-Directory-Extension-Study/)
+
+iOS 10中引入了CallKit，意味着现在可以通过 Call Directory Extension 来实现电话黑名单功能了。
+
+#### 3) [Intents Extension](http://jamesonquave.com/blog/adding-siri-to-ios-10-apps-in-swift-tutorial/)
+
+把玩SiriKit，更多内容请见该文的[下篇](http://jamesonquave.com/blog/sirikit-swift-3-resolutions-sirikit-tutorial-part-2/)。更翔实的[案例](https://developer.apple.com/library/prerelease/content/samplecode/UnicornChat/Introduction/Intro.html#//apple_ref/doc/uid/TP40017332-Intro-DontLinkElementID_2)还是看苹果的吧。
+
+## 工具
+
+#### 1) [Reveal常用技巧](http://revealapp.com/blog/reveal-common-tips-cn.html)
+
+通过Xcode中加断点的方式集成Reveal比较惊艳。iOS系统越狱之后使用Reveal查看别人App视图结构的过程可以参考这篇[文章](http://hihilong.com/2015/11/20/ios9-reveal-jailbreak-app/)。
+
+另外，听云某位工程师在某版本Reveal的dylib不支持arm时制作支持arm版的[实践](http://blog.tingyun.com/web/article/detail/262)（其实那个时间点最新的Reveal完全支持啊！！！）
+
+#### 2) [NWPusher](https://github.com/noodlewerk/NWPusher)
+
+做iOS 消息推送，需要测试推送证书、推送功能是否正常，强烈推荐使用这款小工具。省时、省力，避免和服务端扯皮。
+
+## 其他
+
+#### 1) [iOS独立开发记录](http://azureyu.com/iOSDevRecord.html)
+
+从想法、设计、开发到最终发布，总结个人开发APP的历程。
+
+#### 2) [时间管理的七句话](http://www.ruanyifeng.com/blog/2016/05/time-management.html)
+
+网上有不少转载Facebook内部高效工作PPT指南的文章，配的中文不忍直视。推荐看这篇带注释的精华版。
+
+>不要同时做多件事，结果可能都没做好，还拖长了工作时间。
+
+@end
