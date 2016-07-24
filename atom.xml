@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-07-23T20:27:04+08:00</updated>
+  <updated>2016-07-24T18:33:34+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,7 +29,7 @@
 
 <p>通过对US App Store前200的iPhone应用进行分析，得到的结论是98.5%的APP免费，99%提供IAP，71%提供超过10个IAP，大部分的IAP定价在0.99~19.99美金。按类型来看，68%的是游戏、11%的是社交类应用，音乐类占7%。</p>
 
-<h4>2) <a href="http://mobile.163.com/16/0723/00/BSK9RGNF0011179O.html">带你揭开苹果Fitness Lab的神秘面纱</a></h4>
+<h4>2) <a href="http://mobile.163.com/16/0723/00/BSK9RGNF0011179O.html">带你揭开苹果Fitness Lab的神秘面纱</a> by 网易</h4>
 
 <p>Apple Watch的一个重要功能是健身追踪，这项功能测试的地方之一，就是Fitness Lab秘密实验室。其中一个数据指标是：截止到今天，Fitness Lab一共收集到16000人次的测试结果，总时长达到3万小时。</p>
 
@@ -958,65 +958,6 @@ rule</p></blockquote>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[2014 回顾]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/12/30/2014-summary/"/>
-    <updated>2014-12-30T14:39:15+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/12/30/2014-summary</id>
-    <content type="html"><![CDATA[<p>匆匆2014，仅剩明日。</p>
-
-<!--more-->
-
-
-<h2>工作</h2>
-
-<h3>第一波求职，无果</h3>
-
-<p>去年五月份离开工作多年的道富后，加入浙大计算机学院王老师的公司，负责杭州市城管委的一个移动客户端项目。虽然收入有所增长，但技术方面依然吃的老本。技术上未有长进，不过见识还是宽广了许多。综合考虑后觉得政府项目不是我所喜欢的，于是2014年春节之后便开始关注一些新的机会。</p>
-
-<p>2014年2月21日上午11点，蘑菇街主客户端，和其技术面试官聊得不开心；下午2点，金山网络的PhotoGrid产品，笔试题好多，答得有挫败感；下午4点，同花顺，感觉面试我的两批人，面相都比较苦逼，提供的Offer也不是很满意，直接就拒了他们。</p>
-
-<h3>第二波求职，贼船</h3>
-
-<p>后来四月份在拉勾上又投了几家公司，回复率比较高。去其中两家面过，一个是丽子美妆（原娜拉化妆品商城）。我很不喜欢这家公司，大老远去面试，结果说技术负责人出差了。但是和他们家的HR比较聊得来。另一家是绿城物业集团投资的团队，为绿城的园区做线下线上服务的。这跟我之前做智慧城市、智慧社区的经历还是比较契合的，而且考虑到绿城的招牌，五一节刚过便加入了这家公司。</p>
-
-<p>三位工程师加班加点一个半月把产品做出来了，但很快就发现这个公司的诸多问题。12月份，最初的三位工程师之一、负责JAVA端开发的兄弟，离开了团队。下个月，我也将离开。</p>
-
-<h3>第三波机会，憧憬</h3>
-
-<p>十二月份，蘑菇街支付团队的技术负责人（东大校友）约我去聊聊，后来一路下来拿到了Offer；平安好房的学长（以前在柯达也是同事）帮我内推，也很顺利的拿到了Offer。</p>
-
-<p>对比手头的两个机会，个人更倾向于平安。主要考虑到这么几个方面：<br/>
-1. 薪资，上来就压价的HR vs. 给你涨价的HR<br/>
-2. 团队，JAVA面试官 vs. 非常资深的iOS工程师<br/>
-3. 距离，杭州>>>盐城 vs. 上海>>>盐城</p>
-
-<p><strong>今年获得的最大教训是，不要冒然加入一个不知底细的小公司！</strong></p>
-
-<p>工作了五六年（2008.07开始全职实习），依然在求职、换城市，说起来略感惭愧。不过，在毕业后的第一个五年里（2009~2014），完成了买房、结婚、生娃等一系列重大事项，另外还准备好了装修款，个人对此还是很满意满足的。毕竟这些对于一个毫无家庭根基的人来讲，并不是轻而易举之事。</p>
-
-<h2>生活</h2>
-
-<p>春节时在老家摆了喜酒，很简单的走了个过场。四月份签了一份外包合同，五月份交付。五月份把杭州公共自行车助手（iPhone客户端）转让给了上海一家公司。六月份把多年前写的一款iPhone小游戏转让给了上海同一家公司。哈，业余兼职也是我生活的一部分:-)</p>
-
-<p>七月底，喜得一女。生之前若干次产检、陪产一周、后续复检，我已经对浙江省妇保相当熟悉了。我妈、岳母也来杭州帮忙照顾了一阵。十一月，老婆孩子随我妈一起回老家。</p>
-
-<p>下半年忙于公司项目，无精力打造自己的APP。有了小孩之后，空暇时间捉襟见肘。看书时间也少了许多。</p>
-
-<p>年底搬离住了五年的紫金港，损失了一个月的押金（两千多）。在朋友家打地铺以度过在杭的最后几周。</p>
-
-<h2>学习</h2>
-
-<p>今年读完的书有：<br/>
-- Objective C Programming by BNR<br/>
-- 明朝那些事儿 共7册</p>
-
-<p>在读的书有：<br/>
-- iOS 6 by tutorials THIRD EDITION<br/>
-- 无为而治</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Swift 语言基础（下）]]></title>
     <link href="http://balloonsys.github.io/blog/2014/09/23/basics-of-swift-part-b/"/>
     <updated>2014-09-23T10:11:08+08:00</updated>
@@ -1552,6 +1493,55 @@ rule</p></blockquote>
 3. 基于自定义URL及WebView的delegate方法，实现HTML与ObjC的交互</p>
 
 <p>另外，除了MGTemplateEngine外，还有其他的模板引擎可以使用，比如GRMustache。至于孰优孰劣，什么场合选择哪个，截止目前我并没有做任何研究，等接到下一个需要模板引擎的项目再说吧。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[做iOS外包开发用到的工具]]></title>
+    <link href="http://balloonsys.github.io/blog/2014/04/04/ios-dev-tools/"/>
+    <updated>2014-04-04T16:27:54+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2014/04/04/ios-dev-tools</id>
+    <content type="html"><![CDATA[<p>这个虚拟的Balloonsys工作室，总算发展到两位工程师了。</p>
+
+<!--more-->
+
+
+<h2>发展历史</h2>
+
+<p>2010年8月第一次为成都一家公司做兼职开发，仅持续两周<br/>
+2012年9月帮杭州一家公司发布应用<br/>
+2014年4月终于签下了第一份APP开发合同</p>
+
+<h2>第三方服务</h2>
+
+<p>为自己、为别人开发iPhone应用的过程中，也使用过不少第三方服务。一直持续使用的有：<br/>
+1. 私有代码托管 <a href="https://bitbucket.org">https://bitbucket.org</a> <br/>
+2. 收集崩溃日志 <a href="https://www.crashlytics.com">https://www.crashlytics.com</a> <br/>
+3. 测试版本分发 <a href="https://testflightapp.com">https://testflightapp.com</a> <br/>
+4. 数据统计分析 <a href="http://www.appannie.com">http://www.appannie.com</a></p>
+
+<h2>软件工具</h2>
+
+<p>当一个关于APP的Idea萌生后，我会在草稿本上大致画出轮廓，想好每一页的交互，然后用下面的软件工具落地： <br/>
+1. 网络请求分析 <a href="http://www.portswigger.net/burp/download.html">http://www.portswigger.net/burp/download.html</a> <br/>
+2. 软件原型设计 <a href="http://www.apple.com/cn/mac/keynote/">http://www.apple.com/cn/mac/keynote/</a> <br/>
+3. 接口服务文档 <a href="http://www.apple.com/cn/mac/pages/">http://www.apple.com/cn/mac/pages/</a> <br/>
+4. 模拟接口实现 <a href="http://www.sublimetext.com">http://www.sublimetext.com</a> <br/>
+5. 测试一下接口 <a href="http://luckymarmot.com/paw">http://luckymarmot.com/paw</a> <br/>
+6. 买点现成图标 <a href="https://www.iconfinder.com">https://www.iconfinder.com</a> <br/>
+7. 编辑矢量图标 <a href="http://www.bohemiancoding.com/sketch/">http://www.bohemiancoding.com/sketch/</a></p>
+
+<p>在Mac上启动Burp后，把iPhone的代理服务器设置为MBPR的IP，端口为Burp中设置的那个。这样就可以在Burp中方便的看到手机上的网络请求详情。通过这种方式，我获得了不少第三方应用的API，然后开发了两款“非官方”的客户端。</p>
+
+<p>利用Keynote做原型设计，这是从公司的咨询顾问那里学来的。感觉速度快，效果也很不错。在开发西子快讯前，我便用Keynote做了一份演示原型。</p>
+
+<p>通常后端服务返回JSON格式的数据，为方便的观察API的Response，我喜欢用Paw这个工具，个人感觉比Post Man好用很多。</p>
+
+<p>做客户端开发，对图标的需求还是蛮大的，按钮、菜单、启动图标等等。Icon Finder这个网站不光提供免费的图标下载，还有付费的图标，也不贵，而且提供SVG格式。利用Sketch，可以轻松修改颜色、大小等。</p>
+
+<h2>个人小结</h2>
+
+<p>荀子在劝学篇里说，“君子生非异也，善假于物也”！没错，做APP开发就是要善假于物也！</p>
 ]]></content>
   </entry>
   
