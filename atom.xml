@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-07-24T18:33:34+08:00</updated>
+  <updated>2016-07-30T12:14:22+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十一期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/07/30/tech-notes-11/"/>
+    <updated>2016-07-30T11:19:16+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/07/30/tech-notes-11</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括苹果汽车项目的人事动态、Runloop及Runtime等技术剖析、技术管理等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.mac52ipod.cn/post/apple-2016-q3-result.php">苹果发布2016财年第三季财报</a></h4>
+
+<p>总结起来就是各种同比下降（除了服务业务），究其原因就是饱和二字。值得注意的是软件和互联网服务业务的营收一直在逆势增长，甚至已经超过电脑、iPad等业务，位居第二大营收来源了。</p>
+
+<h4>2) <a href="http://www.bloomberg.com/news/articles/2016-07-28/apple-taps-blackberry-talent-as-car-project-takes-software-turn">Apple Hires BlackBerry Talent With Car Project Turning to Self-Driving Software</a></h4>
+
+<p>苹果乔布斯时代元老成员Bob Mansfield从退休状态重回苹果岗位担任苹果汽车项目Project Titan掌门人。据彭博消息称，Apple已将黑莓汽车软件部门负责人Dan Dodge招至该项目的管理团队。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/10121d699c32">深入研究 Runloop 与线程保活</a></h4>
+
+<p>在讨论 runloop 相关的文章，以及分析 AFNetworking(2.x) 源码的文章中，我们经常会看到关于利用runloop进行线程保活的分析。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/3182646001d1">Runtime 10种用法</a></h4>
+
+<p>再牛逼的技术和实战结合才有意义，本篇介绍技术尽量和实战联系起来。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://git-scm.com/book/en/v1/Git-Tools-Stashing">Git之Stashing用法</a></h4>
+
+<p>有时在某分支上开发了一半，需要切到另一个分支处理个紧急的问题，而又不想立即commit代码，此时可以试试git stash这个命令。</p>
+
+<h4>2) <a href="http://useyourloaf.com/blog/xcode-visual-memory-debugger/">Xcode Visual Memory Debugger</a></h4>
+
+<p>本文介绍了Xcode 8引入的全新可视化内存调试工具。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://amao12580.github.io/post/2016/05/How-to-better-manage-the-technical-team/">如何更好地管理技术团队</a></h4>
+
+<p>技术人员乐于被领导；但他们不喜欢被管理，不喜欢像牛一样被驱赶或指挥。管理者强迫人们服从他们的命令，而领导者则会带领他们一起工作。</p>
+
+<p>管理是客观的，没有个人感情因素，它假定被管理者没有思想和感受，被告知要做什么和该如何做。领导是引领、引导，它激励人们达成目标。</p>
+
+<p>领导力是带有强烈个人感情色彩的，它不是你能命令的，也不是你能测量评估和测试的。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十期）]]></title>
@@ -1493,55 +1547,6 @@ rule</p></blockquote>
 3. 基于自定义URL及WebView的delegate方法，实现HTML与ObjC的交互</p>
 
 <p>另外，除了MGTemplateEngine外，还有其他的模板引擎可以使用，比如GRMustache。至于孰优孰劣，什么场合选择哪个，截止目前我并没有做任何研究，等接到下一个需要模板引擎的项目再说吧。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[做iOS外包开发用到的工具]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/04/04/ios-dev-tools/"/>
-    <updated>2014-04-04T16:27:54+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/04/04/ios-dev-tools</id>
-    <content type="html"><![CDATA[<p>这个虚拟的Balloonsys工作室，总算发展到两位工程师了。</p>
-
-<!--more-->
-
-
-<h2>发展历史</h2>
-
-<p>2010年8月第一次为成都一家公司做兼职开发，仅持续两周<br/>
-2012年9月帮杭州一家公司发布应用<br/>
-2014年4月终于签下了第一份APP开发合同</p>
-
-<h2>第三方服务</h2>
-
-<p>为自己、为别人开发iPhone应用的过程中，也使用过不少第三方服务。一直持续使用的有：<br/>
-1. 私有代码托管 <a href="https://bitbucket.org">https://bitbucket.org</a> <br/>
-2. 收集崩溃日志 <a href="https://www.crashlytics.com">https://www.crashlytics.com</a> <br/>
-3. 测试版本分发 <a href="https://testflightapp.com">https://testflightapp.com</a> <br/>
-4. 数据统计分析 <a href="http://www.appannie.com">http://www.appannie.com</a></p>
-
-<h2>软件工具</h2>
-
-<p>当一个关于APP的Idea萌生后，我会在草稿本上大致画出轮廓，想好每一页的交互，然后用下面的软件工具落地： <br/>
-1. 网络请求分析 <a href="http://www.portswigger.net/burp/download.html">http://www.portswigger.net/burp/download.html</a> <br/>
-2. 软件原型设计 <a href="http://www.apple.com/cn/mac/keynote/">http://www.apple.com/cn/mac/keynote/</a> <br/>
-3. 接口服务文档 <a href="http://www.apple.com/cn/mac/pages/">http://www.apple.com/cn/mac/pages/</a> <br/>
-4. 模拟接口实现 <a href="http://www.sublimetext.com">http://www.sublimetext.com</a> <br/>
-5. 测试一下接口 <a href="http://luckymarmot.com/paw">http://luckymarmot.com/paw</a> <br/>
-6. 买点现成图标 <a href="https://www.iconfinder.com">https://www.iconfinder.com</a> <br/>
-7. 编辑矢量图标 <a href="http://www.bohemiancoding.com/sketch/">http://www.bohemiancoding.com/sketch/</a></p>
-
-<p>在Mac上启动Burp后，把iPhone的代理服务器设置为MBPR的IP，端口为Burp中设置的那个。这样就可以在Burp中方便的看到手机上的网络请求详情。通过这种方式，我获得了不少第三方应用的API，然后开发了两款“非官方”的客户端。</p>
-
-<p>利用Keynote做原型设计，这是从公司的咨询顾问那里学来的。感觉速度快，效果也很不错。在开发西子快讯前，我便用Keynote做了一份演示原型。</p>
-
-<p>通常后端服务返回JSON格式的数据，为方便的观察API的Response，我喜欢用Paw这个工具，个人感觉比Post Man好用很多。</p>
-
-<p>做客户端开发，对图标的需求还是蛮大的，按钮、菜单、启动图标等等。Icon Finder这个网站不光提供免费的图标下载，还有付费的图标，也不贵，而且提供SVG格式。利用Sketch，可以轻松修改颜色、大小等。</p>
-
-<h2>个人小结</h2>
-
-<p>荀子在劝学篇里说，“君子生非异也，善假于物也”！没错，做APP开发就是要善假于物也！</p>
 ]]></content>
   </entry>
   
