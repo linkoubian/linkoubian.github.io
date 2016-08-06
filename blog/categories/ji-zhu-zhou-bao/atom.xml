@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-07-30T12:14:22+08:00</updated>
+  <updated>2016-08-06T23:32:32+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十二期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/08/06/tech-notes-12/"/>
+    <updated>2016-08-06T22:03:48+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/08/06/tech-notes-12</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括Apple收购机器学习公司、以及Apple Store营收增长等资讯，深入剖析自动释放池、Clang Attributes、POP动画引擎等。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.theverge.com/2016/8/5/12390412/apple-turi-acquisition-machine-learning">Apple buys machine learning startup Turi</a> By Jacob Kastrenakes</h4>
+
+<p>Turi的产品可以协助开发者将机器学习以及人工智能技术加入软件，可以预测用户数量变化、情绪分析、欺诈探测、分析用户使用习惯，以及更好的定位潜在用户的系统。</p>
+
+<h4>2) <a href="http://www.macrumors.com/2016/08/03/app-store-50-billion-paid-to-developers/">App Store Developer Payout Hits $50 Billion, July Sets Record as Biggest Month Ever</a> By Juli Clover</h4>
+
+<p>App Store七月营收再破纪录，开发者亦获利颇丰。库克表示，单就苹果的服务业务规模来说，明年都可以跻身财富100强。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://draveness.me/autoreleasepool/">深入解析autoreleasepool</a> By 左书祺</h4>
+
+<p>自动释放池是由AutoreleasePoolPage以双向链表的方式实现的，这篇文章会在源代码层面介绍Objective-C中自动释放池。</p>
+
+<h4>2) <a href="http://blog.sunnyxx.com/2016/05/14/clang-attributes/">Clang Attributes黑魔法小记</a> By 孙源</h4>
+
+<p>Clang Attributes是Clang提供的一种源码注解，方便开发者向编译器表达某种要求，参与控制如 Static Analyzer、Name Mangling、Code Generation等过程。</p>
+
+<h4>3) <a href="https://medium.com/@prianka.kariat/interactive-messages-in-ios-10-4cea542fbd9a">Interactive Messages in iOS 10</a> By Prianka Liz Kariat</h4>
+
+<p>本文介绍了如何使用iOS 10的Message框架开发一个tic tac toe小游戏。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://adad184.com/2015/03/11/intro-to-pop/">POP介绍与使用实践</a> By adad184</h4>
+
+<p>动画在APP开发过程中，大家多多少少都会接触到。在iOS中动画相关的部分都是基于Core Animation，但文本介绍的是来自于Facebook的动画引擎，以让你快速上手动画。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/c8152d6ce957">iOS 中 常用的第三方库</a></h4>
+
+<p>类似文章很多，这篇之所以吸引我的眼球，主要在于文中的第三方轮子使用图谱。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&amp;mid=2653057579&amp;idx=1&amp;sn=988a719765465746221f356881157a99&amp;scene=4">关于项目重构</a></h4>
+
+<p>读读下面这段对话，你会深有同感的。</p>
+
+<p>A: 重构80%都会失败，因为业务线的需求永远都不会停，资源有限，所以不花大代价，轻易不重构，宁可开发的慢一点，写好。</p>
+
+<p>B: 其实以业界大部分产品经理的水平99%的项目都活不到重构的那天，所以等业务量上来后再重构，会更省资源。</p>
+
+<p>最近经历了两周以『敏捷开发』为名的工厂流水线式的App开发流程，虽然及时退出，但也惹了一身骚。这样下去，该项目的代码难以再维护将是迟早的事情。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十一期）]]></title>
@@ -25,21 +85,21 @@
 
 <h2>资讯</h2>
 
-<h4>1) <a href="http://www.mac52ipod.cn/post/apple-2016-q3-result.php">苹果发布2016财年第三季财报</a></h4>
+<h4>1) <a href="http://www.mac52ipod.cn/post/apple-2016-q3-result.php">苹果发布2016财年第三季财报</a> @bmwmengwei</h4>
 
 <p>总结起来就是各种同比下降（除了服务业务），究其原因就是饱和二字。值得注意的是软件和互联网服务业务的营收一直在逆势增长，甚至已经超过电脑、iPad等业务，位居第二大营收来源了。</p>
 
-<h4>2) <a href="http://www.bloomberg.com/news/articles/2016-07-28/apple-taps-blackberry-talent-as-car-project-takes-software-turn">Apple Hires BlackBerry Talent With Car Project Turning to Self-Driving Software</a></h4>
+<h4>2) <a href="http://www.bloomberg.com/news/articles/2016-07-28/apple-taps-blackberry-talent-as-car-project-takes-software-turn">Apple Hires BlackBerry Talent With Car Project Turning to Self-Driving Software</a> @markgurman</h4>
 
 <p>苹果乔布斯时代元老成员Bob Mansfield从退休状态重回苹果岗位担任苹果汽车项目Project Titan掌门人。据彭博消息称，Apple已将黑莓汽车软件部门负责人Dan Dodge招至该项目的管理团队。</p>
 
 <h2>开发</h2>
 
-<h4>1) <a href="http://www.jianshu.com/p/10121d699c32">深入研究 Runloop 与线程保活</a></h4>
+<h4>1) <a href="http://www.jianshu.com/p/10121d699c32">深入研究 Runloop 与线程保活</a> @张星宇</h4>
 
 <p>在讨论 runloop 相关的文章，以及分析 AFNetworking(2.x) 源码的文章中，我们经常会看到关于利用runloop进行线程保活的分析。</p>
 
-<h4>2) <a href="http://www.jianshu.com/p/3182646001d1">Runtime 10种用法</a></h4>
+<h4>2) <a href="http://www.jianshu.com/p/3182646001d1">Runtime 10种用法</a> @haojingxue_iOS</h4>
 
 <p>再牛逼的技术和实战结合才有意义，本篇介绍技术尽量和实战联系起来。</p>
 
@@ -49,13 +109,13 @@
 
 <p>有时在某分支上开发了一半，需要切到另一个分支处理个紧急的问题，而又不想立即commit代码，此时可以试试git stash这个命令。</p>
 
-<h4>2) <a href="http://useyourloaf.com/blog/xcode-visual-memory-debugger/">Xcode Visual Memory Debugger</a></h4>
+<h4>2) <a href="http://useyourloaf.com/blog/xcode-visual-memory-debugger/">Xcode Visual Memory Debugger</a> @kharrison</h4>
 
 <p>本文介绍了Xcode 8引入的全新可视化内存调试工具。</p>
 
 <h2>其他</h2>
 
-<h4>1) <a href="http://amao12580.github.io/post/2016/05/How-to-better-manage-the-technical-team/">如何更好地管理技术团队</a></h4>
+<h4>1) <a href="http://amao12580.github.io/post/2016/05/How-to-better-manage-the-technical-team/">如何更好地管理技术团队</a> @amao12580</h4>
 
 <p>技术人员乐于被领导；但他们不喜欢被管理，不喜欢像牛一样被驱赶或指挥。管理者强迫人们服从他们的命令，而领导者则会带领他们一起工作。</p>
 
@@ -236,65 +296,6 @@
 <h4>2) 豆瓣语录</h4>
 
 <blockquote><p>年轻人在大城市超负荷输出价值，同时也在为各种所谓『消费升级』的概念掏着腰包：出门必打车、每周要买花、每周要请家政……等等。『打最累的工，坐最贵的专车，买最新鲜的花，请最好的家政……』#有时候，青春是一种工业原料#</p></blockquote>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第七期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/07/01/tech-notes-7/"/>
-    <updated>2016-07-01T14:46:10+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/07/01/tech-notes-7</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括试玩iOS 10 SDK时遇到的问题、处理把nil插入到NSDictionary里引起crash问题的方案等。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.cac.gov.cn/2016-06/28/c_1119123114.htm">网信办：App须对注册用户真实身份进行认证 不合规将被整改</a></h4>
-
-<p>另外，国家新闻出版广电总局办公厅印发了关于移动游戏出版服务管理的通知。现在，中国区App Store近日发出通告，移动游戏需要通过国家新闻出版广电总局的审批才可发布。在App审核信息部分的备注字段需要输入游戏类App的批准号码和批准日期。</p>
-
-<h4>2) <a href="http://www.recode.net/2016/6/30/12067578/spotify-apple-app-store-rejection">Spotify更新遭拒</a></h4>
-
-<p>Spotify不想和Apple分成，不使用苹果的订阅服务，这下子遇到麻烦了。</p>
-
-<h2>开发</h2>
-
-<h4>1) iOS 10 beta 1 SDK 初体验</h4>
-
-<p>本周我在实践iOS 10的部分新特性时遇到了不少问题，并且报了三个bug给苹果： <br/>
-a. CSSearchQuery 没能查出中文 <br/>
-b. 把竖屏拍的照片添加到notification中，显示偏转90° <br/>
-c. widget移到Today Extension页面顶部，切换展开与收起，视图位置有偏移</p>
-
-<p>另外，在实践Today Extension时遇到tableview的delegate方法未执行的问题，可参考<a href="http://stackoverflow.com/a/28449837">StackOverflow</a>解决。</p>
-
-<h4>2) <a href="http://tech.glowing.com/cn/how-we-made-nsdictionary-nil-safe/">当 NSDictionary 遇见 nil</a></h4>
-
-<p>当把nil插入到NSDictionary里，会引起crash，简单粗暴的解决办法是插入之前加if判断，弊端是代码有bad smell。作者基于Method Swizzle提供了一个全局的处理方案。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://github.com/cyanzhong/xTextHandler/">xTextHandler</a></h4>
-
-<p>基于 Xcode Source Editor Extension 的插件集，提高 Xcode 文本处理的体验，你可以通过简单的几行代码扩展它。</p>
-
-<h4>2) <a href="http://wereadteam.github.io/2016/05/23/GYBootingProtection/">iOS 启动连续闪退保护方案</a></h4>
-
-<p>这是微信读书团队分享的方案。之前也看到某猫分享的『APP安全模式』，读起来都云山雾绕的，差评。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/61707af65a48">GMTC2016移动技术大会参会感想</a></h4>
-
-<p>没有参加过此类会议，看了链家网移动敏捷之术，感觉还挺不错的。</p>
-
-<h4>2) <a href="https://www.infoq.com/news/2016/03/agileindia-7sins-scrum">Seven Sins of Scrum and other Agile Antipatterns</a></h4>
-
-<blockquote><p>一些事情看上去是好主意，但在使用的时候会产生意想不到的后果。</p></blockquote>
 
 <p>@end</p>
 ]]></content>

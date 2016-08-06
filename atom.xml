@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-07-30T12:14:22+08:00</updated>
+  <updated>2016-08-06T23:32:32+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十二期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/08/06/tech-notes-12/"/>
+    <updated>2016-08-06T22:03:48+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/08/06/tech-notes-12</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括Apple收购机器学习公司、以及Apple Store营收增长等资讯，深入剖析自动释放池、Clang Attributes、POP动画引擎等。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.theverge.com/2016/8/5/12390412/apple-turi-acquisition-machine-learning">Apple buys machine learning startup Turi</a> By Jacob Kastrenakes</h4>
+
+<p>Turi的产品可以协助开发者将机器学习以及人工智能技术加入软件，可以预测用户数量变化、情绪分析、欺诈探测、分析用户使用习惯，以及更好的定位潜在用户的系统。</p>
+
+<h4>2) <a href="http://www.macrumors.com/2016/08/03/app-store-50-billion-paid-to-developers/">App Store Developer Payout Hits $50 Billion, July Sets Record as Biggest Month Ever</a> By Juli Clover</h4>
+
+<p>App Store七月营收再破纪录，开发者亦获利颇丰。库克表示，单就苹果的服务业务规模来说，明年都可以跻身财富100强。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://draveness.me/autoreleasepool/">深入解析autoreleasepool</a> By 左书祺</h4>
+
+<p>自动释放池是由AutoreleasePoolPage以双向链表的方式实现的，这篇文章会在源代码层面介绍Objective-C中自动释放池。</p>
+
+<h4>2) <a href="http://blog.sunnyxx.com/2016/05/14/clang-attributes/">Clang Attributes黑魔法小记</a> By 孙源</h4>
+
+<p>Clang Attributes是Clang提供的一种源码注解，方便开发者向编译器表达某种要求，参与控制如 Static Analyzer、Name Mangling、Code Generation等过程。</p>
+
+<h4>3) <a href="https://medium.com/@prianka.kariat/interactive-messages-in-ios-10-4cea542fbd9a">Interactive Messages in iOS 10</a> By Prianka Liz Kariat</h4>
+
+<p>本文介绍了如何使用iOS 10的Message框架开发一个tic tac toe小游戏。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://adad184.com/2015/03/11/intro-to-pop/">POP介绍与使用实践</a> By adad184</h4>
+
+<p>动画在APP开发过程中，大家多多少少都会接触到。在iOS中动画相关的部分都是基于Core Animation，但文本介绍的是来自于Facebook的动画引擎，以让你快速上手动画。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/c8152d6ce957">iOS 中 常用的第三方库</a></h4>
+
+<p>类似文章很多，这篇之所以吸引我的眼球，主要在于文中的第三方轮子使用图谱。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&amp;mid=2653057579&amp;idx=1&amp;sn=988a719765465746221f356881157a99&amp;scene=4">关于项目重构</a></h4>
+
+<p>读读下面这段对话，你会深有同感的。</p>
+
+<p>A: 重构80%都会失败，因为业务线的需求永远都不会停，资源有限，所以不花大代价，轻易不重构，宁可开发的慢一点，写好。</p>
+
+<p>B: 其实以业界大部分产品经理的水平99%的项目都活不到重构的那天，所以等业务量上来后再重构，会更省资源。</p>
+
+<p>最近经历了两周以『敏捷开发』为名的工厂流水线式的App开发流程，虽然及时退出，但也惹了一身骚。这样下去，该项目的代码难以再维护将是迟早的事情。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十一期）]]></title>
@@ -25,21 +85,21 @@
 
 <h2>资讯</h2>
 
-<h4>1) <a href="http://www.mac52ipod.cn/post/apple-2016-q3-result.php">苹果发布2016财年第三季财报</a></h4>
+<h4>1) <a href="http://www.mac52ipod.cn/post/apple-2016-q3-result.php">苹果发布2016财年第三季财报</a> @bmwmengwei</h4>
 
 <p>总结起来就是各种同比下降（除了服务业务），究其原因就是饱和二字。值得注意的是软件和互联网服务业务的营收一直在逆势增长，甚至已经超过电脑、iPad等业务，位居第二大营收来源了。</p>
 
-<h4>2) <a href="http://www.bloomberg.com/news/articles/2016-07-28/apple-taps-blackberry-talent-as-car-project-takes-software-turn">Apple Hires BlackBerry Talent With Car Project Turning to Self-Driving Software</a></h4>
+<h4>2) <a href="http://www.bloomberg.com/news/articles/2016-07-28/apple-taps-blackberry-talent-as-car-project-takes-software-turn">Apple Hires BlackBerry Talent With Car Project Turning to Self-Driving Software</a> @markgurman</h4>
 
 <p>苹果乔布斯时代元老成员Bob Mansfield从退休状态重回苹果岗位担任苹果汽车项目Project Titan掌门人。据彭博消息称，Apple已将黑莓汽车软件部门负责人Dan Dodge招至该项目的管理团队。</p>
 
 <h2>开发</h2>
 
-<h4>1) <a href="http://www.jianshu.com/p/10121d699c32">深入研究 Runloop 与线程保活</a></h4>
+<h4>1) <a href="http://www.jianshu.com/p/10121d699c32">深入研究 Runloop 与线程保活</a> @张星宇</h4>
 
 <p>在讨论 runloop 相关的文章，以及分析 AFNetworking(2.x) 源码的文章中，我们经常会看到关于利用runloop进行线程保活的分析。</p>
 
-<h4>2) <a href="http://www.jianshu.com/p/3182646001d1">Runtime 10种用法</a></h4>
+<h4>2) <a href="http://www.jianshu.com/p/3182646001d1">Runtime 10种用法</a> @haojingxue_iOS</h4>
 
 <p>再牛逼的技术和实战结合才有意义，本篇介绍技术尽量和实战联系起来。</p>
 
@@ -49,13 +109,13 @@
 
 <p>有时在某分支上开发了一半，需要切到另一个分支处理个紧急的问题，而又不想立即commit代码，此时可以试试git stash这个命令。</p>
 
-<h4>2) <a href="http://useyourloaf.com/blog/xcode-visual-memory-debugger/">Xcode Visual Memory Debugger</a></h4>
+<h4>2) <a href="http://useyourloaf.com/blog/xcode-visual-memory-debugger/">Xcode Visual Memory Debugger</a> @kharrison</h4>
 
 <p>本文介绍了Xcode 8引入的全新可视化内存调试工具。</p>
 
 <h2>其他</h2>
 
-<h4>1) <a href="http://amao12580.github.io/post/2016/05/How-to-better-manage-the-technical-team/">如何更好地管理技术团队</a></h4>
+<h4>1) <a href="http://amao12580.github.io/post/2016/05/How-to-better-manage-the-technical-team/">如何更好地管理技术团队</a> @amao12580</h4>
 
 <p>技术人员乐于被领导；但他们不喜欢被管理，不喜欢像牛一样被驱赶或指挥。管理者强迫人们服从他们的命令，而领导者则会带领他们一起工作。</p>
 
@@ -1436,117 +1496,6 @@ rule</p></blockquote>
 <h2>后记</h2>
 
 <p>源代码里有乾坤，不注意看就错过了:-)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[基于模板引擎的新闻内容展示]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action/"/>
-    <updated>2014-04-05T18:45:39+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action</id>
-    <content type="html"><![CDATA[<p>在为杭州市城管委开发贴心城管客户端时，城管动态这个模块的新闻展示是把新闻分成标题、时间、贴图、正文等部分，分别展示内容的。</p>
-
-<!--more-->
-
-
-<p>这样做的局限性不言而喻，不能图文并茂随心所欲的在文章内部嵌入图片且图片数量有一定的限制，而且服务端在发布新闻时也不方便做文章格式的编辑等。</p>
-
-<p>在设计西子快讯时，便尝试了基于模板引擎的新闻内容展示。其实这样做，开发工作量并不大，因为开源社区有了高质量的模板引擎。</p>
-
-<h2>思路</h2>
-
-<ol>
-<li>根据新闻的ID从服务端获得News实例对象（含标题、附图、正文等信息）</li>
-<li>将获得的新闻各属性信息填充到APP内的HTML模板文件中</li>
-<li>HTML模板可以指定CSS样式（同样存放在APP内）</li>
-<li>经过模板引擎的处理得到最终的HTML内容</li>
-<li>将处理后的HTML内容加载到WebView控件显示即可</li>
-</ol>
-
-
-<h2>开发</h2>
-
-<h3>HTML模板</h3>
-
-<p>准备好一个名为template.html文件，需要动态替换的部分用模板标签标识。</p>
-
-<h3>显示样式</h3>
-
-<p>news.css也不给出了，找个前端设计师结合项目需要提供一个即可。手动替换掉template.html中的参数，加上自己的news.css，便可在桌面浏览器里测试下效果。一切OKay的话，请继续阅读本文。</p>
-
-<h3>替换模板参数</h3>
-
-<p>我选择的模板引擎是MGTemplateEngine，到Github下载源代码加入到Xcode工程里，然后编写如下几行代码即可。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">MGTemplateEngine</span> <span class="o">*</span><span class="n">engine</span> <span class="o">=</span> <span class="p">[</span><span class="n">MGTemplateEngine</span> <span class="n">templateEngine</span><span class="p">];</span>
-</span><span class='line'><span class="p">[</span><span class="n">engine</span> <span class="nl">setMatcher:</span><span class="p">[</span><span class="n">ICUTemplateMatcher</span> <span class="nl">matcherWithTemplateEngine:</span><span class="n">engine</span><span class="p">]];</span>
-</span><span class='line'><span class="n">NSString</span> <span class="o">*</span><span class="n">templatePath</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">pathForResource:</span><span class="s">@&quot;template&quot;</span> <span class="nl">ofType:</span><span class="s">@&quot;html&quot;</span><span class="p">];</span>
-</span><span class='line'><span class="n">NSString</span> <span class="o">*</span><span class="n">newsContentHTML</span> <span class="o">=</span> <span class="p">[</span><span class="n">engine</span> <span class="nl">processTemplateInFileAtPath:</span><span class="n">templatePath</span> <span class="nl">withVariables:</span><span class="err">@</span><span class="p">{</span><span class="s">@&quot;title&quot;</span><span class="o">:</span> <span class="s">@&quot;Template based News client&quot;</span><span class="p">,</span> <span class="s">@&quot;editor&quot;</span><span class="o">:</span> <span class="s">@&quot;Linkou Bian&quot;</span><span class="p">}];</span>
-</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">newsContentWebView</span> <span class="nl">loadHTMLString:</span><span class="n">newsContentHTML</span> <span class="nl">baseURL:</span><span class="p">[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="n">resourceURL</span><span class="p">]];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>processTemplateInFileAtPath:withVariables中得variables参数是个字典，key对应template.html中的参数。注意示例代码中并没有把variables参数写完整。</p>
-
-<p>另外html中的body_content参数对应的字符串应带有HTML标签，这样处理后的html内容放到WebView中显示效果会相对好很多。西子快讯便是这样设计与实现的。</p>
-
-<p>除了在新闻顶部固定的位置显示新闻配图外，我们也可以在body_content参数对应的字符串中提供img标签以在文章任意位置插入图片。</p>
-
-<h3>操作新闻内的多媒体文件</h3>
-
-<p>如果需要点击图片以全屏展示，实现起来也非常简单。首先在template.html中加入一段JavaScript，</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
-</span><span class='line'>    <span class="kd">function</span> <span class="nx">extend_image</span><span class="p">(</span><span class="nx">element</span><span class="p">){</span>
-</span><span class='line'>        <span class="kd">var</span> <span class="nx">imgTag</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;IMG&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
-</span><span class='line'>        <span class="kd">var</span> <span class="nx">url</span><span class="o">=</span><span class="nx">imgTag</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">);</span>
-</span><span class='line'>        <span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;image://?url=&quot;</span><span class="o">+</span><span class="nx">url</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/script&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>然后在img标签外增加点击调用extend_image(this)相关的HTML代码即可。</p>
-
-<p>用户点击图片后，WebView的委托方法webView:shouldStartLoadWithRequest:navigationType:会被调用。我们可以解析reqeust的URL字符串来做相应的处理。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">if</span> <span class="p">([</span><span class="n">url</span> <span class="nl">hasPrefix:</span><span class="s">@&quot;image://&quot;</span><span class="p">])</span> <span class="p">{</span>
-</span><span class='line'>    <span class="n">NSString</span> <span class="o">*</span><span class="n">imageURL</span> <span class="o">=</span> <span class="p">[</span><span class="n">url</span> <span class="nl">substringFromIndex:</span><span class="p">[</span><span class="s">@&quot;image://?url=&quot;</span> <span class="n">length</span><span class="p">]];</span>
-</span><span class='line'>    <span class="c1">// Present a new view controller and display the image full sreen</span>
-</span><span class='line'>    <span class="c1">// ...</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">NO</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>虽然西子快讯尚未支持视频播放，但我觉得也可以采用类似的方案处理。</p>
-
-<h2>后记</h2>
-
-<p>个人认为采用这种方式的灵活性主要体现在，<br/>
-1. 可以定义多套显示风格（如白天、黑夜），然后将样式名传给模板<br/>
-2. 可以预设多套字体、字号（medium、large等），然后将样式名传给模板<br/>
-3. 基于自定义URL及WebView的delegate方法，实现HTML与ObjC的交互</p>
-
-<p>另外，除了MGTemplateEngine外，还有其他的模板引擎可以使用，比如GRMustache。至于孰优孰劣，什么场合选择哪个，截止目前我并没有做任何研究，等接到下一个需要模板引擎的项目再说吧。</p>
 ]]></content>
   </entry>
   
