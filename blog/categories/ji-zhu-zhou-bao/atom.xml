@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-08-14T11:21:20+08:00</updated>
+  <updated>2016-08-14T11:49:49+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -49,7 +49,7 @@
 
 <p>随着 APP 版本的迭代，IPA 越来越大，其中很大一部分原因是很多图片（当然可能还有gif等）资源虽然不再被使用，但依旧存在于工程里。本文介绍了现存的各种方案，并提供了一个小程序做相关的清理工作。</p>
 
-<h4>2) <a href="https://github.com/huanxsd/LinkMap">LinkMap解析工具：检查每个类占用大小</a></h4>
+<h4>2) <a href="https://github.com/huanxsd/LinkMap">LinkMap解析工具：检查每个类占用大小</a> By Suteki</h4>
 
 <p>若想知道 APP 的可执行文件的具体构成，里面的内容都是些什么，哪些库占用空间较高，可以先利用 Xcode 生成 LinkMap 文件，再导入到 LinkMap 解析工具分析。其中的原理可参考这篇<a href="http://blog.cnbang.net/tech/2296/">iOS APP可执行文件的组成</a>。</p>
 
