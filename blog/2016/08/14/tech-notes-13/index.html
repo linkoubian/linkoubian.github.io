@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>平安好房iOS开发团队技术周报（第十三期） - Balloonsys Inc.</title>
+  <meta name="author" content="Linkou Bian">
+
+  
+  <meta name="description" content="本期周报主要包括 Apple 在 Music 及 Heath 领域的两则资讯，WebP 在 iOS 开发中的实践，以及 IPA 瘦身相关的工具介绍等内容。 资讯 1) Apple Music’s Bozoma Saint John: It’s About Passion, Not &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/08/14/tech-notes-13/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Balloonsys Inc.</a></h1>
+  
+    <h2>Just a blog now.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="balloonsys.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第十三期）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-08-14T10:08:14+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>14</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:08 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>本期周报主要包括 Apple 在 Music 及 Heath 领域的两则资讯，WebP 在 iOS 开发中的实践，以及 IPA 瘦身相关的工具介绍等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.fastcompany.com/3062124/tim-cooks-apple/apple-musics-bozoma-saint-john-its-about-passion-not-algorithms">Apple Music’s Bozoma Saint John: It’s About Passion, Not Algorithms</a> By Mark Sullivan</h4>
+
+<p>Apple Music 市场总监 Bozoma Saint John 介绍说：与算法相比，Apple Music 更倾向于人工来推荐。</p>
+
+<h4>2) <a href="http://appleinsider.com/articles/16/08/11/apple-hires-flipboard-co-founder-evan-doll-to-direct-work-on-health-software">Apple hires Flipboard co-founder Evan Doll to direct work on health software</a> By Roger Fingas</h4>
+
+<p>相比于 Apple 董事会的大佬抛售股票的资讯，我对 Flipboard 联合创始人 Doll 重回苹果担任 Health Software Engineering 的 Director 这则新闻更感兴趣。因为斯坦福第一期的 iPhone 开发课程中 Doll 是讲师之一，印象深刻。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://www.raywenderlich.com/133224/how-to-create-an-uber-splash-screen">How To Create an Uber Splash Screen</a> By Derek Selander</h4>
+
+<p>本文介绍了如何基于 CALayer 及 CAAnimation 创建类似 Uber 启动时的动画。如果对动画感兴趣，推荐读一读 iOS Animations by Tutorials 这本书。</p>
+
+<h4>2) <a href="https://kevinmky.github.io/2015/12/17/webP-%E5%9C%A8-iOS-%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">webP 格式图片在 iOS 中的应用</a> By KevinMkY</h4>
+
+<p>本文从 UIImageView 及 HTML5 页面两方面介绍了如何在 iOS 应用 WebP 格式的图片资源。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://blog.lessfun.com/blog/2015/09/02/find-unused-resources-in-xcode-project/">查找XCode工程中没被使用的图片资源</a> By lessfun</h4>
+
+<p>随着 APP 版本的迭代，IPA 越来越大，其中很大一部分原因是很多图片（当然可能还有gif等）资源虽然不再被使用，但依旧存在于工程里。本文介绍了现存的各种方案，并提供了一个小程序做相关的清理工作。</p>
+
+<h4>2) <a href="https://github.com/huanxsd/LinkMap">LinkMap解析工具：检查每个类占用大小</a></h4>
+
+<p>若想知道 APP 的可执行文件的具体构成，里面的内容都是些什么，哪些库占用空间较高，可以先利用 Xcode 生成 LinkMap 文件，再导入到 LinkMap 解析工具分析。其中的原理可参考这篇<a href="http://blog.cnbang.net/tech/2296/">iOS APP可执行文件的组成</a>。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://www.infoq.com/cn/articles/mood-and-efficiency-of-the-technical-team">技术团队的情绪与效率</a> By 申玉宝</h4>
+
+<p>压力不是来自于任务本身，而是任务在大脑中的堵塞，带来的焦虑和心理的抵触。无论你是在团队里的什么位置，这篇文章里的一些观点都是值得去了解的。</p>
+
+<p>@end</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-08-14T10:08:14+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>14</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:08 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/08/06/tech-notes-12/" title="Previous Post: 平安好房iOS开发团队技术周报（第十二期）">&laquo; 平安好房iOS开发团队技术周报（第十二期）</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/08/14/tech-notes-13/">平安好房iOS开发团队技术周报（第十三期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/08/06/tech-notes-12/">平安好房iOS开发团队技术周报（第十二期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/07/30/tech-notes-11/">平安好房iOS开发团队技术周报（第十一期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/07/23/tech-notes-10/">平安好房iOS开发团队技术周报（第十期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/07/15/tech-notes-9/">平安好房iOS开发团队技术周报（第九期）</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Linkou Bian -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

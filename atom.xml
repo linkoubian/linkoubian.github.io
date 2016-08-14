@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-08-06T23:35:16+08:00</updated>
+  <updated>2016-08-14T11:21:20+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十三期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/08/14/tech-notes-13/"/>
+    <updated>2016-08-14T10:08:14+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/08/14/tech-notes-13</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 Apple 在 Music 及 Heath 领域的两则资讯，WebP 在 iOS 开发中的实践，以及 IPA 瘦身相关的工具介绍等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.fastcompany.com/3062124/tim-cooks-apple/apple-musics-bozoma-saint-john-its-about-passion-not-algorithms">Apple Music’s Bozoma Saint John: It’s About Passion, Not Algorithms</a> By Mark Sullivan</h4>
+
+<p>Apple Music 市场总监 Bozoma Saint John 介绍说：与算法相比，Apple Music 更倾向于人工来推荐。</p>
+
+<h4>2) <a href="http://appleinsider.com/articles/16/08/11/apple-hires-flipboard-co-founder-evan-doll-to-direct-work-on-health-software">Apple hires Flipboard co-founder Evan Doll to direct work on health software</a> By Roger Fingas</h4>
+
+<p>相比于 Apple 董事会的大佬抛售股票的资讯，我对 Flipboard 联合创始人 Doll 重回苹果担任 Health Software Engineering 的 Director 这则新闻更感兴趣。因为斯坦福第一期的 iPhone 开发课程中 Doll 是讲师之一，印象深刻。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://www.raywenderlich.com/133224/how-to-create-an-uber-splash-screen">How To Create an Uber Splash Screen</a> By Derek Selander</h4>
+
+<p>本文介绍了如何基于 CALayer 及 CAAnimation 创建类似 Uber 启动时的动画。如果对动画感兴趣，推荐读一读 iOS Animations by Tutorials 这本书。</p>
+
+<h4>2) <a href="https://kevinmky.github.io/2015/12/17/webP-%E5%9C%A8-iOS-%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">webP 格式图片在 iOS 中的应用</a> By KevinMkY</h4>
+
+<p>本文从 UIImageView 及 HTML5 页面两方面介绍了如何在 iOS 应用 WebP 格式的图片资源。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://blog.lessfun.com/blog/2015/09/02/find-unused-resources-in-xcode-project/">查找XCode工程中没被使用的图片资源</a> By lessfun</h4>
+
+<p>随着 APP 版本的迭代，IPA 越来越大，其中很大一部分原因是很多图片（当然可能还有gif等）资源虽然不再被使用，但依旧存在于工程里。本文介绍了现存的各种方案，并提供了一个小程序做相关的清理工作。</p>
+
+<h4>2) <a href="https://github.com/huanxsd/LinkMap">LinkMap解析工具：检查每个类占用大小</a></h4>
+
+<p>若想知道 APP 的可执行文件的具体构成，里面的内容都是些什么，哪些库占用空间较高，可以先利用 Xcode 生成 LinkMap 文件，再导入到 LinkMap 解析工具分析。其中的原理可参考这篇<a href="http://blog.cnbang.net/tech/2296/">iOS APP可执行文件的组成</a>。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://www.infoq.com/cn/articles/mood-and-efficiency-of-the-technical-team">技术团队的情绪与效率</a> By 申玉宝</h4>
+
+<p>压力不是来自于任务本身，而是任务在大脑中的堵塞，带来的焦虑和心理的抵触。无论你是在团队里的什么位置，这篇文章里的一些观点都是值得去了解的。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十二期）]]></title>
@@ -59,7 +109,7 @@
 
 <h2>其他</h2>
 
-<h4>1) <a href="http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&amp;mid=2653057579&amp;idx=1&amp;sn=988a719765465746221f356881157a99&amp;scene=4">关于项目重构</a></h4>
+<h4>1) <a href="http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&amp;mid=2653057579&amp;idx=1&amp;sn=988a719765465746221f356881157a99&amp;scene=4">关于项目重构</a> By loonggg</h4>
 
 <p>读读下面这段对话，你会深有同感的。</p>
 
@@ -1414,88 +1464,6 @@ rule</p></blockquote>
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[hitTest示例]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/04/08/hit-test-sample/"/>
-    <updated>2014-04-08T14:53:20+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/04/08/hit-test-sample</id>
-    <content type="html"><![CDATA[<p>早上翻看Github本周排名靠前的Objective-C开源项目，瞄了几眼<a href="https://github.com/wpsteak/PWParallaxScrollView">PWParallaxScrollView</a>的代码。发现其在ScrollView中嵌入Button，然后为了使得Button能接受点击事件是借助- hitTest:withEvent:实现的。</p>
-
-<!--more-->
-
-
-<p>一番Google，大致知道hitTest是干嘛的了。顺道写个Sample，改变默认的消息响应流。</p>
-
-<h2>准备</h2>
-
-<p>建立一个Single VC的工程，添加两个有部分重叠的Button，分别关联上touchUpInSide处理方法。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">buttonAPressed:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;You pressed button A&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">buttonBPressed:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sender</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;You pressed button B&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>因为Button B(tag为102)是叠在Button A(tag为101)上面的，所以在重叠区域点击，控制台输出的是You pressed button B。这种情况下，如果希望收到消息的是Button A呢？那就用hitTest吧！</p>
-
-<h2>实现</h2>
-
-<p>建立一个UIView的子类，然后重写- hitTest:withEvent:方法，</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nf">hitTest:</span><span class="p">(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">point</span> <span class="nf">withEvent:</span><span class="p">(</span><span class="n">UIEvent</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="n">UIView</span><span class="o">*</span> <span class="n">subview</span> <span class="k">in</span> <span class="n">self</span><span class="p">.</span><span class="n">subviews</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="n">CGPoint</span> <span class="n">convertedPoint</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span> <span class="nl">convertPoint:</span><span class="n">point</span> <span class="nl">toView:</span><span class="n">subview</span><span class="p">];</span>
-</span><span class='line'>        <span class="n">UIView</span> <span class="o">*</span><span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">subview</span> <span class="nl">hitTest:</span><span class="n">convertedPoint</span> <span class="nl">withEvent:</span><span class="n">event</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">tag</span> <span class="o">==</span> <span class="mi">101</span><span class="p">){</span>
-</span><span class='line'>            <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-</span><span class='line'>            <span class="k">break</span><span class="p">;</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">return</span> <span class="p">[</span><span class="n">super</span> <span class="nl">hitTest:</span><span class="n">point</span> <span class="nl">withEvent:</span><span class="n">event</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>紧接着，把Button的父视图，即根视图view对应的类设为刚创建的类型。运行，测试，看到效果了吧?!</p>
-
-<h2>后记</h2>
-
-<p>源代码里有乾坤，不注意看就错过了:-)</p>
 ]]></content>
   </entry>
   

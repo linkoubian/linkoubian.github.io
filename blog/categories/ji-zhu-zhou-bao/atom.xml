@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-08-06T23:35:16+08:00</updated>
+  <updated>2016-08-14T11:21:20+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十三期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/08/14/tech-notes-13/"/>
+    <updated>2016-08-14T10:08:14+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/08/14/tech-notes-13</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 Apple 在 Music 及 Heath 领域的两则资讯，WebP 在 iOS 开发中的实践，以及 IPA 瘦身相关的工具介绍等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.fastcompany.com/3062124/tim-cooks-apple/apple-musics-bozoma-saint-john-its-about-passion-not-algorithms">Apple Music’s Bozoma Saint John: It’s About Passion, Not Algorithms</a> By Mark Sullivan</h4>
+
+<p>Apple Music 市场总监 Bozoma Saint John 介绍说：与算法相比，Apple Music 更倾向于人工来推荐。</p>
+
+<h4>2) <a href="http://appleinsider.com/articles/16/08/11/apple-hires-flipboard-co-founder-evan-doll-to-direct-work-on-health-software">Apple hires Flipboard co-founder Evan Doll to direct work on health software</a> By Roger Fingas</h4>
+
+<p>相比于 Apple 董事会的大佬抛售股票的资讯，我对 Flipboard 联合创始人 Doll 重回苹果担任 Health Software Engineering 的 Director 这则新闻更感兴趣。因为斯坦福第一期的 iPhone 开发课程中 Doll 是讲师之一，印象深刻。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://www.raywenderlich.com/133224/how-to-create-an-uber-splash-screen">How To Create an Uber Splash Screen</a> By Derek Selander</h4>
+
+<p>本文介绍了如何基于 CALayer 及 CAAnimation 创建类似 Uber 启动时的动画。如果对动画感兴趣，推荐读一读 iOS Animations by Tutorials 这本书。</p>
+
+<h4>2) <a href="https://kevinmky.github.io/2015/12/17/webP-%E5%9C%A8-iOS-%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">webP 格式图片在 iOS 中的应用</a> By KevinMkY</h4>
+
+<p>本文从 UIImageView 及 HTML5 页面两方面介绍了如何在 iOS 应用 WebP 格式的图片资源。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://blog.lessfun.com/blog/2015/09/02/find-unused-resources-in-xcode-project/">查找XCode工程中没被使用的图片资源</a> By lessfun</h4>
+
+<p>随着 APP 版本的迭代，IPA 越来越大，其中很大一部分原因是很多图片（当然可能还有gif等）资源虽然不再被使用，但依旧存在于工程里。本文介绍了现存的各种方案，并提供了一个小程序做相关的清理工作。</p>
+
+<h4>2) <a href="https://github.com/huanxsd/LinkMap">LinkMap解析工具：检查每个类占用大小</a></h4>
+
+<p>若想知道 APP 的可执行文件的具体构成，里面的内容都是些什么，哪些库占用空间较高，可以先利用 Xcode 生成 LinkMap 文件，再导入到 LinkMap 解析工具分析。其中的原理可参考这篇<a href="http://blog.cnbang.net/tech/2296/">iOS APP可执行文件的组成</a>。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://www.infoq.com/cn/articles/mood-and-efficiency-of-the-technical-team">技术团队的情绪与效率</a> By 申玉宝</h4>
+
+<p>压力不是来自于任务本身，而是任务在大脑中的堵塞，带来的焦虑和心理的抵触。无论你是在团队里的什么位置，这篇文章里的一些观点都是值得去了解的。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十二期）]]></title>
@@ -59,7 +109,7 @@
 
 <h2>其他</h2>
 
-<h4>1) <a href="http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&amp;mid=2653057579&amp;idx=1&amp;sn=988a719765465746221f356881157a99&amp;scene=4">关于项目重构</a></h4>
+<h4>1) <a href="http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&amp;mid=2653057579&amp;idx=1&amp;sn=988a719765465746221f356881157a99&amp;scene=4">关于项目重构</a> By loonggg</h4>
 
 <p>读读下面这段对话，你会深有同感的。</p>
 
@@ -238,64 +288,6 @@
 <h4>2) <a href="http://weibo.com/1765732340/DENJO10bl?type=comment">软件工程方法语录</a> @钟颖</h4>
 
 <blockquote><p>也许让我对敏捷不舒服的原因是，我真的想看看敏捷教练到底做过什么不得了的项目。</p></blockquote>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第八期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/07/08/tech-notes-8/"/>
-    <updated>2016-07-08T21:44:07+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/07/08/tech-notes-8</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括苹果开源压缩算法LZFSE、iOS 10中Privacy的变化、iCloud Core Data的境遇等。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://www.infoq.com/news/2016/07/apple-lzfse-lossless-opensource">Apple开源新的压缩算法LZFSE</a></h4>
-
-<p>苹果开源了新的无损压缩算法LZFSE，该算法是去年在iOS 9和OS X 10.10中引入的。按照苹果公司的说法，LZFE的压缩增益和ZLib level 5相同，但速度要快2~3倍，能源效率也更高。</p>
-
-<h4>2) <a href="http://useyourloaf.com/blog/privacy-settings-in-ios-10/">iOS 10 Privacy的变化</a></h4>
-
-<p>比如说如果要在iOS 10中使用相机拍照，那么你得先在info.plist中作相应的声明，否则app会crash。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://blog.csdn.net/chenyufeng1991/article/details/51771728">深拷贝与浅拷贝详解</a></h4>
-
-<p>通过一句话来解释：深拷贝就是内容拷贝，浅拷贝就是指针拷贝。</p>
-
-<h4>2) <a href="http://www.iosxxoo.com/2016/05/18/%E4%B8%BA%E4%BB%80%E4%B9%88Factory%E6%96%B9%E6%B3%95%E8%A6%81%E8%BF%94%E5%9B%9Einstancetype%E8%80%8C%E4%B8%8D%E6%98%AFid/">为什么你需要使用instancetype</a></h4>
-
-<p>不管何时，只要一个class要返回它相同的类实例，使用instancetype都是更加合适的。</p>
-
-<h4>3) <a href="http://mjtsai.com/blog/2016/06/17/the-deprecation-of-icloud-core-data/">The Deprecation of iCloud Core Data</a></h4>
-
-<p>看<a href="https://developer.apple.com/reference/coredata/nspersistentstorecoordinator">NSPersistentStoreCoordinator</a>有一些标记为Deprecated的方法，今年的WWDC上该变化几乎没有被提及。一直以来都没有触碰iCloud相关的API，估计以后也没这个必要了。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://github.com/Soulghost/SGUserGuide">SGUserGuide</a></h4>
-
-<p>一个用于制作多步骤用户操作引导的框架，基于AOP，对原工程几乎无任何侵入。</p>
-
-<h4>2) <a href="https://unsplash.com">Unsplash</a></h4>
-
-<p>Unsplash 是一个分享免费高质量照片的网站，都是真实的摄影师作品。图片多是风景和静物，用作公众号文章的封面再好不过，比如此文:P</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://news.ycombinator.com/item?id=11991479">Google为什么要把数十亿行代码放到一个库中</a></h4>
-
-<p>单体大型代码库虽然有许多好处，但构建这样一个庞大的单体代码库也有几个方面的问题需要权衡。Git社区强烈建议使用更多更小的代码库，谷歌的Android和Chrome团队就使用Git。</p>
-
-<h4>2) 豆瓣语录</h4>
-
-<blockquote><p>年轻人在大城市超负荷输出价值，同时也在为各种所谓『消费升级』的概念掏着腰包：出门必打车、每周要买花、每周要请家政……等等。『打最累的工，坐最贵的专车，买最新鲜的花，请最好的家政……』#有时候，青春是一种工业原料#</p></blockquote>
 
 <p>@end</p>
 ]]></content>
