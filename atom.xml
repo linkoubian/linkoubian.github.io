@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-08-21T11:15:53+08:00</updated>
+  <updated>2016-08-22T10:15:23+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,17 +29,17 @@
 
 <p>Cook 拜会中国国务院副总理张高丽时宣布苹果将在中国设立研发中心，整合中国的工程及经营团队，显示苹果藉由加码中国市场，试图扭转中国市场的困境。</p>
 
-<h4>2) <a href="http://www.geekpark.net/topics/216414">库克任苹果 CEO 五周年专访</a> by Techsina</h4>
+<h4>2) <a href="http://www.geekpark.net/topics/216414">库克任苹果 CEO 五周年专访</a> By Techsina</h4>
 
 <p>文中包含很多关于价值观、企业国际税等话题。大部分资讯看标题就够了，但强烈建议细细的品读下该专访的全文。</p>
 
 <h2>开发</h2>
 
-<h4>1) <a href="https://www.shinobicontrols.com/blog/ios-10-day-by-day-index">iOS 10 Day by Day</a> by Sam Burnstone</h4>
+<h4>1) <a href="https://www.shinobicontrols.com/blog/ios-10-day-by-day-index">iOS 10 Day by Day</a> By Sam Burnstone</h4>
 
 <p>自 iOS 7 Day by Day 始，就关注 shinobicontrols 上推出的该系列文章。每周一到两篇，对跟进 iOS 10 新特性的开发技术非常有益。</p>
 
-<h4>2) <a href="http://www.jianshu.com/p/f8224779ca63">App 定位和地图的那些坑</a> by hrchen</h4>
+<h4>2) <a href="http://www.jianshu.com/p/f8224779ca63">App 定位和地图的那些坑</a> By hrchen</h4>
 
 <p>开发App时会遇到各种坑，本文分享在iOS/Android系统中定位和地图中遇到的坑，以及携程 App 的解决方案。</p>
 
@@ -49,11 +49,11 @@
 
 <h2>工具</h2>
 
-<h4>1) <a href="https://www.decosoftware.com">Deco IDE</a> by decosoftware</h4>
+<h4>1) <a href="https://www.decosoftware.com">Deco IDE</a> By decosoftware</h4>
 
 <p>Deco 区别于其他 IDE 最显著的特性是支持常用控件的拖拽生成代码和可视化编辑，这些控件既有 React Native 原生控件，也有一些知名的开源控件。</p>
 
-<h4>2) <a href="https://github.com/yourkarma/JWT">A JSON Web Token implementation in Objective-C</a> by Karma</h4>
+<h4>2) <a href="https://github.com/yourkarma/JWT">A JSON Web Token implementation in Objective-C</a> By Karma</h4>
 
 <p>JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties. 在 Objective-C 里如何实现 JWT 可使用 Karma 提供的轮子。</p>
 
@@ -63,7 +63,7 @@
 
 <p>针对新浪微博、微信、QQ空间等应用的图片处理方式，从拍照、选择图片、完成选择这三个方面归纳移动应用的图片选择上传的最佳产品体验。</p>
 
-<h4>2) <a href="https://www.codementor.io/react-js/tutorial/react-native-vs-ionic">React Native vs Ionic</a> by Frédéric Massart</h4>
+<h4>2) <a href="https://www.codementor.io/react-js/tutorial/react-native-vs-ionic">React Native vs Ionic</a> By Frédéric Massart</h4>
 
 <p>近日看到某司某所谓的 Android 架构师在技术选型时写的 RN 与 Weex 对比文章，且不说候选对象用 Weex 而不是诸如 Ionic 等，其文中对 RN 的多处表述也是滑稽的很。从本周开始，在 RN 及 Ionic 上花些时间。</p>
 
