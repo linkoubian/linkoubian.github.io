@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-08-27T11:51:50+08:00</updated>
+  <updated>2016-09-05T11:18:21+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十六期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/09/03/tech-notes-16/"/>
+    <updated>2016-09-03T10:08:14+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/09/03/tech-notes-16</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 的最新规则，做一款 App 前需要考虑的方方面面，以及 Surge 开发者分享的他所使用的软硬件工具等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://tech2ipo.com/10032212">苹果对 App Store 进行大清理</a> By tech2ipo</h4>
+
+<p>9月2日凌晨，收到 Apple 的邮件说将下架不能与 iPhone 和 iPad 兼容及不能正常运行的应用，或者没有遵循更新后 App Store 指南的应用。另外，苹果还指出，应用名称长度不得超过 50 个字符。</p>
+
+<h4>2) <a href="http://www.arinchina.com/news/show-4227.html">苹果新获 59 项专利</a> By Trista</h4>
+
+<p>美国专利商标局正式公布了苹果公司新获批的 59 项专利，包括 12 项设计专利以及可弯曲 OLED 显示屏专利、头戴显示器专利、iOS 设备防震系统专利、家庭自动化系统专利等。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.cnblogs.com/smileEvday/p/iOS_PixelVsPoint.html">iOS 绘制1个像素的线</a> By 枫叶</h4>
+
+<p>第一想法可能是直接根据当前屏幕的 scale 计算出1像素的线对应的 Point，然后设置线宽（或者高）为1个像素。但在设备上测试时会发现渲染出来的线宽并不是1个像素。</p>
+
+<h4>2) <a href="http://limboy.me/tech/2016/07/06/starting-an-app.html">做一个 App 前需要考虑的几件事</a> By 李忠</h4>
+
+<p>随着工具链的完善，语言的升级以及各种优质教程的涌现，做一个 App 的成本也越来越低了。尽管如此，有些事情最好前期就做起来，避免当 App 有了一定规模后，再感慨当初为什么没有多留点心。</p>
+
+<h4>3) <a href="http://www.jianshu.com/p/61a9030adeef">仿微信小视屏</a> By Damonwong</h4>
+
+<p>对于一个类似微信小视屏的功能，大致需要完成的功能无非就是视频录制和视频播放两块。本文是作者视频相关功能开发的实践笔记。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/70ed36cf8a98">Xcode 7 中的调试技巧</a></h4>
+
+<p>Xcode 7 中苹果为我们增加了两个重要的 Debug 相关功能。一个是 Address Sanitizer，另一个是打开 Organizer 窗口的 Crashes 标签页，会自动下载 Crash 信息，右侧的详细信息可以看到是哪行代码导致的崩溃。</p>
+
+<h4>2) <a href="http://blog.imjun.net/2016/08/25/iOS%E7%AC%A6%E5%8F%B7%E8%A1%A8%E6%81%A2%E5%A4%8D-%E9%80%86%E5%90%91%E6%94%AF%E4%BB%98%E5%AE%9D/">iOS 符号表恢复&amp;逆向支付宝</a> By 杨君</h4>
+
+<p>符号表历来是逆向工程中的必争之地，而 iOS 应用在上线前都会裁去符号表，以避免被逆向分析。本文会介绍一个作者写的工具，用于恢复 iOS 应用的符号表。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://dangrover.com/blog/2016/04/20/bots-wont-replace-apps.html">Better apps will replace apps</a> By Dan Grover</h4>
+
+<p>作者是 Facebook 产品经理，之前在微信工作。他在文中谈了对 Facebook、微软的聊天机器人的理解。</p>
+
+<h4>2) <a href="http://liqi.io/liuyachen/">Surge 开发者使用的软硬件</a></h4>
+
+<p>Surge 的开发者刘亚晨，职业角色是 iOS 自由开发者和技术顾问。这篇访谈中他分享了自己使用的硬件和软件。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十五期）]]></title>
@@ -1274,96 +1332,6 @@ rule</p></blockquote>
 4）字典的value为Optional Type <br/>
 5）数组、字典，都是拷贝赋值 <br/>
 6）使用let声明的常量集合，不可以append、remove</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Swift 语言基础（上）]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/09/21/basics-of-swift-part-a/"/>
-    <updated>2014-09-21T22:59:56+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/09/21/basics-of-swift-part-a</id>
-    <content type="html"><![CDATA[<p>周五花了54刀买了RW网站上的Swift by Tutorials，共261页。平均一页1块多软妹币啊！！！朋友圈有评论说：“很庆幸，只需要看两三百页，得其精髓，最怕书长！”。深以为然！</p>
-
-<!--more-->
-
-
-<p>本系列文章，为Swift by Tutorials的读书笔记。</p>
-
-<h2>从Hello World开始</h2>
-
-<p>为了耍耍Swift，首先得打开Xcode 6。在弹出的工程模板里选哪一个呢？这是个问题！</p>
-
-<p>暂时的答案是，一个都不选，关掉！然后在File/New菜单中选择Playground即可。</p>
-
-<p>啥都不说了，在打开的playground编辑区，直接输入println(“Hello World”)吧，此时便可以在右侧看到即时效果。</p>
-
-<p>如果想看程序的运行结果，可以在View/Assistant中选择Show Assistant Editor。</p>
-
-<h2>变量&amp;常量</h2>
-
-<p>声明一个变量的方式：var str: String = “Hello World”，其中类型可以省略。</p>
-
-<p>需要注意的是，类型可以省略不写，不代表Swift是动态类型语言。比如尝试给str变量赋23这样的整数值，就会报错。其类型由首次赋值推断出，此过程为Type Inference。</p>
-
-<p>前面我们解释了类型可以省略不写，现在我们谈谈此处省略的String。此String相当于Obj-C的NSMutableString，是可变的。所以你可以进行这样的操作，str = str + “, I love you!”。</p>
-
-<p>那如何创建一个“不可变”的字符串呢？将var换成let即可。使用let后，我们既不可以str = “Hello Swift”，也不可以str.append。</p>
-
-<h2>数值类型</h2>
-
-<p>浮点数与整数运算，需要显式的转换类型。Int.max + 1会直接报错而不是变成一个负数。</p>
-
-<h2>逻辑类型</h2>
-
-<p>var knowsSwift: Bool = true。此处只可以赋值true或者false，不像其他语言可以使用0或非0值。</p>
-
-<h2>元组</h2>
-
-<p>var product = (“iPhone 6”, 6000)。要输出商品名，我们可以使用println(product.0)。如果加价，可以这么写：product.1 += 100。</p>
-
-<p>如果将元组product拆解成单个元素以方便访问，可以这么做：let (name, price) = product。这时，我们除了使用product.0访问商品名，还可以直接用name。</p>
-
-<p>我们在声明并赋值元组时，还可以指定“属性名”：var product = (name: “iPhone 6”, price: 6000)。</p>
-
-<h2>字符串操作</h2>
-
-<p>输出product的信息，我们可以这么做：println(&ldquo;Price of (product.name) is (product.price)&rdquo;)。此为Swift的String Interpolation特性。相对于NSLog的format参数，方便不少。</p>
-
-<p>另外，我们在使用String Interpolation时，还可以直接操作相关的变量。比如println(&ldquo;Price of (product.name) is (product.price + 100)”)。</p>
-
-<h2>控制流</h2>
-
-<h3>for循环</h3>
-
-<p>for i in 1…5 {println (“(i)”)}
-其中…为闭区间操作符（Closed Range Operator），相当于Range(start: 1, end: 6)。</p>
-
-<h3>while循环</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>var <span class="nv">i</span> <span class="o">=</span> 0
-</span><span class='line'><span class="k">while </span>i &lt; 5 <span class="o">{</span>
-</span><span class='line'>  println<span class="o">(</span>“<span class="se">\(</span>i<span class="o">)</span>”<span class="o">)</span>
-</span><span class='line'>  i++
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>if语句</h3>
-
-<p>即使待执行的只有一行代码，也需要{}。</p>
-
-<h3>switch语句</h3>
-
-<p>Swift中，switch可以使用任何类型，不需要break语句，如果case不完备则必须有default语句。</p>
-
-<p>case可以这么写：case “up”, “down”: println(“you pressed up or down”)。case还可以这么写：case 1..&lt;10: println(“between 1 and 10, 10 not included”)。</p>
-
-<p>— EOF —</p>
 ]]></content>
   </entry>
   
