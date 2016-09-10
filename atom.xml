@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-10T18:52:12+08:00</updated>
+  <updated>2016-09-10T19:06:03+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -18,7 +18,7 @@
     <link href="http://balloonsys.github.io/blog/2016/09/10/tech-notes-17/"/>
     <updated>2016-09-10T17:44:51+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/09/10/tech-notes-17</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 的最新规则，做一款 App 前需要考虑的方方面面，以及 Surge 开发者分享的他所使用的软硬件工具等内容。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括苹果自动驾驶汽车项目的最新动向，移动客户端基于 WebP 的流量优化技术剖析，Xcode 8 新增的调试工具用法等内容。</p>
 
 <!--more-->
 
