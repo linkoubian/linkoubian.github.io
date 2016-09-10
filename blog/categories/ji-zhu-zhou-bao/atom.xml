@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-05T11:18:21+08:00</updated>
+  <updated>2016-09-10T18:52:12+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十七期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/09/10/tech-notes-17/"/>
+    <updated>2016-09-10T17:44:51+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/09/10/tech-notes-17</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 的最新规则，做一款 App 前需要考虑的方方面面，以及 Surge 开发者分享的他所使用的软硬件工具等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://tech2ipo.com/10032335">iPhone 年年焕新计划</a> By tech2ipo</h4>
+
+<p>北京时间 9 月 8 日凌晨，苹果发布了最新一代的 iPhone 7 和 7P，这次发布会带来的另一个亮点是「年年焕新」计划。本文将帮你核算参与「年年焕新计划」永远用新 iPhone 究竟要多少钱。</p>
+
+<h4>2) <a href="http://www.nytimes.com/2016/09/10/technology/apple-is-said-to-be-rethinking-strategy-on-self-driving-cars.html?_r=0">Apple Is Said to Be Rethinking Strategy on Self-Driving Cars</a> By Daisuke</h4>
+
+<p>据纽约时报的文章称，苹果自动驾驶汽车项目经历了调整，部分业务被撤销、几十名员工被解雇。今年七月开始由 Bob Mansfield 领导后，苹果改变了该项目的关注点，从对汽车设计和生产的强调转向了对自主驾驶汽车底层技术的开发。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://segmentfault.com/a/1190000006266276">iOS 客户端基于 WebP 的流量优化</a> By Curiousity</h4>
+
+<p>WebP 是一种同时提供了有损压缩与无损压缩的图片文件格式。据说淘宝客户端在两年前就使用了 WebP（主要是 Native 使用），后来 H5 全面使用，WebView的 WebP 采用插件的方式支持。</p>
+
+<h4>2) <a href="http://qiaotongxin.cc/2016/08/22/20160822/">百度外卖 APP 头像动画效果</a> By 乔同新</h4>
+
+<p>对很多人来说，叫外卖就成了习惯。某日，作者发现百度外卖的 APP 波浪效果很是吸引人，遂就思考如何实现这种『浪』的效果。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://chengwey.com/ios-10-by-tutorials-bi-ji-er/">Xcode 8 Debugging Improvements</a> By chengwey</h4>
+
+<p>Xcode 8 增加了几项功能，让我们调试起来更加得心应手。Xcode 8 提供的调试工具可以标记竞争危害（Race Conditions）、内存泄露、以及运行时的布局约束问题。</p>
+
+<h4>2) <a href="https://medium.com/ios-os-x-development/my-ios-development-toolkit-2016-ba7601b68085#.pebx7hm9c">My iOS Development Toolkit 2016</a> By Sebastian</h4>
+
+<p>作者分享了他在用的 iOS 开发工具、Web 服务、框架，以及经常浏览的技术博客等。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://tech.glowing.com/cn/tan-tan-yi-dong-ying-yong-de-an-quan-xing-shi-jian/">移动应用的安全性实践</a> By Glow</h4>
+
+<p>本文将从用户注册流程出发，逐步介绍 Glow 在提高数据安全性方面采用的一些策略方法，供读者参考。</p>
+
+<h4>2) <a href="https://medium.com/the-year-of-the-looking-glass/how-to-do-a-product-critique-98b657050638">How to do a Product Critique</a></h4>
+
+<p>这是 Facebook 产品设计总监的文章，通过对于评价产品的每个步骤的介绍，帮助产品经理更好的理解用户，提升自己的产品直觉。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十六期）]]></title>
@@ -224,66 +278,6 @@
 <h4>1) <a href="http://www.infoq.com/cn/articles/mood-and-efficiency-of-the-technical-team">技术团队的情绪与效率</a> By 申玉宝</h4>
 
 <p>压力不是来自于任务本身，而是任务在大脑中的堵塞，带来的焦虑和心理的抵触。无论你是在团队里的什么位置，这篇文章里的一些观点都是值得去了解的。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十二期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/08/06/tech-notes-12/"/>
-    <updated>2016-08-06T22:03:48+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/08/06/tech-notes-12</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括Apple收购机器学习公司、以及Apple Store营收增长等资讯，深入剖析自动释放池、Clang Attributes、POP动画引擎等。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.theverge.com/2016/8/5/12390412/apple-turi-acquisition-machine-learning">Apple buys machine learning startup Turi</a> By Jacob Kastrenakes</h4>
-
-<p>Turi的产品可以协助开发者将机器学习以及人工智能技术加入软件，可以预测用户数量变化、情绪分析、欺诈探测、分析用户使用习惯，以及更好的定位潜在用户的系统。</p>
-
-<h4>2) <a href="http://www.macrumors.com/2016/08/03/app-store-50-billion-paid-to-developers/">App Store July Sets Record as Biggest Month Ever</a> By Juli Clover</h4>
-
-<p>App Store七月营收再破纪录，开发者亦获利颇丰。库克表示，单就苹果的服务业务规模来说，明年都可以跻身财富100强。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://draveness.me/autoreleasepool/">深入解析autoreleasepool</a> By 左书祺</h4>
-
-<p>自动释放池是由AutoreleasePoolPage以双向链表的方式实现的，这篇文章会在源代码层面介绍Objective-C中自动释放池。</p>
-
-<h4>2) <a href="http://blog.sunnyxx.com/2016/05/14/clang-attributes/">Clang Attributes黑魔法小记</a> By 孙源</h4>
-
-<p>Clang Attributes是Clang提供的一种源码注解，方便开发者向编译器表达某种要求，参与控制如 Static Analyzer、Name Mangling、Code Generation等过程。</p>
-
-<h4>3) <a href="https://medium.com/@prianka.kariat/interactive-messages-in-ios-10-4cea542fbd9a">Interactive Messages in iOS 10</a> By Prianka Liz Kariat</h4>
-
-<p>本文介绍了如何使用iOS 10的Message框架开发一个tic tac toe小游戏。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://adad184.com/2015/03/11/intro-to-pop/">POP介绍与使用实践</a> By adad184</h4>
-
-<p>动画在APP开发过程中，大家多多少少都会接触到。在iOS中动画相关的部分都是基于Core Animation，但文本介绍的是来自于Facebook的动画引擎，以让你快速上手动画。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/c8152d6ce957">iOS 中 常用的第三方库</a></h4>
-
-<p>类似文章很多，这篇之所以吸引我的眼球，主要在于文中的第三方轮子使用图谱。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&amp;mid=2653057579&amp;idx=1&amp;sn=988a719765465746221f356881157a99&amp;scene=4">关于项目重构</a> By loonggg</h4>
-
-<p>读读下面这段对话，你会深有同感的。</p>
-
-<p>A: 重构80%都会失败，因为业务线的需求永远都不会停，资源有限，所以不花大代价，轻易不重构，宁可开发的慢一点，写好。</p>
-
-<p>B: 其实以业界大部分产品经理的水平99%的项目都活不到重构的那天，所以等业务量上来后再重构，会更省资源。</p>
-
-<p>最近经历了两周以『敏捷开发』为名的工厂流水线式的App开发流程，虽然及时退出，但也惹了一身骚。这样下去，该项目的代码难以再维护将是迟早的事情。</p>
 
 <p>@end</p>
 ]]></content>

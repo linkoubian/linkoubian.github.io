@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>平安好房iOS开发团队技术周报（第十七期） - Balloonsys Inc.</title>
+  <meta name="author" content="Linkou Bian">
+
+  
+  <meta name="description" content="本期周报主要包括 App Store 的最新规则，做一款 App 前需要考虑的方方面面，以及 Surge 开发者分享的他所使用的软硬件工具等内容。 资讯 1) iPhone 年年焕新计划 By tech2ipo 北京时间 9 月 8 日凌晨，苹果发布了最新一代的 iPhone 7 和 7P， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/09/10/tech-notes-17/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Balloonsys Inc.</a></h1>
+  
+    <h2>Just a blog now.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="balloonsys.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第十七期）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-09-10T17:44:51+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>5:44 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>本期周报主要包括 App Store 的最新规则，做一款 App 前需要考虑的方方面面，以及 Surge 开发者分享的他所使用的软硬件工具等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://tech2ipo.com/10032335">iPhone 年年焕新计划</a> By tech2ipo</h4>
+
+<p>北京时间 9 月 8 日凌晨，苹果发布了最新一代的 iPhone 7 和 7P，这次发布会带来的另一个亮点是「年年焕新」计划。本文将帮你核算参与「年年焕新计划」永远用新 iPhone 究竟要多少钱。</p>
+
+<h4>2) <a href="http://www.nytimes.com/2016/09/10/technology/apple-is-said-to-be-rethinking-strategy-on-self-driving-cars.html?_r=0">Apple Is Said to Be Rethinking Strategy on Self-Driving Cars</a> By Daisuke</h4>
+
+<p>据纽约时报的文章称，苹果自动驾驶汽车项目经历了调整，部分业务被撤销、几十名员工被解雇。今年七月开始由 Bob Mansfield 领导后，苹果改变了该项目的关注点，从对汽车设计和生产的强调转向了对自主驾驶汽车底层技术的开发。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://segmentfault.com/a/1190000006266276">iOS 客户端基于 WebP 的流量优化</a> By Curiousity</h4>
+
+<p>WebP 是一种同时提供了有损压缩与无损压缩的图片文件格式。据说淘宝客户端在两年前就使用了 WebP（主要是 Native 使用），后来 H5 全面使用，WebView的 WebP 采用插件的方式支持。</p>
+
+<h4>2) <a href="http://qiaotongxin.cc/2016/08/22/20160822/">百度外卖 APP 头像动画效果</a> By 乔同新</h4>
+
+<p>对很多人来说，叫外卖就成了习惯。某日，作者发现百度外卖的 APP 波浪效果很是吸引人，遂就思考如何实现这种『浪』的效果。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://chengwey.com/ios-10-by-tutorials-bi-ji-er/">Xcode 8 Debugging Improvements</a> By chengwey</h4>
+
+<p>Xcode 8 增加了几项功能，让我们调试起来更加得心应手。Xcode 8 提供的调试工具可以标记竞争危害（Race Conditions）、内存泄露、以及运行时的布局约束问题。</p>
+
+<h4>2) <a href="https://medium.com/ios-os-x-development/my-ios-development-toolkit-2016-ba7601b68085#.pebx7hm9c">My iOS Development Toolkit 2016</a> By Sebastian</h4>
+
+<p>作者分享了他在用的 iOS 开发工具、Web 服务、框架，以及经常浏览的技术博客等。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://tech.glowing.com/cn/tan-tan-yi-dong-ying-yong-de-an-quan-xing-shi-jian/">移动应用的安全性实践</a> By Glow</h4>
+
+<p>本文将从用户注册流程出发，逐步介绍 Glow 在提高数据安全性方面采用的一些策略方法，供读者参考。</p>
+
+<h4>2) <a href="https://medium.com/the-year-of-the-looking-glass/how-to-do-a-product-critique-98b657050638">How to do a Product Critique</a></h4>
+
+<p>这是 Facebook 产品设计总监的文章，通过对于评价产品的每个步骤的介绍，帮助产品经理更好的理解用户，提升自己的产品直觉。</p>
+
+<p>@end</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-09-10T17:44:51+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>5:44 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/09/03/tech-notes-16/" title="Previous Post: 平安好房iOS开发团队技术周报（第十六期）">&laquo; 平安好房iOS开发团队技术周报（第十六期）</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/09/10/tech-notes-17/">平安好房iOS开发团队技术周报（第十七期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/09/03/tech-notes-16/">平安好房iOS开发团队技术周报（第十六期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/08/27/tech-notes-15/">平安好房iOS开发团队技术周报（第十五期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/08/21/tech-notes-14/">平安好房iOS开发团队技术周报（第十四期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/08/14/tech-notes-13/">平安好房iOS开发团队技术周报（第十三期）</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Linkou Bian -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

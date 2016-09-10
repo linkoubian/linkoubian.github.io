@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-05T11:18:21+08:00</updated>
+  <updated>2016-09-10T18:52:12+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十七期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/09/10/tech-notes-17/"/>
+    <updated>2016-09-10T17:44:51+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/09/10/tech-notes-17</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 的最新规则，做一款 App 前需要考虑的方方面面，以及 Surge 开发者分享的他所使用的软硬件工具等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://tech2ipo.com/10032335">iPhone 年年焕新计划</a> By tech2ipo</h4>
+
+<p>北京时间 9 月 8 日凌晨，苹果发布了最新一代的 iPhone 7 和 7P，这次发布会带来的另一个亮点是「年年焕新」计划。本文将帮你核算参与「年年焕新计划」永远用新 iPhone 究竟要多少钱。</p>
+
+<h4>2) <a href="http://www.nytimes.com/2016/09/10/technology/apple-is-said-to-be-rethinking-strategy-on-self-driving-cars.html?_r=0">Apple Is Said to Be Rethinking Strategy on Self-Driving Cars</a> By Daisuke</h4>
+
+<p>据纽约时报的文章称，苹果自动驾驶汽车项目经历了调整，部分业务被撤销、几十名员工被解雇。今年七月开始由 Bob Mansfield 领导后，苹果改变了该项目的关注点，从对汽车设计和生产的强调转向了对自主驾驶汽车底层技术的开发。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://segmentfault.com/a/1190000006266276">iOS 客户端基于 WebP 的流量优化</a> By Curiousity</h4>
+
+<p>WebP 是一种同时提供了有损压缩与无损压缩的图片文件格式。据说淘宝客户端在两年前就使用了 WebP（主要是 Native 使用），后来 H5 全面使用，WebView的 WebP 采用插件的方式支持。</p>
+
+<h4>2) <a href="http://qiaotongxin.cc/2016/08/22/20160822/">百度外卖 APP 头像动画效果</a> By 乔同新</h4>
+
+<p>对很多人来说，叫外卖就成了习惯。某日，作者发现百度外卖的 APP 波浪效果很是吸引人，遂就思考如何实现这种『浪』的效果。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://chengwey.com/ios-10-by-tutorials-bi-ji-er/">Xcode 8 Debugging Improvements</a> By chengwey</h4>
+
+<p>Xcode 8 增加了几项功能，让我们调试起来更加得心应手。Xcode 8 提供的调试工具可以标记竞争危害（Race Conditions）、内存泄露、以及运行时的布局约束问题。</p>
+
+<h4>2) <a href="https://medium.com/ios-os-x-development/my-ios-development-toolkit-2016-ba7601b68085#.pebx7hm9c">My iOS Development Toolkit 2016</a> By Sebastian</h4>
+
+<p>作者分享了他在用的 iOS 开发工具、Web 服务、框架，以及经常浏览的技术博客等。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://tech.glowing.com/cn/tan-tan-yi-dong-ying-yong-de-an-quan-xing-shi-jian/">移动应用的安全性实践</a> By Glow</h4>
+
+<p>本文将从用户注册流程出发，逐步介绍 Glow 在提高数据安全性方面采用的一些策略方法，供读者参考。</p>
+
+<h4>2) <a href="https://medium.com/the-year-of-the-looking-glass/how-to-do-a-product-critique-98b657050638">How to do a Product Critique</a></h4>
+
+<p>这是 Facebook 产品设计总监的文章，通过对于评价产品的每个步骤的介绍，帮助产品经理更好的理解用户，提升自己的产品直觉。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十六期）]]></title>
@@ -1284,54 +1338,6 @@ rule</p></blockquote>
 <li>一年前我写过的一篇关于hitTest文章：<a href="http://balloonsys.com/blog/2014/04/08/hit-test-sample/">hitTest示例</a></li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Swift 语言基础（下）]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/09/23/basics-of-swift-part-b/"/>
-    <updated>2014-09-23T10:11:08+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/09/23/basics-of-swift-part-b</id>
-    <content type="html"><![CDATA[<p>本文主要记录Swift中关于Optional Type、集合等知识点。</p>
-
-<!--more-->
-
-
-<h2>可选类型（Optional Type）</h2>
-
-<p>处于安全的设计考量，在Swift中未初始化的String不可以println。声明时设为nil后，println也不行，因为nil不是STR。</p>
-
-<p>所以引入Optional Type，可以理解为对另一个类型的装箱（由本人引自Java的术语）。String?便是一个Optional Type，它是对String的包装。声明时不需要赋值为nil：var str: String?。此时println打印出nil。如果赋值为“Hello World”，打印Optional(“Hello World”)。</p>
-
-<h3>手动拆箱（Manual Unwrapping）</h3>
-
-<p>若需要拆箱，可以if let unwrappedStr = str {}。如果str为nil，if分支的代码块不会执行。值得注意的是，1）想要获得Optional Type所封装的那个值，必须用if语句拆箱；2）unwrappedStr的作用域为if代码块。</p>
-
-<h3>强制拆箱（Forced Unwrapping）</h3>
-
-<p>如果明确的知道Optional Type包含一个值，则可以使用强制拆箱（Forced Unwrapping）。具体写法是这样的：println(str!)。不必经过前面提到的if就可以拿到被包含的值。</p>
-
-<h3>隐式拆箱（Implicit Unwrapping）</h3>
-
-<p>强制拆包是声明Optional Type时用？，访问被包含的值时加个！。而隐式拆箱与之不同的是，声明时用！，访问被包含的值时什么都不需要加，就好像没有使用过Optional Type似的。</p>
-
-<h3>可选链（Optional Chaining）</h3>
-
-<p>声明一个Optional Type：var str: String?
-可选消息链：let upperStr = str?.uppercaseString</p>
-
-<p>1）可选链可以级联多次，这样便客观的降低if嵌逃层级 <br/>
-2）使用Optional Chaining代码更简洁</p>
-
-<h2>集合</h2>
-
-<p>1) 无论是数组还是字典，都是用[] <br/>
-注：ObjC里字典用的是{} <br/>
-2）默认情况下，数组只能放同一类型的元素，除非显示或隐式声明为[AnyObject]类型 <br/>
-3）将字典某key对应的值设为nil，即为删除 <br/>
-4）字典的value为Optional Type <br/>
-5）数组、字典，都是拷贝赋值 <br/>
-6）使用let声明的常量集合，不可以append、remove</p>
 ]]></content>
   </entry>
   
