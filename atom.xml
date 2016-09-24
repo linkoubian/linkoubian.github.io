@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-24T08:37:01+08:00</updated>
+  <updated>2016-09-24T08:40:19+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -43,7 +43,7 @@
 
 <p>作者深入分析了 React Native 程序调试相关的原理与步骤。</p>
 
-<h4>3）<a href="https://www.raywenderlich.com/126063/react-native-tutorial">React Native Tutorial: Building Apps with JavaScript</a> By Tom Elliott</h4>
+<h4>3) <a href="https://www.raywenderlich.com/126063/react-native-tutorial">React Native Tutorial: Building Apps with JavaScript</a> By Tom Elliott</h4>
 
 <p>著名的 Raywenderlich 博客发的一篇 React Native 教程，详细介绍了如何开发一个房产搜索应用。</p>
 
