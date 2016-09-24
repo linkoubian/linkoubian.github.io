@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-17T11:10:10+08:00</updated>
+  <updated>2016-09-24T08:37:01+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,10 +14,68 @@
 
   
   <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十九期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/09/24/tech-notes-19/"/>
+    <updated>2016-09-24T06:37:43+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/09/24/tech-notes-19</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 Sierra 系统的新功能介绍，React Native 开发工具的选型与配置、调试方法及原理、如何集成到现有 APP 项目中，以及腾讯的 HttpDNS 服务详解等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.ifanr.com/app/720477">Mac 最新系统 Sierra 发布</a> By 王崇旭</h4>
+
+<p>苹果发布了 Mac 最新系统 macOS Sierra 正式版，本文梳理出了最值得留意的功能。其中最吸引我的是通用剪贴板，你值得拥有！</p>
+
+<h4>2) <a href="https://www.theguardian.com/technology/2016/sep/20/apple-patent-recycled-paper-bag">Apple patents bold new innovation – a paper bag</a></h4>
+
+<p>苹果给自家的环保纸袋注册了专利，重新定义了购物袋:-)</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://github.com/huxiaoqiao/React-Native-Study/blob/master/Blog/iOS%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90React%20Native.md">iOS 现有项目集成 React Native</a> By huxiaoqiao</h4>
+
+<p>除了文中介绍的在现有工程里集成 React Native 的具体步骤，我建议在实践时可以采用 git submodule 的方式在 iOS 工程根目录下管理独立的 React Native 相关代码库。</p>
+
+<h4>2) <a href="https://medium.com/@shaheenghiassy/deep-diving-react-native-debugging-ea406ed3a691">Deep Diving React Native Debugging</a> By Shaheen Ghiassy</h4>
+
+<p>作者深入分析了 React Native 程序调试相关的原理与步骤。</p>
+
+<h4>3）<a href="https://www.raywenderlich.com/126063/react-native-tutorial">React Native Tutorial: Building Apps with JavaScript</a> By Tom Elliott</h4>
+
+<p>著名的 Raywenderlich 博客发的一篇 React Native 教程，详细介绍了如何开发一个房产搜索应用。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://inessential.com/2016/09/22/memory_graph_debugger_tips">Memory Graph Debugger Tips</a> By Brent Simmons</h4>
+
+<p>作者试用 Memory Graph Debugger 一天总结的一些经验，非常值得一读。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/8e9df5f85bca">React Native 开发 IDE 选型及配置</a> By asce1885</h4>
+
+<p>最终我选择的是 Atom + Nuclide 的方案，同时也把平常用的很多的 Sublime 做了相应的配置。安装完成后建议先摸索下调试相关的玩法。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://mp.weixin.qq.com/s?__biz=MzA3ODgyNzcwMw==&amp;mid=201837080&amp;idx=1&amp;sn=b2a152b84df1c7dbd294ea66037cf262">鹅厂网事: HttpDNS 服务详解</a> By 廖伟健</h4>
+
+<p>腾讯公司的GSLB 团队推出了一种全新的域名解析调度系统 HttpDNS 以专治LocalDNS 解析异常以及流量调度不准。</p>
+
+<h4>2) <a href="https://zi.com/w/a/b223XP">为什么应该开始使用 React Native 了</a> By 周楷雯</h4>
+
+<p>我并不建议你直接用 React Native 重写你的 App，像 Swift 一样，你可以先用 React Native 来实现一部分页面，让那些体力活的 UI 构建变的越快而充满乐趣。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十八期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/09/17/tech-notes-17/"/>
+    <link href="http://balloonsys.github.io/blog/2016/09/17/tech-notes-18/"/>
     <updated>2016-09-17T09:56:15+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/09/17/tech-notes-17</id>
+    <id>http://balloonsys.github.io/blog/2016/09/17/tech-notes-18</id>
     <content type="html"><![CDATA[<p>本期周报主要包括 iOS 10 隐藏特性、设计趋势、正式版发布以来的一些数据，App 和 Extension 之间如何共享数据与功能，Xcode 8 适配经验分享，UI Testing 等内容。</p>
 
 <!--more-->
@@ -27,7 +85,7 @@
 
 <h4>1) <a href="https://blog.mixpanel.com/2016/09/08/apple-ios-10-data/">iOS 10 Adoption Rate Nears 20% In Just Two Days</a> By mixpanel</h4>
 
-<p>Mixpanel 的 1830 亿条数据显示，iOS 10 正式发布首日有 14.81 的设备已升级至最新版，两天内达到 21.02% 的比率。另外，美国移动运营商 T-Mobile CEO 称前四天 iPhone 7 预订量已达到 iPhone 6 同期的 4 倍。</p>
+<p>Mixpanel 的 1830 亿条数据显示，iOS 10 正式发布首日有 14.81% 的设备已升级至最新版，两天内达到 21.02% 的比率。另外，美国移动运营商 T-Mobile CEO 称前四天 iPhone 7 预订量已达到 iPhone 6 同期的 4 倍。</p>
 
 <h4>2) <a href="https://www.cnet.com/how-to/ios-10-hidden-features/">23 hidden features in iOS 10</a> By Jason Cipriani</h4>
 
@@ -53,7 +111,7 @@
 
 <p>本周把玩去年增加的 UI Testing 相关的功能时，发现当时 WWDC 视频里做的代码录制在 Xcode 7 最新版以及 Xcode 8 里有些压根就不 work 啊。另外感觉 UI Testing 并没有那么 exciting ！</p>
 
-<h4>2) 如何禁止 Xcode 8 模拟器疯狂输出系统日志</h4>
+<h4>2) 如何禁止 Xcode 8 模拟器疯狂输出系统日志 By Russell Ivanovic</h4>
 
 <p>增加环境变量 OS_ACTIVITY_MODE = disable 即可。</p>
 
@@ -230,64 +288,6 @@
 <h4>2) <a href="https://github.com/wg689/Solve-App-Store-Review-Problem">Solve App Store Review Problem</a></h4>
 
 <p>罗列了不少审核被拒及应对办法，作者的认真劲儿赞一个！</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十四期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/08/21/tech-notes-14/"/>
-    <updated>2016-08-21T09:20:09+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/08/21/tech-notes-14</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括库克任苹果 CEO 五周年专访、iOS 10 Day by Day 系列文章、JSON Web Token 的 Objective-C 库等诸多干货资源。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.reuters.com/article/us-apple-china-idUSKCN10R14G">Apple to boost China investments as demand slows</a> By Paul Carsten</h4>
-
-<p>Cook 拜会中国国务院副总理张高丽时宣布苹果将在中国设立研发中心，整合中国的工程及经营团队，显示苹果藉由加码中国市场，试图扭转中国市场的困境。</p>
-
-<h4>2) <a href="http://www.geekpark.net/topics/216414">库克任苹果 CEO 五周年专访</a> By Techsina</h4>
-
-<p>文中包含很多关于价值观、企业国际税等话题。大部分资讯看标题就够了，但强烈建议细细的品读下该专访的全文。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://www.shinobicontrols.com/blog/ios-10-day-by-day-index">iOS 10 Day by Day</a> By Sam Burnstone</h4>
-
-<p>自 iOS 7 Day by Day 始，就关注 shinobicontrols 上推出的该系列文章。每周一到两篇，对跟进 iOS 10 新特性的开发技术非常有益。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/f8224779ca63">App 定位和地图的那些坑</a> By hrchen</h4>
-
-<p>开发App时会遇到各种坑，本文分享在iOS/Android系统中定位和地图中遇到的坑，以及携程 App 的解决方案。</p>
-
-<h4>3) <a href="http://itony.me/129.html">iOS 如何放大按钮点击热区</a> By Tony</h4>
-
-<p>我们有时做自定义Button的时候，设计图上的给出按钮尺寸明显偏小，需要放大按钮的点击热区。本文分享的是来自 WWDC 2012 Session 216 的方案。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://www.decosoftware.com">Deco IDE</a> By decosoftware</h4>
-
-<p>Deco 区别于其他 IDE 最显著的特性是支持常用控件的拖拽生成代码和可视化编辑，这些控件既有 React Native 原生控件，也有一些知名的开源控件。</p>
-
-<h4>2) <a href="https://github.com/yourkarma/JWT">A JSON Web Token implementation in Objective-C</a> By Karma</h4>
-
-<p>JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties. 在 Objective-C 里如何实现 JWT 可使用 Karma 提供的轮子。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/fad64911a1f6">主流APP图片选择功能对比</a> By 蓝桥</h4>
-
-<p>针对新浪微博、微信、QQ空间等应用的图片处理方式，从拍照、选择图片、完成选择这三个方面归纳移动应用的图片选择上传的最佳产品体验。</p>
-
-<h4>2) <a href="https://www.codementor.io/react-js/tutorial/react-native-vs-ionic">React Native vs Ionic</a> By Frédéric Massart</h4>
-
-<p>近日看到某司某所谓的 Android 架构师在技术选型时写的 RN 与 Weex 对比文章，且不说候选对象用 Weex 而不是诸如 Ionic 等，其文中对 RN 的多处表述也是滑稽的很。从本周开始，在 RN 及 Ionic 上花些时间。</p>
 
 <p>@end</p>
 ]]></content>
