@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reactnative | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-30T11:05:05+08:00</updated>
+  <updated>2016-09-30T11:12:56+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -94,7 +94,7 @@ import { View } from 'react-native';
       &lt;/View&gt;
 </code></pre>
 
-<p>外层的 View 的 style 属性设置为 {backgroundColor: this.props.backgroundColor, height: this.props.height, paddingLeft: this.props.paddingLeft, paddingRight: this.props.paddingRight} 。内层的 View 的 style 属性设置为 {flex: 1, backgroundColor: this.props.lineColor} 即可。</p>
+<p>外层的 View 的 style 属性设置为 <code>{backgroundColor: this.props.backgroundColor, height: this.props.height, paddingLeft: this.props.paddingLeft, paddingRight: this.props.paddingRight}</code>。内层的 View 的 style 属性设置为 <code>{flex: 1, backgroundColor: this.props.lineColor}</code> 即可。</p>
 
 <blockquote><p>之所以没有直接把 style 在上面的代码里填上，是因为我不知道如何在 MD 文件里插入 JSX 语法的代码段</p></blockquote>
 
