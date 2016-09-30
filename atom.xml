@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-30T10:58:20+08:00</updated>
+  <updated>2016-09-30T11:05:05+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -126,13 +126,13 @@
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'>  <span class="nt">&lt;View</span> <span class="na">style=</span> <span class="err">&gt;</span>
-</span><span class='line'>    <span class="s">&lt;View</span> <span class="na">style=</span> <span class="s">/</span><span class="nt">&gt;</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'>  <span class="nt">&lt;View</span> <span class="na">style=</span><span class="s">{}</span> <span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;View</span> <span class="na">style=</span><span class="s">{}</span> <span class="nt">/&gt;</span>
 </span><span class='line'>  <span class="nt">&lt;/View&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>外层的 View 的 style 属性设置为  。内层的 View 的 style 属性设置为  即可。</p>
+<p>外层的 View 的 style 属性设置为 {backgroundColor: this.props.backgroundColor, height: this.props.height, paddingLeft: this.props.paddingLeft, paddingRight: this.props.paddingRight} 。内层的 View 的 style 属性设置为 {flex: 1, backgroundColor: this.props.lineColor} 即可。</p>
 
 <blockquote><p>之所以没有直接把 style 在上面的代码里填上，是因为我不知道如何在 MD 文件里插入 JSX 语法的代码段</p></blockquote>
 
