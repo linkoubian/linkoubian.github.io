@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第三期） - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第二十期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括iOS 10的一些资讯，以及iOS一些常见问题的设计方案等。 资讯 1) 开发者所需要知道的iOS 10 SDK新特性 从应用开发者的角度看，iOS 10中并没有加入太多内容。 2) 关于iOS 10中ATS的问题 从2017年1月1日起， &hellip;">
+  <meta name="description" content="本期周报主要包括 Sierra 系统的新功能介绍，React Native 开发工具的选型与配置、调试方法及原理、如何集成到现有 APP 项目中，以及腾讯的 HttpDNS 服务详解等内容。 资讯 1) Apple Starts Selling App Store Search Ads By &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/06/18/tech-notes-3/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/09/30/tech-notes-20/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -68,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第三期）</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第二十期）</h1>
     
     
       <p class="meta">
@@ -77,59 +77,53 @@
 
 
 
-<time class='entry-date' datetime='2016-06-18T10:50:14+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:50 am</span></time>
+<time class='entry-date' datetime='2016-09-30T11:20:12+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>11:20 am</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括iOS 10的一些资讯，以及iOS一些常见问题的设计方案等。</p>
+<div class="entry-content"><p>本期周报主要包括 Sierra 系统的新功能介绍，React Native 开发工具的选型与配置、调试方法及原理、如何集成到现有 APP 项目中，以及腾讯的 HttpDNS 服务详解等内容。</p>
 
 <!--more-->
 
 
 <h2>资讯</h2>
 
-<h4>1) <a href="https://onevcat.com/2016/06/ios-10-sdk/">开发者所需要知道的iOS 10 SDK新特性</a></h4>
+<h4>1) <a href="https://www.macstories.net/news/apple-starts-selling-app-store-search-ads-launching-october-5th/">Apple Starts Selling App Store Search Ads</a> By John Voorhees</h4>
 
-<p>从应用开发者的角度看，iOS 10中并没有加入太多内容。</p>
+<p>App Store 搜索广告功能将于 10 月 5 日正式退出。关于广告计费方式，苹果表示将采用 CPC 的计算形式，开发者只需要在用户点击广告才需要付费，具体支付金额由关键词竞拍结果决定。</p>
 
-<h4>2) <a href="https://onevcat.com/2016/06/ios-10-ats/">关于iOS 10中ATS的问题</a></h4>
+<h4>2) [iPhone 可以直接用 Siri 打车]</h4>
 
-<p>从2017年1月1日起，所有的新提交app默认是不允许使用NSAllowsArbitraryLoads来绕过ATS限制的。</p>
+<p>苹果开放接口以后，Siri 有用多了。比如在 iOS 10 里，你可以通过 Siri 直接语音叫车，滴滴和优步都支持。</p>
 
 <h2>开发</h2>
 
-<h4>1) <a href="http://www.jianshu.com/p/0497afdad36d#">可复用而且高度解耦的用户统计埋点实现</a></h4>
+<h4>1) <a href="http://balloonsys.com/blog/2016/09/30/create-your-first-reusable-react-native-component/">创建一个 React Native 分隔线组件</a> By 卞林扣</h4>
 
-<p>该埋点方案和我上个月做的统计SDK思路比较一致。不同的在于用户点击事件，文中的做法是拦截UIControl的方法，而我倾向于由APP自行埋点。主要原因在于，被hook的范围较广，同时我们点击事件埋点时，有酌情传入参数的额外需求。</p>
+<p>在移动端表单页面里有不少分隔线绘制需求，构造一个组件以在不同页面复用是个很自然的做法。本文选取最最简单的分隔线介绍 React Native 实践过程中的代码编写思路。</p>
 
-<h4>2) <a href="https://segmentfault.com/a/1190000005744865">iOS释放自注销模式设计</a></h4>
+<h4>2) <a href="http://blog.lessfun.com/blog/2015/04/01/uitableview-performence-improve/">UITableView 性能优化</a></h4>
 
-<p>作者描述的问题的确是我们开发中的痛点，只不过我对这篇文章理解的还不够，毕竟工程师的层次也是有差异的:P</p>
+<p>UITableView 是 iOS 开发中最常用也很实用并且最容易出现性能问题的的一个控件，本文列出了一些性能优化点，用于提高列表滚动的流畅性。</p>
 
 <h2>工具</h2>
 
-<h4>1) <a href="https://medium.com/swift-and-ios-writing/a-quick-look-at-uiviewpropertyanimator-a107fb9da5b5">iOS 10 UIKit Animations</a></h4>
+<h4>1) <a href="http://nelson.logdown.com/posts/2015/04/29/how-to-properly-setup-afnetworking-security-connection/">如何正确设定 AFN 的安全连接</a> By Nelson Tai</h4>
 
-<p>我倒是对文章作者的开源库<a href="https://github.com/marmelroy/Interpolate">Interpolate</a>更感兴趣，哈哈！</p>
+<p>大部分 iOS 应用都是采用 AFNetwork 作为网络层的框架的，本文详细介绍了设置 SSL 的步骤。</p>
 
-<h4>2) <a href="https://luckymarmot.com/zh-hans/paw">Mac最先进的HTTP客户端</a></h4>
+<h4>2) <a href="http://joeyio.com/2016/08/21/WWDC2016-401-Whats-new-in-Xcode-App-Signing/">What&rsquo;s New in Xcode App Signing</a></h4>
 
-<p>做iOS开发，联调API是件很麻烦的事情，特别是当提供API的是个开发新手。联调阶段我通常选用Paw而不是Postman。</p>
+<p>Xcode 团队在 Xcode 8 中移除了 fix issue 之后还需要 fix issue 但是可能还是不能 fix issue 的 Fix Issue 按钮，并完全重新设计了 code signing 的交互，流程和架构。</p>
 
 <h2>其他</h2>
 
-<h4>1) <a href="https://developer.apple.com/support/beta-software/install-ios-beta/">iOS beta Software Installation Guide</a></h4>
+<h4>1) <a href="http://www.jianshu.com/p/033a6b596155">技术 Leader 的多维度能力及成长路径</a></h4>
 
-<p>本周已采用Configuration Profile的方式安装了iOS 10的beta版，比Restore Image的方案更简便。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/080d109a9984">每个IT人都应该了解的工作观和商业思维</a></h4>
-
-<p>文中整理了来自37signals的两位联合创始人Rework一书的要点，个人特别喜欢这条：</p>
-
-<blockquote><p>工作狂使得真正高效且不崇尚加班的员工感到无所适从，心怀愧疚，士气低落而且跟风加班，根本就不管到底有没有生产力。</p></blockquote>
+<p>如何成功转型? 我不想丢掉技术，如何在不丢掉技术的同时还能提升管理能力！本文是作者在这个过程中经历困惑和挣扎后的一些想法。</p>
 
 <p>@end</p>
 </div>
@@ -147,7 +141,7 @@
 
 
 
-<time class='entry-date' datetime='2016-06-18T10:50:14+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:50 am</span></time>
+<time class='entry-date' datetime='2016-09-30T11:20:12+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>11:20 am</span></time>
       
 
 <span class="categories">
@@ -168,10 +162,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/06/15/tech-notes-2/" title="Previous Post: 平安好房iOS开发团队技术周报（第二期）">&laquo; 平安好房iOS开发团队技术周报（第二期）</a>
+        <a class="basic-alignment left" href="/blog/2016/09/30/create-your-first-reusable-react-native-component/" title="Previous Post: 创建一个 React Native 分隔线组件">&laquo; 创建一个 React Native 分隔线组件</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/06/21/tech-notes-4/" title="Next Post: 平安好房iOS开发团队技术周报（第四期）">平安好房iOS开发团队技术周报（第四期） &raquo;</a>
       
     </p>
   </footer>
