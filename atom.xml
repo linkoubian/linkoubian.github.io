@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-24T08:40:19+08:00</updated>
+  <updated>2016-09-30T10:44:13+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,131 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[创建一个 React Native 分隔线组件]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/09/30/create-your-first-reusable-react-native-component/"/>
+    <updated>2016-09-30T10:24:06+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/09/30/create-your-first-reusable-react-native-component</id>
+    <content type="html"><![CDATA[<p>在移动端表单页面里有不少分隔线绘制需求，构造一个组件以在不同页面复用是个很自然的做法。</p>
+
+<!--more-->
+
+
+<h2>目标</h2>
+
+<p>期望在各页面导入 require 该组件后，直接使用如下的方式绘制分隔线：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&lt;</span><span class="nx">Line</span> <span class="nx">height</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span> <span class="nx">paddingLeft</span><span class="o">=</span><span class="p">{</span><span class="mi">10</span><span class="p">}</span> <span class="nx">paddingRight</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">}</span> <span class="nx">backgroundColor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span> <span class="o">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>当然也为上述四个属性提供默认值，如果默认值符合需求，则只需：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&lt;</span><span class="nx">Line</span> <span class="o">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>所需技术</h2>
+
+<h3>创建类</h3>
+
+<p>我采用的是 ES 5 的语法创建类的，代码如下：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">let</span> <span class="nx">Line</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">(</span>
+</span><span class='line'>    <span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">Line</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>其中 render 方法类似于 Native 开发中视图的绘制方法。我们稍后在其 return 中加上构建与 React Native 基础组件之上的 XML 代码。</p>
+
+<h3>添加属性</h3>
+
+<p>构建该分隔线组件给客户程序使用，需要让别人知道支持哪些属性，比如线的高度、左右缩进、背景色及线的颜色等。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">propTypes</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">height</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">number</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">paddingLeft</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">number</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">paddingRight</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">number</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">backgroundColor</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">string</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">lineColor</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">string</span><span class="p">,</span>
+</span><span class='line'>  <span class="p">},</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>为了用起来方便，我们还可以给这些属性提供默认值：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">getDefaultProps</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">height</span><span class="o">:</span> <span class="mf">0.5</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">paddingLeft</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">paddingRight</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">backgroundColor</span><span class="o">:</span> <span class="s1">&#39;#FFFFFF&#39;</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">lineColor</span><span class="o">:</span> <span class="s1">&#39;#D3D3D3&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">},</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>绘制控件</h3>
+
+<p>具体的绘制代码在 render 方法中完成。如前面所述，我们将用到 React Native 提供的基础组件，所以我们需要在代码顶部导入。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">View</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-native&#39;</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>此时我们就可以在 render 方法的 return 语句中加上下面代码已完成分隔线的绘制了：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="o">&lt;</span><span class="nx">View</span> <span class="nx">style</span><span class="o">=</span><span class="p"></span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">View</span> <span class="nx">style</span><span class="o">=</span><span class="p"></span> <span class="o">/&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="err">/View&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>总结</h2>
+
+<p>本文选取最最简单的分隔线介绍 React Native 实践过程中的代码编写思路，完成的其他控件有表单填写进度（<Stepper currentStep={1}/>）、表单填写及选择行的封装等。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十九期）]]></title>
@@ -43,7 +168,7 @@
 
 <p>作者深入分析了 React Native 程序调试相关的原理与步骤。</p>
 
-<h4>3) <a href="https://www.raywenderlich.com/126063/react-native-tutorial">React Native Tutorial: Building Apps with JavaScript</a> By Tom Elliott</h4>
+<h1>3) <a href="https://www.raywenderlich.com/126063/react-native-tutorial">React Native Tutorial: Building Apps with JavaScript</a> By Tom Elliott</h1>
 
 <p>著名的 Raywenderlich 博客发的一篇 React Native 教程，详细介绍了如何开发一个房产搜索应用。</p>
 
@@ -1123,84 +1248,6 @@ that need to be addressed like testing or business analysis; there are no except
 rule</p></blockquote>
 
 <p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[这些年读过的iOS开发类图书]]></title>
-    <link href="http://balloonsys.github.io/blog/2015/08/02/books-for-ios-programming/"/>
-    <updated>2015-08-02T22:18:45+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2015/08/02/books-for-ios-programming</id>
-    <content type="html"><![CDATA[<p>本文记录一下自2009年夏天接触iOS开发以来读过的书，仅是当时读完后不觉得后悔的那部分。</p>
-
-<!--more-->
-
-
-<h2>2015年（iOS 9 announced on June 8）</h2>
-
-<h3><a href="http://book.douban.com/subject/26279783/">Programming iOS 8</a></h3>
-
-<p>第二次在Amazon.com海淘技术书籍，一个月都没收到货，联系Amazon.com后他们用DHL重新发货，一周内收到。拿到书吓了一跳，太厚了！！！</p>
-
-<p>作者是个博士，写的东西比较深入。该书还有一本姊妹篇，叫<a href="http://book.douban.com/subject/25929842/">iOS 8 Programming Fundamentals with Swift</a>。上半年我在Mac上挑着看的，已读完Chapter 2、3、4、5、10、11、12、13，对掌握Swift大有裨益。</p>
-
-<p><img src="http://img4.douban.com/lpic/s28069906.jpg" alt="Programming iOS 8" /></p>
-
-<h2>2014年（iOS 8 announced on June 2）</h2>
-
-<h3><a href="http://book.douban.com/subject/26287812/">iOS Programming 4th Edition</a></h3>
-
-<p>这是国外一个比较好的培训机构（BNR）出品的书，质量上乘。入门时若是借助此书，或许基本功可以更扎实些。他们家有一本<a href="http://book.douban.com/subject/19962787/">Objective-C编程</a>，是学习Objective-C的优秀教程，我是在手机上断断续续看完的。</p>
-
-<p>离开前司，英文原版虽未看完，但也不得不归还。后来买了中译本，逐篇读完。其中第24章讲的程序状态恢复，是我之前不曾了解的内容。此书一直拖到2015年年中才读完，略微汗颜。</p>
-
-<p><img src="http://img3.douban.com/lpic/s27970290.jpg" alt="iOS Programming 4th Edition" /></p>
-
-<h2>2013年（iOS 7 announced on June 10）</h2>
-
-<h3><a href="http://book.douban.com/subject/12890783/">iOS 6 Programming Pushing the Limits</a></h3>
-
-<p>在Amazon.cn上买的原版书，该书干货多多，读起来偶尔会有点吃力，但多花点时间非常值得。关于缓存的设计，我直接用在了给绿城物业做的APP中。</p>
-
-<p><img src="http://img3.douban.com/lpic/s24216653.jpg" alt="iOS 6 Programming Pushing the Limits" /></p>
-
-<h2>2012年（iOS 6 announced on June 11）</h2>
-
-<h3><a href="http://book.douban.com/subject/10750982/">iOS 5 By Tutorials</a></h3>
-
-<p>第一次在Amazon.com海淘英文技术书籍。上下两卷，内容丰富，案例详实。但作者众多，个别章节写得不够好，然并不妨碍此书在我心中的地位。其中ARC、Storyboard、UIKit Customization等章节深入仔细的研读过。</p>
-
-<p><img src="http://img3.douban.com/lpic/s9117190.jpg" alt="iOS 5 By Tutorials" /></p>
-
-<h2>2011年（iOS 5 previewed on June 6）</h2>
-
-<h3><a href="http://book.douban.com/subject/6697217/">iOS 4 in Action</a></h3>
-
-<p>这一年的十月份在加州出差，期间在Amazon.com买了这本书（另外还买了本关于Cocos-2d的）。书么，中规中矩，不算差。第一次读英文原版的iOS教程，知识点并没记住太多。</p>
-
-<p><img src="http://img3.douban.com/lpic/s6752591.jpg" alt="iOS 4 in Action" /></p>
-
-<h2>2010年（iOS 4 available on June 21）</h2>
-
-<h3><a href="http://book.douban.com/subject/4886880/">iPhone for Programmers: An App-Driven Approach</a></h3>
-
-<p>这本书中文名叫iPhone应用程序开发名家解析，里面包含了好几个完整的小例子（基于3.x SDK）。这一年，我以某些例子为基础开发了若干自己的APP并发布到App Store（排名还不错哦）。</p>
-
-<p><img src="http://img3.douban.com/lpic/s4529615.jpg" alt="iPhone for Programmers: An App-Driven Approach" /></p>
-
-<h2>2009年（iPhone OS 3.0 available on June 17）</h2>
-
-<h3><a href="http://book.douban.com/subject/3604295/">iPhone开发基础教程</a></h3>
-
-<p>拿到本科学位证书没两个月，买了此书。2009年夏天那会儿，iOS中文资料并不多（下半年此书更新到3.0 SDK）。</p>
-
-<p>作者讲解颇为细致，即使没有Objective-C的基础知识，照着书中的代码练练，很快就上手了。</p>
-
-<p><img src="http://img4.douban.com/lpic/s3664046.jpg" alt="iPhone开发基础教程" /></p>
-
-<h2>后记</h2>
-
-<p>回头等定做的书架到了，把这些书顺序排列。每当瞥过书脊，应有一种好的回味。</p>
 ]]></content>
   </entry>
   
