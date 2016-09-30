@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-30T11:12:56+08:00</updated>
+  <updated>2016-09-30T11:15:23+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -132,7 +132,19 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>外层的 View 的 style 属性设置为 <code>{backgroundColor: this.props.backgroundColor, height: this.props.height, paddingLeft: this.props.paddingLeft, paddingRight: this.props.paddingRight}</code>。内层的 View 的 style 属性设置为 <code>{flex: 1, backgroundColor: this.props.lineColor}</code> 即可。</p>
+<p>外层的 View 的 style 属性设置为：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span><span class="nx">backgroundColor</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="p">,</span> <span class="nx">height</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">height</span><span class="p">,</span> <span class="nx">paddingLeft</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">paddingLeft</span><span class="p">,</span> <span class="nx">paddingRight</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">paddingRight</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>内层的 View 的 style 属性设置为：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="p">{</span><span class="nx">flex</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">backgroundColor</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">lineColor</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <blockquote><p>之所以没有直接把 style 在上面的代码里填上，是因为我不知道如何在 MD 文件里插入 JSX 语法的代码段</p></blockquote>
 
