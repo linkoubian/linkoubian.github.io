@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-30T10:54:16+08:00</updated>
+  <updated>2016-09-30T10:58:20+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -121,16 +121,20 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>此时我们就可以在 render 方法的 return 语句中加上下面代码已完成分隔线的绘制了：</p>
+<p>此时我们就可以在 render 方法的 return 语句中加上下面代码以完成分隔线的绘制了：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='actionscript'><span class='line'>  <span class="o">&lt;</span><span class="nx">View</span> <span class="nx">style</span><span class="o">=</span><span class="p"></span><span class="o">&gt;</span>
-</span><span class='line'>    <span class="o">&lt;</span><span class="nx">View</span> <span class="nx">style</span><span class="o">=</span><span class="p"></span> <span class="o">/&gt;</span>
-</span><span class='line'>  <span class="o">&lt;/</span><span class="nx">View</span><span class="o">&gt;</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'>  <span class="nt">&lt;View</span> <span class="na">style=</span> <span class="err">&gt;</span>
+</span><span class='line'>    <span class="s">&lt;View</span> <span class="na">style=</span> <span class="s">/</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/View&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>外层的 View 的 style 属性设置为  。内层的 View 的 style 属性设置为  即可。</p>
+
+<blockquote><p>之所以没有直接把 style 在上面的代码里填上，是因为我不知道如何在 MD 文件里插入 JSX 语法的代码段</p></blockquote>
 
 <h2>总结</h2>
 

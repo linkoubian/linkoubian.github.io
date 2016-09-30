@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reactnative | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-30T10:54:16+08:00</updated>
+  <updated>2016-09-30T10:58:20+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -87,12 +87,16 @@ module.exports = Line;
 import { View } from 'react-native';
 </code></pre>
 
-<p>此时我们就可以在 render 方法的 return 语句中加上下面代码已完成分隔线的绘制了：</p>
+<p>此时我们就可以在 render 方法的 return 语句中加上下面代码以完成分隔线的绘制了：</p>
 
-<pre><code class="actionscript">      &lt;View style=&gt;
+<pre><code class="xml">      &lt;View style= &gt;
         &lt;View style= /&gt;
       &lt;/View&gt;
 </code></pre>
+
+<p>外层的 View 的 style 属性设置为  。内层的 View 的 style 属性设置为  即可。</p>
+
+<blockquote><p>之所以没有直接把 style 在上面的代码里填上，是因为我不知道如何在 MD 文件里插入 JSX 语法的代码段</p></blockquote>
 
 <h2>总结</h2>
 
