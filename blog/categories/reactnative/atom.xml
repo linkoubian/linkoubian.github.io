@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reactnative | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-30T10:44:13+08:00</updated>
+  <updated>2016-09-30T10:45:39+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -89,7 +89,7 @@ import { View } from 'react-native';
 
 <p>此时我们就可以在 render 方法的 return 语句中加上下面代码已完成分隔线的绘制了：</p>
 
-<pre><code class="js">      &lt;View style=&gt;
+<pre><code class="xml">      &lt;View style=&gt;
         &lt;View style= /&gt;
       &lt;/View&gt;
 </code></pre>
