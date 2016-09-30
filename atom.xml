@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-30T11:45:42+08:00</updated>
+  <updated>2016-09-30T11:48:42+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -18,7 +18,7 @@
     <link href="http://balloonsys.github.io/blog/2016/09/30/tech-notes-20/"/>
     <updated>2016-09-30T11:20:12+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/09/30/tech-notes-20</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 Sierra 系统的新功能介绍，React Native 开发工具的选型与配置、调试方法及原理、如何集成到现有 APP 项目中，以及腾讯的 HttpDNS 服务详解等内容。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括如何创建一个 React Native 分隔线组件、UITableView 性能优化、如何设置AFNetwork 以支持 SSL，以及Xcode 8 代码签名等内容。</p>
 
 <!--more-->
 
@@ -29,7 +29,7 @@
 
 <p>App Store 搜索广告功能将于 10 月 5 日正式退出。关于广告计费方式，苹果表示将采用 CPC 的计算形式，开发者只需要在用户点击广告才需要付费，具体支付金额由关键词竞拍结果决定。</p>
 
-<h4>2) [iPhone 可以直接用 Siri 打车]</h4>
+<h4>2) iPhone 可以直接用 Siri 打车</h4>
 
 <p>苹果开放接口以后，Siri 有用多了。比如在 iOS 10 里，你可以通过 Siri 直接语音叫车，滴滴和优步都支持。</p>
 
