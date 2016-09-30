@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reactnative | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-09-30T10:45:39+08:00</updated>
+  <updated>2016-09-30T10:49:14+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -96,7 +96,7 @@ import { View } from 'react-native';
 
 <h2>总结</h2>
 
-<p>本文选取最最简单的分隔线介绍 React Native 实践过程中的代码编写思路，完成的其他控件有表单填写进度（<Stepper currentStep={1}/>）、表单填写及选择行的封装等。</p>
+<p>本文选取最最简单的分隔线介绍 React Native 实践过程中的代码编写思路，完成的其他控件有表单填写进度等。</p>
 ]]></content>
   </entry>
   
