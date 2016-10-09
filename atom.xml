@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-09T08:50:01+08:00</updated>
+  <updated>2016-10-09T09:00:51+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -18,7 +18,7 @@
     <link href="http://balloonsys.github.io/blog/2016/10/09/tech-notes-21/"/>
     <updated>2016-10-09T08:46:41+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/10/09/tech-notes-21</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括&hellip;等内容。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括苹果云服务团队调整资讯、Swift 3 代码迁移经验小结、Xcode Asset Catalog 各种有用的特性、对 React Native 软件许可证解读等内容。</p>
 
 <!--more-->
 
