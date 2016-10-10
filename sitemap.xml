@@ -167,6 +167,9 @@
 <loc>http://balloonsys.github.io/</loc>
 </url>
 <url>
+<loc>http://balloonsys.github.io/about/</loc>
+</url>
+<url>
 <loc>http://balloonsys.github.io/apps/</loc>
 </url>
 <url>
@@ -234,14 +237,5 @@
 </url>
 <url>
 <loc>http://balloonsys.github.io/blog/categories/reactnative/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/2/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/3/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/4/</loc>
 </url>
 </urlset>
