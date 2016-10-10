@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-10T23:30:55+08:00</updated>
+  <updated>2016-10-10T23:46:36+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十一期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/10/09/tech-notes-21/"/>
+    <updated>2016-10-09T08:46:41+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/10/09/tech-notes-21</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括苹果云服务团队调整资讯、Swift 3 代码迁移经验小结、Xcode Asset Catalog 各种有用的特性、对 React Native 软件许可证解读等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://www.bloomberg.com/news/articles/2016-10-06/apple-is-said-to-plan-improved-cloud-services-by-unifying-teams">Apple Said to Plan Improved Cloud Services by Unifying Teams</a> By Bloomberg</h4>
+
+<p>据 Bloomberg 的消息称，苹果打算将 Siri、Maps、iCould、Apple Pay、Apple News、Apple Music 以及部分 iTunes 业务的云服务团队统一起来，统一后的云服务将运行在一个新的代号为 Pie 的后端。</p>
+
+<h4>2) <a href="https://blog.kapeli.com/apple-removed-dash-from-the-app-store#what-happened">Apple Has Removed Dash from the App Store</a> By Bogdan Popescu</h4>
+
+<p>非常受欢迎的 API 文档浏览器 Dash 的作者在迁移开发者账号至企业账号过程中，突然遭遇应用被下架的厄运。经沟通后得知，苹果认为该应用的评论有操控之嫌，作者很受伤。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://tech.glowing.com/cn/swift3/">Swift 3 代码迁移</a> By Glow</h4>
+
+<p>Swift 1 确立了语言的基线：安全、快速、现代。Swift 2 展现了 Swift 应该是什么，未来怎么走：面向协议的编程、开源。而 Swift 3 更多是清扫和规范。</p>
+
+<h4>2) <a href="http://blog.lessfun.com/blog/2016/09/21/ios-10-replaykit-live-and-broadcast-extension/">iOS 10 ReplayKit Live</a> By lessfun</h4>
+
+<p>在 iOS 8 及以前，第三方 App 如果想要全局录屏，只能使用私有 API。升级到 iOS 9 后，官方新增了 ReplayKit，并且禁用了录屏的私有 API。iOS 10 在 ReplayKit 保存录屏视频的基础上，增加了视频流实时直播功能。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://yulingtianxia.com/blog/2016/09/28/Let-s-Talk-About-project-pbxproj/">Let&rsquo;s Talk About project.pbxproj</a> By 杨萧玉</h4>
+
+<p>project.pbxproj 文件被包含于 Xcode 工程文件 *.xcodeproj 之中，存储着 Xcode 工程的各项配置参数。本文谈了下 project.pbxproj 的知识，并总结了一些操作工程文件的优秀轮子。</p>
+
+<h4>2) <a href="http://krakendev.io/blog/4-xcode-asset-catalog-secrets-you-need-to-know">Four Secrets about Xcode Asset Catalog</a> By Hector Matos</h4>
+
+<p>之前做项目瘦身方案时，有做过图片资源迁移至 Asset Catalog 的工作。这篇文章包含 Xcode Asset Catalog 的四项重要特性。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://arielelkin.github.io/articles/why-im-not-a-react-native-developer">Why I&rsquo;m not a React Native Developer</a> By Ariel Elkin</h4>
+
+<p>关于 RN 许可协议的解读是我获得的最大收获:</p>
+
+<blockquote><p>if I initiate any lawsuit alleging patent infringement against Facebook, my license to use React Native would be immediately terminated.</p></blockquote>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十期）]]></title>
@@ -230,64 +282,6 @@
 <h4>2) <a href="https://medium.com/the-year-of-the-looking-glass/how-to-do-a-product-critique-98b657050638">How to do a Product Critique</a> By Julie Zhuo</h4>
 
 <p>这是 Facebook 产品设计总监的文章，通过对于评价产品的每个步骤的介绍，帮助产品经理更好的理解用户，提升自己的产品直觉。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十六期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/09/03/tech-notes-16/"/>
-    <updated>2016-09-03T10:08:14+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/09/03/tech-notes-16</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 的最新规则，做一款 App 前需要考虑的方方面面，以及 Surge 开发者分享的他所使用的软硬件工具等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://tech2ipo.com/10032212">苹果对 App Store 进行大清理</a> By tech2ipo</h4>
-
-<p>9月2日凌晨，收到 Apple 的邮件说将下架不能与 iPhone 和 iPad 兼容及不能正常运行的应用，或者没有遵循更新后 App Store 指南的应用。另外，苹果还指出，应用名称长度不得超过 50 个字符。</p>
-
-<h4>2) <a href="http://www.arinchina.com/news/show-4227.html">苹果新获 59 项专利</a> By Trista</h4>
-
-<p>美国专利商标局正式公布了苹果公司新获批的 59 项专利，包括 12 项设计专利以及可弯曲 OLED 显示屏专利、头戴显示器专利、iOS 设备防震系统专利、家庭自动化系统专利等。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://www.cnblogs.com/smileEvday/p/iOS_PixelVsPoint.html">iOS 绘制1个像素的线</a> By 枫叶</h4>
-
-<p>第一想法可能是直接根据当前屏幕的 scale 计算出1像素的线对应的 Point，然后设置线宽（或者高）为1个像素。但在设备上测试时会发现渲染出来的线宽并不是1个像素。</p>
-
-<h4>2) <a href="http://limboy.me/tech/2016/07/06/starting-an-app.html">做一个 App 前需要考虑的几件事</a> By 李忠</h4>
-
-<p>随着工具链的完善，语言的升级以及各种优质教程的涌现，做一个 App 的成本也越来越低了。尽管如此，有些事情最好前期就做起来，避免当 App 有了一定规模后，再感慨当初为什么没有多留点心。</p>
-
-<h4>3) <a href="http://www.jianshu.com/p/61a9030adeef">仿微信小视屏</a> By Damonwong</h4>
-
-<p>对于一个类似微信小视屏的功能，大致需要完成的功能无非就是视频录制和视频播放两块。本文是作者视频相关功能开发的实践笔记。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/70ed36cf8a98">Xcode 7 中的调试技巧</a></h4>
-
-<p>Xcode 7 中苹果为我们增加了两个重要的 Debug 相关功能。一个是 Address Sanitizer，另一个是打开 Organizer 窗口的 Crashes 标签页，会自动下载 Crash 信息，右侧的详细信息可以看到是哪行代码导致的崩溃。</p>
-
-<h4>2) <a href="http://blog.imjun.net/2016/08/25/iOS%E7%AC%A6%E5%8F%B7%E8%A1%A8%E6%81%A2%E5%A4%8D-%E9%80%86%E5%90%91%E6%94%AF%E4%BB%98%E5%AE%9D/">iOS 符号表恢复&amp;逆向支付宝</a> By 杨君</h4>
-
-<p>符号表历来是逆向工程中的必争之地，而 iOS 应用在上线前都会裁去符号表，以避免被逆向分析。本文会介绍一个作者写的工具，用于恢复 iOS 应用的符号表。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://dangrover.com/blog/2016/04/20/bots-wont-replace-apps.html">Better apps will replace apps</a> By Dan Grover</h4>
-
-<p>作者是 Facebook 产品经理，之前在微信工作。他在文中谈了对 Facebook、微软的聊天机器人的理解。</p>
-
-<h4>2) <a href="http://liqi.io/liuyachen/">Surge 开发者使用的软硬件</a></h4>
-
-<p>Surge 的开发者刘亚晨，职业角色是 iOS 自由开发者和技术顾问。这篇访谈中他分享了自己使用的硬件和软件。</p>
 
 <p>@end</p>
 ]]></content>
