@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reactnative | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-11T11:58:26+08:00</updated>
+  <updated>2016-10-11T13:03:48+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -18,7 +18,7 @@
     <link href="http://balloonsys.github.io/blog/2016/10/11/rn-components-communication/"/>
     <updated>2016-10-11T11:14:48+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/10/11/rn-components-communication</id>
-    <content type="html"><![CDATA[<p>在 React Native 项目试点过程中，封装的组件之间难免需要传递数据。本文总结了子组件如何将数据传递到父组件，以及对开发过程中遇到的一个 setState 问题的探究。</p>
+    <content type="html"><![CDATA[<p>在 React Native 项目试点过程中，封装的组件之间难免需要传递数据。本文总结了子组件如何将数据传递到使用方，以及对开发过程中遇到的一个 setState 问题的探究。</p>
 
 <!--more-->
 
