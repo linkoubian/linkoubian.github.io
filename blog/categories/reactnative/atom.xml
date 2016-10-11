@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reactnative | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-10T23:55:01+08:00</updated>
+  <updated>2016-10-11T11:57:25+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,95 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[React Native 组件间通信]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/10/11/rn-components-communication/"/>
+    <updated>2016-10-11T11:14:48+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/10/11/rn-components-communication</id>
+    <content type="html"><![CDATA[<p>在 React Native 项目试点过程中，封装的组件之间难免需要传递数据。本文总结了子组件如何将数据传递到父组件，以及对开发过程中遇到的一个 setState 问题的探究。</p>
+
+<!--more-->
+
+
+<h2>设计一个可定制的组件</h2>
+
+<p>当设计一个组件供团队使用，通常使用时需要向其传递一些信息。这个过程可以参考国庆节前写的<a href="http://balloonsys.com/blog/2016/09/30/create-your-first-reusable-react-native-component/">创建一个 React Native 分隔线组件</a>。</p>
+
+<p>主要思路就是定义属性（propTypes），并提供默认属性值（getDefaultProps）。这里不再赘述。</p>
+
+<h2>组件返回数据给使用方</h2>
+
+<h3>应用场景</h3>
+
+<p>假设我们的某个页面 P 使用到封装房产信息的 houseInfo 等组件，需要在 houseInfo 填写完房源总价 totalPrice 后能根据当前整个页面（含多个组件）的输入项去验证是否可以 enable 提交按钮，而且在点击提交时需要能访问到 houseInfo 等组件录入的数据（包括 totalPrice 等）。</p>
+
+<h3>组件设计</h3>
+
+<p>houseInfo 组件包含若干由 React Native 提供的 TextInput 组件，在 TextInput 的 onChangeText 事件绑定我们的方法：</p>
+
+<pre><code class="js">onChangeText={this._updateTotalPrice}
+</code></pre>
+
+<p>使用到的 _updateTotalPrice 是定义在该组件里的事件响应方法，使用最精简的写法设置状态机变量：</p>
+
+<pre><code class="js">  _updateTotalPrice(totalPrice) {
+    this.setState({totalPrice}, this._onStateUpdated);
+  },
+</code></pre>
+
+<p>特别需要注意的是，上述 setState 方法是异步执行的函数，将变化通知到组件的使用者的方法 _onStateUpdated 需要放在 setState 的第二个参数处，否则取 this.state.totalPrice 仍将是旧值。官方的解释如下：</p>
+
+<blockquote><p>setState() does not immediately mutate this.state but creates a pending state transition. Accessing this.state after calling this method can potentially return the existing value.</p></blockquote>
+
+<p>在实现 _onStateUpdated 方法之前，我们先声明一个函数类型的属性：</p>
+
+<pre><code class="js">  propTypes: {
+    onGetHouseInfo: React.PropTypes.func
+  },
+</code></pre>
+
+<p>这样使用者就可以传递一个函数给该组件，该组件在合适的时机调用此方法即可传递数据给使用方。</p>
+
+<pre><code class="js">  _onStateUpdated() {
+    this.props.onGetHouseInfo({totalPrice: this.state.totalPrice,
+                                                             // 其他输入项 ...
+                              }, this._validate());
+  },
+</code></pre>
+
+<p>我们在传递输入的值时，还将本组件的验证结果传递出去，这样使用方即可综合各组件的 valid 值以控制提交按钮的状态。</p>
+
+<pre><code class="js">  _validate() {
+    if (XXX) {
+      return false;
+    }
+
+    return true;
+  },
+</code></pre>
+
+<h3>使用方</h3>
+
+<p>我们在使用 houseInfo 等组件 render 表单页面 P，参考代码如下：</p>
+
+<pre><code class="js">&lt;HouseInfo onGetHouseInfo={this._getHouseInfo} /&gt;
+</code></pre>
+
+<p>此处的 _getHouseInfo 用于从组件接收数据，以存放在页面的 state 里面：</p>
+
+<pre><code class="js">  _getHouseInfo(houseInfo, houseInfoValid) {
+    this.setState({houseInfo, houseInfoValid});
+  },
+</code></pre>
+
+<p>至于 state 的定义及初始化，放在 getInitialState 中即可，较为基础，此处略。</p>
+
+<h2>收工</h2>
+
+<p>👏👏👏</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[创建一个 React Native 分隔线组件]]></title>

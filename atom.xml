@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-10T23:55:01+08:00</updated>
+  <updated>2016-10-11T11:57:25+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,125 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[React Native 组件间通信]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/10/11/rn-components-communication/"/>
+    <updated>2016-10-11T11:14:48+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/10/11/rn-components-communication</id>
+    <content type="html"><![CDATA[<p>在 React Native 项目试点过程中，封装的组件之间难免需要传递数据。本文总结了子组件如何将数据传递到父组件，以及对开发过程中遇到的一个 setState 问题的探究。</p>
+
+<!--more-->
+
+
+<h2>设计一个可定制的组件</h2>
+
+<p>当设计一个组件供团队使用，通常使用时需要向其传递一些信息。这个过程可以参考国庆节前写的<a href="http://balloonsys.com/blog/2016/09/30/create-your-first-reusable-react-native-component/">创建一个 React Native 分隔线组件</a>。</p>
+
+<p>主要思路就是定义属性（propTypes），并提供默认属性值（getDefaultProps）。这里不再赘述。</p>
+
+<h2>组件返回数据给使用方</h2>
+
+<h3>应用场景</h3>
+
+<p>假设我们的某个页面 P 使用到封装房产信息的 houseInfo 等组件，需要在 houseInfo 填写完房源总价 totalPrice 后能根据当前整个页面（含多个组件）的输入项去验证是否可以 enable 提交按钮，而且在点击提交时需要能访问到 houseInfo 等组件录入的数据（包括 totalPrice 等）。</p>
+
+<h3>组件设计</h3>
+
+<p>houseInfo 组件包含若干由 React Native 提供的 TextInput 组件，在 TextInput 的 onChangeText 事件绑定我们的方法：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">onChangeText</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_updateTotalPrice</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>使用到的 _updateTotalPrice 是定义在该组件里的事件响应方法，使用最精简的写法设置状态机变量：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">_updateTotalPrice</span><span class="p">(</span><span class="nx">totalPrice</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">totalPrice</span><span class="p">},</span> <span class="k">this</span><span class="p">.</span><span class="nx">_onStateUpdated</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>特别需要注意的是，上述 setState 方法是异步执行的函数，将变化通知到组件的使用者的方法 _onStateUpdated 需要放在 setState 的第二个参数处，否则取 this.state.totalPrice 仍将是旧值。官方的解释如下：</p>
+
+<blockquote><p>setState() does not immediately mutate this.state but creates a pending state transition. Accessing this.state after calling this method can potentially return the existing value.</p></blockquote>
+
+<p>在实现 _onStateUpdated 方法之前，我们先声明一个函数类型的属性：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">propTypes</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">onGetHouseInfo</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">func</span>
+</span><span class='line'>  <span class="p">},</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这样使用者就可以传递一个函数给该组件，该组件在合适的时机调用此方法即可传递数据给使用方。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">_onStateUpdated</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">onGetHouseInfo</span><span class="p">({</span><span class="nx">totalPrice</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">totalPrice</span><span class="p">,</span>
+</span><span class='line'>                                                           <span class="c1">// 其他输入项 ...</span>
+</span><span class='line'>                              <span class="p">},</span> <span class="k">this</span><span class="p">.</span><span class="nx">_validate</span><span class="p">());</span>
+</span><span class='line'>  <span class="p">},</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>我们在传递输入的值时，还将本组件的验证结果传递出去，这样使用方即可综合各组件的 valid 值以控制提交按钮的状态。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">_validate</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">XXX</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>使用方</h3>
+
+<p>我们在使用 houseInfo 等组件 render 表单页面 P，参考代码如下：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&lt;</span><span class="nx">HouseInfo</span> <span class="nx">onGetHouseInfo</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_getHouseInfo</span><span class="p">}</span> <span class="o">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>此处的 _getHouseInfo 用于从组件接收数据，以存放在页面的 state 里面：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">_getHouseInfo</span><span class="p">(</span><span class="nx">houseInfo</span><span class="p">,</span> <span class="nx">houseInfoValid</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">houseInfo</span><span class="p">,</span> <span class="nx">houseInfoValid</span><span class="p">});</span>
+</span><span class='line'>  <span class="p">},</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>至于 state 的定义及初始化，放在 getInitialState 中即可，较为基础，此处略。</p>
+
+<h2>收工</h2>
+
+<p>👏👏👏</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十一期）]]></title>
@@ -1170,62 +1289,6 @@ c. widget移到Today Extension页面顶部，切换展开与收起，视图位�
 <p>网上有不少转载Facebook内部高效工作PPT指南的文章，配的中文不忍直视。推荐看这篇带注释的精华版。</p>
 
 <blockquote><p>不要同时做多件事，结果可能都没做好，还拖长了工作时间。</p></blockquote>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/06/18/tech-notes-3/"/>
-    <updated>2016-06-18T10:50:14+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/06/18/tech-notes-3</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括iOS 10的一些资讯，以及iOS一些常见问题的设计方案等。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://onevcat.com/2016/06/ios-10-sdk/">开发者所需要知道的iOS 10 SDK新特性</a></h4>
-
-<p>从应用开发者的角度看，iOS 10中并没有加入太多内容。</p>
-
-<h4>2) <a href="https://onevcat.com/2016/06/ios-10-ats/">关于iOS 10中ATS的问题</a></h4>
-
-<p>从2017年1月1日起，所有的新提交app默认是不允许使用NSAllowsArbitraryLoads来绕过ATS限制的。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/0497afdad36d#">可复用而且高度解耦的用户统计埋点实现</a></h4>
-
-<p>该埋点方案和我上个月做的统计SDK思路比较一致。不同的在于用户点击事件，文中的做法是拦截UIControl的方法，而我倾向于由APP自行埋点。主要原因在于，被hook的范围较广，同时我们点击事件埋点时，有酌情传入参数的额外需求。</p>
-
-<h4>2) <a href="https://segmentfault.com/a/1190000005744865">iOS释放自注销模式设计</a></h4>
-
-<p>作者描述的问题的确是我们开发中的痛点，只不过我对这篇文章理解的还不够，毕竟工程师的层次也是有差异的:P</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://medium.com/swift-and-ios-writing/a-quick-look-at-uiviewpropertyanimator-a107fb9da5b5">iOS 10 UIKit Animations</a></h4>
-
-<p>我倒是对文章作者的开源库<a href="https://github.com/marmelroy/Interpolate">Interpolate</a>更感兴趣，哈哈！</p>
-
-<h4>2) <a href="https://luckymarmot.com/zh-hans/paw">Mac最先进的HTTP客户端</a></h4>
-
-<p>做iOS开发，联调API是件很麻烦的事情，特别是当提供API的是个开发新手。联调阶段我通常选用Paw而不是Postman。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://developer.apple.com/support/beta-software/install-ios-beta/">iOS beta Software Installation Guide</a></h4>
-
-<p>本周已采用Configuration Profile的方式安装了iOS 10的beta版，比Restore Image的方案更简便。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/080d109a9984">每个IT人都应该了解的工作观和商业思维</a></h4>
-
-<p>文中整理了来自37signals的两位联合创始人Rework一书的要点，个人特别喜欢这条：</p>
-
-<blockquote><p>工作狂使得真正高效且不崇尚加班的员工感到无所适从，心怀愧疚，士气低落而且跟风加班，根本就不管到底有没有生产力。</p></blockquote>
 
 <p>@end</p>
 ]]></content>

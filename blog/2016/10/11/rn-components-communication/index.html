@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>React Native 组件间通信 - Balloonsys Inc.</title>
+  <meta name="author" content="Linkou Bian">
+
+  
+  <meta name="description" content="在 React Native 项目试点过程中，封装的组件之间难免需要传递数据。本文总结了子组件如何将数据传递到父组件，以及对开发过程中遇到的一个 setState 问题的探究。 设计一个可定制的组件 当设计一个组件供团队使用，通常使用时需要向其传递一些信息。这个过程可以参考国庆节前写的创建一个 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/10/11/rn-components-communication/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+function addBlankTargetForLinks () {
+  $('a[href^="http"]').each(function(){
+      $(this).attr('target', '_blank');
+  });
+}
+
+$(document).bind('DOMNodeInserted', function(event) {
+ addBlankTargetForLinks();
+});
+</script>
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Balloonsys Inc.</a></h1>
+  
+    <h2>Just a blog now.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="balloonsys.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">React Native 组件间通信</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-11T11:14:48+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>11:14 am</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://balloonsys.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>在 React Native 项目试点过程中，封装的组件之间难免需要传递数据。本文总结了子组件如何将数据传递到父组件，以及对开发过程中遇到的一个 setState 问题的探究。</p>
+
+<!--more-->
+
+
+<h2>设计一个可定制的组件</h2>
+
+<p>当设计一个组件供团队使用，通常使用时需要向其传递一些信息。这个过程可以参考国庆节前写的<a href="http://balloonsys.com/blog/2016/09/30/create-your-first-reusable-react-native-component/">创建一个 React Native 分隔线组件</a>。</p>
+
+<p>主要思路就是定义属性（propTypes），并提供默认属性值（getDefaultProps）。这里不再赘述。</p>
+
+<h2>组件返回数据给使用方</h2>
+
+<h3>应用场景</h3>
+
+<p>假设我们的某个页面 P 使用到封装房产信息的 houseInfo 等组件，需要在 houseInfo 填写完房源总价 totalPrice 后能根据当前整个页面（含多个组件）的输入项去验证是否可以 enable 提交按钮，而且在点击提交时需要能访问到 houseInfo 等组件录入的数据（包括 totalPrice 等）。</p>
+
+<h3>组件设计</h3>
+
+<p>houseInfo 组件包含若干由 React Native 提供的 TextInput 组件，在 TextInput 的 onChangeText 事件绑定我们的方法：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">onChangeText</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_updateTotalPrice</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>使用到的 _updateTotalPrice 是定义在该组件里的事件响应方法，使用最精简的写法设置状态机变量：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">_updateTotalPrice</span><span class="p">(</span><span class="nx">totalPrice</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">totalPrice</span><span class="p">},</span> <span class="k">this</span><span class="p">.</span><span class="nx">_onStateUpdated</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>特别需要注意的是，上述 setState 方法是异步执行的函数，将变化通知到组件的使用者的方法 _onStateUpdated 需要放在 setState 的第二个参数处，否则取 this.state.totalPrice 仍将是旧值。官方的解释如下：</p>
+
+<blockquote><p>setState() does not immediately mutate this.state but creates a pending state transition. Accessing this.state after calling this method can potentially return the existing value.</p></blockquote>
+
+<p>在实现 _onStateUpdated 方法之前，我们先声明一个函数类型的属性：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">propTypes</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">onGetHouseInfo</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">func</span>
+</span><span class='line'>  <span class="p">},</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这样使用者就可以传递一个函数给该组件，该组件在合适的时机调用此方法即可传递数据给使用方。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">_onStateUpdated</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">onGetHouseInfo</span><span class="p">({</span><span class="nx">totalPrice</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">totalPrice</span><span class="p">,</span>
+</span><span class='line'>                                                           <span class="c1">// 其他输入项 ...</span>
+</span><span class='line'>                              <span class="p">},</span> <span class="k">this</span><span class="p">.</span><span class="nx">_validate</span><span class="p">());</span>
+</span><span class='line'>  <span class="p">},</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>我们在传递输入的值时，还将本组件的验证结果传递出去，这样使用方即可综合各组件的 valid 值以控制提交按钮的状态。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">_validate</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">XXX</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>使用方</h3>
+
+<p>我们在使用 houseInfo 等组件 render 表单页面 P，参考代码如下：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&lt;</span><span class="nx">HouseInfo</span> <span class="nx">onGetHouseInfo</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_getHouseInfo</span><span class="p">}</span> <span class="o">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>此处的 _getHouseInfo 用于从组件接收数据，以存放在页面的 state 里面：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">_getHouseInfo</span><span class="p">(</span><span class="nx">houseInfo</span><span class="p">,</span> <span class="nx">houseInfoValid</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">houseInfo</span><span class="p">,</span> <span class="nx">houseInfoValid</span><span class="p">});</span>
+</span><span class='line'>  <span class="p">},</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>至于 state 的定义及初始化，放在 getInitialState 中即可，较为基础，此处略。</p>
+
+<h2>收工</h2>
+
+<p>👏👏👏</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-10-11T11:14:48+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>11:14 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/reactnative/'>reactnative</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/10/09/tech-notes-21/" title="Previous Post: 平安好房iOS开发团队技术周报（第二十一期）">&laquo; 平安好房iOS开发团队技术周报（第二十一期）</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/10/11/rn-components-communication/">React Native 组件间通信</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/10/09/tech-notes-21/">平安好房iOS开发团队技术周报（第二十一期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/09/30/tech-notes-20/">平安好房iOS开发团队技术周报（第二十期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/09/30/create-your-first-reusable-react-native-component/">创建一个 React Native 分隔线组件</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/09/24/tech-notes-19/">平安好房iOS开发团队技术周报（第十九期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/09/17/tech-notes-18/">平安好房iOS开发团队技术周报（第十八期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/09/10/tech-notes-17/">平安好房iOS开发团队技术周报（第十七期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/09/03/tech-notes-16/">平安好房iOS开发团队技术周报（第十六期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/08/27/tech-notes-15/">平安好房iOS开发团队技术周报（第十五期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/08/21/tech-notes-14/">平安好房iOS开发团队技术周报（第十四期）</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Linkou Bian -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'balloonsys';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/10/11/rn-components-communication/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2016/10/11/rn-components-communication/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
