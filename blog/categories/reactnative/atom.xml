@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reactnative | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-11T11:57:25+08:00</updated>
+  <updated>2016-10-11T11:58:26+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[React Native 组件间通信]]></title>
+    <title type="html"><![CDATA[React Native 组件间数据传递]]></title>
     <link href="http://balloonsys.github.io/blog/2016/10/11/rn-components-communication/"/>
     <updated>2016-10-11T11:14:48+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/10/11/rn-components-communication</id>
