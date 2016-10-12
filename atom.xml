@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-12T14:35:15+08:00</updated>
+  <updated>2016-10-12T14:37:07+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -45,7 +45,7 @@
 
 <h4>3) <a href="http://inaka.net/blog/2016/09/16/function-naming-in-swift-3/">Function Naming In Swift 3</a> By Pablo Villar</h4>
 
-<p>作者总结了自己在迁移 Swift 2.2 到 Swift 3 时关于函数命名的心得。另外，官方的 Swift API 设计指南，建议多读几遍。</p>
+<p>作者总结了自己在迁移 Swift 2.2 到 Swift 3 时关于函数命名的心得。另外，官方的 <a href="https://swift.org/documentation/api-design-guidelines/">Swift API 设计指南</a>，建议多读几遍。</p>
 
 <h2>工具</h2>
 
