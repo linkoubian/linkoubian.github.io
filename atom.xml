@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-11T13:03:48+08:00</updated>
+  <updated>2016-10-12T14:35:15+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十二期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/10/12/tech-notes-22/"/>
+    <updated>2016-10-12T14:04:38+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/10/12/tech-notes-22</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 Dash 作者和 Apple 沟通的详情、移动端技术方案对比、React Native 组件间数据传递、用 Sketch 制作 GIF 动画等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://cn.reuters.com/article/apple-shenzhen-research-center-idCNKCS12C0DH">苹果宣布在深圳成立研发中心</a> By 路透香港</h4>
+
+<p>苹果公司周三表示，将在中国的制造业中心深圳成立一个研发中心。在竞争日益激烈的情况下，苹果希望刺激在中国的增长。</p>
+
+<h4>2) <a href="https://blog.kapeli.com/dash-and-apple-my-side-of-the-story">Dash and Apple: My Side of the Story</a> By Bogdan Popescu</h4>
+
+<p>非常受欢迎的 API 文档浏览器 Dash 的作者公开了和苹果沟通的细节，看起来双方都没有错:-)</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://awhisper.github.io/2016/07/22/Weex-ReactNative-JSPatch/">Weex &amp; ReactNative &amp; JSPatch</a> By awhisper</h4>
+
+<p>很不错的方案对比文章，既有引述，也有作者自己的见解。</p>
+
+<h4>2) <a href="http://balloonsys.com/blog/2016/10/11/rn-components-communication/">React Native 组件间数据传递</a> By Linkou Bian</h4>
+
+<p>在 React Native 项目试点过程中，封装的组件之间难免需要传递数据。本文总结了子组件如何将数据传递到使用方，以及对开发过程中遇到的一个 setState 问题的探究。</p>
+
+<h4>3) <a href="http://inaka.net/blog/2016/09/16/function-naming-in-swift-3/">Function Naming In Swift 3</a> By Pablo Villar</h4>
+
+<p>作者总结了自己在迁移 Swift 2.2 到 Swift 3 时关于函数命名的心得。另外，官方的 Swift API 设计指南，建议多读几遍。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/markohlebar/Import">An Xcode Extension: Import</a> By Marko Hlebar</h4>
+
+<p>当一个类文件很长，此时若需要 import 头文件的话需要滚动到最顶部，然后再回到刚才的代码行继续编码，这个体验还是很不好的。该 Extension 可以让你在任意位置输入 import 语句。</p>
+
+<h4>2) <a href="https://github.com/magicismight/react-native-root-toast">React Native Toast</a> By Horcrux</h4>
+
+<p>适用于 React Native 项目的 Toast 消息提示组件。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/45022427cf96">用 Sketch 制作 APP 下拉刷新的 GIF 动画</a> By wythetan</h4>
+
+<p>用 Sketch 做 GIF 动画，是有个叫 AnimateMate 的很好用的插件。文中作者以分期乐的刷新动画为例进行讲解，推荐开发者也读一读。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[React Native 组件间数据传递]]></title>
@@ -1225,70 +1279,6 @@ c. widget移到Today Extension页面顶部，切换展开与收起，视图位�
 <h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MzA4ODgwNjk1MQ==&amp;mid=2653788317&amp;idx=1&amp;sn=b5ca8129c2ae99b37f1872d1bbe367c4">漫谈 Airbnb 支付的国际化</a></h4>
 
 <blockquote><p>为了让古巴人也可以在 Airbnb 上租房，我们使用了 VaCuba 这种支付方式，其本质就是人工开着游艇、驾着飞机、骑着自行车，将现金像送货那样送到房东的家里。</p></blockquote>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/06/21/tech-notes-4/"/>
-    <updated>2016-06-21T13:13:13+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/06/21/tech-notes-4</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括iMessage Extension的开发、Reveal的使用等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.augustyniak.me/post/2016/06/wwdc-sessions-watching-guide/">WWDC Videos Watching Guide</a></h4>
-
-<p>另外也可以看一下百度Hi iOS团队写的<a href="http://baiduhidevios.github.io/2016/06/14/WWDC-2016-%E8%A7%82%E5%BD%B1%E6%8C%87%E5%8D%97/">WWDC 2016 观影指南</a>。</p>
-
-<h4>2) <a href="http://www.theverge.com/2016/6/15/11940010/walt-mossberg-apple-wwdc-2016-recap-themes">Apple is still a world of its own</a></h4>
-
-<p>文中提到了an Apple executive匿名回答为何不提供Android版iMessage。一是卖出的设备足够多，已经有足够量级的数据支撑其AI；二是有助于卖出更多苹果设备。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://developer.apple.com/library/prerelease/content/samplecode/IceCreamBuilder/Introduction/Intro.html">iMessage App开发</a></h4>
-
-<p>上周看<a href="https://twitter.com/jquave">Jason Newell</a>的文章<a href="http://jamesonquave.com/blog/creating-imessage-apps-with-xcode-8-tutorial-part-1/">Creating iMessage Apps on iOS 10 with Swift – Tutorial (Part 1)</a>做过一个iMessage Sticker，让用户发送平安『医食住行玩』这样的GIF动画。</p>
-
-<p>最好的案例非苹果的官方Sample莫属，请点击标题中的链接。</p>
-
-<h4>2) <a href="http://colin1994.github.io/2016/06/17/Call-Directory-Extension-Study/">来电黑名单</a></h4>
-
-<p>iOS 10中引入了CallKit，意味着现在可以通过 Call Directory Extension 来实现电话黑名单功能了。</p>
-
-<h4>3) <a href="http://jamesonquave.com/blog/adding-siri-to-ios-10-apps-in-swift-tutorial/">Intents Extension</a></h4>
-
-<p>把玩SiriKit，更多内容请见该文的<a href="http://jamesonquave.com/blog/sirikit-swift-3-resolutions-sirikit-tutorial-part-2/">下篇</a>。更翔实的<a href="https://developer.apple.com/library/prerelease/content/samplecode/UnicornChat/Introduction/Intro.html#//apple_ref/doc/uid/TP40017332-Intro-DontLinkElementID_2">案例</a>还是看苹果的吧。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://revealapp.com/blog/reveal-common-tips-cn.html">Reveal常用技巧</a></h4>
-
-<p>通过Xcode中加断点的方式集成Reveal比较惊艳。iOS系统越狱之后使用Reveal查看别人App视图结构的过程可以参考这篇<a href="http://hihilong.com/2015/11/20/ios9-reveal-jailbreak-app/">文章</a>。</p>
-
-<p>另外，听云某位工程师在某版本Reveal的dylib不支持arm时制作支持arm版的<a href="http://blog.tingyun.com/web/article/detail/262">实践</a>（其实那个时间点最新的Reveal完全支持啊！！！）</p>
-
-<h4>2) <a href="https://github.com/noodlewerk/NWPusher">NWPusher</a></h4>
-
-<p>做iOS 消息推送，需要测试推送证书、推送功能是否正常，强烈推荐使用这款小工具。省时、省力，避免和服务端扯皮。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://azureyu.com/iOSDevRecord.html">iOS独立开发记录</a></h4>
-
-<p>从想法、设计、开发到最终发布，总结个人开发APP的历程。</p>
-
-<h4>2) <a href="http://www.ruanyifeng.com/blog/2016/05/time-management.html">时间管理的七句话</a></h4>
-
-<p>网上有不少转载Facebook内部高效工作PPT指南的文章，配的中文不忍直视。推荐看这篇带注释的精华版。</p>
-
-<blockquote><p>不要同时做多件事，结果可能都没做好，还拖长了工作时间。</p></blockquote>
 
 <p>@end</p>
 ]]></content>

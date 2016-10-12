@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-11T13:03:48+08:00</updated>
+  <updated>2016-10-12T14:35:15+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十二期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/10/12/tech-notes-22/"/>
+    <updated>2016-10-12T14:04:38+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/10/12/tech-notes-22</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 Dash 作者和 Apple 沟通的详情、移动端技术方案对比、React Native 组件间数据传递、用 Sketch 制作 GIF 动画等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://cn.reuters.com/article/apple-shenzhen-research-center-idCNKCS12C0DH">苹果宣布在深圳成立研发中心</a> By 路透香港</h4>
+
+<p>苹果公司周三表示，将在中国的制造业中心深圳成立一个研发中心。在竞争日益激烈的情况下，苹果希望刺激在中国的增长。</p>
+
+<h4>2) <a href="https://blog.kapeli.com/dash-and-apple-my-side-of-the-story">Dash and Apple: My Side of the Story</a> By Bogdan Popescu</h4>
+
+<p>非常受欢迎的 API 文档浏览器 Dash 的作者公开了和苹果沟通的细节，看起来双方都没有错:-)</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://awhisper.github.io/2016/07/22/Weex-ReactNative-JSPatch/">Weex &amp; ReactNative &amp; JSPatch</a> By awhisper</h4>
+
+<p>很不错的方案对比文章，既有引述，也有作者自己的见解。</p>
+
+<h4>2) <a href="http://balloonsys.com/blog/2016/10/11/rn-components-communication/">React Native 组件间数据传递</a> By Linkou Bian</h4>
+
+<p>在 React Native 项目试点过程中，封装的组件之间难免需要传递数据。本文总结了子组件如何将数据传递到使用方，以及对开发过程中遇到的一个 setState 问题的探究。</p>
+
+<h4>3) <a href="http://inaka.net/blog/2016/09/16/function-naming-in-swift-3/">Function Naming In Swift 3</a> By Pablo Villar</h4>
+
+<p>作者总结了自己在迁移 Swift 2.2 到 Swift 3 时关于函数命名的心得。另外，官方的 Swift API 设计指南，建议多读几遍。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/markohlebar/Import">An Xcode Extension: Import</a> By Marko Hlebar</h4>
+
+<p>当一个类文件很长，此时若需要 import 头文件的话需要滚动到最顶部，然后再回到刚才的代码行继续编码，这个体验还是很不好的。该 Extension 可以让你在任意位置输入 import 语句。</p>
+
+<h4>2) <a href="https://github.com/magicismight/react-native-root-toast">React Native Toast</a> By Horcrux</h4>
+
+<p>适用于 React Native 项目的 Toast 消息提示组件。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/45022427cf96">用 Sketch 制作 APP 下拉刷新的 GIF 动画</a> By wythetan</h4>
+
+<p>用 Sketch 做 GIF 动画，是有个叫 AnimateMate 的很好用的插件。文中作者以分期乐的刷新动画为例进行讲解，推荐开发者也读一读。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十一期）]]></title>
@@ -226,62 +280,6 @@
 <h4>2) <a href="http://yuguo.us/weblog/shut-up-and-take-the-money/">为什么有些人赚钱那么轻松</a> By 余果</h4>
 
 <p>外行并不太能影响专业人士的价格，他们自己在跟自己竞争。对于真正的专业主义者，没有行业低迷这种概念存在。随波逐流的，一直是水面上的浮萍。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十七期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/09/10/tech-notes-17/"/>
-    <updated>2016-09-10T17:44:51+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/09/10/tech-notes-17</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括苹果自动驾驶汽车项目的最新动向，移动客户端基于 WebP 的流量优化技术剖析，Xcode 8 新增的调试工具用法等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://tech2ipo.com/10032335">iPhone 年年焕新计划</a> By tech2ipo</h4>
-
-<p>北京时间 9 月 8 日凌晨，苹果发布了最新一代的 iPhone 7 和 7P，这次发布会带来的另一个亮点是「年年焕新」计划。本文将帮你核算参与「年年焕新计划」永远用新 iPhone 究竟要多少钱。</p>
-
-<h4>2) <a href="http://www.nytimes.com/2016/09/10/technology/apple-is-said-to-be-rethinking-strategy-on-self-driving-cars.html?_r=0">Apple Is Said to Be Rethinking Strategy on Self-Driving Cars</a> By Daisuke</h4>
-
-<p>纽约时报的文章称，苹果自动驾驶汽车项目经历了调整，部分业务被撤销、几十名员工被解雇。今年七月开始由 Bob Mansfield 领导后，苹果改变了该项目的关注点，从对汽车设计和生产的强调转向了对自主驾驶汽车底层技术的开发。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://segmentfault.com/a/1190000006266276">iOS 客户端基于 WebP 的流量优化</a> By Curiousity</h4>
-
-<p>WebP 是一种同时提供了有损压缩与无损压缩的图片文件格式。据说淘宝客户端在两年前就使用了 WebP（主要是 Native 使用），后来 H5 全面使用，WebView 的 WebP 采用插件的方式支持。</p>
-
-<p>注：本文比<a href="http://www.jianshu.com/p/25505a6c5d74">第十三期周报</a>中分享的相关文章更深入！</p>
-
-<h4>2) <a href="http://qiaotongxin.cc/2016/08/22/20160822/">百度外卖 APP 头像动画效果</a> By 乔同新</h4>
-
-<p>某日，作者发现百度外卖的 APP 个人中心头像波浪效果很是吸引人，遂就思考如何实现这种『浪』的效果。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://chengwey.com/ios-10-by-tutorials-bi-ji-er/">Xcode 8 Debugging Improvements</a> By chengwey</h4>
-
-<p>Xcode 8 增加了几项功能，让我们调试起来更加得心应手。Xcode 8 提供的调试工具可以标记竞争危害（Race Conditions）、内存泄露、以及运行时的布局约束问题。</p>
-
-<h4>2) <a href="https://medium.com/ios-os-x-development/my-ios-development-toolkit-2016-ba7601b68085#.pebx7hm9c">My iOS Development Toolkit 2016</a> By Sebastian</h4>
-
-<p>作者分享了他在用的 iOS 开发工具、Web 服务、框架，以及经常浏览的技术博客等。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://tech.glowing.com/cn/tan-tan-yi-dong-ying-yong-de-an-quan-xing-shi-jian/">移动应用的安全性实践</a> By Glow</h4>
-
-<p>本文将从用户注册流程出发，逐步介绍 Glow 在提高数据安全性方面采用的一些策略方法，供读者参考。</p>
-
-<h4>2) <a href="https://medium.com/the-year-of-the-looking-glass/how-to-do-a-product-critique-98b657050638">How to do a Product Critique</a> By Julie Zhuo</h4>
-
-<p>这是 Facebook 产品设计总监的文章，通过对于评价产品的每个步骤的介绍，帮助产品经理更好的理解用户，提升自己的产品直觉。</p>
 
 <p>@end</p>
 ]]></content>
