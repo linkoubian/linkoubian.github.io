@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-18T16:13:04+08:00</updated>
+  <updated>2016-10-18T16:14:57+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -81,6 +81,8 @@
 <p>HeadingText 和 NormalText 建立在 Text 组件之上，自定义样式是通过 Text.propTypes.style 类型的属性支持的。注意此处类型不同于前面 Button 使用过的样式类型。</p>
 
 <p>Input 组件建立在 TextInput 之上，LabeledInput 组合了 Input 和 NormalText 两个组件，体现了复用的理念。</p>
+
+<h2>页面开发</h2>
 
 <h3>Deck 列表页</h3>
 
