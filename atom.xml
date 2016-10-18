@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-18T15:45:34+08:00</updated>
+  <updated>2016-10-18T15:58:14+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -34,6 +34,43 @@
 <h2>案例项目简介</h2>
 
 <p>作者提供的示例项目包含三个页面，包含多副牌（Deck）的列表页、为选中的某副牌增加一张卡牌（Card）的页面、为某张卡牌选择答案（Review）的页面。</p>
+
+<p>在列表页点击 Create Deck 按钮，按钮上方出现输入框，填写内容作为 Deck 的名称。点击 Deck 右侧按钮则进入增加卡牌页面，点击 Deck 左侧则进入 Review 的页面。</p>
+
+<h2>构建基础组件</h2>
+
+<h3>公共样式</h3>
+
+<p>全局的颜色、字号等，可以在 js 里直接定义字典数据结构，然后 exports 以供外界访问。比如：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">palette</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">pink</span><span class="o">:</span> <span class="s1">&#39;#FDA6CD&#39;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">palette</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>所以，像平安好房的应用可以参照上述结构定义 pa_orange 等色值。值得注意的是，我们也可以在一个 js 文件里定义多个字典，然后 exports 时将他们包含在花括号中即可。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span><span class="nx">fonts</span><span class="p">,</span> <span class="nx">color</span><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在使用上述结构时，就需要这么 import 了：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">fonts</span><span class="p">,</span> <span class="nx">color</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;&lt;PATH-OF-FILE&gt;&#39;</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   
