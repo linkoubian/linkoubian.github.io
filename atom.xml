@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-12T16:36:22+08:00</updated>
+  <updated>2016-10-18T15:07:48+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[React Native 实战经验]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/10/18/rn-put-it-all-together/"/>
+    <updated>2016-10-18T15:02:29+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/10/18/rn-put-it-all-together</id>
+    <content type="html"><![CDATA[<p>本文以 Twitter 工程师 Bonnie Eisenman 撰写的 Learning React Native 一书的第九章内容为蓝本，总结了 React Native 项目实践的一些经验。</p>
+
+<!--more-->
+
+
+<h2>项目组织结构</h2>
+
+<p>Zebreto
+ |- index.ios.js
+ |- package.json
+ |- src</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十二期）]]></title>
@@ -1219,66 +1238,6 @@ c. widget移到Today Extension页面顶部，切换展开与收起，视图位�
 <blockquote><p>如果要在简单表达和并不专业的设计之间做出选择，你应该选择简单表达。设计技能的逐步提高是从简单表达开始的。</p></blockquote>
 
 <p>iPhone的成功，降低了产品经理（大部分只有抄袭还抄不好的能力）的门槛；APP的泛滥，降低了软件工程师（鱼龙混杂，水货较多）的门槛；iOS 7开始，降低了设计师（大部分也就是个Photoshop熟练工）的门槛。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第五期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/06/23/tech-notes-5/"/>
-    <updated>2016-06-23T16:31:43+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/06/23/tech-notes-5</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括Xcode扩展、Method Swizzle、Git分支实践等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://daringfireball.net/linked/2016/06/22/ios-10-kernel">iOS 10 内核未加密</a></h4>
-
-<p>苹果发言人称: “The kernel cache doesn’t contain any user info, and by unencrypting it we’re able to optimize the operating system’s performance without compromising security.”</p>
-
-<h4>2) <a href="https://www.raywenderlich.com/135655/whats-new-swift-3">What’s New in Swift 3?</a></h4>
-
-<p>虽然暂时还没必要迁移至Swift 3（下半年还会有改动），但语言的主要变动还是需要了解的。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://www.russbishop.net/xcode-extensions">Xcode Source Editor Extension</a></h4>
-
-<p>在菜单触发插件，XCSourceEditorCommand 拦截到该消息。我们从 invocation 中拿到 buffer，根据当前行可以获取到需要的数据。我的<a href="https://github.com/balloonsys/PAXcodePlugin">示例</a>是直接增加一行NSLog代码，所以把数据设置回去即可。</p>
-
-<p>该教程不仅教你怎么做，还将可能遇到的问题及可尝试的解决方案写的很明白。我实现了一个打印当前方法名的插件，用以快速插入代码。另外，如果需要中文教程，可参看钟颖的<a href="https://zhuanlan.zhihu.com/p/21374552">文章</a>。</p>
-
-<h4>2) <a href="http://xiongzenghuidegithub.github.io/blog/2016/04/22/runtimeying-yong-fang-zhi-an-niu-lian-xu-dian-ji/">借助Runtime防止按钮连续点击</a></h4>
-
-<p>按钮连续点击的问题解决起来不难，使用Runtime交换SEL即可控制。</p>
-
-<h4>3) <a href="http://www.jianshu.com/p/cabec2786241">UICollectionView的自定义布局</a></h4>
-
-<p>这篇文章不是分享UICollectionView的详细使用教程，而是属于比较高级的使用技巧。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://simpholders.com">SimPholders</a></h4>
-
-<p>从menu快速访问iOS模拟器里的app目录。</p>
-
-<h4>2) <a href="https://www.sqlitepro.com">SQLPro for SQLite</a></h4>
-
-<p>移动端数据通常使用SQLite存储，若需要方便的管理其中的数据，请不要错过SQLPro for SQLite。另外插一句使用Core Data的经验，不同版本对应的sqlite文件最好本地保存一份。这样哪天需要测试数据迁移会省不少精力。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a></h4>
-
-<p>自从转行做iOS开发以来，一直使用Git做代码版本管理。而Git分支的最佳实践，个人最推崇<a href="http://nvie.com/about/">Vincent Driessen</a>的做法。之所以po这个，是因为昨天运维部宣讲了服务端代码分支的管理方案。</p>
-
-<h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MzA4ODgwNjk1MQ==&amp;mid=2653788317&amp;idx=1&amp;sn=b5ca8129c2ae99b37f1872d1bbe367c4">漫谈 Airbnb 支付的国际化</a></h4>
-
-<blockquote><p>为了让古巴人也可以在 Airbnb 上租房，我们使用了 VaCuba 这种支付方式，其本质就是人工开着游艇、驾着飞机、骑着自行车，将现金像送货那样送到房东的家里。</p></blockquote>
 
 <p>@end</p>
 ]]></content>

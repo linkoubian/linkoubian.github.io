@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reactnative | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-12T16:36:22+08:00</updated>
+  <updated>2016-10-18T15:07:48+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[React Native 实战经验]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/10/18/rn-put-it-all-together/"/>
+    <updated>2016-10-18T15:02:29+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/10/18/rn-put-it-all-together</id>
+    <content type="html"><![CDATA[<p>本文以 Twitter 工程师 Bonnie Eisenman 撰写的 Learning React Native 一书的第九章内容为蓝本，总结了 React Native 项目实践的一些经验。</p>
+
+<!--more-->
+
+
+<h2>项目组织结构</h2>
+
+<p>Zebreto
+ |- index.ios.js
+ |- package.json
+ |- src</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[React Native 组件间数据传递]]></title>
