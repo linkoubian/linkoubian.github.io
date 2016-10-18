@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-18T16:14:57+08:00</updated>
+  <updated>2016-10-18T16:35:50+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -85,6 +85,110 @@
 <h2>页面开发</h2>
 
 <h3>Deck 列表页</h3>
+
+<h4>数据建模</h4>
+
+<p>在 React Native 项目试点过程中，尚不熟悉 JavaScript 的类相关语法。当时都是用的字典:[</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">class</span> <span class="nx">Deck</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">Deck</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>数据在本地使用 AsyncStorage 存取，所有的存取方法均封装在 DeckStore.js 里。</p>
+
+<h4>Reflux 架构</h4>
+
+<p>作者使用 Reflux 架构实现数据的单项流动，主要的两个概念便是 Store 和 Action 了。</p>
+
+<p>用户在 View 上操作，触发 Action，示例 View 的事件响应代码如下：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">DeckActions</span><span class="p">.</span><span class="nx">createDeck</span><span class="p">(</span><span class="nx">deck</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>而 createDeck 是在 actions.js 里定义的：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">export</span> <span class="kd">var</span> <span class="nx">DeckActions</span> <span class="o">=</span> <span class="nx">Reflux</span><span class="p">.</span><span class="nx">createActions</span><span class="p">([</span>
+</span><span class='line'>  <span class="s1">&#39;createDeck&#39;</span>
+</span><span class='line'><span class="p">]);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Store 的 init 方法里监听 Action：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">decksStore</span> <span class="o">=</span> <span class="nx">Reflux</span><span class="p">.</span><span class="nx">createStore</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">_decks</span> <span class="o">=</span> <span class="p">[];</span>
+</span><span class='line'>    <span class="c1">// ...</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">listenTo</span><span class="p">(</span><span class="nx">DeckActions</span><span class="p">.</span><span class="nx">createDeck</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">createDeck</span><span class="p">);</span>
+</span><span class='line'>    <span class="c1">// ...</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// ...</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">createDeck</span><span class="p">(</span><span class="nx">deck</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">_decks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">deck</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">();</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// ...</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">emit</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// ...</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_decks</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">decksStore</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这样在 createDeck 这一 action 触发后，Store 变回执行 createDeck 方法以更新 Store 中的数据，再通过 emit 方法通知出去。</p>
+
+<p>View 里面监听 DeckStore 的消息，将通知携带来的数据模型存在 state 里以触发 render 方法的执行（更新 UI）。</p>
+
+<p><img src="https://c2.staticflickr.com/6/5816/29772102074_b8ec9b3328_o.png" width="328" alt="Reflux Architecture" /></p>
 
 <h3>Card 新建页</h3>
 
