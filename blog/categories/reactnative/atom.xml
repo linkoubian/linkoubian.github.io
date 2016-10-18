@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reactnative | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-18T15:58:14+08:00</updated>
+  <updated>2016-10-18T16:13:04+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -59,6 +59,26 @@ module.exports = palette;
 
 <pre><code class="js">import { fonts, color } from '&lt;PATH-OF-FILE&gt;';
 </code></pre>
+
+<h3>公共组件</h3>
+
+<p>我们不直接用 Text 组件，而是包装成 HeadingText 和 NormalText 供项目里的不同页面使用。同样的，为了代码重用与使用便捷，我们封装 Button、Input、LabeldInput 等组件。</p>
+
+<p>其中 Button 组件构建在 TouchableOpacity 基础之上，支持 func 类型的属性以在点击时调用使用方的方法，也支持 View.propTypes.style 类型的属性以方便定制其样式等。</p>
+
+<p>需要注意的是，为了让 Button 组件能包含其他子组件，我们使用了一个 object 类型的属性，然后在 render 时输出 children 即可。</p>
+
+<p>HeadingText 和 NormalText 建立在 Text 组件之上，自定义样式是通过 Text.propTypes.style 类型的属性支持的。注意此处类型不同于前面 Button 使用过的样式类型。</p>
+
+<p>Input 组件建立在 TextInput 之上，LabeledInput 组合了 Input 和 NormalText 两个组件，体现了复用的理念。</p>
+
+<h3>Deck 列表页</h3>
+
+<h3>Card 新建页</h3>
+
+<h3>Review 交互页</h3>
+
+<h3>遇到过的问题及解决方案</h3>
 ]]></content>
   </entry>
   
