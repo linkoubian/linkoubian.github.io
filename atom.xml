@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-18T17:11:01+08:00</updated>
+  <updated>2016-10-18T17:13:47+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -244,7 +244,7 @@
 
 <p>输入 Deck 名时比正常情况下多一行输入框，所以在 DeckCreation.js 中根据一个 state 变量分别返回不同的两个子组件：EnterDeck 和 CreateDeckButton。前者由公共组件 Input 和 CreateDeckButton 组合而成。CreateDeckButton 由公共组件 Button 和 NormalText 组合而成。</p>
 
-<p>详细代码不再本文中提供，以思路为重。</p>
+<p>详细代码不在本文中提供，以思路为重。</p>
 
 <h3>Card 新建页</h3>
 
@@ -264,7 +264,7 @@
 
 <p>原因在于 Store 发出的消息，导致 View 的 state 里的数据立即被置空。我们可以临时在加个判断，为空就不 setState({decks}) 即可。</p>
 
-<h3>Review 结果展示页警告</h3>
+<h3>Review 结果展示页告警</h3>
 
 <p>该页使用公共组件 NormalText 并传递 color 给它，但作者提供的 NormalText 代码里使用的是 View.propTypes.style，应改为 Text.propTypes.style！</p>
 ]]></content>
