@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reactnative | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-18T16:49:47+08:00</updated>
+  <updated>2016-10-18T17:09:40+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -175,13 +175,9 @@ export var DeckActions = Reflux.createActions([
 
 <h4>页面组装</h4>
 
-<p>src/components/Decks/index.js 是该页面的主文件，会包含一些子组件以完成整个页面的渲染。主要技术点有如下两方面：</p>
+<p>src/components/Decks/index.js 是该页面的主文件，会包含一些子组件以完成整个页面的渲染。</p>
 
-<ol>
-<li>根据所有 Deck 构造列表
-在 index.js 的 render 方法里，将这一段代码封装在一个独立的工具方法，然后再 render 里面引用其返回的 UI 结构。</li>
-</ol>
-
+<p>在 index.js 的 render 方法里，将这一段代码封装在一个独立的工具方法，然后再 render 里面引用其返回的 UI 结构。</p>
 
 <pre><code class="js">  _getDecks() {
     if (!this.state.decks) {
@@ -208,19 +204,31 @@ export var DeckActions = Reflux.createActions([
   }
 </code></pre>
 
-<ol>
-<li>新建 Deck 按钮的封装
-输入 Deck 名时比正常情况下多一行输入框，所以在 DeckCreation.js 中根据一个 state 变量分别返回不同的两个子组件：EnterDeck 和 CreateDeckButton。前者由公共组件 Input 和 CreateDeckButton 组合而成。</li>
-</ol>
-
+<p>输入 Deck 名时比正常情况下多一行输入框，所以在 DeckCreation.js 中根据一个 state 变量分别返回不同的两个子组件：EnterDeck 和 CreateDeckButton。前者由公共组件 Input 和 CreateDeckButton 组合而成。CreateDeckButton 由公共组件 Button 和 NormalText 组合而成。</p>
 
 <p>详细代码不再本文中提供，以思路为重。</p>
 
 <h3>Card 新建页</h3>
 
+<p>整体过程类似于 Decks 页面的构建。主要就是在 View 触发 CardActions.createCard 这一 Action，在 Card 的 Store 中监听以更新数据集合。</p>
+
 <h3>Review 交互页</h3>
 
-<h3>遇到过的问题及解决方案</h3>
+<p>本页面有两种场景，若存在尚未 Review 过的 Card 则显示可选择答案的 Review 页面，否则显示 Review 结果（正确率）。所以 src/components/Review/index.js 里分两种情况返回 UI 结构。</p>
+
+<p>选择答案的 UI 结构，其封装在 ViewCard.js 中，做法类似于之前 Decks 利用 map 高阶函数的方案。Review 这一块稍微难懂一点的是其 Store 里根据录入的卡片构造选项的逻辑，但这其实已不是 React Native 的范围，耐心的多看一会儿就可以懂。</p>
+
+<h2>问题与解决方案</h2>
+
+<h3>Decks 页面不展示模拟数据</h3>
+
+<p>我在完成 Decks 页面的展示时，就不等 Create Deck 功能的实现，就开始测试一下页面。比如在 components/Decks/index.js 的 getInitialState 中直接构造几个 Deck 对象。但是并没有展示出来:[</p>
+
+<p>原因在于 Store 发出的消息，导致 View 的 state 里的数据立即被置空。我们可以临时在加个判断，为空就不 setState({decks}) 即可。</p>
+
+<h3>Review 结果展示页警告</h3>
+
+<p>该页使用公共组件 NormalText 并传递 color 给它，但作者提供的 NormalText 代码里使用的是 View.propTypes.style，应改为 Text.propTypes.style！</p>
 ]]></content>
   </entry>
   
