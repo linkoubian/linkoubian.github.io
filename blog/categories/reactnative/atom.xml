@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reactnative | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-18T15:08:48+08:00</updated>
+  <updated>2016-10-18T15:42:14+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -25,10 +25,15 @@
 
 <h2>项目组织结构</h2>
 
-<p>Zebreto <br/>
- |- index.ios.js <br/>
- |- package.json <br/>
- |- src</p>
+<p>所有的新增文件均放在项目根目录下的 src 里，主要有包含各页面的 components 子目录、数据模型的 data 子目录、负责数据存取的 stores 子目录、公共样式定义 styles 子目录、存放资源图片等的 resources 子目录等。</p>
+
+<p><img src="https://c2.staticflickr.com/6/5781/30365572286_b0c35d2176_o.png" alt="RN Project Structure" /></p>
+
+<p>index.ios.js 是 Native 应用的入口，该文件尽量简洁，指向 RN 项目里负责页面跳转的主文件 components/Zebreto.js。</p>
+
+<h2>案例项目简介</h2>
+
+<p>作者提供的示例项目包含三个页面，包含多副牌（Deck）的列表页、为选中的某副牌增加一张卡牌（Card）的页面、为某张卡牌选择答案（Review）的页面。</p>
 ]]></content>
   </entry>
   
