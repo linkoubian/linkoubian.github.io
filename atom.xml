@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-18T17:29:42+08:00</updated>
+  <updated>2016-10-19T23:02:14+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十三期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/10/19/tech-notes-23/"/>
+    <updated>2016-10-19T20:54:10+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/10/19/tech-notes-23</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 Mac 系列产品的最新消息、React Native 项目实战经验、电商类应用里常见的列表和网格视图切换方案、自动化打包等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.recode.net/2016/10/18/13323264/apple-new-macs-october-27">Apple plans to launch new Macs at an October 27 event</a> By Recode</h4>
+
+<p>苹果上一次对 MacBook Pro 进行大幅度更新是在 2012 年。根据 Recode 的消息源，苹果将在 10 月 27 日发布新的 Mac 系列产品。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://balloonsys.com/blog/2016/10/18/rn-put-it-all-together/">React Native 项目实战</a> By Linkou Bian</h4>
+
+<p>本文以 Twitter 工程师 Bonnie Eisenman 撰写的 Learning React Native 一书的第九章内容为蓝本，总结了 React Native 项目实践的一些经验。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/131de575ef9e">列表和网格视图的相互切换</a> By LeeJay</h4>
+
+<p>在很多电商 app 中，都有列表视图和网格视图的相互切换。很多人看到第一时间想到的是用 TableView 和 CollectionView 来做切换。作者给出了一个非常简单的方法。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://liumh.com/2016/05/22/use-xcconfig-config-specific-variable/">Xcode 使用 xcconfig 文件配置环境</a> By Carya Liu</h4>
+
+<p>使用 Xcode 的 Configurations Setting File 把所有的环境配置都整合到配置文件中，这样打不同环境下的安装包时，会自动选择对应的环境参数。</p>
+
+<h4>2) <a href="http://liumh.com/2015/11/25/ios-auto-archive-ipa/">iOS 自动打包并发布脚本</a> By Carya Liu</h4>
+
+<p>本文最终实现的是使用脚本打 Ad-hoc 包，并发布测试，当然稍微修改一下脚本参数就可以打其他类型的 ipa 包了。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://zhuanlan.zhihu.com/p/22672061">互联网合并浪潮中，内部员工该何去何从？</a> By 林安</h4>
+
+<p>通过采访那些亲身经历过公司合并的同学，给每一位身处这个时代的互联网人以警醒。当有一天，公司合并这件事落在你身上时，希望你能从这篇文章中汲取干货，从容面对、冷静处理。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[React Native 项目实战]]></title>
@@ -194,7 +240,7 @@
 
 <p>src/components/Decks/index.js 是该页面的主文件，会包含一些子组件以完成整个页面的渲染。</p>
 
-<p>在 index.js 的 render 方法里，将这一段代码封装在一个独立的工具方法，然后再 render 里面引用其返回的 UI 结构。</p>
+<p>在 index.js 的 render 方法里，将这一段代码封装在一个独立的工具方法，然后在 render 里面引用其返回的 UI 结构。</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -1414,68 +1460,6 @@ c. widget移到Today Extension页面顶部，切换展开与收起，视图位�
 <h4>2) <a href="https://www.infoq.com/news/2016/03/agileindia-7sins-scrum">Seven Sins of Scrum and other Agile Antipatterns</a></h4>
 
 <blockquote><p>一些事情看上去是好主意，但在使用的时候会产生意想不到的后果。</p></blockquote>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第六期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/06/27/tech-notes-6/"/>
-    <updated>2016-06-27T09:57:31+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/06/27/tech-notes-6</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括iOS 10中通知相关的变化、Swift中try的用法、颜色与标注稿不一致的问题等。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.loopinsight.com/2016/06/23/apple-discontinues-thunderbolt-display/">Apple discontinues Thunderbolt Display</a></h4>
-
-<p>服役五年的 Thunderbolt Display已经正式停产，剩下的存货仍会在Apple线上商店与零售点销售。</p>
-
-<h4>2) <a href="http://fichek.com/blog/wwdc16-notifications/">WWDC16 - New in Notifications</a></h4>
-
-<p>Notification相关的API从UIKit挪到了新的framework，<a href="http://fichek.com/contact/">Filip Radelic</a>对其变化做了很好的总结。</p>
-
-<p>另附一篇介绍Notification的中文文章<a href="http://www.jianshu.com/p/9b720efe3779">iOS 10  推送Notification新特性</a>。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://ashfurrow.com/blog/uicollectionview-unjustly-maligned/">UICollectionView: Unjustly Maligned</a></h4>
-
-<p>500px首个iPad版本、Artsy都出自本文作者<a href="https://ashfurrow.com/about/">Ash Furrow</a>之手。同时他也是iOS UICollectionView: The Complete Guide一书的作者。</p>
-
-<p>Ash在文中介绍了如何用UICollectionView构建Artsy的页面。</p>
-
-<p>另外有两篇文章不错，建议一读：<a href="https://adoptioncurve.net/archives/2016/06/collection-view-updates-in-ios10/">Collection View Updates in iOS10 Part 1</a>和<a href="https://adoptioncurve.net/archives/2016/06/collection-view-updates-in-ios10-part-2/">Collection View Updates in iOS10 Part 2</a>。</p>
-
-<h4>2) <a href="http://stackoverflow.com/a/32390612">Swift - try, try! &amp; try?的区别</a></h4>
-
-<p>guard let result = try? doSomething() else {}是一个较为常用的代码范式。另外这种范式下若有异常，会被『翻译』成nil，所以不会捕获到具体的出错原因。故适用于只关注成功或失败这一结果的场景。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://jaykon.github.io/2014/06/17/ioskai-fa-zhong-de-yan-se-wen-ti/">iOS开发中的颜色问题</a></h4>
-
-<p>设计师给的颜色值标注，设置到app里显示不一致？可能和色彩标准不同有关。比如设计师用的是Generic RBG或者Adobe RGB，而程序里是基于sRGB。</p>
-
-<h4>2) <a href="https://github.com/gskbyte/GSKStretchyHeaderView">GSKStretchyHeaderView</a></h4>
-
-<p>类似Twitter个人中心页面的弹性视图。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://github.com/linkedin/swift-style-guide">Swift Style Guide</a></h4>
-
-<p>据说LinkedIn用Swift重写了自家的app，这是他们的代码规范。</p>
-
-<h4>2) <a href="http://www.ituring.com.cn/book/397">写给大家看的设计书</a></h4>
-
-<blockquote><p>如果要在简单表达和并不专业的设计之间做出选择，你应该选择简单表达。设计技能的逐步提高是从简单表达开始的。</p></blockquote>
-
-<p>iPhone的成功，降低了产品经理（大部分只有抄袭还抄不好的能力）的门槛；APP的泛滥，降低了软件工程师（鱼龙混杂，水货较多）的门槛；iOS 7开始，降低了设计师（大部分也就是个Photoshop熟练工）的门槛。</p>
 
 <p>@end</p>
 ]]></content>

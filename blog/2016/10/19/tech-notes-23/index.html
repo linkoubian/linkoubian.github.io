@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Vmware - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第二十三期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="Category: vmware">
+  <meta name="description" content="本期周报主要包括 Mac 系列产品的最新消息、React Native 项目实战经验、电商类应用里常见的列表和网格视图切换方案、自动化打包等内容。 资讯 1) Apple plans to launch new Macs at an October 27 event By Recode &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/categories/vmware/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/10/19/tech-notes-23/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -76,50 +76,115 @@ $(document).bind('DOMNodeInserted', function(event) {
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Vmware</h1>
+    
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第二十三期）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-19T20:54:10+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>8:54 pm</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://balloonsys.github.io">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>本期周报主要包括 Mac 系列产品的最新消息、React Native 项目实战经验、电商类应用里常见的列表和网格视图切换方案、自动化打包等内容。</p>
 
-  
-  <h2>2014</h2>
-
-<article>
-  
-<h1><a href="/blog/2014/09/07/install-redmine-on-centos-6-dot-5/">在CentOS 6.5环境下安装Redmine</a></h1>
-<time datetime="2014-09-07T16:33:08+08:00" pubdate><span class='month'>Sep</span> <span class='day'>07</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/aliyun/'>aliyun,</a>, <a class='category' href='/blog/categories/centos/'>centos,</a>, <a class='category' href='/blog/categories/gitlab/'>gitlab,</a>, <a class='category' href='/blog/categories/vmware/'>vmware</a></span>
-</footer>
+<!--more-->
 
 
-</article>
+<h2>资讯</h2>
 
+<h4>1) <a href="http://www.recode.net/2016/10/18/13323264/apple-new-macs-october-27">Apple plans to launch new Macs at an October 27 event</a> By Recode</h4>
 
+<p>苹果上一次对 MacBook Pro 进行大幅度更新是在 2012 年。根据 Recode 的消息源，苹果将在 10 月 27 日发布新的 Mac 系列产品。</p>
 
-<article>
-  
-<h1><a href="/blog/2014/09/06/install-gitlab-on-centos-6-dot-5/">在CentOS 6.5环境下安装GitLab</a></h1>
-<time datetime="2014-09-06T11:32:15+08:00" pubdate><span class='month'>Sep</span> <span class='day'>06</span> <span class='year'>2014</span></time>
+<h2>开发</h2>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/aliyun/'>aliyun,</a>, <a class='category' href='/blog/categories/centos/'>centos,</a>, <a class='category' href='/blog/categories/gitlab/'>gitlab,</a>, <a class='category' href='/blog/categories/vmware/'>vmware</a></span>
-</footer>
+<h4>1) <a href="http://balloonsys.com/blog/2016/10/18/rn-put-it-all-together/">React Native 项目实战</a> By Linkou Bian</h4>
 
+<p>本文以 Twitter 工程师 Bonnie Eisenman 撰写的 Learning React Native 一书的第九章内容为蓝本，总结了 React Native 项目实践的一些经验。</p>
 
-</article>
+<h4>2) <a href="http://www.jianshu.com/p/131de575ef9e">列表和网格视图的相互切换</a> By LeeJay</h4>
 
+<p>在很多电商 app 中，都有列表视图和网格视图的相互切换。很多人看到第一时间想到的是用 TableView 和 CollectionView 来做切换。作者给出了一个非常简单的方法。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://liumh.com/2016/05/22/use-xcconfig-config-specific-variable/">Xcode 使用 xcconfig 文件配置环境</a> By Carya Liu</h4>
+
+<p>使用 Xcode 的 Configurations Setting File 把所有的环境配置都整合到配置文件中，这样打不同环境下的安装包时，会自动选择对应的环境参数。</p>
+
+<h4>2) <a href="http://liumh.com/2015/11/25/ios-auto-archive-ipa/">iOS 自动打包并发布脚本</a> By Carya Liu</h4>
+
+<p>本文最终实现的是使用脚本打 Ad-hoc 包，并发布测试，当然稍微修改一下脚本参数就可以打其他类型的 ipa 包了。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://zhuanlan.zhihu.com/p/22672061">互联网合并浪潮中，内部员工该何去何从？</a> By 林安</h4>
+
+<p>通过采访那些亲身经历过公司合并的同学，给每一位身处这个时代的互联网人以警醒。当有一天，公司合并这件事落在你身上时，希望你能从这篇文章中汲取干货，从容面对、冷静处理。</p>
+
+<p>@end</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-10-19T20:54:10+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>8:54 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/10/18/rn-put-it-all-together/" title="Previous Post: React Native 项目实战">&laquo; React Native 项目实战</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -194,7 +259,10 @@ $(document).bind('DOMNodeInserted', function(event) {
       var disqus_shortname = 'balloonsys';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/10/19/tech-notes-23/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2016/10/19/tech-notes-23/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

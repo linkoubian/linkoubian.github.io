@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reactnative | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-18T17:29:42+08:00</updated>
+  <updated>2016-10-19T23:02:14+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -177,7 +177,7 @@ export var DeckActions = Reflux.createActions([
 
 <p>src/components/Decks/index.js 是该页面的主文件，会包含一些子组件以完成整个页面的渲染。</p>
 
-<p>在 index.js 的 render 方法里，将这一段代码封装在一个独立的工具方法，然后再 render 里面引用其返回的 UI 结构。</p>
+<p>在 index.js 的 render 方法里，将这一段代码封装在一个独立的工具方法，然后在 render 里面引用其返回的 UI 结构。</p>
 
 <pre><code class="js">  _getDecks() {
     if (!this.state.decks) {

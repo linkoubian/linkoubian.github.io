@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-18T17:29:42+08:00</updated>
+  <updated>2016-10-19T23:02:14+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十三期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/10/19/tech-notes-23/"/>
+    <updated>2016-10-19T20:54:10+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/10/19/tech-notes-23</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 Mac 系列产品的最新消息、React Native 项目实战经验、电商类应用里常见的列表和网格视图切换方案、自动化打包等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.recode.net/2016/10/18/13323264/apple-new-macs-october-27">Apple plans to launch new Macs at an October 27 event</a> By Recode</h4>
+
+<p>苹果上一次对 MacBook Pro 进行大幅度更新是在 2012 年。根据 Recode 的消息源，苹果将在 10 月 27 日发布新的 Mac 系列产品。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://balloonsys.com/blog/2016/10/18/rn-put-it-all-together/">React Native 项目实战</a> By Linkou Bian</h4>
+
+<p>本文以 Twitter 工程师 Bonnie Eisenman 撰写的 Learning React Native 一书的第九章内容为蓝本，总结了 React Native 项目实践的一些经验。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/131de575ef9e">列表和网格视图的相互切换</a> By LeeJay</h4>
+
+<p>在很多电商 app 中，都有列表视图和网格视图的相互切换。很多人看到第一时间想到的是用 TableView 和 CollectionView 来做切换。作者给出了一个非常简单的方法。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://liumh.com/2016/05/22/use-xcconfig-config-specific-variable/">Xcode 使用 xcconfig 文件配置环境</a> By Carya Liu</h4>
+
+<p>使用 Xcode 的 Configurations Setting File 把所有的环境配置都整合到配置文件中，这样打不同环境下的安装包时，会自动选择对应的环境参数。</p>
+
+<h4>2) <a href="http://liumh.com/2015/11/25/ios-auto-archive-ipa/">iOS 自动打包并发布脚本</a> By Carya Liu</h4>
+
+<p>本文最终实现的是使用脚本打 Ad-hoc 包，并发布测试，当然稍微修改一下脚本参数就可以打其他类型的 ipa 包了。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://zhuanlan.zhihu.com/p/22672061">互联网合并浪潮中，内部员工该何去何从？</a> By 林安</h4>
+
+<p>通过采访那些亲身经历过公司合并的同学，给每一位身处这个时代的互联网人以警醒。当有一天，公司合并这件事落在你身上时，希望你能从这篇文章中汲取干货，从容面对、冷静处理。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十二期）]]></title>
@@ -222,64 +268,6 @@
 <h4>2) <a href="https://zi.com/w/a/b223XP">为什么应该开始使用 React Native 了</a> By 周楷雯</h4>
 
 <p>我并不建议你直接用 React Native 重写你的 App，像 Swift 一样，你可以先用 React Native 来实现一部分页面，让那些体力活的 UI 构建变的越快而充满乐趣。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十八期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/09/17/tech-notes-18/"/>
-    <updated>2016-09-17T09:56:15+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/09/17/tech-notes-18</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 iOS 10 隐藏特性、设计趋势、正式版发布以来的一些数据，App 和 Extension 之间如何共享数据与功能，Xcode 8 适配经验分享，UI Testing 等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://blog.mixpanel.com/2016/09/08/apple-ios-10-data/">iOS 10 Adoption Rate Nears 20% In Just Two Days</a> By mixpanel</h4>
-
-<p>Mixpanel 的 1830 亿条数据显示，iOS 10 正式发布首日有 14.81% 的设备已升级至最新版，两天内达到 21.02% 的比率。另外，美国移动运营商 T-Mobile CEO 称前四天 iPhone 7 预订量已达到 iPhone 6 同期的 4 倍。</p>
-
-<h4>2) <a href="https://www.cnet.com/how-to/ios-10-hidden-features/">23 hidden features in iOS 10</a> By Jason Cipriani</h4>
-
-<p>很多版本的很多功能可能被很多人忽视了，看看发布会上没有提到的特性有助于更大程度的利用好移动设备。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://www.raizlabs.com/dev/2016/09/preparing-ios-app-for-extensions/">Preparing Your iOS App for Extensions</a> By Nick Bonatsakis</h4>
-
-<p>Extension 是一个独立于 App 的进程，作者通过将代码放到独立的 Framework 中详述如何做到 App 和 Extension 之间数据和功能的共享。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/e9c313df746f">iOS 推送全解析</a> By pikacode</h4>
-
-<p>本文旨在对 iOS 推送进行一个完整的剖析，如果你之前对推送一无所知，那么在你认真地阅读了全文后必将变成一个推送老手，你将会对其中的各种细节和原理有充分的理解。</p>
-
-<h4>3) <a href="http://www.jianshu.com/p/f8151d556930">iOS 10 的适配问题</a></h4>
-
-<p>作者总结的总结的一些关于 iOS 10 适配方面的问题。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://masilotti.com/ui-testing-cheat-sheet/">UI Testing Cheat Sheet and Examples</a> By Joe Masilotti</h4>
-
-<p>本周把玩去年增加的 UI Testing 相关的功能时，发现当时 WWDC 视频里做的代码录制在 Xcode 7 最新版以及 Xcode 8 里有些压根就不 work 啊。另外感觉 UI Testing 并没有那么 exciting ！</p>
-
-<h4>2) 如何禁止 Xcode 8 模拟器疯狂输出系统日志 By Russell Ivanovic</h4>
-
-<p>增加环境变量 OS_ACTIVITY_MODE = disable 即可。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://isux.tencent.com/ios-10-design-trends.html">从 iOS 10 设计指南变化看设计的新趋势</a> By ISUX</h4>
-
-<p>本文主要针对已经发布的 iOS 10 的人机界面设计指南来对比分析新老版本的 iOS 系统在设计上哪些改变，有哪些设计趋势值得我们注意。</p>
-
-<h4>2) <a href="http://yuguo.us/weblog/shut-up-and-take-the-money/">为什么有些人赚钱那么轻松</a> By 余果</h4>
-
-<p>外行并不太能影响专业人士的价格，他们自己在跟自己竞争。对于真正的专业主义者，没有行业低迷这种概念存在。随波逐流的，一直是水面上的浮萍。</p>
 
 <p>@end</p>
 ]]></content>
