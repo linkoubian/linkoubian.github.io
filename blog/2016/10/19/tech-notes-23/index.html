@@ -9,7 +9,7 @@
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括 Mac 系列产品的最新消息、React Native 项目实战经验、电商类应用里常见的列表和网格视图切换方案、自动化打包等内容。 资讯 1) Apple plans to launch new Macs at an October 27 event By Recode &hellip;">
+  <meta name="description" content="本期周报主要包括 Mac 系列产品的最新消息、React Native 项目实战经验、React Native 增量升级方案、iOS 自动化打包等内容。 资讯 1) Apple plans to launch new Macs at an October 27 event By Recode &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,7 +99,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括 Mac 系列产品的最新消息、React Native 项目实战经验、电商类应用里常见的列表和网格视图切换方案、自动化打包等内容。</p>
+<div class="entry-content"><p>本期周报主要包括 Mac 系列产品的最新消息、React Native 项目实战经验、React Native 增量升级方案、iOS 自动化打包等内容。</p>
 
 <!--more-->
 
@@ -116,7 +116,11 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 <p>本文以 Twitter 工程师 Bonnie Eisenman 撰写的 Learning React Native 一书的第九章内容为蓝本，总结了 React Native 项目实践的一些经验。</p>
 
-<h4>2) <a href="http://www.jianshu.com/p/131de575ef9e">列表和网格视图的相互切换</a> By LeeJay</h4>
+<h4>2) <a href="https://github.com/cnsnake11/blog/blob/master/ReactNative%E5%BC%80%E5%8F%91%E6%8C%87%E5%AF%BC/ReactNative%E5%A2%9E%E9%87%8F%E5%8D%87%E7%BA%A7%E6%96%B9%E6%A1%88.md">React Native 增量升级方案</a> By cnsnake11</h4>
+
+<p>一般使用 RN 编写的 app 的线上使用方式，是将 react-native bundle 命令打出bundle 文件和 assets 文件夹，直接内置到 app 中，app 在 controller 中直接加载 bundle 文件，当修改了代码或者图片的时候，只要app使用新的bundle文件和assets文件夹，就完成了一次在线升级。</p>
+
+<h4>3) <a href="http://www.jianshu.com/p/131de575ef9e">列表和网格视图的相互切换</a> By LeeJay</h4>
 
 <p>在很多电商 app 中，都有列表视图和网格视图的相互切换。很多人看到第一时间想到的是用 TableView 和 CollectionView 来做切换。作者给出了一个非常简单的方法。</p>
 
