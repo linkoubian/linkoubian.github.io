@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>我 - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第二十四期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="我 Oct 10th, 2016 10:46 pm 毕业于东南大学软件工程专业，先后在伊士曼柯达、美国道富集团、中国平安工作。拥有七年多的 IT 行业工作经验，软件设计与研发、系统维护、技术支持等均有涉及，目前专注于 iOS 客户端产品的研发与管理。 Balloonsys Inc. 是我的工作室 &hellip;">
+  <meta name="description" content="本期周报主要包括新款 MacBook Pro 的产品信息及其主要卖点 Touch Bar 相关的开发指南、如何高效计算文件的哈希值等内容。 资讯 1) MacBook Pro 发布会 By mac52ipod 键盘第一排的功能键被换成了 Touch Bar ，其右侧加上了指纹识别。接口全部是 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/about/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/10/28/tech-notes-24/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -76,49 +76,110 @@ $(document).bind('DOMNodeInserted', function(event) {
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">我</h1>
-    <p class="meta">
-
-
-
-
-<time class='entry-date' datetime='2016-10-10T22:46:00+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:46 pm</span></time></p>
-  </header>
-  
-  <p>毕业于<a href="https://zh.wikipedia.org/wiki/%E4%B8%9C%E5%8D%97%E5%A4%A7%E5%AD%A6">东南大学</a>软件工程专业，先后在<a href="https://en.wikipedia.org/wiki/Kodak">伊士曼柯达</a>、<a href="https://en.wikipedia.org/wiki/State_Street_Corporation">美国道富集团</a>、<a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%B9%B3%E5%AE%89">中国平安</a>工作。拥有七年多的 IT 行业工作经验，软件设计与研发、系统维护、技术支持等均有涉及，目前专注于 iOS 客户端产品的研发与管理。</p>
-
-<p><strong>Balloonsys Inc</strong>. 是我的工作室，在业余时间做一些有意思的事儿：<br/>
-- 2010年8月为成都一家公司做兼职开发，持续两周<br/>
-- 2012年9月协助杭州一家育儿类杂志社上线 iPad 应用<br/>
-- 2014年4月签下第一份正式的 APP 开发合同，发展到两位工程师<br/>
-- 2014年5月转让 iBike Hangzhou 的所有权给 Zeonic Technology (SH)<br/>
-- 2014年6月转让 Words Ninja 的所有权给 Zeonic Technology (SH)</p>
-
-  
-    <footer>
+    
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第二十四期）</h1>
+    
+    
       <p class="meta">
         
+
+
+
+
+<time class='entry-date' datetime='2016-10-28T21:40:38+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:40 pm</span></time>
         
-
-
-
-
-<time class='entry-date' datetime='2016-10-10T22:46:00+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:46 pm</span></time>
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://balloonsys.github.io">Comments</a>
         
       </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>本期周报主要包括新款 MacBook Pro 的产品信息及其主要卖点 Touch Bar 相关的开发指南、如何高效计算文件的哈希值等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.mac52ipod.cn/post/apple-macbook-pro-2016-event-5-min-briefintroduction.php">MacBook Pro 发布会</a> By mac52ipod</h4>
+
+<p>键盘第一排的功能键被换成了 Touch Bar ，其右侧加上了指纹识别。接口全部是 Thunderbolt 3 ，普通用户为了用手上的老外设，恐怕不得不买转接器。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://blog.cee.moe/touchbar-tutorial.html">Touch Bar 入门开发指南</a> By Cee</h4>
+
+<p>作者示范一个最简单的 Touch Bar 应用：在屏幕上随机生成两个 0 到 9 的整数，通过点击 TouchBar 中的按钮来比较两个数大小，并给出结果。</p>
+
+<h4>2) <a href="http://www.joel.lopes-da-silva.com/2010/09/07/compute-md5-or-sha-hash-of-large-file-efficiently-on-ios-and-mac-os-x/">Compute hash of large file effeciently</a> By Joe Kun</h4>
+
+<p>简单粗暴的方式是把文件全部加载到 NSData 对象，但对于大文件来说效果非常不好。作者介绍了基于 CFReadStream 的实现方案。本周我实现 React Native 的增量更新时需要计算下载下来的 Patch 文件 hash 值，采用的就是文中的方案。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/mas-cli/mas">mas-cli</a> By Dmitry Rodionov</h4>
+
+<p>Mac App Store 的命令行程序，支持 brew 安装。</p>
+
+<h4>2) <a href="https://www.getpostman.com">Postman</a></h4>
+
+<p>如果你不想花钱购买 Paw，那么值得试试 Postman 这个独立的 APP（不是 Chrome 的插件喔）。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://juokaz.com/blog/becoming-a-cto">Becoming a CTO</a> By Juozas</h4>
+
+<p>如果你还在写博客阐述为何说 PHP 太逊了，那你还没准备好做 CTO 哦。那些讨厌文山会海、不喜欢和非技术人员打交道的人，也不大可能会胜任 CTO 一职的。</p>
+
+<blockquote><p>The CTO must protect the technology team from becoming a pure execution arm for ideas without tending to its own needs and its own ideas.</p></blockquote>
+
+<p>@end</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
       
-        <div class="sharing">
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-10-28T21:40:38+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:40 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
   
   
   
 </div>
 
+    
+    <p class="meta">
       
-    </footer>
-  
+        <a class="basic-alignment left" href="/blog/2016/10/19/tech-notes-23/" title="Previous Post: 平安好房iOS开发团队技术周报（第二十三期）">&laquo; 平安好房iOS开发团队技术周报（第二十三期）</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
   <section>
@@ -201,8 +262,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/about/index.html';
-        var disqus_url = 'http://balloonsys.github.io/about/index.html';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/10/28/tech-notes-24/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2016/10/28/tech-notes-24/';
         var disqus_script = 'embed.js';
       
     (function () {

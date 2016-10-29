@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-24T16:48:43+08:00</updated>
+  <updated>2016-10-29T14:20:54+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十四期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/10/28/tech-notes-24/"/>
+    <updated>2016-10-28T21:40:38+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/10/28/tech-notes-24</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括新款 MacBook Pro 的产品信息及其主要卖点 Touch Bar 相关的开发指南、如何高效计算文件的哈希值等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.mac52ipod.cn/post/apple-macbook-pro-2016-event-5-min-briefintroduction.php">MacBook Pro 发布会</a> By mac52ipod</h4>
+
+<p>键盘第一排的功能键被换成了 Touch Bar ，其右侧加上了指纹识别。接口全部是 Thunderbolt 3 ，普通用户为了用手上的老外设，恐怕不得不买转接器。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://blog.cee.moe/touchbar-tutorial.html">Touch Bar 入门开发指南</a> By Cee</h4>
+
+<p>作者示范一个最简单的 Touch Bar 应用：在屏幕上随机生成两个 0 到 9 的整数，通过点击 TouchBar 中的按钮来比较两个数大小，并给出结果。</p>
+
+<h4>2) <a href="http://www.joel.lopes-da-silva.com/2010/09/07/compute-md5-or-sha-hash-of-large-file-efficiently-on-ios-and-mac-os-x/">Compute hash of large file effeciently</a> By Joe Kun</h4>
+
+<p>简单粗暴的方式是把文件全部加载到 NSData 对象，但对于大文件来说效果非常不好。作者介绍了基于 CFReadStream 的实现方案。本周我实现 React Native 的增量更新时需要计算下载下来的 Patch 文件 hash 值，采用的就是文中的方案。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/mas-cli/mas">mas-cli</a> By Dmitry Rodionov</h4>
+
+<p>Mac App Store 的命令行程序，支持 brew 安装。</p>
+
+<h4>2) <a href="https://www.getpostman.com">Postman</a></h4>
+
+<p>如果你不想花钱购买 Paw，那么值得试试 Postman 这个独立的 APP（不是 Chrome 的插件喔）。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://juokaz.com/blog/becoming-a-cto">Becoming a CTO</a> By Juozas</h4>
+
+<p>如果你还在写博客阐述为何说 PHP 太逊了，那你还没准备好做 CTO 哦。那些讨厌文山会海、不喜欢和非技术人员打交道的人，也不大可能会胜任 CTO 一职的。</p>
+
+<blockquote><p>The CTO must protect the technology team from becoming a pure execution arm for ideas without tending to its own needs and its own ideas.</p></blockquote>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十三期）]]></title>
@@ -214,64 +262,6 @@
 <h4>1) <a href="http://www.jianshu.com/p/033a6b596155">技术 Leader 的多维度能力及成长路径</a></h4>
 
 <p>如何成功转型? 我不想丢掉技术，如何在不丢掉技术的同时还能提升管理能力！本文是作者在这个过程中经历困惑和挣扎后的一些想法。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十九期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/09/24/tech-notes-19/"/>
-    <updated>2016-09-24T06:37:43+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/09/24/tech-notes-19</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 Sierra 系统的新功能介绍，React Native 开发工具的选型与配置、调试方法及原理、如何集成到现有 APP 项目中，以及腾讯的 HttpDNS 服务详解等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.ifanr.com/app/720477">Mac 最新系统 Sierra 发布</a> By 王崇旭</h4>
-
-<p>苹果发布了 Mac 最新系统 macOS Sierra 正式版，本文梳理出了最值得留意的功能。其中最吸引我的是通用剪贴板，你值得拥有！</p>
-
-<h4>2) <a href="https://www.theguardian.com/technology/2016/sep/20/apple-patent-recycled-paper-bag">Apple patents bold new innovation – a paper bag</a></h4>
-
-<p>苹果给自家的环保纸袋注册了专利，重新定义了购物袋:-)</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://github.com/huxiaoqiao/React-Native-Study/blob/master/Blog/iOS%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90React%20Native.md">iOS 现有项目集成 React Native</a> By huxiaoqiao</h4>
-
-<p>除了文中介绍的在现有工程里集成 React Native 的具体步骤，我建议在实践时可以采用 git submodule 的方式在 iOS 工程根目录下管理独立的 React Native 相关代码库。</p>
-
-<h4>2) <a href="https://medium.com/@shaheenghiassy/deep-diving-react-native-debugging-ea406ed3a691">Deep Diving React Native Debugging</a> By Shaheen Ghiassy</h4>
-
-<p>作者深入分析了 React Native 程序调试相关的原理与步骤。</p>
-
-<h1>3) <a href="https://www.raywenderlich.com/126063/react-native-tutorial">React Native Tutorial: Building Apps with JavaScript</a> By Tom Elliott</h1>
-
-<p>著名的 Raywenderlich 博客发的一篇 React Native 教程，详细介绍了如何开发一个房产搜索应用。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://inessential.com/2016/09/22/memory_graph_debugger_tips">Memory Graph Debugger Tips</a> By Brent Simmons</h4>
-
-<p>作者试用 Memory Graph Debugger 一天总结的一些经验，非常值得一读。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/8e9df5f85bca">React Native 开发 IDE 选型及配置</a> By asce1885</h4>
-
-<p>最终我选择的是 Atom + Nuclide 的方案，同时也把平常用的很多的 Sublime 做了相应的配置。安装完成后建议先摸索下调试相关的玩法。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://mp.weixin.qq.com/s?__biz=MzA3ODgyNzcwMw==&amp;mid=201837080&amp;idx=1&amp;sn=b2a152b84df1c7dbd294ea66037cf262">鹅厂网事: HttpDNS 服务详解</a> By 廖伟健</h4>
-
-<p>腾讯公司的GSLB 团队推出了一种全新的域名解析调度系统 HttpDNS 以专治LocalDNS 解析异常以及流量调度不准。</p>
-
-<h4>2) <a href="https://zi.com/w/a/b223XP">为什么应该开始使用 React Native 了</a> By 周楷雯</h4>
-
-<p>我并不建议你直接用 React Native 重写你的 App，像 Swift 一样，你可以先用 React Native 来实现一部分页面，让那些体力活的 UI 构建变的越快而充满乐趣。</p>
 
 <p>@end</p>
 ]]></content>
