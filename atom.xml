@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-29T14:20:54+08:00</updated>
+  <updated>2016-10-30T13:37:20+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[2016 年读过的那些书]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/10/30/reading-in-2016/"/>
+    <updated>2016-10-30T13:04:09+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/10/30/reading-in-2016</id>
+    <content type="html"><![CDATA[<p>本文记录一下 2016 年我阅读过的技术及非技术类书籍。</p>
+
+<!--more-->
+
+
+<h2>技术类</h2>
+
+<h3><a href="https://img3.doubanio.com/lpic/s28523756.jpg">Core Data by Tutorial</a></h3>
+
+<p>搬来上海之前我对 Core Data 只有粗略的了解，并没有在项目中实际运用。今年五月份设计并实现统计 SDK 时首次实践了一把，然后基于此书系统的学习了下这个框架。Asynchronous fetching, Versionary and Migaration, Measuring and Boosting Performance, Multiple Managed Object Contexts 这几个主题极赞。</p>
+
+<h3><a href="http://a4.mzstatic.com/us/r30/Publication71/v4/2d/dc/54/2ddc5401-f9d7-3c05-c3d5-91afd3a45698/cover225x225.jpeg">Practical iOS 10</a></h3>
+
+<p>今年 iOS 10 的第一个 beta 出来之后，我就跟着 Paul Hudson 的电子书熟悉新的 API 及框架。每个 beta 出来都会更新几章，总得来说也还行。</p>
+
+<h3><a href="https://img3.doubanio.com/lpic/s28380910.jpg">Ionic in Action</a></h3>
+
+<p>六七月份时技术团队组织架构调整，业务研发部来了位斯坦福大学毕业的总经理，受其影响我在八月份调研了下 Ionic 在 iOS 上的应用。我用该框架粗糙的实现了好房 APP 的首页。</p>
+
+<h3><a href="https://img1.doubanio.com/lpic/s28372868.jpg">Swift Programming</a></h3>
+
+<p>Swift 这本书是去年 12 月份购于美国亚马逊的，目前已经读完第一遍。虽然 Swift 3 已经出来了，阅读此书带来的益处仍然很大。非常喜欢 BNR 出品的技术书籍。</p>
+
+<h3><a href="https://img3.doubanio.com/lpic/s28380910.jpg">Learning React Native</a></h3>
+
+<p>经过各种评估，团队认为 Ionic 并不适合我们。领导说，这个方案不行，那你得给我个可行的方案，于是引入了 React Native 这一明星框架。跟着 Twitter 工程师写的这本书可以很快入门、上手，十月份的试点项目也顺利完成。</p>
+
+<p>10 月 23 日在携程的园区里听其技术经理分享的 React Native 业务实践和性能优化受益颇多，接下来的一周我顺利完成了增量更新方案的设计与实现。</p>
+
+<h2>文学类</h2>
+
+<h3><a href="https://img3.doubanio.com/lpic/s26094273.jpg">第九个寡妇</a></h3>
+
+<p>今年九月份在公司内部做了一次技术分享，主题是 iOS 模块化架构的探索。教师节那天收到人事行政部的礼盒，其中有个 Kindle。拿到这只 Kindle 的第一个周末就读完了严歌苓的这本小说。</p>
+
+<h3><a href="https://img3.doubanio.com/lpic/s23006273.jpg">土摩托看世界</a></h3>
+
+<p>入门级 Kindle 的弊端是不适合昏暗或略拥挤的场合，这时候 iPhone 就派上了用场。所以这本游记类的书就这么 Kindle 看几章、iPhone 看几章，交替的读完。都说 Amazon 的云服务做的最好，可是 Kindle 和 Kindle for iPhone 直接的阅读位置并没有做好同步。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十四期）]]></title>
@@ -1395,64 +1441,6 @@
 <h4>2) <a href="http://weibo.com/1765732340/DENJO10bl?type=comment">软件工程方法语录</a> @钟颖</h4>
 
 <blockquote><p>也许让我对敏捷不舒服的原因是，我真的想看看敏捷教练到底做过什么不得了的项目。</p></blockquote>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第八期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/07/08/tech-notes-8/"/>
-    <updated>2016-07-08T21:44:07+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/07/08/tech-notes-8</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括苹果开源压缩算法LZFSE、iOS 10中Privacy的变化、iCloud Core Data的境遇等。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://www.infoq.com/news/2016/07/apple-lzfse-lossless-opensource">Apple开源新的压缩算法LZFSE</a></h4>
-
-<p>苹果开源了新的无损压缩算法LZFSE，该算法是去年在iOS 9和OS X 10.10中引入的。按照苹果公司的说法，LZFE的压缩增益和ZLib level 5相同，但速度要快2~3倍，能源效率也更高。</p>
-
-<h4>2) <a href="http://useyourloaf.com/blog/privacy-settings-in-ios-10/">iOS 10 Privacy的变化</a></h4>
-
-<p>比如说如果要在iOS 10中使用相机拍照，那么你得先在info.plist中作相应的声明，否则app会crash。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://blog.csdn.net/chenyufeng1991/article/details/51771728">深拷贝与浅拷贝详解</a></h4>
-
-<p>通过一句话来解释：深拷贝就是内容拷贝，浅拷贝就是指针拷贝。</p>
-
-<h4>2) <a href="http://www.iosxxoo.com/2016/05/18/%E4%B8%BA%E4%BB%80%E4%B9%88Factory%E6%96%B9%E6%B3%95%E8%A6%81%E8%BF%94%E5%9B%9Einstancetype%E8%80%8C%E4%B8%8D%E6%98%AFid/">为什么你需要使用instancetype</a></h4>
-
-<p>不管何时，只要一个class要返回它相同的类实例，使用instancetype都是更加合适的。</p>
-
-<h4>3) <a href="http://mjtsai.com/blog/2016/06/17/the-deprecation-of-icloud-core-data/">The Deprecation of iCloud Core Data</a></h4>
-
-<p>看<a href="https://developer.apple.com/reference/coredata/nspersistentstorecoordinator">NSPersistentStoreCoordinator</a>有一些标记为Deprecated的方法，今年的WWDC上该变化几乎没有被提及。一直以来都没有触碰iCloud相关的API，估计以后也没这个必要了。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://github.com/Soulghost/SGUserGuide">SGUserGuide</a></h4>
-
-<p>一个用于制作多步骤用户操作引导的框架，基于AOP，对原工程几乎无任何侵入。</p>
-
-<h4>2) <a href="https://unsplash.com">Unsplash</a></h4>
-
-<p>Unsplash 是一个分享免费高质量照片的网站，都是真实的摄影师作品。图片多是风景和静物，用作公众号文章的封面再好不过，比如此文:P</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://news.ycombinator.com/item?id=11991479">Google为什么要把数十亿行代码放到一个库中</a></h4>
-
-<p>单体大型代码库虽然有许多好处，但构建这样一个庞大的单体代码库也有几个方面的问题需要权衡。Git社区强烈建议使用更多更小的代码库，谷歌的Android和Chrome团队就使用Git。</p>
-
-<h4>2) 豆瓣语录</h4>
-
-<blockquote><p>年轻人在大城市超负荷输出价值，同时也在为各种所谓『消费升级』的概念掏着腰包：出门必打车、每周要买花、每周要请家政……等等。『打最累的工，坐最贵的专车，买最新鲜的花，请最好的家政……』#有时候，青春是一种工业原料#</p></blockquote>
 
 <p>@end</p>
 ]]></content>

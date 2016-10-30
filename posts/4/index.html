@@ -9,7 +9,7 @@
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本文主要记录Swift中关于Optional Type、集合等知识点。 ">
+  <meta name="description" content="今天同事A遇到一个问题：包含一个按钮的TableView Cell，在iOS 6、iOS 8上点击按钮正常工作，但是在iOS 7上却无反应。同事B帮忙review了下代码发现，自定义的Cell在layout时，没有像平常那样调用一下[super layoutSubviews]。 ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,43 @@ $(document).bind('DOMNodeInserted', function(event) {
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/">关于自定义表视图Cell遇到的一个bug</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-03-25T23:02:19+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>11:02 pm</span></time>
+        
+           | <a href="/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/#disqus_thread"
+             data-disqus-identifier="http://balloonsys.github.io/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今天同事A遇到一个问题：包含一个按钮的TableView Cell，在iOS 6、iOS 8上点击按钮正常工作，但是在iOS 7上却无反应。同事B帮忙review了下代码发现，自定义的Cell在layout时，没有像平常那样调用一下[super layoutSubviews]。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -411,43 +448,6 @@ $(document).bind('DOMNodeInserted', function(event) {
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/11/design-restful-api-with-python-and-flask/">基于Flask设计RESTful API</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-03-11T19:12:58+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:12 pm</span></time>
-        
-           | <a href="/blog/2014/03/11/design-restful-api-with-python-and-flask/#disqus_thread"
-             data-disqus-identifier="http://balloonsys.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Flask是一个Python WEB开发框架。接下来一段闲暇时间打算做的“西子快讯”项目中，我打算拿它来做RESTful API。虽然之前对Python并不了解，对Flask更是陌生，但爱折腾的本性促使我不断去学习。于是今天看blog、看文档，小有收获，略记一二。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/03/11/design-restful-api-with-python-and-flask/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/5">&larr; Older</a>
@@ -463,6 +463,10 @@ $(document).bind('DOMNodeInserted', function(event) {
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/10/30/reading-in-2016/">2016 年读过的那些书</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2016/10/28/tech-notes-24/">平安好房iOS开发团队技术周报（第二十四期）</a>
@@ -498,10 +502,6 @@ $(document).bind('DOMNodeInserted', function(event) {
     
       <li class="post">
         <a href="/blog/2016/09/24/tech-notes-19/">平安好房iOS开发团队技术周报（第十九期）</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2016/09/17/tech-notes-18/">平安好房iOS开发团队技术周报（第十八期）</a>
       </li>
     
   </ul>

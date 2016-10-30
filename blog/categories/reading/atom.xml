@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reading | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/reading/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-29T14:20:54+08:00</updated>
+  <updated>2016-10-30T13:37:20+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[2016 年读过的那些书]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/10/30/reading-in-2016/"/>
+    <updated>2016-10-30T13:04:09+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/10/30/reading-in-2016</id>
+    <content type="html"><![CDATA[<p>本文记录一下 2016 年我阅读过的技术及非技术类书籍。</p>
+
+<!--more-->
+
+
+<h2>技术类</h2>
+
+<h3><a href="https://img3.doubanio.com/lpic/s28523756.jpg">Core Data by Tutorial</a></h3>
+
+<p>搬来上海之前我对 Core Data 只有粗略的了解，并没有在项目中实际运用。今年五月份设计并实现统计 SDK 时首次实践了一把，然后基于此书系统的学习了下这个框架。Asynchronous fetching, Versionary and Migaration, Measuring and Boosting Performance, Multiple Managed Object Contexts 这几个主题极赞。</p>
+
+<h3><a href="http://a4.mzstatic.com/us/r30/Publication71/v4/2d/dc/54/2ddc5401-f9d7-3c05-c3d5-91afd3a45698/cover225x225.jpeg">Practical iOS 10</a></h3>
+
+<p>今年 iOS 10 的第一个 beta 出来之后，我就跟着 Paul Hudson 的电子书熟悉新的 API 及框架。每个 beta 出来都会更新几章，总得来说也还行。</p>
+
+<h3><a href="https://img3.doubanio.com/lpic/s28380910.jpg">Ionic in Action</a></h3>
+
+<p>六七月份时技术团队组织架构调整，业务研发部来了位斯坦福大学毕业的总经理，受其影响我在八月份调研了下 Ionic 在 iOS 上的应用。我用该框架粗糙的实现了好房 APP 的首页。</p>
+
+<h3><a href="https://img1.doubanio.com/lpic/s28372868.jpg">Swift Programming</a></h3>
+
+<p>Swift 这本书是去年 12 月份购于美国亚马逊的，目前已经读完第一遍。虽然 Swift 3 已经出来了，阅读此书带来的益处仍然很大。非常喜欢 BNR 出品的技术书籍。</p>
+
+<h3><a href="https://img3.doubanio.com/lpic/s28380910.jpg">Learning React Native</a></h3>
+
+<p>经过各种评估，团队认为 Ionic 并不适合我们。领导说，这个方案不行，那你得给我个可行的方案，于是引入了 React Native 这一明星框架。跟着 Twitter 工程师写的这本书可以很快入门、上手，十月份的试点项目也顺利完成。</p>
+
+<p>10 月 23 日在携程的园区里听其技术经理分享的 React Native 业务实践和性能优化受益颇多，接下来的一周我顺利完成了增量更新方案的设计与实现。</p>
+
+<h2>文学类</h2>
+
+<h3><a href="https://img3.doubanio.com/lpic/s26094273.jpg">第九个寡妇</a></h3>
+
+<p>今年九月份在公司内部做了一次技术分享，主题是 iOS 模块化架构的探索。教师节那天收到人事行政部的礼盒，其中有个 Kindle。拿到这只 Kindle 的第一个周末就读完了严歌苓的这本小说。</p>
+
+<h3><a href="https://img3.doubanio.com/lpic/s23006273.jpg">土摩托看世界</a></h3>
+
+<p>入门级 Kindle 的弊端是不适合昏暗或略拥挤的场合，这时候 iPhone 就派上了用场。所以这本游记类的书就这么 Kindle 看几章、iPhone 看几章，交替的读完。都说 Amazon 的云服务做的最好，可是 Kindle 和 Kindle for iPhone 直接的阅读位置并没有做好同步。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[这些年读过的iOS开发类图书]]></title>

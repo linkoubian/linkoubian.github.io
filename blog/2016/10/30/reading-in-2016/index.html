@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第十七期） - Balloonsys Inc.</title>
+  <title>2016 年读过的那些书 - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括苹果自动驾驶汽车项目的最新动向，移动客户端基于 WebP 的流量优化技术剖析，Xcode 8 新增的调试工具用法等内容。 资讯 1) iPhone 年年焕新计划 By tech2ipo 北京时间 9 月 8 日凌晨，苹果发布了最新一代的 iPhone 7 和 7P， &hellip;">
+  <meta name="description" content="本文记录一下 2016 年我阅读过的技术及非技术类书籍。 技术类 Core Data by Tutorial 搬来上海之前我对 Core Data 只有粗略的了解，并没有在项目中实际运用。今年五月份设计并实现统计 SDK 时首次实践了一把，然后基于此书系统的学习了下这个框架。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/09/10/tech-notes-17/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/10/30/reading-in-2016/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -80,7 +80,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第十七期）</h1>
+      <h1 class="entry-title">2016 年读过的那些书</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-09-10T17:44:51+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>5:44 pm</span></time>
+<time class='entry-date' datetime='2016-10-30T13:04:09+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:04 pm</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://balloonsys.github.io">Comments</a>
@@ -99,54 +99,44 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括苹果自动驾驶汽车项目的最新动向，移动客户端基于 WebP 的流量优化技术剖析，Xcode 8 新增的调试工具用法等内容。</p>
+<div class="entry-content"><p>本文记录一下 2016 年我阅读过的技术及非技术类书籍。</p>
 
 <!--more-->
 
 
-<h2>资讯</h2>
+<h2>技术类</h2>
 
-<h4>1) <a href="http://tech2ipo.com/10032335">iPhone 年年焕新计划</a> By tech2ipo</h4>
+<h3><a href="https://img3.doubanio.com/lpic/s28523756.jpg">Core Data by Tutorial</a></h3>
 
-<p>北京时间 9 月 8 日凌晨，苹果发布了最新一代的 iPhone 7 和 7P，这次发布会带来的另一个亮点是「年年焕新」计划。本文将帮你核算参与「年年焕新计划」永远用新 iPhone 究竟要多少钱。</p>
+<p>搬来上海之前我对 Core Data 只有粗略的了解，并没有在项目中实际运用。今年五月份设计并实现统计 SDK 时首次实践了一把，然后基于此书系统的学习了下这个框架。Asynchronous fetching, Versionary and Migaration, Measuring and Boosting Performance, Multiple Managed Object Contexts 这几个主题极赞。</p>
 
-<h4>2) <a href="http://www.nytimes.com/2016/09/10/technology/apple-is-said-to-be-rethinking-strategy-on-self-driving-cars.html?_r=0">Apple Is Said to Be Rethinking Strategy on Self-Driving Cars</a> By Daisuke</h4>
+<h3><a href="http://a4.mzstatic.com/us/r30/Publication71/v4/2d/dc/54/2ddc5401-f9d7-3c05-c3d5-91afd3a45698/cover225x225.jpeg">Practical iOS 10</a></h3>
 
-<p>纽约时报的文章称，苹果自动驾驶汽车项目经历了调整，部分业务被撤销、几十名员工被解雇。今年七月开始由 Bob Mansfield 领导后，苹果改变了该项目的关注点，从对汽车设计和生产的强调转向了对自主驾驶汽车底层技术的开发。</p>
+<p>今年 iOS 10 的第一个 beta 出来之后，我就跟着 Paul Hudson 的电子书熟悉新的 API 及框架。每个 beta 出来都会更新几章，总得来说也还行。</p>
 
-<h2>开发</h2>
+<h3><a href="https://img3.doubanio.com/lpic/s28380910.jpg">Ionic in Action</a></h3>
 
-<h4>1) <a href="https://segmentfault.com/a/1190000006266276">iOS 客户端基于 WebP 的流量优化</a> By Curiousity</h4>
+<p>六七月份时技术团队组织架构调整，业务研发部来了位斯坦福大学毕业的总经理，受其影响我在八月份调研了下 Ionic 在 iOS 上的应用。我用该框架粗糙的实现了好房 APP 的首页。</p>
 
-<p>WebP 是一种同时提供了有损压缩与无损压缩的图片文件格式。据说淘宝客户端在两年前就使用了 WebP（主要是 Native 使用），后来 H5 全面使用，WebView 的 WebP 采用插件的方式支持。</p>
+<h3><a href="https://img1.doubanio.com/lpic/s28372868.jpg">Swift Programming</a></h3>
 
-<p>注：本文比<a href="http://www.jianshu.com/p/25505a6c5d74">第十三期周报</a>中分享的相关文章更深入！</p>
+<p>Swift 这本书是去年 12 月份购于美国亚马逊的，目前已经读完第一遍。虽然 Swift 3 已经出来了，阅读此书带来的益处仍然很大。非常喜欢 BNR 出品的技术书籍。</p>
 
-<h4>2) <a href="http://qiaotongxin.cc/2016/08/22/20160822/">百度外卖 APP 头像动画效果</a> By 乔同新</h4>
+<h3><a href="https://img3.doubanio.com/lpic/s28380910.jpg">Learning React Native</a></h3>
 
-<p>某日，作者发现百度外卖的 APP 个人中心头像波浪效果很是吸引人，遂就思考如何实现这种『浪』的效果。</p>
+<p>经过各种评估，团队认为 Ionic 并不适合我们。领导说，这个方案不行，那你得给我个可行的方案，于是引入了 React Native 这一明星框架。跟着 Twitter 工程师写的这本书可以很快入门、上手，十月份的试点项目也顺利完成。</p>
 
-<h2>工具</h2>
+<p>10 月 23 日在携程的园区里听其技术经理分享的 React Native 业务实践和性能优化受益颇多，接下来的一周我顺利完成了增量更新方案的设计与实现。</p>
 
-<h4>1) <a href="https://chengwey.com/ios-10-by-tutorials-bi-ji-er/">Xcode 8 Debugging Improvements</a> By chengwey</h4>
+<h2>文学类</h2>
 
-<p>Xcode 8 增加了几项功能，让我们调试起来更加得心应手。Xcode 8 提供的调试工具可以标记竞争危害（Race Conditions）、内存泄露、以及运行时的布局约束问题。</p>
+<h3><a href="https://img3.doubanio.com/lpic/s26094273.jpg">第九个寡妇</a></h3>
 
-<h4>2) <a href="https://medium.com/ios-os-x-development/my-ios-development-toolkit-2016-ba7601b68085#.pebx7hm9c">My iOS Development Toolkit 2016</a> By Sebastian</h4>
+<p>今年九月份在公司内部做了一次技术分享，主题是 iOS 模块化架构的探索。教师节那天收到人事行政部的礼盒，其中有个 Kindle。拿到这只 Kindle 的第一个周末就读完了严歌苓的这本小说。</p>
 
-<p>作者分享了他在用的 iOS 开发工具、Web 服务、框架，以及经常浏览的技术博客等。</p>
+<h3><a href="https://img3.doubanio.com/lpic/s23006273.jpg">土摩托看世界</a></h3>
 
-<h2>其他</h2>
-
-<h4>1) <a href="http://tech.glowing.com/cn/tan-tan-yi-dong-ying-yong-de-an-quan-xing-shi-jian/">移动应用的安全性实践</a> By Glow</h4>
-
-<p>本文将从用户注册流程出发，逐步介绍 Glow 在提高数据安全性方面采用的一些策略方法，供读者参考。</p>
-
-<h4>2) <a href="https://medium.com/the-year-of-the-looking-glass/how-to-do-a-product-critique-98b657050638">How to do a Product Critique</a> By Julie Zhuo</h4>
-
-<p>这是 Facebook 产品设计总监的文章，通过对于评价产品的每个步骤的介绍，帮助产品经理更好的理解用户，提升自己的产品直觉。</p>
-
-<p>@end</p>
+<p>入门级 Kindle 的弊端是不适合昏暗或略拥挤的场合，这时候 iPhone 就派上了用场。所以这本游记类的书就这么 Kindle 看几章、iPhone 看几章，交替的读完。都说 Amazon 的云服务做的最好，可是 Kindle 和 Kindle for iPhone 直接的阅读位置并没有做好同步。</p>
 </div>
 
 
@@ -162,12 +152,12 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-09-10T17:44:51+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>5:44 pm</span></time>
+<time class='entry-date' datetime='2016-10-30T13:04:09+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:04 pm</span></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
+    <a class='category' href='/blog/categories/book/'>book</a>, <a class='category' href='/blog/categories/reading/'>reading</a>
   
 </span>
 
@@ -183,10 +173,8 @@ $(document).bind('DOMNodeInserted', function(event) {
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/09/03/tech-notes-16/" title="Previous Post: 平安好房iOS开发团队技术周报（第十六期）">&laquo; 平安好房iOS开发团队技术周报（第十六期）</a>
+        <a class="basic-alignment left" href="/blog/2016/10/28/tech-notes-24/" title="Previous Post: 平安好房iOS开发团队技术周报（第二十四期）">&laquo; 平安好房iOS开发团队技术周报（第二十四期）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/09/17/tech-notes-18/" title="Next Post: 平安好房iOS开发团队技术周报（第十八期）">平安好房iOS开发团队技术周报（第十八期） &raquo;</a>
       
     </p>
   </footer>
@@ -272,8 +260,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/09/10/tech-notes-17/';
-        var disqus_url = 'http://balloonsys.github.io/blog/2016/09/10/tech-notes-17/';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/10/30/reading-in-2016/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2016/10/30/reading-in-2016/';
         var disqus_script = 'embed.js';
       
     (function () {
