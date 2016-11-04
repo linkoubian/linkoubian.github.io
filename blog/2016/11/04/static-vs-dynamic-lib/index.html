@@ -253,15 +253,15 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 <h3>业务方工程在 Embed Framework 之后增加<a href="https://github.com/realm/realm-cocoa/blob/f07d1af226b67c0aefb150d12da3fd34c5d64087/scripts/strip-frameworks.sh">脚本</a></h3>
 
-<p>从动态库里移除不必要的处理器架构。因为改动了 ipa 中动态库的可执行文件，所以上述 strip 脚本还需要重新对动态库中可执行文件签名。正因为会重新签名，embed framework 处不必勾选 Code Sign on Copy。</p>
+<p>该脚本从动态库里移除不必要的处理器架构。因为改动了 ipa 中动态库的可执行文件，所以该 strip 脚本还需要重新对动态库中可执行文件签名。正因为会重新签名，Embed Framework 处不必勾选 Code Sign on Copy。</p>
 
 <h2>第三方依赖</h2>
 
 <p>我的做法是尽量不引入第三方代码到我的 Framework 中。但如果有些算法类的库，比如 ZipArchive 等，很多时候还是需要在 Framework 中用的。直接把第三方代码拉进来，可能会和业务方引入的代码冲突。怎么办？</p>
 
-<p>Kamil Burczyk 在他的<a href="http://blog.sigmapoint.pl/avoiding-dependency-collisions-in-ios-static-library-managed-by-cocoapods/">文章</a>中给出了一种通过脚本改类名的方案，但这样依旧有弊端。</p>
+<p>Kamil Burczyk 在他的<a href="http://blog.sigmapoint.pl/avoiding-dependency-collisions-in-ios-static-library-managed-by-cocoapods/">文章</a>中给出了一种通过脚本改类名的方案。</p>
 
-<p>我们的方案是在 Framework 的工程里，只引入第三方的头文件。要求业务方使用时确保引入第三方库。</p>
+<p>我们的方案是<strong>在 Framework 的工程里，只引入第三方的头文件</strong>。要求业务方使用时确保引入第三方库。</p>
 </div>
 
 
