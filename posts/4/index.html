@@ -9,7 +9,7 @@
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="今天同事A遇到一个问题：包含一个按钮的TableView Cell，在iOS 6、iOS 8上点击按钮正常工作，但是在iOS 7上却无反应。同事B帮忙review了下代码发现，自定义的Cell在layout时，没有像平常那样调用一下[super layoutSubviews]。 ">
+  <meta name="description" content="在iOS 8里使用UINavigationController把一个页面Push出来后，很短的时间内再次Push一个页面，并没有太大问题，两个页面相继显示。但在iOS 7里运行会遇到nested push animation can result in corrupted navigation &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,43 @@ $(document).bind('DOMNodeInserted', function(event) {
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/07/04/avoid-nested-push-animation/">Avoid Nested Push Animation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-07-04T21:28:39+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:28 pm</span></time>
+        
+           | <a href="/blog/2015/07/04/avoid-nested-push-animation/#disqus_thread"
+             data-disqus-identifier="http://balloonsys.github.io/blog/2015/07/04/avoid-nested-push-animation/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>在iOS 8里使用UINavigationController把一个页面Push出来后，很短的时间内再次Push一个页面，并没有太大问题，两个页面相继显示。但在iOS 7里运行会遇到nested push animation can result in corrupted navigation bar问题。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/07/04/avoid-nested-push-animation/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -411,43 +448,6 @@ $(document).bind('DOMNodeInserted', function(event) {
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/12/update-restful-api-with-flask-restful-extension/">利用Flask的RESTful插件简化API开发</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-03-12T13:45:07+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>1:45 pm</span></time>
-        
-           | <a href="/blog/2014/03/12/update-restful-api-with-flask-restful-extension/#disqus_thread"
-             data-disqus-identifier="http://balloonsys.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>今天尝试用Flask的RESTful插件改造昨天写的API，使之更清晰明了。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/03/12/update-restful-api-with-flask-restful-extension/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/5">&larr; Older</a>
@@ -463,6 +463,10 @@ $(document).bind('DOMNodeInserted', function(event) {
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/11/04/static-vs-dynamic-lib/">iOS 中的静态库及动态库</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2016/10/30/reading-in-2016/">2016 年读过的那些书</a>
@@ -498,10 +502,6 @@ $(document).bind('DOMNodeInserted', function(event) {
     
       <li class="post">
         <a href="/blog/2016/09/30/create-your-first-reusable-react-native-component/">创建一个 React Native 分隔线组件</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2016/09/24/tech-notes-19/">平安好房iOS开发团队技术周报（第十九期）</a>
       </li>
     
   </ul>

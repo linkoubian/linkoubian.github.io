@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-10-30T13:53:57+08:00</updated>
+  <updated>2016-11-04T19:10:24+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[iOS 中的静态库及动态库]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/11/04/static-vs-dynamic-lib/"/>
+    <updated>2016-11-04T18:48:51+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/11/04/static-vs-dynamic-lib</id>
+    <content type="html"><![CDATA[<p>本文总结在好房移动架构团队做 Framework 开发中的一些经验。</p>
+
+<!--more-->
+
+
+<p>之前负责好房 APP 开发时，需要支持 iOS 7+，所以五月份设计统计 SDK 时只好采用静态库的方式。随着 iOS 10 的推出，iOS 7 的支持默认被移除，结合 APP 的用户设备分布，目前 APP 已改为支持 iOS 8+，所以上个月设计的 React Native 增量 Patch 更新 SDK 可采用 动态库的方案。</p>
+
+<p>至于 iOS 中静态库与动态库的差别，网上有很多文章介绍，本文不再赘述，而将重点放在这两种库的具体实现过程。</p>
+
+<h2>静态库</h2>
+
+<p>Google 的工程师已经写了一篇非常赞的<a href="https://github.com/jverkoey/iOS-Framework">文章</a>，好房统计 SDK 就是按照此方案一步步配置的。经验证，效果非常好。其提供的脚本也很精致，无冗余。</p>
+
+<p>当然 Raywenderlich 的网站也有一篇<a href="https://www.raywenderlich.com/65964/create-a-framework-for-ios">文章</a>，方案类似，相比于 Google 程序员写的指南，多个实例。初次接触静态库开发的开发者可以读一读。</p>
+
+<p>故此处也不再重复介绍。</p>
+
+<h2>动态库</h2>
+
+<p>Xcode自带的 framework 模板，创建的动态库（包含资源）可以在iOS 7上跑（真机测试过），但官方要求iOS 8+，可能提交 app store 验证不过。</p>
+
+<p>更大的问题就是提交 app store 时会提示包含 x86_64, i386 &hellip; 截图<a href="http://ikennd.ac/pictures/iTC-Unsupported-Archs.png">在此</a>。该问题在 Xcode 6.3.2 之前及 7.1 上都有开发者遇到，PSPDFKit 这个库的开发者是在分发动态库时在 framework 里嵌入一个 shell 脚本，供使用方在 Xcode 里运行。我最终没有采用该方式。</p>
+
+<p>关于动态库的更多讨论，有一篇<a href="http://stackoverflow.com/questions/30963294/creating-ios-osx-frameworks-is-it-necessary-to-codesign-them-before-distributin">文章</a>值得一看。</p>
+
+<p>有上述背景知识，我们的动态库的具体做法： <br/>
+1. 仿照 jverkoey 文章中的 Aggregate 脚本，写就针对 Dynamic Library 中 Aggregate 的脚本，Easy！ <br/>
+2. 在业务方的项目设置里，Embed Framework 之后增加<a href="https://github.com/realm/realm-cocoa/blob/f07d1af226b67c0aefb150d12da3fd34c5d64087/scripts/strip-frameworks.sh">脚本</a>，从动态库里移除不必要的处理器架构。因为改动了 ipa 中动态库的可执行文件，所以上述 strip 脚本还需要重新对动态库中可执行文件重新签名） <br/>
+3. 正因为稍后会重新签名，embed framework 处不必勾选 Code Sign on Copy</p>
+
+<h2>第三方依赖</h2>
+
+<p>我的做法是尽量不引入第三方代码到我的 Framework 中。但如果有些算法类的库，比如 ZipArchive 等，很多时候还是需要在 Framework 中用的。直接把第三方代码拉进来，可能会和业务方引入的代码冲突。怎么办？</p>
+
+<p>Kamil Burczyk 在他的<a href="http://blog.sigmapoint.pl/avoiding-dependency-collisions-in-ios-static-library-managed-by-cocoapods/">文章</a>中给出了一种通过脚本改类名的方案，但这样依旧有弊端。</p>
+
+<p>我们的方案是在 Framework 的工程里，只引入第三方的头文件。要求业务方使用时确保引入第三方库。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[2016 年读过的那些书]]></title>
@@ -1401,60 +1446,6 @@
 <h4>2) <a href="https://zhuanlan.zhihu.com/p/20498277">如何为 app 设计一个合适的搜索功能？</a> by 5key</h4>
 
 <p>我们可以在 apps 中看到各种各样的设计方案，但这些方案并非适合于每一块产品。作者以市面上常见的一些设计形式对搜索功能做一个深入的剖析。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第九期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/07/15/tech-notes-9/"/>
-    <updated>2016-07-15T22:59:18+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/07/15/tech-notes-9</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括iOS 10体现出的新设计风格、Facebook移动测试实验室解密、如何构建支持多线程的Core Data Stack等。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://www.punchkick.com/blog/2016/07/08/apples-design-style-ios-10-accessibility">Apple’s new design style in iOS 10 is a statement on accessibility</a> @Connor Mason</h4>
-
-<p>Anyway，这三大原则，即Clarity、Deference、Depth，让iOS系统有别于其他平台。</p>
-
-<h4>2) <a href="https://code.facebook.com/posts/300815046928882/the-mobile-device-lab-at-the-prineville-data-center/">Facebook lifts the veil on its mobile device testing lab</a> @Antoine Reversat</h4>
-
-<p>Facebook对外揭开了其移动测试实验室的面纱，该实验室当前有60个支架，每个支架上有32只手机，用于iOS测试的支架背后分别连着8台Mini。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://blog.leancloud.cn/2835/">iOS 性能优化：Instruments 工具的救命三招</a> @LeanCloud</h4>
-
-<p>随着项目的扩大和功能的增多，没经过认真调试和优化的代码，要么任性地卡顿运行，要么低调地崩溃了之。</p>
-
-<h4>2) <a href="https://www.bignerdranch.com/blog/introducing-the-big-nerd-ranch-core-data-stack/#shared_coordinator">Introducing the Core Data Stack</a> @Robert Edwards</h4>
-
-<p>本周花了些时间学习支持多线程的Core Data Stack设计方案，Big Nerd Ranch提的这个模型感觉不错。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://github.com/TBXark/TKRadarChart">TKRadarChart</a> @TBXark</h4>
-
-<p>Swift 实现的一个类似芝麻分解读页的雷达图。</p>
-
-<h4>2) <a href="https://itunes.apple.com/cn/app/iconkit-icon-resizer-for-app/id507135296">IconKit: The Icon Resizer for App Development</a> @Appersian</h4>
-
-<p>IconKit这款老牌图标快速生成软件支持从 iOS 6 到 iOS 10、watchOS 1-2、CarPlay, Messages 贴纸、Xcode 图标集的图标生成服务。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://twitter.com/kentzhu/status/753434825978109953">产品语录</a> @kentzhu</h4>
-
-<blockquote><p>很多老板会有一个误区，我的业务上不去是因为产品没做好，产品没做好体现在APP的界面不够高端大气上档次，体现在不能三步点击找到主功能……你一个卖货的不去上街吆喝，怪货架长得不好看有个毛用？</p></blockquote>
-
-<h4>2) <a href="http://weibo.com/1765732340/DENJO10bl?type=comment">软件工程方法语录</a> @钟颖</h4>
-
-<blockquote><p>也许让我对敏捷不舒服的原因是，我真的想看看敏捷教练到底做过什么不得了的项目。</p></blockquote>
 
 <p>@end</p>
 ]]></content>

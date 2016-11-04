@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第十一期） - Balloonsys Inc.</title>
+  <title>iOS 中的静态库及动态库 - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括苹果汽车项目的人事动态、Runloop及Runtime等技术剖析、技术管理等内容。 资讯 1) 苹果发布2016财年第三季财报 @bmwmengwei 总结起来就是各种同比下降（除了服务业务），究其原因就是饱和二字。值得注意的是软件和互联网服务业务的营收一直在逆势增长， &hellip;">
+  <meta name="description" content="本文总结在好房移动架构团队做 Framework 开发中的一些经验。 之前负责好房 APP 开发时，需要支持 iOS 7+，所以五月份设计统计 SDK 时只好采用静态库的方式。随着 iOS 10 的推出，iOS 7 的支持默认被移除，结合 APP 的用户设备分布，目前 APP 已改为支持 iOS &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/07/30/tech-notes-11/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/11/04/static-vs-dynamic-lib/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -80,7 +80,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第十一期）</h1>
+      <h1 class="entry-title">iOS 中的静态库及动态库</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-07-30T11:19:16+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>11:19 am</span></time>
+<time class='entry-date' datetime='2016-11-04T18:48:51+08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>6:48 pm</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://balloonsys.github.io">Comments</a>
@@ -99,52 +99,43 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括苹果汽车项目的人事动态、Runloop及Runtime等技术剖析、技术管理等内容。</p>
+<div class="entry-content"><p>本文总结在好房移动架构团队做 Framework 开发中的一些经验。</p>
 
 <!--more-->
 
 
-<h2>资讯</h2>
+<p>之前负责好房 APP 开发时，需要支持 iOS 7+，所以五月份设计统计 SDK 时只好采用静态库的方式。随着 iOS 10 的推出，iOS 7 的支持默认被移除，结合 APP 的用户设备分布，目前 APP 已改为支持 iOS 8+，所以上个月设计的 React Native 增量 Patch 更新 SDK 可采用 动态库的方案。</p>
 
-<h4>1) <a href="http://www.mac52ipod.cn/post/apple-2016-q3-result.php">苹果发布2016财年第三季财报</a> @bmwmengwei</h4>
+<p>至于 iOS 中静态库与动态库的差别，网上有很多文章介绍，本文不再赘述，而将重点放在这两种库的具体实现过程。</p>
 
-<p>总结起来就是各种同比下降（除了服务业务），究其原因就是饱和二字。值得注意的是软件和互联网服务业务的营收一直在逆势增长，甚至已经超过电脑、iPad等业务，位居第二大营收来源了。</p>
+<h2>静态库</h2>
 
-<h4>2) <a href="http://www.bloomberg.com/news/articles/2016-07-28/apple-taps-blackberry-talent-as-car-project-takes-software-turn">Apple Hires BlackBerry Talent With Car Project Turning to Self-Driving Software</a> @markgurman</h4>
+<p>Google 的工程师已经写了一篇非常赞的<a href="https://github.com/jverkoey/iOS-Framework">文章</a>，好房统计 SDK 就是按照此方案一步步配置的。经验证，效果非常好。其提供的脚本也很精致，无冗余。</p>
 
-<p>苹果乔布斯时代元老成员Bob Mansfield从退休状态重回苹果岗位担任苹果汽车项目Project Titan掌门人。据彭博消息称，Apple已将黑莓汽车软件部门负责人Dan Dodge招至该项目的管理团队。</p>
+<p>当然 Raywenderlich 的网站也有一篇<a href="https://www.raywenderlich.com/65964/create-a-framework-for-ios">文章</a>，方案类似，相比于 Google 程序员写的指南，多个实例。初次接触静态库开发的开发者可以读一读。</p>
 
-<h2>开发</h2>
+<p>故此处也不再重复介绍。</p>
 
-<h4>1) <a href="http://www.jianshu.com/p/10121d699c32">深入研究 Runloop 与线程保活</a> @张星宇</h4>
+<h2>动态库</h2>
 
-<p>在讨论 runloop 相关的文章，以及分析 AFNetworking(2.x) 源码的文章中，我们经常会看到关于利用runloop进行线程保活的分析。</p>
+<p>Xcode自带的 framework 模板，创建的动态库（包含资源）可以在iOS 7上跑（真机测试过），但官方要求iOS 8+，可能提交 app store 验证不过。</p>
 
-<h4>2) <a href="http://www.jianshu.com/p/3182646001d1">Runtime 10种用法</a> @haojingxue_iOS</h4>
+<p>更大的问题就是提交 app store 时会提示包含 x86_64, i386 &hellip; 截图<a href="http://ikennd.ac/pictures/iTC-Unsupported-Archs.png">在此</a>。该问题在 Xcode 6.3.2 之前及 7.1 上都有开发者遇到，PSPDFKit 这个库的开发者是在分发动态库时在 framework 里嵌入一个 shell 脚本，供使用方在 Xcode 里运行。我最终没有采用该方式。</p>
 
-<p>再牛逼的技术和实战结合才有意义，本篇介绍技术尽量和实战联系起来。</p>
+<p>关于动态库的更多讨论，有一篇<a href="http://stackoverflow.com/questions/30963294/creating-ios-osx-frameworks-is-it-necessary-to-codesign-them-before-distributin">文章</a>值得一看。</p>
 
-<h2>工具</h2>
+<p>有上述背景知识，我们的动态库的具体做法： <br/>
+1. 仿照 jverkoey 文章中的 Aggregate 脚本，写就针对 Dynamic Library 中 Aggregate 的脚本，Easy！ <br/>
+2. 在业务方的项目设置里，Embed Framework 之后增加<a href="https://github.com/realm/realm-cocoa/blob/f07d1af226b67c0aefb150d12da3fd34c5d64087/scripts/strip-frameworks.sh">脚本</a>，从动态库里移除不必要的处理器架构。因为改动了 ipa 中动态库的可执行文件，所以上述 strip 脚本还需要重新对动态库中可执行文件重新签名） <br/>
+3. 正因为稍后会重新签名，embed framework 处不必勾选 Code Sign on Copy</p>
 
-<h4>1) <a href="https://git-scm.com/book/en/v1/Git-Tools-Stashing">Git之Stashing用法</a></h4>
+<h2>第三方依赖</h2>
 
-<p>有时在某分支上开发了一半，需要切到另一个分支处理个紧急的问题，而又不想立即commit代码，此时可以试试git stash这个命令。</p>
+<p>我的做法是尽量不引入第三方代码到我的 Framework 中。但如果有些算法类的库，比如 ZipArchive 等，很多时候还是需要在 Framework 中用的。直接把第三方代码拉进来，可能会和业务方引入的代码冲突。怎么办？</p>
 
-<h4>2) <a href="http://useyourloaf.com/blog/xcode-visual-memory-debugger/">Xcode Visual Memory Debugger</a> @kharrison</h4>
+<p>Kamil Burczyk 在他的<a href="http://blog.sigmapoint.pl/avoiding-dependency-collisions-in-ios-static-library-managed-by-cocoapods/">文章</a>中给出了一种通过脚本改类名的方案，但这样依旧有弊端。</p>
 
-<p>本文介绍了Xcode 8引入的全新可视化内存调试工具。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://amao12580.github.io/post/2016/05/How-to-better-manage-the-technical-team/">如何更好地管理技术团队</a> @amao12580</h4>
-
-<p>技术人员乐于被领导；但他们不喜欢被管理，不喜欢像牛一样被驱赶或指挥。管理者强迫人们服从他们的命令，而领导者则会带领他们一起工作。</p>
-
-<p>管理是客观的，没有个人感情因素，它假定被管理者没有思想和感受，被告知要做什么和该如何做。领导是引领、引导，它激励人们达成目标。</p>
-
-<p>领导力是带有强烈个人感情色彩的，它不是你能命令的，也不是你能测量评估和测试的。</p>
-
-<p>@end</p>
+<p>我们的方案是在 Framework 的工程里，只引入第三方的头文件。要求业务方使用时确保引入第三方库。</p>
 </div>
 
 
@@ -160,12 +151,12 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-07-30T11:19:16+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>11:19 am</span></time>
+<time class='entry-date' datetime='2016-11-04T18:48:51+08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>6:48 pm</span></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
+    <a class='category' href='/blog/categories/ios/'>ios</a>
   
 </span>
 
@@ -181,10 +172,8 @@ $(document).bind('DOMNodeInserted', function(event) {
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/07/23/tech-notes-10/" title="Previous Post: 平安好房iOS开发团队技术周报（第十期）">&laquo; 平安好房iOS开发团队技术周报（第十期）</a>
+        <a class="basic-alignment left" href="/blog/2016/10/30/reading-in-2016/" title="Previous Post: 2016 年读过的那些书">&laquo; 2016 年读过的那些书</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/08/06/tech-notes-12/" title="Next Post: 平安好房iOS开发团队技术周报（第十二期）">平安好房iOS开发团队技术周报（第十二期） &raquo;</a>
       
     </p>
   </footer>
@@ -270,8 +259,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/07/30/tech-notes-11/';
-        var disqus_url = 'http://balloonsys.github.io/blog/2016/07/30/tech-notes-11/';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/11/04/static-vs-dynamic-lib/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2016/11/04/static-vs-dynamic-lib/';
         var disqus_script = 'embed.js';
       
     (function () {
