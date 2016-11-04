@@ -124,8 +124,11 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 <p>关于动态库的更多讨论，有一篇<a href="http://stackoverflow.com/questions/30963294/creating-ios-osx-frameworks-is-it-necessary-to-codesign-them-before-distributin">文章</a>值得一看。</p>
 
-<p>有上述背景知识，我们的动态库的具体做法： <br/>
-1. 仿照 jverkoey 文章中的 Aggregate 脚本，写就针对 Dynamic Library 中 Aggregate 的脚本，Easy！</p>
+<p>有上述背景知识，我们的动态库的具体做法：</p>
+
+<h3>针对 Dynamic Library 工程中 Aggregate 构建目标的脚本</h3>
+
+<p>仿照 jverkoey 文章中的 Aggregate 脚本，很 Easy 的。</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -248,11 +251,9 @@ $(document).bind('DOMNodeInserted', function(event) {
 </span></code></pre></td></tr></table></div></figure>
 
 
-<ol>
-<li>在业务方的项目设置里，Embed Framework 之后增加<a href="https://github.com/realm/realm-cocoa/blob/f07d1af226b67c0aefb150d12da3fd34c5d64087/scripts/strip-frameworks.sh">脚本</a>，从动态库里移除不必要的处理器架构。因为改动了 ipa 中动态库的可执行文件，所以上述 strip 脚本还需要重新对动态库中可执行文件重新签名）</li>
-<li>正因为稍后会重新签名，embed framework 处不必勾选 Code Sign on Copy</li>
-</ol>
+<h3>业务方工程在 Embed Framework 之后增加<a href="https://github.com/realm/realm-cocoa/blob/f07d1af226b67c0aefb150d12da3fd34c5d64087/scripts/strip-frameworks.sh">脚本</a></h3>
 
+<p>从动态库里移除不必要的处理器架构。因为改动了 ipa 中动态库的可执行文件，所以上述 strip 脚本还需要重新对动态库中可执行文件签名。正因为会重新签名，embed framework 处不必勾选 Code Sign on Copy。</p>
 
 <h2>第三方依赖</h2>
 
