@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-11-04T19:21:52+08:00</updated>
+  <updated>2016-11-04T20:01:04+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十五期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/11/04/tech-notes-25/"/>
+    <updated>2016-11-04T19:51:17+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/11/04/tech-notes-25</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 新增支付宝付款、iOS 静态库及动态库开发经验总结、Today Widget 的低版本系统兼容经验等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.mac52ipod.cn/post/apple-app-store-support-alipay.php">App Store 应用商店支持支付宝付款</a> By bmwmengwei</h4>
+
+<p>此新闻看标题即可，我已经从信用卡切换到支付宝了。因为之前老是弹出信用卡信息验证的页面，希望以后不再被打扰。</p>
+
+<h4>2) <a href="http://www.ifanr.com/739044">苹果确认放弃独立显示屏业务</a></h4>
+
+<p>The Verge 编辑 Nilay Patel 从苹果方面确认，苹果选择放弃独立显示屏业务，此后苹果的显示屏生产将全部交由 LG 等生产商伙伴负责。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://balloonsys.com/blog/2016/11/04/static-vs-dynamic-lib/">iOS 静态库及动态库开发</a> By Linkou Bian</h4>
+
+<p>本文总结在好房移动架构团队做 Framework 开发中的一些经验。特别是动态库部分的实践，干货满满。</p>
+
+<h4>2) <a href="https://kristina.io/backwards-compatibility-with-ios-10-today-widgets/">Tips for Backwards Compatibility with iOS 10 Today Widgets</a> By Kristina Thai</h4>
+
+<p>作者介绍了开发 Today Widgets 兼容 iOS 9 / 10 的三点经验，对做 Widget 开发的朋友还是有益处的。</p>
+
+<h4>3) <a href="http://fanhang.me/ios/-ge-cai-gua-ying-swift2.2de-kai-fa-zhe-yan-zhong-de-swift-3.0he-ios-10">一个才适应 Swift 2.2 的开发者眼中的 Swift 3.0</a> By amoyio</h4>
+
+<p>文中大部分内容之前的周报都有过分享，重点关注下 1.7、2.5、3.8、4.4、4.5 等。关于 Swift 3 的适配，本周也有其他工程师分享了经验，吐槽居多。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://eprev.org/2015/08/06/change-os-x-network-location-based-on-the-wi-fi-network-name/">Network Location Changer</a> By Anton Eprev</h4>
+
+<p>通常在公司需要使用内网的 DNS，而我在家往往希望使用阿里的 DNS，可以在网络首选项建立不同的 Location 以满足此需求。Anton 提供的这个脚本不光可以自动切换 Location 还提供了额外的功能。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://steveblank.com/2016/10/24/why-tim-cook-is-steve-ballmer-and-why-he-still-has-his-job-at-apple">Why Tim Cook is Steve Ballmer and Why He Still Has His Job at Apple</a> By Steve Blank</h4>
+
+<p>产品型、有远见的CEO离开公司后都传位给曾经执行力强但不懂做产品的下属，公司靠着前任CEO定下的牛逼的商业模式，再加上现任强执行力的CEO，盈利还能增长几年，只是不创新了。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[iOS 静态库及动态库开发]]></title>
@@ -1510,68 +1560,6 @@
 <p>管理是客观的，没有个人感情因素，它假定被管理者没有思想和感受，被告知要做什么和该如何做。领导是引领、引导，它激励人们达成目标。</p>
 
 <p>领导力是带有强烈个人感情色彩的，它不是你能命令的，也不是你能测量评估和测试的。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/07/23/tech-notes-10/"/>
-    <updated>2016-07-23T12:19:53+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/07/23/tech-notes-10</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括iOS 10相关的交互动画详解、Auto Layout新特性，以及直播应用中的技术经验与架构分析等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://www.macstories.net/stories/exploring-the-app-stores-top-grossing-chart/">Exploring the App Store’s Top Grossing Chart</a> by Graham Spencer</h4>
-
-<p>通过对US App Store前200的iPhone应用进行分析，得到的结论是98.5%的APP免费，99%提供IAP，71%提供超过10个IAP，大部分的IAP定价在0.99~19.99美金。按类型来看，68%的是游戏、11%的是社交类应用，音乐类占7%。</p>
-
-<h4>2) <a href="http://mobile.163.com/16/0723/00/BSK9RGNF0011179O.html">带你揭开苹果Fitness Lab的神秘面纱</a> by 网易</h4>
-
-<p>Apple Watch的一个重要功能是健身追踪，这项功能测试的地方之一，就是Fitness Lab秘密实验室。其中一个数据指标是：截止到今天，Fitness Lab一共收集到16000人次的测试结果，总时长达到3万小时。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/6ac70183631e">iOS交互动画详解</a> by seedante</h4>
-
-<p>WWDC 2016 Session 216介绍了iOS 10的新动画 API，让动画与交互无缝连接。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/2521c610fac3">Xcode 8 Auto Layout新特性</a> by halfrost</h4>
-
-<p>作者是原平安付工程师，一系列关于WWDC 2016 Session的笔记很棒，推荐都看看。</p>
-
-<h4>3) <a href="http://blog.seedlab.io/understanding-responder-chain/">Understanding Responder Chain</a> by seedlab</h4>
-
-<p>本文翻译并梳理了Cocoa Event Handling Guide中的 Responder Chain 部分。</p>
-
-<h4>4) <a href="https://segmentfault.com/a/1190000005994317">揭秘直播移动APP技术实现</a> by fir.im</h4>
-
-<p>2016年直播似乎无处不在，作为一个开发者也许需要补充下关于直播技术点。本文整理了一些开发者对于直播实践项目中的技术经验与直播技术架构分析等内容，还有一些关于 iOS 、Android等相关开发干货。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://mdsb100-xiabigao.daoapp.io/2016/07/15/ios-cocoapodszu-jian-ping-hua-er-jin-zhi-hua-fang-an-ji-xiang-xi-jiao-cheng/">CocoaPods组件平滑二进制化解决方案</a> by 曹俊</h4>
-
-<p>二进制化指的是通过编译把组件的源码转换成静态库或动态库，以提高该组件在App项目中的编译速度。</p>
-
-<h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2650993379&amp;idx=1&amp;sn=69d0fe852fe2774ed1bfe4b9760e69a1">滴滴的组件化实践与优化</a> by 李贤辉</h4>
-
-<p>滴滴iOS技术负责人对组件化实践与优化的分享，包括地图业务模块解耦、界面解耦等内容。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://uxmovement.com/mobile/how-to-design-a-walkthrough-that-users-will-read/">How to Design a Walkthrough That Users Will Read</a> by anthony</h4>
-
-<p>引用文末一句：引导页应像便签一样简单易读。不过，核心功能大家熟的不能再熟且用户主要就是用其最核心的功能，那我觉得Walkthrough是多余的。比如导航，我的使用频率不高，偶尔在外打开查个路线，猝不及防的看到引导页，很烦的。</p>
-
-<h4>2) <a href="https://zhuanlan.zhihu.com/p/20498277">如何为 app 设计一个合适的搜索功能？</a> by 5key</h4>
-
-<p>我们可以在 apps 中看到各种各样的设计方案，但这些方案并非适合于每一块产品。作者以市面上常见的一些设计形式对搜索功能做一个深入的剖析。</p>
 
 <p>@end</p>
 ]]></content>

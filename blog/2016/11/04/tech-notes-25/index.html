@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第二十四期） - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第二十五期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括新款 MacBook Pro 的产品信息及其主要卖点 Touch Bar 相关的开发指南、如何高效计算文件的哈希值等内容。 资讯 1) MacBook Pro 发布会 By mac52ipod 键盘第一排的功能键被换成了 Touch Bar ，其右侧加上了指纹识别。接口全部是 &hellip;">
+  <meta name="description" content="本期周报主要包括 App Store 新增支付宝付款、iOS 静态库及动态库开发经验总结、Today Widget 的低版本系统兼容经验等内容。 资讯 1) App Store 应用商店支持支付宝付款 By bmwmengwei 此新闻看标题即可，我已经从信用卡切换到支付宝了。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/10/28/tech-notes-24/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/11/04/tech-notes-25/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -80,7 +80,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第二十四期）</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第二十五期）</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-10-28T21:40:38+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:40 pm</span></time>
+<time class='entry-date' datetime='2016-11-04T19:51:17+08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>7:51 pm</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://balloonsys.github.io">Comments</a>
@@ -99,44 +99,46 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括新款 MacBook Pro 的产品信息及其主要卖点 Touch Bar 相关的开发指南、如何高效计算文件的哈希值等内容。</p>
+<div class="entry-content"><p>本期周报主要包括 App Store 新增支付宝付款、iOS 静态库及动态库开发经验总结、Today Widget 的低版本系统兼容经验等内容。</p>
 
 <!--more-->
 
 
 <h2>资讯</h2>
 
-<h4>1) <a href="http://www.mac52ipod.cn/post/apple-macbook-pro-2016-event-5-min-briefintroduction.php">MacBook Pro 发布会</a> By mac52ipod</h4>
+<h4>1) <a href="http://www.mac52ipod.cn/post/apple-app-store-support-alipay.php">App Store 应用商店支持支付宝付款</a> By bmwmengwei</h4>
 
-<p>键盘第一排的功能键被换成了 Touch Bar ，其右侧加上了指纹识别。接口全部是 Thunderbolt 3 ，普通用户为了用手上的老外设，恐怕不得不买转接器。</p>
+<p>此新闻看标题即可，我已经从信用卡切换到支付宝了。因为之前老是弹出信用卡信息验证的页面，希望以后不再被打扰。</p>
+
+<h4>2) <a href="http://www.ifanr.com/739044">苹果确认放弃独立显示屏业务</a></h4>
+
+<p>The Verge 编辑 Nilay Patel 从苹果方面确认，苹果选择放弃独立显示屏业务，此后苹果的显示屏生产将全部交由 LG 等生产商伙伴负责。</p>
 
 <h2>开发</h2>
 
-<h4>1) <a href="http://blog.cee.moe/touchbar-tutorial.html">Touch Bar 入门开发指南</a> By Cee</h4>
+<h4>1) <a href="http://balloonsys.com/blog/2016/11/04/static-vs-dynamic-lib/">iOS 静态库及动态库开发</a> By Linkou Bian</h4>
 
-<p>作者示范一个最简单的 Touch Bar 应用：在屏幕上随机生成两个 0 到 9 的整数，通过点击 TouchBar 中的按钮来比较两个数大小，并给出结果。</p>
+<p>本文总结在好房移动架构团队做 Framework 开发中的一些经验。特别是动态库部分的实践，干货满满。</p>
 
-<h4>2) <a href="http://www.joel.lopes-da-silva.com/2010/09/07/compute-md5-or-sha-hash-of-large-file-efficiently-on-ios-and-mac-os-x/">Compute hash of large file effeciently</a> By Joe Kun</h4>
+<h4>2) <a href="https://kristina.io/backwards-compatibility-with-ios-10-today-widgets/">Tips for Backwards Compatibility with iOS 10 Today Widgets</a> By Kristina Thai</h4>
 
-<p>简单粗暴的方式是把文件全部加载到 NSData 对象，但对于大文件来说效果非常不好。作者介绍了基于 CFReadStream 的实现方案。本周我实现 React Native 的增量更新时需要计算下载下来的 Patch 文件 hash 值，采用的就是文中的方案。</p>
+<p>作者介绍了开发 Today Widgets 兼容 iOS 9 / 10 的三点经验，对做 Widget 开发的朋友还是有益处的。</p>
+
+<h4>3) <a href="http://fanhang.me/ios/-ge-cai-gua-ying-swift2.2de-kai-fa-zhe-yan-zhong-de-swift-3.0he-ios-10">一个才适应 Swift 2.2 的开发者眼中的 Swift 3.0</a> By amoyio</h4>
+
+<p>文中大部分内容之前的周报都有过分享，重点关注下 1.7、2.5、3.8、4.4、4.5 等。关于 Swift 3 的适配，本周也有其他工程师分享了经验，吐槽居多。</p>
 
 <h2>工具</h2>
 
-<h4>1) <a href="https://github.com/mas-cli/mas">mas-cli</a> By Dmitry Rodionov</h4>
+<h4>1) <a href="http://eprev.org/2015/08/06/change-os-x-network-location-based-on-the-wi-fi-network-name/">Network Location Changer</a> By Anton Eprev</h4>
 
-<p>Mac App Store 的命令行程序，支持 brew 安装。</p>
-
-<h4>2) <a href="https://www.getpostman.com">Postman</a></h4>
-
-<p>如果你不想花钱购买 Paw，那么值得试试 Postman 这个独立的 APP（不是 Chrome 的插件喔）。</p>
+<p>通常在公司需要使用内网的 DNS，而我在家往往希望使用阿里的 DNS，可以在网络首选项建立不同的 Location 以满足此需求。Anton 提供的这个脚本不光可以自动切换 Location 还提供了额外的功能。</p>
 
 <h2>其他</h2>
 
-<h4>1) <a href="https://juokaz.com/blog/becoming-a-cto">Becoming a CTO</a> By Juozas</h4>
+<h4>1) <a href="https://steveblank.com/2016/10/24/why-tim-cook-is-steve-ballmer-and-why-he-still-has-his-job-at-apple">Why Tim Cook is Steve Ballmer and Why He Still Has His Job at Apple</a> By Steve Blank</h4>
 
-<p>如果你还在写博客阐述为何说 PHP 太逊了，那你还没准备好做 CTO 哦。那些讨厌文山会海、不喜欢和非技术人员打交道的人，也不大可能会胜任 CTO 一职的。</p>
-
-<blockquote><p>The CTO must protect the technology team from becoming a pure execution arm for ideas without tending to its own needs and its own ideas.</p></blockquote>
+<p>产品型、有远见的CEO离开公司后都传位给曾经执行力强但不懂做产品的下属，公司靠着前任CEO定下的牛逼的商业模式，再加上现任强执行力的CEO，盈利还能增长几年，只是不创新了。</p>
 
 <p>@end</p>
 </div>
@@ -154,7 +156,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-10-28T21:40:38+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:40 pm</span></time>
+<time class='entry-date' datetime='2016-11-04T19:51:17+08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>7:51 pm</span></time>
       
 
 <span class="categories">
@@ -175,10 +177,8 @@ $(document).bind('DOMNodeInserted', function(event) {
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/10/19/tech-notes-23/" title="Previous Post: 平安好房iOS开发团队技术周报（第二十三期）">&laquo; 平安好房iOS开发团队技术周报（第二十三期）</a>
+        <a class="basic-alignment left" href="/blog/2016/11/04/static-vs-dynamic-lib/" title="Previous Post: iOS 静态库及动态库开发">&laquo; iOS 静态库及动态库开发</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/10/30/reading-in-2016/" title="Next Post: 2016 年读过的那些书">2016 年读过的那些书 &raquo;</a>
       
     </p>
   </footer>
@@ -264,8 +264,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/10/28/tech-notes-24/';
-        var disqus_url = 'http://balloonsys.github.io/blog/2016/10/28/tech-notes-24/';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/11/04/tech-notes-25/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2016/11/04/tech-notes-25/';
         var disqus_script = 'embed.js';
       
     (function () {
