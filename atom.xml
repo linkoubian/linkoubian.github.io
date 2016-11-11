@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-11-04T20:01:04+08:00</updated>
+  <updated>2016-11-12T00:11:58+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,11 +14,63 @@
 
   
   <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十六期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/11/11/tech-notes-26/"/>
+    <updated>2016-11-11T23:13:12+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/11/11/tech-notes-26</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括库克关于总统大选结果的内部信、携程在实践 React Native 时的优化经验、JSPatch 热修复文件的加载方案、App 销售报表工具等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://techcrunch.com/2016/11/10/tim-cook-apple-donald-trump-election-win/">Move Forward Together</a> By Jon Russell</h4>
+
+<p>关于总统大选，苹果 CEO 库克致信美国员工。他表示，无论谁都无法阻挡苹果前进的脚步，唯有携手前进才能变得更好。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://techshow.ctrip.com/archives/1459.html">携程是如何做 React Native 优化的</a> By 赵辛贵</h4>
+
+<p>两周前去携程现场聆听了赵老师的分享，真的非常非常的赞。该讲座对我而言很有启发性，可以很好的指导我新技术框架如何研究、实践、改进。</p>
+
+<h4>2) <a href="https://github.com/bang590/JSPatch/wiki/JSPatch-Loader-%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3">JSPatch Loader 使用文档</a> By 陈振焯</h4>
+
+<p>集成 JSPatch 到 iOS 项目里的主要工作在于实现一套安全的热修复脚本下发与加载的机制。花钱买时间的可以直接使用 JSPatch Platform 提供的服务，如果想自己实现，可以读一读作者写的这篇文章。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://www.appwage.com">AppWage</a> By Hankinsoft</h4>
+
+<p>这是一个开源的 iTunes Connect 报表工具，开发商的另一款收费软件 SQLPro for SQLite 我也一直在用。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/05b68c84913a">iOS 性能调优</a></h4>
+
+<p>提供了基于 Swift 3.0 模仿新浪微博的 Demo，里面针对于微博首页的复杂页面的优化做了很多的处理，页面的 FPS 一直保持在 59 ~ 60。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://highscalability.com/blog/2016/6/20/the-technology-behind-apple-photos-and-the-future-of-deep-le.html">Apple Photos 背后的技术与用户的隐私</a> By highscalability</h4>
+
+<p>Apple 使用 differential privacy 技术收集用户数据到云端训练 model，但从这些数据中无法识别出具体的个体；这些 model 下载到手机，依靠强大的手机性能进行分析，识别，归类你的照片；理论上分析的结果只留在你的手机上。</p>
+
+<h4>2) <a href="http://randsinrepose.com/archives/the-process-myth">The Process Myth</a> By Michael Lopp</h4>
+
+<p>工程师尤其看不惯公司里的各种规章制度、各种条条框框，所谓的 process；工程师们老爱问为什么，为什么会有这样那样的规定。公司里指定规章制度的人又都不给你解释为什么，“历来就如此，别问那么多为什么”。</p>
+
+<blockquote><p>It’s a myth, but healthy process is awesome if it not only documents what we care about, but is willing to defend itself. It is required to stand up to scrutiny and when a process fails to do so, it must change.</p></blockquote>
+
+<p>@end</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十五期）]]></title>
     <link href="http://balloonsys.github.io/blog/2016/11/04/tech-notes-25/"/>
     <updated>2016-11-04T19:51:17+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/11/04/tech-notes-25</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 新增支付宝付款、iOS 静态库及动态库开发经验总结、Today Widget 的低版本系统兼容经验等内容。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 新增支付宝付款、iOS 静态库及动态库开发经验总结、Today Widget 在低版本系统上的兼容开发经验等内容。</p>
 
 <!--more-->
 
@@ -1506,60 +1558,6 @@
 <p>B: 其实以业界大部分产品经理的水平99%的项目都活不到重构的那天，所以等业务量上来后再重构，会更省资源。</p>
 
 <p>最近经历了两周以『敏捷开发』为名的工厂流水线式的App开发流程，虽然及时退出，但也惹了一身骚。这样下去，该项目的代码难以再维护将是迟早的事情。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十一期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/07/30/tech-notes-11/"/>
-    <updated>2016-07-30T11:19:16+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/07/30/tech-notes-11</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括苹果汽车项目的人事动态、Runloop及Runtime等技术剖析、技术管理等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.mac52ipod.cn/post/apple-2016-q3-result.php">苹果发布2016财年第三季财报</a> @bmwmengwei</h4>
-
-<p>总结起来就是各种同比下降（除了服务业务），究其原因就是饱和二字。值得注意的是软件和互联网服务业务的营收一直在逆势增长，甚至已经超过电脑、iPad等业务，位居第二大营收来源了。</p>
-
-<h4>2) <a href="http://www.bloomberg.com/news/articles/2016-07-28/apple-taps-blackberry-talent-as-car-project-takes-software-turn">Apple Hires BlackBerry Talent With Car Project Turning to Self-Driving Software</a> @markgurman</h4>
-
-<p>苹果乔布斯时代元老成员Bob Mansfield从退休状态重回苹果岗位担任苹果汽车项目Project Titan掌门人。据彭博消息称，Apple已将黑莓汽车软件部门负责人Dan Dodge招至该项目的管理团队。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/10121d699c32">深入研究 Runloop 与线程保活</a> @张星宇</h4>
-
-<p>在讨论 runloop 相关的文章，以及分析 AFNetworking(2.x) 源码的文章中，我们经常会看到关于利用runloop进行线程保活的分析。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/3182646001d1">Runtime 10种用法</a> @haojingxue_iOS</h4>
-
-<p>再牛逼的技术和实战结合才有意义，本篇介绍技术尽量和实战联系起来。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://git-scm.com/book/en/v1/Git-Tools-Stashing">Git之Stashing用法</a></h4>
-
-<p>有时在某分支上开发了一半，需要切到另一个分支处理个紧急的问题，而又不想立即commit代码，此时可以试试git stash这个命令。</p>
-
-<h4>2) <a href="http://useyourloaf.com/blog/xcode-visual-memory-debugger/">Xcode Visual Memory Debugger</a> @kharrison</h4>
-
-<p>本文介绍了Xcode 8引入的全新可视化内存调试工具。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://amao12580.github.io/post/2016/05/How-to-better-manage-the-technical-team/">如何更好地管理技术团队</a> @amao12580</h4>
-
-<p>技术人员乐于被领导；但他们不喜欢被管理，不喜欢像牛一样被驱赶或指挥。管理者强迫人们服从他们的命令，而领导者则会带领他们一起工作。</p>
-
-<p>管理是客观的，没有个人感情因素，它假定被管理者没有思想和感受，被告知要做什么和该如何做。领导是引领、引导，它激励人们达成目标。</p>
-
-<p>领导力是带有强烈个人感情色彩的，它不是你能命令的，也不是你能测量评估和测试的。</p>
 
 <p>@end</p>
 ]]></content>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-11-04T20:01:04+08:00</updated>
+  <updated>2016-11-12T00:11:58+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,11 +14,63 @@
 
   
   <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十六期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/11/11/tech-notes-26/"/>
+    <updated>2016-11-11T23:13:12+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/11/11/tech-notes-26</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括库克关于总统大选结果的内部信、携程在实践 React Native 时的优化经验、JSPatch 热修复文件的加载方案、App 销售报表工具等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://techcrunch.com/2016/11/10/tim-cook-apple-donald-trump-election-win/">Move Forward Together</a> By Jon Russell</h4>
+
+<p>关于总统大选，苹果 CEO 库克致信美国员工。他表示，无论谁都无法阻挡苹果前进的脚步，唯有携手前进才能变得更好。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://techshow.ctrip.com/archives/1459.html">携程是如何做 React Native 优化的</a> By 赵辛贵</h4>
+
+<p>两周前去携程现场聆听了赵老师的分享，真的非常非常的赞。该讲座对我而言很有启发性，可以很好的指导我新技术框架如何研究、实践、改进。</p>
+
+<h4>2) <a href="https://github.com/bang590/JSPatch/wiki/JSPatch-Loader-%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3">JSPatch Loader 使用文档</a> By 陈振焯</h4>
+
+<p>集成 JSPatch 到 iOS 项目里的主要工作在于实现一套安全的热修复脚本下发与加载的机制。花钱买时间的可以直接使用 JSPatch Platform 提供的服务，如果想自己实现，可以读一读作者写的这篇文章。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://www.appwage.com">AppWage</a> By Hankinsoft</h4>
+
+<p>这是一个开源的 iTunes Connect 报表工具，开发商的另一款收费软件 SQLPro for SQLite 我也一直在用。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/05b68c84913a">iOS 性能调优</a></h4>
+
+<p>提供了基于 Swift 3.0 模仿新浪微博的 Demo，里面针对于微博首页的复杂页面的优化做了很多的处理，页面的 FPS 一直保持在 59 ~ 60。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://highscalability.com/blog/2016/6/20/the-technology-behind-apple-photos-and-the-future-of-deep-le.html">Apple Photos 背后的技术与用户的隐私</a> By highscalability</h4>
+
+<p>Apple 使用 differential privacy 技术收集用户数据到云端训练 model，但从这些数据中无法识别出具体的个体；这些 model 下载到手机，依靠强大的手机性能进行分析，识别，归类你的照片；理论上分析的结果只留在你的手机上。</p>
+
+<h4>2) <a href="http://randsinrepose.com/archives/the-process-myth">The Process Myth</a> By Michael Lopp</h4>
+
+<p>工程师尤其看不惯公司里的各种规章制度、各种条条框框，所谓的 process；工程师们老爱问为什么，为什么会有这样那样的规定。公司里指定规章制度的人又都不给你解释为什么，“历来就如此，别问那么多为什么”。</p>
+
+<blockquote><p>It’s a myth, but healthy process is awesome if it not only documents what we care about, but is willing to defend itself. It is required to stand up to scrutiny and when a process fails to do so, it must change.</p></blockquote>
+
+<p>@end</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十五期）]]></title>
     <link href="http://balloonsys.github.io/blog/2016/11/04/tech-notes-25/"/>
     <updated>2016-11-04T19:51:17+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/11/04/tech-notes-25</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 新增支付宝付款、iOS 静态库及动态库开发经验总结、Today Widget 的低版本系统兼容经验等内容。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 新增支付宝付款、iOS 静态库及动态库开发经验总结、Today Widget 在低版本系统上的兼容开发经验等内容。</p>
 
 <!--more-->
 
@@ -210,58 +262,6 @@
 <h4>1) <a href="http://www.jianshu.com/p/45022427cf96">用 Sketch 制作 APP 下拉刷新的 GIF 动画</a> By wythetan</h4>
 
 <p>用 Sketch 做 GIF 动画，是有个叫 AnimateMate 的很好用的插件。文中作者以分期乐的刷新动画为例进行讲解，推荐开发人员也读一读。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十一期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/10/09/tech-notes-21/"/>
-    <updated>2016-10-09T08:46:41+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/10/09/tech-notes-21</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括苹果云服务团队调整资讯、Swift 3 代码迁移经验小结、Xcode Asset Catalog 各种有用的特性、对 React Native 软件许可证解读等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://www.bloomberg.com/news/articles/2016-10-06/apple-is-said-to-plan-improved-cloud-services-by-unifying-teams">Apple Said to Plan Improved Cloud Services by Unifying Teams</a> By Bloomberg</h4>
-
-<p>据 Bloomberg 的消息称，苹果打算将 Siri、Maps、iCould、Apple Pay、Apple News、Apple Music 以及部分 iTunes 业务的云服务团队统一起来，统一后的云服务将运行在一个新的代号为 Pie 的后端。</p>
-
-<h4>2) <a href="https://blog.kapeli.com/apple-removed-dash-from-the-app-store#what-happened">Apple Has Removed Dash from the App Store</a> By Bogdan Popescu</h4>
-
-<p>非常受欢迎的 API 文档浏览器 Dash 的作者在迁移开发者账号至企业账号过程中，突然遭遇应用被下架的厄运。经沟通后得知，苹果认为该应用的评论有操控之嫌，作者很受伤。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://tech.glowing.com/cn/swift3/">Swift 3 代码迁移</a> By Glow</h4>
-
-<p>Swift 1 确立了语言的基线：安全、快速、现代。Swift 2 展现了 Swift 应该是什么，未来怎么走：面向协议的编程、开源。而 Swift 3 更多是清扫和规范。</p>
-
-<h4>2) <a href="http://blog.lessfun.com/blog/2016/09/21/ios-10-replaykit-live-and-broadcast-extension/">iOS 10 ReplayKit Live</a> By lessfun</h4>
-
-<p>在 iOS 8 及以前，第三方 App 如果想要全局录屏，只能使用私有 API。升级到 iOS 9 后，官方新增了 ReplayKit，并且禁用了录屏的私有 API。iOS 10 在 ReplayKit 保存录屏视频的基础上，增加了视频流实时直播功能。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://yulingtianxia.com/blog/2016/09/28/Let-s-Talk-About-project-pbxproj/">Let&rsquo;s Talk About project.pbxproj</a> By 杨萧玉</h4>
-
-<p>project.pbxproj 文件被包含于 Xcode 工程文件 *.xcodeproj 之中，存储着 Xcode 工程的各项配置参数。本文谈了下 project.pbxproj 的知识，并总结了一些操作工程文件的优秀轮子。</p>
-
-<h4>2) <a href="http://krakendev.io/blog/4-xcode-asset-catalog-secrets-you-need-to-know">Four Secrets about Xcode Asset Catalog</a> By Hector Matos</h4>
-
-<p>之前做项目瘦身方案时，有做过图片资源迁移至 Asset Catalog 的工作。这篇文章包含 Xcode Asset Catalog 的四项重要特性。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://arielelkin.github.io/articles/why-im-not-a-react-native-developer">Why I&rsquo;m not a React Native Developer</a> By Ariel Elkin</h4>
-
-<p>关于 RN 许可协议的解读是我获得的最大收获:</p>
-
-<blockquote><p>if I initiate any lawsuit alleging patent infringement against Facebook, my license to use React Native would be immediately terminated.</p></blockquote>
 
 <p>@end</p>
 ]]></content>
