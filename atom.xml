@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-11-18T17:23:20+08:00</updated>
+  <updated>2016-11-18T17:25:39+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -18,7 +18,7 @@
     <link href="http://balloonsys.github.io/blog/2016/11/18/tech-notes-27/"/>
     <updated>2016-11-18T15:05:15+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/11/18/tech-notes-27</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括&hellip;等内容。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括如何实现在 TableView 中滑动播放视频、无法获取真实进度时如何做个优雅的进度动画、Sierra 显示隐藏文件的快捷方式、破窗效应等内容。</p>
 
 <!--more-->
 
