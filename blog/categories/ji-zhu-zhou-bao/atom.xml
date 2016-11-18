@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-11-12T00:11:58+08:00</updated>
+  <updated>2016-11-18T17:23:20+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十七期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/11/18/tech-notes-27/"/>
+    <updated>2016-11-18T15:05:15+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/11/18/tech-notes-27</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括&hellip;等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://www.bloomberg.com/news/articles/2016-11-17/apple-is-said-to-cut-fees-video-services-will-pay-for-app-store">Apple to Cut Fees Video Services Will Pay for App Store</a> By Lucas Shaw</h4>
+
+<p>苹果计划将 App Store 视频服务接入的费用从 30% 降到 15%，这意味着视频服务供应商在苹果各平台的运营成本将大幅降低。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/3946317760a6">滑动 TableView 自动播放视频</a> By NewPan</h4>
+
+<p>本文介绍了如何实现在 TableView 中滑动播放视频，并且是没有任何卡顿的实现滑动播放视频。同时也将讲述如何确定哪一个 Cell 播放视频。</p>
+
+<h4>2) <a href="http://mrpeak.cn/blog/http-upload-progress/">Http 文件上传进度为什么不准</a> By Peak</h4>
+
+<p>做过客户端文件上传的同学会明白，基于 HTTP 的文件上传并没有看起来那么简单。我们调用第三方 http framework 上传文件的时候，都会有 API 回调告诉我们上传的具体进度，这个进度值都是不准的。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://twitter.com/24says/status/780677320197574656">Sierra 显示隐藏文件</a> By 24Says</h4>
+
+<p>macOS Sierra 里可以通过 CMD + Shift + . 直接在 Finder 里显示隐藏文件。</p>
+
+<h4>2) <a href="https://github.com/BeauNouvelle/FaceAware">FaceAware</a> By Beau Nouvelle</h4>
+
+<p>现在大部分 APP 里的个人中心页面，都会提供设置头像的功能，这个 Swift 库会根据脸部位置以最优的方式展示头像。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://blog.codinghorror.com/the-broken-window-theory/">The Broken Window Theory</a> By Jeff Atwood</h4>
+
+<p>环境中的不良现象如果被放任存在（如社区中某些建筑的窗户破了而没被修复），就会诱使人们仿效（人们就认为破窗户是正常的，就会破坏更多窗户），甚至变本加厉。公司里的垃圾代码不被及时修复，就会被更多人效仿。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十六期）]]></title>
@@ -25,7 +71,7 @@
 
 <h2>资讯</h2>
 
-<h4>1) <a href="https://techcrunch.com/2016/11/10/tim-cook-apple-donald-trump-election-win/">Move Forward Together</a> By Jon Russell</h4>
+<h4>1) <a href="https://techcrunch.com/2016/11/10/tim-cook-apple-donald-trump-election-win/">Move Forward Together</a></h4>
 
 <p>关于总统大选，苹果 CEO 库克致信美国员工。他表示，无论谁都无法阻挡苹果前进的脚步，唯有携手前进才能变得更好。</p>
 
@@ -37,7 +83,7 @@
 
 <h4>2) <a href="https://github.com/bang590/JSPatch/wiki/JSPatch-Loader-%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3">JSPatch Loader 使用文档</a> By 陈振焯</h4>
 
-<p>集成 JSPatch 到 iOS 项目里的主要工作在于实现一套安全的热修复脚本下发与加载的机制。花钱买时间的可以直接使用 JSPatch Platform 提供的服务，如果想自己实现，可以读一读作者写的这篇文章。</p>
+<p>集成 JSPatch 到 iOS 项目里的主要工作在于实现一套安全的热修复脚本下发与加载的机制。如果想自己实现而不是购买 JSPatch Platform 提供的服务，可以读一读作者写的这篇文章。</p>
 
 <h2>工具</h2>
 
@@ -208,60 +254,6 @@
 <h4>1) <a href="https://zhuanlan.zhihu.com/p/22672061">互联网合并浪潮中，内部员工该何去何从？</a> By 林安</h4>
 
 <p>通过采访那些亲身经历过公司合并的同学，给每一位身处这个时代的互联网人以警醒。当有一天，公司合并这件事落在你身上时，希望你能从这篇文章中汲取干货，从容面对、冷静处理。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十二期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/10/12/tech-notes-22/"/>
-    <updated>2016-10-12T14:04:38+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/10/12/tech-notes-22</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 Dash 作者和 Apple 沟通的详情、移动端技术方案对比、React Native 组件间数据传递、用 Sketch 制作 GIF 动画等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://cn.reuters.com/article/apple-shenzhen-research-center-idCNKCS12C0DH">苹果宣布在深圳成立研发中心</a> By 路透香港</h4>
-
-<p>苹果公司周三表示，将在中国的制造业中心深圳成立一个研发中心。在竞争日益激烈的情况下，苹果希望刺激在中国的增长。</p>
-
-<h4>2) <a href="https://blog.kapeli.com/dash-and-apple-my-side-of-the-story">Dash and Apple: My Side of the Story</a> By Bogdan Popescu</h4>
-
-<p>非常受欢迎的 API 文档浏览器 Dash 的作者公开了和苹果沟通的细节，看起来双方都没有错:-)</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://awhisper.github.io/2016/07/22/Weex-ReactNative-JSPatch/">Weex &amp; ReactNative &amp; JSPatch</a> By awhisper</h4>
-
-<p>很不错的方案对比文章，既有引述，也有作者自己的见解。</p>
-
-<h4>2) <a href="http://balloonsys.com/blog/2016/10/11/rn-components-communication/">React Native 组件间数据传递</a> By Linkou Bian</h4>
-
-<p>在 React Native 项目试点过程中，封装的组件之间难免需要传递数据。本文总结了子组件如何将数据传递到使用方，以及对开发过程中遇到的一个 setState 问题的探究。</p>
-
-<h4>3) <a href="http://inaka.net/blog/2016/09/16/function-naming-in-swift-3/">Function Naming In Swift 3</a> By Pablo Villar</h4>
-
-<p>作者总结了自己在迁移 Swift 2.2 到 Swift 3 时关于函数命名的心得。另外，官方的 <a href="https://swift.org/documentation/api-design-guidelines/">Swift API 设计指南</a>，建议多读几遍。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://github.com/markohlebar/Import">An Xcode Extension: Import</a> By Marko Hlebar</h4>
-
-<p>当一个类文件很长，此时若需要 import 头文件的话需要滚动到最顶部，然后再回到刚才的代码行继续编码，这个体验还是很不好的。该 Extension 可以让你在任意位置输入 import 语句。</p>
-
-<h4>2) <a href="https://github.com/magicismight/react-native-root-toast">React Native Toast</a> By Horcrux</h4>
-
-<p>适用于 React Native 项目的 Toast 消息提示组件。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/45022427cf96">用 Sketch 制作 APP 下拉刷新的 GIF 动画</a> By wythetan</h4>
-
-<p>用 Sketch 做 GIF 动画，是有个叫 AnimateMate 的很好用的插件。文中作者以分期乐的刷新动画为例进行讲解，推荐开发人员也读一读。</p>
 
 <p>@end</p>
 ]]></content>

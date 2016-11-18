@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-11-12T00:11:58+08:00</updated>
+  <updated>2016-11-18T17:23:20+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十七期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/11/18/tech-notes-27/"/>
+    <updated>2016-11-18T15:05:15+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/11/18/tech-notes-27</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括&hellip;等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://www.bloomberg.com/news/articles/2016-11-17/apple-is-said-to-cut-fees-video-services-will-pay-for-app-store">Apple to Cut Fees Video Services Will Pay for App Store</a> By Lucas Shaw</h4>
+
+<p>苹果计划将 App Store 视频服务接入的费用从 30% 降到 15%，这意味着视频服务供应商在苹果各平台的运营成本将大幅降低。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/3946317760a6">滑动 TableView 自动播放视频</a> By NewPan</h4>
+
+<p>本文介绍了如何实现在 TableView 中滑动播放视频，并且是没有任何卡顿的实现滑动播放视频。同时也将讲述如何确定哪一个 Cell 播放视频。</p>
+
+<h4>2) <a href="http://mrpeak.cn/blog/http-upload-progress/">Http 文件上传进度为什么不准</a> By Peak</h4>
+
+<p>做过客户端文件上传的同学会明白，基于 HTTP 的文件上传并没有看起来那么简单。我们调用第三方 http framework 上传文件的时候，都会有 API 回调告诉我们上传的具体进度，这个进度值都是不准的。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://twitter.com/24says/status/780677320197574656">Sierra 显示隐藏文件</a> By 24Says</h4>
+
+<p>macOS Sierra 里可以通过 CMD + Shift + . 直接在 Finder 里显示隐藏文件。</p>
+
+<h4>2) <a href="https://github.com/BeauNouvelle/FaceAware">FaceAware</a> By Beau Nouvelle</h4>
+
+<p>现在大部分 APP 里的个人中心页面，都会提供设置头像的功能，这个 Swift 库会根据脸部位置以最优的方式展示头像。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://blog.codinghorror.com/the-broken-window-theory/">The Broken Window Theory</a> By Jeff Atwood</h4>
+
+<p>环境中的不良现象如果被放任存在（如社区中某些建筑的窗户破了而没被修复），就会诱使人们仿效（人们就认为破窗户是正常的，就会破坏更多窗户），甚至变本加厉。公司里的垃圾代码不被及时修复，就会被更多人效仿。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十六期）]]></title>
@@ -25,7 +71,7 @@
 
 <h2>资讯</h2>
 
-<h4>1) <a href="https://techcrunch.com/2016/11/10/tim-cook-apple-donald-trump-election-win/">Move Forward Together</a> By Jon Russell</h4>
+<h4>1) <a href="https://techcrunch.com/2016/11/10/tim-cook-apple-donald-trump-election-win/">Move Forward Together</a></h4>
 
 <p>关于总统大选，苹果 CEO 库克致信美国员工。他表示，无论谁都无法阻挡苹果前进的脚步，唯有携手前进才能变得更好。</p>
 
@@ -37,7 +83,7 @@
 
 <h4>2) <a href="https://github.com/bang590/JSPatch/wiki/JSPatch-Loader-%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3">JSPatch Loader 使用文档</a> By 陈振焯</h4>
 
-<p>集成 JSPatch 到 iOS 项目里的主要工作在于实现一套安全的热修复脚本下发与加载的机制。花钱买时间的可以直接使用 JSPatch Platform 提供的服务，如果想自己实现，可以读一读作者写的这篇文章。</p>
+<p>集成 JSPatch 到 iOS 项目里的主要工作在于实现一套安全的热修复脚本下发与加载的机制。如果想自己实现而不是购买 JSPatch Platform 提供的服务，可以读一读作者写的这篇文章。</p>
 
 <h2>工具</h2>
 
@@ -1498,66 +1544,6 @@
 <h4>1) <a href="http://www.infoq.com/cn/articles/mood-and-efficiency-of-the-technical-team">技术团队的情绪与效率</a> By 申玉宝</h4>
 
 <p>压力不是来自于任务本身，而是任务在大脑中的堵塞，带来的焦虑和心理的抵触。无论你是在团队里的什么位置，这篇文章里的一些观点都是值得去了解的。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十二期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/08/06/tech-notes-12/"/>
-    <updated>2016-08-06T22:03:48+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/08/06/tech-notes-12</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括Apple收购机器学习公司、以及Apple Store营收增长等资讯，深入剖析自动释放池、Clang Attributes、POP动画引擎等。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.theverge.com/2016/8/5/12390412/apple-turi-acquisition-machine-learning">Apple buys machine learning startup Turi</a> By Jacob Kastrenakes</h4>
-
-<p>Turi的产品可以协助开发者将机器学习以及人工智能技术加入软件，可以预测用户数量变化、情绪分析、欺诈探测、分析用户使用习惯，以及更好的定位潜在用户的系统。</p>
-
-<h4>2) <a href="http://www.macrumors.com/2016/08/03/app-store-50-billion-paid-to-developers/">App Store July Sets Record as Biggest Month Ever</a> By Juli Clover</h4>
-
-<p>App Store七月营收再破纪录，开发者亦获利颇丰。库克表示，单就苹果的服务业务规模来说，明年都可以跻身财富100强。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://draveness.me/autoreleasepool/">深入解析autoreleasepool</a> By 左书祺</h4>
-
-<p>自动释放池是由AutoreleasePoolPage以双向链表的方式实现的，这篇文章会在源代码层面介绍Objective-C中自动释放池。</p>
-
-<h4>2) <a href="http://blog.sunnyxx.com/2016/05/14/clang-attributes/">Clang Attributes黑魔法小记</a> By 孙源</h4>
-
-<p>Clang Attributes是Clang提供的一种源码注解，方便开发者向编译器表达某种要求，参与控制如 Static Analyzer、Name Mangling、Code Generation等过程。</p>
-
-<h4>3) <a href="https://medium.com/@prianka.kariat/interactive-messages-in-ios-10-4cea542fbd9a">Interactive Messages in iOS 10</a> By Prianka Liz Kariat</h4>
-
-<p>本文介绍了如何使用iOS 10的Message框架开发一个tic tac toe小游戏。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://adad184.com/2015/03/11/intro-to-pop/">POP介绍与使用实践</a> By adad184</h4>
-
-<p>动画在APP开发过程中，大家多多少少都会接触到。在iOS中动画相关的部分都是基于Core Animation，但文本介绍的是来自于Facebook的动画引擎，以让你快速上手动画。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/c8152d6ce957">iOS 中 常用的第三方库</a></h4>
-
-<p>类似文章很多，这篇之所以吸引我的眼球，主要在于文中的第三方轮子使用图谱。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&amp;mid=2653057579&amp;idx=1&amp;sn=988a719765465746221f356881157a99&amp;scene=4">关于项目重构</a> By loonggg</h4>
-
-<p>读读下面这段对话，你会深有同感的。</p>
-
-<p>A: 重构80%都会失败，因为业务线的需求永远都不会停，资源有限，所以不花大代价，轻易不重构，宁可开发的慢一点，写好。</p>
-
-<p>B: 其实以业界大部分产品经理的水平99%的项目都活不到重构的那天，所以等业务量上来后再重构，会更省资源。</p>
-
-<p>最近经历了两周以『敏捷开发』为名的工厂流水线式的App开发流程，虽然及时退出，但也惹了一身骚。这样下去，该项目的代码难以再维护将是迟早的事情。</p>
 
 <p>@end</p>
 ]]></content>
