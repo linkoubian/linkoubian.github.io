@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-11-18T17:25:39+08:00</updated>
+  <updated>2016-11-20T16:43:12+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -37,7 +37,7 @@
 
 <h4>2) <a href="http://mrpeak.cn/blog/http-upload-progress/">Http 文件上传进度为什么不准</a> By Peak</h4>
 
-<p>做过客户端文件上传的同学会明白，基于 HTTP 的文件上传并没有看起来那么简单。我们调用第三方 http framework 上传文件的时候，都会有 API 回调告诉我们上传的具体进度，这个进度值都是不准的。</p>
+<p>我们调用第三方 http framework 上传文件的时候，都会有 API 回调告诉我们上传的具体进度，但这个进度值都是不准的。本文介绍了此情况下如何做个优雅的进度动画。</p>
 
 <h2>工具</h2>
 
