@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-11-23T10:16:49+08:00</updated>
+  <updated>2016-11-23T10:19:35+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -41,7 +41,7 @@
 
 <h4>3) <a href="https://github.com/johnezang/JSONKit/issues/176">JSONKit makes React Native Crash</a></h4>
 
-<p>在 React Native 0.33 时，我们是通过<a href="https://github.com/facebook/react-native/issues/7055">修改 RN 源代码</a>规避 JSONKit 引起的 Crash 问题；升级到 RN 0.35 后，将 JSONKit.m 中的 *((void **) 替换成 object_getClass 也可解决此问题。</p>
+<p>在 React Native 0.33 时，我们是通过<a href="https://github.com/facebook/react-native/issues/7055">修改 RN 源代码</a>规避 JSONKit 引起的 Crash 问题；升级到 RN 0.35 后，将 JSONKit.m 中的 *((void **)XXX) 替换成 object_getClass(XXX) 也可解决此问题。</p>
 
 <h2>工具</h2>
 
