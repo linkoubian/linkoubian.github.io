@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-11-23T10:19:35+08:00</updated>
+  <updated>2016-11-23T11:48:23+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -18,7 +18,7 @@
     <link href="http://balloonsys.github.io/blog/2016/11/23/tech-notes-28/"/>
     <updated>2016-11-23T09:31:19+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/11/23/tech-notes-28</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括&hellip;等内容。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括iPhone 6s 意外关机问题计划、APP 缓存数据线程安全问题探讨、如何用私有 API 让 WKWebView 支持 NSURLProtocol 子类、如何解决 JSONKit 引起 RN 的 Crash 等内容。</p>
 
 <!--more-->
 
@@ -45,7 +45,17 @@
 
 <h2>工具</h2>
 
+<h4>1) <a href="http://mrpeak.cn/blog/mitmproxy/">免费抓包工具 mitmproxy</a> By MrPeak</h4>
+
+<p>似乎知道 Charles 的同学更多一些，但其实 Charles 有的功能 mitmproxy 基本都有，mitmproxy 还免费，而且对于 terminal 用户来说使用起来更亲近。</p>
+
 <h2>其他</h2>
+
+<h4>1) <a href="https://techcrunch.com/2015/03/03/in-the-age-of-disintermediation-the-battle-is-all-for-the-customer-interface/">The Battle Is For The Customer Interface</a> By Tom Goodwin</h4>
+
+<p>&ldquo;Uber是最大的出租车公司，但并不拥有任何车；FB是最大的媒体公司，但不自己生产内容；阿里巴巴是最大的零售商，但没库存；Airbnb是最大的旅馆，但不拥有房产"。本文就是这被无数人转载了的话的出处。</p>
+
+<p>互联网成就了这些公司，让他们有能力提供一层看似非常简单的用户界面，大规模地连接供需双方。</p>
 
 <p>@end</p>
 ]]></content>
