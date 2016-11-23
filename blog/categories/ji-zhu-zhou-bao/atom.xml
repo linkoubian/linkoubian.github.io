@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-11-20T16:43:12+08:00</updated>
+  <updated>2016-11-23T10:13:50+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十八期）[草稿]]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/11/23/tech-notes-28/"/>
+    <updated>2016-11-23T09:31:19+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/11/23/tech-notes-28</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括&hellip;等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href=""></a> By</h4>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://blog.cnbang.net/tech/3262/">APP 缓存数据线程安全问题探讨</a> By 陈振焯</h4>
+
+<p>对于 APP 缓存数据线程安全问题，分线程 cache 和数据不可变是比较常见的解决方案，都有着不同的实现代价。前者接口不友好，后者需要配合单向数据流之类的规则或框架才会变得好用。</p>
+
+<h4>2) <a href="https://blog.yeatse.com">让 WKWebView 支持 NSURLProtocol</a> By Yeatse</h4>
+
+<p>WKWebView 还没有完善到能完全替代 UIWebView 的程度。比如 WKWebView 中的请求却完全不遵从自定义 NSURLProtocol 子类，本文介绍了如何用私有方法解决此痛点。</p>
+
+<h4>3) <a href="https://github.com/johnezang/JSONKit/issues/176">JSONKit makes React Native Crash</a></h4>
+
+<p>在 React Native 0.33 时，我们是通过<a href="https://github.com/facebook/react-native/issues/7055">修改 RN 源代码</a>规避的；升级到 RN 0.35 后，将 JSONKit.m 中的 *((void **) 替换成 object_getClass 也可解决此问题。</p>
+
+<h2>工具</h2>
+
+<h2>其他</h2>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十七期）]]></title>
@@ -204,56 +240,6 @@
 <p>如果你还在写博客阐述为何说 PHP 太逊了，那你还没准备好做 CTO 哦。那些讨厌文山会海、不喜欢和非技术人员打交道的人，也不大可能会胜任 CTO 一职的。</p>
 
 <blockquote><p>The CTO must protect the technology team from becoming a pure execution arm for ideas without tending to its own needs and its own ideas.</p></blockquote>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十三期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/10/19/tech-notes-23/"/>
-    <updated>2016-10-19T20:54:10+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/10/19/tech-notes-23</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 Mac 系列产品的最新消息、React Native 项目实战经验、React Native 增量升级方案、iOS 自动化打包等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.recode.net/2016/10/18/13323264/apple-new-macs-october-27">Apple plans to launch new Macs at an October 27 event</a> By Recode</h4>
-
-<p>苹果上一次对 MacBook Pro 进行大幅度更新是在 2012 年。根据 Recode 的消息源，苹果将在 10 月 27 日发布新的 Mac 系列产品。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://balloonsys.com/blog/2016/10/18/rn-put-it-all-together/">React Native 项目实战</a> By Linkou Bian</h4>
-
-<p>本文以 Twitter 工程师 Bonnie Eisenman 撰写的 Learning React Native 一书的第九章内容为蓝本，总结了 React Native 项目实践的一些经验。</p>
-
-<h4>2) <a href="https://github.com/cnsnake11/blog/blob/master/ReactNative%E5%BC%80%E5%8F%91%E6%8C%87%E5%AF%BC/ReactNative%E5%A2%9E%E9%87%8F%E5%8D%87%E7%BA%A7%E6%96%B9%E6%A1%88.md">React Native 增量升级方案</a> By cnsnake11</h4>
-
-<p>一般使用 RN 编写的 app 的线上使用方式，是将 react-native bundle 命令打出bundle 文件和 assets 文件夹，直接内置到 app 中，app 在 controller 中直接加载 bundle 文件，当修改了代码或者图片的时候，只要app使用新的bundle文件和assets文件夹，就完成了一次在线升级。</p>
-
-<h4>3) <a href="http://www.jianshu.com/p/131de575ef9e">列表和网格视图的相互切换</a> By LeeJay</h4>
-
-<p>在很多电商 app 中，都有列表视图和网格视图的相互切换。很多人看到第一时间想到的是用 TableView 和 CollectionView 来做切换。作者给出了一个非常简单的方法。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://liumh.com/2016/05/22/use-xcconfig-config-specific-variable/">Xcode 使用 xcconfig 文件配置环境</a> By Carya Liu</h4>
-
-<p>使用 Xcode 的 Configurations Setting File 把所有的环境配置都整合到配置文件中，这样打不同环境下的安装包时，会自动选择对应的环境参数。</p>
-
-<h4>2) <a href="http://liumh.com/2015/11/25/ios-auto-archive-ipa/">iOS 自动打包并发布脚本</a> By Carya Liu</h4>
-
-<p>本文最终实现的是使用脚本打 Ad-hoc 包，并发布测试，当然稍微修改一下脚本参数就可以打其他类型的 ipa 包了。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://zhuanlan.zhihu.com/p/22672061">互联网合并浪潮中，内部员工该何去何从？</a> By 林安</h4>
-
-<p>通过采访那些亲身经历过公司合并的同学，给每一位身处这个时代的互联网人以警醒。当有一天，公司合并这件事落在你身上时，希望你能从这篇文章中汲取干货，从容面对、冷静处理。</p>
 
 <p>@end</p>
 ]]></content>

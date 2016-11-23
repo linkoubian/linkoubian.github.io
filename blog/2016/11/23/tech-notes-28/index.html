@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第八期） - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第二十八期）[草稿] - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括苹果开源压缩算法LZFSE、iOS 10中Privacy的变化、iCloud Core Data的境遇等。 资讯 1) Apple开源新的压缩算法LZFSE 苹果开源了新的无损压缩算法LZFSE，该算法是去年在iOS 9和OS X 10.10中引入的。按照苹果公司的说法， &hellip;">
+  <meta name="description" content="本期周报主要包括&hellip;等内容。 资讯 1) By 开发 1) APP 缓存数据线程安全问题探讨 By 陈振焯 对于 APP 缓存数据线程安全问题，分线程 cache 和数据不可变是比较常见的解决方案，都有着不同的实现代价。前者接口不友好，后者需要配合单向数据流之类的规则或框架才会变得好用 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/07/08/tech-notes-8/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/11/23/tech-notes-28/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -80,7 +80,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第八期）</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第二十八期）[草稿]</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-07-08T21:44:07+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:44 pm</span></time>
+<time class='entry-date' datetime='2016-11-23T09:31:19+08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2016</span></span> <span class='time'>9:31 am</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://balloonsys.github.io">Comments</a>
@@ -99,54 +99,32 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括苹果开源压缩算法LZFSE、iOS 10中Privacy的变化、iCloud Core Data的境遇等。</p>
+<div class="entry-content"><p>本期周报主要包括&hellip;等内容。</p>
 
 <!--more-->
 
 
 <h2>资讯</h2>
 
-<h4>1) <a href="https://www.infoq.com/news/2016/07/apple-lzfse-lossless-opensource">Apple开源新的压缩算法LZFSE</a></h4>
-
-<p>苹果开源了新的无损压缩算法LZFSE，该算法是去年在iOS 9和OS X 10.10中引入的。按照苹果公司的说法，LZFE的压缩增益和ZLib level 5相同，但速度要快2~3倍，能源效率也更高。</p>
-
-<h4>2) <a href="http://useyourloaf.com/blog/privacy-settings-in-ios-10/">iOS 10 Privacy的变化</a></h4>
-
-<p>比如说如果要在iOS 10中使用相机拍照，那么你得先在info.plist中作相应的声明，否则app会crash。</p>
+<h4>1) <a href=""></a> By</h4>
 
 <h2>开发</h2>
 
-<h4>1) <a href="http://blog.csdn.net/chenyufeng1991/article/details/51771728">深拷贝与浅拷贝详解</a></h4>
+<h4>1) <a href="http://blog.cnbang.net/tech/3262/">APP 缓存数据线程安全问题探讨</a> By 陈振焯</h4>
 
-<p>通过一句话来解释：深拷贝就是内容拷贝，浅拷贝就是指针拷贝。</p>
+<p>对于 APP 缓存数据线程安全问题，分线程 cache 和数据不可变是比较常见的解决方案，都有着不同的实现代价。前者接口不友好，后者需要配合单向数据流之类的规则或框架才会变得好用。</p>
 
-<h4>2) <a href="http://www.iosxxoo.com/2016/05/18/%E4%B8%BA%E4%BB%80%E4%B9%88Factory%E6%96%B9%E6%B3%95%E8%A6%81%E8%BF%94%E5%9B%9Einstancetype%E8%80%8C%E4%B8%8D%E6%98%AFid/">为什么你需要使用instancetype</a></h4>
+<h4>2) <a href="https://blog.yeatse.com">让 WKWebView 支持 NSURLProtocol</a> By Yeatse</h4>
 
-<p>不管何时，只要一个class要返回它相同的类实例，使用instancetype都是更加合适的。</p>
+<p>WKWebView 还没有完善到能完全替代 UIWebView 的程度。比如 WKWebView 中的请求却完全不遵从自定义 NSURLProtocol 子类，本文介绍了如何用私有方法解决此痛点。</p>
 
-<h4>3) <a href="http://mjtsai.com/blog/2016/06/17/the-deprecation-of-icloud-core-data/">The Deprecation of iCloud Core Data</a></h4>
+<h4>3) <a href="https://github.com/johnezang/JSONKit/issues/176">JSONKit makes React Native Crash</a></h4>
 
-<p>看<a href="https://developer.apple.com/reference/coredata/nspersistentstorecoordinator">NSPersistentStoreCoordinator</a>有一些标记为Deprecated的方法，今年的WWDC上该变化几乎没有被提及。一直以来都没有触碰iCloud相关的API，估计以后也没这个必要了。</p>
+<p>在 React Native 0.33 时，我们是通过<a href="https://github.com/facebook/react-native/issues/7055">修改 RN 源代码</a>规避的；升级到 RN 0.35 后，将 JSONKit.m 中的 *((void **) 替换成 object_getClass 也可解决此问题。</p>
 
 <h2>工具</h2>
 
-<h4>1) <a href="https://github.com/Soulghost/SGUserGuide">SGUserGuide</a></h4>
-
-<p>一个用于制作多步骤用户操作引导的框架，基于AOP，对原工程几乎无任何侵入。</p>
-
-<h4>2) <a href="https://unsplash.com">Unsplash</a></h4>
-
-<p>Unsplash 是一个分享免费高质量照片的网站，都是真实的摄影师作品。图片多是风景和静物，用作公众号文章的封面再好不过，比如此文:P</p>
-
 <h2>其他</h2>
-
-<h4>1) <a href="https://news.ycombinator.com/item?id=11991479">Google为什么要把数十亿行代码放到一个库中</a></h4>
-
-<p>单体大型代码库虽然有许多好处，但构建这样一个庞大的单体代码库也有几个方面的问题需要权衡。Git社区强烈建议使用更多更小的代码库，谷歌的Android和Chrome团队就使用Git。</p>
-
-<h4>2) 豆瓣语录</h4>
-
-<blockquote><p>年轻人在大城市超负荷输出价值，同时也在为各种所谓『消费升级』的概念掏着腰包：出门必打车、每周要买花、每周要请家政……等等。『打最累的工，坐最贵的专车，买最新鲜的花，请最好的家政……』#有时候，青春是一种工业原料#</p></blockquote>
 
 <p>@end</p>
 </div>
@@ -164,7 +142,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-07-08T21:44:07+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:44 pm</span></time>
+<time class='entry-date' datetime='2016-11-23T09:31:19+08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2016</span></span> <span class='time'>9:31 am</span></time>
       
 
 <span class="categories">
@@ -185,10 +163,8 @@ $(document).bind('DOMNodeInserted', function(event) {
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/07/01/tech-notes-7/" title="Previous Post: 平安好房iOS开发团队技术周报（第七期）">&laquo; 平安好房iOS开发团队技术周报（第七期）</a>
+        <a class="basic-alignment left" href="/blog/2016/11/18/tech-notes-27/" title="Previous Post: 平安好房iOS开发团队技术周报（第二十七期）">&laquo; 平安好房iOS开发团队技术周报（第二十七期）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/07/15/tech-notes-9/" title="Next Post: 平安好房iOS开发团队技术周报（第九期）">平安好房iOS开发团队技术周报（第九期） &raquo;</a>
       
     </p>
   </footer>
@@ -274,8 +250,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/07/08/tech-notes-8/';
-        var disqus_url = 'http://balloonsys.github.io/blog/2016/07/08/tech-notes-8/';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/11/23/tech-notes-28/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2016/11/23/tech-notes-28/';
         var disqus_script = 'embed.js';
       
     (function () {

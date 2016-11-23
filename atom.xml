@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-11-20T16:43:12+08:00</updated>
+  <updated>2016-11-23T10:13:50+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十八期）[草稿]]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/11/23/tech-notes-28/"/>
+    <updated>2016-11-23T09:31:19+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/11/23/tech-notes-28</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括&hellip;等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href=""></a> By</h4>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://blog.cnbang.net/tech/3262/">APP 缓存数据线程安全问题探讨</a> By 陈振焯</h4>
+
+<p>对于 APP 缓存数据线程安全问题，分线程 cache 和数据不可变是比较常见的解决方案，都有着不同的实现代价。前者接口不友好，后者需要配合单向数据流之类的规则或框架才会变得好用。</p>
+
+<h4>2) <a href="https://blog.yeatse.com">让 WKWebView 支持 NSURLProtocol</a> By Yeatse</h4>
+
+<p>WKWebView 还没有完善到能完全替代 UIWebView 的程度。比如 WKWebView 中的请求却完全不遵从自定义 NSURLProtocol 子类，本文介绍了如何用私有方法解决此痛点。</p>
+
+<h4>3) <a href="https://github.com/johnezang/JSONKit/issues/176">JSONKit makes React Native Crash</a></h4>
+
+<p>在 React Native 0.33 时，我们是通过<a href="https://github.com/facebook/react-native/issues/7055">修改 RN 源代码</a>规避的；升级到 RN 0.35 后，将 JSONKit.m 中的 *((void **) 替换成 object_getClass 也可解决此问题。</p>
+
+<h2>工具</h2>
+
+<h2>其他</h2>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十七期）]]></title>
@@ -1500,56 +1536,6 @@
 <h4>2) <a href="https://www.codementor.io/react-js/tutorial/react-native-vs-ionic">React Native vs Ionic</a> By Frédéric Massart</h4>
 
 <p>近日看到某司某所谓的 Android 架构师在技术选型时写的 RN 与 Weex 对比文章，且不说候选对象用 Weex 而不是诸如 Ionic 等，其文中对 RN 的多处表述也是滑稽的很。从本周开始，在 RN 及 Ionic 上花些时间。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十三期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/08/14/tech-notes-13/"/>
-    <updated>2016-08-14T10:08:14+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/08/14/tech-notes-13</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 Apple 在 Music 及 Heath 领域的两则资讯，WebP 在 iOS 开发中的实践，以及 IPA 瘦身相关的工具介绍等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.fastcompany.com/3062124/tim-cooks-apple/apple-musics-bozoma-saint-john-its-about-passion-not-algorithms">Apple Music’s Bozoma Saint John: It’s About Passion, Not Algorithms</a> By Mark Sullivan</h4>
-
-<p>Apple Music 市场总监 Bozoma Saint John 介绍说：与算法相比，Apple Music 更倾向于人工来推荐。</p>
-
-<h4>2) <a href="http://appleinsider.com/articles/16/08/11/apple-hires-flipboard-co-founder-evan-doll-to-direct-work-on-health-software">Apple hires Flipboard co-founder Evan Doll to direct work on health software</a> By Roger Fingas</h4>
-
-<p>相比于 Apple 董事会的大佬抛售股票的资讯，我对 Flipboard 联合创始人 Doll 重回苹果担任 Health Software Engineering 的 Director 这则新闻更感兴趣。因为斯坦福第一期的 iPhone 开发课程中 Doll 是讲师之一，印象深刻。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://www.raywenderlich.com/133224/how-to-create-an-uber-splash-screen">How To Create an Uber Splash Screen</a> By Derek Selander</h4>
-
-<p>本文介绍了如何基于 CALayer 及 CAAnimation 创建类似 Uber 启动时的动画。如果对动画感兴趣，推荐读一读 iOS Animations by Tutorials 这本书。</p>
-
-<h4>2) <a href="https://kevinmky.github.io/2015/12/17/webP-%E5%9C%A8-iOS-%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">webP 格式图片在 iOS 中的应用</a> By KevinMkY</h4>
-
-<p>本文从 UIImageView 及 HTML5 页面两方面介绍了如何在 iOS 应用 WebP 格式的图片资源。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://blog.lessfun.com/blog/2015/09/02/find-unused-resources-in-xcode-project/">查找XCode工程中没被使用的图片资源</a> By lessfun</h4>
-
-<p>随着 APP 版本的迭代，IPA 越来越大，其中很大一部分原因是很多图片（当然可能还有gif等）资源虽然不再被使用，但依旧存在于工程里。本文介绍了现存的各种方案，并提供了一个小程序做相关的清理工作。</p>
-
-<h4>2) <a href="https://github.com/huanxsd/LinkMap">LinkMap解析工具：检查每个类占用大小</a> By Suteki</h4>
-
-<p>若想知道 APP 的可执行文件的具体构成，里面的内容都是些什么，哪些库占用空间较高，可以先利用 Xcode 生成 LinkMap 文件，再导入到 LinkMap 解析工具分析。其中的原理可参考这篇<a href="http://blog.cnbang.net/tech/2296/">iOS APP可执行文件的组成</a>。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://www.infoq.com/cn/articles/mood-and-efficiency-of-the-technical-team">技术团队的情绪与效率</a> By 申玉宝</h4>
-
-<p>压力不是来自于任务本身，而是任务在大脑中的堵塞，带来的焦虑和心理的抵触。无论你是在团队里的什么位置，这篇文章里的一些观点都是值得去了解的。</p>
 
 <p>@end</p>
 ]]></content>
