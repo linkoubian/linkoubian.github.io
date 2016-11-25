@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-11-23T16:14:16+08:00</updated>
+  <updated>2016-11-25T11:42:37+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -48,6 +48,10 @@
 <h4>1) <a href="http://mrpeak.cn/blog/mitmproxy/">免费抓包工具 mitmproxy</a> By MrPeak</h4>
 
 <p>似乎知道 Charles 的同学更多一些，但其实 Charles 有的功能 mitmproxy 基本都有，mitmproxy 还免费，而且对于 terminal 用户来说使用起来更亲近。</p>
+
+<h4>2) <a href="http://www.waerfa.com/icloud-calendar-spam-clean-methods">iCloud 日历垃圾广告清理办法探讨</a> By Waerfa</h4>
+
+<p>今日被黑五的日历垃圾广告干扰，采用文中的『建立分类、设置垃圾广告为刚建立的分类、删除分类』大法清理干净。</p>
 
 <h2>其他</h2>
 
