@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第六期） - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第二十九期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括iOS 10中通知相关的变化、Swift中try的用法、颜色与标注稿不一致的问题等。 资讯 1) Apple discontinues Thunderbolt Display 服役五年的 Thunderbolt Display已经正式停产， &hellip;">
+  <meta name="description" content="本期周报主要包括全民 K 歌 RN 的接入实践中分包与加载的方案、安全的处理 JSON 中的空值、A/B 测试里常见的辛普森悖论等内容。 资讯 1) Apple Music 推出学生优惠 By Apple 如果您就读于颁发学位的大专或大学，您就能以折扣会员价加入 Apple Music，最长可享受 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/06/27/tech-notes-6/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/12/02/tech-notes-29/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -80,7 +80,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第六期）</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第二十九期）</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-06-27T09:57:31+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:57 am</span></time>
+<time class='entry-date' datetime='2016-12-02T09:34:52+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>9:34 am</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://balloonsys.github.io">Comments</a>
@@ -99,58 +99,42 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括iOS 10中通知相关的变化、Swift中try的用法、颜色与标注稿不一致的问题等。</p>
+<div class="entry-content"><p>本期周报主要包括全民 K 歌 RN 的接入实践中分包与加载的方案、安全的处理 JSON 中的空值、A/B 测试里常见的辛普森悖论等内容。</p>
 
 <!--more-->
 
 
 <h2>资讯</h2>
 
-<h4>1) <a href="http://www.loopinsight.com/2016/06/23/apple-discontinues-thunderbolt-display/">Apple discontinues Thunderbolt Display</a></h4>
+<h4>1) <a href="https://support.apple.com/zh-cn/HT205928">Apple Music 推出学生优惠</a> By Apple</h4>
 
-<p>服役五年的 Thunderbolt Display已经正式停产，剩下的存货仍会在Apple线上商店与零售点销售。</p>
-
-<h4>2) <a href="http://fichek.com/blog/wwdc16-notifications/">WWDC16 - New in Notifications</a></h4>
-
-<p>Notification相关的API从UIKit挪到了新的framework，<a href="http://fichek.com/contact/">Filip Radelic</a>对其变化做了很好的总结。</p>
-
-<p>另附一篇介绍Notification的中文文章<a href="http://www.jianshu.com/p/9b720efe3779">iOS 10  推送Notification新特性</a>。</p>
+<p>如果您就读于颁发学位的大专或大学，您就能以折扣会员价加入 Apple Music，最长可享受 48 个月的优惠。这段时间不需要是连续的。</p>
 
 <h2>开发</h2>
 
-<h4>1) <a href="https://ashfurrow.com/blog/uicollectionview-unjustly-maligned/">UICollectionView: Unjustly Maligned</a></h4>
+<h4>1) <a href="http://geek.csdn.net/news/detail/122668">全民 K 歌 React Native 最佳实践</a> By 袁聪</h4>
 
-<p>500px首个iPad版本、Artsy都出自本文作者<a href="https://ashfurrow.com/about/">Ash Furrow</a>之手。同时他也是iOS UICollectionView: The Complete Guide一书的作者。</p>
+<p>全民 K 歌去年十月份完成了 RN 的接入实践，本文介绍了如何去实践根据业务分包、以及客户端怎么去加载这两方面内容。</p>
 
-<p>Ash在文中介绍了如何用UICollectionView构建Artsy的页面。</p>
+<h4>2) <a href="http://honglu.me/2015/04/11/json%E4%B8%AD%E5%A4%B4%E7%96%BC%E7%9A%84null/">json 中头疼的 null</a> By 鸿禄</h4>
 
-<p>另外有两篇文章不错，建议一读：<a href="https://adoptioncurve.net/archives/2016/06/collection-view-updates-in-ios10/">Collection View Updates in iOS10 Part 1</a>和<a href="https://adoptioncurve.net/archives/2016/06/collection-view-updates-in-ios10-part-2/">Collection View Updates in iOS10 Part 2</a>。</p>
-
-<h4>2) <a href="http://stackoverflow.com/a/32390612">Swift - try, try! &amp; try?的区别</a></h4>
-
-<p>guard let result = try? doSomething() else {}是一个较为常用的代码范式。另外这种范式下若有异常，会被『翻译』成nil，所以不会捕获到具体的出错原因。故适用于只关注成功或失败这一结果的场景。</p>
+<p>在服务器返回 json 数据的时候，时常会出现值为 null 的键值对。json 解析的时候，就会把这个 null 解析成 NSNull 的对象，我们向这个 NSNull 对象发送消息的时候就会遇到 crash 的问题。本文介绍了应对之策。</p>
 
 <h2>工具</h2>
 
-<h4>1) <a href="http://jaykon.github.io/2014/06/17/ioskai-fa-zhong-de-yan-se-wen-ti/">iOS开发中的颜色问题</a></h4>
+<h4>1) <a href="https://github.com/joeldev/JLRoutes">JLRoutes</a> By Joel Levin</h4>
 
-<p>设计师给的颜色值标注，设置到app里显示不一致？可能和色彩标准不同有关。比如设计师用的是Generic RBG或者Adobe RGB，而程序里是基于sRGB。</p>
-
-<h4>2) <a href="https://github.com/gskbyte/GSKStretchyHeaderView">GSKStretchyHeaderView</a></h4>
-
-<p>类似Twitter个人中心页面的弹性视图。</p>
+<p>本周看了 JLRoutes 的源代码，拿来做 APP 的 URL 路由非常不错。不经意间会发现有些代码段就是插入排序算法。</p>
 
 <h2>其他</h2>
 
-<h4>1) <a href="https://github.com/linkedin/swift-style-guide">Swift Style Guide</a></h4>
+<h4>1) <a href="http://www.appadhoc.com/blog/simpson-paradox-in-abtesting/">浅谈 A/B 测试里常见的辛普森悖论</a> By appadhoc</h4>
 
-<p>据说LinkedIn用Swift重写了自家的app，这是他们的代码规范。</p>
+<p>辛普森悖论 (Simpson’s Paradox) 是英国统计学家 E.H.Simpson 于 1951 年提出的悖论。即在某个条件下的两组数据，在分别讨论时都会满足某种性质，可是一旦合并起来进行考虑，却可能导致相反的结论。</p>
 
-<h4>2) <a href="http://www.ituring.com.cn/book/397">写给大家看的设计书</a></h4>
+<h4>2) <a href="https://medium.com/swlh/building-and-motivating-engineering-teams-24fd56910039">拉扯一支士气高昂的工程团队</a> By Camille Fournier</h4>
 
-<blockquote><p>如果要在简单表达和并不专业的设计之间做出选择，你应该选择简单表达。设计技能的逐步提高是从简单表达开始的。</p></blockquote>
-
-<p>iPhone的成功，降低了产品经理（大部分只有抄袭还抄不好的能力）的门槛；APP的泛滥，降低了软件工程师（鱼龙混杂，水货较多）的门槛；iOS 7开始，降低了设计师（大部分也就是个Photoshop熟练工）的门槛。</p>
+<p>三个要素：Money，别玩虚的，给足工资，正常人都爱钱；Purpose，让工程师一起做产品决策；Respect，像对待成年人一样对待工程师，尊敬他们，把他们当合伙人，而不是把他们当小孩、哄他们开心、让他们听话。</p>
 
 <p>@end</p>
 </div>
@@ -168,7 +152,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-06-27T09:57:31+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:57 am</span></time>
+<time class='entry-date' datetime='2016-12-02T09:34:52+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>9:34 am</span></time>
       
 
 <span class="categories">
@@ -189,10 +173,8 @@ $(document).bind('DOMNodeInserted', function(event) {
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/06/23/tech-notes-5/" title="Previous Post: 平安好房iOS开发团队技术周报（第五期）">&laquo; 平安好房iOS开发团队技术周报（第五期）</a>
+        <a class="basic-alignment left" href="/blog/2016/11/23/tech-notes-28/" title="Previous Post: 平安好房iOS开发团队技术周报（第二十八期）">&laquo; 平安好房iOS开发团队技术周报（第二十八期）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/07/01/tech-notes-7/" title="Next Post: 平安好房iOS开发团队技术周报（第七期）">平安好房iOS开发团队技术周报（第七期） &raquo;</a>
       
     </p>
   </footer>
@@ -278,8 +260,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/06/27/tech-notes-6/';
-        var disqus_url = 'http://balloonsys.github.io/blog/2016/06/27/tech-notes-6/';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/12/02/tech-notes-29/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2016/12/02/tech-notes-29/';
         var disqus_script = 'embed.js';
       
     (function () {

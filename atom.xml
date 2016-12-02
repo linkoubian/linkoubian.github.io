@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-11-25T11:47:45+08:00</updated>
+  <updated>2016-12-02T09:59:18+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十九期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/12/02/tech-notes-29/"/>
+    <updated>2016-12-02T09:34:52+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/12/02/tech-notes-29</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括全民 K 歌 RN 的接入实践中分包与加载的方案、安全的处理 JSON 中的空值、A/B 测试里常见的辛普森悖论等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://support.apple.com/zh-cn/HT205928">Apple Music 推出学生优惠</a> By Apple</h4>
+
+<p>如果您就读于颁发学位的大专或大学，您就能以折扣会员价加入 Apple Music，最长可享受 48 个月的优惠。这段时间不需要是连续的。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://geek.csdn.net/news/detail/122668">全民 K 歌 React Native 最佳实践</a> By 袁聪</h4>
+
+<p>全民 K 歌去年十月份完成了 RN 的接入实践，本文介绍了如何去实践根据业务分包、以及客户端怎么去加载这两方面内容。</p>
+
+<h4>2) <a href="http://honglu.me/2015/04/11/json%E4%B8%AD%E5%A4%B4%E7%96%BC%E7%9A%84null/">json 中头疼的 null</a> By 鸿禄</h4>
+
+<p>在服务器返回 json 数据的时候，时常会出现值为 null 的键值对。json 解析的时候，就会把这个 null 解析成 NSNull 的对象，我们向这个 NSNull 对象发送消息的时候就会遇到 crash 的问题。本文介绍了应对之策。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/joeldev/JLRoutes">JLRoutes</a> By Joel Levin</h4>
+
+<p>本周看了 JLRoutes 的源代码，拿来做 APP 的 URL 路由非常不错。不经意间会发现有些代码段就是插入排序算法。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://www.appadhoc.com/blog/simpson-paradox-in-abtesting/">浅谈 A/B 测试里常见的辛普森悖论</a> By appadhoc</h4>
+
+<p>辛普森悖论 (Simpson’s Paradox) 是英国统计学家 E.H.Simpson 于 1951 年提出的悖论。即在某个条件下的两组数据，在分别讨论时都会满足某种性质，可是一旦合并起来进行考虑，却可能导致相反的结论。</p>
+
+<h4>2) <a href="https://medium.com/swlh/building-and-motivating-engineering-teams-24fd56910039">拉扯一支士气高昂的工程团队</a> By Camille Fournier</h4>
+
+<p>三个要素：Money，别玩虚的，给足工资，正常人都爱钱；Purpose，让工程师一起做产品决策；Respect，像对待成年人一样对待工程师，尊敬他们，把他们当合伙人，而不是把他们当小孩、哄他们开心、让他们听话。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十八期）]]></title>
@@ -51,7 +97,7 @@
 
 <h4>2) <a href="http://www.waerfa.com/icloud-calendar-spam-clean-methods">iCloud 日历垃圾广告清理办法探讨</a> By Waerfa</h4>
 
-<p>今日被黑五的日历垃圾广告干扰，采用文中的『建立分类、设置垃圾广告为刚建立的分类、删除分类』大法清理干净。</p>
+<p>近期被黑五的日历垃圾广告干扰，采用文中的『建立分类、设置垃圾广告为刚建立的分类、删除分类』大法清理干净。</p>
 
 <h2>其他</h2>
 
@@ -1496,64 +1542,6 @@
 <h4>2) <a href="https://github.com/wg689/Solve-App-Store-Review-Problem">Solve App Store Review Problem</a></h4>
 
 <p>罗列了不少审核被拒及应对办法，作者的认真劲儿赞一个！</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十四期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/08/21/tech-notes-14/"/>
-    <updated>2016-08-21T09:20:09+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/08/21/tech-notes-14</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括库克任苹果 CEO 五周年专访、iOS 10 Day by Day 系列文章、JSON Web Token 的 Objective-C 库等诸多干货资源。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.reuters.com/article/us-apple-china-idUSKCN10R14G">Apple to boost China investments as demand slows</a> By Paul Carsten</h4>
-
-<p>Cook 拜会中国国务院副总理张高丽时宣布苹果将在中国设立研发中心，整合中国的工程及经营团队，显示苹果藉由加码中国市场，试图扭转中国市场的困境。</p>
-
-<h4>2) <a href="http://www.geekpark.net/topics/216414">库克任苹果 CEO 五周年专访</a> By Techsina</h4>
-
-<p>文中包含很多关于价值观、企业国际税等话题。大部分资讯看标题就够了，但强烈建议细细的品读下该专访的全文。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://www.shinobicontrols.com/blog/ios-10-day-by-day-index">iOS 10 Day by Day</a> By Sam Burnstone</h4>
-
-<p>自 iOS 7 Day by Day 始，就关注 shinobicontrols 上推出的该系列文章。每周一到两篇，对跟进 iOS 10 新特性的开发技术非常有益。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/f8224779ca63">App 定位和地图的那些坑</a> By hrchen</h4>
-
-<p>开发App时会遇到各种坑，本文分享在iOS/Android系统中定位和地图中遇到的坑，以及携程 App 的解决方案。</p>
-
-<h4>3) <a href="http://itony.me/129.html">iOS 如何放大按钮点击热区</a> By Tony</h4>
-
-<p>我们有时做自定义Button的时候，设计图上的给出按钮尺寸明显偏小，需要放大按钮的点击热区。本文分享的是来自 WWDC 2012 Session 216 的方案。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://www.decosoftware.com">Deco IDE</a> By decosoftware</h4>
-
-<p>Deco 区别于其他 IDE 最显著的特性是支持常用控件的拖拽生成代码和可视化编辑，这些控件既有 React Native 原生控件，也有一些知名的开源控件。</p>
-
-<h4>2) <a href="https://github.com/yourkarma/JWT">A JSON Web Token implementation in Objective-C</a> By Karma</h4>
-
-<p>JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties. 在 Objective-C 里如何实现 JWT 可使用 Karma 提供的轮子。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/fad64911a1f6">主流APP图片选择功能对比</a> By 蓝桥</h4>
-
-<p>针对新浪微博、微信、QQ空间等应用的图片处理方式，从拍照、选择图片、完成选择这三个方面归纳移动应用的图片选择上传的最佳产品体验。</p>
-
-<h4>2) <a href="https://www.codementor.io/react-js/tutorial/react-native-vs-ionic">React Native vs Ionic</a> By Frédéric Massart</h4>
-
-<p>近日看到某司某所谓的 Android 架构师在技术选型时写的 RN 与 Weex 对比文章，且不说候选对象用 Weex 而不是诸如 Ionic 等，其文中对 RN 的多处表述也是滑稽的很。从本周开始，在 RN 及 Ionic 上花些时间。</p>
 
 <p>@end</p>
 ]]></content>
