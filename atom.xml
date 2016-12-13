@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-02T09:59:18+08:00</updated>
+  <updated>2016-12-13T10:40:10+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/12/11/tech-notes-30/"/>
+    <updated>2016-12-11T10:38:37+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/12/11/tech-notes-30</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 iOS 项目的 HTTPS 迁移实战、基于 CTMediator 的组件化方案、以及给同事 Feedback 的 OFNR 模型等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://techcrunch.com/2016/12/05/idc-wearables/">Fitbit’s up and Apple’s down</a> By Brian Heater</h4>
+
+<p>IDC 刚刚发布了全球可穿戴设备市场的最新数据，看起来 Fitbit 势头正旺。在智能手表销量下滑的情况下，可穿戴设备市场的整体规模却出现了增长。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/94f5d3830301">iOS 迁移到 HTTPS</a> By Vincent</h4>
+
+<p>本文介绍了作者自建证书完成 AFNetworking 3.0 单向验证设置、WKWebView 及 SDWebImage 如何设置支持 HTTPS 等内容。</p>
+
+<h4>2) <a href="http://casatwy.com/modulization_in_action.html">基于 CTMediator 的组件化方案</a> By 田伟宇</h4>
+
+<p>作者自称希望这篇文章能够终结业界持续近一年的关于组件化方案的无谓讨论和错误讨论。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://itunes.apple.com/cn/app/rested-simple-http-requests/id421879749?mt=12">RESTed - Simple HTTP Requests</a> By Patrick Rogers</h4>
+
+<p>Restful API 测试工具首推 Paw 吧，由 @nixzhu 在推特提及的 RESTed 也是简洁好用，而且免费。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://ramblinjan.com/development/2016/12/05/Your-Hiring-Process-is-your-engineering-process/">Your Hiring Process is Also Your Engineering Process</a> By Jan Jorgensen</h4>
+
+<p>面试是双向的，公司面试求职者、求职者也挑公司。面试流程拖拖拉拉、找来不相干的人做面试官、面试官傲慢无理等，直接反映了这家公司做事的风格。</p>
+
+<h4>2) <a href="http://blog.d3in.org/post/153942984306/negative-feedback-antipatterns">如何给同事批评建议</a> By Charles-Axel Dein</h4>
+
+<p>年底了，大家又得做 Performance Review 了。给同事写好的、表扬形式的 review 是很容易的，但写实质性的批评建议却不容易，怕得罪人。本文给了一些正面例子与反面例子。</p>
+
+<p>给同事 Feedback 的 OFNR 模型：Observation（对方做了啥事）、Feeling（你对这件事的感受）、Need（你觉得怎样才是对的）、Request（对方应怎么改进）。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十九期）]]></title>
@@ -1492,56 +1540,6 @@
 <h4>2) <a href="http://liqi.io/liuyachen/">Surge 开发者使用的软硬件</a></h4>
 
 <p>Surge 的开发者刘亚晨，职业角色是 iOS 自由开发者和技术顾问。这篇访谈中他分享了自己使用的硬件和软件。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十五期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/08/27/tech-notes-15/"/>
-    <updated>2016-08-27T10:34:36+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/08/27/tech-notes-15</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括如何将设计稿中的像素转化为开发稿中的约束、类方法与实例方法 Swizzling 的区别，以及 APP 视觉改版高效产出经验分享等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://sspai.com/35297">非国行 iPhone 也可享受保修政策</a></h4>
-
-<p>2016 年 8 月 25 日，Apple 售后接到了一个通知：可以为国内顾客与出游中顾客提供更多国际版 iPhone 的相同产品维修和整机更换服务。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://blog.callmewhy.com/2016/08/24/autolayout-design-aesthetic/">Auto Layout 设计美学</a> By wanghai</h4>
-
-<p>文章虽然是关于 Auto Layout 的，但是其实最核心的部分是如何将设计稿中的像素转化为开发稿中的约束，而这点在所有开发场合中都是通用的。</p>
-
-<h4>2) <a href="http://www.tanhao.me/code/160723.html/">Method Swizzling 的各种姿势</a> By tanhao</h4>
-
-<p>对于类方法的动态添加，需要将方法添加到 MetaClass 中,因为实例方法记录在 class 的 method-list 中, 类方法是记录在 meta-class 中的 method-list 中的。</p>
-
-<h2>工具</h2>
-
-<h4>1) Mac 小技巧</h4>
-
-<p>局域网 IP 怎么查？Mac 下最快的方法，按住 option 点 Wifi 图标。</p>
-
-<h4>2) <a href="https://wangjwchn.github.io/blog/Display-animated-image-on-iOS-device">Display animated image on iOS device</a> By 王佳玮</h4>
-
-<p>一个用 Swift 实现的 GIF&amp;APNG 引擎，低内存、低 CPU 占用。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://zi.com/w/a/763ePM?id=763ePM">Rush - 视觉改版回顾和高效产出经验</a> By Tim Wu</h4>
-
-<p>文中建立规范部分提到的规范控件库非常有意义，对于研发来说可以形成控件库。有多少公司的设计师能做到这一点？随心所欲惯了！</p>
-
-<h4>2) <a href="https://github.com/wg689/Solve-App-Store-Review-Problem">Solve App Store Review Problem</a></h4>
-
-<p>罗列了不少审核被拒及应对办法，作者的认真劲儿赞一个！</p>
 
 <p>@end</p>
 ]]></content>

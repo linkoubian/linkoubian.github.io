@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第三期） - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第三十期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括iOS 10的一些资讯，以及iOS一些常见问题的设计方案等。 资讯 1) 开发者所需要知道的iOS 10 SDK新特性 从应用开发者的角度看，iOS 10中并没有加入太多内容。 2) 关于iOS 10中ATS的问题 从2017年1月1日起， &hellip;">
+  <meta name="description" content="本期周报主要包括 iOS 项目的 HTTPS 迁移实战、基于 CTMediator 的组件化方案、以及给同事 Feedback 的 OFNR 模型等内容。 资讯 1) Fitbit’s up and Apple’s down By Brian Heater IDC &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/06/18/tech-notes-3/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/12/11/tech-notes-30/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -80,7 +80,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第三期）</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第三十期）</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-06-18T10:50:14+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:50 am</span></time>
+<time class='entry-date' datetime='2016-12-11T10:38:37+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:38 am</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://balloonsys.github.io">Comments</a>
@@ -99,52 +99,44 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括iOS 10的一些资讯，以及iOS一些常见问题的设计方案等。</p>
+<div class="entry-content"><p>本期周报主要包括 iOS 项目的 HTTPS 迁移实战、基于 CTMediator 的组件化方案、以及给同事 Feedback 的 OFNR 模型等内容。</p>
 
 <!--more-->
 
 
 <h2>资讯</h2>
 
-<h4>1) <a href="https://onevcat.com/2016/06/ios-10-sdk/">开发者所需要知道的iOS 10 SDK新特性</a></h4>
+<h4>1) <a href="https://techcrunch.com/2016/12/05/idc-wearables/">Fitbit’s up and Apple’s down</a> By Brian Heater</h4>
 
-<p>从应用开发者的角度看，iOS 10中并没有加入太多内容。</p>
-
-<h4>2) <a href="https://onevcat.com/2016/06/ios-10-ats/">关于iOS 10中ATS的问题</a></h4>
-
-<p>从2017年1月1日起，所有的新提交app默认是不允许使用NSAllowsArbitraryLoads来绕过ATS限制的。</p>
+<p>IDC 刚刚发布了全球可穿戴设备市场的最新数据，看起来 Fitbit 势头正旺。在智能手表销量下滑的情况下，可穿戴设备市场的整体规模却出现了增长。</p>
 
 <h2>开发</h2>
 
-<h4>1) <a href="http://www.jianshu.com/p/0497afdad36d#">可复用而且高度解耦的用户统计埋点实现</a></h4>
+<h4>1) <a href="http://www.jianshu.com/p/94f5d3830301">iOS 迁移到 HTTPS</a> By Vincent</h4>
 
-<p>该埋点方案和我上个月做的统计SDK思路比较一致。不同的在于用户点击事件，文中的做法是拦截UIControl的方法，而我倾向于由APP自行埋点。主要原因在于，被hook的范围较广，同时我们点击事件埋点时，有酌情传入参数的额外需求。</p>
+<p>本文介绍了作者自建证书完成 AFNetworking 3.0 单向验证设置、WKWebView 及 SDWebImage 如何设置支持 HTTPS 等内容。</p>
 
-<h4>2) <a href="https://segmentfault.com/a/1190000005744865">iOS释放自注销模式设计</a></h4>
+<h4>2) <a href="http://casatwy.com/modulization_in_action.html">基于 CTMediator 的组件化方案</a> By 田伟宇</h4>
 
-<p>作者描述的问题的确是我们开发中的痛点，只不过我对这篇文章理解的还不够，毕竟工程师的层次也是有差异的:P</p>
+<p>作者自称希望这篇文章能够终结业界持续近一年的关于组件化方案的无谓讨论和错误讨论。</p>
 
 <h2>工具</h2>
 
-<h4>1) <a href="https://medium.com/swift-and-ios-writing/a-quick-look-at-uiviewpropertyanimator-a107fb9da5b5">iOS 10 UIKit Animations</a></h4>
+<h4>1) <a href="https://itunes.apple.com/cn/app/rested-simple-http-requests/id421879749?mt=12">RESTed - Simple HTTP Requests</a> By Patrick Rogers</h4>
 
-<p>我倒是对文章作者的开源库<a href="https://github.com/marmelroy/Interpolate">Interpolate</a>更感兴趣，哈哈！</p>
-
-<h4>2) <a href="https://luckymarmot.com/zh-hans/paw">Mac最先进的HTTP客户端</a></h4>
-
-<p>做iOS开发，联调API是件很麻烦的事情，特别是当提供API的是个开发新手。联调阶段我通常选用Paw而不是Postman。</p>
+<p>Restful API 测试工具首推 Paw 吧，由 @nixzhu 在推特提及的 RESTed 也是简洁好用，而且免费。</p>
 
 <h2>其他</h2>
 
-<h4>1) <a href="https://developer.apple.com/support/beta-software/install-ios-beta/">iOS beta Software Installation Guide</a></h4>
+<h4>1) <a href="http://ramblinjan.com/development/2016/12/05/Your-Hiring-Process-is-your-engineering-process/">Your Hiring Process is Also Your Engineering Process</a> By Jan Jorgensen</h4>
 
-<p>本周已采用Configuration Profile的方式安装了iOS 10的beta版，比Restore Image的方案更简便。</p>
+<p>面试是双向的，公司面试求职者、求职者也挑公司。面试流程拖拖拉拉、找来不相干的人做面试官、面试官傲慢无理等，直接反映了这家公司做事的风格。</p>
 
-<h4>2) <a href="http://www.jianshu.com/p/080d109a9984">每个IT人都应该了解的工作观和商业思维</a></h4>
+<h4>2) <a href="http://blog.d3in.org/post/153942984306/negative-feedback-antipatterns">如何给同事批评建议</a> By Charles-Axel Dein</h4>
 
-<p>文中整理了来自37signals的两位联合创始人Rework一书的要点，个人特别喜欢这条：</p>
+<p>年底了，大家又得做 Performance Review 了。给同事写好的、表扬形式的 review 是很容易的，但写实质性的批评建议却不容易，怕得罪人。本文给了一些正面例子与反面例子。</p>
 
-<blockquote><p>工作狂使得真正高效且不崇尚加班的员工感到无所适从，心怀愧疚，士气低落而且跟风加班，根本就不管到底有没有生产力。</p></blockquote>
+<p>给同事 Feedback 的 OFNR 模型：Observation（对方做了啥事）、Feeling（你对这件事的感受）、Need（你觉得怎样才是对的）、Request（对方应怎么改进）。</p>
 
 <p>@end</p>
 </div>
@@ -162,7 +154,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-06-18T10:50:14+08:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:50 am</span></time>
+<time class='entry-date' datetime='2016-12-11T10:38:37+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:38 am</span></time>
       
 
 <span class="categories">
@@ -183,10 +175,8 @@ $(document).bind('DOMNodeInserted', function(event) {
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/06/15/tech-notes-2/" title="Previous Post: 平安好房iOS开发团队技术周报（第二期）">&laquo; 平安好房iOS开发团队技术周报（第二期）</a>
+        <a class="basic-alignment left" href="/blog/2016/12/02/tech-notes-29/" title="Previous Post: 平安好房iOS开发团队技术周报（第二十九期）">&laquo; 平安好房iOS开发团队技术周报（第二十九期）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/06/21/tech-notes-4/" title="Next Post: 平安好房iOS开发团队技术周报（第四期）">平安好房iOS开发团队技术周报（第四期） &raquo;</a>
       
     </p>
   </footer>
@@ -272,8 +262,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/06/18/tech-notes-3/';
-        var disqus_url = 'http://balloonsys.github.io/blog/2016/06/18/tech-notes-3/';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/12/11/tech-notes-30/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2016/12/11/tech-notes-30/';
         var disqus_script = 'embed.js';
       
     (function () {
