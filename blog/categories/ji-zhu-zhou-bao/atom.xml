@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-13T10:40:10+08:00</updated>
+  <updated>2016-12-13T18:42:08+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十一期）[草稿]]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/12/16/tech-notes-31/"/>
+    <updated>2016-12-16T18:16:40+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/12/16/tech-notes-31</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 SDWebImage 支持 URL 不变时更新图片内容的方案、HTTP 的构成、Swift 版表单框架、Facebook 首位华人工程师的经验分享等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.theverge.com/2016/12/12/13918024/apple-calendar-spam-report-junk-option">&lsquo;report junk&rsquo; option to tackle iCloud calendar spam</a> By James Vincent</h4>
+
+<p>iCloud 的垃圾 Calendar 引起了苹果官方的注意。之前就看到过文章称，此类 Spam 几乎都来自中国大陆。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://blog.handy.wang/blog/2016/01/29/sdwebimagehuan-cun-zhi-tu-pian-urlbu-bian/">SDWebImage 支持 URL 不变时更新图片内容</a> By Handy.Wang</h4>
+
+<p>文末的第 5 个参考链接技术价值更高，相比而言作者写的文章算『术』。要了解 SDWebImage 的原理，非常推荐读一读其源代码。</p>
+
+<h4>2) <a href="http://mrpeak.cn/blog/http-constitution/">扒一扒 HTTP 的构成</a> By mrpeak</h4>
+
+<p>各平台上的一些第三方库都对 HTTP 做了进一步的封装，让 HTTP 变得更加亲民，但往往拿来就用的技术，很容易忽视其背后隐藏的细节。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/xmartlabs/Eureka">Eureka - Elegant form builder in Swift</a> By xmartlabs</h4>
+
+<p>拥有近 5000 个 star 的表单框架，如果需要 Obj-C 版本，可以看看该开发商的 XLForm 项目。</p>
+
+<h4>2) <a href="https://github.com/12207480/DOPDropDownMenu-Enhanced">DOPDropDownMenu 增强版</a> By yeBlueColor</h4>
+
+<p>下拉选择控件在大部分国内应用里都有，作者在 DOPDropDownMenu 的基础上添加了双列表的应用，优化了代码，增强了稳定性。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://blog.tezign.com/2016/01/09/why-facebook-become-an-empire/">婴儿期的 Facebook 吃了什么才变帝国</a> By 赵海平</h4>
+
+<p>作者是 Facebook 的第一位华人员工，履历牛逼闪闪。他认为在做 startup 的时候，最重要的就是找到你产品的核心价值，而这个核心价值不用到最完美的时刻就应该可以体现出来。</p>
+
+<h4>2) <a href="http://blog.professorbeekums.com/2016/12/what-makes-senior-software-developer.html">怎么判断一个人是不是高级软件工程师</a> By Beekums</h4>
+
+<p>如果你能完全信任一个工程师，他/她办事你放心，那他/她就是高级工程师。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十期）]]></title>
@@ -57,7 +107,7 @@
 
 <p>给同事 Feedback 的 OFNR 模型：Observation（对方做了啥事）、Feeling（你对这件事的感受）、Need（你觉得怎样才是对的）、Request（对方应怎么改进）。</p>
 
-<p>@end</p>
+<h5>@end</h5>
 ]]></content>
   </entry>
   
@@ -202,58 +252,6 @@
 <h4>1) <a href="https://blog.codinghorror.com/the-broken-window-theory/">The Broken Window Theory</a> By Jeff Atwood</h4>
 
 <p>环境中的不良现象如果被放任存在（如社区中某些建筑的窗户破了而没被修复），就会诱使人们仿效（人们就认为破窗户是正常的，就会破坏更多窗户），甚至变本加厉。公司里的垃圾代码不被及时修复，就会被更多人效仿。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十六期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/11/11/tech-notes-26/"/>
-    <updated>2016-11-11T23:13:12+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/11/11/tech-notes-26</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括库克关于总统大选结果的内部信、携程在实践 React Native 时的优化经验、JSPatch 热修复文件的加载方案、App 销售报表工具等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://techcrunch.com/2016/11/10/tim-cook-apple-donald-trump-election-win/">Move Forward Together</a></h4>
-
-<p>关于总统大选，苹果 CEO 库克致信美国员工。他表示，无论谁都无法阻挡苹果前进的脚步，唯有携手前进才能变得更好。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://techshow.ctrip.com/archives/1459.html">携程是如何做 React Native 优化的</a> By 赵辛贵</h4>
-
-<p>两周前去携程现场聆听了赵老师的分享，真的非常非常的赞。该讲座对我而言很有启发性，可以很好的指导我新技术框架如何研究、实践、改进。</p>
-
-<h4>2) <a href="https://github.com/bang590/JSPatch/wiki/JSPatch-Loader-%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3">JSPatch Loader 使用文档</a> By 陈振焯</h4>
-
-<p>集成 JSPatch 到 iOS 项目里的主要工作在于实现一套安全的热修复脚本下发与加载的机制。如果想自己实现而不是购买 JSPatch Platform 提供的服务，可以读一读作者写的这篇文章。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://www.appwage.com">AppWage</a> By Hankinsoft</h4>
-
-<p>这是一个开源的 iTunes Connect 报表工具，开发商的另一款收费软件 SQLPro for SQLite 我也一直在用。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/05b68c84913a">iOS 性能调优</a></h4>
-
-<p>提供了基于 Swift 3.0 模仿新浪微博的 Demo，里面针对于微博首页的复杂页面的优化做了很多的处理，页面的 FPS 一直保持在 59 ~ 60。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://highscalability.com/blog/2016/6/20/the-technology-behind-apple-photos-and-the-future-of-deep-le.html">Apple Photos 背后的技术与用户的隐私</a> By highscalability</h4>
-
-<p>Apple 使用 differential privacy 技术收集用户数据到云端训练 model，但从这些数据中无法识别出具体的个体；这些 model 下载到手机，依靠强大的手机性能进行分析，识别，归类你的照片；理论上分析的结果只留在你的手机上。</p>
-
-<h4>2) <a href="http://randsinrepose.com/archives/the-process-myth">The Process Myth</a> By Michael Lopp</h4>
-
-<p>工程师尤其看不惯公司里的各种规章制度、各种条条框框，所谓的 process；工程师们老爱问为什么，为什么会有这样那样的规定。公司里指定规章制度的人又都不给你解释为什么，“历来就如此，别问那么多为什么”。</p>
-
-<blockquote><p>It’s a myth, but healthy process is awesome if it not only documents what we care about, but is willing to defend itself. It is required to stand up to scrutiny and when a process fails to do so, it must change.</p></blockquote>
 
 <p>@end</p>
 ]]></content>

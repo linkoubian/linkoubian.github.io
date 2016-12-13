@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-13T10:40:10+08:00</updated>
+  <updated>2016-12-13T18:42:08+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十一期）[草稿]]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/12/16/tech-notes-31/"/>
+    <updated>2016-12-16T18:16:40+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/12/16/tech-notes-31</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 SDWebImage 支持 URL 不变时更新图片内容的方案、HTTP 的构成、Swift 版表单框架、Facebook 首位华人工程师的经验分享等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.theverge.com/2016/12/12/13918024/apple-calendar-spam-report-junk-option">&lsquo;report junk&rsquo; option to tackle iCloud calendar spam</a> By James Vincent</h4>
+
+<p>iCloud 的垃圾 Calendar 引起了苹果官方的注意。之前就看到过文章称，此类 Spam 几乎都来自中国大陆。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://blog.handy.wang/blog/2016/01/29/sdwebimagehuan-cun-zhi-tu-pian-urlbu-bian/">SDWebImage 支持 URL 不变时更新图片内容</a> By Handy.Wang</h4>
+
+<p>文末的第 5 个参考链接技术价值更高，相比而言作者写的文章算『术』。要了解 SDWebImage 的原理，非常推荐读一读其源代码。</p>
+
+<h4>2) <a href="http://mrpeak.cn/blog/http-constitution/">扒一扒 HTTP 的构成</a> By mrpeak</h4>
+
+<p>各平台上的一些第三方库都对 HTTP 做了进一步的封装，让 HTTP 变得更加亲民，但往往拿来就用的技术，很容易忽视其背后隐藏的细节。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/xmartlabs/Eureka">Eureka - Elegant form builder in Swift</a> By xmartlabs</h4>
+
+<p>拥有近 5000 个 star 的表单框架，如果需要 Obj-C 版本，可以看看该开发商的 XLForm 项目。</p>
+
+<h4>2) <a href="https://github.com/12207480/DOPDropDownMenu-Enhanced">DOPDropDownMenu 增强版</a> By yeBlueColor</h4>
+
+<p>下拉选择控件在大部分国内应用里都有，作者在 DOPDropDownMenu 的基础上添加了双列表的应用，优化了代码，增强了稳定性。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://blog.tezign.com/2016/01/09/why-facebook-become-an-empire/">婴儿期的 Facebook 吃了什么才变帝国</a> By 赵海平</h4>
+
+<p>作者是 Facebook 的第一位华人员工，履历牛逼闪闪。他认为在做 startup 的时候，最重要的就是找到你产品的核心价值，而这个核心价值不用到最完美的时刻就应该可以体现出来。</p>
+
+<h4>2) <a href="http://blog.professorbeekums.com/2016/12/what-makes-senior-software-developer.html">怎么判断一个人是不是高级软件工程师</a> By Beekums</h4>
+
+<p>如果你能完全信任一个工程师，他/她办事你放心，那他/她就是高级工程师。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十期）]]></title>
@@ -57,7 +107,7 @@
 
 <p>给同事 Feedback 的 OFNR 模型：Observation（对方做了啥事）、Feeling（你对这件事的感受）、Need（你觉得怎样才是对的）、Request（对方应怎么改进）。</p>
 
-<p>@end</p>
+<h5>@end</h5>
 ]]></content>
   </entry>
   
@@ -1482,64 +1532,6 @@
 <h4>2) <a href="https://medium.com/the-year-of-the-looking-glass/how-to-do-a-product-critique-98b657050638">How to do a Product Critique</a> By Julie Zhuo</h4>
 
 <p>这是 Facebook 产品设计总监的文章，通过对于评价产品的每个步骤的介绍，帮助产品经理更好的理解用户，提升自己的产品直觉。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十六期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/09/03/tech-notes-16/"/>
-    <updated>2016-09-03T10:08:14+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/09/03/tech-notes-16</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 的最新规则，做一款 App 前需要考虑的方方面面，以及 Surge 开发者分享的他所使用的软硬件工具等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://tech2ipo.com/10032212">苹果对 App Store 进行大清理</a> By tech2ipo</h4>
-
-<p>9月2日凌晨，收到 Apple 的邮件说将下架不能与 iPhone 和 iPad 兼容及不能正常运行的应用，或者没有遵循更新后 App Store 指南的应用。另外，苹果还指出，应用名称长度不得超过 50 个字符。</p>
-
-<h4>2) <a href="http://www.arinchina.com/news/show-4227.html">苹果新获 59 项专利</a> By Trista</h4>
-
-<p>美国专利商标局正式公布了苹果公司新获批的 59 项专利，包括 12 项设计专利以及可弯曲 OLED 显示屏专利、头戴显示器专利、iOS 设备防震系统专利、家庭自动化系统专利等。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://www.cnblogs.com/smileEvday/p/iOS_PixelVsPoint.html">iOS 绘制1个像素的线</a> By 枫叶</h4>
-
-<p>第一想法可能是直接根据当前屏幕的 scale 计算出1像素的线对应的 Point，然后设置线宽（或者高）为1个像素。但在设备上测试时会发现渲染出来的线宽并不是1个像素。</p>
-
-<h4>2) <a href="http://limboy.me/tech/2016/07/06/starting-an-app.html">做一个 App 前需要考虑的几件事</a> By 李忠</h4>
-
-<p>随着工具链的完善，语言的升级以及各种优质教程的涌现，做一个 App 的成本也越来越低了。尽管如此，有些事情最好前期就做起来，避免当 App 有了一定规模后，再感慨当初为什么没有多留点心。</p>
-
-<h4>3) <a href="http://www.jianshu.com/p/61a9030adeef">仿微信小视屏</a> By Damonwong</h4>
-
-<p>对于一个类似微信小视屏的功能，大致需要完成的功能无非就是视频录制和视频播放两块。本文是作者视频相关功能开发的实践笔记。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/70ed36cf8a98">Xcode 7 中的调试技巧</a></h4>
-
-<p>Xcode 7 中苹果为我们增加了两个重要的 Debug 相关功能。一个是 Address Sanitizer，另一个是打开 Organizer 窗口的 Crashes 标签页，会自动下载 Crash 信息，右侧的详细信息可以看到是哪行代码导致的崩溃。</p>
-
-<h4>2) <a href="http://blog.imjun.net/2016/08/25/iOS%E7%AC%A6%E5%8F%B7%E8%A1%A8%E6%81%A2%E5%A4%8D-%E9%80%86%E5%90%91%E6%94%AF%E4%BB%98%E5%AE%9D/">iOS 符号表恢复&amp;逆向支付宝</a> By 杨君</h4>
-
-<p>符号表历来是逆向工程中的必争之地，而 iOS 应用在上线前都会裁去符号表，以避免被逆向分析。本文会介绍一个作者写的工具，用于恢复 iOS 应用的符号表。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://dangrover.com/blog/2016/04/20/bots-wont-replace-apps.html">Better apps will replace apps</a> By Dan Grover</h4>
-
-<p>作者是 Facebook 产品经理，之前在微信工作。他在文中谈了对 Facebook、微软的聊天机器人的理解。</p>
-
-<h4>2) <a href="http://liqi.io/liuyachen/">Surge 开发者使用的软硬件</a></h4>
-
-<p>Surge 的开发者刘亚晨，职业角色是 iOS 自由开发者和技术顾问。这篇访谈中他分享了自己使用的硬件和软件。</p>
 
 <p>@end</p>
 ]]></content>
