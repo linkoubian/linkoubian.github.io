@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-16T10:34:53+08:00</updated>
+  <updated>2016-12-16T10:53:30+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十一期）[草稿]]]></title>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十一期）]]></title>
     <link href="http://balloonsys.github.io/blog/2016/12/16/tech-notes-31/"/>
     <updated>2016-12-16T18:16:40+08:00</updated>
     <id>http://balloonsys.github.io/blog/2016/12/16/tech-notes-31</id>
@@ -27,7 +27,7 @@
 
 <h4>1) <a href="http://jingyan.baidu.com/article/dca1fa6f73c875f1a540524e.html">无法安装 macOS Sierra 10.12 更新</a></h4>
 
-<p>本周我尝试将 macOS Sierra 升级到 10.12 时遇到始终无法安装的问题，报验证失败的错。后来参考本文，关闭时间于互联网同步、把系统声音静音、再把任务栏正在运行的软件都退出，之后成功安装。</p>
+<p>本周我尝试将 macOS Sierra 升级到 10.12 时遇到始终无法安装的问题，报验证失败的错。后来参考本文，关闭时间与互联网同步、把系统声音静音、再把任务栏正在运行的软件都退出，之后成功安装。</p>
 
 <h2>开发</h2>
 
