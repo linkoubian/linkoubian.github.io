@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-13T18:44:58+08:00</updated>
+  <updated>2016-12-16T10:34:53+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -25,9 +25,9 @@
 
 <h2>资讯</h2>
 
-<h4>1) <a href="http://www.theverge.com/2016/12/12/13918024/apple-calendar-spam-report-junk-option">report junk option to tackle iCloud calendar spam</a> By James Vincent</h4>
+<h4>1) <a href="http://jingyan.baidu.com/article/dca1fa6f73c875f1a540524e.html">无法安装 macOS Sierra 10.12 更新</a></h4>
 
-<p>iCloud 的垃圾 Calendar 邀请引起了苹果官方的注意。之前就看到过文章称，此类 Spam 几乎都来自中国大陆。</p>
+<p>本周我尝试将 macOS Sierra 升级到 10.12 时遇到始终无法安装的问题，报验证失败的错。后来参考本文，关闭时间于互联网同步、把系统声音静音、再把任务栏正在运行的软件都退出，之后成功安装。</p>
 
 <h2>开发</h2>
 
