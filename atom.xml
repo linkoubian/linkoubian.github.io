@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-16T10:53:30+08:00</updated>
+  <updated>2016-12-23T10:04:09+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十二期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/12/23/tech-notes-32/"/>
+    <updated>2016-12-23T09:33:13+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/12/23/tech-notes-32</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括HTTP 缓存机制及 iOS 的实现、Operation Queues 的相关知识、APP 启用 HTTPS 支持的基础知识、滴滴 iOS 动态化方案等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.theverge.com/2016/12/21/14037686/apple-macbook-macos-focus-mobile-features-ios">macOS is becoming legacy software</a></h4>
+
+<p>The Verge 引述 Bloomberg 熟悉 Apple 內部运作人士报导，Apple 已经再沒有独立的 Mac OS Team。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://qnoid.com/2016/04/10/A-primer-in-HTTP-caching-and-its-native-support-by-iOS.html">HTTP 缓存机制及 iOS 的实现</a> By qnoid</h4>
+
+<p>缓存机制的表述，在苹果的文档中都有。但是，判断 response 是否足够 fresh 的介绍是作者的原创。</p>
+
+<h4>2) <a href="http://blog.leichunfeng.com/blog/2015/07/29/ios-concurrency-programming-operation-queues/">iOS 并发编程之 Operation Queues</a> By 雷纯锋</h4>
+
+<p>在 iOS 开发中，我们主要可以通过 Operation Queues、Dispatch Queues 和 Dispatch Sources 来提高应用的并发性。本文主要介绍 Operation Queues 的相关知识。</p>
+
+<p>注：本周精读了 AFNetworking 3.0 源代码，上述两篇文章都是在读代码过程中查阅过的资料。</p>
+
+<h4>3) <a href="https://autolayout.club/2016/12/22/%E5%86%99%E7%BB%99-iOS-%E5%BC%80%E5%8F%91%E8%80%85%E7%9C%8B%E7%9A%84-HTTPS-%E6%8C%87%E5%8D%97/">写给 iOS 开发者看的 HTTPS 指南</a> By 吕文翰</h4>
+
+<p>苹果在 WWDC 2016 上宣布年底将要求所有 APP 适配 ATS，不过本周四又宣布将这个 deadline 推迟了。本文着重介绍 APP 启用 HTTPS 支持的过程中跟 APP 相关的部分，剩余的协议细节将一笔带过。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://mp.weixin.qq.com/s/qRW_akbU3TSd0SxpF3iQmQ">DynamicCocoa - 滴滴 iOS 动态化方案</a> By 孙源</h4>
+
+<p>DynamicCocoa 可以让现有的 Objective-C 代码转换生成中间代码（JS），下发后动态执行。据说，手机 QQ 的方案是通过 clang 把 OC 代码编译成自己定制的字节码动态下发，然后开发一个虚拟机去执行（惊呆了）。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/a5c5e9aa5913">XMNetworking</a> By 康祖彬</h4>
+
+<p>XMNetworking 是一个轻量的、简单易用但功能强大的网络库，基于 AFNetworking 3.0 封装。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://www.facebook.com/notes/mark-zuckerberg/building-jarvis/10154361492931634">扎克伯格写的 Jarvis AI</a> By Zuckerberg</h4>
+
+<p>虽然大部分技术都是现成的（facebook 开源项目和一些自动化家用硬件），但是他整合技术和学习能力实在太恐怖了。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十一期）]]></title>
@@ -1476,62 +1528,6 @@
 <h4>2) <a href="http://yuguo.us/weblog/shut-up-and-take-the-money/">为什么有些人赚钱那么轻松</a> By 余果</h4>
 
 <p>外行并不太能影响专业人士的价格，他们自己在跟自己竞争。对于真正的专业主义者，没有行业低迷这种概念存在。随波逐流的，一直是水面上的浮萍。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十七期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/09/10/tech-notes-17/"/>
-    <updated>2016-09-10T17:44:51+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/09/10/tech-notes-17</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括苹果自动驾驶汽车项目的最新动向，移动客户端基于 WebP 的流量优化技术剖析，Xcode 8 新增的调试工具用法等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://tech2ipo.com/10032335">iPhone 年年焕新计划</a> By tech2ipo</h4>
-
-<p>北京时间 9 月 8 日凌晨，苹果发布了最新一代的 iPhone 7 和 7P，这次发布会带来的另一个亮点是「年年焕新」计划。本文将帮你核算参与「年年焕新计划」永远用新 iPhone 究竟要多少钱。</p>
-
-<h4>2) <a href="http://www.nytimes.com/2016/09/10/technology/apple-is-said-to-be-rethinking-strategy-on-self-driving-cars.html?_r=0">Apple Is Said to Be Rethinking Strategy on Self-Driving Cars</a> By Daisuke</h4>
-
-<p>纽约时报的文章称，苹果自动驾驶汽车项目经历了调整，部分业务被撤销、几十名员工被解雇。今年七月开始由 Bob Mansfield 领导后，苹果改变了该项目的关注点，从对汽车设计和生产的强调转向了对自主驾驶汽车底层技术的开发。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://segmentfault.com/a/1190000006266276">iOS 客户端基于 WebP 的流量优化</a> By Curiousity</h4>
-
-<p>WebP 是一种同时提供了有损压缩与无损压缩的图片文件格式。据说淘宝客户端在两年前就使用了 WebP（主要是 Native 使用），后来 H5 全面使用，WebView 的 WebP 采用插件的方式支持。</p>
-
-<p>注：本文比<a href="http://www.jianshu.com/p/25505a6c5d74">第十三期周报</a>中分享的相关文章更深入！</p>
-
-<h4>2) <a href="http://qiaotongxin.cc/2016/08/22/20160822/">百度外卖 APP 头像动画效果</a> By 乔同新</h4>
-
-<p>某日，作者发现百度外卖的 APP 个人中心头像波浪效果很是吸引人，遂就思考如何实现这种『浪』的效果。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://chengwey.com/ios-10-by-tutorials-bi-ji-er/">Xcode 8 Debugging Improvements</a> By chengwey</h4>
-
-<p>Xcode 8 增加了几项功能，让我们调试起来更加得心应手。Xcode 8 提供的调试工具可以标记竞争危害（Race Conditions）、内存泄露、以及运行时的布局约束问题。</p>
-
-<h4>2) <a href="https://medium.com/ios-os-x-development/my-ios-development-toolkit-2016-ba7601b68085#.pebx7hm9c">My iOS Development Toolkit 2016</a> By Sebastian</h4>
-
-<p>作者分享了他在用的 iOS 开发工具、Web 服务、框架，以及经常浏览的技术博客等。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://tech.glowing.com/cn/tan-tan-yi-dong-ying-yong-de-an-quan-xing-shi-jian/">移动应用的安全性实践</a> By Glow</h4>
-
-<p>本文将从用户注册流程出发，逐步介绍 Glow 在提高数据安全性方面采用的一些策略方法，供读者参考。</p>
-
-<h4>2) <a href="https://medium.com/the-year-of-the-looking-glass/how-to-do-a-product-critique-98b657050638">How to do a Product Critique</a> By Julie Zhuo</h4>
-
-<p>这是 Facebook 产品设计总监的文章，通过对于评价产品的每个步骤的介绍，帮助产品经理更好的理解用户，提升自己的产品直觉。</p>
 
 <p>@end</p>
 ]]></content>

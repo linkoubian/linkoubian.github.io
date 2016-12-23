@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-16T10:53:30+08:00</updated>
+  <updated>2016-12-23T10:04:09+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十二期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/12/23/tech-notes-32/"/>
+    <updated>2016-12-23T09:33:13+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/12/23/tech-notes-32</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括HTTP 缓存机制及 iOS 的实现、Operation Queues 的相关知识、APP 启用 HTTPS 支持的基础知识、滴滴 iOS 动态化方案等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.theverge.com/2016/12/21/14037686/apple-macbook-macos-focus-mobile-features-ios">macOS is becoming legacy software</a></h4>
+
+<p>The Verge 引述 Bloomberg 熟悉 Apple 內部运作人士报导，Apple 已经再沒有独立的 Mac OS Team。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://qnoid.com/2016/04/10/A-primer-in-HTTP-caching-and-its-native-support-by-iOS.html">HTTP 缓存机制及 iOS 的实现</a> By qnoid</h4>
+
+<p>缓存机制的表述，在苹果的文档中都有。但是，判断 response 是否足够 fresh 的介绍是作者的原创。</p>
+
+<h4>2) <a href="http://blog.leichunfeng.com/blog/2015/07/29/ios-concurrency-programming-operation-queues/">iOS 并发编程之 Operation Queues</a> By 雷纯锋</h4>
+
+<p>在 iOS 开发中，我们主要可以通过 Operation Queues、Dispatch Queues 和 Dispatch Sources 来提高应用的并发性。本文主要介绍 Operation Queues 的相关知识。</p>
+
+<p>注：本周精读了 AFNetworking 3.0 源代码，上述两篇文章都是在读代码过程中查阅过的资料。</p>
+
+<h4>3) <a href="https://autolayout.club/2016/12/22/%E5%86%99%E7%BB%99-iOS-%E5%BC%80%E5%8F%91%E8%80%85%E7%9C%8B%E7%9A%84-HTTPS-%E6%8C%87%E5%8D%97/">写给 iOS 开发者看的 HTTPS 指南</a> By 吕文翰</h4>
+
+<p>苹果在 WWDC 2016 上宣布年底将要求所有 APP 适配 ATS，不过本周四又宣布将这个 deadline 推迟了。本文着重介绍 APP 启用 HTTPS 支持的过程中跟 APP 相关的部分，剩余的协议细节将一笔带过。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://mp.weixin.qq.com/s/qRW_akbU3TSd0SxpF3iQmQ">DynamicCocoa - 滴滴 iOS 动态化方案</a> By 孙源</h4>
+
+<p>DynamicCocoa 可以让现有的 Objective-C 代码转换生成中间代码（JS），下发后动态执行。据说，手机 QQ 的方案是通过 clang 把 OC 代码编译成自己定制的字节码动态下发，然后开发一个虚拟机去执行（惊呆了）。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/a5c5e9aa5913">XMNetworking</a> By 康祖彬</h4>
+
+<p>XMNetworking 是一个轻量的、简单易用但功能强大的网络库，基于 AFNetworking 3.0 封装。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://www.facebook.com/notes/mark-zuckerberg/building-jarvis/10154361492931634">扎克伯格写的 Jarvis AI</a> By Zuckerberg</h4>
+
+<p>虽然大部分技术都是现成的（facebook 开源项目和一些自动化家用硬件），但是他整合技术和学习能力实在太恐怖了。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十一期）]]></title>
@@ -206,52 +258,6 @@
 <blockquote><p>Uber是最大的出租车公司，但并不拥有任何车；FB是最大的媒体公司，但不自己生产内容；阿里巴巴是最大的零售商，但没库存；Airbnb是最大的旅馆，但不拥有房产。</p></blockquote>
 
 <p>互联网成就了这些公司，让他们有能力提供一层看似非常简单的用户界面，大规模地连接供需双方。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十七期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/11/18/tech-notes-27/"/>
-    <updated>2016-11-18T15:05:15+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/11/18/tech-notes-27</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括如何实现在 TableView 中滑动播放视频、无法获取真实进度时如何做个优雅的进度动画、Sierra 显示隐藏文件的快捷方式、破窗效应等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://www.bloomberg.com/news/articles/2016-11-17/apple-is-said-to-cut-fees-video-services-will-pay-for-app-store">Apple to Cut Fees Video Services Will Pay for App Store</a> By Lucas Shaw</h4>
-
-<p>苹果计划将 App Store 视频服务接入的费用从 30% 降到 15%，这意味着视频服务供应商在苹果各平台的运营成本将大幅降低。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/3946317760a6">滑动 TableView 自动播放视频</a> By NewPan</h4>
-
-<p>本文介绍了如何实现在 TableView 中滑动播放视频，并且是没有任何卡顿的实现滑动播放视频。同时也将讲述如何确定哪一个 Cell 播放视频。</p>
-
-<h4>2) <a href="http://mrpeak.cn/blog/http-upload-progress/">Http 文件上传进度为什么不准</a> By Peak</h4>
-
-<p>我们调用第三方 http framework 上传文件的时候，都会有 API 回调告诉我们上传的具体进度，但这个进度值都是不准的。本文介绍了此情况下如何做个优雅的进度动画。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://twitter.com/24says/status/780677320197574656">Sierra 显示隐藏文件</a> By 24Says</h4>
-
-<p>macOS Sierra 里可以通过 CMD + Shift + . 直接在 Finder 里显示隐藏文件。</p>
-
-<h4>2) <a href="https://github.com/BeauNouvelle/FaceAware">FaceAware</a> By Beau Nouvelle</h4>
-
-<p>现在大部分 APP 里的个人中心页面，都会提供设置头像的功能，这个 Swift 库会根据脸部位置以最优的方式展示头像。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://blog.codinghorror.com/the-broken-window-theory/">The Broken Window Theory</a> By Jeff Atwood</h4>
-
-<p>环境中的不良现象如果被放任存在（如社区中某些建筑的窗户破了而没被修复），就会诱使人们仿效（人们就认为破窗户是正常的，就会破坏更多窗户），甚至变本加厉。公司里的垃圾代码不被及时修复，就会被更多人效仿。</p>
 
 <p>@end</p>
 ]]></content>
