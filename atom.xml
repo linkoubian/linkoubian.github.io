@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-27T09:46:11+08:00</updated>
+  <updated>2016-12-27T09:48:31+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -25,49 +25,49 @@
 
 <h2>AFURLSessionManager (核心类)</h2>
 
-<h4>AFHTTPSessionManager 和 AFURLSessionManager 的关系？</h4>
+<h4>1. AFHTTPSessionManager 和 AFURLSessionManager 的关系？</h4>
 
 <p>前者是后者的子类，封装了和 HTTP Method 相关的接口。核心代码均在后者的实现中，包括 Session 的创建、Session 回调方法的实现、Task 和 Task 委托对象 (AFURLSessionManagerTaskDelegate) 的映射关系等。</p>
 
 <p>值得关注的是 request serializer 是定义在 AFHTTPSessionManager 中的，而 response serializer 是定义在 AFURLSessionManager 中的。</p>
 
-<h4>创建 Session 时指定的 delegate queue 为何设置  maxConcurrentOperationCount 为 1？</h4>
+<h4>2. 创建 Session 时指定的 delegate queue 为何设置  maxConcurrentOperationCount 为 1？</h4>
 
 <p>delegate queue 是 session 的回调方法执行时所在的 queue，并不影响 HTTP 请求的并发执行 (由 Session Configuration 的 HTTPMaximumConnectionsPerHost 控制)。查看 Session 的几个 Delegate 方法，我们可以看到，会涉及到对 task 的 delegate 处理（get / remove 等），而 task 和 task 的 delegate 是由 mutable 的字典管理的，处理时需要用到 lock 以支持多线程安全。所以，这个 delegate queue 本质上还是得一个任务一个任务的处理。</p>
 
 <p>前面讨论了为何设置 maxConcurrentOperationCount 为 1，那这样是否影响 APP 的网络层处理效率？其实不会的。在 - (void)URLSession:(NSURLSession <em>)session task:(NSURLSessionTask </em>)task didCompleteWithError:(NSError *)error 的实现里我们可以看到，对 response 的处理 (使用 response serializer) 是放在一个 concurrent queue (见 url_session_manager_processing_queue 方法) 里的。</p>
 
-<h4>为何设计 completion group 和 completion queue 这两个属性？</h4>
+<h4>3. 为何设计 completion group 和 completion queue 这两个属性？</h4>
 
 <p>纵观 AFN 的内部，我们只看到 AFURLSessionManagerTaskDelegate 的 - (void)URLSession:(NSURLSession <em>)session task:(NSURLSessionTask </em>)task didCompleteWithError:(nullable NSError *)error 方法中把 completion handler 的执行放在 completion group / queue 里，而且如果没有专门指定的话就用私有的默认 group 及 main queue。所以通常应用层的 success / failure block 在主线程调用。</p>
 
 <p>当我们需要在多个 request 均处理完毕这个时间点，执行一些自定义的操作，那就可以给 session manager 指定专门的 completion group / queue 来实现。</p>
 
-<h4>和 AFURLSessionManagerTaskDelegate 中的 URL Session 相关的几个同名方法什么关系？</h4>
+<h4>4. 和 AFURLSessionManagerTaskDelegate 中的 URL Session 相关的几个同名方法什么关系？</h4>
 
 <p>Session 的 delegate 是 URL Session Manager，所以 Session 相关的回调都是到 URL Session Manager 的相关方法里。Task Delegate 里的同名方法是由 Manager 里的回调再调用的，可以搜索 delegate URLSession: 查阅。</p>
 
-<h4>实现文件里还定义了辅助类 AFURLSessionManagerTaskDelegate 及 _AFURLSessionTaskSwizzling 各自的作用是什么？</h4>
+<h4>5. 实现文件里还定义了辅助类 AFURLSessionManagerTaskDelegate 及 _AFURLSessionTaskSwizzling 各自的作用是什么？</h4>
 
 <p>前者保存了 task 的进度 (upload、download、completion) 相关的处理块。其进度信息是根据 session 委托方法传递过来的数据，计算后保存到 NSProgress 对象里的。</p>
 
 <p>后者是为规避 NSURLSession Task 跟 KVO 相关的一个 bug，将 resume / suspend 方法改写了下。因为 class cluster 的原因，作者创建了一个 NSURLSessionDataTask 对象，使用 while 对其 super 一层层的查找。</p>
 
-<h4>_AFURLSessionTaskSwizzling 中的 state 方法有何作用？为何直接 assert(NO, @&ldquo;&hellip;&rdquo;)？</h4>
+<h4>6. _AFURLSessionTaskSwizzling 中的 state 方法有何作用？为何直接 assert(NO, @&ldquo;&hellip;&rdquo;)？</h4>
 
 <p>此处的 state 方法纯粹是为了使用 @selector(state) 以及 [self state] 时能顺利通过编译器的检查。af_resume 中调用的 [self state] 其实是 NSURLSessionDataTask 的 state 方法，_AFURLSessionTaskSwizzling 的 state 方法不会被调用，也不应该调用，所以作者使用了 assert(NO, @&ldquo;&hellip;&rdquo;)。</p>
 
-<h4>Session Manager 为何实现 Coding 协议？</h4>
+<h4>7. Session Manager 为何实现 Coding 协议？</h4>
 
 <p>我估计是为了支持 background session，同样值得关注的是 AFURLSessionManager 的初始化方法里调用 session 的 getTasksWithCompletionHandler 方法处理一遍 task delegate（乍一看也是不明所以，但如果是支持 background session，那就有那么点说的通了）。</p>
 
-<h4>创建 task 时为何使用  url_session_manager_create_task_safely 方法再包装一层？</h4>
+<h4>8. 创建 task 时为何使用  url_session_manager_create_task_safely 方法再包装一层？</h4>
 
 <p>iOS 8 修复了一个 bug，多线程下创建的 task 小概率拥有同样的 task identifier。但是 AFNetworking 使用 task identifier 和 task delegate 映射，需要 task identifier 唯一。</p>
 
 <p>所以对于早前有这个 bug 的 iOS 版本，使用 dispatch_sync 来同步创建 task 以规避问题。</p>
 
-<h4>Session Manager 是否有内存泄露的问题？</h4>
+<h4>9. Session Manager 是否有内存泄露的问题？</h4>
 
 <p>之所以提出这样的问题，是因为 Session Manager 拥有 Session，而 Session 对其 delegate 是强引用，而 Session Manager 就是这个 delegate，于是便 retain cycle 了。</p>
 
@@ -77,17 +77,17 @@
 
 <h2>AFHTTPSessionManager</h2>
 
-<h4>应用层的 success / failure block 是否需要预防 block 的 retain cycle 问题？</h4>
+<h4>10. 应用层的 success / failure block 是否需要预防 block 的 retain cycle 问题？</h4>
 
 <p>和 AFNetworking 2.0 里的 URL Connection 方案一致，不需要。以前是在 AFURLConnectionOperation 里通过  [strongSelf setCompletionBlock:nil] 释放对 completion block 的持有。</p>
 
 <p>现在是在 Session Manager 里通过 [self removeDelegateForTask:task] 移除 task delegate 以释放对 completion handler 的持有。</p>
 
-<h4>POST 相关接口的差异？</h4>
+<h4>11. POST 相关接口的差异？</h4>
 
 <p>仅仅 POST 一个普通的字典到服务端使用 data task，若需要 POST 一个文件 (URL / Data) 到服务端则需要使用 multipart form request 及 upload task 实现。后者字典里的普通数据，也是放在请求的 Content-Disposition: form-data; name= XXX 部分，constructing body block 里若 append 文件 (比如图片) 的话是放在 Content-Disposition: form-data; name=&ldquo;XXX&rdquo;; filename=&ldquo;XXX.png&rdquo; 部分 (下一行会指定类型，如 Content-Type: image/png)。</p>
 
-<h4>POST 多张图片的 request 如何构造其 body 的？</h4>
+<h4>12. POST 多张图片的 request 如何构造其 body 的？</h4>
 
 <p>body 的构造依赖于 AFStreamingMultipartFormData 对象，待上传的单个图片会被封装到 AFHTTPBodyPart 里，然后 append 到 AFStreamingMultipartFormData → AFMultipartBodyStream → HTTPBodyParts 中。注意 AFMultipartBodyStream 继承自 NSInputStream，可直接设置到 request 中 (见 AFStreamingMultipartFormData → requestByFinalizingMultipartFormData)。</p>
 
@@ -95,7 +95,7 @@
 
 <h2>AFHTTPRequestSerializer</h2>
 
-<h4>AFHTTPRequestSerializer 和 AFURLRequestSerialization 之间是什么关系？</h4>
+<h4>13. AFHTTPRequestSerializer 和 AFURLRequestSerialization 之间是什么关系？</h4>
 
 <p>后者是协议，定义了一个将字典数据序列化到 request 中以得到新的 request 这么一个方法。AFHTTPRequestSerializer 实现了这个协议，使用  AFQueryStringFromParameters 方法将字典处理成 key1=value1&amp;key2=value2 这样的形式。</p>
 
@@ -105,17 +105,17 @@
 
 <h2>AFJSONResponseSerializer</h2>
 
-<h4>AFJSONResponseSerializer 和 AFURLResponseSerialization 之间是什么关系？</h4>
+<h4>14. AFJSONResponseSerializer 和 AFURLResponseSerialization 之间是什么关系？</h4>
 
 <p>后者是协议，定义了一个从 response 里解析出 response object 的方法。继承自 AFHTTPResponseSerializer 的 AFJSONResponseSerializer，使用 NSJSONSerialization 完成对 JSON 数据的解析。</p>
 
-<h4>AFJSONResponseSerializer 有一个属性叫 removesKeysWithNullValues，有什么用？</h4>
+<h4>15. AFJSONResponseSerializer 有一个属性叫 removesKeysWithNullValues，有什么用？</h4>
 
 <p>在服务器返回的 json 数据若出现 &ldquo;somevalue&rdquo;:null，会被解析成 NSNull 的对象。我们向这个 NSNull 对象发送消息的时候就会 crash。AFJSONResponseSerializer 提供的这个属性可以控制是否将此类数据过滤掉。</p>
 
 <h2>AFSecurityPolicy</h2>
 
-<h4>定义的三种 SSL Pinning Mode 分别有什么作用？</h4>
+<h4>16. 定义的三种 SSL Pinning Mode 分别有什么作用？</h4>
 
 <p>AFSSLPinningModeNone：默认值，完全信任服务器，相当于仅支持 HTTP 请求
 AFSSLPinningModeCertificate：会比对服务端传过来的证书和 APP 内的证书
@@ -125,13 +125,13 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 
 <p>AFNetworking 3.0 对 AFSSLPinningModeCertificate 的实现有所调整，只要有一个 match 就认为 OK，所以也不再提供 validatesCertificateChain 这个属性了。</p>
 
-<h4>如何选择适合的 Pinning Mode 呢？</h4>
+<h4>17. 如何选择适合的 Pinning Mode 呢？</h4>
 
 <p>AFSSLPinningModeCertificate 比较安全，他会比对服务端和客户端的证书是否匹配。随 APP 打包的证书是带有效期的。如果只是比较 Public Key，则不会受有效期的影响。个人觉得使用 Public Key 的方案基本足够了。</p>
 
 <h2>AFNetworkReachabilityManager</h2>
 
-<h4>略，主要看看对 IPV 6 的支持。</h4>
+<h4>18. 略，主要看看对 IPV 6 的支持。</h4>
 ]]></content>
   </entry>
   
