@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-23T10:04:09+08:00</updated>
+  <updated>2016-12-27T09:34:05+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,18 +14,50 @@
 
   
   <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十二期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/12/23/tech-notes-32/"/>
-    <updated>2016-12-23T09:33:13+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/12/23/tech-notes-32</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括HTTP 缓存机制及 iOS 的实现、Operation Queues 的相关知识、APP 启用 HTTPS 支持的基础知识、滴滴 iOS 动态化方案等内容。</p>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十三期）[草稿]]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/12/24/tech-notes-33/"/>
+    <updated>2016-12-24T18:09:58+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/12/24/tech-notes-33</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 &hellip; 等内容。</p>
 
 <!--more-->
 
 
 <h2>资讯</h2>
 
-<h4>1) <a href="http://www.theverge.com/2016/12/21/14037686/apple-macbook-macos-focus-mobile-features-ios">macOS is becoming legacy software</a></h4>
+<h4>1)</h4>
+
+<h2>开发</h2>
+
+<h4>1)</h4>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://medium.com/@hollanderbart/new-features-in-xcode-8-2-simulator-fc64a4014a5f">New features in Xcode 8.2 Simulator</a> By Bart den Hollander</h4>
+
+<p>Xcode 8.2 新增了两项新特性，一是 xcrun 命令可以对模拟器截屏及录制，二是可以通过拖拽的方式安装 app 到模拟器。</p>
+
+<h2>其他</h2>
+
+<h4>1)</h4>
+
+<p>@end</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十二期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/12/23/tech-notes-32/"/>
+    <updated>2016-12-23T09:33:13+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/12/23/tech-notes-32</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 HTTP 缓存机制及 iOS 的实现、Operation Queues 的相关知识、APP 启用 HTTPS 支持的基础知识、滴滴 iOS 动态化方案等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.theverge.com/2016/12/21/14037686/apple-macbook-macos-focus-mobile-features-ios">macOS is becoming legacy software</a> By Vlad Savov</h4>
 
 <p>The Verge 引述 Bloomberg 熟悉 Apple 內部运作人士报导，Apple 已经再沒有独立的 Mac OS Team。</p>
 
@@ -204,60 +236,6 @@
 <h4>2) <a href="https://medium.com/swlh/building-and-motivating-engineering-teams-24fd56910039">拉扯一支士气高昂的工程团队</a> By Camille Fournier</h4>
 
 <p>三个要素：Money，别玩虚的，给足工资，正常人都爱钱；Purpose，让工程师一起做产品决策；Respect，像对待成年人一样对待工程师，尊敬他们，把他们当合伙人，而不是把他们当小孩、哄他们开心、让他们听话。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十八期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/11/23/tech-notes-28/"/>
-    <updated>2016-11-23T09:31:19+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/11/23/tech-notes-28</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括iPhone 6s 意外关机问题计划、APP 缓存数据线程安全问题探讨、如何用私有 API 让 WKWebView 支持 NSURLProtocol 子类、如何解决 JSONKit 引起 RN 的 Crash 等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://www.apple.com/cn/support/iphone6s-unexpectedshutdown/">iPhone 6s 意外关机问题计划</a> By Apple</h4>
-
-<p>Apple 已经确认有部分 iPhone 6s 设备可能会意外关机，符合条件的可以免费更换电池。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://blog.cnbang.net/tech/3262/">APP 缓存数据线程安全问题探讨</a> By 陈振焯</h4>
-
-<p>对于 APP 缓存数据线程安全问题，分线程 cache 和数据不可变是比较常见的解决方案，都有着不同的实现代价。前者接口不友好，后者需要配合单向数据流之类的规则或框架才会变得好用。</p>
-
-<h4>2) <a href="https://blog.yeatse.com/2016/10/26/support-nsurlprotocol-in-wkwebview/">让 WKWebView 支持 NSURLProtocol</a> By Yeatse</h4>
-
-<p>WKWebView 还没有完善到能完全替代 UIWebView 的程度。比如 WKWebView 中的请求却完全不遵从自定义 NSURLProtocol 子类，本文介绍了如何用私有方法解决此痛点。</p>
-
-<h4>3) <a href="https://github.com/johnezang/JSONKit/issues/176">JSONKit makes React Native Crash</a></h4>
-
-<p>在 React Native 0.33 时，我们是通过<a href="https://github.com/facebook/react-native/issues/7055">修改 RN 源代码</a>规避 JSONKit 引起的 Crash 问题；升级到 RN 0.35 后，将 JSONKit.m 中的 *((void **)XXX) 替换成 object_getClass(XXX) 也可解决此问题。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://mrpeak.cn/blog/mitmproxy/">免费抓包工具 mitmproxy</a> By MrPeak</h4>
-
-<p>似乎知道 Charles 的同学更多一些，但其实 Charles 有的功能 mitmproxy 基本都有，mitmproxy 还免费，而且对于 terminal 用户来说使用起来更亲近。</p>
-
-<h4>2) <a href="http://www.waerfa.com/icloud-calendar-spam-clean-methods">iCloud 日历垃圾广告清理办法探讨</a> By Waerfa</h4>
-
-<p>近期被黑五的日历垃圾广告干扰，采用文中的『建立分类、设置垃圾广告为刚建立的分类、删除分类』大法清理干净。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://techcrunch.com/2015/03/03/in-the-age-of-disintermediation-the-battle-is-all-for-the-customer-interface/">The Battle Is For The Customer Interface</a> By Tom Goodwin</h4>
-
-<p>本文就是下面这段被无数人转载了的话的出处：</p>
-
-<blockquote><p>Uber是最大的出租车公司，但并不拥有任何车；FB是最大的媒体公司，但不自己生产内容；阿里巴巴是最大的零售商，但没库存；Airbnb是最大的旅馆，但不拥有房产。</p></blockquote>
-
-<p>互联网成就了这些公司，让他们有能力提供一层看似非常简单的用户界面，大规模地连接供需双方。</p>
 
 <p>@end</p>
 ]]></content>

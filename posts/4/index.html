@@ -9,7 +9,7 @@
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括试玩iOS 10 SDK时遇到的问题、处理把nil插入到NSDictionary里引起crash问题的方案等。 ">
+  <meta name="description" content="本期周报主要包括iOS 10体现出的新设计风格、Facebook移动测试实验室解密、如何构建支持多线程的Core Data Stack等。 ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,80 @@ $(document).bind('DOMNodeInserted', function(event) {
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/07/15/tech-notes-9/">平安好房iOS开发团队技术周报（第九期）</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-07-15T22:59:18+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:59 pm</span></time>
+        
+           | <a href="/blog/2016/07/15/tech-notes-9/#disqus_thread"
+             data-disqus-identifier="http://balloonsys.github.io/blog/2016/07/15/tech-notes-9/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>本期周报主要包括iOS 10体现出的新设计风格、Facebook移动测试实验室解密、如何构建支持多线程的Core Data Stack等。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2016/07/15/tech-notes-9/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/07/08/tech-notes-8/">平安好房iOS开发团队技术周报（第八期）</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-07-08T21:44:07+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:44 pm</span></time>
+        
+           | <a href="/blog/2016/07/08/tech-notes-8/#disqus_thread"
+             data-disqus-identifier="http://balloonsys.github.io/blog/2016/07/08/tech-notes-8/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>本期周报主要包括苹果开源压缩算法LZFSE、iOS 10中Privacy的变化、iCloud Core Data的境遇等。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2016/07/08/tech-notes-8/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -374,80 +448,6 @@ $(document).bind('DOMNodeInserted', function(event) {
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/07/04/avoid-nested-push-animation/">Avoid Nested Push Animation</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-07-04T21:28:39+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>9:28 pm</span></time>
-        
-           | <a href="/blog/2015/07/04/avoid-nested-push-animation/#disqus_thread"
-             data-disqus-identifier="http://balloonsys.github.io/blog/2015/07/04/avoid-nested-push-animation/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>在iOS 8里使用UINavigationController把一个页面Push出来后，很短的时间内再次Push一个页面，并没有太大问题，两个页面相继显示。但在iOS 7里运行会遇到nested push animation can result in corrupted navigation bar问题。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2015/07/04/avoid-nested-push-animation/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/">关于自定义表视图Cell遇到的一个bug</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2015-03-25T23:02:19+08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>25</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>11:02 pm</span></time>
-        
-           | <a href="/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/#disqus_thread"
-             data-disqus-identifier="http://balloonsys.github.io/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>今天同事A遇到一个问题：包含一个按钮的TableView Cell，在iOS 6、iOS 8上点击按钮正常工作，但是在iOS 7上却无反应。同事B帮忙review了下代码发现，自定义的Cell在layout时，没有像平常那样调用一下[super layoutSubviews]。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2015/03/25/analysis-of-a-bug-in-customized-tableview-cell/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/5">&larr; Older</a>
@@ -463,6 +463,14 @@ $(document).bind('DOMNodeInserted', function(event) {
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/12/27/spotify-proxy-on-mac/">Mac Spotify 代理设置</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/12/24/tech-notes-33/">平安好房iOS开发团队技术周报（第三十三期）[草稿]</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2016/12/23/tech-notes-32/">平安好房iOS开发团队技术周报（第三十二期）</a>
@@ -494,14 +502,6 @@ $(document).bind('DOMNodeInserted', function(event) {
     
       <li class="post">
         <a href="/blog/2016/11/04/tech-notes-25/">平安好房iOS开发团队技术周报（第二十五期）</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2016/11/04/static-vs-dynamic-lib/">iOS 静态库及动态库开发</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2016/10/30/reading-in-2016/">2016 年读过的那些书</a>
       </li>
     
   </ul>

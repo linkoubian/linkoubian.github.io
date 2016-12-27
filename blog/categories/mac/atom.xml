@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mac | Balloonsys Inc.]]></title>
+  <link href="http://balloonsys.github.io/blog/categories/mac/atom.xml" rel="self"/>
+  <link href="http://balloonsys.github.io/"/>
+  <updated>2016-12-27T09:34:05+08:00</updated>
+  <id>http://balloonsys.github.io/</id>
+  <author>
+    <name><![CDATA[Linkou Bian]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mac Spotify 代理设置]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/12/27/spotify-proxy-on-mac/"/>
+    <updated>2016-12-27T09:23:52+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/12/27/spotify-proxy-on-mac</id>
+    <content type="html"><![CDATA[<p>Mac 为了无障碍上网，开着 Surge；想用 Spotify 听听歌，却因公司网络而无法登录，怎么办？</p>
+
+<!--more-->
+
+
+<p>开启 Surge 会自动配置 HTTP / Socket 代理。代理服务器为本机，即 127.0.0.1，端口分别为 6152 / 6153。</p>
+
+<p>打开 Spotify for Mac 打开高级设置项，选择 Socket 5 代理，填写并保存代理服务器信息。</p>
+
+<p>如果依旧无法使用 Facebook 账号登录，请在 /etc/hosts 文件中，将 login.spotilocal.com 映射到 127.0.0.1 即可。</p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+</feed>

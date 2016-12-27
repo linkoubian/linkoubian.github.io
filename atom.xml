@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-23T10:04:09+08:00</updated>
+  <updated>2016-12-27T09:34:05+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,18 +14,70 @@
 
   
   <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十二期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/12/23/tech-notes-32/"/>
-    <updated>2016-12-23T09:33:13+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/12/23/tech-notes-32</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括HTTP 缓存机制及 iOS 的实现、Operation Queues 的相关知识、APP 启用 HTTPS 支持的基础知识、滴滴 iOS 动态化方案等内容。</p>
+    <title type="html"><![CDATA[Mac Spotify 代理设置]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/12/27/spotify-proxy-on-mac/"/>
+    <updated>2016-12-27T09:23:52+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/12/27/spotify-proxy-on-mac</id>
+    <content type="html"><![CDATA[<p>Mac 为了无障碍上网，开着 Surge；想用 Spotify 听听歌，却因公司网络而无法登录，怎么办？</p>
+
+<!--more-->
+
+
+<p>开启 Surge 会自动配置 HTTP / Socket 代理。代理服务器为本机，即 127.0.0.1，端口分别为 6152 / 6153。</p>
+
+<p>打开 Spotify for Mac 打开高级设置项，选择 Socket 5 代理，填写并保存代理服务器信息。</p>
+
+<p>如果依旧无法使用 Facebook 账号登录，请在 /etc/hosts 文件中，将 login.spotilocal.com 映射到 127.0.0.1 即可。</p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十三期）[草稿]]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/12/24/tech-notes-33/"/>
+    <updated>2016-12-24T18:09:58+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/12/24/tech-notes-33</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 &hellip; 等内容。</p>
 
 <!--more-->
 
 
 <h2>资讯</h2>
 
-<h4>1) <a href="http://www.theverge.com/2016/12/21/14037686/apple-macbook-macos-focus-mobile-features-ios">macOS is becoming legacy software</a></h4>
+<h4>1)</h4>
+
+<h2>开发</h2>
+
+<h4>1)</h4>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://medium.com/@hollanderbart/new-features-in-xcode-8-2-simulator-fc64a4014a5f">New features in Xcode 8.2 Simulator</a> By Bart den Hollander</h4>
+
+<p>Xcode 8.2 新增了两项新特性，一是 xcrun 命令可以对模拟器截屏及录制，二是可以通过拖拽的方式安装 app 到模拟器。</p>
+
+<h2>其他</h2>
+
+<h4>1)</h4>
+
+<p>@end</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十二期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/12/23/tech-notes-32/"/>
+    <updated>2016-12-23T09:33:13+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/12/23/tech-notes-32</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 HTTP 缓存机制及 iOS 的实现、Operation Queues 的相关知识、APP 启用 HTTPS 支持的基础知识、滴滴 iOS 动态化方案等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.theverge.com/2016/12/21/14037686/apple-macbook-macos-focus-mobile-features-ios">macOS is becoming legacy software</a> By Vlad Savov</h4>
 
 <p>The Verge 引述 Bloomberg 熟悉 Apple 內部运作人士报导，Apple 已经再沒有独立的 Mac OS Team。</p>
 
@@ -1414,122 +1466,6 @@
 <h2>总结</h2>
 
 <p>本文选取最最简单的分隔线介绍 React Native 实践过程中的代码编写思路，完成的其他控件有表单填写进度等。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十九期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/09/24/tech-notes-19/"/>
-    <updated>2016-09-24T06:37:43+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/09/24/tech-notes-19</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 Sierra 系统的新功能介绍，React Native 开发工具的选型与配置、调试方法及原理、如何集成到现有 APP 项目中，以及腾讯的 HttpDNS 服务详解等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.ifanr.com/app/720477">Mac 最新系统 Sierra 发布</a> By 王崇旭</h4>
-
-<p>苹果发布了 Mac 最新系统 macOS Sierra 正式版，本文梳理出了最值得留意的功能。其中最吸引我的是通用剪贴板，你值得拥有！</p>
-
-<h4>2) <a href="https://www.theguardian.com/technology/2016/sep/20/apple-patent-recycled-paper-bag">Apple patents bold new innovation – a paper bag</a></h4>
-
-<p>苹果给自家的环保纸袋注册了专利，重新定义了购物袋:-)</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://github.com/huxiaoqiao/React-Native-Study/blob/master/Blog/iOS%E7%8E%B0%E6%9C%89%E9%A1%B9%E7%9B%AE%E9%9B%86%E6%88%90React%20Native.md">iOS 现有项目集成 React Native</a> By huxiaoqiao</h4>
-
-<p>除了文中介绍的在现有工程里集成 React Native 的具体步骤，我建议在实践时可以采用 git submodule 的方式在 iOS 工程根目录下管理独立的 React Native 相关代码库。</p>
-
-<h4>2) <a href="https://medium.com/@shaheenghiassy/deep-diving-react-native-debugging-ea406ed3a691">Deep Diving React Native Debugging</a> By Shaheen Ghiassy</h4>
-
-<p>作者深入分析了 React Native 程序调试相关的原理与步骤。</p>
-
-<h1>3) <a href="https://www.raywenderlich.com/126063/react-native-tutorial">React Native Tutorial: Building Apps with JavaScript</a> By Tom Elliott</h1>
-
-<p>著名的 Raywenderlich 博客发的一篇 React Native 教程，详细介绍了如何开发一个房产搜索应用。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://inessential.com/2016/09/22/memory_graph_debugger_tips">Memory Graph Debugger Tips</a> By Brent Simmons</h4>
-
-<p>作者试用 Memory Graph Debugger 一天总结的一些经验，非常值得一读。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/8e9df5f85bca">React Native 开发 IDE 选型及配置</a> By asce1885</h4>
-
-<p>最终我选择的是 Atom + Nuclide 的方案，同时也把平常用的很多的 Sublime 做了相应的配置。安装完成后建议先摸索下调试相关的玩法。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://mp.weixin.qq.com/s?__biz=MzA3ODgyNzcwMw==&amp;mid=201837080&amp;idx=1&amp;sn=b2a152b84df1c7dbd294ea66037cf262">鹅厂网事: HttpDNS 服务详解</a> By 廖伟健</h4>
-
-<p>腾讯公司的GSLB 团队推出了一种全新的域名解析调度系统 HttpDNS 以专治LocalDNS 解析异常以及流量调度不准。</p>
-
-<h4>2) <a href="https://zi.com/w/a/b223XP">为什么应该开始使用 React Native 了</a> By 周楷雯</h4>
-
-<p>我并不建议你直接用 React Native 重写你的 App，像 Swift 一样，你可以先用 React Native 来实现一部分页面，让那些体力活的 UI 构建变的越快而充满乐趣。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第十八期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/09/17/tech-notes-18/"/>
-    <updated>2016-09-17T09:56:15+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/09/17/tech-notes-18</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 iOS 10 隐藏特性、设计趋势、正式版发布以来的一些数据，App 和 Extension 之间如何共享数据与功能，Xcode 8 适配经验分享，UI Testing 等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://blog.mixpanel.com/2016/09/08/apple-ios-10-data/">iOS 10 Adoption Rate Nears 20% In Just Two Days</a> By mixpanel</h4>
-
-<p>Mixpanel 的 1830 亿条数据显示，iOS 10 正式发布首日有 14.81% 的设备已升级至最新版，两天内达到 21.02% 的比率。另外，美国移动运营商 T-Mobile CEO 称前四天 iPhone 7 预订量已达到 iPhone 6 同期的 4 倍。</p>
-
-<h4>2) <a href="https://www.cnet.com/how-to/ios-10-hidden-features/">23 hidden features in iOS 10</a> By Jason Cipriani</h4>
-
-<p>很多版本的很多功能可能被很多人忽视了，看看发布会上没有提到的特性有助于更大程度的利用好移动设备。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://www.raizlabs.com/dev/2016/09/preparing-ios-app-for-extensions/">Preparing Your iOS App for Extensions</a> By Nick Bonatsakis</h4>
-
-<p>Extension 是一个独立于 App 的进程，作者通过将代码放到独立的 Framework 中详述如何做到 App 和 Extension 之间数据和功能的共享。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/e9c313df746f">iOS 推送全解析</a> By pikacode</h4>
-
-<p>本文旨在对 iOS 推送进行一个完整的剖析，如果你之前对推送一无所知，那么在你认真地阅读了全文后必将变成一个推送老手，你将会对其中的各种细节和原理有充分的理解。</p>
-
-<h4>3) <a href="http://www.jianshu.com/p/f8151d556930">iOS 10 的适配问题</a></h4>
-
-<p>作者总结的总结的一些关于 iOS 10 适配方面的问题。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://masilotti.com/ui-testing-cheat-sheet/">UI Testing Cheat Sheet and Examples</a> By Joe Masilotti</h4>
-
-<p>本周把玩去年增加的 UI Testing 相关的功能时，发现当时 WWDC 视频里做的代码录制在 Xcode 7 最新版以及 Xcode 8 里有些压根就不 work 啊。另外感觉 UI Testing 并没有那么 exciting ！</p>
-
-<h4>2) 如何禁止 Xcode 8 模拟器疯狂输出系统日志 By Russell Ivanovic</h4>
-
-<p>增加环境变量 OS_ACTIVITY_MODE = disable 即可。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://isux.tencent.com/ios-10-design-trends.html">从 iOS 10 设计指南变化看设计的新趋势</a> By ISUX</h4>
-
-<p>本文主要针对已经发布的 iOS 10 的人机界面设计指南来对比分析新老版本的 iOS 系统在设计上哪些改变，有哪些设计趋势值得我们注意。</p>
-
-<h4>2) <a href="http://yuguo.us/weblog/shut-up-and-take-the-money/">为什么有些人赚钱那么轻松</a> By 余果</h4>
-
-<p>外行并不太能影响专业人士的价格，他们自己在跟自己竞争。对于真正的专业主义者，没有行业低迷这种概念存在。随波逐流的，一直是水面上的浮萍。</p>
-
-<p>@end</p>
 ]]></content>
   </entry>
   
