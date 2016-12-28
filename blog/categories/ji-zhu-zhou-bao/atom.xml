@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-27T09:48:31+08:00</updated>
+  <updated>2016-12-28T08:38:17+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -29,13 +29,21 @@
 
 <h2>开发</h2>
 
-<h4>1)</h4>
+<h4>1) <a href=""></a> By</h4>
+
+<h4>2) <a href="http://balloonsys.com/blog/2016/12/27/afnetworking-in-a-nutshell/">AFNetworking 3.0 源码阅读笔记</a> By Linkou Bian</h4>
+
+<p>上周阅读了 AFNetworking 3.0 的源代码，对阅读中遇到的问题进行了些思考，整理成此文。干货 &amp; 原创，值得一读。</p>
 
 <h2>工具</h2>
 
 <h4>1) <a href="https://medium.com/@hollanderbart/new-features-in-xcode-8-2-simulator-fc64a4014a5f">New features in Xcode 8.2 Simulator</a> By Bart den Hollander</h4>
 
 <p>Xcode 8.2 新增了两项新特性，一是 xcrun 命令可以对模拟器截屏及录制，二是可以通过拖拽的方式安装 app 到模拟器。</p>
+
+<h4>2) <a href="http://balloonsys.com/blog/2016/12/27/spotify-proxy-on-mac/">Mac Spotify</a> By Linkou Bian</h4>
+
+<p>Mac 为了无障碍上网，开着 Surge；想用 Spotify 听听歌，却因公司网络而无法登录，怎么办？</p>
 
 <h2>其他</h2>
 
