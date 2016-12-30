@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-28T10:22:20+08:00</updated>
+  <updated>2016-12-30T09:15:06+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十三期）[草稿]]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/12/24/tech-notes-33/"/>
-    <updated>2016-12-24T18:09:58+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/12/24/tech-notes-33</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括拼图验证控件的实现的原理、AFNetworking 3.0 源代码阅读笔记、Xcode 8.2 Simulator 新特性介绍等内容。</p>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十三期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2016/12/30/tech-notes-33/"/>
+    <updated>2016-12-30T18:09:58+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2016/12/30/tech-notes-33</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括手机 QQ 牛逼的 iOS 动态化方案、拼图验证控件的实现的原理、AFNetworking 3.0 源代码阅读笔记、Xcode 8.2 Simulator 新特性介绍等内容。</p>
 
 <!--more-->
 
@@ -31,11 +31,15 @@
 
 <h2>开发</h2>
 
-<h4>1) <a href="http://tutuge.me/2016/12/25/TTGPuzzleVerify/">拼图验证控件的实现</a> By 燕泽堃</h4>
+<h4>1) <a href="http://mp.weixin.qq.com/s/DhGR6J5fx04BPi-kMsMBJg">手机 QQ 的 iOS 动态化方案</a> By OCSTeam</h4>
+
+<p>在iOS的发展历程上，涌现了很多动态化方案，有历史悠久的 WaxPatch 动态化方案，有远近闻名的JSPatch动态化方案。文中手机 QQ 团队向大家介绍一款堪称『史上最疯狂』的 iOS 动态化方案。</p>
+
+<h4>2) <a href="http://tutuge.me/2016/12/25/TTGPuzzleVerify/">拼图验证控件的实现</a> By 燕泽堃</h4>
 
 <p>拼图验证控件用以让用户通过水平、垂直，或者直接拖动拼图块，完成拼图图案，达到验证目的。作者来自阿里，对其开发的 TTGPuzzleVerify 控件做了整体设计思路和实现原理的分享。</p>
 
-<h4>2) <a href="http://balloonsys.com/blog/2016/12/27/afnetworking-in-a-nutshell/">AFNetworking 3.0 源码阅读笔记</a> By Linkou Bian</h4>
+<h4>3) <a href="http://balloonsys.com/blog/2016/12/27/afnetworking-in-a-nutshell/">AFNetworking 3.0 源码阅读笔记</a> By Linkou Bian</h4>
 
 <p>上周阅读了 AFNetworking 3.0 的源代码，对阅读中遇到的问题进行了些思考，整理成此文。干货 &amp; 原创，值得一读。</p>
 

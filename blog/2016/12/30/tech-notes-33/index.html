@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第三十三期）[草稿] - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第三十三期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括拼图验证控件的实现的原理、AFNetworking 3.0 源代码阅读笔记、Xcode 8.2 Simulator 新特性介绍等内容。 资讯 1) Inconsistent MacBook Pro battery test results 全新 MacBook Pro &hellip;">
+  <meta name="description" content="本期周报主要包括手机 QQ 牛逼的 iOS 动态化方案、拼图验证控件的实现的原理、AFNetworking 3.0 源代码阅读笔记、Xcode 8.2 Simulator 新特性介绍等内容。 资讯 1) Inconsistent MacBook Pro battery test results &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/12/24/tech-notes-33/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/12/30/tech-notes-33/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -80,7 +80,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第三十三期）[草稿]</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第三十三期）</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-12-24T18:09:58+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>6:09 pm</span></time>
+<time class='entry-date' datetime='2016-12-30T18:09:58+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>6:09 pm</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://balloonsys.github.io">Comments</a>
@@ -99,7 +99,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括拼图验证控件的实现的原理、AFNetworking 3.0 源代码阅读笔记、Xcode 8.2 Simulator 新特性介绍等内容。</p>
+<div class="entry-content"><p>本期周报主要包括手机 QQ 牛逼的 iOS 动态化方案、拼图验证控件的实现的原理、AFNetworking 3.0 源代码阅读笔记、Xcode 8.2 Simulator 新特性介绍等内容。</p>
 
 <!--more-->
 
@@ -112,11 +112,15 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 <h2>开发</h2>
 
-<h4>1) <a href="http://tutuge.me/2016/12/25/TTGPuzzleVerify/">拼图验证控件的实现</a> By 燕泽堃</h4>
+<h4>1) <a href="http://mp.weixin.qq.com/s/DhGR6J5fx04BPi-kMsMBJg">手机 QQ 的 iOS 动态化方案</a> By OCSTeam</h4>
+
+<p>在iOS的发展历程上，涌现了很多动态化方案，有历史悠久的 WaxPatch 动态化方案，有远近闻名的JSPatch动态化方案。文中手机 QQ 团队向大家介绍一款堪称『史上最疯狂』的 iOS 动态化方案。</p>
+
+<h4>2) <a href="http://tutuge.me/2016/12/25/TTGPuzzleVerify/">拼图验证控件的实现</a> By 燕泽堃</h4>
 
 <p>拼图验证控件用以让用户通过水平、垂直，或者直接拖动拼图块，完成拼图图案，达到验证目的。作者来自阿里，对其开发的 TTGPuzzleVerify 控件做了整体设计思路和实现原理的分享。</p>
 
-<h4>2) <a href="http://balloonsys.com/blog/2016/12/27/afnetworking-in-a-nutshell/">AFNetworking 3.0 源码阅读笔记</a> By Linkou Bian</h4>
+<h4>3) <a href="http://balloonsys.com/blog/2016/12/27/afnetworking-in-a-nutshell/">AFNetworking 3.0 源码阅读笔记</a> By Linkou Bian</h4>
 
 <p>上周阅读了 AFNetworking 3.0 的源代码，对阅读中遇到的问题进行了些思考，整理成此文。干货 &amp; 原创，值得一读。</p>
 
@@ -152,7 +156,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-12-24T18:09:58+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>6:09 pm</span></time>
+<time class='entry-date' datetime='2016-12-30T18:09:58+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>6:09 pm</span></time>
       
 
 <span class="categories">
@@ -173,10 +177,8 @@ $(document).bind('DOMNodeInserted', function(event) {
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/12/23/tech-notes-32/" title="Previous Post: 平安好房iOS开发团队技术周报（第三十二期）">&laquo; 平安好房iOS开发团队技术周报（第三十二期）</a>
+        <a class="basic-alignment left" href="/blog/2016/12/27/afnetworking-in-a-nutshell/" title="Previous Post: AFNetworking 3.0 源码阅读笔记">&laquo; AFNetworking 3.0 源码阅读笔记</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/12/27/spotify-proxy-on-mac/" title="Next Post: Mac Spotify 代理设置">Mac Spotify 代理设置 &raquo;</a>
       
     </p>
   </footer>
@@ -197,15 +199,15 @@ $(document).bind('DOMNodeInserted', function(event) {
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/12/30/tech-notes-33/">平安好房iOS开发团队技术周报（第三十三期）</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2016/12/27/afnetworking-in-a-nutshell/">AFNetworking 3.0 源码阅读笔记</a>
       </li>
     
       <li class="post">
         <a href="/blog/2016/12/27/spotify-proxy-on-mac/">Mac Spotify 代理设置</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2016/12/24/tech-notes-33/">平安好房iOS开发团队技术周报（第三十三期）[草稿]</a>
       </li>
     
       <li class="post">
@@ -262,8 +264,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/12/24/tech-notes-33/';
-        var disqus_url = 'http://balloonsys.github.io/blog/2016/12/24/tech-notes-33/';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/12/30/tech-notes-33/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2016/12/30/tech-notes-33/';
         var disqus_script = 'embed.js';
       
     (function () {
