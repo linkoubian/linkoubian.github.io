@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-30T10:00:41+08:00</updated>
+  <updated>2016-12-30T16:06:31+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -199,9 +199,9 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 
 <p>打开 Spotify for Mac 打开高级设置项，选择 Socket 5 代理，填写并保存代理服务器信息。</p>
 
-<p>如果依旧无法使用 Facebook 账号登录，请在 /etc/hosts 文件中，将 login.spotilocal.com 映射到 127.0.0.1 即可。</p>
+<p>如果依旧无法使用 Facebook 账号登录，请在 /etc/hosts 文件中，将 login.spotilocal.com 映射到 127.0.0.1 即可。也可以在 Spotify Web 设置设备登录密码。</p>
 
-<p>如果还有问题，可以尝试借用手机热点先登录成功。</p>
+<p>如果还有问题，可以尝试借用手机热点先登录成功。有时无法播放，请查看 Spotify 是不是直接连 IP 地址。如果是的话，请在 Surge 规则文件里添加 IP-CIDR 以覆盖对应的 IP 段，终极大法。</p>
 
 <p>Enjoy!</p>
 ]]></content>
