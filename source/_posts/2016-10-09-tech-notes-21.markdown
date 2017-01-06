@@ -1,0 +1,50 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第二十一期）
+date: 2016-10-09 08:46:41 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括苹果云服务团队调整资讯、Swift 3 代码迁移经验小结、Xcode Asset Catalog 各种有用的特性、对 React Native 软件许可证解读等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Apple Said to Plan Improved Cloud Services by Unifying Teams](https://www.bloomberg.com/news/articles/2016-10-06/apple-is-said-to-plan-improved-cloud-services-by-unifying-teams) By Bloomberg
+
+据 Bloomberg 的消息称，苹果打算将 Siri、Maps、iCould、Apple Pay、Apple News、Apple Music 以及部分 iTunes 业务的云服务团队统一起来，统一后的云服务将运行在一个新的代号为 Pie 的后端。
+
+#### 2) [Apple Has Removed Dash from the App Store](https://blog.kapeli.com/apple-removed-dash-from-the-app-store#what-happened) By Bogdan Popescu
+
+非常受欢迎的 API 文档浏览器 Dash 的作者在迁移开发者账号至企业账号过程中，突然遭遇应用被下架的厄运。经沟通后得知，苹果认为该应用的评论有操控之嫌，作者很受伤。
+
+## 开发
+
+#### 1) [Swift 3 代码迁移](http://tech.glowing.com/cn/swift3/) By Glow
+
+Swift 1 确立了语言的基线：安全、快速、现代。Swift 2 展现了 Swift 应该是什么，未来怎么走：面向协议的编程、开源。而 Swift 3 更多是清扫和规范。
+
+#### 2) [iOS 10 ReplayKit Live](http://blog.lessfun.com/blog/2016/09/21/ios-10-replaykit-live-and-broadcast-extension/) By lessfun
+
+在 iOS 8 及以前，第三方 App 如果想要全局录屏，只能使用私有 API。升级到 iOS 9 后，官方新增了 ReplayKit，并且禁用了录屏的私有 API。iOS 10 在 ReplayKit 保存录屏视频的基础上，增加了视频流实时直播功能。
+
+## 工具
+
+#### 1) [Let's Talk About project.pbxproj](http://yulingtianxia.com/blog/2016/09/28/Let-s-Talk-About-project-pbxproj/) By 杨萧玉
+
+project.pbxproj 文件被包含于 Xcode 工程文件 *.xcodeproj 之中，存储着 Xcode 工程的各项配置参数。本文谈了下 project.pbxproj 的知识，并总结了一些操作工程文件的优秀轮子。
+
+#### 2) [Four Secrets about Xcode Asset Catalog](http://krakendev.io/blog/4-xcode-asset-catalog-secrets-you-need-to-know) By Hector Matos
+
+之前做项目瘦身方案时，有做过图片资源迁移至 Asset Catalog 的工作。这篇文章包含 Xcode Asset Catalog 的四项重要特性。
+
+## 其他
+
+#### 1) [Why I'm not a React Native Developer](https://arielelkin.github.io/articles/why-im-not-a-react-native-developer) By Ariel Elkin
+
+关于 RN 许可协议的解读是我获得的最大收获:
+
+>if I initiate any lawsuit alleging patent infringement against Facebook, my license to use React Native would be immediately terminated.
+
+@end

@@ -1,0 +1,56 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第十六期）
+date: 2016-09-03 10:08:14 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 App Store 的最新规则，做一款 App 前需要考虑的方方面面，以及 Surge 开发者分享的他所使用的软硬件工具等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [苹果对 App Store 进行大清理](http://tech2ipo.com/10032212) By tech2ipo
+
+9月2日凌晨，收到 Apple 的邮件说将下架不能与 iPhone 和 iPad 兼容及不能正常运行的应用，或者没有遵循更新后 App Store 指南的应用。另外，苹果还指出，应用名称长度不得超过 50 个字符。
+
+#### 2) [苹果新获 59 项专利](http://www.arinchina.com/news/show-4227.html) By Trista
+
+美国专利商标局正式公布了苹果公司新获批的 59 项专利，包括 12 项设计专利以及可弯曲 OLED 显示屏专利、头戴显示器专利、iOS 设备防震系统专利、家庭自动化系统专利等。
+
+## 开发
+
+#### 1) [iOS 绘制1个像素的线](http://www.cnblogs.com/smileEvday/p/iOS_PixelVsPoint.html) By 枫叶
+
+第一想法可能是直接根据当前屏幕的 scale 计算出1像素的线对应的 Point，然后设置线宽（或者高）为1个像素。但在设备上测试时会发现渲染出来的线宽并不是1个像素。
+
+#### 2) [做一个 App 前需要考虑的几件事](http://limboy.me/tech/2016/07/06/starting-an-app.html) By 李忠
+
+随着工具链的完善，语言的升级以及各种优质教程的涌现，做一个 App 的成本也越来越低了。尽管如此，有些事情最好前期就做起来，避免当 App 有了一定规模后，再感慨当初为什么没有多留点心。
+
+#### 3) [仿微信小视屏](http://www.jianshu.com/p/61a9030adeef) By Damonwong
+
+对于一个类似微信小视屏的功能，大致需要完成的功能无非就是视频录制和视频播放两块。本文是作者视频相关功能开发的实践笔记。
+
+## 工具
+
+#### 1) [Xcode 7 中的调试技巧](http://www.jianshu.com/p/70ed36cf8a98)
+
+Xcode 7 中苹果为我们增加了两个重要的 Debug 相关功能。一个是 Address Sanitizer，另一个是打开 Organizer 窗口的 Crashes 标签页，会自动下载 Crash 信息，右侧的详细信息可以看到是哪行代码导致的崩溃。
+
+#### 2) [iOS 符号表恢复&逆向支付宝](http://blog.imjun.net/2016/08/25/iOS符号表恢复-逆向支付宝/) By 杨君
+
+符号表历来是逆向工程中的必争之地，而 iOS 应用在上线前都会裁去符号表，以避免被逆向分析。本文会介绍一个作者写的工具，用于恢复 iOS 应用的符号表。
+
+## 其他
+
+#### 1) [Better apps will replace apps](http://dangrover.com/blog/2016/04/20/bots-wont-replace-apps.html) By Dan Grover
+
+作者是 Facebook 产品经理，之前在微信工作。他在文中谈了对 Facebook、微软的聊天机器人的理解。
+
+#### 2) [Surge 开发者使用的软硬件](http://liqi.io/liuyachen/)
+
+Surge 的开发者刘亚晨，职业角色是 iOS 自由开发者和技术顾问。这篇访谈中他分享了自己使用的硬件和软件。
+
+@end

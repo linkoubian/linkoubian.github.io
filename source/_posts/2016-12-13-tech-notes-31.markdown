@@ -1,0 +1,49 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第三十一期）
+date: 2016-12-16 18:16:40 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 SDWebImage 支持 URL 不变时更新图片内容的方案、HTTP 的构成、Swift 版表单框架、Facebook 首位华人工程师的经验分享等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [无法安装 macOS Sierra 10.12 更新](http://jingyan.baidu.com/article/dca1fa6f73c875f1a540524e.html)
+
+本周我尝试将 macOS Sierra 升级到 10.12 时遇到始终无法安装的问题，报验证失败的错。后来参考本文，关闭时间与互联网同步、把系统声音静音、再把任务栏正在运行的软件都退出，之后成功安装。
+
+## 开发
+
+#### 1) [SDWebImage 支持 URL 不变时更新图片内容](http://blog.handy.wang/blog/2016/01/29/sdwebimagehuan-cun-zhi-tu-pian-urlbu-bian/) By Handy.Wang
+
+文末的第 5 个参考链接技术价值更高，相比而言作者写的文章算『术』。要了解 SDWebImage 的原理，非常推荐读一读其源代码。
+
+#### 2) [扒一扒 HTTP 的构成](http://mrpeak.cn/blog/http-constitution/) By mrpeak
+
+各平台上的一些第三方库都对 HTTP 做了进一步的封装，让 HTTP 变得更加亲民，但往往拿来就用的技术，很容易忽视其背后隐藏的细节。
+
+## 工具
+
+#### 1) [Eureka - Elegant form builder in Swift](https://github.com/xmartlabs/Eureka) By xmartlabs
+
+拥有近 5000 个 star 的表单框架，如果需要 Obj-C 版本，可以看看该开发商的 XLForm 项目。
+
+#### 2) [DOPDropDownMenu 增强版](https://github.com/12207480/DOPDropDownMenu-Enhanced)
+
+下拉选择控件在大部分国内应用里都有，作者在 DOPDropDownMenu 的基础上添加了双列表的应用，优化了代码，增强了稳定性。
+
+## 其他
+
+#### 1) [婴儿期的 Facebook 吃了什么才变帝国](http://blog.tezign.com/2016/01/09/why-facebook-become-an-empire/) By 赵海平
+
+作者是 Facebook 的第一位华人员工，履历牛逼闪闪。他认为在做 startup 的时候，最重要的就是找到你产品的核心价值，而这个核心价值不用到最完美的时刻就应该可以体现出来。
+
+#### 2) [怎么判断一个人是不是高级软件工程师](http://blog.professorbeekums.com/2016/12/what-makes-senior-software-developer.html) By Beekums
+
+如果你能完全信任一个工程师，他/她办事你放心，那他/她就是高级工程师。
+
+@end
+

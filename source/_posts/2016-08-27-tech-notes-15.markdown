@@ -1,0 +1,48 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第十五期）
+date: 2016-08-27 10:34:36 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括如何将设计稿中的像素转化为开发稿中的约束、类方法与实例方法 Swizzling 的区别，以及 APP 视觉改版高效产出经验分享等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [非国行 iPhone 也可享受保修政策](http://sspai.com/35297)
+
+2016 年 8 月 25 日，Apple 售后接到了一个通知：可以为国内顾客与出游中顾客提供更多国际版 iPhone 的相同产品维修和整机更换服务。
+
+## 开发
+
+#### 1) [Auto Layout 设计美学](http://blog.callmewhy.com/2016/08/24/autolayout-design-aesthetic/) By wanghai
+
+文章虽然是关于 Auto Layout 的，但是其实最核心的部分是如何将设计稿中的像素转化为开发稿中的约束，而这点在所有开发场合中都是通用的。
+
+#### 2) [Method Swizzling 的各种姿势](http://www.tanhao.me/code/160723.html/) By tanhao
+
+对于类方法的动态添加，需要将方法添加到 MetaClass 中,因为实例方法记录在 class 的 method-list 中, 类方法是记录在 meta-class 中的 method-list 中的。
+
+## 工具
+
+#### 1) Mac 小技巧
+
+局域网 IP 怎么查？Mac 下最快的方法，按住 option 点 Wifi 图标。
+
+#### 2) [Display animated image on iOS device](https://wangjwchn.github.io/blog/Display-animated-image-on-iOS-device) By 王佳玮
+
+一个用 Swift 实现的 GIF&APNG 引擎，低内存、低 CPU 占用。
+
+## 其他
+
+#### 1) [Rush - 视觉改版回顾和高效产出经验](https://zi.com/w/a/763ePM?id=763ePM) By Tim Wu
+
+文中建立规范部分提到的规范控件库非常有意义，对于研发来说可以形成控件库。有多少公司的设计师能做到这一点？随心所欲惯了！
+
+#### 2) [Solve App Store Review Problem](https://github.com/wg689/Solve-App-Store-Review-Problem)
+
+罗列了不少审核被拒及应对办法，作者的认真劲儿赞一个！
+
+@end

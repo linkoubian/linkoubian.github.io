@@ -1,0 +1,46 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第二十四期）
+date: 2016-10-28 21:40:38 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括新款 MacBook Pro 的产品信息及其主要卖点 Touch Bar 相关的开发指南、如何高效计算文件的哈希值等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [MacBook Pro 发布会](http://www.mac52ipod.cn/post/apple-macbook-pro-2016-event-5-min-briefintroduction.php) By mac52ipod
+
+键盘第一排的功能键被换成了 Touch Bar ，其右侧加上了指纹识别。接口全部是 Thunderbolt 3 ，普通用户为了用手上的老外设，恐怕不得不买转接器。
+
+## 开发
+
+#### 1) [Touch Bar 入门开发指南](http://blog.cee.moe/touchbar-tutorial.html) By Cee
+
+作者示范一个最简单的 Touch Bar 应用：在屏幕上随机生成两个 0 到 9 的整数，通过点击 TouchBar 中的按钮来比较两个数大小，并给出结果。
+
+#### 2) [Compute hash of large file effeciently](http://www.joel.lopes-da-silva.com/2010/09/07/compute-md5-or-sha-hash-of-large-file-efficiently-on-ios-and-mac-os-x/) By Joe Kun
+
+简单粗暴的方式是把文件全部加载到 NSData 对象，但对于大文件来说效果非常不好。作者介绍了基于 CFReadStream 的实现方案。本周我实现 React Native 的增量更新时需要计算下载下来的 Patch 文件 hash 值，采用的就是文中的方案。
+
+## 工具
+
+#### 1) [mas-cli](https://github.com/mas-cli/mas) By Dmitry Rodionov
+
+Mac App Store 的命令行程序，支持 brew 安装。
+
+#### 2) [Postman](https://www.getpostman.com)
+
+如果你不想花钱购买 Paw，那么值得试试 Postman 这个独立的 APP（不是 Chrome 的插件喔）。
+
+## 其他
+
+#### 1) [Becoming a CTO](https://juokaz.com/blog/becoming-a-cto) By Juozas
+
+如果你还在写博客阐述为何说 PHP 太逊了，那你还没准备好做 CTO 哦。那些讨厌文山会海、不喜欢和非技术人员打交道的人，也不大可能会胜任 CTO 一职的。
+
+>The CTO must protect the technology team from becoming a pure execution arm for ideas without tending to its own needs and its own ideas.
+
+@end

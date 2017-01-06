@@ -1,0 +1,48 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第二十三期）
+date: 2016-10-19 20:54:10 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 Mac 系列产品的最新消息、React Native 项目实战经验、React Native 增量升级方案、iOS 自动化打包等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Apple plans to launch new Macs at an October 27 event](http://www.recode.net/2016/10/18/13323264/apple-new-macs-october-27) By Recode
+
+苹果上一次对 MacBook Pro 进行大幅度更新是在 2012 年。根据 Recode 的消息源，苹果将在 10 月 27 日发布新的 Mac 系列产品。
+
+## 开发
+
+#### 1) [React Native 项目实战](http://balloonsys.com/blog/2016/10/18/rn-put-it-all-together/) By Linkou Bian
+
+本文以 Twitter 工程师 Bonnie Eisenman 撰写的 Learning React Native 一书的第九章内容为蓝本，总结了 React Native 项目实践的一些经验。
+
+#### 2) [React Native 增量升级方案](https://github.com/cnsnake11/blog/blob/master/ReactNative开发指导/ReactNative增量升级方案.md) By cnsnake11
+
+一般使用 RN 编写的 app 的线上使用方式，是将 react-native bundle 命令打出bundle 文件和 assets 文件夹，直接内置到 app 中，app 在 controller 中直接加载 bundle 文件，当修改了代码或者图片的时候，只要app使用新的bundle文件和assets文件夹，就完成了一次在线升级。
+
+#### 3) [列表和网格视图的相互切换](http://www.jianshu.com/p/131de575ef9e) By LeeJay
+
+在很多电商 app 中，都有列表视图和网格视图的相互切换。很多人看到第一时间想到的是用 TableView 和 CollectionView 来做切换。作者给出了一个非常简单的方法。
+
+## 工具
+
+#### 1) [Xcode 使用 xcconfig 文件配置环境](http://liumh.com/2016/05/22/use-xcconfig-config-specific-variable/) By Carya Liu
+
+使用 Xcode 的 Configurations Setting File 把所有的环境配置都整合到配置文件中，这样打不同环境下的安装包时，会自动选择对应的环境参数。
+
+#### 2) [iOS 自动打包并发布脚本](http://liumh.com/2015/11/25/ios-auto-archive-ipa/) By Carya Liu
+
+本文最终实现的是使用脚本打 Ad-hoc 包，并发布测试，当然稍微修改一下脚本参数就可以打其他类型的 ipa 包了。
+
+## 其他
+
+#### 1) [互联网合并浪潮中，内部员工该何去何从？](https://zhuanlan.zhihu.com/p/22672061) By 林安
+
+通过采访那些亲身经历过公司合并的同学，给每一位身处这个时代的互联网人以警醒。当有一天，公司合并这件事落在你身上时，希望你能从这篇文章中汲取干货，从容面对、冷静处理。
+
+@end

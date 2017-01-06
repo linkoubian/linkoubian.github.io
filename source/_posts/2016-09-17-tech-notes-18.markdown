@@ -1,0 +1,56 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第十八期）
+date: 2016-09-17 09:56:15 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 iOS 10 隐藏特性、设计趋势、正式版发布以来的一些数据，App 和 Extension 之间如何共享数据与功能，Xcode 8 适配经验分享，UI Testing 等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [iOS 10 Adoption Rate Nears 20% In Just Two Days](https://blog.mixpanel.com/2016/09/08/apple-ios-10-data/) By mixpanel
+
+Mixpanel 的 1830 亿条数据显示，iOS 10 正式发布首日有 14.81% 的设备已升级至最新版，两天内达到 21.02% 的比率。另外，美国移动运营商 T-Mobile CEO 称前四天 iPhone 7 预订量已达到 iPhone 6 同期的 4 倍。
+
+#### 2) [23 hidden features in iOS 10](https://www.cnet.com/how-to/ios-10-hidden-features/) By Jason Cipriani
+
+很多版本的很多功能可能被很多人忽视了，看看发布会上没有提到的特性有助于更大程度的利用好移动设备。
+
+## 开发
+
+#### 1) [Preparing Your iOS App for Extensions](https://www.raizlabs.com/dev/2016/09/preparing-ios-app-for-extensions/) By Nick Bonatsakis
+
+Extension 是一个独立于 App 的进程，作者通过将代码放到独立的 Framework 中详述如何做到 App 和 Extension 之间数据和功能的共享。
+
+#### 2) [iOS 推送全解析](http://www.jianshu.com/p/e9c313df746f) By pikacode
+
+本文旨在对 iOS 推送进行一个完整的剖析，如果你之前对推送一无所知，那么在你认真地阅读了全文后必将变成一个推送老手，你将会对其中的各种细节和原理有充分的理解。
+
+#### 3) [iOS 10 的适配问题](http://www.jianshu.com/p/f8151d556930)
+
+作者总结的总结的一些关于 iOS 10 适配方面的问题。
+
+## 工具
+
+#### 1) [UI Testing Cheat Sheet and Examples](http://masilotti.com/ui-testing-cheat-sheet/) By Joe Masilotti
+
+本周把玩去年增加的 UI Testing 相关的功能时，发现当时 WWDC 视频里做的代码录制在 Xcode 7 最新版以及 Xcode 8 里有些压根就不 work 啊。另外感觉 UI Testing 并没有那么 exciting ！
+
+#### 2) 如何禁止 Xcode 8 模拟器疯狂输出系统日志 By Russell Ivanovic
+
+增加环境变量 OS_ACTIVITY_MODE = disable 即可。
+
+## 其他
+
+#### 1) [从 iOS 10 设计指南变化看设计的新趋势](https://isux.tencent.com/ios-10-design-trends.html) By ISUX
+
+本文主要针对已经发布的 iOS 10 的人机界面设计指南来对比分析新老版本的 iOS 系统在设计上哪些改变，有哪些设计趋势值得我们注意。
+
+#### 2) [为什么有些人赚钱那么轻松](http://yuguo.us/weblog/shut-up-and-take-the-money/) By 余果
+
+外行并不太能影响专业人士的价格，他们自己在跟自己竞争。对于真正的专业主义者，没有行业低迷这种概念存在。随波逐流的，一直是水面上的浮萍。
+
+@end

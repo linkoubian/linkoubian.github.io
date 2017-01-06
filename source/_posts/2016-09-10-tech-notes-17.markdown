@@ -1,0 +1,54 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第十七期）
+date: 2016-09-10 17:44:51 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括苹果自动驾驶汽车项目的最新动向，移动客户端基于 WebP 的流量优化技术剖析，Xcode 8 新增的调试工具用法等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [iPhone 年年焕新计划](http://tech2ipo.com/10032335) By tech2ipo
+
+北京时间 9 月 8 日凌晨，苹果发布了最新一代的 iPhone 7 和 7P，这次发布会带来的另一个亮点是「年年焕新」计划。本文将帮你核算参与「年年焕新计划」永远用新 iPhone 究竟要多少钱。
+
+#### 2) [Apple Is Said to Be Rethinking Strategy on Self-Driving Cars](http://www.nytimes.com/2016/09/10/technology/apple-is-said-to-be-rethinking-strategy-on-self-driving-cars.html?_r=0) By Daisuke
+
+纽约时报的文章称，苹果自动驾驶汽车项目经历了调整，部分业务被撤销、几十名员工被解雇。今年七月开始由 Bob Mansfield 领导后，苹果改变了该项目的关注点，从对汽车设计和生产的强调转向了对自主驾驶汽车底层技术的开发。
+
+## 开发
+
+#### 1) [iOS 客户端基于 WebP 的流量优化](https://segmentfault.com/a/1190000006266276) By Curiousity
+
+WebP 是一种同时提供了有损压缩与无损压缩的图片文件格式。据说淘宝客户端在两年前就使用了 WebP（主要是 Native 使用），后来 H5 全面使用，WebView 的 WebP 采用插件的方式支持。  
+
+注：本文比[第十三期周报](http://www.jianshu.com/p/25505a6c5d74)中分享的相关文章更深入！
+
+#### 2) [百度外卖 APP 头像动画效果](http://qiaotongxin.cc/2016/08/22/20160822/) By 乔同新
+
+某日，作者发现百度外卖的 APP 个人中心头像波浪效果很是吸引人，遂就思考如何实现这种『浪』的效果。
+
+## 工具
+
+#### 1) [Xcode 8 Debugging Improvements](https://chengwey.com/ios-10-by-tutorials-bi-ji-er/) By chengwey
+
+Xcode 8 增加了几项功能，让我们调试起来更加得心应手。Xcode 8 提供的调试工具可以标记竞争危害（Race Conditions）、内存泄露、以及运行时的布局约束问题。
+
+#### 2) [My iOS Development Toolkit 2016](https://medium.com/ios-os-x-development/my-ios-development-toolkit-2016-ba7601b68085#.pebx7hm9c) By Sebastian
+
+作者分享了他在用的 iOS 开发工具、Web 服务、框架，以及经常浏览的技术博客等。
+
+## 其他
+
+#### 1) [移动应用的安全性实践](http://tech.glowing.com/cn/tan-tan-yi-dong-ying-yong-de-an-quan-xing-shi-jian/) By Glow
+
+本文将从用户注册流程出发，逐步介绍 Glow 在提高数据安全性方面采用的一些策略方法，供读者参考。
+
+#### 2) [How to do a Product Critique](https://medium.com/the-year-of-the-looking-glass/how-to-do-a-product-critique-98b657050638) By Julie Zhuo
+
+这是 Facebook 产品设计总监的文章，通过对于评价产品的每个步骤的介绍，帮助产品经理更好的理解用户，提升自己的产品直觉。
+
+@end

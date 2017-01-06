@@ -1,0 +1,48 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第十三期）
+date: 2016-08-14 10:08:14 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 Apple 在 Music 及 Heath 领域的两则资讯，WebP 在 iOS 开发中的实践，以及 IPA 瘦身相关的工具介绍等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Apple Music’s Bozoma Saint John: It’s About Passion, Not Algorithms](http://www.fastcompany.com/3062124/tim-cooks-apple/apple-musics-bozoma-saint-john-its-about-passion-not-algorithms) By Mark Sullivan
+
+Apple Music 市场总监 Bozoma Saint John 介绍说：与算法相比，Apple Music 更倾向于人工来推荐。
+
+#### 2) [Apple hires Flipboard co-founder Evan Doll to direct work on health software](http://appleinsider.com/articles/16/08/11/apple-hires-flipboard-co-founder-evan-doll-to-direct-work-on-health-software) By Roger Fingas	
+
+相比于 Apple 董事会的大佬抛售股票的资讯，我对 Flipboard 联合创始人 Doll 重回苹果担任 Health Software Engineering 的 Director 这则新闻更感兴趣。因为斯坦福第一期的 iPhone 开发课程中 Doll 是讲师之一，印象深刻。
+
+## 开发
+
+#### 1) [How To Create an Uber Splash Screen](https://www.raywenderlich.com/133224/how-to-create-an-uber-splash-screen) By Derek Selander
+
+本文介绍了如何基于 CALayer 及 CAAnimation 创建类似 Uber 启动时的动画。如果对动画感兴趣，推荐读一读 iOS Animations by Tutorials 这本书。
+
+#### 2) [webP 格式图片在 iOS 中的应用](https://kevinmky.github.io/2015/12/17/webP-在-iOS-中的应用/) By KevinMkY 
+
+本文从 UIImageView 及 HTML5 页面两方面介绍了如何在 iOS 应用 WebP 格式的图片资源。
+
+## 工具
+
+#### 1) [查找XCode工程中没被使用的图片资源](http://blog.lessfun.com/blog/2015/09/02/find-unused-resources-in-xcode-project/) By lessfun
+
+随着 APP 版本的迭代，IPA 越来越大，其中很大一部分原因是很多图片（当然可能还有gif等）资源虽然不再被使用，但依旧存在于工程里。本文介绍了现存的各种方案，并提供了一个小程序做相关的清理工作。
+
+#### 2) [LinkMap解析工具：检查每个类占用大小](https://github.com/huanxsd/LinkMap) By Suteki
+
+若想知道 APP 的可执行文件的具体构成，里面的内容都是些什么，哪些库占用空间较高，可以先利用 Xcode 生成 LinkMap 文件，再导入到 LinkMap 解析工具分析。其中的原理可参考这篇[iOS APP可执行文件的组成](http://blog.cnbang.net/tech/2296/)。
+
+## 其他
+
+#### 1) [技术团队的情绪与效率](http://www.infoq.com/cn/articles/mood-and-efficiency-of-the-technical-team) By 申玉宝
+
+压力不是来自于任务本身，而是任务在大脑中的堵塞，带来的焦虑和心理的抵触。无论你是在团队里的什么位置，这篇文章里的一些观点都是值得去了解的。
+
+@end

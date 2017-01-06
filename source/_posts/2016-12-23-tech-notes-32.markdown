@@ -1,0 +1,50 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第三十二期）
+date: 2016-12-23 09:33:13 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 HTTP 缓存机制及 iOS 的实现、Operation Queues 的相关知识、APP 启用 HTTPS 支持的基础知识、滴滴 iOS 动态化方案等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [macOS is becoming legacy software](http://www.theverge.com/2016/12/21/14037686/apple-macbook-macos-focus-mobile-features-ios) By Vlad Savov
+
+The Verge 引述 Bloomberg 熟悉 Apple 內部运作人士报导，Apple 已经再沒有独立的 Mac OS Team。
+
+## 开发
+
+#### 1) [HTTP 缓存机制及 iOS 的实现](http://qnoid.com/2016/04/10/A-primer-in-HTTP-caching-and-its-native-support-by-iOS.html) By qnoid
+
+缓存机制的表述，在苹果的文档中都有。但是，判断 response 是否足够 fresh 的介绍是作者的原创。
+
+#### 2) [iOS 并发编程之 Operation Queues](http://blog.leichunfeng.com/blog/2015/07/29/ios-concurrency-programming-operation-queues/) By 雷纯锋
+
+在 iOS 开发中，我们主要可以通过 Operation Queues、Dispatch Queues 和 Dispatch Sources 来提高应用的并发性。本文主要介绍 Operation Queues 的相关知识。
+
+注：本周精读了 AFNetworking 3.0 源代码，上述两篇文章都是在读代码过程中查阅过的资料。
+
+#### 3) [写给 iOS 开发者看的 HTTPS 指南](https://autolayout.club/2016/12/22/写给-iOS-开发者看的-HTTPS-指南/) By 吕文翰
+
+苹果在 WWDC 2016 上宣布年底将要求所有 APP 适配 ATS，不过本周四又宣布将这个 deadline 推迟了。本文着重介绍 APP 启用 HTTPS 支持的过程中跟 APP 相关的部分，剩余的协议细节将一笔带过。
+
+## 工具
+
+#### 1) [DynamicCocoa - 滴滴 iOS 动态化方案](http://mp.weixin.qq.com/s/qRW_akbU3TSd0SxpF3iQmQ) By 孙源
+
+DynamicCocoa 可以让现有的 Objective-C 代码转换生成中间代码（JS），下发后动态执行。据说，手机 QQ 的方案是通过 clang 把 OC 代码编译成自己定制的字节码动态下发，然后开发一个虚拟机去执行（惊呆了）。
+
+#### 2) [XMNetworking](http://www.jianshu.com/p/a5c5e9aa5913) By 康祖彬
+
+XMNetworking 是一个轻量的、简单易用但功能强大的网络库，基于 AFNetworking 3.0 封装。
+
+## 其他
+
+#### 1) [扎克伯格写的 Jarvis AI](https://www.facebook.com/notes/mark-zuckerberg/building-jarvis/10154361492931634) By Zuckerberg
+
+虽然大部分技术都是现成的（facebook 开源项目和一些自动化家用硬件），但是他整合技术和学习能力实在太恐怖了。
+
+@end

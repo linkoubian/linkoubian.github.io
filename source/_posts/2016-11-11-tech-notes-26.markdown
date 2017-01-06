@@ -1,0 +1,50 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第二十六期）
+date: 2016-11-11 23:13:12 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括库克关于总统大选结果的内部信、携程在实践 React Native 时的优化经验、JSPatch 热修复文件的加载方案、App 销售报表工具等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Move Forward Together](https://techcrunch.com/2016/11/10/tim-cook-apple-donald-trump-election-win/)
+
+关于总统大选，苹果 CEO 库克致信美国员工。他表示，无论谁都无法阻挡苹果前进的脚步，唯有携手前进才能变得更好。
+
+## 开发
+
+#### 1) [携程是如何做 React Native 优化的](http://techshow.ctrip.com/archives/1459.html) By 赵辛贵
+
+两周前去携程现场聆听了赵老师的分享，真的非常非常的赞。该讲座对我而言很有启发性，可以很好的指导我新技术框架如何研究、实践、改进。
+
+#### 2) [JSPatch Loader 使用文档](https://github.com/bang590/JSPatch/wiki/JSPatch-Loader-使用文档) By 陈振焯
+
+集成 JSPatch 到 iOS 项目里的主要工作在于实现一套安全的热修复脚本下发与加载的机制。如果想自己实现而不是购买 JSPatch Platform 提供的服务，可以读一读作者写的这篇文章。
+
+## 工具
+
+#### 1) [AppWage](http://www.appwage.com) By Hankinsoft
+
+这是一个开源的 iTunes Connect 报表工具，开发商的另一款收费软件 SQLPro for SQLite 我也一直在用。
+
+#### 2) [iOS 性能调优](http://www.jianshu.com/p/05b68c84913a)
+
+提供了基于 Swift 3.0 模仿新浪微博的 Demo，里面针对于微博首页的复杂页面的优化做了很多的处理，页面的 FPS 一直保持在 59 ~ 60。
+
+## 其他
+
+#### 1) [Apple Photos 背后的技术与用户的隐私](http://highscalability.com/blog/2016/6/20/the-technology-behind-apple-photos-and-the-future-of-deep-le.html) By highscalability
+
+Apple 使用 differential privacy 技术收集用户数据到云端训练 model，但从这些数据中无法识别出具体的个体；这些 model 下载到手机，依靠强大的手机性能进行分析，识别，归类你的照片；理论上分析的结果只留在你的手机上。
+
+#### 2) [The Process Myth](http://randsinrepose.com/archives/the-process-myth) By Michael Lopp
+
+工程师尤其看不惯公司里的各种规章制度、各种条条框框，所谓的 process；工程师们老爱问为什么，为什么会有这样那样的规定。公司里指定规章制度的人又都不给你解释为什么，“历来就如此，别问那么多为什么”。
+
+>It’s a myth, but healthy process is awesome if it not only documents what we care about, but is willing to defend itself. It is required to stand up to scrutiny and when a process fails to do so, it must change.
+
+@end

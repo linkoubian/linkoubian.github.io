@@ -1,0 +1,48 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第二十五期）
+date: 2016-11-04 19:51:17 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 App Store 新增支付宝付款、iOS 静态库及动态库开发经验总结、Today Widget 在低版本系统上的兼容开发经验等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [App Store 应用商店支持支付宝付款](http://www.mac52ipod.cn/post/apple-app-store-support-alipay.php) By bmwmengwei
+
+此新闻看标题即可，我已经从信用卡切换到支付宝了。因为之前老是弹出信用卡信息验证的页面，希望以后不再被打扰。
+
+#### 2) [苹果确认放弃独立显示屏业务](http://www.ifanr.com/739044)
+
+The Verge 编辑 Nilay Patel 从苹果方面确认，苹果选择放弃独立显示屏业务，此后苹果的显示屏生产将全部交由 LG 等生产商伙伴负责。
+
+## 开发
+
+#### 1) [iOS 静态库及动态库开发](http://balloonsys.com/blog/2016/11/04/static-vs-dynamic-lib/) By Linkou Bian
+
+本文总结在好房移动架构团队做 Framework 开发中的一些经验。特别是动态库部分的实践，干货满满。
+
+#### 2) [Tips for Backwards Compatibility with iOS 10 Today Widgets](https://kristina.io/backwards-compatibility-with-ios-10-today-widgets/) By Kristina Thai
+
+作者介绍了开发 Today Widgets 兼容 iOS 9 / 10 的三点经验，对做 Widget 开发的朋友还是有益处的。
+
+#### 3) [一个才适应 Swift 2.2 的开发者眼中的 Swift 3.0](http://fanhang.me/ios/-ge-cai-gua-ying-swift2.2de-kai-fa-zhe-yan-zhong-de-swift-3.0he-ios-10) By amoyio
+
+文中大部分内容之前的周报都有过分享，重点关注下 1.7、2.5、3.8、4.4、4.5 等。关于 Swift 3 的适配，本周也有其他工程师分享了经验，吐槽居多。
+
+## 工具
+
+#### 1) [Network Location Changer](http://eprev.org/2015/08/06/change-os-x-network-location-based-on-the-wi-fi-network-name/) By Anton Eprev
+
+通常在公司需要使用内网的 DNS，而我在家往往希望使用阿里的 DNS，可以在网络首选项建立不同的 Location 以满足此需求。Anton 提供的这个脚本不光可以自动切换 Location 还提供了额外的功能。
+
+## 其他
+
+#### 1) [Why Tim Cook is Steve Ballmer and Why He Still Has His Job at Apple](https://steveblank.com/2016/10/24/why-tim-cook-is-steve-ballmer-and-why-he-still-has-his-job-at-apple) By Steve Blank
+
+产品型、有远见的CEO离开公司后都传位给曾经执行力强但不懂做产品的下属，公司靠着前任CEO定下的牛逼的商业模式，再加上现任强执行力的CEO，盈利还能增长几年，只是不创新了。
+
+@end

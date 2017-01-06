@@ -1,0 +1,44 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第二十七期）
+date: 2016-11-18 15:05:15 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括如何实现在 TableView 中滑动播放视频、无法获取真实进度时如何做个优雅的进度动画、Sierra 显示隐藏文件的快捷方式、破窗效应等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Apple to Cut Fees Video Services Will Pay for App Store](https://www.bloomberg.com/news/articles/2016-11-17/apple-is-said-to-cut-fees-video-services-will-pay-for-app-store) By Lucas Shaw
+
+苹果计划将 App Store 视频服务接入的费用从 30% 降到 15%，这意味着视频服务供应商在苹果各平台的运营成本将大幅降低。
+
+## 开发
+
+#### 1) [滑动 TableView 自动播放视频](http://www.jianshu.com/p/3946317760a6) By NewPan
+
+本文介绍了如何实现在 TableView 中滑动播放视频，并且是没有任何卡顿的实现滑动播放视频。同时也将讲述如何确定哪一个 Cell 播放视频。
+
+#### 2) [Http 文件上传进度为什么不准](http://mrpeak.cn/blog/http-upload-progress/) By Peak
+
+我们调用第三方 http framework 上传文件的时候，都会有 API 回调告诉我们上传的具体进度，但这个进度值都是不准的。本文介绍了此情况下如何做个优雅的进度动画。
+
+## 工具
+
+#### 1) [Sierra 显示隐藏文件](https://twitter.com/24says/status/780677320197574656) By 24Says
+
+macOS Sierra 里可以通过 CMD + Shift + . 直接在 Finder 里显示隐藏文件。
+
+#### 2) [FaceAware](https://github.com/BeauNouvelle/FaceAware) By Beau Nouvelle
+
+现在大部分 APP 里的个人中心页面，都会提供设置头像的功能，这个 Swift 库会根据脸部位置以最优的方式展示头像。
+
+## 其他
+
+#### 1) [The Broken Window Theory](https://blog.codinghorror.com/the-broken-window-theory/) By Jeff Atwood
+
+环境中的不良现象如果被放任存在（如社区中某些建筑的窗户破了而没被修复），就会诱使人们仿效（人们就认为破窗户是正常的，就会破坏更多窗户），甚至变本加厉。公司里的垃圾代码不被及时修复，就会被更多人效仿。
+
+@end

@@ -1,0 +1,52 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第二十二期）
+date: 2016-10-12 14:04:38 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 Dash 作者和 Apple 沟通的详情、移动端技术方案对比、React Native 组件间数据传递、用 Sketch 制作 GIF 动画等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [苹果宣布在深圳成立研发中心](http://cn.reuters.com/article/apple-shenzhen-research-center-idCNKCS12C0DH) By 路透香港
+
+苹果公司周三表示，将在中国的制造业中心深圳成立一个研发中心。在竞争日益激烈的情况下，苹果希望刺激在中国的增长。
+
+#### 2) [Dash and Apple: My Side of the Story](https://blog.kapeli.com/dash-and-apple-my-side-of-the-story) By Bogdan Popescu
+
+非常受欢迎的 API 文档浏览器 Dash 的作者公开了和苹果沟通的细节，看起来双方都没有错:-)
+
+## 开发
+
+#### 1) [Weex & ReactNative & JSPatch](http://awhisper.github.io/2016/07/22/Weex-ReactNative-JSPatch/) By awhisper
+
+很不错的方案对比文章，既有引述，也有作者自己的见解。
+
+#### 2) [React Native 组件间数据传递](http://balloonsys.com/blog/2016/10/11/rn-components-communication/) By Linkou Bian
+
+在 React Native 项目试点过程中，封装的组件之间难免需要传递数据。本文总结了子组件如何将数据传递到使用方，以及对开发过程中遇到的一个 setState 问题的探究。
+
+#### 3) [Function Naming In Swift 3](http://inaka.net/blog/2016/09/16/function-naming-in-swift-3/) By Pablo Villar
+
+作者总结了自己在迁移 Swift 2.2 到 Swift 3 时关于函数命名的心得。另外，官方的 [Swift API 设计指南](https://swift.org/documentation/api-design-guidelines/)，建议多读几遍。
+
+## 工具
+
+#### 1) [An Xcode Extension: Import](https://github.com/markohlebar/Import) By Marko Hlebar
+
+当一个类文件很长，此时若需要 import 头文件的话需要滚动到最顶部，然后再回到刚才的代码行继续编码，这个体验还是很不好的。该 Extension 可以让你在任意位置输入 import 语句。
+
+#### 2) [React Native Toast](https://github.com/magicismight/react-native-root-toast) By Horcrux
+
+适用于 React Native 项目的 Toast 消息提示组件。
+
+## 其他
+
+#### 1) [用 Sketch 制作 APP 下拉刷新的 GIF 动画](http://www.jianshu.com/p/45022427cf96) By wythetan
+
+用 Sketch 做 GIF 动画，是有个叫 AnimateMate 的很好用的插件。文中作者以分期乐的刷新动画为例进行讲解，推荐开发人员也读一读。
+
+@end

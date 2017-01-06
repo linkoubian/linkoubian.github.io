@@ -1,0 +1,52 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第二十八期）
+date: 2016-11-23 09:31:19 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括iPhone 6s 意外关机问题计划、APP 缓存数据线程安全问题探讨、如何用私有 API 让 WKWebView 支持 NSURLProtocol 子类、如何解决 JSONKit 引起 RN 的 Crash 等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [iPhone 6s 意外关机问题计划](https://www.apple.com/cn/support/iphone6s-unexpectedshutdown/) By Apple
+
+Apple 已经确认有部分 iPhone 6s 设备可能会意外关机，符合条件的可以免费更换电池。
+
+## 开发
+
+#### 1) [APP 缓存数据线程安全问题探讨](http://blog.cnbang.net/tech/3262/) By 陈振焯
+
+对于 APP 缓存数据线程安全问题，分线程 cache 和数据不可变是比较常见的解决方案，都有着不同的实现代价。前者接口不友好，后者需要配合单向数据流之类的规则或框架才会变得好用。
+
+#### 2) [让 WKWebView 支持 NSURLProtocol](https://blog.yeatse.com/2016/10/26/support-nsurlprotocol-in-wkwebview/) By Yeatse
+
+WKWebView 还没有完善到能完全替代 UIWebView 的程度。比如 WKWebView 中的请求却完全不遵从自定义 NSURLProtocol 子类，本文介绍了如何用私有方法解决此痛点。
+
+#### 3) [JSONKit makes React Native Crash](https://github.com/johnezang/JSONKit/issues/176)
+
+在 React Native 0.33 时，我们是通过[修改 RN 源代码](https://github.com/facebook/react-native/issues/7055)规避 JSONKit 引起的 Crash 问题；升级到 RN 0.35 后，将 JSONKit.m 中的 *((void **)XXX) 替换成 object_getClass(XXX) 也可解决此问题。
+
+## 工具
+
+#### 1) [免费抓包工具 mitmproxy](http://mrpeak.cn/blog/mitmproxy/) By MrPeak
+
+似乎知道 Charles 的同学更多一些，但其实 Charles 有的功能 mitmproxy 基本都有，mitmproxy 还免费，而且对于 terminal 用户来说使用起来更亲近。
+
+#### 2) [iCloud 日历垃圾广告清理办法探讨](http://www.waerfa.com/icloud-calendar-spam-clean-methods) By Waerfa
+
+近期被黑五的日历垃圾广告干扰，采用文中的『建立分类、设置垃圾广告为刚建立的分类、删除分类』大法清理干净。
+
+## 其他
+
+#### 1) [The Battle Is For The Customer Interface](https://techcrunch.com/2015/03/03/in-the-age-of-disintermediation-the-battle-is-all-for-the-customer-interface/) By Tom Goodwin
+
+本文就是下面这段被无数人转载了的话的出处：
+
+>Uber是最大的出租车公司，但并不拥有任何车；FB是最大的媒体公司，但不自己生产内容；阿里巴巴是最大的零售商，但没库存；Airbnb是最大的旅馆，但不拥有房产。
+
+互联网成就了这些公司，让他们有能力提供一层看似非常简单的用户界面，大规模地连接供需双方。
+
+@end

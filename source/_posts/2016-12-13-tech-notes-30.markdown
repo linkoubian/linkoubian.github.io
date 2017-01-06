@@ -1,0 +1,46 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第三十期）
+date: 2016-12-11 10:38:37 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 iOS 项目的 HTTPS 迁移实战、基于 CTMediator 的组件化方案、以及给同事 Feedback 的 OFNR 模型等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Fitbit’s up and Apple’s down](https://techcrunch.com/2016/12/05/idc-wearables/) By Brian Heater
+
+IDC 刚刚发布了全球可穿戴设备市场的最新数据，看起来 Fitbit 势头正旺。在智能手表销量下滑的情况下，可穿戴设备市场的整体规模却出现了增长。
+
+## 开发
+
+#### 1) [iOS 迁移到 HTTPS](http://www.jianshu.com/p/94f5d3830301) By Vincent
+
+本文介绍了作者自建证书完成 AFNetworking 3.0 单向验证设置、WKWebView 及 SDWebImage 如何设置支持 HTTPS 等内容。
+
+#### 2) [基于 CTMediator 的组件化方案](http://casatwy.com/modulization_in_action.html) By 田伟宇
+
+作者自称希望这篇文章能够终结业界持续近一年的关于组件化方案的无谓讨论和错误讨论。
+
+## 工具
+
+#### 1) [RESTed - Simple HTTP Requests](https://itunes.apple.com/cn/app/rested-simple-http-requests/id421879749?mt=12) By Patrick Rogers
+
+Restful API 测试工具首推 Paw 吧，由 @nixzhu 在推特提及的 RESTed 也是简洁好用，而且免费。
+
+## 其他
+
+#### 1) [Your Hiring Process is Also Your Engineering Process](http://ramblinjan.com/development/2016/12/05/Your-Hiring-Process-is-your-engineering-process/) By Jan Jorgensen
+
+面试是双向的，公司面试求职者、求职者也挑公司。面试流程拖拖拉拉、找来不相干的人做面试官、面试官傲慢无理等，直接反映了这家公司做事的风格。
+
+#### 2) [如何给同事批评建议](http://blog.d3in.org/post/153942984306/negative-feedback-antipatterns) By Charles-Axel Dein
+
+年底了，大家又得做 Performance Review 了。给同事写好的、表扬形式的 review 是很容易的，但写实质性的批评建议却不容易，怕得罪人。本文给了一些正面例子与反面例子。
+
+给同事 Feedback 的 OFNR 模型：Observation（对方做了啥事）、Feeling（你对这件事的感受）、Need（你觉得怎样才是对的）、Request（对方应怎么改进）。
+
+##### @end

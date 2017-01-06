@@ -1,0 +1,44 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第三十四期）
+date: 2017-01-06 16:44:39 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括苹果 2017 新年大促消息、微信 Mars 之 xlog 使用、APP 引导页的设计、Youtube 视频下载工具、常见算法的分析与实现等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [苹果 2017 新年大促](http://www.apple.com/cn/shop/gifts/new-year-offer)
+
+苹果于 1 月 3 日放出一则清新醒神的优惠大消息：苹果红色星期五正式回归，优惠力度可能是多年来最强的一次。
+
+## 开发
+
+#### 1) [微信 Mars 之 xlog 使用全解析](https://gold.xitu.io/post/586629b861ff4b006ba9daf6) By 徐宜生
+
+微信开源的通信库 Mars，其中有一个高性能的日志模块 xlog。本篇文章将带领大家将 xlog 模块抽取出来，作为一个单独的模块来使用。
+
+#### 2) [How we built LUNTutorialViewController](https://lunapps.com/blog/onboarding-framework-for-ios/) By LUNAPPS
+
+LUNTutorialViewController 这个引导页效果在很多 APP 里都能看到身影，本文详细介绍了其设计与实现。
+
+## 工具
+
+#### 1) [Ummy Video Downloader](http://videodownloader.ummy.net/mac.html) By Ummy
+
+正如官网介绍的那样，The simplest YouTube downloader for Mac，诚不欺也。看到 Youtube 上好看的节目，我还是喜欢下载下来到电视上播放。
+
+#### 2) [Tumblr video downloader](https://chrome.google.com/webstore/detail/tumblr%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/njnkdhldbefijmdmjongfghcelgajjli) By unclehking
+
+这是一个 Chrome 插件，方便下载 Tumblr 上的视频用的。
+
+## 其他
+
+#### 1) [Top 10 algorithms in Interview Questions](http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/) By GeeksforGeeks
+
+针对八类问题分别给出了最常见的十道算法题及其解答，适合年后准备面试的同学。
+
+@end

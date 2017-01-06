@@ -1,0 +1,58 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第十二期）
+date: 2016-08-06 22:03:48 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括Apple收购机器学习公司、以及Apple Store营收增长等资讯，深入剖析自动释放池、Clang Attributes、POP动画引擎等。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Apple buys machine learning startup Turi](http://www.theverge.com/2016/8/5/12390412/apple-turi-acquisition-machine-learning) By Jacob Kastrenakes
+
+Turi的产品可以协助开发者将机器学习以及人工智能技术加入软件，可以预测用户数量变化、情绪分析、欺诈探测、分析用户使用习惯，以及更好的定位潜在用户的系统。
+
+#### 2) [App Store July Sets Record as Biggest Month Ever](http://www.macrumors.com/2016/08/03/app-store-50-billion-paid-to-developers/) By Juli Clover
+
+App Store七月营收再破纪录，开发者亦获利颇丰。库克表示，单就苹果的服务业务规模来说，明年都可以跻身财富100强。
+
+## 开发
+
+#### 1) [深入解析autoreleasepool](http://draveness.me/autoreleasepool/) By 左书祺
+
+自动释放池是由AutoreleasePoolPage以双向链表的方式实现的，这篇文章会在源代码层面介绍Objective-C中自动释放池。
+
+#### 2) [Clang Attributes黑魔法小记](http://blog.sunnyxx.com/2016/05/14/clang-attributes/) By 孙源
+
+Clang Attributes是Clang提供的一种源码注解，方便开发者向编译器表达某种要求，参与控制如 Static Analyzer、Name Mangling、Code Generation等过程。
+
+#### 3) [Interactive Messages in iOS 10](https://medium.com/@prianka.kariat/interactive-messages-in-ios-10-4cea542fbd9a) By Prianka Liz Kariat
+
+本文介绍了如何使用iOS 10的Message框架开发一个tic tac toe小游戏。
+
+## 工具
+
+#### 1) [POP介绍与使用实践](http://adad184.com/2015/03/11/intro-to-pop/) By adad184
+
+动画在APP开发过程中，大家多多少少都会接触到。在iOS中动画相关的部分都是基于Core Animation，但文本介绍的是来自于Facebook的动画引擎，以让你快速上手动画。
+
+#### 2) [iOS 中 常用的第三方库](http://www.jianshu.com/p/c8152d6ce957)
+
+类似文章很多，这篇之所以吸引我的眼球，主要在于文中的第三方轮子使用图谱。
+
+## 其他
+
+#### 1) [关于项目重构](http://mp.weixin.qq.com/s?__biz=MjM5NDkxMTgyNw==&mid=2653057579&idx=1&sn=988a719765465746221f356881157a99&scene=4) By loonggg
+
+读读下面这段对话，你会深有同感的。
+
+A: 重构80%都会失败，因为业务线的需求永远都不会停，资源有限，所以不花大代价，轻易不重构，宁可开发的慢一点，写好。
+
+B: 其实以业界大部分产品经理的水平99%的项目都活不到重构的那天，所以等业务量上来后再重构，会更省资源。
+
+最近经历了两周以『敏捷开发』为名的工厂流水线式的App开发流程，虽然及时退出，但也惹了一身骚。这样下去，该项目的代码难以再维护将是迟早的事情。
+
+@end

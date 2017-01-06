@@ -15,7 +15,7 @@ categories: Book Reading
 
 作者是个博士，写的东西比较深入。该书还有一本姊妹篇，叫[iOS 8 Programming Fundamentals with Swift](http://book.douban.com/subject/25929842/)。上半年我在Mac上挑着看的，已读完Chapter 2、3、4、5、10、11、12、13，对掌握Swift大有裨益。
 
-![Programming iOS 8](http://img4.douban.com/lpic/s28069906.jpg)
+![Programming iOS 8](https://img3.doubanio.com/lpic/s28069906.jpg)
 
 ## 2014年（iOS 8 announced on June 2）
 ### [iOS Programming 4th Edition](http://book.douban.com/subject/26287812/)
@@ -55,7 +55,7 @@ categories: Book Reading
 
 作者讲解颇为细致，即使没有Objective-C的基础知识，照着书中的代码练练，很快就上手了。
 
-![iPhone开发基础教程](http://img4.douban.com/lpic/s3664046.jpg)
+![iPhone开发基础教程](https://img3.doubanio.com/lpic/s3664046.jpg)
 
 ## 后记
 回头等定做的书架到了，把这些书顺序排列。每当瞥过书脊，应有一种好的回味。

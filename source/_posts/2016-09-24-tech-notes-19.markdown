@@ -1,0 +1,56 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第十九期）
+date: 2016-09-24 06:37:43 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 Sierra 系统的新功能介绍，React Native 开发工具的选型与配置、调试方法及原理、如何集成到现有 APP 项目中，以及腾讯的 HttpDNS 服务详解等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Mac 最新系统 Sierra 发布](http://www.ifanr.com/app/720477) By 王崇旭
+
+苹果发布了 Mac 最新系统 macOS Sierra 正式版，本文梳理出了最值得留意的功能。其中最吸引我的是通用剪贴板，你值得拥有！
+
+#### 2) [Apple patents bold new innovation – a paper bag](https://www.theguardian.com/technology/2016/sep/20/apple-patent-recycled-paper-bag)
+
+苹果给自家的环保纸袋注册了专利，重新定义了购物袋:-)
+
+## 开发
+
+#### 1) [iOS 现有项目集成 React Native](https://github.com/huxiaoqiao/React-Native-Study/blob/master/Blog/iOS现有项目集成React%20Native.md) By huxiaoqiao
+
+除了文中介绍的在现有工程里集成 React Native 的具体步骤，我建议在实践时可以采用 git submodule 的方式在 iOS 工程根目录下管理独立的 React Native 相关代码库。
+
+#### 2) [Deep Diving React Native Debugging](https://medium.com/@shaheenghiassy/deep-diving-react-native-debugging-ea406ed3a691) By Shaheen Ghiassy
+
+作者深入分析了 React Native 程序调试相关的原理与步骤。
+
+# 3) [React Native Tutorial: Building Apps with JavaScript](https://www.raywenderlich.com/126063/react-native-tutorial) By Tom Elliott
+
+著名的 Raywenderlich 博客发的一篇 React Native 教程，详细介绍了如何开发一个房产搜索应用。
+
+## 工具
+
+#### 1) [Memory Graph Debugger Tips](http://inessential.com/2016/09/22/memory_graph_debugger_tips) By Brent Simmons
+
+作者试用 Memory Graph Debugger 一天总结的一些经验，非常值得一读。
+
+#### 2) [React Native 开发 IDE 选型及配置](http://www.jianshu.com/p/8e9df5f85bca) By asce1885
+
+最终我选择的是 Atom + Nuclide 的方案，同时也把平常用的很多的 Sublime 做了相应的配置。安装完成后建议先摸索下调试相关的玩法。
+
+## 其他
+
+#### 1) [鹅厂网事: HttpDNS 服务详解](http://mp.weixin.qq.com/s?__biz=MzA3ODgyNzcwMw==&mid=201837080&idx=1&sn=b2a152b84df1c7dbd294ea66037cf262) By 廖伟健
+
+腾讯公司的GSLB 团队推出了一种全新的域名解析调度系统 HttpDNS 以专治LocalDNS 解析异常以及流量调度不准。
+
+#### 2) [为什么应该开始使用 React Native 了](https://zi.com/w/a/b223XP) By 周楷雯
+
+我并不建议你直接用 React Native 重写你的 App，像 Swift 一样，你可以先用 React Native 来实现一部分页面，让那些体力活的 UI 构建变的越快而充满乐趣。
+
+@end
