@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第十一期） - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第三十四期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括苹果汽车项目的人事动态、Runloop及Runtime等技术剖析、技术管理等内容。 资讯 1) 苹果发布2016财年第三季财报 @bmwmengwei 总结起来就是各种同比下降（除了服务业务），究其原因就是饱和二字。值得注意的是软件和互联网服务业务的营收一直在逆势增长， &hellip;">
+  <meta name="description" content="本期周报主要包括苹果 2017 新年大促消息、微信 Mars 之 xlog 使用、APP 引导页的设计、Youtube 视频下载工具、常见算法的分析与实现等内容。 资讯 1) 苹果 2017 新年大促 苹果于 1 月 3 日放出一则清新醒神的优惠大消息：苹果红色星期五正式回归， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/07/30/tech-notes-11/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2017/01/02/tech-notes-34/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -80,7 +80,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第十一期）</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第三十四期）</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-07-30T11:19:16+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>11:19 am</span></time>
+<time class='entry-date' datetime='2017-01-02T16:44:39+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2017</span></span> <span class='time'>4:44 pm</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://balloonsys.github.io">Comments</a>
@@ -99,50 +99,42 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括苹果汽车项目的人事动态、Runloop及Runtime等技术剖析、技术管理等内容。</p>
+<div class="entry-content"><p>本期周报主要包括苹果 2017 新年大促消息、微信 Mars 之 xlog 使用、APP 引导页的设计、Youtube 视频下载工具、常见算法的分析与实现等内容。</p>
 
 <!--more-->
 
 
 <h2>资讯</h2>
 
-<h4>1) <a href="http://www.mac52ipod.cn/post/apple-2016-q3-result.php">苹果发布2016财年第三季财报</a> @bmwmengwei</h4>
+<h4>1) <a href="http://www.apple.com/cn/shop/gifts/new-year-offer">苹果 2017 新年大促</a></h4>
 
-<p>总结起来就是各种同比下降（除了服务业务），究其原因就是饱和二字。值得注意的是软件和互联网服务业务的营收一直在逆势增长，甚至已经超过电脑、iPad等业务，位居第二大营收来源了。</p>
-
-<h4>2) <a href="http://www.bloomberg.com/news/articles/2016-07-28/apple-taps-blackberry-talent-as-car-project-takes-software-turn">Apple Hires BlackBerry Talent With Car Project Turning to Self-Driving Software</a> @markgurman</h4>
-
-<p>苹果乔布斯时代元老成员Bob Mansfield从退休状态重回苹果岗位担任苹果汽车项目Project Titan掌门人。据彭博消息称，Apple已将黑莓汽车软件部门负责人Dan Dodge招至该项目的管理团队。</p>
+<p>苹果于 1 月 3 日放出一则清新醒神的优惠大消息：苹果红色星期五正式回归，优惠力度可能是多年来最强的一次。</p>
 
 <h2>开发</h2>
 
-<h4>1) <a href="http://www.jianshu.com/p/10121d699c32">深入研究 Runloop 与线程保活</a> @张星宇</h4>
+<h4>1) <a href="https://gold.xitu.io/post/586629b861ff4b006ba9daf6">微信 Mars 之 xlog 使用全解析</a> By 徐宜生</h4>
 
-<p>在讨论 runloop 相关的文章，以及分析 AFNetworking(2.x) 源码的文章中，我们经常会看到关于利用runloop进行线程保活的分析。</p>
+<p>微信开源的通信库 Mars，其中有一个高性能的日志模块 xlog。本篇文章将带领大家将 xlog 模块抽取出来，作为一个单独的模块来使用。</p>
 
-<h4>2) <a href="http://www.jianshu.com/p/3182646001d1">Runtime 10种用法</a> @haojingxue_iOS</h4>
+<h4>2) <a href="https://lunapps.com/blog/onboarding-framework-for-ios/">How we built LUNTutorialViewController</a> By LUNAPPS</h4>
 
-<p>再牛逼的技术和实战结合才有意义，本篇介绍技术尽量和实战联系起来。</p>
+<p>LUNTutorialViewController 这个引导页效果在很多 APP 里都能看到身影，本文详细介绍了其设计与实现。</p>
 
 <h2>工具</h2>
 
-<h4>1) <a href="https://git-scm.com/book/en/v1/Git-Tools-Stashing">Git之Stashing用法</a></h4>
+<h4>1) <a href="http://videodownloader.ummy.net/mac.html">Ummy Video Downloader</a> By Ummy</h4>
 
-<p>有时在某分支上开发了一半，需要切到另一个分支处理个紧急的问题，而又不想立即commit代码，此时可以试试git stash这个命令。</p>
+<p>正如官网介绍的那样，The simplest YouTube downloader for Mac，诚不欺也。看到 Youtube 上好看的节目，我还是喜欢下载下来到电视上播放。</p>
 
-<h4>2) <a href="http://useyourloaf.com/blog/xcode-visual-memory-debugger/">Xcode Visual Memory Debugger</a> @kharrison</h4>
+<h4>2) <a href="https://chrome.google.com/webstore/detail/tumblr%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/njnkdhldbefijmdmjongfghcelgajjli">Tumblr video downloader</a> By unclehking</h4>
 
-<p>本文介绍了Xcode 8引入的全新可视化内存调试工具。</p>
+<p>这是一个 Chrome 插件，方便下载 Tumblr 上的视频用的。</p>
 
 <h2>其他</h2>
 
-<h4>1) <a href="http://amao12580.github.io/post/2016/05/How-to-better-manage-the-technical-team/">如何更好地管理技术团队</a> @amao12580</h4>
+<h4>1) <a href="http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/">Top 10 algorithms in Interview Questions</a> By GeeksforGeeks</h4>
 
-<p>技术人员乐于被领导；但他们不喜欢被管理，不喜欢像牛一样被驱赶或指挥。管理者强迫人们服从他们的命令，而领导者则会带领他们一起工作。</p>
-
-<p>管理是客观的，没有个人感情因素，它假定被管理者没有思想和感受，被告知要做什么和该如何做。领导是引领、引导，它激励人们达成目标。</p>
-
-<p>领导力是带有强烈个人感情色彩的，它不是你能命令的，也不是你能测量评估和测试的。</p>
+<p>针对八类问题分别给出了最常见的十道算法题及其解答，适合年后准备面试的同学。</p>
 
 <p>@end</p>
 </div>
@@ -160,7 +152,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-07-30T11:19:16+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>11:19 am</span></time>
+<time class='entry-date' datetime='2017-01-02T16:44:39+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2017</span></span> <span class='time'>4:44 pm</span></time>
       
 
 <span class="categories">
@@ -181,10 +173,8 @@ $(document).bind('DOMNodeInserted', function(event) {
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/07/23/tech-notes-10/" title="Previous Post: 平安好房iOS开发团队技术周报（第十期）">&laquo; 平安好房iOS开发团队技术周报（第十期）</a>
+        <a class="basic-alignment left" href="/blog/2016/12/30/tech-notes-33/" title="Previous Post: 平安好房iOS开发团队技术周报（第三十三期）">&laquo; 平安好房iOS开发团队技术周报（第三十三期）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/08/06/tech-notes-12/" title="Next Post: 平安好房iOS开发团队技术周报（第十二期）">平安好房iOS开发团队技术周报（第十二期） &raquo;</a>
       
     </p>
   </footer>
@@ -270,8 +260,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/07/30/tech-notes-11/';
-        var disqus_url = 'http://balloonsys.github.io/blog/2016/07/30/tech-notes-11/';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2017/01/02/tech-notes-34/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2017/01/02/tech-notes-34/';
         var disqus_script = 'embed.js';
       
     (function () {

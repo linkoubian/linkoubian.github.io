@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://balloonsys.github.io/blog/2017/01/02/tech-notes-34/</loc>
+<lastmod>2017-01-02T16:44:39+08:00</lastmod>
+</url>
+<url>
 <loc>http://balloonsys.github.io/blog/2016/12/30/tech-notes-33/</loc>
 <lastmod>2016-12-30T18:09:58+08:00</lastmod>
 </url>
@@ -315,20 +319,5 @@
 </url>
 <url>
 <loc>http://balloonsys.github.io/blog/categories/afnetworking/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/2/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/3/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/4/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/5/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/6/</loc>
 </url>
 </urlset>

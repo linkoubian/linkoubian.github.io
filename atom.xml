@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2016-12-30T16:10:54+08:00</updated>
+  <updated>2017-01-06T09:49:39+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十四期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/01/02/tech-notes-34/"/>
+    <updated>2017-01-02T16:44:39+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/01/02/tech-notes-34</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括苹果 2017 新年大促消息、微信 Mars 之 xlog 使用、APP 引导页的设计、Youtube 视频下载工具、常见算法的分析与实现等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.apple.com/cn/shop/gifts/new-year-offer">苹果 2017 新年大促</a></h4>
+
+<p>苹果于 1 月 3 日放出一则清新醒神的优惠大消息：苹果红色星期五正式回归，优惠力度可能是多年来最强的一次。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://gold.xitu.io/post/586629b861ff4b006ba9daf6">微信 Mars 之 xlog 使用全解析</a> By 徐宜生</h4>
+
+<p>微信开源的通信库 Mars，其中有一个高性能的日志模块 xlog。本篇文章将带领大家将 xlog 模块抽取出来，作为一个单独的模块来使用。</p>
+
+<h4>2) <a href="https://lunapps.com/blog/onboarding-framework-for-ios/">How we built LUNTutorialViewController</a> By LUNAPPS</h4>
+
+<p>LUNTutorialViewController 这个引导页效果在很多 APP 里都能看到身影，本文详细介绍了其设计与实现。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://videodownloader.ummy.net/mac.html">Ummy Video Downloader</a> By Ummy</h4>
+
+<p>正如官网介绍的那样，The simplest YouTube downloader for Mac，诚不欺也。看到 Youtube 上好看的节目，我还是喜欢下载下来到电视上播放。</p>
+
+<h4>2) <a href="https://chrome.google.com/webstore/detail/tumblr%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/njnkdhldbefijmdmjongfghcelgajjli">Tumblr video downloader</a> By unclehking</h4>
+
+<p>这是一个 Chrome 插件，方便下载 Tumblr 上的视频用的。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/">Top 10 algorithms in Interview Questions</a> By GeeksforGeeks</h4>
+
+<p>针对八类问题分别给出了最常见的十道算法题及其解答，适合年后准备面试的同学。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十三期）]]></title>
@@ -1425,56 +1471,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <p>关于 RN 许可协议的解读是我获得的最大收获:</p>
 
 <blockquote><p>if I initiate any lawsuit alleging patent infringement against Facebook, my license to use React Native would be immediately terminated.</p></blockquote>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/09/30/tech-notes-20/"/>
-    <updated>2016-09-30T11:20:12+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/09/30/tech-notes-20</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括如何创建一个 React Native 分隔线组件、UITableView 性能优化、如何设置AFNetwork 以支持 SSL，以及Xcode 8 代码签名等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://www.macstories.net/news/apple-starts-selling-app-store-search-ads-launching-october-5th/">Apple Starts Selling App Store Search Ads</a> By John Voorhees</h4>
-
-<p>App Store 搜索广告功能将于 10 月 5 日正式推出。关于广告计费方式，苹果表示将采用 CPC 的计算形式，开发者只需要在用户点击广告才需要付费，具体支付金额由关键词竞拍结果决定。</p>
-
-<h4>2) iPhone 可以直接用 Siri 打车</h4>
-
-<p>苹果开放接口以后，Siri 有用多了。比如在 iOS 10 里，你可以通过 Siri 直接语音叫车，滴滴和优步都支持。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://balloonsys.com/blog/2016/09/30/create-your-first-reusable-react-native-component/">创建一个 React Native 分隔线组件</a> By Linkou Bian</h4>
-
-<p>在移动端表单页面里有不少分隔线绘制需求，构造一个组件以在不同页面复用是个很自然的做法。本文选取最最简单的分隔线介绍 React Native 实践过程中的代码编写思路。</p>
-
-<h4>2) <a href="http://blog.lessfun.com/blog/2015/04/01/uitableview-performence-improve/">UITableView 性能优化</a></h4>
-
-<p>UITableView 是 iOS 开发中最常用也很实用并且最容易出现性能问题的的一个控件，本文列出了一些性能优化点，用于提高列表滚动的流畅性。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://nelson.logdown.com/posts/2015/04/29/how-to-properly-setup-afnetworking-security-connection/">如何正确设定 AFN 的安全连接</a> By Nelson Tai</h4>
-
-<p>大部分 iOS 应用都是采用 AFNetwork 作为网络层的框架的，本文详细介绍了设置 SSL 的步骤。</p>
-
-<h4>2) <a href="http://joeyio.com/2016/08/21/WWDC2016-401-Whats-new-in-Xcode-App-Signing/">What&rsquo;s New in Xcode App Signing</a></h4>
-
-<p>Xcode 团队在 Xcode 8 中移除了 fix issue 之后还需要 fix issue 但是可能还是不能 fix issue 的 Fix Issue 按钮，并完全重新设计了 code signing 的交互，流程和架构。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/033a6b596155">技术 Leader 的多维度能力及成长路径</a></h4>
-
-<p>如何成功转型? 我不想丢掉技术，如何在不丢掉技术的同时还能提升管理能力！本文是作者在这个过程中经历困惑和挣扎后的一些想法。</p>
 
 <p>@end</p>
 ]]></content>
