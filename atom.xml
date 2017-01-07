@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-01-08T00:08:58+08:00</updated>
+  <updated>2017-01-08T00:15:37+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -71,7 +71,7 @@
 
 <h3>Kindle</h3>
 
-<p>地铁、临睡前不适合 Kindle（硬件）的适合可以用 Kindle 这个 APP。缺点是阅读位置同步难得会正确一次。</p>
+<p>地铁、临睡前不适合 Kindle（硬件）的时候可以用 Kindle 这个 APP。缺点是阅读位置同步难得会正确一次。</p>
 
 <h3>LinkedIn</h3>
 
@@ -89,7 +89,7 @@
 
 <h3>PDFExpert</h3>
 
-<p>之所以在 Mac 上选择 PDF 格式的技术文档来阅读，而不是 ePub 或 azw 之类的格式，完全是因为 PDFExpert 太棒了。你可以在文档上直接写写画画，做做笔记。</p>
+<p>之所以在 Mac 上选择 PDF 格式的技术文档来阅读，而不是 ePub 或 azw 之类的，完全是因为 PDFExpert 太棒了。你可以在文档上直接写写画画，做做笔记。</p>
 
 <h3>iA Writer</h3>
 
@@ -125,7 +125,7 @@
 
 <h3>Spotify</h3>
 
-<p>为了在公司网络下正常使用，我特地写过一篇文章。</p>
+<p>为了在公司网络下正常使用，我特地写过一篇<a href="http://balloonsys.com/blog/2016/12/27/spotify-proxy-on-mac/">文章</a>。如果想屏蔽广告，可以看看 <a href="https://www.reddit.com/r/Piracy/comments/4kn6rq/comprehensive_guide_to_blocking_ads_on_spotify/">reddit</a> 上的讨论。</p>
 
 <h3>Charles</h3>
 
@@ -141,11 +141,11 @@
 
 <h3>SQLPro for SQLite</h3>
 
-<p>在 Mac 上查看 SQLite 的工具。</p>
+<p>在 Mac 上查看 SQLite。</p>
 
 <h3>Reveal</h3>
 
-<p>Hack 别人的 APP 或者分析 UI 的设计时不可或缺的利器。</p>
+<p>Hack 别人的 APP 或者分析 UI 的设计时，不可或缺的利器。</p>
 
 <h3>Sequal Pro</h3>
 
