@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-01-06T09:49:39+08:00</updated>
+  <updated>2017-01-08T00:08:58+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十四期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/01/02/tech-notes-34/"/>
-    <updated>2017-01-02T16:44:39+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/01/02/tech-notes-34</id>
+    <link href="http://balloonsys.github.io/blog/2017/01/06/tech-notes-34/"/>
+    <updated>2017-01-06T16:44:39+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/01/06/tech-notes-34</id>
     <content type="html"><![CDATA[<p>本期周报主要包括苹果 2017 新年大促消息、微信 Mars 之 xlog 使用、APP 引导页的设计、Youtube 视频下载工具、常见算法的分析与实现等内容。</p>
 
 <!--more-->
