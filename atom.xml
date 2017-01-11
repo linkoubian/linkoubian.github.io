@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-01-11T14:17:49+08:00</updated>
+  <updated>2017-01-11T14:23:14+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -51,9 +51,9 @@
 
 <h2>其他</h2>
 
-<h4>1) <a href="http://www.jianshu.com/p/015ef607b493">技术面试的七层境界</a> By 故胤道长</h4>
+<h4>1) <a href="https://medium.com/@hellostanley/design-doesnt-scale-4d81e12cbc3e">Design Doesn’t Scale</a> By Stanley Wood</h4>
 
-<p>Uber 总部的 iOS 架构工程师认为，可以通过面试来做为一个评判标准，以判断一个候选者的技术水平。同时也强调无论身处于什么样的公司和环境，提升自己的实力才是关键。</p>
+<p>当公司有跨平台多个 APP 后，UI 设计就很容易不一致，按钮、色彩搭配、字体等都需要进行标准化。本文记录了 Spotify 在标准化设计方面做的努力。</p>
 
 <p>@end</p>
 ]]></content>
