@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-01-08T00:36:36+08:00</updated>
+  <updated>2017-01-11T14:17:49+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十五期）[草稿]]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/01/13/tech-notes-35/"/>
+    <updated>2017-01-13T09:14:13+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/01/13/tech-notes-35</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 Swift 项目负责人变更、IGListKit 的应用实践、throttle 释疑、常用 iOS / Mac 软件推荐清单等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://lists.swift.org/pipermail/swift-evolution/Week-of-Mon-20170109/030063.html">苹果 Swift 语言创始人离职</a> By Chris Lattner</h4>
+
+<p>Chris Lattner 在邮件里说对 Swift 项目的发展没有影响，自己依旧会是该项目的积极贡献者。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://medium.com/cocoaacademymag/iglistkit-migrating-an-uitableview-to-iglistkitcollectionview-65a30cf9bac9">Migrating an UITableView to IGListCollectionView</a> By Rodrigo Cavalcante</h4>
+
+<p>本文介绍了如何从 UITableView 迁移到 Instagram 开源的 IGListCollectionView 方案。</p>
+
+<h4>2) <a href="http://mrpeak.cn/blog/ios-throttle/">iOS 编程中 throttle 那些事</a> By MrPeak</h4>
+
+<p>读完此文，你便会理解为何多张图片上传使用多个请求比放在一个请求的好处，你也会理解 AFN 源码中 Request Serializer 设计 throttleBandwidthWithPacketSize:delay: 这个方法的背后考量。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://balloonsys.com/blog/2017/01/07/my-favourite-apps/">一位 iOS 开发工程师的常用软件</a> By Linkou Bian</h4>
+
+<p>本文罗列了我在 iOS 及 macOS 上常用的约四十个软件。其中很多工具之前都有推荐，此次做了个小结。</p>
+
+<h4>2) <a href="https://kobiton.com">移动云测试平台 Kobiton</a> By Kobiton</h4>
+
+<p>使用 Chrome 试用了下该服务，提供 24 台 Android 设备及 28 台 iOS 设备供测试 APP。测试期间的操作会记录在 Session 日志里，对应时刻的屏幕也可自动截图保存。自动化测试方面支持 Appium 和 Selenium 框架，目前我没有进一步尝试。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/015ef607b493">技术面试的七层境界</a> By 故胤道长</h4>
+
+<p>Uber 总部的 iOS 架构工程师认为，可以通过面试来做为一个评判标准，以判断一个候选者的技术水平。同时也强调无论身处于什么样的公司和环境，提升自己的实力才是关键。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十四期）]]></title>
@@ -208,54 +254,6 @@
 <p>如果你能完全信任一个工程师，他/她办事你放心，那他/她就是高级工程师。</p>
 
 <p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/12/11/tech-notes-30/"/>
-    <updated>2016-12-11T10:38:37+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/12/11/tech-notes-30</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 iOS 项目的 HTTPS 迁移实战、基于 CTMediator 的组件化方案、以及给同事 Feedback 的 OFNR 模型等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://techcrunch.com/2016/12/05/idc-wearables/">Fitbit’s up and Apple’s down</a> By Brian Heater</h4>
-
-<p>IDC 刚刚发布了全球可穿戴设备市场的最新数据，看起来 Fitbit 势头正旺。在智能手表销量下滑的情况下，可穿戴设备市场的整体规模却出现了增长。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/94f5d3830301">iOS 迁移到 HTTPS</a> By Vincent</h4>
-
-<p>本文介绍了作者自建证书完成 AFNetworking 3.0 单向验证设置、WKWebView 及 SDWebImage 如何设置支持 HTTPS 等内容。</p>
-
-<h4>2) <a href="http://casatwy.com/modulization_in_action.html">基于 CTMediator 的组件化方案</a> By 田伟宇</h4>
-
-<p>作者自称希望这篇文章能够终结业界持续近一年的关于组件化方案的无谓讨论和错误讨论。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://itunes.apple.com/cn/app/rested-simple-http-requests/id421879749?mt=12">RESTed - Simple HTTP Requests</a> By Patrick Rogers</h4>
-
-<p>Restful API 测试工具首推 Paw 吧，由 @nixzhu 在推特提及的 RESTed 也是简洁好用，而且免费。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://ramblinjan.com/development/2016/12/05/Your-Hiring-Process-is-your-engineering-process/">Your Hiring Process is Also Your Engineering Process</a> By Jan Jorgensen</h4>
-
-<p>面试是双向的，公司面试求职者、求职者也挑公司。面试流程拖拖拉拉、找来不相干的人做面试官、面试官傲慢无理等，直接反映了这家公司做事的风格。</p>
-
-<h4>2) <a href="http://blog.d3in.org/post/153942984306/negative-feedback-antipatterns">如何给同事批评建议</a> By Charles-Axel Dein</h4>
-
-<p>年底了，大家又得做 Performance Review 了。给同事写好的、表扬形式的 review 是很容易的，但写实质性的批评建议却不容易，怕得罪人。本文给了一些正面例子与反面例子。</p>
-
-<p>给同事 Feedback 的 OFNR 模型：Observation（对方做了啥事）、Feeling（你对这件事的感受）、Need（你觉得怎样才是对的）、Request（对方应怎么改进）。</p>
-
-<h5>@end</h5>
 ]]></content>
   </entry>
   

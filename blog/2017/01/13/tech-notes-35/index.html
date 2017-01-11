@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第十七期） - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第三十五期）[草稿] - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括苹果自动驾驶汽车项目的最新动向，移动客户端基于 WebP 的流量优化技术剖析，Xcode 8 新增的调试工具用法等内容。 资讯 1) iPhone 年年焕新计划 By tech2ipo 北京时间 9 月 8 日凌晨，苹果发布了最新一代的 iPhone 7 和 7P， &hellip;">
+  <meta name="description" content="本期周报主要包括 Swift 项目负责人变更、IGListKit 的应用实践、throttle 释疑、常用 iOS / Mac 软件推荐清单等内容。 资讯 1) 苹果 Swift 语言创始人离职 By Chris Lattner Chris Lattner 在邮件里说对 Swift &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/09/10/tech-notes-17/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2017/01/13/tech-notes-35/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -80,7 +80,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第十七期）</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第三十五期）[草稿]</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-09-10T17:44:51+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>5:44 pm</span></time>
+<time class='entry-date' datetime='2017-01-13T09:14:13+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>9:14 am</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://balloonsys.github.io">Comments</a>
@@ -99,52 +99,42 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括苹果自动驾驶汽车项目的最新动向，移动客户端基于 WebP 的流量优化技术剖析，Xcode 8 新增的调试工具用法等内容。</p>
+<div class="entry-content"><p>本期周报主要包括 Swift 项目负责人变更、IGListKit 的应用实践、throttle 释疑、常用 iOS / Mac 软件推荐清单等内容。</p>
 
 <!--more-->
 
 
 <h2>资讯</h2>
 
-<h4>1) <a href="http://tech2ipo.com/10032335">iPhone 年年焕新计划</a> By tech2ipo</h4>
+<h4>1) <a href="https://lists.swift.org/pipermail/swift-evolution/Week-of-Mon-20170109/030063.html">苹果 Swift 语言创始人离职</a> By Chris Lattner</h4>
 
-<p>北京时间 9 月 8 日凌晨，苹果发布了最新一代的 iPhone 7 和 7P，这次发布会带来的另一个亮点是「年年焕新」计划。本文将帮你核算参与「年年焕新计划」永远用新 iPhone 究竟要多少钱。</p>
-
-<h4>2) <a href="http://www.nytimes.com/2016/09/10/technology/apple-is-said-to-be-rethinking-strategy-on-self-driving-cars.html?_r=0">Apple Is Said to Be Rethinking Strategy on Self-Driving Cars</a> By Daisuke</h4>
-
-<p>纽约时报的文章称，苹果自动驾驶汽车项目经历了调整，部分业务被撤销、几十名员工被解雇。今年七月开始由 Bob Mansfield 领导后，苹果改变了该项目的关注点，从对汽车设计和生产的强调转向了对自主驾驶汽车底层技术的开发。</p>
+<p>Chris Lattner 在邮件里说对 Swift 项目的发展没有影响，自己依旧会是该项目的积极贡献者。</p>
 
 <h2>开发</h2>
 
-<h4>1) <a href="https://segmentfault.com/a/1190000006266276">iOS 客户端基于 WebP 的流量优化</a> By Curiousity</h4>
+<h4>1) <a href="https://medium.com/cocoaacademymag/iglistkit-migrating-an-uitableview-to-iglistkitcollectionview-65a30cf9bac9">Migrating an UITableView to IGListCollectionView</a> By Rodrigo Cavalcante</h4>
 
-<p>WebP 是一种同时提供了有损压缩与无损压缩的图片文件格式。据说淘宝客户端在两年前就使用了 WebP（主要是 Native 使用），后来 H5 全面使用，WebView 的 WebP 采用插件的方式支持。</p>
+<p>本文介绍了如何从 UITableView 迁移到 Instagram 开源的 IGListCollectionView 方案。</p>
 
-<p>注：本文比<a href="http://www.jianshu.com/p/25505a6c5d74">第十三期周报</a>中分享的相关文章更深入！</p>
+<h4>2) <a href="http://mrpeak.cn/blog/ios-throttle/">iOS 编程中 throttle 那些事</a> By MrPeak</h4>
 
-<h4>2) <a href="http://qiaotongxin.cc/2016/08/22/20160822/">百度外卖 APP 头像动画效果</a> By 乔同新</h4>
-
-<p>某日，作者发现百度外卖的 APP 个人中心头像波浪效果很是吸引人，遂就思考如何实现这种『浪』的效果。</p>
+<p>读完此文，你便会理解为何多张图片上传使用多个请求比放在一个请求的好处，你也会理解 AFN 源码中 Request Serializer 设计 throttleBandwidthWithPacketSize:delay: 这个方法的背后考量。</p>
 
 <h2>工具</h2>
 
-<h4>1) <a href="https://chengwey.com/ios-10-by-tutorials-bi-ji-er/">Xcode 8 Debugging Improvements</a> By chengwey</h4>
+<h4>1) <a href="http://balloonsys.com/blog/2017/01/07/my-favourite-apps/">一位 iOS 开发工程师的常用软件</a> By Linkou Bian</h4>
 
-<p>Xcode 8 增加了几项功能，让我们调试起来更加得心应手。Xcode 8 提供的调试工具可以标记竞争危害（Race Conditions）、内存泄露、以及运行时的布局约束问题。</p>
+<p>本文罗列了我在 iOS 及 macOS 上常用的约四十个软件。其中很多工具之前都有推荐，此次做了个小结。</p>
 
-<h4>2) <a href="https://medium.com/ios-os-x-development/my-ios-development-toolkit-2016-ba7601b68085#.pebx7hm9c">My iOS Development Toolkit 2016</a> By Sebastian</h4>
+<h4>2) <a href="https://kobiton.com">移动云测试平台 Kobiton</a> By Kobiton</h4>
 
-<p>作者分享了他在用的 iOS 开发工具、Web 服务、框架，以及经常浏览的技术博客等。</p>
+<p>使用 Chrome 试用了下该服务，提供 24 台 Android 设备及 28 台 iOS 设备供测试 APP。测试期间的操作会记录在 Session 日志里，对应时刻的屏幕也可自动截图保存。自动化测试方面支持 Appium 和 Selenium 框架，目前我没有进一步尝试。</p>
 
 <h2>其他</h2>
 
-<h4>1) <a href="http://tech.glowing.com/cn/tan-tan-yi-dong-ying-yong-de-an-quan-xing-shi-jian/">移动应用的安全性实践</a> By Glow</h4>
+<h4>1) <a href="http://www.jianshu.com/p/015ef607b493">技术面试的七层境界</a> By 故胤道长</h4>
 
-<p>本文将从用户注册流程出发，逐步介绍 Glow 在提高数据安全性方面采用的一些策略方法，供读者参考。</p>
-
-<h4>2) <a href="https://medium.com/the-year-of-the-looking-glass/how-to-do-a-product-critique-98b657050638">How to do a Product Critique</a> By Julie Zhuo</h4>
-
-<p>这是 Facebook 产品设计总监的文章，通过对于评价产品的每个步骤的介绍，帮助产品经理更好的理解用户，提升自己的产品直觉。</p>
+<p>Uber 总部的 iOS 架构工程师认为，可以通过面试来做为一个评判标准，以判断一个候选者的技术水平。同时也强调无论身处于什么样的公司和环境，提升自己的实力才是关键。</p>
 
 <p>@end</p>
 </div>
@@ -162,7 +152,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-09-10T17:44:51+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>5:44 pm</span></time>
+<time class='entry-date' datetime='2017-01-13T09:14:13+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>9:14 am</span></time>
       
 
 <span class="categories">
@@ -183,10 +173,8 @@ $(document).bind('DOMNodeInserted', function(event) {
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/09/03/tech-notes-16/" title="Previous Post: 平安好房iOS开发团队技术周报（第十六期）">&laquo; 平安好房iOS开发团队技术周报（第十六期）</a>
+        <a class="basic-alignment left" href="/blog/2017/01/07/my-favourite-apps/" title="Previous Post: 我常用的软件">&laquo; 我常用的软件</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/09/17/tech-notes-18/" title="Next Post: 平安好房iOS开发团队技术周报（第十八期）">平安好房iOS开发团队技术周报（第十八期） &raquo;</a>
       
     </p>
   </footer>
@@ -272,8 +260,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/09/10/tech-notes-17/';
-        var disqus_url = 'http://balloonsys.github.io/blog/2016/09/10/tech-notes-17/';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2017/01/13/tech-notes-35/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2017/01/13/tech-notes-35/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-01-08T00:36:36+08:00</updated>
+  <updated>2017-01-11T14:17:49+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十五期）[草稿]]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/01/13/tech-notes-35/"/>
+    <updated>2017-01-13T09:14:13+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/01/13/tech-notes-35</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 Swift 项目负责人变更、IGListKit 的应用实践、throttle 释疑、常用 iOS / Mac 软件推荐清单等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://lists.swift.org/pipermail/swift-evolution/Week-of-Mon-20170109/030063.html">苹果 Swift 语言创始人离职</a> By Chris Lattner</h4>
+
+<p>Chris Lattner 在邮件里说对 Swift 项目的发展没有影响，自己依旧会是该项目的积极贡献者。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://medium.com/cocoaacademymag/iglistkit-migrating-an-uitableview-to-iglistkitcollectionview-65a30cf9bac9">Migrating an UITableView to IGListCollectionView</a> By Rodrigo Cavalcante</h4>
+
+<p>本文介绍了如何从 UITableView 迁移到 Instagram 开源的 IGListCollectionView 方案。</p>
+
+<h4>2) <a href="http://mrpeak.cn/blog/ios-throttle/">iOS 编程中 throttle 那些事</a> By MrPeak</h4>
+
+<p>读完此文，你便会理解为何多张图片上传使用多个请求比放在一个请求的好处，你也会理解 AFN 源码中 Request Serializer 设计 throttleBandwidthWithPacketSize:delay: 这个方法的背后考量。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://balloonsys.com/blog/2017/01/07/my-favourite-apps/">一位 iOS 开发工程师的常用软件</a> By Linkou Bian</h4>
+
+<p>本文罗列了我在 iOS 及 macOS 上常用的约四十个软件。其中很多工具之前都有推荐，此次做了个小结。</p>
+
+<h4>2) <a href="https://kobiton.com">移动云测试平台 Kobiton</a> By Kobiton</h4>
+
+<p>使用 Chrome 试用了下该服务，提供 24 台 Android 设备及 28 台 iOS 设备供测试 APP。测试期间的操作会记录在 Session 日志里，对应时刻的屏幕也可自动截图保存。自动化测试方面支持 Appium 和 Selenium 框架，目前我没有进一步尝试。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/015ef607b493">技术面试的七层境界</a> By 故胤道长</h4>
+
+<p>Uber 总部的 iOS 架构工程师认为，可以通过面试来做为一个评判标准，以判断一个候选者的技术水平。同时也强调无论身处于什么样的公司和环境，提升自己的实力才是关键。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[我常用的软件]]></title>
@@ -1474,125 +1520,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <p>用 Sketch 做 GIF 动画，是有个叫 AnimateMate 的很好用的插件。文中作者以分期乐的刷新动画为例进行讲解，推荐开发人员也读一读。</p>
 
 <p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[React Native 组件间数据传递]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/10/11/rn-components-communication/"/>
-    <updated>2016-10-11T11:14:48+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/10/11/rn-components-communication</id>
-    <content type="html"><![CDATA[<p>在 React Native 项目试点过程中，封装的组件之间难免需要传递数据。本文总结了子组件如何将数据传递到使用方，以及对开发过程中遇到的一个 setState 问题的探究。</p>
-
-<!--more-->
-
-
-<h2>设计一个可定制的组件</h2>
-
-<p>当设计一个组件供团队使用，通常使用时需要向其传递一些信息。这个过程可以参考国庆节前写的<a href="http://balloonsys.com/blog/2016/09/30/create-your-first-reusable-react-native-component/">创建一个 React Native 分隔线组件</a>。</p>
-
-<p>主要思路就是定义属性（propTypes），并提供默认属性值（getDefaultProps）。这里不再赘述。</p>
-
-<h2>组件返回数据给使用方</h2>
-
-<h3>应用场景</h3>
-
-<p>假设我们的某个页面 P 使用到封装房产信息的 houseInfo 等组件，需要在 houseInfo 填写完房源总价 totalPrice 后能根据当前整个页面（含多个组件）的输入项去验证是否可以 enable 提交按钮，而且在点击提交时需要能访问到 houseInfo 等组件录入的数据（包括 totalPrice 等）。</p>
-
-<h3>组件设计</h3>
-
-<p>houseInfo 组件包含若干由 React Native 提供的 TextInput 组件，在 TextInput 的 onChangeText 事件绑定我们的方法：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">onChangeText</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_updateTotalPrice</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>使用到的 _updateTotalPrice 是定义在该组件里的事件响应方法，使用最精简的写法设置状态机变量：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">_updateTotalPrice</span><span class="p">(</span><span class="nx">totalPrice</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">totalPrice</span><span class="p">},</span> <span class="k">this</span><span class="p">.</span><span class="nx">_onStateUpdated</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">},</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>特别需要注意的是，上述 setState 方法是异步执行的函数，将变化通知到组件的使用者的方法 _onStateUpdated 需要放在 setState 的第二个参数处，否则取 this.state.totalPrice 仍将是旧值。官方的解释如下：</p>
-
-<blockquote><p>setState() does not immediately mutate this.state but creates a pending state transition. Accessing this.state after calling this method can potentially return the existing value.</p></blockquote>
-
-<p>在实现 _onStateUpdated 方法之前，我们先声明一个函数类型的属性：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">propTypes</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">onGetHouseInfo</span><span class="o">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">func</span>
-</span><span class='line'>  <span class="p">},</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>这样使用者就可以传递一个函数给该组件，该组件在合适的时机调用此方法即可传递数据给使用方。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">_onStateUpdated</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">onGetHouseInfo</span><span class="p">({</span><span class="nx">totalPrice</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">totalPrice</span><span class="p">,</span>
-</span><span class='line'>                                                           <span class="c1">// 其他输入项 ...</span>
-</span><span class='line'>                              <span class="p">},</span> <span class="k">this</span><span class="p">.</span><span class="nx">_validate</span><span class="p">());</span>
-</span><span class='line'>  <span class="p">},</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>我们在传递输入的值时，还将本组件的验证结果传递出去，这样使用方即可综合各组件的 valid 值以控制提交按钮的状态。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">_validate</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="nx">XXX</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-</span><span class='line'>  <span class="p">},</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>使用方</h3>
-
-<p>我们在使用 houseInfo 等组件 render 表单页面 P，参考代码如下：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&lt;</span><span class="nx">HouseInfo</span> <span class="nx">onGetHouseInfo</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_getHouseInfo</span><span class="p">}</span> <span class="o">/&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>此处的 _getHouseInfo 用于从组件接收数据，以存放在页面的 state 里面：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">_getHouseInfo</span><span class="p">(</span><span class="nx">houseInfo</span><span class="p">,</span> <span class="nx">houseInfoValid</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="nx">houseInfo</span><span class="p">,</span> <span class="nx">houseInfoValid</span><span class="p">});</span>
-</span><span class='line'>  <span class="p">},</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>至于 state 的定义及初始化，放在 getInitialState 中即可，较为基础，此处略。</p>
-
-<h2>收工</h2>
-
-<p>👏👏👏</p>
 ]]></content>
   </entry>
   
