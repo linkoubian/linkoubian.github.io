@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-01-13T09:54:32+08:00</updated>
+  <updated>2017-01-20T10:53:49+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十六期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/01/20/tech-notes-36/"/>
+    <updated>2017-01-20T10:18:04+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/01/20/tech-notes-36</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 iOS 应用崩溃自动修复、数据统计无埋点技术、仿网易云音乐导航栏的技术实现等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.macrumors.com/2017/01/19/new-ipads-second-half-of-2017/">New iPads Might Not Launch Until Sometime in the Second Half of 2017</a> By Mitchel Broussard</h4>
+
+<p>苹果将会在今年的下半年对外发布、销售三款新平板电脑。新推出的 9.7 英寸将是廉价版本，主要针对教育市场。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://neyoufan.github.io/2017/01/13/ios/BayMax_HTSafetyGuard/">iOS APP 运行时 Crash 自动修复系统</a> By 陶泽宇</h4>
+
+<p>关于 app 运行时的 crash，我们是不是可以做的更多？是否可以做到实时抓取 app 运行时产生的 crash，然后直接自动修复它，从而不让 app crash 呢？</p>
+
+<h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng==&amp;mid=2651112803&amp;idx=1&amp;sn=061e10ff89c15f893511688f9c7864c2">数据统计无埋点技术</a> By 唐星</h4>
+
+<p>本文介绍百分点如何由原来的手动写代码的埋点，发展出不需要写代码的无埋点技术。也介绍了实践中遇到的一些问题和解决方法。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/rickytan/RTRootNavigationController">RTRootNavigationController</a> By Ricky Tan</h4>
+
+<p>现在应用的导航栏的颜色不再是单一颜色，还有些需要隐藏 navigationBar 的需求。该项目实现了开发部分提到的网易云音乐导航栏的效果。</p>
+
+<h4>2) <a href="http://microedition.biz/simMagnifier/index.html">simMagnifier</a> By Microedition</h4>
+
+<p>类似于之前推荐过的 SimPholders 工具。除了访问模拟器应用沙盒，还能访问 Core Data 数据文件等。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://merowing.info/2017/01/seniority/">Seniority</a> By Krzysztof Zabłocki</h4>
+
+<p>资深工程师何以为资深，都需要哪些基本素养？很不错的一篇文章，以作者梳理的各项标准对照自己，提升自己的 Soft Skills，岂不快哉。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十五期）]]></title>
@@ -206,56 +252,6 @@
 <h4>1) <a href="https://www.facebook.com/notes/mark-zuckerberg/building-jarvis/10154361492931634">扎克伯格写的 Jarvis AI</a> By Zuckerberg</h4>
 
 <p>虽然大部分技术都是现成的（facebook 开源项目和一些自动化家用硬件），但是他整合技术和学习能力实在太恐怖了。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十一期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/12/16/tech-notes-31/"/>
-    <updated>2016-12-16T18:16:40+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/12/16/tech-notes-31</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 SDWebImage 支持 URL 不变时更新图片内容的方案、HTTP 的构成、Swift 版表单框架、Facebook 首位华人工程师的经验分享等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://jingyan.baidu.com/article/dca1fa6f73c875f1a540524e.html">无法安装 macOS Sierra 10.12 更新</a></h4>
-
-<p>本周我尝试将 macOS Sierra 升级到 10.12 时遇到始终无法安装的问题，报验证失败的错。后来参考本文，关闭时间与互联网同步、把系统声音静音、再把任务栏正在运行的软件都退出，之后成功安装。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://blog.handy.wang/blog/2016/01/29/sdwebimagehuan-cun-zhi-tu-pian-urlbu-bian/">SDWebImage 支持 URL 不变时更新图片内容</a> By Handy.Wang</h4>
-
-<p>文末的第 5 个参考链接技术价值更高，相比而言作者写的文章算『术』。要了解 SDWebImage 的原理，非常推荐读一读其源代码。</p>
-
-<h4>2) <a href="http://mrpeak.cn/blog/http-constitution/">扒一扒 HTTP 的构成</a> By mrpeak</h4>
-
-<p>各平台上的一些第三方库都对 HTTP 做了进一步的封装，让 HTTP 变得更加亲民，但往往拿来就用的技术，很容易忽视其背后隐藏的细节。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://github.com/xmartlabs/Eureka">Eureka - Elegant form builder in Swift</a> By xmartlabs</h4>
-
-<p>拥有近 5000 个 star 的表单框架，如果需要 Obj-C 版本，可以看看该开发商的 XLForm 项目。</p>
-
-<h4>2) <a href="https://github.com/12207480/DOPDropDownMenu-Enhanced">DOPDropDownMenu 增强版</a></h4>
-
-<p>下拉选择控件在大部分国内应用里都有，作者在 DOPDropDownMenu 的基础上添加了双列表的应用，优化了代码，增强了稳定性。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://blog.tezign.com/2016/01/09/why-facebook-become-an-empire/">婴儿期的 Facebook 吃了什么才变帝国</a> By 赵海平</h4>
-
-<p>作者是 Facebook 的第一位华人员工，履历牛逼闪闪。他认为在做 startup 的时候，最重要的就是找到你产品的核心价值，而这个核心价值不用到最完美的时刻就应该可以体现出来。</p>
-
-<h4>2) <a href="http://blog.professorbeekums.com/2016/12/what-makes-senior-software-developer.html">怎么判断一个人是不是高级软件工程师</a> By Beekums</h4>
-
-<p>如果你能完全信任一个工程师，他/她办事你放心，那他/她就是高级工程师。</p>
 
 <p>@end</p>
 ]]></content>

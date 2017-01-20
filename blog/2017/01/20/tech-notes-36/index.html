@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Gitlab, - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第三十六期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="Category: gitlab,">
+  <meta name="description" content="本期周报主要包括 iOS 应用崩溃自动修复、数据统计无埋点技术、仿网易云音乐导航栏的技术实现等内容。 资讯 1) New iPads Might Not Launch Until Sometime in the Second Half of 2017 By Mitchel Broussard &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/categories/gitlab/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2017/01/20/tech-notes-36/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -76,50 +76,115 @@ $(document).bind('DOMNodeInserted', function(event) {
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Gitlab,</h1>
+    
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第三十六期）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2017-01-20T10:18:04+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>10:18 am</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://balloonsys.github.io">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>本期周报主要包括 iOS 应用崩溃自动修复、数据统计无埋点技术、仿网易云音乐导航栏的技术实现等内容。</p>
 
-  
-  <h2>2014</h2>
-
-<article>
-  
-<h1><a href="/blog/2014/09/07/install-redmine-on-centos-6-dot-5/">在CentOS 6.5环境下安装Redmine</a></h1>
-<time datetime="2014-09-07T16:33:08+08:00" pubdate><span class='month'>Sep</span> <span class='day'>07</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/aliyun/'>aliyun,</a>, <a class='category' href='/blog/categories/centos/'>centos,</a>, <a class='category' href='/blog/categories/gitlab/'>gitlab,</a>, <a class='category' href='/blog/categories/vmware/'>vmware</a></span>
-</footer>
+<!--more-->
 
 
-</article>
+<h2>资讯</h2>
 
+<h4>1) <a href="http://www.macrumors.com/2017/01/19/new-ipads-second-half-of-2017/">New iPads Might Not Launch Until Sometime in the Second Half of 2017</a> By Mitchel Broussard</h4>
 
+<p>苹果将会在今年的下半年对外发布、销售三款新平板电脑。新推出的 9.7 英寸将是廉价版本，主要针对教育市场。</p>
 
-<article>
-  
-<h1><a href="/blog/2014/09/06/install-gitlab-on-centos-6-dot-5/">在CentOS 6.5环境下安装GitLab</a></h1>
-<time datetime="2014-09-06T11:32:15+08:00" pubdate><span class='month'>Sep</span> <span class='day'>06</span> <span class='year'>2014</span></time>
+<h2>开发</h2>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/aliyun/'>aliyun,</a>, <a class='category' href='/blog/categories/centos/'>centos,</a>, <a class='category' href='/blog/categories/gitlab/'>gitlab,</a>, <a class='category' href='/blog/categories/vmware/'>vmware</a></span>
-</footer>
+<h4>1) <a href="https://neyoufan.github.io/2017/01/13/ios/BayMax_HTSafetyGuard/">iOS APP 运行时 Crash 自动修复系统</a> By 陶泽宇</h4>
 
+<p>关于 app 运行时的 crash，我们是不是可以做的更多？是否可以做到实时抓取 app 运行时产生的 crash，然后直接自动修复它，从而不让 app crash 呢？</p>
 
-</article>
+<h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng==&amp;mid=2651112803&amp;idx=1&amp;sn=061e10ff89c15f893511688f9c7864c2">数据统计无埋点技术</a> By 唐星</h4>
 
+<p>本文介绍百分点如何由原来的手动写代码的埋点，发展出不需要写代码的无埋点技术。也介绍了实践中遇到的一些问题和解决方法。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/rickytan/RTRootNavigationController">RTRootNavigationController</a> By Ricky Tan</h4>
+
+<p>现在应用的导航栏的颜色不再是单一颜色，还有些需要隐藏 navigationBar 的需求。该项目实现了开发部分提到的网易云音乐导航栏的效果。</p>
+
+<h4>2) <a href="http://microedition.biz/simMagnifier/index.html">simMagnifier</a> By Microedition</h4>
+
+<p>类似于之前推荐过的 SimPholders 工具。除了访问模拟器应用沙盒，还能访问 Core Data 数据文件等。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://merowing.info/2017/01/seniority/">Seniority</a> By Krzysztof Zabłocki</h4>
+
+<p>资深工程师何以为资深，都需要哪些基本素养？很不错的一篇文章，以作者梳理的各项标准对照自己，提升自己的 Soft Skills，岂不快哉。</p>
+
+<p>@end</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2017-01-20T10:18:04+08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>10:18 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/01/13/tech-notes-35/" title="Previous Post: 平安好房iOS开发团队技术周报（第三十五期）">&laquo; 平安好房iOS开发团队技术周报（第三十五期）</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -194,7 +259,10 @@ $(document).bind('DOMNodeInserted', function(event) {
       var disqus_shortname = 'balloonsys';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2017/01/20/tech-notes-36/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2017/01/20/tech-notes-36/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

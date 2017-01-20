@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-01-13T09:54:32+08:00</updated>
+  <updated>2017-01-20T10:53:49+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十六期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/01/20/tech-notes-36/"/>
+    <updated>2017-01-20T10:18:04+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/01/20/tech-notes-36</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 iOS 应用崩溃自动修复、数据统计无埋点技术、仿网易云音乐导航栏的技术实现等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.macrumors.com/2017/01/19/new-ipads-second-half-of-2017/">New iPads Might Not Launch Until Sometime in the Second Half of 2017</a> By Mitchel Broussard</h4>
+
+<p>苹果将会在今年的下半年对外发布、销售三款新平板电脑。新推出的 9.7 英寸将是廉价版本，主要针对教育市场。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://neyoufan.github.io/2017/01/13/ios/BayMax_HTSafetyGuard/">iOS APP 运行时 Crash 自动修复系统</a> By 陶泽宇</h4>
+
+<p>关于 app 运行时的 crash，我们是不是可以做的更多？是否可以做到实时抓取 app 运行时产生的 crash，然后直接自动修复它，从而不让 app crash 呢？</p>
+
+<h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng==&amp;mid=2651112803&amp;idx=1&amp;sn=061e10ff89c15f893511688f9c7864c2">数据统计无埋点技术</a> By 唐星</h4>
+
+<p>本文介绍百分点如何由原来的手动写代码的埋点，发展出不需要写代码的无埋点技术。也介绍了实践中遇到的一些问题和解决方法。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/rickytan/RTRootNavigationController">RTRootNavigationController</a> By Ricky Tan</h4>
+
+<p>现在应用的导航栏的颜色不再是单一颜色，还有些需要隐藏 navigationBar 的需求。该项目实现了开发部分提到的网易云音乐导航栏的效果。</p>
+
+<h4>2) <a href="http://microedition.biz/simMagnifier/index.html">simMagnifier</a> By Microedition</h4>
+
+<p>类似于之前推荐过的 SimPholders 工具。除了访问模拟器应用沙盒，还能访问 Core Data 数据文件等。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://merowing.info/2017/01/seniority/">Seniority</a> By Krzysztof Zabłocki</h4>
+
+<p>资深工程师何以为资深，都需要哪些基本素养？很不错的一篇文章，以作者梳理的各项标准对照自己，提升自己的 Soft Skills，岂不快哉。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十五期）]]></title>
@@ -1470,60 +1516,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <h3>Review 结果展示页告警</h3>
 
 <p>该页使用公共组件 NormalText 并传递 color 给它，但作者提供的 NormalText 代码里使用的是 View.propTypes.style，应改为 Text.propTypes.style！</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十二期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/10/12/tech-notes-22/"/>
-    <updated>2016-10-12T14:04:38+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/10/12/tech-notes-22</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 Dash 作者和 Apple 沟通的详情、移动端技术方案对比、React Native 组件间数据传递、用 Sketch 制作 GIF 动画等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://cn.reuters.com/article/apple-shenzhen-research-center-idCNKCS12C0DH">苹果宣布在深圳成立研发中心</a> By 路透香港</h4>
-
-<p>苹果公司周三表示，将在中国的制造业中心深圳成立一个研发中心。在竞争日益激烈的情况下，苹果希望刺激在中国的增长。</p>
-
-<h4>2) <a href="https://blog.kapeli.com/dash-and-apple-my-side-of-the-story">Dash and Apple: My Side of the Story</a> By Bogdan Popescu</h4>
-
-<p>非常受欢迎的 API 文档浏览器 Dash 的作者公开了和苹果沟通的细节，看起来双方都没有错:-)</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://awhisper.github.io/2016/07/22/Weex-ReactNative-JSPatch/">Weex &amp; ReactNative &amp; JSPatch</a> By awhisper</h4>
-
-<p>很不错的方案对比文章，既有引述，也有作者自己的见解。</p>
-
-<h4>2) <a href="http://balloonsys.com/blog/2016/10/11/rn-components-communication/">React Native 组件间数据传递</a> By Linkou Bian</h4>
-
-<p>在 React Native 项目试点过程中，封装的组件之间难免需要传递数据。本文总结了子组件如何将数据传递到使用方，以及对开发过程中遇到的一个 setState 问题的探究。</p>
-
-<h4>3) <a href="http://inaka.net/blog/2016/09/16/function-naming-in-swift-3/">Function Naming In Swift 3</a> By Pablo Villar</h4>
-
-<p>作者总结了自己在迁移 Swift 2.2 到 Swift 3 时关于函数命名的心得。另外，官方的 <a href="https://swift.org/documentation/api-design-guidelines/">Swift API 设计指南</a>，建议多读几遍。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://github.com/markohlebar/Import">An Xcode Extension: Import</a> By Marko Hlebar</h4>
-
-<p>当一个类文件很长，此时若需要 import 头文件的话需要滚动到最顶部，然后再回到刚才的代码行继续编码，这个体验还是很不好的。该 Extension 可以让你在任意位置输入 import 语句。</p>
-
-<h4>2) <a href="https://github.com/magicismight/react-native-root-toast">React Native Toast</a> By Horcrux</h4>
-
-<p>适用于 React Native 项目的 Toast 消息提示组件。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/45022427cf96">用 Sketch 制作 APP 下拉刷新的 GIF 动画</a> By wythetan</h4>
-
-<p>用 Sketch 做 GIF 动画，是有个叫 AnimateMate 的很好用的插件。文中作者以分期乐的刷新动画为例进行讲解，推荐开发人员也读一读。</p>
-
-<p>@end</p>
 ]]></content>
   </entry>
   
