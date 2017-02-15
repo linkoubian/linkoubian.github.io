@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-01-20T10:53:49+08:00</updated>
+  <updated>2017-02-15T16:11:17+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十七期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/02/13/tech-notes-37/"/>
+    <updated>2017-02-13T17:22:58+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/02/13/tech-notes-37</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 点评功能的新玩法、沃尔玛的 React Native 实践分享、Xcode 的辅助定位内存问题的 Malloc Stack Logging 选项用法等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://daringfireball.net/2017/01/new_app_store_review_features">Additional Details on the New App Store Review Features</a> By John Gruber</h4>
+
+<p>iOS 10.3 和 macOS 10.12.4 开始，每个 app 每年只能发三次「求评价」弹窗，用户点评不必离开 app，可以一键关闭所有求点评弹窗，开发者可以直接回复用户的评价。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://medium.com/walmartlabs/react-native-at-walmartlabs-cdd140589560">沃尔玛的 React Native 实践</a> By Matt Bresnan</h4>
+
+<p>最近，美国零售巨头沃尔玛将它们的官方 App 从 Hybrid 转向了 React Native，获得了非常不错的结果，来看看他们是怎么做的。</p>
+
+<p>PS: Walmart App 背后原来有数百名工程师啊！！！</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/ad2e37e741bb">细聊 Cocoapods 与 Xcode 工程配置</a> By 张星宇</h4>
+
+<p>对我最有用的信息是：通过 ar -x 解包 .a 文件，再对解出来的 __.SYMDEF SORTED 内容分析发现，其中没有 Category 的目标文件信息，或许这就是静态库中含有 Category 时为何需要专门配置 other linker flag 选项。</p>
+
+<p>作者虽是学生，但思路清晰，很不错的。</p>
+
+<h4>2) <a href="https://medium.com/@xcadaverx/locating-the-source-of-a-memory-leak-712667bf8cd5#.1yozxmst2">Locating the source of a memory leak</a> By Daniel Williams</h4>
+
+<p>作者介绍了借助 Xcode 的 Malloc Stack Logging 功能，定位内存问题的技巧。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://www.phodal.com/blog/how-to-write-a-resume/">一份优秀的程序员简历是什么样的</a> By 黄峰达</h4>
+
+<p>今年的行情虽然没有去年火热，但是你仍应该拾掇拾掇一下你的简历，万一机会来了呢？</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十六期）]]></title>
@@ -27,7 +73,7 @@
 
 <h4>1) <a href="http://www.macrumors.com/2017/01/19/new-ipads-second-half-of-2017/">New iPads Might Not Launch Until Sometime in the Second Half of 2017</a> By Mitchel Broussard</h4>
 
-<p>苹果将会在今年的下半年对外发布、销售三款新平板电脑。新推出的 9.7 英寸将是廉价版本，主要针对教育市场。</p>
+<p>供应链消息称，苹果将会在今年的下半年对外发布、销售三款新平板电脑。新推出的 9.7 英寸将是廉价版本，主要针对教育市场。</p>
 
 <h2>开发</h2>
 
@@ -1259,263 +1305,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <p>通过采访那些亲身经历过公司合并的同学，给每一位身处这个时代的互联网人以警醒。当有一天，公司合并这件事落在你身上时，希望你能从这篇文章中汲取干货，从容面对、冷静处理。</p>
 
 <p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[React Native 项目实战]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/10/18/rn-put-it-all-together/"/>
-    <updated>2016-10-18T15:02:29+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/10/18/rn-put-it-all-together</id>
-    <content type="html"><![CDATA[<p>本文以 Twitter 工程师 Bonnie Eisenman 撰写的 Learning React Native 一书的第九章内容为蓝本，总结了 React Native 项目实践的一些经验。</p>
-
-<!--more-->
-
-
-<h2>项目组织结构</h2>
-
-<p>所有的新增文件均放在项目根目录下的 src 里，主要有包含各页面的 components 子目录、数据模型的 data 子目录、负责数据存取的 stores 子目录、公共样式定义 styles 子目录、存放资源图片等的 resources 子目录等。</p>
-
-<p><img src="https://c2.staticflickr.com/6/5781/30365572286_b0c35d2176_o.png" width="226" alt="RN Project Structure" /></p>
-
-<p>index.ios.js 是 Native 应用的入口，该文件尽量简洁，指向 RN 项目里负责页面跳转的主文件 components/Zebreto.js。</p>
-
-<h2>案例项目简介</h2>
-
-<p>作者提供的示例项目包含三个页面，包含多副牌（Deck）的列表页、为选中的某副牌增加一张卡牌（Card）的页面、为某张卡牌选择答案（Review）的页面。</p>
-
-<p>在列表页点击 Create Deck 按钮，按钮上方出现输入框，填写内容作为 Deck 的名称。点击 Deck 右侧按钮则进入增加卡牌页面，点击 Deck 左侧则进入 Review 的页面。</p>
-
-<h2>构建基础组件</h2>
-
-<h3>公共样式</h3>
-
-<p>全局的颜色、字号等，可以在 js 里直接定义字典数据结构，然后 exports 以供外界访问。比如：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">palette</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">pink</span><span class="o">:</span> <span class="s1">&#39;#FDA6CD&#39;</span>
-</span><span class='line'><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">palette</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>所以，像平安好房的应用可以参照上述结构定义 pa_orange 等色值。值得注意的是，我们也可以在一个 js 文件里定义多个字典，然后 exports 时将他们包含在花括号中即可。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span><span class="nx">fonts</span><span class="p">,</span> <span class="nx">color</span><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>在使用上述结构时，就需要这么 import 了：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">import</span> <span class="p">{</span> <span class="nx">fonts</span><span class="p">,</span> <span class="nx">color</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;&lt;PATH-OF-FILE&gt;&#39;</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>公共组件</h3>
-
-<p>我们不直接用 Text 组件，而是包装成 HeadingText 和 NormalText 供项目里的不同页面使用。同样的，为了代码重用与使用便捷，我们封装 Button、Input、LabeldInput 等组件。</p>
-
-<p>其中 Button 组件构建在 TouchableOpacity 基础之上，支持 func 类型的属性以在点击时调用使用方的方法，也支持 View.propTypes.style 类型的属性以方便定制其样式等。</p>
-
-<p>需要注意的是，为了让 Button 组件能包含其他子组件，我们使用了一个 object 类型的属性，然后在 render 时输出 children 即可。</p>
-
-<p>HeadingText 和 NormalText 建立在 Text 组件之上，自定义样式是通过 Text.propTypes.style 类型的属性支持的。注意此处类型不同于前面 Button 使用过的样式类型。</p>
-
-<p>Input 组件建立在 TextInput 之上，LabeledInput 组合了 Input 和 NormalText 两个组件，体现了复用的理念。</p>
-
-<h2>页面开发</h2>
-
-<h3>Deck 列表页</h3>
-
-<h4>数据建模</h4>
-
-<p>在 React Native 项目试点过程中，尚不熟悉 JavaScript 的类相关语法。当时都是用的字典:[</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">class</span> <span class="nx">Deck</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">Deck</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>数据在本地使用 AsyncStorage 存取，所有的存取方法均封装在 DeckStore.js 里。</p>
-
-<h4>Reflux 架构</h4>
-
-<p>作者使用 Reflux 架构实现数据的单项流动，主要的两个概念便是 Store 和 Action 了。</p>
-
-<p>用户在 View 上操作，触发 Action，示例 View 的事件响应代码如下：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">DeckActions</span><span class="p">.</span><span class="nx">createDeck</span><span class="p">(</span><span class="nx">deck</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>而 createDeck 是在 actions.js 里定义的：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">export</span> <span class="kd">var</span> <span class="nx">DeckActions</span> <span class="o">=</span> <span class="nx">Reflux</span><span class="p">.</span><span class="nx">createActions</span><span class="p">([</span>
-</span><span class='line'>  <span class="s1">&#39;createDeck&#39;</span>
-</span><span class='line'><span class="p">]);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Store 的 init 方法里监听 Action：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">decksStore</span> <span class="o">=</span> <span class="nx">Reflux</span><span class="p">.</span><span class="nx">createStore</span><span class="p">({</span>
-</span><span class='line'>  <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">_decks</span> <span class="o">=</span> <span class="p">[];</span>
-</span><span class='line'>    <span class="c1">// ...</span>
-</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">listenTo</span><span class="p">(</span><span class="nx">DeckActions</span><span class="p">.</span><span class="nx">createDeck</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">createDeck</span><span class="p">);</span>
-</span><span class='line'>    <span class="c1">// ...</span>
-</span><span class='line'>  <span class="p">},</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c1">// ...</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nx">createDeck</span><span class="p">(</span><span class="nx">deck</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">_decks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">deck</span><span class="p">);</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">();</span>
-</span><span class='line'>  <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c1">// ...</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nx">emit</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="c1">// ...</span>
-</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_decks</span><span class="p">);</span>
-</span><span class='line'>  <span class="p">},</span>
-</span><span class='line'><span class="p">});</span>
-</span><span class='line'>
-</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">decksStore</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>这样在 createDeck 这一 action 触发后，Store 变回执行 createDeck 方法以更新 Store 中的数据，再通过 emit 方法通知出去。</p>
-
-<p>View 里面监听 DeckStore 的消息，将通知携带来的数据模型存在 state 里以触发 render 方法的执行（更新 UI）。</p>
-
-<p><img src="https://c2.staticflickr.com/6/5816/29772102074_b8ec9b3328_o.png" width="328" alt="Reflux Architecture" /></p>
-
-<h4>页面组装</h4>
-
-<p>src/components/Decks/index.js 是该页面的主文件，会包含一些子组件以完成整个页面的渲染。</p>
-
-<p>在 index.js 的 render 方法里，将这一段代码封装在一个独立的工具方法，然后在 render 里面引用其返回的 UI 结构。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">_getDecks</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">decks</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">decks</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">deck</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span><span class='line'>      <span class="k">return</span> <span class="p">(</span>
-</span><span class='line'>        <span class="o">&lt;</span><span class="nx">Deck</span> <span class="nx">deck</span><span class="o">=</span><span class="p">{</span><span class="nx">deck</span><span class="p">}</span> <span class="p">...</span><span class="o">/&gt;</span>
-</span><span class='line'>      <span class="p">);</span>
-</span><span class='line'>    <span class="p">});</span>
-</span><span class='line'>  <span class="p">},</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>使用高阶函数 map 根据每个 deck 数据对象生成对应的 Deck 标签，作为数据返回。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="p">(</span>
-</span><span class='line'>      <span class="o">&lt;</span><span class="nx">View</span><span class="o">&gt;</span>
-</span><span class='line'>        <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_getDecks</span><span class="p">()}</span>
-</span><span class='line'>        <span class="o">&lt;</span><span class="nx">DeckCreation</span> <span class="p">...</span><span class="o">/&gt;</span>
-</span><span class='line'>      <span class="o">&lt;</span><span class="err">/View&gt;</span>
-</span><span class='line'>    <span class="p">);</span>
-</span><span class='line'>  <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>输入 Deck 名时比正常情况下多一行输入框，所以在 DeckCreation.js 中根据一个 state 变量分别返回不同的两个子组件：EnterDeck 和 CreateDeckButton。前者由公共组件 Input 和 CreateDeckButton 组合而成。CreateDeckButton 由公共组件 Button 和 NormalText 组合而成。</p>
-
-<p>详细代码不在本文中提供，以思路为重。</p>
-
-<h3>Card 新建页</h3>
-
-<p>整体过程类似于 Decks 页面的构建。主要就是在 View 触发 CardActions.createCard 这一 Action，在 Card 的 Store 中监听以更新数据集合。</p>
-
-<h3>Review 交互页</h3>
-
-<p>本页面有两种场景，若存在尚未 Review 过的 Card 则显示可选择答案的 Review 页面，否则显示 Review 结果（正确率）。所以 src/components/Review/index.js 里分两种情况返回 UI 结构。</p>
-
-<p>选择答案的 UI 结构，其封装在 ViewCard.js 中，做法类似于之前 Decks 利用 map 高阶函数的方案。Review 这一块稍微难懂一点的是其 Store 里根据录入的卡片构造选项的逻辑，但这其实已不是 React Native 的范围，耐心的多看一会儿就可以懂。</p>
-
-<h2>问题与解决方案</h2>
-
-<h3>Decks 页面不展示模拟数据</h3>
-
-<p>我在完成 Decks 页面的展示时，就不等 Create Deck 功能的实现，就开始测试一下页面。比如在 components/Decks/index.js 的 getInitialState 中直接构造几个 Deck 对象。但是并没有展示出来:[</p>
-
-<p>原因在于 Store 发出的消息，导致 View 的 state 里的数据立即被置空。我们可以临时在加个判断，为空就不 setState({decks}) 即可。</p>
-
-<h3>Review 结果展示页告警</h3>
-
-<p>该页使用公共组件 NormalText 并传递 color 给它，但作者提供的 NormalText 代码里使用的是 View.propTypes.style，应改为 Text.propTypes.style！</p>
 ]]></content>
   </entry>
   

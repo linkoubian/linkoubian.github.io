@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-01-20T10:53:49+08:00</updated>
+  <updated>2017-02-15T16:11:17+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十七期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/02/13/tech-notes-37/"/>
+    <updated>2017-02-13T17:22:58+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/02/13/tech-notes-37</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 点评功能的新玩法、沃尔玛的 React Native 实践分享、Xcode 的辅助定位内存问题的 Malloc Stack Logging 选项用法等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://daringfireball.net/2017/01/new_app_store_review_features">Additional Details on the New App Store Review Features</a> By John Gruber</h4>
+
+<p>iOS 10.3 和 macOS 10.12.4 开始，每个 app 每年只能发三次「求评价」弹窗，用户点评不必离开 app，可以一键关闭所有求点评弹窗，开发者可以直接回复用户的评价。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://medium.com/walmartlabs/react-native-at-walmartlabs-cdd140589560">沃尔玛的 React Native 实践</a> By Matt Bresnan</h4>
+
+<p>最近，美国零售巨头沃尔玛将它们的官方 App 从 Hybrid 转向了 React Native，获得了非常不错的结果，来看看他们是怎么做的。</p>
+
+<p>PS: Walmart App 背后原来有数百名工程师啊！！！</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/ad2e37e741bb">细聊 Cocoapods 与 Xcode 工程配置</a> By 张星宇</h4>
+
+<p>对我最有用的信息是：通过 ar -x 解包 .a 文件，再对解出来的 __.SYMDEF SORTED 内容分析发现，其中没有 Category 的目标文件信息，或许这就是静态库中含有 Category 时为何需要专门配置 other linker flag 选项。</p>
+
+<p>作者虽是学生，但思路清晰，很不错的。</p>
+
+<h4>2) <a href="https://medium.com/@xcadaverx/locating-the-source-of-a-memory-leak-712667bf8cd5#.1yozxmst2">Locating the source of a memory leak</a> By Daniel Williams</h4>
+
+<p>作者介绍了借助 Xcode 的 Malloc Stack Logging 功能，定位内存问题的技巧。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://www.phodal.com/blog/how-to-write-a-resume/">一份优秀的程序员简历是什么样的</a> By 黄峰达</h4>
+
+<p>今年的行情虽然没有去年火热，但是你仍应该拾掇拾掇一下你的简历，万一机会来了呢？</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十六期）]]></title>
@@ -27,7 +73,7 @@
 
 <h4>1) <a href="http://www.macrumors.com/2017/01/19/new-ipads-second-half-of-2017/">New iPads Might Not Launch Until Sometime in the Second Half of 2017</a> By Mitchel Broussard</h4>
 
-<p>苹果将会在今年的下半年对外发布、销售三款新平板电脑。新推出的 9.7 英寸将是廉价版本，主要针对教育市场。</p>
+<p>供应链消息称，苹果将会在今年的下半年对外发布、销售三款新平板电脑。新推出的 9.7 英寸将是廉价版本，主要针对教育市场。</p>
 
 <h2>开发</h2>
 
@@ -200,58 +246,6 @@
 <h4>1) <a href="http://mp.weixin.qq.com/s/XpjTQd-p9pNpkQich1ZZ_w">中国企业就是这样倒闭的</a></h4>
 
 <p>整天瞎分析个屁! 什么他妈的流程问题、职责问题、界面问题、考核问题，明明就是机构臃肿问题！</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十二期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/12/23/tech-notes-32/"/>
-    <updated>2016-12-23T09:33:13+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/12/23/tech-notes-32</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 HTTP 缓存机制及 iOS 的实现、Operation Queues 的相关知识、APP 启用 HTTPS 支持的基础知识、滴滴 iOS 动态化方案等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.theverge.com/2016/12/21/14037686/apple-macbook-macos-focus-mobile-features-ios">macOS is becoming legacy software</a> By Vlad Savov</h4>
-
-<p>The Verge 引述 Bloomberg 熟悉 Apple 內部运作人士报导，Apple 已经再沒有独立的 Mac OS Team。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://qnoid.com/2016/04/10/A-primer-in-HTTP-caching-and-its-native-support-by-iOS.html">HTTP 缓存机制及 iOS 的实现</a> By qnoid</h4>
-
-<p>缓存机制的表述，在苹果的文档中都有。但是，判断 response 是否足够 fresh 的介绍是作者的原创。</p>
-
-<h4>2) <a href="http://blog.leichunfeng.com/blog/2015/07/29/ios-concurrency-programming-operation-queues/">iOS 并发编程之 Operation Queues</a> By 雷纯锋</h4>
-
-<p>在 iOS 开发中，我们主要可以通过 Operation Queues、Dispatch Queues 和 Dispatch Sources 来提高应用的并发性。本文主要介绍 Operation Queues 的相关知识。</p>
-
-<p>注：本周精读了 AFNetworking 3.0 源代码，上述两篇文章都是在读代码过程中查阅过的资料。</p>
-
-<h4>3) <a href="https://autolayout.club/2016/12/22/%E5%86%99%E7%BB%99-iOS-%E5%BC%80%E5%8F%91%E8%80%85%E7%9C%8B%E7%9A%84-HTTPS-%E6%8C%87%E5%8D%97/">写给 iOS 开发者看的 HTTPS 指南</a> By 吕文翰</h4>
-
-<p>苹果在 WWDC 2016 上宣布年底将要求所有 APP 适配 ATS，不过本周四又宣布将这个 deadline 推迟了。本文着重介绍 APP 启用 HTTPS 支持的过程中跟 APP 相关的部分，剩余的协议细节将一笔带过。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://mp.weixin.qq.com/s/qRW_akbU3TSd0SxpF3iQmQ">DynamicCocoa - 滴滴 iOS 动态化方案</a> By 孙源</h4>
-
-<p>DynamicCocoa 可以让现有的 Objective-C 代码转换生成中间代码（JS），下发后动态执行。据说，手机 QQ 的方案是通过 clang 把 OC 代码编译成自己定制的字节码动态下发，然后开发一个虚拟机去执行（惊呆了）。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/a5c5e9aa5913">XMNetworking</a> By 康祖彬</h4>
-
-<p>XMNetworking 是一个轻量的、简单易用但功能强大的网络库，基于 AFNetworking 3.0 封装。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://www.facebook.com/notes/mark-zuckerberg/building-jarvis/10154361492931634">扎克伯格写的 Jarvis AI</a> By Zuckerberg</h4>
-
-<p>虽然大部分技术都是现成的（facebook 开源项目和一些自动化家用硬件），但是他整合技术和学习能力实在太恐怖了。</p>
 
 <p>@end</p>
 ]]></content>

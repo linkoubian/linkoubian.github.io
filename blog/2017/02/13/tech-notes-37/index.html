@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Swift - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第三十七期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="Category: swift">
+  <meta name="description" content="本期周报主要包括 App Store 点评功能的新玩法、沃尔玛的 React Native 实践分享、Xcode 的辅助定位内存问题的 Malloc Stack Logging 选项用法等内容。 资讯 1) Additional Details on the New App Store &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/categories/swift/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2017/02/13/tech-notes-37/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -76,50 +76,115 @@ $(document).bind('DOMNodeInserted', function(event) {
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Swift</h1>
+    
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第三十七期）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2017-02-13T17:22:58+08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>5:22 pm</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://balloonsys.github.io">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>本期周报主要包括 App Store 点评功能的新玩法、沃尔玛的 React Native 实践分享、Xcode 的辅助定位内存问题的 Malloc Stack Logging 选项用法等内容。</p>
 
-  
-  <h2>2014</h2>
-
-<article>
-  
-<h1><a href="/blog/2014/09/23/basics-of-swift-part-b/">Swift 语言基础（下）</a></h1>
-<time datetime="2014-09-23T10:11:08+08:00" pubdate><span class='month'>Sep</span> <span class='day'>23</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/swift/'>swift</a></span>
-</footer>
+<!--more-->
 
 
-</article>
+<h2>资讯</h2>
 
+<h4>1) <a href="http://daringfireball.net/2017/01/new_app_store_review_features">Additional Details on the New App Store Review Features</a> By John Gruber</h4>
 
+<p>iOS 10.3 和 macOS 10.12.4 开始，每个 app 每年只能发三次「求评价」弹窗，用户点评不必离开 app，可以一键关闭所有求点评弹窗，开发者可以直接回复用户的评价。</p>
 
-<article>
-  
-<h1><a href="/blog/2014/09/21/basics-of-swift-part-a/">Swift 语言基础（上）</a></h1>
-<time datetime="2014-09-21T22:59:56+08:00" pubdate><span class='month'>Sep</span> <span class='day'>21</span> <span class='year'>2014</span></time>
+<h2>开发</h2>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/swift/'>swift</a></span>
-</footer>
+<h4>1) <a href="https://medium.com/walmartlabs/react-native-at-walmartlabs-cdd140589560">沃尔玛的 React Native 实践</a> By Matt Bresnan</h4>
 
+<p>最近，美国零售巨头沃尔玛将它们的官方 App 从 Hybrid 转向了 React Native，获得了非常不错的结果，来看看他们是怎么做的。</p>
 
-</article>
+<p>PS: Walmart App 背后原来有数百名工程师啊！！！</p>
 
+<h2>工具</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/ad2e37e741bb">细聊 Cocoapods 与 Xcode 工程配置</a> By 张星宇</h4>
+
+<p>对我最有用的信息是：通过 ar -x 解包 .a 文件，再对解出来的 __.SYMDEF SORTED 内容分析发现，其中没有 Category 的目标文件信息，或许这就是静态库中含有 Category 时为何需要专门配置 other linker flag 选项。</p>
+
+<p>作者虽是学生，但思路清晰，很不错的。</p>
+
+<h4>2) <a href="https://medium.com/@xcadaverx/locating-the-source-of-a-memory-leak-712667bf8cd5#.1yozxmst2">Locating the source of a memory leak</a> By Daniel Williams</h4>
+
+<p>作者介绍了借助 Xcode 的 Malloc Stack Logging 功能，定位内存问题的技巧。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://www.phodal.com/blog/how-to-write-a-resume/">一份优秀的程序员简历是什么样的</a> By 黄峰达</h4>
+
+<p>今年的行情虽然没有去年火热，但是你仍应该拾掇拾掇一下你的简历，万一机会来了呢？</p>
+
+<p>@end</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2017-02-13T17:22:58+08:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>5:22 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/01/20/tech-notes-36/" title="Previous Post: 平安好房iOS开发团队技术周报（第三十六期）">&laquo; 平安好房iOS开发团队技术周报（第三十六期）</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -194,7 +259,10 @@ $(document).bind('DOMNodeInserted', function(event) {
       var disqus_shortname = 'balloonsys';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2017/02/13/tech-notes-37/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2017/02/13/tech-notes-37/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
