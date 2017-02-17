@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-02-15T16:28:44+08:00</updated>
+  <updated>2017-02-17T10:50:34+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -18,7 +18,7 @@
     <link href="http://balloonsys.github.io/blog/2017/02/13/tech-notes-37/"/>
     <updated>2017-02-13T17:22:58+08:00</updated>
     <id>http://balloonsys.github.io/blog/2017/02/13/tech-notes-37</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 点评功能的新玩法、沃尔玛的 React Native 实践分享、Xcode 的辅助定位内存问题的 Malloc Stack Logging 选项用法等内容。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 点评功能的新玩法、沃尔玛的 React Native 实践分享、iOS 中 HTTPS 证书验证浅析等内容。</p>
 
 <!--more-->
 
@@ -37,6 +37,10 @@
 
 <p>PS: Walmart App 背后原来有数百名工程师啊！！！</p>
 
+<h4>2) <a href="https://mp.weixin.qq.com/s/-fLLTtip509K6pNOTkflPQ">iOS 中 HTTPS 证书验证浅析</a> By 李晴</h4>
+
+<p>本文的目的：一是简要分析下对服务器身份验证的完整握手过程，二是证书链的验证，三是探索下 iOS 中原生库 NSURLConnection 或 NSURLSession 如何支持实现 https。</p>
+
 <h2>工具</h2>
 
 <h4>1) <a href="http://www.jianshu.com/p/ad2e37e741bb">细聊 Cocoapods 与 Xcode 工程配置</a> By 张星宇</h4>
@@ -44,10 +48,6 @@
 <p>对我最有用的信息是：通过 ar -x 解包 .a 文件，再对解出来的 __.SYMDEF SORTED 内容分析发现，其中没有 Category 的目标文件信息，或许这就是静态库中含有 Category 时为何需要专门配置 other linker flag 选项。</p>
 
 <p>作者虽是学生，但思路清晰，很不错的。</p>
-
-<h4>2) <a href="https://medium.com/@xcadaverx/locating-the-source-of-a-memory-leak-712667bf8cd5#.1yozxmst2">Locating the source of a memory leak</a> By Daniel Williams</h4>
-
-<p>作者介绍了借助 Xcode 的 Malloc Stack Logging 功能，定位内存问题的技巧。</p>
 
 <h2>其他</h2>
 
