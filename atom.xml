@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-02-24T14:31:28+08:00</updated>
+  <updated>2017-02-24T14:36:31+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -18,7 +18,7 @@
     <link href="http://balloonsys.github.io/blog/2017/02/24/tech-notes-38/"/>
     <updated>2017-02-24T11:44:36+08:00</updated>
     <id>http://balloonsys.github.io/blog/2017/02/24/tech-notes-38</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 &hellip;等内容。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括苹果收购面部识别创业公司、iOS A/B Test 方案探索、去哪儿 React Native 应用实践分享等内容。</p>
 
 <!--more-->
 
@@ -27,7 +27,7 @@
 
 <h4>1) <a href="http://www.timesofisrael.com/apple-buys-israels-facial-recognition-firm-realface-report/">Apple buys Israel’s facial recognition firm RealFace</a> By Shoshanna Solomon</h4>
 
-<p>根据以色列周报的报道，苹果刚刚用数百万美金收购了一家以色列的面部识别创业公司 Realface。该公司曾发布过一款名为 Pickeez 的应用，它能帮助用户在多个社交平台中找出用户的最佳照片。</p>
+<p>根据以色列周报的报道，苹果用数百万美金收购了一家以色列的面部识别创业公司 Realface。该公司曾发布过一款名为 Pickeez 的应用，它能帮助用户在多个社交平台中找出用户的最佳照片。</p>
 
 <h2>开发</h2>
 
