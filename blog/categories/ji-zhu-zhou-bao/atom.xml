@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-02-17T10:50:34+08:00</updated>
+  <updated>2017-02-24T14:31:28+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十八期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/02/24/tech-notes-38/"/>
+    <updated>2017-02-24T11:44:36+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/02/24/tech-notes-38</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 &hellip;等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.timesofisrael.com/apple-buys-israels-facial-recognition-firm-realface-report/">Apple buys Israel’s facial recognition firm RealFace</a> By Shoshanna Solomon</h4>
+
+<p>根据以色列周报的报道，苹果刚刚用数百万美金收购了一家以色列的面部识别创业公司 Realface。该公司曾发布过一款名为 Pickeez 的应用，它能帮助用户在多个社交平台中找出用户的最佳照片。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/7b4667cde80b">教你如何从0到1实现组件化架构</a> By 袁峥</h4>
+
+<p>文章罗列的主要是组件化架构中 Cocoapods 如何用，对于组件化的架构设计本身并没有涉及。</p>
+
+<h4>2) <a href="http://blog.flight.dev.qunar.com/2017/01/09/ios-abtest-explore/">iOS A/B Test 方案探索</a> By 李剑飞</h4>
+
+<p>近期团队做了很多 AB Test 的业务需求，在这种需求日益见多的情况下，我们不得不提升我们的代码组织方式，以适应或更好的在此类需求上维护我们的代码。本文主要阐述了业务团队在做 AB Test 的一些想法和思路。</p>
+
+<h2>工具</h2>
+
+<h4>1) Launchpad 页面按住 Option</h4>
+
+<p>这是应用出现删除按钮的最快捷方式了吧？</p>
+
+<h4>2) <a href="https://atom.io">Atom</a></h4>
+
+<p>之前一直在用 Sublime，现在逐渐换成 Atom 了。最近在读 BNR 出品的 Front-End Web Development 一书，配置了 emmet / autocomplete-paths / linter 等插件后 Atom 算是把利器。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://mp.weixin.qq.com/s/ARWJDxSB2wJehxgoydtFQw">Qunar React Native 大规模应用实践</a> By 殷文昭</h4>
+
+<p>Qunar React Native 是去哪儿网基于 React Native 定制的一套框架，让 RN 用起来更方便快捷，2016 年 3 月上线后已在公司内部大规模应用。透过 QRN 的大规模实践我们可以看到如何更好地去使用 RN。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十七期）]]></title>
@@ -196,56 +242,6 @@
 <h4>1) <a href="http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/">Top 10 algorithms in Interview Questions</a> By GeeksforGeeks</h4>
 
 <p>针对八类问题分别给出了最常见的十道算法题及其解答，适合年后准备面试的同学。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十三期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/12/30/tech-notes-33/"/>
-    <updated>2016-12-30T18:09:58+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/12/30/tech-notes-33</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括手机 QQ 牛逼的 iOS 动态化方案、拼图验证控件的实现的原理、AFNetworking 3.0 源代码阅读笔记、Xcode 8.2 Simulator 新特性介绍等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.theverge.com/2016/12/24/14074654/apple-consumer-reports-macbook-pro-battery-test">Inconsistent MacBook Pro battery test results</a></h4>
-
-<p>全新 MacBook Pro 的续航飘忽不定，经过多次测试发现，MacBook Pro 的续航有时可以达到 10 多个小时，而有时却只有 3 个多小时。苹果全球营销高级副总裁 Phil Schiller 表示，苹果正在与《消费者报告》合作，解决 MacBook Pro 电池飘忽不定的问题。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://mp.weixin.qq.com/s/DhGR6J5fx04BPi-kMsMBJg">手机 QQ 的 iOS 动态化方案</a> By OCSTeam</h4>
-
-<p>在iOS的发展历程上，涌现了很多动态化方案，有历史悠久的 WaxPatch 动态化方案，有远近闻名的JSPatch动态化方案。文中手机 QQ 团队向大家介绍一款堪称『史上最疯狂』的 iOS 动态化方案。</p>
-
-<h4>2) <a href="http://tutuge.me/2016/12/25/TTGPuzzleVerify/">拼图验证控件的实现</a> By 燕泽堃</h4>
-
-<p>拼图验证控件用以让用户通过水平、垂直，或者直接拖动拼图块，完成拼图图案，达到验证目的。作者来自阿里，对其开发的 TTGPuzzleVerify 控件做了整体设计思路和实现原理的分享。</p>
-
-<h4>3) <a href="http://balloonsys.com/blog/2016/12/27/afnetworking-in-a-nutshell/">AFNetworking 3.0 源码阅读笔记</a> By Linkou Bian</h4>
-
-<p>上周阅读了 AFNetworking 3.0 的源代码，对阅读中遇到的问题进行了些思考，整理成此文。干货 &amp; 原创，值得一读。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://medium.com/@hollanderbart/new-features-in-xcode-8-2-simulator-fc64a4014a5f">New features in Xcode 8.2 Simulator</a> By Bart den Hollander</h4>
-
-<p>Xcode 8.2 新增了两项新特性，一是 xcrun 命令可以对模拟器截屏及录制，二是可以通过拖拽的方式安装 app 到模拟器。</p>
-
-<h4>2) <a href="http://balloonsys.com/blog/2016/12/27/spotify-proxy-on-mac/">Mac Spotify</a> By Linkou Bian</h4>
-
-<p>Mac 为了无障碍上网，开着 Surge；想用 Spotify 听听歌，却因公司网络而无法登录，怎么办？</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://mp.weixin.qq.com/s/XpjTQd-p9pNpkQich1ZZ_w">中国企业就是这样倒闭的</a></h4>
-
-<p>整天瞎分析个屁! 什么他妈的流程问题、职责问题、界面问题、考核问题，明明就是机构臃肿问题！</p>
 
 <p>@end</p>
 ]]></content>

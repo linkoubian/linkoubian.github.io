@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-02-17T10:50:34+08:00</updated>
+  <updated>2017-02-24T14:31:28+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十八期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/02/24/tech-notes-38/"/>
+    <updated>2017-02-24T11:44:36+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/02/24/tech-notes-38</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 &hellip;等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.timesofisrael.com/apple-buys-israels-facial-recognition-firm-realface-report/">Apple buys Israel’s facial recognition firm RealFace</a> By Shoshanna Solomon</h4>
+
+<p>根据以色列周报的报道，苹果刚刚用数百万美金收购了一家以色列的面部识别创业公司 Realface。该公司曾发布过一款名为 Pickeez 的应用，它能帮助用户在多个社交平台中找出用户的最佳照片。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/7b4667cde80b">教你如何从0到1实现组件化架构</a> By 袁峥</h4>
+
+<p>文章罗列的主要是组件化架构中 Cocoapods 如何用，对于组件化的架构设计本身并没有涉及。</p>
+
+<h4>2) <a href="http://blog.flight.dev.qunar.com/2017/01/09/ios-abtest-explore/">iOS A/B Test 方案探索</a> By 李剑飞</h4>
+
+<p>近期团队做了很多 AB Test 的业务需求，在这种需求日益见多的情况下，我们不得不提升我们的代码组织方式，以适应或更好的在此类需求上维护我们的代码。本文主要阐述了业务团队在做 AB Test 的一些想法和思路。</p>
+
+<h2>工具</h2>
+
+<h4>1) Launchpad 页面按住 Option</h4>
+
+<p>这是应用出现删除按钮的最快捷方式了吧？</p>
+
+<h4>2) <a href="https://atom.io">Atom</a></h4>
+
+<p>之前一直在用 Sublime，现在逐渐换成 Atom 了。最近在读 BNR 出品的 Front-End Web Development 一书，配置了 emmet / autocomplete-paths / linter 等插件后 Atom 算是把利器。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://mp.weixin.qq.com/s/ARWJDxSB2wJehxgoydtFQw">Qunar React Native 大规模应用实践</a> By 殷文昭</h4>
+
+<p>Qunar React Native 是去哪儿网基于 React Native 定制的一套框架，让 RN 用起来更方便快捷，2016 年 3 月上线后已在公司内部大规模应用。透过 QRN 的大规模实践我们可以看到如何更好地去使用 RN。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十七期）]]></title>
@@ -1253,56 +1299,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <p>如果你还在写博客阐述为何说 PHP 太逊了，那你还没准备好做 CTO 哦。那些讨厌文山会海、不喜欢和非技术人员打交道的人，也不大可能会胜任 CTO 一职的。</p>
 
 <blockquote><p>The CTO must protect the technology team from becoming a pure execution arm for ideas without tending to its own needs and its own ideas.</p></blockquote>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十三期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/10/19/tech-notes-23/"/>
-    <updated>2016-10-19T20:54:10+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/10/19/tech-notes-23</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 Mac 系列产品的最新消息、React Native 项目实战经验、React Native 增量升级方案、iOS 自动化打包等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.recode.net/2016/10/18/13323264/apple-new-macs-october-27">Apple plans to launch new Macs at an October 27 event</a> By Recode</h4>
-
-<p>苹果上一次对 MacBook Pro 进行大幅度更新是在 2012 年。根据 Recode 的消息源，苹果将在 10 月 27 日发布新的 Mac 系列产品。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://balloonsys.com/blog/2016/10/18/rn-put-it-all-together/">React Native 项目实战</a> By Linkou Bian</h4>
-
-<p>本文以 Twitter 工程师 Bonnie Eisenman 撰写的 Learning React Native 一书的第九章内容为蓝本，总结了 React Native 项目实践的一些经验。</p>
-
-<h4>2) <a href="https://github.com/cnsnake11/blog/blob/master/ReactNative%E5%BC%80%E5%8F%91%E6%8C%87%E5%AF%BC/ReactNative%E5%A2%9E%E9%87%8F%E5%8D%87%E7%BA%A7%E6%96%B9%E6%A1%88.md">React Native 增量升级方案</a> By cnsnake11</h4>
-
-<p>一般使用 RN 编写的 app 的线上使用方式，是将 react-native bundle 命令打出bundle 文件和 assets 文件夹，直接内置到 app 中，app 在 controller 中直接加载 bundle 文件，当修改了代码或者图片的时候，只要app使用新的bundle文件和assets文件夹，就完成了一次在线升级。</p>
-
-<h4>3) <a href="http://www.jianshu.com/p/131de575ef9e">列表和网格视图的相互切换</a> By LeeJay</h4>
-
-<p>在很多电商 app 中，都有列表视图和网格视图的相互切换。很多人看到第一时间想到的是用 TableView 和 CollectionView 来做切换。作者给出了一个非常简单的方法。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://liumh.com/2016/05/22/use-xcconfig-config-specific-variable/">Xcode 使用 xcconfig 文件配置环境</a> By Carya Liu</h4>
-
-<p>使用 Xcode 的 Configurations Setting File 把所有的环境配置都整合到配置文件中，这样打不同环境下的安装包时，会自动选择对应的环境参数。</p>
-
-<h4>2) <a href="http://liumh.com/2015/11/25/ios-auto-archive-ipa/">iOS 自动打包并发布脚本</a> By Carya Liu</h4>
-
-<p>本文最终实现的是使用脚本打 Ad-hoc 包，并发布测试，当然稍微修改一下脚本参数就可以打其他类型的 ipa 包了。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://zhuanlan.zhihu.com/p/22672061">互联网合并浪潮中，内部员工该何去何从？</a> By 林安</h4>
-
-<p>通过采访那些亲身经历过公司合并的同学，给每一位身处这个时代的互联网人以警醒。当有一天，公司合并这件事落在你身上时，希望你能从这篇文章中汲取干货，从容面对、冷静处理。</p>
 
 <p>@end</p>
 ]]></content>
