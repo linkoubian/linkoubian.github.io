@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-02-24T14:36:31+08:00</updated>
+  <updated>2017-03-03T14:06:26+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十九期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/03/03/tech-notes-39/"/>
+    <updated>2017-03-03T11:02:56+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/03/03/tech-notes-39</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括瑞银及凯基证券分析师的预测、iOS 10 nano_free 崩溃问题的解决方案、美团点评前端无痕埋点实践、Twitter 开源的 TIP 图片框架等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.businessinsider.com/ubs-apple-1000-engineers-ar-2017-2">瑞银: 苹果有上千名工程师在以色列研发 AR</a> By Hannah Roberts</h4>
+
+<p>据 Business Insider 援引瑞士银行的一份研究报告称，分析师 Steven Milunovich 表示，苹果的下一个重大产品创新将与 AR 技术有关。</p>
+
+<h4>2) <a href="https://www.macx.cn/thread-2198592-1-1.html">郭老师：今年所有新 iPhone 都支持 Lightning 快充</a> By 郭明池</h4>
+
+<p>根据凯基证券分析师郭明池的预测，苹果今年将要发布的三款 iPhone，包括旗舰级 OLED iPhone 8 仍然都会配备 Lightning 接口。不同的是，苹果今年会为 Lightning 接口加入快速充电功能。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://mp.weixin.qq.com/s/hnwj24xqrtOhcjEt_TaQ9w">聊聊苹果的 Bug - iOS 10 nano_free Crash</a> By 张三华</h4>
+
+<p>很多开发者在 iOS 10 上遇到了一类堆栈为 nano_free 字样的 Crash，也有很多人向 Bugly 客服反馈遇到了这类问题，但并没有好的解决方案。正当大家都束手无策的时候，微信强大的技术团队针对这类Crash进行了深度研究，并提出了一个解决方案。</p>
+
+<h4>2) <a href="http://tech.meituan.com/mt-mobile-analytics-practice.html">美团点评前端无痕埋点实践</a> By 富强 朝旭 吴凯</h4>
+
+<p>为了解决前端埋点的准确性、及时性、开发效率等问题，业内各家公司从不同角度，提出了多种技术方案。美团在原有代码埋点方案的基础上，演化出了一套轻量的、声明式的前端埋点方案，并且在动态埋点、无痕埋点等方向做了进一步的探索和实践。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://blog.twitter.com/2017/introducing-twitter-image-pipeline-ios-framework-for-open-source">Twitter Image Pipeline iOS framework</a> By Nolan O'Brien</h4>
+
+<p>Twitter 开源的 TIP 框架用于图片的加载与缓存，据称已内部迭代两年。其 Android 团队采用的是 Facebook 开源的 fresco 框架。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://blog.cnbang.net/tech/3354/">iOS 开发技术栈与进阶</a> By 陈振焯</h4>
+
+<p>最近有一些开发朋友问我应该怎样提升自己的能力，回想起来做了这么久 iOS 开发，我也有过那种『让我做一个功能实现个需求我会做，但接下来怎样提高我不知道。』的时期，这里尝试列一下 iOS 开发的相关技术，再说说在学习进阶上我的一些想法。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十八期）]]></title>
@@ -43,7 +89,7 @@
 
 <h4>1) Launchpad 页面按住 Option</h4>
 
-<p>这是应用出现删除按钮的最快捷方式了吧？</p>
+<p>这是 macOS 出现删除应用按钮的最快捷方式了吧？</p>
 
 <h4>2) <a href="https://atom.io">Atom</a></h4>
 
@@ -196,52 +242,6 @@
 <h4>1) <a href="https://techcrunch.com/2017/01/08/wtf-is-a-funding-round/">WTF is a funding round?</a> By Katie Roof</h4>
 
 <p>经常在 TechCrunch 上看到某某公司融资数千万、估值几个亿。本文解释了啥是融资、啥是估值、为啥不贷款、N 轮融资是啥意思、巨额融资算是创业成功吗等。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十四期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/01/06/tech-notes-34/"/>
-    <updated>2017-01-06T16:44:39+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/01/06/tech-notes-34</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括苹果 2017 新年大促消息、微信 Mars 之 xlog 使用、APP 引导页的设计、Youtube 视频下载工具、常见算法的分析与实现等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.apple.com/cn/shop/gifts/new-year-offer">苹果 2017 新年大促</a></h4>
-
-<p>苹果于 1 月 3 日放出一则清新醒神的优惠大消息：苹果红色星期五正式回归，优惠力度可能是多年来最强的一次。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://gold.xitu.io/post/586629b861ff4b006ba9daf6">微信 Mars 之 xlog 使用全解析</a> By 徐宜生</h4>
-
-<p>微信开源的通信库 Mars，其中有一个高性能的日志模块 xlog。本篇文章将带领大家将 xlog 模块抽取出来，作为一个单独的模块来使用。</p>
-
-<h4>2) <a href="https://lunapps.com/blog/onboarding-framework-for-ios/">How we built LUNTutorialViewController</a> By LUNAPPS</h4>
-
-<p>LUNTutorialViewController 这个引导页效果在很多 APP 里都能看到身影，本文详细介绍了其设计与实现。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://videodownloader.ummy.net/mac.html">Ummy Video Downloader</a> By Ummy</h4>
-
-<p>正如官网介绍的那样，The simplest YouTube downloader for Mac，诚不欺也。看到 Youtube 上好看的节目，我还是喜欢下载下来到电视上播放。</p>
-
-<h4>2) <a href="https://chrome.google.com/webstore/detail/tumblr%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/njnkdhldbefijmdmjongfghcelgajjli">Tumblr video downloader</a> By unclehking</h4>
-
-<p>这是一个 Chrome 插件，方便下载 Tumblr 上的视频用的。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/">Top 10 algorithms in Interview Questions</a> By GeeksforGeeks</h4>
-
-<p>针对八类问题分别给出了最常见的十道算法题及其解答，适合年后准备面试的同学。</p>
 
 <p>@end</p>
 ]]></content>

@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-02-24T14:36:31+08:00</updated>
+  <updated>2017-03-03T14:06:26+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十九期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/03/03/tech-notes-39/"/>
+    <updated>2017-03-03T11:02:56+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/03/03/tech-notes-39</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括瑞银及凯基证券分析师的预测、iOS 10 nano_free 崩溃问题的解决方案、美团点评前端无痕埋点实践、Twitter 开源的 TIP 图片框架等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://www.businessinsider.com/ubs-apple-1000-engineers-ar-2017-2">瑞银: 苹果有上千名工程师在以色列研发 AR</a> By Hannah Roberts</h4>
+
+<p>据 Business Insider 援引瑞士银行的一份研究报告称，分析师 Steven Milunovich 表示，苹果的下一个重大产品创新将与 AR 技术有关。</p>
+
+<h4>2) <a href="https://www.macx.cn/thread-2198592-1-1.html">郭老师：今年所有新 iPhone 都支持 Lightning 快充</a> By 郭明池</h4>
+
+<p>根据凯基证券分析师郭明池的预测，苹果今年将要发布的三款 iPhone，包括旗舰级 OLED iPhone 8 仍然都会配备 Lightning 接口。不同的是，苹果今年会为 Lightning 接口加入快速充电功能。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://mp.weixin.qq.com/s/hnwj24xqrtOhcjEt_TaQ9w">聊聊苹果的 Bug - iOS 10 nano_free Crash</a> By 张三华</h4>
+
+<p>很多开发者在 iOS 10 上遇到了一类堆栈为 nano_free 字样的 Crash，也有很多人向 Bugly 客服反馈遇到了这类问题，但并没有好的解决方案。正当大家都束手无策的时候，微信强大的技术团队针对这类Crash进行了深度研究，并提出了一个解决方案。</p>
+
+<h4>2) <a href="http://tech.meituan.com/mt-mobile-analytics-practice.html">美团点评前端无痕埋点实践</a> By 富强 朝旭 吴凯</h4>
+
+<p>为了解决前端埋点的准确性、及时性、开发效率等问题，业内各家公司从不同角度，提出了多种技术方案。美团在原有代码埋点方案的基础上，演化出了一套轻量的、声明式的前端埋点方案，并且在动态埋点、无痕埋点等方向做了进一步的探索和实践。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://blog.twitter.com/2017/introducing-twitter-image-pipeline-ios-framework-for-open-source">Twitter Image Pipeline iOS framework</a> By Nolan O'Brien</h4>
+
+<p>Twitter 开源的 TIP 框架用于图片的加载与缓存，据称已内部迭代两年。其 Android 团队采用的是 Facebook 开源的 fresco 框架。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://blog.cnbang.net/tech/3354/">iOS 开发技术栈与进阶</a> By 陈振焯</h4>
+
+<p>最近有一些开发朋友问我应该怎样提升自己的能力，回想起来做了这么久 iOS 开发，我也有过那种『让我做一个功能实现个需求我会做，但接下来怎样提高我不知道。』的时期，这里尝试列一下 iOS 开发的相关技术，再说说在学习进阶上我的一些想法。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十八期）]]></title>
@@ -43,7 +89,7 @@
 
 <h4>1) Launchpad 页面按住 Option</h4>
 
-<p>这是应用出现删除按钮的最快捷方式了吧？</p>
+<p>这是 macOS 出现删除应用按钮的最快捷方式了吧？</p>
 
 <h4>2) <a href="https://atom.io">Atom</a></h4>
 
@@ -1253,54 +1299,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <p>十月下旬至十一月中旬，上下班搭乘地铁以及周末在家随手翻看完的。关于非洲的小说，看的第一部是大河湾。当然这本书是没法和大河湾比的，用来消遣却也还不赖。</p>
 
 <p><img src="https://img5.doubanio.com/lpic/s28948246.jpg" alt="钓鱼的男孩" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十四期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/10/28/tech-notes-24/"/>
-    <updated>2016-10-28T21:40:38+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/10/28/tech-notes-24</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括新款 MacBook Pro 的产品信息及其主要卖点 Touch Bar 相关的开发指南、如何高效计算文件的哈希值等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.mac52ipod.cn/post/apple-macbook-pro-2016-event-5-min-briefintroduction.php">MacBook Pro 发布会</a> By mac52ipod</h4>
-
-<p>键盘第一排的功能键被换成了 Touch Bar ，其右侧加上了指纹识别。接口全部是 Thunderbolt 3 ，普通用户为了用手上的老外设，恐怕不得不买转接器。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://blog.cee.moe/touchbar-tutorial.html">Touch Bar 入门开发指南</a> By Cee</h4>
-
-<p>作者示范一个最简单的 Touch Bar 应用：在屏幕上随机生成两个 0 到 9 的整数，通过点击 TouchBar 中的按钮来比较两个数大小，并给出结果。</p>
-
-<h4>2) <a href="http://www.joel.lopes-da-silva.com/2010/09/07/compute-md5-or-sha-hash-of-large-file-efficiently-on-ios-and-mac-os-x/">Compute hash of large file effeciently</a> By Joe Kun</h4>
-
-<p>简单粗暴的方式是把文件全部加载到 NSData 对象，但对于大文件来说效果非常不好。作者介绍了基于 CFReadStream 的实现方案。本周我实现 React Native 的增量更新时需要计算下载下来的 Patch 文件 hash 值，采用的就是文中的方案。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://github.com/mas-cli/mas">mas-cli</a> By Dmitry Rodionov</h4>
-
-<p>Mac App Store 的命令行程序，支持 brew 安装。</p>
-
-<h4>2) <a href="https://www.getpostman.com">Postman</a></h4>
-
-<p>如果你不想花钱购买 Paw，那么值得试试 Postman 这个独立的 APP（不是 Chrome 的插件喔）。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://juokaz.com/blog/becoming-a-cto">Becoming a CTO</a> By Juozas</h4>
-
-<p>如果你还在写博客阐述为何说 PHP 太逊了，那你还没准备好做 CTO 哦。那些讨厌文山会海、不喜欢和非技术人员打交道的人，也不大可能会胜任 CTO 一职的。</p>
-
-<blockquote><p>The CTO must protect the technology team from becoming a pure execution arm for ideas without tending to its own needs and its own ideas.</p></blockquote>
-
-<p>@end</p>
 ]]></content>
   </entry>
   
