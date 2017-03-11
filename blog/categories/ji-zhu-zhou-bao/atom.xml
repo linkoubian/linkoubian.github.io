@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-03-03T14:25:41+08:00</updated>
+  <updated>2017-03-11T10:58:14+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/03/11/tech-notes-40/"/>
+    <updated>2017-03-11T09:46:40+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/03/11/tech-notes-40</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括苹果对 JSPatch / Rollout.io 使用者的警告、基于 HTTP/2 的全新 APNs 协议、IGListKit 使用教程、美团外卖 M 端的前端团队使用 RN 的实践回顾等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://blog.cnbang.net/internet/3374/">A warning from Apple</a> By 陈振焯</h4>
+
+<p>苹果给开发者发的一封邮件激起了千层浪，使用 JSPatch 的得注意了。使用国外类似的服务 Rollout.io 也同样受影响。还好我给公司设计并开发的 PAHotfix 是去年上线的，否则我的 KPI 就要归零了。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://github.com/ChenYilong/iOS9AdaptationTips/blob/master/%E5%9F%BA%E4%BA%8EHTTP2%E7%9A%84%E5%85%A8%E6%96%B0APNs%E5%8D%8F%E8%AE%AE/%E5%9F%BA%E4%BA%8EHTTP2%E7%9A%84%E5%85%A8%E6%96%B0APNs%E5%8D%8F%E8%AE%AE.md">基于 HTTP/2 的全新 APNs 协议</a> By Elon Chan</h4>
+
+<p>其中最大的变化就是基于了 HTTP/2 协议，采用了长连接设计，并提供 “HTTP/2 PING ” 心跳包功能检测、维持当前 APNs 连接，解决了老 APNs 无法维持连接的问题。</p>
+
+<h4>2) <a href="https://www.raywenderlich.com/147162/iglistkit-tutorial-better-uicollectionviews">IGListKit Tutorial: Better UICollectionViews</a> By Ryan Nystrom</h4>
+
+<p>本文介绍了 Instagram 开源的 IGListKit 如何使用。一月份的<a href="http://balloonsys.com/blog/2017/01/13/tech-notes-35/">周报</a>里提到过一篇从 UITableView 迁移到 IGListKit 的文章，不知你看了没有？</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://kiteapp.co">Kite Compositor</a> By Nolan O'Brien</h4>
+
+<p>一个做动画及原型的工具，有人评价说：犹如 Sketch 遇上 After Effects 遇上 Keynote 呢。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://mp.weixin.qq.com/s?__biz=MzI1NzYwNjU2Mw==&amp;mid=2247483685&amp;idx=1&amp;sn=6e6109b134cb2421bd688f87605ee361">React Native 一年实践回顾</a> By 大雄</h4>
+
+<p>组内对于 React Native 的实践已经快一年了，我们组主要负责的是美团外卖 M 端的前端业务，涵盖了美团外卖的 CRM、供应链、合同和结算等系统。本文将总结和回顾作为一个纯 web 前端团队使用 React Native 完成一个应用的整个过程。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十九期）]]></title>
@@ -192,56 +234,6 @@
 <h4>1) <a href="http://merowing.info/2017/01/seniority/">Seniority</a> By Krzysztof Zabłocki</h4>
 
 <p>资深工程师何以为资深，都需要哪些基本素养？很不错的一篇文章，以作者梳理的各项标准对照自己，提升自己的 Soft Skills，岂不快哉。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十五期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/01/13/tech-notes-35/"/>
-    <updated>2017-01-13T09:14:13+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/01/13/tech-notes-35</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 Swift 项目负责人变更、IGListKit 的应用实践、throttle 释疑、常用 iOS / Mac 软件推荐清单等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://lists.swift.org/pipermail/swift-evolution/Week-of-Mon-20170109/030063.html">苹果 Swift 语言创始人离职</a> By Chris Lattner</h4>
-
-<p>Chris Lattner 在邮件里说对 Swift 项目的发展没有影响，自己依旧会是该项目的积极贡献者。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://medium.com/cocoaacademymag/iglistkit-migrating-an-uitableview-to-iglistkitcollectionview-65a30cf9bac9">Migrating an UITableView to IGListCollectionView</a> By Rodrigo Cavalcante</h4>
-
-<p>本文介绍了如何从 UITableView 迁移到 Instagram 开源的 IGListCollectionView 方案。</p>
-
-<h4>2) <a href="http://mrpeak.cn/blog/ios-throttle/">iOS 编程中 throttle 那些事</a> By MrPeak</h4>
-
-<p>读完此文，你便会理解为何多张图片上传使用多个请求比放在一个请求的好处，你也会理解 AFN 源码中 Request Serializer 设计 throttleBandwidthWithPacketSize:delay: 这个方法的背后考量。</p>
-
-<h4>3) <a href="http://www.jianshu.com/p/c7efbc283480">iOS Crash 问题排名</a></h4>
-
-<p>作者总结了 5 大 crash 问题，解决了这 5 大 crash 问题，基本上你的 app 就相对健壮许多。其余的崩溃问题就需要具体问题具体分析了。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://balloonsys.com/blog/2017/01/07/my-favourite-apps/">一位 iOS 开发工程师的常用软件</a> By Linkou Bian</h4>
-
-<p>本文罗列了我在 iOS 及 macOS 上常用的约四十个软件。其中很多工具之前都有推荐，此次做了个小结。</p>
-
-<h4>2) <a href="https://kobiton.com">移动云测试平台 Kobiton</a> By Kobiton</h4>
-
-<p>使用 Chrome 试用了下该服务，提供 24 台 Android 设备及 28 台 iOS 设备供测试 APP。测试期间的操作会记录在 Session 日志里，对应时刻的屏幕也可自动截图保存。自动化测试方面支持 Appium 和 Selenium 框架，目前我没有进一步尝试。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://techcrunch.com/2017/01/08/wtf-is-a-funding-round/">WTF is a funding round?</a> By Katie Roof</h4>
-
-<p>经常在 TechCrunch 上看到某某公司融资数千万、估值几个亿。本文解释了啥是融资、啥是估值、为啥不贷款、N 轮融资是啥意思、巨额融资算是创业成功吗等。</p>
 
 <p>@end</p>
 ]]></content>

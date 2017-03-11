@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-03-03T14:25:41+08:00</updated>
+  <updated>2017-03-11T10:58:14+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/03/11/tech-notes-40/"/>
+    <updated>2017-03-11T09:46:40+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/03/11/tech-notes-40</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括苹果对 JSPatch / Rollout.io 使用者的警告、基于 HTTP/2 的全新 APNs 协议、IGListKit 使用教程、美团外卖 M 端的前端团队使用 RN 的实践回顾等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="http://blog.cnbang.net/internet/3374/">A warning from Apple</a> By 陈振焯</h4>
+
+<p>苹果给开发者发的一封邮件激起了千层浪，使用 JSPatch 的得注意了。使用国外类似的服务 Rollout.io 也同样受影响。还好我给公司设计并开发的 PAHotfix 是去年上线的，否则我的 KPI 就要归零了。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://github.com/ChenYilong/iOS9AdaptationTips/blob/master/%E5%9F%BA%E4%BA%8EHTTP2%E7%9A%84%E5%85%A8%E6%96%B0APNs%E5%8D%8F%E8%AE%AE/%E5%9F%BA%E4%BA%8EHTTP2%E7%9A%84%E5%85%A8%E6%96%B0APNs%E5%8D%8F%E8%AE%AE.md">基于 HTTP/2 的全新 APNs 协议</a> By Elon Chan</h4>
+
+<p>其中最大的变化就是基于了 HTTP/2 协议，采用了长连接设计，并提供 “HTTP/2 PING ” 心跳包功能检测、维持当前 APNs 连接，解决了老 APNs 无法维持连接的问题。</p>
+
+<h4>2) <a href="https://www.raywenderlich.com/147162/iglistkit-tutorial-better-uicollectionviews">IGListKit Tutorial: Better UICollectionViews</a> By Ryan Nystrom</h4>
+
+<p>本文介绍了 Instagram 开源的 IGListKit 如何使用。一月份的<a href="http://balloonsys.com/blog/2017/01/13/tech-notes-35/">周报</a>里提到过一篇从 UITableView 迁移到 IGListKit 的文章，不知你看了没有？</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://kiteapp.co">Kite Compositor</a> By Nolan O'Brien</h4>
+
+<p>一个做动画及原型的工具，有人评价说：犹如 Sketch 遇上 After Effects 遇上 Keynote 呢。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://mp.weixin.qq.com/s?__biz=MzI1NzYwNjU2Mw==&amp;mid=2247483685&amp;idx=1&amp;sn=6e6109b134cb2421bd688f87605ee361">React Native 一年实践回顾</a> By 大雄</h4>
+
+<p>组内对于 React Native 的实践已经快一年了，我们组主要负责的是美团外卖 M 端的前端业务，涵盖了美团外卖的 CRM、供应链、合同和结算等系统。本文将总结和回顾作为一个纯 web 前端团队使用 React Native 完成一个应用的整个过程。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十九期）]]></title>
@@ -1233,72 +1275,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <p>Kamil Burczyk 在他的<a href="http://blog.sigmapoint.pl/avoiding-dependency-collisions-in-ios-static-library-managed-by-cocoapods/">文章</a>中给出了一种通过脚本改类名的方案。</p>
 
 <p>我们的方案是<strong>在 Framework 的工程里，只引入第三方的头文件</strong>。要求业务方使用时确保引入第三方库。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[2016 年读过的那些书]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/10/30/reading-in-2016/"/>
-    <updated>2016-10-30T13:04:09+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/10/30/reading-in-2016</id>
-    <content type="html"><![CDATA[<p>本文记录一下 2016 年我阅读过的技术及非技术类书籍。</p>
-
-<!--more-->
-
-
-<h2>技术类</h2>
-
-<h3><a href="https://www.raywenderlich.com/store/core-data-by-tutorials">Core Data by Tutorials SECOND EDITION</a></h3>
-
-<p>搬来上海之前我对 Core Data 只有粗略的了解，并没有在项目中实际运用。今年五月份设计并实现统计 SDK 时首次实践了一把，然后基于此书系统的学习了下这个框架。Asynchronous fetching, Versionary and Migaration, Measuring and Boosting Performance, Multiple Managed Object Contexts 这几个主题极赞。</p>
-
-<p><img src="https://img3.doubanio.com/lpic/s28523756.jpg" alt="Core Data by Tutorials SECOND EDITION" /></p>
-
-<h3><a href="https://www.hackingwithswift.com/store/practical-ios10">Practical iOS 10</a></h3>
-
-<p>今年 iOS 10 的第一个 beta 出来之后，我就跟着 Paul Hudson 的电子书熟悉新的 API 及框架。每个 beta 出来都会更新几章，总得来说也还行。</p>
-
-<p><img src="http://a4.mzstatic.com/us/r30/Publication71/v4/2d/dc/54/2ddc5401-f9d7-3c05-c3d5-91afd3a45698/cover225x225.jpeg" alt="Practical iOS 10" /></p>
-
-<h3><a href="https://www.manning.com/books/ionic-in-action">Ionic in Action</a></h3>
-
-<p>六七月份时技术团队组织架构调整，业务研发部来了位斯坦福大学毕业的总经理，受其影响我在八月份调研了下 Ionic 在 iOS 上的运用。期间，我用该框架粗糙的实现了好房 APP 的首页。</p>
-
-<p><img src="https://img3.doubanio.com/lpic/s28380910.jpg" alt="Ionic in Action" /></p>
-
-<h3><a href="https://www.bignerdranch.com/we-write/swift-programming/">Swift Programming</a></h3>
-
-<p>Swift 这本书是去年 12 月份购于美国亚马逊的，目前已经读完第一遍。虽然 Swift 3 已经出来了，阅读此书带来的益处仍然很大。非常喜欢 BNR 出品的技术书籍。</p>
-
-<p><img src="https://img1.doubanio.com/lpic/s28372868.jpg" alt="Swift Programming" /></p>
-
-<h3><a href="http://shop.oreilly.com/product/0636920041511.do">Learning React Native</a></h3>
-
-<p>经过各种评估，团队认为 Ionic 并不适合我们。领导说，这个方案不行，那你得给我个可行的方案，于是引入了 React Native 这一明星框架。跟着 Twitter 工程师写的这本书可以很快上手，十月份的试点项目也顺利完成。</p>
-
-<p>10 月 23 日在携程的园区里听其技术经理分享的 React Native 业务实践和性能优化受益颇多，接下来的一周我顺利完成了增量更新方案的设计与实现。</p>
-
-<p><img src="https://img3.doubanio.com/lpic/s28268062.jpg" alt="Learning React Native" /></p>
-
-<h2>文学类</h2>
-
-<h3><a href="https://book.douban.com/subject/1752755/">第九个寡妇</a></h3>
-
-<p>今年九月份在公司内部做了一次技术分享，主题是 iOS 模块化架构的探索。教师节那天收到人事行政部送的礼盒，其中有个 Kindle。拿到该 Kindle 的第一个周末就读完了一本严歌苓的小说。</p>
-
-<p><img src="https://img3.doubanio.com/lpic/s26094273.jpg" alt="第九个寡妇" /></p>
-
-<h3><a href="https://book.douban.com/subject/20258503/">土摩托看世界</a></h3>
-
-<p>入门级 Kindle 的弊端是不适合昏暗或略拥挤的场合，这时候 iPhone 就派上了用场。所以这本游记类的书就这么 Kindle 看几章、iPhone 看几章，交替的读完。都说 Amazon 的云服务做的最好，可是 Kindle 和 Kindle for iPhone 之间的阅读位置并没有做好同步。</p>
-
-<p><img src="https://img3.doubanio.com/lpic/s23006273.jpg" alt="土摩托看世界" /></p>
-
-<h3><a href="https://book.douban.com/subject/26837288/">钓鱼的男孩</a></h3>
-
-<p>十月下旬至十一月中旬，上下班搭乘地铁以及周末在家随手翻看完的。关于非洲的小说，看的第一部是大河湾。当然这本书是没法和大河湾比的，用来消遣却也还不赖。</p>
-
-<p><img src="https://img5.doubanio.com/lpic/s28948246.jpg" alt="钓鱼的男孩" /></p>
 ]]></content>
   </entry>
   
