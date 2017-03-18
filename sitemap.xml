@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://balloonsys.github.io/blog/2017/03/13/tech-notes-41/</loc>
+<lastmod>2017-03-13T09:14:10+08:00</lastmod>
+</url>
+<url>
 <loc>http://balloonsys.github.io/blog/2017/03/11/tech-notes-40/</loc>
 <lastmod>2017-03-11T09:46:40+08:00</lastmod>
 </url>
@@ -257,10 +261,6 @@
 <lastmod>2014-02-28T16:22:38+08:00</lastmod>
 </url>
 <url>
-<loc>http://balloonsys.github.io/blog/2014/02/27/hacking-auto-layout/</loc>
-<lastmod>2014-02-27T15:17:15+08:00</lastmod>
-</url>
-<url>
 <loc>http://balloonsys.github.io/blog/2014/02/25/introduction-about-view/</loc>
 <lastmod>2014-02-25T15:50:00+08:00</lastmod>
 </url>
@@ -350,23 +350,5 @@
 </url>
 <url>
 <loc>http://balloonsys.github.io/blog/categories/macos/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/2/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/3/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/4/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/5/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/6/</loc>
-</url>
-<url>
-<loc>http://balloonsys.github.io/posts/7/</loc>
 </url>
 </urlset>

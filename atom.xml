@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-03-11T11:30:12+08:00</updated>
+  <updated>2017-03-18T16:32:32+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十一期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/03/13/tech-notes-41/"/>
+    <updated>2017-03-13T09:14:10+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/03/13/tech-notes-41</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括如何高效高效添加圆角效果，线程同步相关的知识点、问答式掌握 HTTPS 基本概念，以及 iOS App 签名的原理等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://www.zdziarski.com/blog/?p=7016#aplo">苹果将知名安全专家 Jonathan Zdziarski 招至麾下</a></h4>
+
+<p>如题。用 Jonathan 自己的话来说，跟一群有共同语言的人一同来捍卫用户隐私是一件「关涉到良知」的事情。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/f970872fdc22">iOS 高效添加圆角效果</a> By  bestswifter</h4>
+
+<p>设置 masksToBounds 会导致离屏渲染，但 iOS 9 只在设置圆角的视图够多时才反应出性能问题。主要的优化方法是用 Core Graphic API 生成一个 UIImage 再插入到 UIView 的子视图中，对于 UIImageView 则是直接将其 Image 裁剪成圆角。</p>
+
+<h4>2) <a href="http://www.dreamingwish.com/article/the-ios-multithreaded-programming-guide-4-thread-synchronization.html">iOS 线程同步</a> By Dreamingwish</h4>
+
+<p>synchronized 最慢，OSSpinLock 最快。OSpinlock 效率奇高主要原因是，并没有进入系统 kernel，使用它可以节省系统调用和上下文切换，如果临界区的执行时间过长则不建议使用。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://fullstack.blog/2017/03/12/%E4%B9%9D%E4%B8%AA%E9%97%AE%E9%A2%98%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%86%9F%E6%82%89HTTPS/">九个问题从入门到熟悉 HTTPS</a> By bestswifter</h4>
+
+<p>作者 95 年的，就职于百度。对 HTTPS 的理解程度远超我身边的绝大部分同事。</p>
+
+<h4>2) <a href="https://github.com/buunguyen/octotree">octotree</a> By Buu Nguyen</h4>
+
+<p>平常浏览 Github 时，常常需要在代码目录里切来切去，非常麻烦。安装此浏览器插件后，省时省心。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://blog.cnbang.net/tech/3386/">iOS App 签名的原理</a> By 陈振焯</h4>
+
+<p>iOS 签名机制挺复杂，各种证书，Provisioning Profile，entitlements，CertificateSigningRequest，p12，AppID，概念一堆，也很容易出错，本文尝试从原理出发，一步步推出为什么会有这么多概念，希望能有助于理解 iOS App 签名的原理和流程。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十期）]]></title>
@@ -1104,177 +1150,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <p>产品型、有远见的CEO离开公司后都传位给曾经执行力强但不懂做产品的下属，公司靠着前任CEO定下的牛逼的商业模式，再加上现任强执行力的CEO，盈利还能增长几年，只是不创新了。</p>
 
 <p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[iOS 静态库及动态库开发]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/11/04/static-vs-dynamic-lib/"/>
-    <updated>2016-11-04T18:48:51+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/11/04/static-vs-dynamic-lib</id>
-    <content type="html"><![CDATA[<p>本文总结在好房移动架构团队做 Framework 开发中的一些经验。</p>
-
-<!--more-->
-
-
-<p>之前负责好房 APP 开发时，需要支持 iOS 7+，所以五月份设计统计 SDK 时只好采用静态库的方式。随着 iOS 10 的推出，iOS 7 的支持默认被移除，结合 APP 的用户设备分布，目前 APP 已改为支持 iOS 8+，所以上个月设计的 React Native 增量 Patch 更新 SDK 可采用动态库的方案。</p>
-
-<p>至于 iOS 中静态库与动态库的差别，网上有很多文章介绍，本文不再赘述，而将重点放在这两种库的具体开发实现过程。</p>
-
-<h2>静态库</h2>
-
-<p>Google 的工程师已经写了一篇非常赞的<a href="https://github.com/jverkoey/iOS-Framework">文章</a>，好房统计 SDK 就是按照此方案一步步配置的。经验证，效果非常好。其提供的脚本也很精致，无冗余。</p>
-
-<p>当然 Raywenderlich 的网站也有一篇<a href="https://www.raywenderlich.com/65964/create-a-framework-for-ios">文章</a>，方案类似，相比于 Google 程序员写的指南，多个实例。初次接触静态库开发的开发者可以读一读。</p>
-
-<p>故此处也不再重复介绍。</p>
-
-<h2>动态库</h2>
-
-<p>Xcode自带的 framework 模板，创建的动态库（包含资源）可以在iOS 7上跑（真机测试过），但官方要求iOS 8+，可能提交 app store 验证不过。</p>
-
-<p>更大的问题就是提交 app store 时会提示包含 x86_64, i386 &hellip; 截图<a href="http://ikennd.ac/pictures/iTC-Unsupported-Archs.png">在此</a>。该问题在 Xcode 6.3.2 之前及 7.1 上都有开发者遇到，PSPDFKit 这个库的开发者是在分发动态库时在 framework 里嵌入一个 shell 脚本，供使用方在 Xcode 里运行。我最终没有采用该方式。</p>
-
-<p>关于动态库的更多讨论，有一篇<a href="http://stackoverflow.com/questions/30963294/creating-ios-osx-frameworks-is-it-necessary-to-codesign-them-before-distributin">文章</a>值得一看。</p>
-
-<p>有上述背景知识，我们的动态库的具体做法：</p>
-
-<h3>针对 Dynamic Library 工程中 Aggregate 构建目标的脚本</h3>
-
-<p>仿照 jverkoey 文章中的 Aggregate 脚本，很 Easy 的。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">set</span> -e
-</span><span class='line'><span class="nb">set</span> +u
-</span><span class='line'>
-</span><span class='line'><span class="c"># Avoid recursively calling this script.</span>
-</span><span class='line'><span class="k">if</span> <span class="o">[[</span> <span class="nv">$SF_MASTER_SCRIPT_RUNNING</span> <span class="o">]]</span>
-</span><span class='line'><span class="k">then</span>
-</span><span class='line'><span class="nb">exit </span>0
-</span><span class='line'><span class="k">fi</span>
-</span><span class='line'><span class="nb">set</span> -u
-</span><span class='line'><span class="nb">export </span><span class="nv">SF_MASTER_SCRIPT_RUNNING</span><span class="o">=</span>1
-</span><span class='line'>
-</span><span class='line'><span class="nv">SF_TARGET_NAME</span><span class="o">=</span><span class="k">${</span><span class="nv">PROJECT_NAME</span><span class="k">}</span>
-</span><span class='line'><span class="nv">SF_EXECUTABLE_PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PROJECT_NAME</span><span class="k">}</span>
-</span><span class='line'><span class="nv">SF_WRAPPER_NAME</span><span class="o">=</span><span class="s2">&quot;${SF_TARGET_NAME}.framework&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># The following conditionals come from</span>
-</span><span class='line'><span class="c"># https://github.com/kstenerud/iOS-Universal-Framework</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$SDK_NAME&quot;</span> <span class="o">=</span>~ <span class="o">([</span>A-Za-z<span class="o">]</span>+<span class="o">)</span> <span class="o">]]</span>
-</span><span class='line'><span class="k">then</span>
-</span><span class='line'><span class="nv">SF_SDK_PLATFORM</span><span class="o">=</span><span class="k">${</span><span class="nv">BASH_REMATCH</span><span class="p">[1]</span><span class="k">}</span>
-</span><span class='line'><span class="k">else</span>
-</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Could not find platform name from SDK_NAME: $SDK_NAME&quot;</span>
-</span><span class='line'><span class="nb">exit </span>1
-</span><span class='line'><span class="k">fi</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$SDK_NAME&quot;</span> <span class="o">=</span>~ <span class="o">([</span>0-9<span class="o">]</span>+.*<span class="nv">$)</span> <span class="o">]]</span>
-</span><span class='line'><span class="k">then</span>
-</span><span class='line'><span class="nv">SF_SDK_VERSION</span><span class="o">=</span><span class="k">${</span><span class="nv">BASH_REMATCH</span><span class="p">[1]</span><span class="k">}</span>
-</span><span class='line'><span class="k">else</span>
-</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Could not find sdk version from SDK_NAME: $SDK_NAME&quot;</span>
-</span><span class='line'><span class="nb">exit </span>1
-</span><span class='line'><span class="k">fi</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$SF_SDK_PLATFORM&quot;</span> <span class="o">=</span> <span class="s2">&quot;iphoneos&quot;</span> <span class="o">]]</span>
-</span><span class='line'><span class="k">then</span>
-</span><span class='line'><span class="nv">SF_OTHER_PLATFORM</span><span class="o">=</span>iphonesimulator
-</span><span class='line'><span class="k">else</span>
-</span><span class='line'><span class="nv">SF_OTHER_PLATFORM</span><span class="o">=</span>iphoneos
-</span><span class='line'><span class="k">fi</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;$BUILT_PRODUCTS_DIR&quot;</span> <span class="o">=</span>~ <span class="o">(</span>.*<span class="o">)</span><span class="nv">$SF_SDK_PLATFORM$ </span><span class="o">]]</span>
-</span><span class='line'><span class="k">then</span>
-</span><span class='line'><span class="nv">SF_OTHER_BUILT_PRODUCTS_DIR</span><span class="o">=</span><span class="s2">&quot;${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}&quot;</span>
-</span><span class='line'><span class="k">else</span>
-</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR&quot;</span>
-</span><span class='line'><span class="nb">exit </span>1
-</span><span class='line'><span class="k">fi</span>
-</span><span class='line'>
-</span><span class='line'>rm -r <span class="s2">&quot;${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/_CodeSignature&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># Build the other platform.</span>
-</span><span class='line'>xcrun xcodebuild -project <span class="s2">&quot;${PROJECT_FILE_PATH}&quot;</span> -target <span class="s2">&quot;${TARGET_NAME}&quot;</span> -configuration <span class="s2">&quot;${CONFIGURATION}&quot;</span> -sdk <span class="k">${</span><span class="nv">SF_OTHER_PLATFORM</span><span class="k">}${</span><span class="nv">SF_SDK_VERSION</span><span class="k">}</span> <span class="nv">BUILD_DIR</span><span class="o">=</span><span class="s2">&quot;${BUILD_DIR}&quot;</span> <span class="nv">OBJROOT</span><span class="o">=</span><span class="s2">&quot;${OBJROOT}&quot;</span> <span class="nv">BUILD_ROOT</span><span class="o">=</span><span class="s2">&quot;${BUILD_ROOT}&quot;</span> <span class="nv">SYMROOT</span><span class="o">=</span><span class="s2">&quot;${SYMROOT}&quot;</span> <span class="nv">$ACTION</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># Smash the two static libraries into one fat binary and store it in the .framework</span>
-</span><span class='line'>xcrun lipo -create <span class="s2">&quot;${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/${SF_EXECUTABLE_PATH}&quot;</span> <span class="s2">&quot;${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/${SF_EXECUTABLE_PATH}&quot;</span> -output <span class="s2">&quot;${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/${SF_TARGET_NAME}&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="c"># Copy the binary to the other architecture folder to have a complete framework in both.</span>
-</span><span class='line'>cp -a <span class="s2">&quot;${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/${SF_TARGET_NAME}&quot;</span> <span class="s2">&quot;${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/${SF_TARGET_NAME}&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>业务方工程在 Embed Framework 之后增加<a href="https://github.com/realm/realm-cocoa/blob/f07d1af226b67c0aefb150d12da3fd34c5d64087/scripts/strip-frameworks.sh">脚本</a></h3>
-
-<p>该脚本从动态库里移除不必要的处理器架构。因为改动了 ipa 中动态库的可执行文件，所以该 strip 脚本还需要重新对动态库中可执行文件签名。正因为会重新签名，Embed Framework 处不必勾选 Code Sign on Copy。</p>
-
-<h2>第三方依赖</h2>
-
-<p>我的做法是尽量不引入第三方代码到我的 Framework 中。但如果有些算法类的库，比如 ZipArchive 等，很多时候还是需要在 Framework 中用的。直接把第三方代码拉进来，可能会和业务方引入的代码冲突。怎么办？</p>
-
-<p>Kamil Burczyk 在他的<a href="http://blog.sigmapoint.pl/avoiding-dependency-collisions-in-ios-static-library-managed-by-cocoapods/">文章</a>中给出了一种通过脚本改类名的方案。</p>
-
-<p>我们的方案是<strong>在 Framework 的工程里，只引入第三方的头文件</strong>。要求业务方使用时确保引入第三方库。</p>
 ]]></content>
   </entry>
   
