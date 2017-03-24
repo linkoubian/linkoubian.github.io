@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-03-18T16:32:32+08:00</updated>
+  <updated>2017-03-24T22:01:31+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,11 +14,57 @@
 
   
   <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十二期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/03/23/tech-notes-42/"/>
+    <updated>2017-03-23T08:53:14+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/03/23/tech-notes-42</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括苹果产品更新摘要、基于 CollectionView 实现循环滚动的方案、网易的组件化实践、以及一位小米前员工的财务告白等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) 苹果产品更新</h4>
+
+<p>苹果推出红色 iPhone；iPad Air 2 退休，代之以 A9 芯片的新 9.7 寸 iPad；iPhone SE 和 iPad mini 4 的存储也有变化；还更新了 Apple Watch 表带。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://adoptioncurve.net/archives/2013/07/building-a-circular-gallery-with-a-uicollectionview/">Building a Infinitely-Scrolling Gallery With a UICollectionView</a> By Tim Duckett</h4>
+
+<p>本文提供了支持广告图的循环滚动方案，如果你没有亲手写过而只是用别人的组件，很可能忽视了其中的玄机。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/196f66d31543">iOS 组件化实践方案</a> By philon</h4>
+
+<p>网易的 iOS 工程师在参考同行的讨论和之前的 LDBusBundle 方案基础上，提炼出了一个适合中小型应用的 LDBusMediator 中间件。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/ink-spot/UPCarouselFlowLayout">UPCarouselFlowLayout</a> By Paul Ulric</h4>
+
+<p>我实现新版二手房首页的轮播图效果，很大程度的参考了作者的布局代码。</p>
+
+<h4>2) <a href="http://tool.lu">在线工具</a></h4>
+
+<p>包含正则表达式测试工具、useragent 分析、时间戳转换&hellip;</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://mp.weixin.qq.com/s/fNZdQxx1C_DF3tw25hEt5Q">一位小米前员工的财务告白</a> By 曲哲</h4>
+
+<p>并不是每个人都有赶上时代与公司风口的洞察力，或者是运气。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十一期）]]></title>
     <link href="http://balloonsys.github.io/blog/2017/03/13/tech-notes-41/"/>
     <updated>2017-03-13T09:14:10+08:00</updated>
     <id>http://balloonsys.github.io/blog/2017/03/13/tech-notes-41</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括如何高效高效添加圆角效果，线程同步相关的知识点、问答式掌握 HTTPS 基本概念，以及 iOS App 签名的原理等内容。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括如何高效添加圆角效果，线程同步相关的知识点、问答式掌握 HTTPS 基本概念，以及 iOS App 签名的原理等内容。</p>
 
 <!--more-->
 
@@ -27,7 +73,7 @@
 
 <h4>1) <a href="https://www.zdziarski.com/blog/?p=7016#aplo">苹果将知名安全专家 Jonathan Zdziarski 招至麾下</a></h4>
 
-<p>如题。用 Jonathan 自己的话来说，跟一群有共同语言的人一同来捍卫用户隐私是一件「关涉到良知」的事情。</p>
+<p>如题。用 Jonathan 自己的话来说，跟一群有共同语言的人一同来捍卫用户隐私是一件关涉到良知的事情。</p>
 
 <h2>开发</h2>
 
@@ -188,52 +234,6 @@
 <h4>1) <a href="http://mp.weixin.qq.com/s/ARWJDxSB2wJehxgoydtFQw">Qunar React Native 大规模应用实践</a> By 殷文昭</h4>
 
 <p>Qunar React Native 是去哪儿网基于 React Native 定制的一套框架，让 RN 用起来更方便快捷，2016 年 3 月上线后已在公司内部大规模应用。透过 QRN 的大规模实践我们可以看到如何更好地去使用 RN。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十七期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/02/13/tech-notes-37/"/>
-    <updated>2017-02-13T17:22:58+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/02/13/tech-notes-37</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 点评功能的新玩法、沃尔玛的 React Native 实践分享、iOS 中 HTTPS 证书验证浅析等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://daringfireball.net/2017/01/new_app_store_review_features">Additional Details on the New App Store Review Features</a> By John Gruber</h4>
-
-<p>iOS 10.3 和 macOS 10.12.4 开始，每个 app 每年只能发三次「求评价」弹窗，用户点评不必离开 app，可以一键关闭所有求点评弹窗，开发者可以直接回复用户的评价。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="https://medium.com/walmartlabs/react-native-at-walmartlabs-cdd140589560">沃尔玛的 React Native 实践</a> By Matt Bresnan</h4>
-
-<p>最近，美国零售巨头沃尔玛将它们的官方 App 从 Hybrid 转向了 React Native，获得了非常不错的结果，来看看他们是怎么做的。</p>
-
-<p>PS: Walmart App 背后原来有数百名工程师啊！！！</p>
-
-<h4>2) <a href="https://mp.weixin.qq.com/s/-fLLTtip509K6pNOTkflPQ">iOS 中 HTTPS 证书验证浅析</a> By 李晴</h4>
-
-<p>本文的目的：一是简要分析下对服务器身份验证的完整握手过程，二是证书链的验证，三是探索下 iOS 中原生库 NSURLConnection 或 NSURLSession 如何支持实现 https。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/ad2e37e741bb">细聊 Cocoapods 与 Xcode 工程配置</a> By 张星宇</h4>
-
-<p>对我最有用的信息是：通过 ar -x 解包 .a 文件，再对解出来的 __.SYMDEF SORTED 内容分析发现，其中没有 Category 的目标文件信息，或许这就是静态库中含有 Category 时为何需要专门配置 other linker flag 选项。</p>
-
-<p>作者虽是学生，但思路清晰，很不错的。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://www.phodal.com/blog/how-to-write-a-resume/">一份优秀的程序员简历是什么样的</a> By 黄峰达</h4>
-
-<p>今年的行情虽然没有去年火热，但是你仍应该拾掇拾掇一下你的简历，万一机会来了呢？</p>
 
 <p>@end</p>
 ]]></content>

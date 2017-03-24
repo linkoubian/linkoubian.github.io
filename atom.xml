@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-03-18T16:32:32+08:00</updated>
+  <updated>2017-03-24T22:01:31+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -14,11 +14,57 @@
 
   
   <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十二期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/03/23/tech-notes-42/"/>
+    <updated>2017-03-23T08:53:14+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/03/23/tech-notes-42</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括苹果产品更新摘要、基于 CollectionView 实现循环滚动的方案、网易的组件化实践、以及一位小米前员工的财务告白等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) 苹果产品更新</h4>
+
+<p>苹果推出红色 iPhone；iPad Air 2 退休，代之以 A9 芯片的新 9.7 寸 iPad；iPhone SE 和 iPad mini 4 的存储也有变化；还更新了 Apple Watch 表带。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://adoptioncurve.net/archives/2013/07/building-a-circular-gallery-with-a-uicollectionview/">Building a Infinitely-Scrolling Gallery With a UICollectionView</a> By Tim Duckett</h4>
+
+<p>本文提供了支持广告图的循环滚动方案，如果你没有亲手写过而只是用别人的组件，很可能忽视了其中的玄机。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/196f66d31543">iOS 组件化实践方案</a> By philon</h4>
+
+<p>网易的 iOS 工程师在参考同行的讨论和之前的 LDBusBundle 方案基础上，提炼出了一个适合中小型应用的 LDBusMediator 中间件。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/ink-spot/UPCarouselFlowLayout">UPCarouselFlowLayout</a> By Paul Ulric</h4>
+
+<p>我实现新版二手房首页的轮播图效果，很大程度的参考了作者的布局代码。</p>
+
+<h4>2) <a href="http://tool.lu">在线工具</a></h4>
+
+<p>包含正则表达式测试工具、useragent 分析、时间戳转换&hellip;</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://mp.weixin.qq.com/s/fNZdQxx1C_DF3tw25hEt5Q">一位小米前员工的财务告白</a> By 曲哲</h4>
+
+<p>并不是每个人都有赶上时代与公司风口的洞察力，或者是运气。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十一期）]]></title>
     <link href="http://balloonsys.github.io/blog/2017/03/13/tech-notes-41/"/>
     <updated>2017-03-13T09:14:10+08:00</updated>
     <id>http://balloonsys.github.io/blog/2017/03/13/tech-notes-41</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括如何高效高效添加圆角效果，线程同步相关的知识点、问答式掌握 HTTPS 基本概念，以及 iOS App 签名的原理等内容。</p>
+    <content type="html"><![CDATA[<p>本期周报主要包括如何高效添加圆角效果，线程同步相关的知识点、问答式掌握 HTTPS 基本概念，以及 iOS App 签名的原理等内容。</p>
 
 <!--more-->
 
@@ -27,7 +73,7 @@
 
 <h4>1) <a href="https://www.zdziarski.com/blog/?p=7016#aplo">苹果将知名安全专家 Jonathan Zdziarski 招至麾下</a></h4>
 
-<p>如题。用 Jonathan 自己的话来说，跟一群有共同语言的人一同来捍卫用户隐私是一件「关涉到良知」的事情。</p>
+<p>如题。用 Jonathan 自己的话来说，跟一群有共同语言的人一同来捍卫用户隐私是一件关涉到良知的事情。</p>
 
 <h2>开发</h2>
 
@@ -1098,56 +1144,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <p>工程师尤其看不惯公司里的各种规章制度、各种条条框框，所谓的 process；工程师们老爱问为什么，为什么会有这样那样的规定。公司里指定规章制度的人又都不给你解释为什么，“历来就如此，别问那么多为什么”。</p>
 
 <blockquote><p>It’s a myth, but healthy process is awesome if it not only documents what we care about, but is willing to defend itself. It is required to stand up to scrutiny and when a process fails to do so, it must change.</p></blockquote>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十五期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/11/04/tech-notes-25/"/>
-    <updated>2016-11-04T19:51:17+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/11/04/tech-notes-25</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 新增支付宝付款、iOS 静态库及动态库开发经验总结、Today Widget 在低版本系统上的兼容开发经验等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.mac52ipod.cn/post/apple-app-store-support-alipay.php">App Store 应用商店支持支付宝付款</a> By bmwmengwei</h4>
-
-<p>此新闻看标题即可，我已经从信用卡切换到支付宝了。因为之前老是弹出信用卡信息验证的页面，希望以后不再被打扰。</p>
-
-<h4>2) <a href="http://www.ifanr.com/739044">苹果确认放弃独立显示屏业务</a></h4>
-
-<p>The Verge 编辑 Nilay Patel 从苹果方面确认，苹果选择放弃独立显示屏业务，此后苹果的显示屏生产将全部交由 LG 等生产商伙伴负责。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://balloonsys.com/blog/2016/11/04/static-vs-dynamic-lib/">iOS 静态库及动态库开发</a> By Linkou Bian</h4>
-
-<p>本文总结在好房移动架构团队做 Framework 开发中的一些经验。特别是动态库部分的实践，干货满满。</p>
-
-<h4>2) <a href="https://kristina.io/backwards-compatibility-with-ios-10-today-widgets/">Tips for Backwards Compatibility with iOS 10 Today Widgets</a> By Kristina Thai</h4>
-
-<p>作者介绍了开发 Today Widgets 兼容 iOS 9 / 10 的三点经验，对做 Widget 开发的朋友还是有益处的。</p>
-
-<h4>3) <a href="http://fanhang.me/ios/-ge-cai-gua-ying-swift2.2de-kai-fa-zhe-yan-zhong-de-swift-3.0he-ios-10">一个才适应 Swift 2.2 的开发者眼中的 Swift 3.0</a> By amoyio</h4>
-
-<p>文中大部分内容之前的周报都有过分享，重点关注下 1.7、2.5、3.8、4.4、4.5 等。关于 Swift 3 的适配，本周也有其他工程师分享了经验，吐槽居多。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://eprev.org/2015/08/06/change-os-x-network-location-based-on-the-wi-fi-network-name/">Network Location Changer</a> By Anton Eprev</h4>
-
-<p>通常在公司需要使用内网的 DNS，而我在家往往希望使用阿里的 DNS，可以在网络首选项建立不同的 Location 以满足此需求。Anton 提供的这个脚本不光可以自动切换 Location 还提供了额外的功能。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://steveblank.com/2016/10/24/why-tim-cook-is-steve-ballmer-and-why-he-still-has-his-job-at-apple">Why Tim Cook is Steve Ballmer and Why He Still Has His Job at Apple</a> By Steve Blank</h4>
-
-<p>产品型、有远见的CEO离开公司后都传位给曾经执行力强但不懂做产品的下属，公司靠着前任CEO定下的牛逼的商业模式，再加上现任强执行力的CEO，盈利还能增长几年，只是不创新了。</p>
 
 <p>@end</p>
 ]]></content>
