@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-04-07T14:52:11+08:00</updated>
+  <updated>2017-04-07T14:55:07+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -45,7 +45,7 @@
 
 <p>来自 Facebook 的 Instagram 终于来强势支持了一把 React Native。快速迭代、代码复用、减少人力，这么多优点是否值得你去学习甚至在公司项目中引入 React Native 呢？</p>
 
-<h4>2) <a href="https://mp.weixin.qq.com/s/W9jC0W_b7xSWjqfFv7N5Bg">Protocol Buffers</a></h4>
+<h4>2) <a href="https://mp.weixin.qq.com/s/W9jC0W_b7xSWjqfFv7N5Bg">Protocol Buffers</a> By 陶文</h4>
 
 <p>Google 的 Protocol Buffers 在数据编码的效率上似乎被神化了，一直流传性能是 JSON 等本文格式 5 倍以上，本文通过代码测试来比较 JSON 与 PB 具体的性能差别到底是多少。</p>
 
