@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-03-24T22:27:33+08:00</updated>
+  <updated>2017-04-07T14:52:11+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十三期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/04/07/tech-notes-43/"/>
+    <updated>2017-04-07T14:20:58+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/04/07/tech-notes-43</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 Mac Pro 产品线的最新消息、JavaScriptCore 的方方面面、MVC/MVP/MVVM 架构的思路与优缺点、Instagram 的 React Native 实践等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://daringfireball.net/2017/04/the_mac_pro_lives">苹果产品更新</a> By John Gruber</h4>
+
+<p>苹果资深副总裁 Phil Schiller 透露，新 Mac Pro 将采用模块化程度更高、扩展性更强的设计，与之配套的专业显示器也在计划中，明年发布。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/3f5dc8042dfc">深入浅出 JavaScriptCore</a> By Tim Duckett</h4>
+
+<p>本篇文章是作者基于一次组内分享整理而成，包含 Objective-C 与 JavaScript 交互、内存管理、多线程等方面的内容。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/eedbc820d40a">杂谈: MVC/MVP/MVVM</a></h4>
+
+<p>本文为回答一位朋友关于 MVC/MVP/MVVM 架构方面的疑问所写，旨在介绍 iOS 下这三种架构的设计思路以及各自的优缺点。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://engineering.instagram.com/react-native-at-instagram-dd828a9a90c7">Instagram 的 React Native 之路</a> By Martin Bigio</h4>
+
+<p>来自 Facebook 的 Instagram 终于来强势支持了一把 React Native。快速迭代、代码复用、减少人力，这么多优点是否值得你去学习甚至在公司项目中引入 React Native 呢？</p>
+
+<h4>2) <a href="https://mp.weixin.qq.com/s/W9jC0W_b7xSWjqfFv7N5Bg">Protocol Buffers</a></h4>
+
+<p>Google 的 Protocol Buffers 在数据编码的效率上似乎被神化了，一直流传性能是 JSON 等本文格式 5 倍以上，本文通过代码测试来比较 JSON 与 PB 具体的性能差别到底是多少。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://www.raywenderlich.com/158026/introducing-rxswift-reactive-programming-swift">Reactive Programming with Swift</a> By raywenderlich.com</h4>
+
+<p>刚出的一本关于 RxSwift 的技术书籍，Ray 家出品。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十二期）]]></title>
@@ -1092,58 +1138,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <h4>1) <a href="https://blog.codinghorror.com/the-broken-window-theory/">The Broken Window Theory</a> By Jeff Atwood</h4>
 
 <p>环境中的不良现象如果被放任存在（如社区中某些建筑的窗户破了而没被修复），就会诱使人们仿效（人们就认为破窗户是正常的，就会破坏更多窗户），甚至变本加厉。公司里的垃圾代码不被及时修复，就会被更多人效仿。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十六期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/11/11/tech-notes-26/"/>
-    <updated>2016-11-11T23:13:12+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/11/11/tech-notes-26</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括库克关于总统大选结果的内部信、携程在实践 React Native 时的优化经验、JSPatch 热修复文件的加载方案、App 销售报表工具等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://techcrunch.com/2016/11/10/tim-cook-apple-donald-trump-election-win/">Move Forward Together</a></h4>
-
-<p>关于总统大选，苹果 CEO 库克致信美国员工。他表示，无论谁都无法阻挡苹果前进的脚步，唯有携手前进才能变得更好。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://techshow.ctrip.com/archives/1459.html">携程是如何做 React Native 优化的</a> By 赵辛贵</h4>
-
-<p>两周前去携程现场聆听了赵老师的分享，真的非常非常的赞。该讲座对我而言很有启发性，可以很好的指导我新技术框架如何研究、实践、改进。</p>
-
-<h4>2) <a href="https://github.com/bang590/JSPatch/wiki/JSPatch-Loader-%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3">JSPatch Loader 使用文档</a> By 陈振焯</h4>
-
-<p>集成 JSPatch 到 iOS 项目里的主要工作在于实现一套安全的热修复脚本下发与加载的机制。如果想自己实现而不是购买 JSPatch Platform 提供的服务，可以读一读作者写的这篇文章。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://www.appwage.com">AppWage</a> By Hankinsoft</h4>
-
-<p>这是一个开源的 iTunes Connect 报表工具，开发商的另一款收费软件 SQLPro for SQLite 我也一直在用。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/05b68c84913a">iOS 性能调优</a></h4>
-
-<p>提供了基于 Swift 3.0 模仿新浪微博的 Demo，里面针对于微博首页的复杂页面的优化做了很多的处理，页面的 FPS 一直保持在 59 ~ 60。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://highscalability.com/blog/2016/6/20/the-technology-behind-apple-photos-and-the-future-of-deep-le.html">Apple Photos 背后的技术与用户的隐私</a> By highscalability</h4>
-
-<p>Apple 使用 differential privacy 技术收集用户数据到云端训练 model，但从这些数据中无法识别出具体的个体；这些 model 下载到手机，依靠强大的手机性能进行分析，识别，归类你的照片；理论上分析的结果只留在你的手机上。</p>
-
-<h4>2) <a href="http://randsinrepose.com/archives/the-process-myth">The Process Myth</a> By Michael Lopp</h4>
-
-<p>工程师尤其看不惯公司里的各种规章制度、各种条条框框，所谓的 process；工程师们老爱问为什么，为什么会有这样那样的规定。公司里指定规章制度的人又都不给你解释为什么，“历来就如此，别问那么多为什么”。</p>
-
-<blockquote><p>It’s a myth, but healthy process is awesome if it not only documents what we care about, but is willing to defend itself. It is required to stand up to scrutiny and when a process fails to do so, it must change.</p></blockquote>
 
 <p>@end</p>
 ]]></content>

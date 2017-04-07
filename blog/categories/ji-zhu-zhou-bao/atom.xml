@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-03-24T22:27:33+08:00</updated>
+  <updated>2017-04-07T14:52:11+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十三期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/04/07/tech-notes-43/"/>
+    <updated>2017-04-07T14:20:58+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/04/07/tech-notes-43</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 Mac Pro 产品线的最新消息、JavaScriptCore 的方方面面、MVC/MVP/MVVM 架构的思路与优缺点、Instagram 的 React Native 实践等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://daringfireball.net/2017/04/the_mac_pro_lives">苹果产品更新</a> By John Gruber</h4>
+
+<p>苹果资深副总裁 Phil Schiller 透露，新 Mac Pro 将采用模块化程度更高、扩展性更强的设计，与之配套的专业显示器也在计划中，明年发布。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://www.jianshu.com/p/3f5dc8042dfc">深入浅出 JavaScriptCore</a> By Tim Duckett</h4>
+
+<p>本篇文章是作者基于一次组内分享整理而成，包含 Objective-C 与 JavaScript 交互、内存管理、多线程等方面的内容。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/eedbc820d40a">杂谈: MVC/MVP/MVVM</a></h4>
+
+<p>本文为回答一位朋友关于 MVC/MVP/MVVM 架构方面的疑问所写，旨在介绍 iOS 下这三种架构的设计思路以及各自的优缺点。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://engineering.instagram.com/react-native-at-instagram-dd828a9a90c7">Instagram 的 React Native 之路</a> By Martin Bigio</h4>
+
+<p>来自 Facebook 的 Instagram 终于来强势支持了一把 React Native。快速迭代、代码复用、减少人力，这么多优点是否值得你去学习甚至在公司项目中引入 React Native 呢？</p>
+
+<h4>2) <a href="https://mp.weixin.qq.com/s/W9jC0W_b7xSWjqfFv7N5Bg">Protocol Buffers</a></h4>
+
+<p>Google 的 Protocol Buffers 在数据编码的效率上似乎被神化了，一直流传性能是 JSON 等本文格式 5 倍以上，本文通过代码测试来比较 JSON 与 PB 具体的性能差别到底是多少。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://www.raywenderlich.com/158026/introducing-rxswift-reactive-programming-swift">Reactive Programming with Swift</a> By raywenderlich.com</h4>
+
+<p>刚出的一本关于 RxSwift 的技术书籍，Ray 家出品。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十二期）]]></title>
@@ -188,52 +234,6 @@
 <h4>1) <a href="http://blog.cnbang.net/tech/3354/">iOS 开发技术栈与进阶</a> By 陈振焯</h4>
 
 <p>最近有一些开发朋友问我应该怎样提升自己的能力，回想起来做了这么久 iOS 开发，我也有过那种『让我做一个功能实现个需求我会做，但接下来怎样提高我不知道。』的时期，这里尝试列一下 iOS 开发的相关技术，再说说在学习进阶上我的一些想法。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十八期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/02/24/tech-notes-38/"/>
-    <updated>2017-02-24T11:44:36+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/02/24/tech-notes-38</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括苹果收购面部识别创业公司、iOS A/B Test 方案探索、去哪儿 React Native 应用实践分享等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.timesofisrael.com/apple-buys-israels-facial-recognition-firm-realface-report/">Apple buys Israel’s facial recognition firm RealFace</a> By Shoshanna Solomon</h4>
-
-<p>根据以色列周报的报道，苹果用数百万美金收购了一家以色列的面部识别创业公司 Realface。该公司曾发布过一款名为 Pickeez 的应用，它能帮助用户在多个社交平台中找出用户的最佳照片。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/7b4667cde80b">教你如何从0到1实现组件化架构</a> By 袁峥</h4>
-
-<p>文章罗列的主要是组件化架构中 Cocoapods 如何用，对于组件化的架构设计本身并没有涉及。</p>
-
-<h4>2) <a href="http://blog.flight.dev.qunar.com/2017/01/09/ios-abtest-explore/">iOS A/B Test 方案探索</a> By 李剑飞</h4>
-
-<p>近期团队做了很多 AB Test 的业务需求，在这种需求日益见多的情况下，我们不得不提升我们的代码组织方式，以适应或更好的在此类需求上维护我们的代码。本文主要阐述了业务团队在做 AB Test 的一些想法和思路。</p>
-
-<h2>工具</h2>
-
-<h4>1) Launchpad 页面按住 Option</h4>
-
-<p>这是 macOS 出现删除应用按钮的最快捷方式了吧？</p>
-
-<h4>2) <a href="https://atom.io">Atom</a></h4>
-
-<p>之前一直在用 Sublime，现在逐渐换成 Atom 了。最近在读 BNR 出品的 Front-End Web Development 一书，配置了 emmet / autocomplete-paths / linter 等插件后 Atom 算是把利器。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://mp.weixin.qq.com/s/ARWJDxSB2wJehxgoydtFQw">Qunar React Native 大规模应用实践</a> By 殷文昭</h4>
-
-<p>Qunar React Native 是去哪儿网基于 React Native 定制的一套框架，让 RN 用起来更方便快捷，2016 年 3 月上线后已在公司内部大规模应用。透过 QRN 的大规模实践我们可以看到如何更好地去使用 RN。</p>
 
 <p>@end</p>
 ]]></content>
