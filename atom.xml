@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-04-07T15:05:24+08:00</updated>
+  <updated>2017-04-15T16:49:37+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十四期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/04/15/tech-notes-44/"/>
+    <updated>2017-04-15T10:53:56+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/04/15/tech-notes-44</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 Uber 外卖业务使用 React Native 过程中的权衡、手机 QQ Hybrid 的架构如何优化演进、微软在 RN 基础上推出的跨平台框架等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://www.bloomberg.com/amp/news/articles/2017-04-14/apple-gets-dmv-approval-to-test-self-driving-cars-in-california">Apple Said to Near Road Tests of Self-Driving Car Software</a> By Mark Gurman</h4>
+
+<p>苹果已经获得加州的许可，可以在该州测试无人驾驶汽车。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="https://eng.uber.com/ubereats-react-native/">Powering UberEATS with React Native</a> By Chris Lewis</h4>
+
+<p>Uber 基于 React Native 技术构建的 Restaurant Dashboard 应用为送餐业务 UberEATS 提供支持。本文介绍了决定使用 React Native，以及确保为餐厅提供可靠、稳健的用户体验过程中所进行的权衡和考虑。</p>
+
+<h4>2) <a href="http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2650995689&amp;idx=1&amp;sn=4f77f121345004ae6e18f4b945e46f8e">手机 QQ Hybrid 的架构演进</a> By 涂强</h4>
+
+<p>随着前端开发的兴起，QQ也逐渐演变为Web与原生终端混合的开发模式。QQ 团队除了采用动态 CDN、后台渲染等全栈手段优化体验，也构建了围绕速度、成功率、页面异常等维度的监控体系来保障服务质量。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/Microsoft/reactxp">React XP</a> By Microsoft</h4>
+
+<p>微软 Skype 团队开源的跨平台框架, 目前支持 web (React JS), iOS (React Native), Android (React Native) and Windows UWP (React Native) 等平台。</p>
+
+<h4>2) <a href="http://thebugcode.github.io/ios-continous-integration-choosing-a-build-server-and-tooling/">iOS Continous Integration</a> By The Code Bug</h4>
+
+<p>本文对比了 Xcode Server, Jenkins, Travis 以及 fastlane 等多种持续集成工具。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://hackernoon.com/education-of-a-programmer-aaecf2d35312">Education of a Programmer</a> By Terry Crowley</h4>
+
+<p>作者在微软服役 21 年离职后写就的长文，其中有句话很受欢迎：</p>
+
+<blockquote><p>The deepest learning happens when you struggle with truly hard problems.</p></blockquote>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十三期）]]></title>
@@ -1092,52 +1140,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <blockquote><p>Uber是最大的出租车公司，但并不拥有任何车；FB是最大的媒体公司，但不自己生产内容；阿里巴巴是最大的零售商，但没库存；Airbnb是最大的旅馆，但不拥有房产。</p></blockquote>
 
 <p>互联网成就了这些公司，让他们有能力提供一层看似非常简单的用户界面，大规模地连接供需双方。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十七期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/11/18/tech-notes-27/"/>
-    <updated>2016-11-18T15:05:15+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/11/18/tech-notes-27</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括如何实现在 TableView 中滑动播放视频、无法获取真实进度时如何做个优雅的进度动画、Sierra 显示隐藏文件的快捷方式、破窗效应等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://www.bloomberg.com/news/articles/2016-11-17/apple-is-said-to-cut-fees-video-services-will-pay-for-app-store">Apple to Cut Fees Video Services Will Pay for App Store</a> By Lucas Shaw</h4>
-
-<p>苹果计划将 App Store 视频服务接入的费用从 30% 降到 15%，这意味着视频服务供应商在苹果各平台的运营成本将大幅降低。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/3946317760a6">滑动 TableView 自动播放视频</a> By NewPan</h4>
-
-<p>本文介绍了如何实现在 TableView 中滑动播放视频，并且是没有任何卡顿的实现滑动播放视频。同时也将讲述如何确定哪一个 Cell 播放视频。</p>
-
-<h4>2) <a href="http://mrpeak.cn/blog/http-upload-progress/">Http 文件上传进度为什么不准</a> By Peak</h4>
-
-<p>我们调用第三方 http framework 上传文件的时候，都会有 API 回调告诉我们上传的具体进度，但这个进度值都是不准的。本文介绍了此情况下如何做个优雅的进度动画。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://twitter.com/24says/status/780677320197574656">Sierra 显示隐藏文件</a> By 24Says</h4>
-
-<p>macOS Sierra 里可以通过 CMD + Shift + . 直接在 Finder 里显示隐藏文件。</p>
-
-<h4>2) <a href="https://github.com/BeauNouvelle/FaceAware">FaceAware</a> By Beau Nouvelle</h4>
-
-<p>现在大部分 APP 里的个人中心页面，都会提供设置头像的功能，这个 Swift 库会根据脸部位置以最优的方式展示头像。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://blog.codinghorror.com/the-broken-window-theory/">The Broken Window Theory</a> By Jeff Atwood</h4>
-
-<p>环境中的不良现象如果被放任存在（如社区中某些建筑的窗户破了而没被修复），就会诱使人们仿效（人们就认为破窗户是正常的，就会破坏更多窗户），甚至变本加厉。公司里的垃圾代码不被及时修复，就会被更多人效仿。</p>
 
 <p>@end</p>
 ]]></content>
