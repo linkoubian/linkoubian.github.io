@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第三十三期） - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第四十五期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括手机 QQ 牛逼的 iOS 动态化方案、拼图验证控件的实现的原理、AFNetworking 3.0 源代码阅读笔记、Xcode 8.2 Simulator 新特性介绍等内容。 资讯 1) Inconsistent MacBook Pro battery test results &hellip;">
+  <meta name="description" content="本期周报主要包括苹果对微信关闭赞赏的回应、天弘基金移动 App 架构演化、携程无线持续交付平台建设、等内容。 资讯 1) 苹果回应微信关闭赞赏 By 新浪科技 苹果公司这份声明虽然简单但含义明确：赞赏功能并非是苹果逼停的。微信本可以像其他开发者一样，选择App内购方式给公众号运营者；App &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/12/30/tech-notes-33/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2017/04/21/tech-notes-45/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -80,7 +80,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第三十三期）</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第四十五期）</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-12-30T18:09:58+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>6:09 pm</span></time>
+<time class='entry-date' datetime='2017-04-21T13:46:19+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2017</span></span> <span class='time'>1:46 pm</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://balloonsys.github.io">Comments</a>
@@ -99,48 +99,44 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括手机 QQ 牛逼的 iOS 动态化方案、拼图验证控件的实现的原理、AFNetworking 3.0 源代码阅读笔记、Xcode 8.2 Simulator 新特性介绍等内容。</p>
+<div class="entry-content"><p>本期周报主要包括苹果对微信关闭赞赏的回应、天弘基金移动 App 架构演化、携程无线持续交付平台建设、等内容。</p>
 
 <!--more-->
 
 
 <h2>资讯</h2>
 
-<h4>1) <a href="http://www.theverge.com/2016/12/24/14074654/apple-consumer-reports-macbook-pro-battery-test">Inconsistent MacBook Pro battery test results</a></h4>
+<h4>1) <a href="http://tech.sina.com.cn/mobile/n/n/2017-04-20/doc-ifyepsch1830968.shtml">苹果回应微信关闭赞赏</a> By 新浪科技</h4>
 
-<p>全新 MacBook Pro 的续航飘忽不定，经过多次测试发现，MacBook Pro 的续航有时可以达到 10 多个小时，而有时却只有 3 个多小时。苹果全球营销高级副总裁 Phil Schiller 表示，苹果正在与《消费者报告》合作，解决 MacBook Pro 电池飘忽不定的问题。</p>
+<p>苹果公司这份声明虽然简单但含义明确：赞赏功能并非是苹果逼停的。微信本可以像其他开发者一样，选择App内购方式给公众号运营者；App Store 生态对所有开发者的要求均是一样的。</p>
 
 <h2>开发</h2>
 
-<h4>1) <a href="http://mp.weixin.qq.com/s/DhGR6J5fx04BPi-kMsMBJg">手机 QQ 的 iOS 动态化方案</a> By OCSTeam</h4>
+<h4>1) <a href="http://blog.csdn.net/yaoyu/article/details/70184539">天弘基金移动 App 客户端架构优化之路</a> By 姚宇</h4>
 
-<p>在iOS的发展历程上，涌现了很多动态化方案，有历史悠久的 WaxPatch 动态化方案，有远近闻名的JSPatch动态化方案。文中手机 QQ 团队向大家介绍一款堪称『史上最疯狂』的 iOS 动态化方案。</p>
+<p>天弘·爱理财在前端后端使用的阿里蚂蚁金融云平台。第一个 iOS 版本是在传统的MVC的架构基础上封装了一个网络服务层构建而成。从 2.4 版本开始逐步重构采用 MVVM + 分层架构模式解耦。</p>
 
-<h4>2) <a href="http://tutuge.me/2016/12/25/TTGPuzzleVerify/">拼图验证控件的实现</a> By 燕泽堃</h4>
+<h4>2) <a href="https://skyline75489.github.io/post/2015-8-14_ios_static_dynamic_framework_learning.html">iOS 静态库，动态库与 Framework</a> By Chester Liu</h4>
 
-<p>拼图验证控件用以让用户通过水平、垂直，或者直接拖动拼图块，完成拼图图案，达到验证目的。作者来自阿里，对其开发的 TTGPuzzleVerify 控件做了整体设计思路和实现原理的分享。</p>
-
-<h4>3) <a href="http://balloonsys.com/blog/2016/12/27/afnetworking-in-a-nutshell/">AFNetworking 3.0 源码阅读笔记</a> By Linkou Bian</h4>
-
-<p>上周阅读了 AFNetworking 3.0 的源代码，对阅读中遇到的问题进行了些思考，整理成此文。干货 &amp; 原创，值得一读。</p>
+<p>去年 11 月我总结过在好房移动架构团队做 Framework 开发中的一些经验。本文作者对静态库、动态库、Framework 等基础概念作了介绍。</p>
 
 <h2>工具</h2>
 
-<h4>1) <a href="https://medium.com/@hollanderbart/new-features-in-xcode-8-2-simulator-fc64a4014a5f">New features in Xcode 8.2 Simulator</a> By Bart den Hollander</h4>
+<h4>1) <a href="https://blog.dianqk.org/2017/02/28/use-danger/">Danger</a> By DianQK</h4>
 
-<p>Xcode 8.2 新增了两项新特性，一是 xcrun 命令可以对模拟器截屏及录制，二是可以通过拖拽的方式安装 app 到模拟器。</p>
+<p>在 Code Review 时，我们可能经常要去检查各种事情，有时我们会忘记，而 Danger 可以友好地完成。其配置非常简单，很容易集成到现有 CI 中。</p>
 
-<h4>2) <a href="http://balloonsys.com/blog/2016/12/27/spotify-proxy-on-mac/">Mac Spotify</a> By Linkou Bian</h4>
+<h4>2) <a href="http://mp.weixin.qq.com/s/6kf1x0wV1XpH3ycHKCBA7Q">携程无线持续交付平台</a> By 刘李丰</h4>
 
-<p>Mac 为了无障碍上网，开着 Surge；想用 Spotify 听听歌，却因公司网络而无法登录，怎么办？</p>
+<p>本文从集成、测试、发布、运营四个子平台来展开分享携程是如何一步步打造无线持续交付平台的。</p>
 
 <h2>其他</h2>
 
-<h4>1) <a href="http://mp.weixin.qq.com/s/XpjTQd-p9pNpkQich1ZZ_w">中国企业就是这样倒闭的</a></h4>
+<h4>1) <a href="http://robertheaton.com/2014/03/27/how-does-https-actually-work">How does HTTPS actually work</a> By Rob Heaton</h4>
 
-<p>整天瞎分析个屁! 什么他妈的流程问题、职责问题、界面问题、考核问题，明明就是机构臃肿问题！</p>
+<p>讲得不算很深的科普文章一篇。看懂后，你就会明白公司下发的标装机多不安全了吧。即使是 HTTPS 请求的内容，也被监控得体无完肤！</p>
 
-<p>@end</p>
+<h2>@end</h2>
 </div>
 
 
@@ -156,7 +152,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-12-30T18:09:58+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>6:09 pm</span></time>
+<time class='entry-date' datetime='2017-04-21T13:46:19+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2017</span></span> <span class='time'>1:46 pm</span></time>
       
 
 <span class="categories">
@@ -177,10 +173,8 @@ $(document).bind('DOMNodeInserted', function(event) {
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/12/27/afnetworking-in-a-nutshell/" title="Previous Post: AFNetworking 3.0 源码阅读笔记">&laquo; AFNetworking 3.0 源码阅读笔记</a>
+        <a class="basic-alignment left" href="/blog/2017/04/15/tech-notes-44/" title="Previous Post: 平安好房iOS开发团队技术周报（第四十四期）">&laquo; 平安好房iOS开发团队技术周报（第四十四期）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2017/01/06/tech-notes-34/" title="Next Post: 平安好房iOS开发团队技术周报（第三十四期）">平安好房iOS开发团队技术周报（第三十四期） &raquo;</a>
       
     </p>
   </footer>
@@ -266,8 +260,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/12/30/tech-notes-33/';
-        var disqus_url = 'http://balloonsys.github.io/blog/2016/12/30/tech-notes-33/';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2017/04/21/tech-notes-45/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2017/04/21/tech-notes-45/';
         var disqus_script = 'embed.js';
       
     (function () {
