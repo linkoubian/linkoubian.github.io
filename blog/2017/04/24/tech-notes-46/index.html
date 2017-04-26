@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第三十期） - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第四十六期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括 iOS 项目的 HTTPS 迁移实战、基于 CTMediator 的组件化方案、以及给同事 Feedback 的 OFNR 模型等内容。 资讯 1) Fitbit’s up and Apple’s down By Brian Heater IDC &hellip;">
+  <meta name="description" content="本期周报主要包括 App Store 佣金规则变更、iOS 中图片的解压缩过程、基于 React Native 高仿美团客户端、Appium 入门介绍等内容。 资讯 1) App Store Affiliate Program 从 5 月 1 号开始，苹果将实行新的佣金规则，所有跟 App &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/12/11/tech-notes-30/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2017/04/24/tech-notes-46/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -80,7 +80,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第三十期）</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第四十六期）</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-12-11T10:38:37+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:38 am</span></time>
+<time class='entry-date' datetime='2017-04-24T00:49:22+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>12:49 am</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://balloonsys.github.io">Comments</a>
@@ -99,46 +99,44 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括 iOS 项目的 HTTPS 迁移实战、基于 CTMediator 的组件化方案、以及给同事 Feedback 的 OFNR 模型等内容。</p>
+<div class="entry-content"><p>本期周报主要包括 App Store 佣金规则变更、iOS 中图片的解压缩过程、基于 React Native 高仿美团客户端、Appium 入门介绍等内容。</p>
 
 <!--more-->
 
 
 <h2>资讯</h2>
 
-<h4>1) <a href="https://techcrunch.com/2016/12/05/idc-wearables/">Fitbit’s up and Apple’s down</a> By Brian Heater</h4>
+<h4>1) <a href="https://affiliate.itunes.apple.com/resources/documentation/getting-started/">App Store Affiliate Program</a></h4>
 
-<p>IDC 刚刚发布了全球可穿戴设备市场的最新数据，看起来 Fitbit 势头正旺。在智能手表销量下滑的情况下，可穿戴设备市场的整体规模却出现了增长。</p>
+<p>从 5 月 1 号开始，苹果将实行新的佣金规则，所有跟 App 相关的消费行为（比如购买应用、应用内购）将会降至 2.5%，其它类型的内容（音乐、电影、书、电视剧）返利比例则保持 7% 不变。</p>
 
 <h2>开发</h2>
 
-<h4>1) <a href="http://www.jianshu.com/p/94f5d3830301">iOS 迁移到 HTTPS</a> By Vincent</h4>
+<h4>1) <a href="http://blog.leichunfeng.com/blog/2017/02/20/talking-about-the-decompression-of-the-image-in-ios/">谈谈 iOS 中图片的解压缩</a> By 雷纯锋</h4>
 
-<p>本文介绍了作者自建证书完成 AFNetworking 3.0 单向验证设置、WKWebView 及 SDWebImage 如何设置支持 HTTPS 等内容。</p>
+<p>图片解压缩的过程其实就是将图片的二进制数据转换成像素数据的过程。了解这些知识，将有助于我们更好地处理图片，管理好它们所占用的内存。</p>
 
-<h4>2) <a href="http://casatwy.com/modulization_in_action.html">基于 CTMediator 的组件化方案</a> By 田伟宇</h4>
+<h4>2) <a href="https://github.com/huanxsd/MeiTuan">基于 React Native 高仿美团客户端</a> By Daniel</h4>
 
-<p>作者自称希望这篇文章能够终结业界持续近一年的关于组件化方案的无谓讨论和错误讨论。</p>
+<p>作者曾在百度工作四年，写了六年 Objective-C 代码。主要实现了美团的四个一级页面（团购、附近、订单、我的），以及部分二级页面（团购详情、Web 页面）。</p>
 
 <h2>工具</h2>
 
-<h4>1) <a href="https://itunes.apple.com/cn/app/rested-simple-http-requests/id421879749?mt=12">RESTed - Simple HTTP Requests</a> By Patrick Rogers</h4>
+<h4>1) <a href="https://github.com/jkpang/PPRows">PPRows for Mac</a> By jkpang</h4>
 
-<p>Restful API 测试工具首推 Paw 吧，由 @nixzhu 在推特提及的 RESTed 也是简洁好用，而且免费。</p>
+<p>在 Mac 上计算你写了多少行代码的一款小工具。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/3932a1c24b93">Appium 从入门到原理</a> By bestswifter</h4>
+
+<p>本文主要会基于一些开源代码和个人实践，对 iOS 端的自动化测试原理做一个简单介绍。</p>
 
 <h2>其他</h2>
 
-<h4>1) <a href="http://ramblinjan.com/development/2016/12/05/Your-Hiring-Process-is-your-engineering-process/">Your Hiring Process is Also Your Engineering Process</a> By Jan Jorgensen</h4>
+<h4>1) <a href="https://61.life/price-tag-summary/amp/">Price Tag 半年总结</a> By Liu Yi</h4>
 
-<p>面试是双向的，公司面试求职者、求职者也挑公司。面试流程拖拖拉拉、找来不相干的人做面试官、面试官傲慢无理等，直接反映了这家公司做事的风格。</p>
+<p>作者之前和微博干过口水仗，关于 Affiliate link 的事情。我也是从这个新闻才开始了解到 App Store 联盟计划这么个东西的。</p>
 
-<h4>2) <a href="http://blog.d3in.org/post/153942984306/negative-feedback-antipatterns">如何给同事批评建议</a> By Charles-Axel Dein</h4>
-
-<p>年底了，大家又得做 Performance Review 了。给同事写好的、表扬形式的 review 是很容易的，但写实质性的批评建议却不容易，怕得罪人。本文给了一些正面例子与反面例子。</p>
-
-<p>给同事 Feedback 的 OFNR 模型：Observation（对方做了啥事）、Feeling（你对这件事的感受）、Need（你觉得怎样才是对的）、Request（对方应怎么改进）。</p>
-
-<h5>@end</h5>
+<h2>@end</h2>
 </div>
 
 
@@ -154,14 +152,8 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-12-11T10:38:37+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:38 am</span></time>
+<time class='entry-date' datetime='2017-04-24T00:49:22+08:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>12:49 am</span></time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
-  
-</span>
 
 
     </p>
@@ -175,10 +167,8 @@ $(document).bind('DOMNodeInserted', function(event) {
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/12/02/tech-notes-29/" title="Previous Post: 平安好房iOS开发团队技术周报（第二十九期）">&laquo; 平安好房iOS开发团队技术周报（第二十九期）</a>
+        <a class="basic-alignment left" href="/blog/2017/04/21/tech-notes-45/" title="Previous Post: 平安好房iOS开发团队技术周报（第四十五期）">&laquo; 平安好房iOS开发团队技术周报（第四十五期）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/12/16/tech-notes-31/" title="Next Post: 平安好房iOS开发团队技术周报（第三十一期）">平安好房iOS开发团队技术周报（第三十一期） &raquo;</a>
       
     </p>
   </footer>
@@ -264,8 +254,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/12/11/tech-notes-30/';
-        var disqus_url = 'http://balloonsys.github.io/blog/2016/12/11/tech-notes-30/';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2017/04/24/tech-notes-46/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2017/04/24/tech-notes-46/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-04-21T16:03:06+08:00</updated>
+  <updated>2017-04-26T11:00:58+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十六期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/04/24/tech-notes-46/"/>
+    <updated>2017-04-24T00:49:22+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/04/24/tech-notes-46</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 App Store 佣金规则变更、iOS 中图片的解压缩过程、基于 React Native 高仿美团客户端、Appium 入门介绍等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://affiliate.itunes.apple.com/resources/documentation/getting-started/">App Store Affiliate Program</a></h4>
+
+<p>从 5 月 1 号开始，苹果将实行新的佣金规则，所有跟 App 相关的消费行为（比如购买应用、应用内购）将会降至 2.5%，其它类型的内容（音乐、电影、书、电视剧）返利比例则保持 7% 不变。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://blog.leichunfeng.com/blog/2017/02/20/talking-about-the-decompression-of-the-image-in-ios/">谈谈 iOS 中图片的解压缩</a> By 雷纯锋</h4>
+
+<p>图片解压缩的过程其实就是将图片的二进制数据转换成像素数据的过程。了解这些知识，将有助于我们更好地处理图片，管理好它们所占用的内存。</p>
+
+<h4>2) <a href="https://github.com/huanxsd/MeiTuan">基于 React Native 高仿美团客户端</a> By Daniel</h4>
+
+<p>作者曾在百度工作四年，写了六年 Objective-C 代码。主要实现了美团的四个一级页面（团购、附近、订单、我的），以及部分二级页面（团购详情、Web 页面）。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://github.com/jkpang/PPRows">PPRows for Mac</a> By jkpang</h4>
+
+<p>在 Mac 上计算你写了多少行代码的一款小工具。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/3932a1c24b93">Appium 从入门到原理</a> By bestswifter</h4>
+
+<p>本文主要会基于一些开源代码和个人实践，对 iOS 端的自动化测试原理做一个简单介绍。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://61.life/price-tag-summary/amp/">Price Tag 半年总结</a> By Liu Yi</h4>
+
+<p>作者之前和微博干过口水仗，关于 Affiliate link 的事情。我也是从这个新闻才开始了解到 App Store 联盟计划这么个东西的。</p>
+
+<h2>@end</h2>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十五期）]]></title>
@@ -1088,52 +1134,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <p>给同事 Feedback 的 OFNR 模型：Observation（对方做了啥事）、Feeling（你对这件事的感受）、Need（你觉得怎样才是对的）、Request（对方应怎么改进）。</p>
 
 <h5>@end</h5>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第二十九期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/12/02/tech-notes-29/"/>
-    <updated>2016-12-02T09:34:52+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/12/02/tech-notes-29</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括全民 K 歌 RN 的接入实践中分包与加载的方案、安全的处理 JSON 中的空值、A/B 测试里常见的辛普森悖论等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://support.apple.com/zh-cn/HT205928">Apple Music 推出学生优惠</a> By Apple</h4>
-
-<p>如果您就读于颁发学位的大专或大学，您就能以折扣会员价加入 Apple Music，最长可享受 48 个月的优惠。这段时间不需要是连续的。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://geek.csdn.net/news/detail/122668">全民 K 歌 React Native 最佳实践</a> By 袁聪</h4>
-
-<p>全民 K 歌去年十月份完成了 RN 的接入实践，本文介绍了如何去实践根据业务分包、以及客户端怎么去加载这两方面内容。</p>
-
-<h4>2) <a href="http://honglu.me/2015/04/11/json%E4%B8%AD%E5%A4%B4%E7%96%BC%E7%9A%84null/">json 中头疼的 null</a> By 鸿禄</h4>
-
-<p>在服务器返回 json 数据的时候，时常会出现值为 null 的键值对。json 解析的时候，就会把这个 null 解析成 NSNull 的对象，我们向这个 NSNull 对象发送消息的时候就会遇到 crash 的问题。本文介绍了应对之策。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://github.com/joeldev/JLRoutes">JLRoutes</a> By Joel Levin</h4>
-
-<p>本周看了 JLRoutes 的源代码，拿来做 APP 的 URL 路由非常不错。不经意间会发现有些代码段就是插入排序算法。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://www.appadhoc.com/blog/simpson-paradox-in-abtesting/">浅谈 A/B 测试里常见的辛普森悖论</a> By appadhoc</h4>
-
-<p>辛普森悖论 (Simpson’s Paradox) 是英国统计学家 E.H.Simpson 于 1951 年提出的悖论。即在某个条件下的两组数据，在分别讨论时都会满足某种性质，可是一旦合并起来进行考虑，却可能导致相反的结论。</p>
-
-<h4>2) <a href="https://medium.com/swlh/building-and-motivating-engineering-teams-24fd56910039">拉扯一支士气高昂的工程团队</a> By Camille Fournier</h4>
-
-<p>三个要素：Money，别玩虚的，给足工资，正常人都爱钱；Purpose，让工程师一起做产品决策；Respect，像对待成年人一样对待工程师，尊敬他们，把他们当合伙人，而不是把他们当小孩、哄他们开心、让他们听话。</p>
-
-<p>@end</p>
 ]]></content>
   </entry>
   
