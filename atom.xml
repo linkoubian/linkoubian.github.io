@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-04-26T11:00:58+08:00</updated>
+  <updated>2017-05-05T09:12:50+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十七期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/05/02/tech-notes-47/"/>
+    <updated>2017-05-02T19:13:31+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/05/02/tech-notes-47</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括如何为 React Native 开发配置 VS Code 插件以提高生产力、RN 在 Glow 的实践、Uber 的百名 iOS 工程师使用 Swift 重新架构移动应用的经验等内容。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://wallstreetcn.com/articles/3007744">苹果的现金储备</a> By Wall street CN</h4>
+
+<p>苹果拥有的 2570 亿美元现金储备中，有 1480 亿美元投资了企业债，530 亿美元投资了美国政府国债，210 亿美元投资了抵押债券和资产担保债权。</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://tech.glowing.com/cn/react-native-at-glow/">React Native 在 Glow 的实践</a> By Allen Hsu</h4>
+
+<p>本文记录了 React Native 在 Glow 的实践经验，并主要从 iOS 角度展开一些细节实现。</p>
+
+<h4>2) <a href="https://www.skilled.io/u/swiftsummit/swift-with-a-hundred-engineers">Swift with a hundred engineers</a> By Tuomas Artman</h4>
+
+<p>Uber 的 iOS App 拥有 5k 个文件，共 50 万行代码。为了提高构建速度，拆分出 70 多个组件。为了不影响启动时间，在 build 后把各 framework 中的文件合在一起。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://matthewpalmer.net/vanilla/">Vanilla-hide Mac Menu bar icons</a> By Matthew Palmer</h4>
+
+<p>这是一款将 Mac 菜单栏的一部分工具图标收起来的免费小工具。喜欢 Bartender 但不愿付费的朋友可以尝试下。</p>
+
+<h4>2) <a href="http://www.jianshu.com/p/caa802ee055b">为 React Native 开发准备的 VS Code 插件</a> By 顾浩鑫</h4>
+
+<p>本文详细介绍了如何为 React Native 开发配置 VSCode 各种插件以提高生产力。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://stackoverflow.blog/2017/04/27/how-to-talk-about-yourself-in-an-interview/">How to Talk About Yourself in an Interview</a> By Nick Larsen</h4>
+
+<p>不只是面试，在很多社交场合都需要介绍自己，介绍自己做过的事，要会讲故事、让人有兴趣听下去。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十六期）]]></title>
@@ -1086,54 +1132,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <p>如果你能完全信任一个工程师，他/她办事你放心，那他/她就是高级工程师。</p>
 
 <p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/12/11/tech-notes-30/"/>
-    <updated>2016-12-11T10:38:37+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/12/11/tech-notes-30</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 iOS 项目的 HTTPS 迁移实战、基于 CTMediator 的组件化方案、以及给同事 Feedback 的 OFNR 模型等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://techcrunch.com/2016/12/05/idc-wearables/">Fitbit’s up and Apple’s down</a> By Brian Heater</h4>
-
-<p>IDC 刚刚发布了全球可穿戴设备市场的最新数据，看起来 Fitbit 势头正旺。在智能手表销量下滑的情况下，可穿戴设备市场的整体规模却出现了增长。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/94f5d3830301">iOS 迁移到 HTTPS</a> By Vincent</h4>
-
-<p>本文介绍了作者自建证书完成 AFNetworking 3.0 单向验证设置、WKWebView 及 SDWebImage 如何设置支持 HTTPS 等内容。</p>
-
-<h4>2) <a href="http://casatwy.com/modulization_in_action.html">基于 CTMediator 的组件化方案</a> By 田伟宇</h4>
-
-<p>作者自称希望这篇文章能够终结业界持续近一年的关于组件化方案的无谓讨论和错误讨论。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://itunes.apple.com/cn/app/rested-simple-http-requests/id421879749?mt=12">RESTed - Simple HTTP Requests</a> By Patrick Rogers</h4>
-
-<p>Restful API 测试工具首推 Paw 吧，由 @nixzhu 在推特提及的 RESTed 也是简洁好用，而且免费。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://ramblinjan.com/development/2016/12/05/Your-Hiring-Process-is-your-engineering-process/">Your Hiring Process is Also Your Engineering Process</a> By Jan Jorgensen</h4>
-
-<p>面试是双向的，公司面试求职者、求职者也挑公司。面试流程拖拖拉拉、找来不相干的人做面试官、面试官傲慢无理等，直接反映了这家公司做事的风格。</p>
-
-<h4>2) <a href="http://blog.d3in.org/post/153942984306/negative-feedback-antipatterns">如何给同事批评建议</a> By Charles-Axel Dein</h4>
-
-<p>年底了，大家又得做 Performance Review 了。给同事写好的、表扬形式的 review 是很容易的，但写实质性的批评建议却不容易，怕得罪人。本文给了一些正面例子与反面例子。</p>
-
-<p>给同事 Feedback 的 OFNR 模型：Observation（对方做了啥事）、Feeling（你对这件事的感受）、Need（你觉得怎样才是对的）、Request（对方应怎么改进）。</p>
-
-<h5>@end</h5>
 ]]></content>
   </entry>
   
