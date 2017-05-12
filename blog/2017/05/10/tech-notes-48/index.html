@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Mac Spotify 代理设置 - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第四十八期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="Mac 为了无障碍上网，开着 Surge；想用 Spotify 听听歌，却因公司网络而无法登录，怎么办？ 应用内代理设置 开启 Surge 会自动配置 HTTP / Socket 代理。代理服务器为本机，即 127.0.0.1，端口分别为 6152 / 6153。 打开 Spotify for &hellip;">
+  <meta name="description" content="本期周报主要包括 Apple Watch 相关应用的发展趋势、Swift 异常手段的适用场景、基于 Target / Action 以及 Runtime 的组件化方案，以及与人相处时的一种 delta file 实践。 资讯 1) Major apps abandoning Apple Watch &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/12/27/spotify-proxy-on-mac/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2017/05/10/tech-notes-48/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -80,7 +80,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">Mac Spotify 代理设置</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第四十八期）</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-12-27T09:23:52+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:23 am</span></time>
+<time class='entry-date' datetime='2017-05-10T09:31:00+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>9:31 am</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://balloonsys.github.io">Comments</a>
@@ -99,28 +99,50 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>Mac 为了无障碍上网，开着 Surge；想用 Spotify 听听歌，却因公司网络而无法登录，怎么办？</p>
+<div class="entry-content"><p>本期周报主要包括 Apple Watch 相关应用的发展趋势、Swift 异常手段的适用场景、基于 Target / Action 以及 Runtime 的组件化方案，以及与人相处时的一种 delta file 实践。</p>
 
 <!--more-->
 
 
-<h2>应用内代理设置</h2>
+<h2>资讯</h2>
 
-<p>开启 Surge 会自动配置 HTTP / Socket 代理。代理服务器为本机，即 127.0.0.1，端口分别为 6152 / 6153。</p>
+<h4>1) <a href="http://appleinsider.com/articles/17/05/01/major-apps-abandoning-apple-watch-including-google-maps-amazon-ebay">Major apps abandoning Apple Watch</a> By Neil Hughes</h4>
 
-<p>打开 Spotify for Mac 打开高级设置项，选择 Socket 5 代理，填写并保存代理服务器信息。</p>
+<p>第二季度财报会议上，库克表示 Apple Watch、AirPods 和 Beats 产品的销量收入现在已经是财富 500 强公司的规模。不过，不少大型主流 APP 正在移除对 Apple Watch 的支持。</p>
 
-<h2>Facebook 账号登录</h2>
+<h4>2) <a href="http://www.cnbc.com/2017/05/09/apple-acquires-beddit-sleep-tracking-app.html">Apple has acquired a sleep-tracking app</a> By Christina Farr</h4>
 
-<p>如果依旧无法使用 Facebook 账号登录，请在 /etc/hosts 文件中，将 login.spotilocal.com 映射到 127.0.0.1 即可。也可以在 Spotify Web 设置设备登录密码。</p>
+<p>近期苹果买下了好几款 APP，比如 Workflow。本周又收下了名为 Beddit 的睡眠追踪应用及相关设备。</p>
 
-<p>如果还有问题，可以尝试借用手机热点先登录成功。</p>
+<h2>开发</h2>
 
-<h2>代理规则</h2>
+<h4>1) <a href="https://medium.com/@johnsundell/picking-the-right-way-of-failing-in-swift-e89125a6b5b5">Picking the right way of failing in Swift</a> By John Sundell</h4>
 
-<p>有时无法播放，请查看 Spotify 是不是直接连 IP 地址。如果是的话，请在 Surge 规则文件里添加 IP-CIDR 以覆盖对应的 IP 段，终极大法。</p>
+<p>本文针对 Swift 的多种异常处理手段做了介绍，分别适用于何种场景。</p>
 
-<p>Enjoy!</p>
+<h4>2) <a href="http://www.jianshu.com/p/0d3db4422954">Swift 性能相关</a> By Damon Wong</h4>
+
+<p>为什么说 Swift 相比较于 Objective-C 会更加快 ？为什么在编译 Swift 的时候这么慢 ？如何更优雅的去写 Swift ？可以听听本文作者的介绍。</p>
+
+<h4>3) <a href="https://casatwy.com/modulization_in_action.html">基于 CTMediator 的组件化方案</a> By 田伟宇</h4>
+
+<p>本周精度了这种基于 Target / Action 以及 Runtime 的组件化方案，思路确实非常棒！</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="https://www.visualstudio.com/vs/">Visual Studio for Mac</a></h4>
+
+<p>微软继推出 VS Code 后，又发布了 Mac 版的 Visual Studio，支持 Xamarin 和 .NET Core 开发移动应用和网页等。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="https://medium.com/@livlab/dont-work-with-psychopaths-b1a848914455">别与精神病患者共事</a> By Livia Labate</h4>
+
+<p>这种同事并非医学上的精神病患者，而是善于玩弄权术、爱撒谎、自负的人。他们评价别人是根据别人的行为，评价自己是根据自己的动机。</p>
+
+<p>文中提到一种实践，叫 the Delta File：自己创建一个秘密的只有自己才能看到的文档，记录下你的同事、上司表现出的让你很反感的行为；将来你处于他们那个位子了，对比 the Delta file 中你所记录的行为，你会怎么做？他们当时那些行为是合理的吗？</p>
+
+<p>@end</p>
 </div>
 
 
@@ -136,12 +158,12 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-12-27T09:23:52+08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:23 am</span></time>
+<time class='entry-date' datetime='2017-05-10T09:31:00+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>9:31 am</span></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/mac/'>mac</a>
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/ji-zhu-zhou-bao/'>技术周报</a>
   
 </span>
 
@@ -157,10 +179,8 @@ $(document).bind('DOMNodeInserted', function(event) {
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/12/23/tech-notes-32/" title="Previous Post: 平安好房iOS开发团队技术周报（第三十二期）">&laquo; 平安好房iOS开发团队技术周报（第三十二期）</a>
+        <a class="basic-alignment left" href="/blog/2017/05/02/tech-notes-47/" title="Previous Post: 平安好房iOS开发团队技术周报（第四十七期）">&laquo; 平安好房iOS开发团队技术周报（第四十七期）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/12/27/afnetworking-in-a-nutshell/" title="Next Post: AFNetworking 3.0 源码阅读笔记">AFNetworking 3.0 源码阅读笔记 &raquo;</a>
       
     </p>
   </footer>
@@ -246,8 +266,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/12/27/spotify-proxy-on-mac/';
-        var disqus_url = 'http://balloonsys.github.io/blog/2016/12/27/spotify-proxy-on-mac/';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2017/05/10/tech-notes-48/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2017/05/10/tech-notes-48/';
         var disqus_script = 'embed.js';
       
     (function () {
