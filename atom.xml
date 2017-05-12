@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-05-12T09:24:13+08:00</updated>
+  <updated>2017-05-12T10:05:52+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -45,7 +45,7 @@
 
 <h4>3) <a href="https://casatwy.com/modulization_in_action.html">基于 CTMediator 的组件化方案</a> By 田伟宇</h4>
 
-<p>本周精度了这种基于 Target / Action 以及 Runtime 的组件化方案，思路确实非常棒！</p>
+<p>本周精读了这种基于 Target / Action 以及 Runtime 的组件化方案，思路确实非常棒！</p>
 
 <h2>工具</h2>
 
