@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-05-12T10:05:52+08:00</updated>
+  <updated>2017-05-20T00:52:42+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十九期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/05/19/tech-notes-49/"/>
+    <updated>2017-05-19T23:30:11+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/05/19/tech-notes-49</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 iPhone 用户忠诚度、RAC 中 weakify 这样的宏是如何定义的、基于 section name 在数据段存取数据、移动端开发之路在何方等。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://www.macrumors.com/2017/05/17/iphone-92-percent-loyalty-rate-survey/">iPhone Scores 92% Loyalty Rate in Recent Survey Ahead of iPhone 8</a> By Joe Rossignol</h4>
+
+<p>本文介绍了摩根斯坦利做的一项调查，92% 的现有 iPhone 用户有兴趣在接下来的一年内购买新的 iPhone。相比于一年前类似调查的 86% 忠诚度，形势喜人！</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://ziecho.com/post/ios/2016-08-04">RAC 中的 @weakify、@strongify 是如何装逼的</a> By 郑梓毅</h4>
+
+<p>RAC 中的这个 weakify 版本脱胎于 libextobjc 项目。如果想自己实现一个简化版（只接收一个参数），可以参考 Arek Holko 的<a href="http://holko.pl/2015/05/31/weakify-strongify/">文章</a>。</p>
+
+<h4>2) <a href="https://lpd-ios.github.io/2017/03/06/iOS-BeeHive/">解耦框架 BeeHive</a> By 于德志</h4>
+
+<p>BeeHive 是阿里去年开源的一个 iOS APP 模块化框架。文中介绍的基于 Annotation 的标记实现方案，很不错。我参考实现了一个将好房 APP 的 ViewController 和页面 URL 映射在一起的宏。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://blog.playstone.org/blog/2017/05/15/imate-for-ios-development/">iMate</a> By Lei Guo</h4>
+
+<p>这是一个 iOS 开发辅助软件，查看 App 产生的文件，也可以快速将 Archive / Build 等文件删除。总的来说，类似之前推荐过的 SimPholders。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://limboy.me/essay/2017/05/12/mobile-dev-way-out.html">移动端开发路在何方</a> By 李忠</h4>
+
+<p>最近一段时间，移动端开发好像不像以前那么吃香了，招的人少了，要求更高了，给人一种感觉：这个行业是不是不行了？这个行业没出问题，只是更加理性了。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十八期）]]></title>
@@ -1082,58 +1124,6 @@ AFSSLPinningModePublicKey：仅比较服务端传过来的证书携带的公钥�
 <p>有时无法播放，请查看 Spotify 是不是直接连 IP 地址。如果是的话，请在 Surge 规则文件里添加 IP-CIDR 以覆盖对应的 IP 段，终极大法。</p>
 
 <p>Enjoy!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十二期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/12/23/tech-notes-32/"/>
-    <updated>2016-12-23T09:33:13+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/12/23/tech-notes-32</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 HTTP 缓存机制及 iOS 的实现、Operation Queues 的相关知识、APP 启用 HTTPS 支持的基础知识、滴滴 iOS 动态化方案等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.theverge.com/2016/12/21/14037686/apple-macbook-macos-focus-mobile-features-ios">macOS is becoming legacy software</a> By Vlad Savov</h4>
-
-<p>The Verge 引述 Bloomberg 熟悉 Apple 內部运作人士报导，Apple 已经再沒有独立的 Mac OS Team。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://qnoid.com/2016/04/10/A-primer-in-HTTP-caching-and-its-native-support-by-iOS.html">HTTP 缓存机制及 iOS 的实现</a> By qnoid</h4>
-
-<p>缓存机制的表述，在苹果的文档中都有。但是，判断 response 是否足够 fresh 的介绍是作者的原创。</p>
-
-<h4>2) <a href="http://blog.leichunfeng.com/blog/2015/07/29/ios-concurrency-programming-operation-queues/">iOS 并发编程之 Operation Queues</a> By 雷纯锋</h4>
-
-<p>在 iOS 开发中，我们主要可以通过 Operation Queues、Dispatch Queues 和 Dispatch Sources 来提高应用的并发性。本文主要介绍 Operation Queues 的相关知识。</p>
-
-<p>注：本周精读了 AFNetworking 3.0 源代码，上述两篇文章都是在读代码过程中查阅过的资料。</p>
-
-<h4>3) <a href="https://autolayout.club/2016/12/22/%E5%86%99%E7%BB%99-iOS-%E5%BC%80%E5%8F%91%E8%80%85%E7%9C%8B%E7%9A%84-HTTPS-%E6%8C%87%E5%8D%97/">写给 iOS 开发者看的 HTTPS 指南</a> By 吕文翰</h4>
-
-<p>苹果在 WWDC 2016 上宣布年底将要求所有 APP 适配 ATS，不过本周四又宣布将这个 deadline 推迟了。本文着重介绍 APP 启用 HTTPS 支持的过程中跟 APP 相关的部分，剩余的协议细节将一笔带过。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="http://mp.weixin.qq.com/s/qRW_akbU3TSd0SxpF3iQmQ">DynamicCocoa - 滴滴 iOS 动态化方案</a> By 孙源</h4>
-
-<p>DynamicCocoa 可以让现有的 Objective-C 代码转换生成中间代码（JS），下发后动态执行。据说，手机 QQ 的方案是通过 clang 把 OC 代码编译成自己定制的字节码动态下发，然后开发一个虚拟机去执行（惊呆了）。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/a5c5e9aa5913">XMNetworking</a> By 康祖彬</h4>
-
-<p>XMNetworking 是一个轻量的、简单易用但功能强大的网络库，基于 AFNetworking 3.0 封装。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://www.facebook.com/notes/mark-zuckerberg/building-jarvis/10154361492931634">扎克伯格写的 Jarvis AI</a> By Zuckerberg</h4>
-
-<p>虽然大部分技术都是现成的（facebook 开源项目和一些自动化家用硬件），但是他整合技术和学习能力实在太恐怖了。</p>
-
-<p>@end</p>
 ]]></content>
   </entry>
   

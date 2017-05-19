@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-05-12T10:05:52+08:00</updated>
+  <updated>2017-05-20T00:52:42+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十九期）]]></title>
+    <link href="http://balloonsys.github.io/blog/2017/05/19/tech-notes-49/"/>
+    <updated>2017-05-19T23:30:11+08:00</updated>
+    <id>http://balloonsys.github.io/blog/2017/05/19/tech-notes-49</id>
+    <content type="html"><![CDATA[<p>本期周报主要包括 iPhone 用户忠诚度、RAC 中 weakify 这样的宏是如何定义的、基于 section name 在数据段存取数据、移动端开发之路在何方等。</p>
+
+<!--more-->
+
+
+<h2>资讯</h2>
+
+<h4>1) <a href="https://www.macrumors.com/2017/05/17/iphone-92-percent-loyalty-rate-survey/">iPhone Scores 92% Loyalty Rate in Recent Survey Ahead of iPhone 8</a> By Joe Rossignol</h4>
+
+<p>本文介绍了摩根斯坦利做的一项调查，92% 的现有 iPhone 用户有兴趣在接下来的一年内购买新的 iPhone。相比于一年前类似调查的 86% 忠诚度，形势喜人！</p>
+
+<h2>开发</h2>
+
+<h4>1) <a href="http://ziecho.com/post/ios/2016-08-04">RAC 中的 @weakify、@strongify 是如何装逼的</a> By 郑梓毅</h4>
+
+<p>RAC 中的这个 weakify 版本脱胎于 libextobjc 项目。如果想自己实现一个简化版（只接收一个参数），可以参考 Arek Holko 的<a href="http://holko.pl/2015/05/31/weakify-strongify/">文章</a>。</p>
+
+<h4>2) <a href="https://lpd-ios.github.io/2017/03/06/iOS-BeeHive/">解耦框架 BeeHive</a> By 于德志</h4>
+
+<p>BeeHive 是阿里去年开源的一个 iOS APP 模块化框架。文中介绍的基于 Annotation 的标记实现方案，很不错。我参考实现了一个将好房 APP 的 ViewController 和页面 URL 映射在一起的宏。</p>
+
+<h2>工具</h2>
+
+<h4>1) <a href="http://blog.playstone.org/blog/2017/05/15/imate-for-ios-development/">iMate</a> By Lei Guo</h4>
+
+<p>这是一个 iOS 开发辅助软件，查看 App 产生的文件，也可以快速将 Archive / Build 等文件删除。总的来说，类似之前推荐过的 SimPholders。</p>
+
+<h2>其他</h2>
+
+<h4>1) <a href="http://limboy.me/essay/2017/05/12/mobile-dev-way-out.html">移动端开发路在何方</a> By 李忠</h4>
+
+<p>最近一段时间，移动端开发好像不像以前那么吃香了，招的人少了，要求更高了，给人一种感觉：这个行业是不是不行了？这个行业没出问题，只是更加理性了。</p>
+
+<p>@end</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十八期）]]></title>
@@ -200,52 +242,6 @@
 <p>作者在微软服役 21 年离职后写就的长文，其中有句话很受欢迎：</p>
 
 <blockquote><p>The deepest learning happens when you struggle with truly hard problems.</p></blockquote>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十三期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/04/07/tech-notes-43/"/>
-    <updated>2017-04-07T14:20:58+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/04/07/tech-notes-43</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括 Mac Pro 产品线的最新消息、JavaScriptCore 的方方面面、MVC/MVP/MVVM 架构的思路与优缺点、Instagram 的 React Native 实践等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="https://daringfireball.net/2017/04/the_mac_pro_lives">苹果产品更新</a> By John Gruber</h4>
-
-<p>苹果资深副总裁 Phil Schiller 透露，新 Mac Pro 将采用模块化程度更高、扩展性更强的设计，与之配套的专业显示器也在计划中，明年发布。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://www.jianshu.com/p/3f5dc8042dfc">深入浅出 JavaScriptCore</a></h4>
-
-<p>本篇文章是作者基于一次组内分享整理而成，包含 Objective-C 与 JavaScript 交互、内存管理、多线程等方面的内容。</p>
-
-<h4>2) <a href="http://www.jianshu.com/p/eedbc820d40a">杂谈: MVC/MVP/MVVM</a></h4>
-
-<p>本文为回答一位朋友关于 MVC/MVP/MVVM 架构方面的疑问所写，旨在介绍 iOS 下这三种架构的设计思路以及各自的优缺点。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://engineering.instagram.com/react-native-at-instagram-dd828a9a90c7">Instagram 的 React Native 之路</a> By Martin Bigio</h4>
-
-<p>来自 Facebook 的 Instagram 终于来强势支持了一把 React Native。快速迭代、代码复用、减少人力，这么多优点是否值得你去学习甚至在公司项目中引入 React Native 呢？</p>
-
-<h4>2) <a href="https://mp.weixin.qq.com/s/W9jC0W_b7xSWjqfFv7N5Bg">Protocol Buffers</a> By 陶文</h4>
-
-<p>Google 的 Protocol Buffers 在数据编码的效率上似乎被神化了，一直流传性能是 JSON 等本文格式 5 倍以上，本文通过代码测试来比较 JSON 与 PB 具体的性能差别到底是多少。</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="https://www.raywenderlich.com/158026/introducing-rxswift-reactive-programming-swift">Reactive Programming with Swift</a> By raywenderlich.com</h4>
-
-<p>刚出的一本关于 RxSwift 的技术书籍，Ray 家出品。</p>
 
 <p>@end</p>
 ]]></content>

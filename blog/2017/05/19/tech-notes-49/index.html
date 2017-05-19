@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>平安好房iOS开发团队技术周报（第十八期） - Balloonsys Inc.</title>
+  <title>平安好房iOS开发团队技术周报（第四十九期） - Balloonsys Inc.</title>
   <meta name="author" content="Linkou Bian">
 
   
-  <meta name="description" content="本期周报主要包括 iOS 10 隐藏特性、设计趋势、正式版发布以来的一些数据，App 和 Extension 之间如何共享数据与功能，Xcode 8 适配经验分享，UI Testing 等内容。 资讯 1) iOS 10 Adoption Rate Nears 20% In Just Two &hellip;">
+  <meta name="description" content="本期周报主要包括 iPhone 用户忠诚度、RAC 中 weakify 这样的宏是如何定义的、基于 section name 在数据段存取数据、移动端开发之路在何方等。 资讯 1) iPhone Scores 92% Loyalty Rate in Recent Survey Ahead of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://balloonsys.github.io/blog/2016/09/17/tech-notes-18/">
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2017/05/19/tech-notes-49/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
@@ -80,7 +80,7 @@ $(document).bind('DOMNodeInserted', function(event) {
   
   <header>
     
-      <h1 class="entry-title">平安好房iOS开发团队技术周报（第十八期）</h1>
+      <h1 class="entry-title">平安好房iOS开发团队技术周报（第四十九期）</h1>
     
     
       <p class="meta">
@@ -89,7 +89,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-09-17T09:56:15+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:56 am</span></time>
+<time class='entry-date' datetime='2017-05-19T23:30:11+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>11:30 pm</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://balloonsys.github.io">Comments</a>
@@ -99,54 +99,38 @@ $(document).bind('DOMNodeInserted', function(event) {
   </header>
 
 
-<div class="entry-content"><p>本期周报主要包括 iOS 10 隐藏特性、设计趋势、正式版发布以来的一些数据，App 和 Extension 之间如何共享数据与功能，Xcode 8 适配经验分享，UI Testing 等内容。</p>
+<div class="entry-content"><p>本期周报主要包括 iPhone 用户忠诚度、RAC 中 weakify 这样的宏是如何定义的、基于 section name 在数据段存取数据、移动端开发之路在何方等。</p>
 
 <!--more-->
 
 
 <h2>资讯</h2>
 
-<h4>1) <a href="https://blog.mixpanel.com/2016/09/08/apple-ios-10-data/">iOS 10 Adoption Rate Nears 20% In Just Two Days</a> By mixpanel</h4>
+<h4>1) <a href="https://www.macrumors.com/2017/05/17/iphone-92-percent-loyalty-rate-survey/">iPhone Scores 92% Loyalty Rate in Recent Survey Ahead of iPhone 8</a> By Joe Rossignol</h4>
 
-<p>Mixpanel 的 1830 亿条数据显示，iOS 10 正式发布首日有 14.81% 的设备已升级至最新版，两天内达到 21.02% 的比率。另外，美国移动运营商 T-Mobile CEO 称前四天 iPhone 7 预订量已达到 iPhone 6 同期的 4 倍。</p>
-
-<h4>2) <a href="https://www.cnet.com/how-to/ios-10-hidden-features/">23 hidden features in iOS 10</a> By Jason Cipriani</h4>
-
-<p>很多版本的很多功能可能被很多人忽视了，看看发布会上没有提到的特性有助于更大程度的利用好移动设备。</p>
+<p>本文介绍了摩根斯坦利做的一项调查，92% 的现有 iPhone 用户有兴趣在接下来的一年内购买新的 iPhone。相比于一年前类似调查的 86% 忠诚度，形势喜人！</p>
 
 <h2>开发</h2>
 
-<h4>1) <a href="https://www.raizlabs.com/dev/2016/09/preparing-ios-app-for-extensions/">Preparing Your iOS App for Extensions</a> By Nick Bonatsakis</h4>
+<h4>1) <a href="http://ziecho.com/post/ios/2016-08-04">RAC 中的 @weakify、@strongify 是如何装逼的</a> By 郑梓毅</h4>
 
-<p>Extension 是一个独立于 App 的进程，作者通过将代码放到独立的 Framework 中详述如何做到 App 和 Extension 之间数据和功能的共享。</p>
+<p>RAC 中的这个 weakify 版本脱胎于 libextobjc 项目。如果想自己实现一个简化版（只接收一个参数），可以参考 Arek Holko 的<a href="http://holko.pl/2015/05/31/weakify-strongify/">文章</a>。</p>
 
-<h4>2) <a href="http://www.jianshu.com/p/e9c313df746f">iOS 推送全解析</a> By pikacode</h4>
+<h4>2) <a href="https://lpd-ios.github.io/2017/03/06/iOS-BeeHive/">解耦框架 BeeHive</a> By 于德志</h4>
 
-<p>本文旨在对 iOS 推送进行一个完整的剖析，如果你之前对推送一无所知，那么在你认真地阅读了全文后必将变成一个推送老手，你将会对其中的各种细节和原理有充分的理解。</p>
-
-<h4>3) <a href="http://www.jianshu.com/p/f8151d556930">iOS 10 的适配问题</a></h4>
-
-<p>作者总结的总结的一些关于 iOS 10 适配方面的问题。</p>
+<p>BeeHive 是阿里去年开源的一个 iOS APP 模块化框架。文中介绍的基于 Annotation 的标记实现方案，很不错。我参考实现了一个将好房 APP 的 ViewController 和页面 URL 映射在一起的宏。</p>
 
 <h2>工具</h2>
 
-<h4>1) <a href="http://masilotti.com/ui-testing-cheat-sheet/">UI Testing Cheat Sheet and Examples</a> By Joe Masilotti</h4>
+<h4>1) <a href="http://blog.playstone.org/blog/2017/05/15/imate-for-ios-development/">iMate</a> By Lei Guo</h4>
 
-<p>本周把玩去年增加的 UI Testing 相关的功能时，发现当时 WWDC 视频里做的代码录制在 Xcode 7 最新版以及 Xcode 8 里有些压根就不 work 啊。另外感觉 UI Testing 并没有那么 exciting ！</p>
-
-<h4>2) 如何禁止 Xcode 8 模拟器疯狂输出系统日志 By Russell Ivanovic</h4>
-
-<p>增加环境变量 OS_ACTIVITY_MODE = disable 即可。</p>
+<p>这是一个 iOS 开发辅助软件，查看 App 产生的文件，也可以快速将 Archive / Build 等文件删除。总的来说，类似之前推荐过的 SimPholders。</p>
 
 <h2>其他</h2>
 
-<h4>1) <a href="https://isux.tencent.com/ios-10-design-trends.html">从 iOS 10 设计指南变化看设计的新趋势</a> By ISUX</h4>
+<h4>1) <a href="http://limboy.me/essay/2017/05/12/mobile-dev-way-out.html">移动端开发路在何方</a> By 李忠</h4>
 
-<p>本文主要针对已经发布的 iOS 10 的人机界面设计指南来对比分析新老版本的 iOS 系统在设计上哪些改变，有哪些设计趋势值得我们注意。</p>
-
-<h4>2) <a href="http://yuguo.us/weblog/shut-up-and-take-the-money/">为什么有些人赚钱那么轻松</a> By 余果</h4>
-
-<p>外行并不太能影响专业人士的价格，他们自己在跟自己竞争。对于真正的专业主义者，没有行业低迷这种概念存在。随波逐流的，一直是水面上的浮萍。</p>
+<p>最近一段时间，移动端开发好像不像以前那么吃香了，招的人少了，要求更高了，给人一种感觉：这个行业是不是不行了？这个行业没出问题，只是更加理性了。</p>
 
 <p>@end</p>
 </div>
@@ -164,7 +148,7 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 
 
-<time class='entry-date' datetime='2016-09-17T09:56:15+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:56 am</span></time>
+<time class='entry-date' datetime='2017-05-19T23:30:11+08:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>19</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>11:30 pm</span></time>
       
 
 <span class="categories">
@@ -185,10 +169,8 @@ $(document).bind('DOMNodeInserted', function(event) {
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/09/10/tech-notes-17/" title="Previous Post: 平安好房iOS开发团队技术周报（第十七期）">&laquo; 平安好房iOS开发团队技术周报（第十七期）</a>
+        <a class="basic-alignment left" href="/blog/2017/05/10/tech-notes-48/" title="Previous Post: 平安好房iOS开发团队技术周报（第四十八期）">&laquo; 平安好房iOS开发团队技术周报（第四十八期）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/09/24/tech-notes-19/" title="Next Post: 平安好房iOS开发团队技术周报（第十九期）">平安好房iOS开发团队技术周报（第十九期） &raquo;</a>
       
     </p>
   </footer>
@@ -274,8 +256,8 @@ $(document).bind('DOMNodeInserted', function(event) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://balloonsys.github.io/blog/2016/09/17/tech-notes-18/';
-        var disqus_url = 'http://balloonsys.github.io/blog/2016/09/17/tech-notes-18/';
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2017/05/19/tech-notes-49/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2017/05/19/tech-notes-49/';
         var disqus_script = 'embed.js';
       
     (function () {
