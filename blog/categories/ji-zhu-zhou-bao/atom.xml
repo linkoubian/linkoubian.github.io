@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2017-05-20T00:52:42+08:00</updated>
+  <updated>2018-09-11T09:24:45+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -31,7 +31,7 @@
 
 <h2>开发</h2>
 
-<h4>1) <a href="http://ziecho.com/post/ios/2016-08-04">RAC 中的 @weakify、@strongify 是如何装逼的</a> By 郑梓毅</h4>
+<h4>1) <a href="http://ziecho.com/post/ios/2016-08-04">剖析 RAC 中的 @weakify、@strongify</a> By 郑梓毅</h4>
 
 <p>RAC 中的这个 weakify 版本脱胎于 libextobjc 项目。如果想自己实现一个简化版（只接收一个参数），可以参考 Arek Holko 的<a href="http://holko.pl/2015/05/31/weakify-strongify/">文章</a>。</p>
 
