@@ -312,13 +312,13 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
 
 <p>本人习惯使用 SQLPro for SQLite 工具查看 sqlite 数据库文件，将 docSet.dsidx 重命名为 docSet.sqlite 即可双击打开。其中 <code>ZTOKENTYPE</code> 表中的 <strong>func</strong>，<strong>instm</strong>，<strong>clm</strong>，<strong>intfm</strong>，<strong>intfcm</strong> 五种类型是我们要关注的：</p>
 
-<ul>
+<ol>
 <li>func 表示全局 C 函数</li>
 <li>instm 表示实例方法 instance method</li>
 <li>clm 表示类方法 class method</li>
 <li>intfm 表示协议方法，- 开头</li>
 <li>intfcm 表示协议方法，+ 开头</li>
-</ul>
+</ol>
 
 
 <blockquote><p>凭感觉猜测 intf 是 interface 的缩写，interface 即 OOP 的接口而不是 Obj-C 定义类的那个 interface</p></blockquote>
