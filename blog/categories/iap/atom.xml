@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Iap | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/iap/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2018-09-11T09:24:45+08:00</updated>
+  <updated>2018-09-11T10:45:07+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -102,25 +102,41 @@
 <p>上面用到的completeTransaction等方法，一方面根据“交易”的状态去设置User Defaults中对应商品的状态（是否已购买）；另一方面调用finishTransaction以通知苹果服务器相关的通知已收到。</p>
 
 <p>示例代码如下，
-``` objc
-- (void)completeTransaction:(SKPaymentTransaction *)transaction
-{
-    // Cache purchased product.
-    [self.purchasedProductIdentifiers addObject:productIdentifier];</p>
-
-<pre><code>// Persist purchased product.
-[[NSUserDefaults standardUserDefaults] setBool:YES forKey:productIdentifier];
-[[NSUserDefaults standardUserDefaults] synchronize];
-
-// Notify product purchased, so then UI can be updated accordingly
-[[NSNotificationCenter defaultCenter] postNotificationName:ProductPurchasedNotification object:productIdentifier];
-
-// Removes transaction from the queue.
-[[SKPaymentQueue defaultQueue] finishTransaction:transaction];
-</code></pre>
-
-<p>}
-```</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">completeTransaction:</span><span class="p">(</span><span class="bp">SKPaymentTransaction</span> <span class="o">*</span><span class="p">)</span><span class="nv">transaction</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="c1">// Cache purchased product.</span>
+</span><span class='line'>    <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">purchasedProductIdentifiers</span> <span class="nl">addObject</span><span class="p">:</span><span class="n">productIdentifier</span><span class="p">];</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="c1">// Persist purchased product.</span>
+</span><span class='line'><span class="p">[[</span><span class="bp">NSUserDefaults</span> <span class="n">standardUserDefaults</span><span class="p">]</span> <span class="nl">setBool</span><span class="p">:</span><span class="nb">YES</span> <span class="nl">forKey</span><span class="p">:</span><span class="n">productIdentifier</span><span class="p">];</span>
+</span><span class='line'><span class="p">[[</span><span class="bp">NSUserDefaults</span> <span class="n">standardUserDefaults</span><span class="p">]</span> <span class="n">synchronize</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Notify product purchased, so then UI can be updated accordingly</span>
+</span><span class='line'><span class="p">[[</span><span class="bp">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">postNotificationName</span><span class="p">:</span><span class="n">ProductPurchasedNotification</span> <span class="nl">object</span><span class="p">:</span><span class="n">productIdentifier</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Removes transaction from the queue.</span>
+</span><span class='line'><span class="p">[[</span><span class="bp">SKPaymentQueue</span> <span class="n">defaultQueue</span><span class="p">]</span> <span class="nl">finishTransaction</span><span class="p">:</span><span class="n">transaction</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>其中ProductPurchasedNotification是一个自定义消息，收到该消息的控制器并可以做出适当的响应，比如隐藏掉购买按钮or修改按钮的文字or弹框提示用户“购买成功”&hellip;</p>
 

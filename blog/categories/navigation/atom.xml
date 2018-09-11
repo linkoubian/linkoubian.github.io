@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Navigation | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/navigation/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2018-09-11T09:24:45+08:00</updated>
+  <updated>2018-09-11T10:45:07+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -28,54 +28,92 @@
 <h3>方法一</h3>
 
 <p>给一个按钮添加点击事件，在事件响应里：
-``` objc
-    UIViewController <em>detailPage = [UIViewController new];
-    UIViewController </em>anotherPage = [UIViewController new];</p>
-
-<pre><code>[self.navigationController pushViewController:detailPage animated:YES];
-
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-    [self.navigationController pushViewController:anotherPage animated:YES];
-});
-</code></pre>
-
-<pre><code>这样一点击此按钮，便可模拟本文着重讨论的问题。
-
-### 方法二
-实际项目里有两个基于View实现的控件，点击时首先缩放一下控件里的图标，然后push一个页面。当点击控件A后，若快速点击控件B，就会发生nested push问题。
-
-方法二中控件带有一定时长的缩放动画，给了用户足够的反应时间去连续点击。而方法一中是基于GCD代码模拟，可精确控制nested push的间隔。示例代码参见[PushVC示例之Initial Commit](https://github.com/balloonsys/PushVC)
-
-## 问题剖析
-首先，从UINavigationController这一层面考虑，在第一个push的动画还没完成，到来的第二个push请求，是否可以忽略？印象中貌似iOS 6就是这么处理的。
-
-然后，我们也可以从UI层面控制，尽量不要在push过程中发起第二次push请求。
-
-## 解决方案
-UINavigationController在push过程中，如何忽略其他push请求呢？查看其Delegate，发现其中有如下两个方法：
-</code></pre>
-
-<ul>
-<li>navigationController:willShowViewController:animated:</li>
-<li>navigationController:didShowViewController:animated:
-```</li>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="bp">UIViewController</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="n">detailPage</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIViewController</span> <span class="n">new</span><span class="p">];</span>
+</span><span class='line'><span class="bp">UIViewController</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="n">anotherPage</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIViewController</span> <span class="n">new</span><span class="p">];</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">pushViewController</span><span class="p">:</span><span class="n">detailPage</span> <span class="nl">animated</span><span class="p">:</span><span class="nb">YES</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">dispatch_after</span><span class="p">(</span><span class="n">dispatch_time</span><span class="p">(</span><span class="n">DISPATCH_TIME_NOW</span><span class="p">,</span> <span class="mf">0.3</span> <span class="o">*</span> <span class="n">NSEC_PER_SEC</span><span class="p">),</span> <span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
+</span><span class='line'><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">pushViewController</span><span class="p">:</span><span class="n">anotherPage</span> <span class="nl">animated</span><span class="p">:</span><span class="nb">YES</span><span class="p">];</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="err">这样一点击此按钮，便可模拟本文着重讨论的问题。</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp">### 方法二</span>
+</span><span class='line'><span class="err">实际项目里有两个基于</span><span class="n">View</span><span class="err">实现的控件，点击时首先缩放一下控件里的图标，然后</span><span class="n">push</span><span class="err">一个页面。当点击控件</span><span class="n">A</span><span class="err">后，若快速点击控件</span><span class="n">B</span><span class="err">，就会发生</span><span class="n">nested</span> <span class="n">push</span><span class="err">问题。</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">方法二中控件带有一定时长的缩放动画，给了用户足够的反应时间去连续点击。而方法一中是基于</span><span class="n">GCD</span><span class="err">代码模拟，可精确控制</span><span class="n">nested</span> <span class="n">push</span><span class="err">的间隔。示例代码参见</span><span class="p">[</span><span class="n">PushVC</span><span class="err">示例之</span><span class="n">Initial</span> <span class="n">Commit</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/balloonsys/PushVC)</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp">## 问题剖析</span>
+</span><span class='line'><span class="err">首先，从</span><span class="bp">UINavigationController</span><span class="err">这一层面考虑，在第一个</span><span class="n">push</span><span class="err">的动画还没完成，到来的第二个</span><span class="n">push</span><span class="err">请求，是否可以忽略？印象中貌似</span><span class="n">iOS</span> <span class="mi">6</span><span class="err">就是这么处理的。</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">然后，我们也可以从</span><span class="n">UI</span><span class="err">层面控制，尽量不要在</span><span class="n">push</span><span class="err">过程中发起第二次</span><span class="n">push</span><span class="err">请求。</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp">## 解决方案</span>
+</span><span class='line'><span class="bp">UINavigationController</span><span class="err">在</span><span class="n">push</span><span class="err">过程中，如何忽略其他</span><span class="n">push</span><span class="err">请求呢？查看其</span><span class="n">Delegate</span><span class="err">，发现其中有如下两个方法：</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="nl">navigationController</span><span class="p">:</span><span class="nl">willShowViewController</span><span class="p">:</span><span class="nl">animated</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="nl">navigationController</span><span class="p">:</span><span class="nl">didShowViewController</span><span class="p">:</span><span class="nl">animated</span><span class="p">:</span>
+</span></code></pre></td></tr></table></div></figure></li>
 </ul>
 
 
 <p>所以，我们可以基于UINavigationController建立NavController，增加一个名为inTransition的BOOL属性。将NavController的delegate指向自身，并实现上述两个delegate方法。在willShow中将inTransition置为YES，在didShow中置为NO。接下来重写pushViewController:animated方法：
-``` objc
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {</p>
-
-<pre><code>if (self.inTransition) {
-    NSLog(@“Ignore push request when top page is still animating”);
-    return;
-}
-
-[super pushViewController:viewController animated:animated];
-</code></pre>
-
-<p>}
-```</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pushViewController:</span><span class="p">(</span><span class="bp">UIViewController</span> <span class="o">*</span><span class="p">)</span><span class="nv">viewController</span> <span class="nf">animated:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">animated</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">if</span> <span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">inTransition</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(@</span><span class="err">“</span><span class="n">Ignore</span> <span class="n">push</span> <span class="n">request</span> <span class="n">when</span> <span class="n">top</span> <span class="n">page</span> <span class="n">is</span> <span class="n">still</span> <span class="n">animating</span><span class="err">”</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">return</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">[</span><span class="nb">super</span> <span class="nl">pushViewController</span><span class="p">:</span><span class="n">viewController</span> <span class="nl">animated</span><span class="p">:</span><span class="n">animated</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>此时运行模拟项目，快速点击两个控件后，控制台会出现“Ignore push request when top page is still animating”消息，说明使用NavController可以像iOS 6的UINavigationController那样成功避免Nested Push问题。</p>
 
@@ -84,54 +122,90 @@ UINavigationController在push过程中，如何忽略其他push请求呢？查�
 <h2>前端控制</h2>
 
 <p>如何在动画过程中，避免另一个控件发起Push请求？我们可以在第一个控件的动画过程中，忽略触摸事件即可。核心代码是UIApplication的beginIgnoringInteractionEvents和endIgnoringInteractionEvents方法。主要代码如下：
-``` objc
-- (void)tapped {</p>
-
-<pre><code>if (self.iconView) {
-    if ([self.iconView.layer animationForKey:TAP_ANIMATION_KEY] == nil) {
-        [self.iconView.layer addAnimation:[self tapAnimation] forKey:TAP_ANIMATION_KEY];
-
-        [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
-        self.inAnimating = YES;
-
-    } else {
-        NSLog(@“Do NOT tap until animation for %@ stopped”, self);
-    }
-} else {
-    [super tapped];
-}
-</code></pre>
-
-<p>}</p>
-
-<ul>
-<li><p>(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {</p>
-
-<p>  [[UIApplication sharedApplication] endIgnoringInteractionEvents];
-  self.inAnimating = NO;</p>
-
-<p>  [super tapped];
-}
-```</p></li>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">tapped</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">if</span> <span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">iconView</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">([</span><span class="nb">self</span><span class="p">.</span><span class="n">iconView</span><span class="p">.</span><span class="n">layer</span> <span class="nl">animationForKey</span><span class="p">:</span><span class="n">TAP_ANIMATION_KEY</span><span class="p">]</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">iconView</span><span class="p">.</span><span class="n">layer</span> <span class="nl">addAnimation</span><span class="p">:[</span><span class="nb">self</span> <span class="n">tapAnimation</span><span class="p">]</span> <span class="nl">forKey</span><span class="p">:</span><span class="n">TAP_ANIMATION_KEY</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="p">[[</span><span class="bp">UIApplication</span> <span class="n">sharedApplication</span><span class="p">]</span> <span class="n">beginIgnoringInteractionEvents</span><span class="p">];</span>
+</span><span class='line'>        <span class="nb">self</span><span class="p">.</span><span class="n">inAnimating</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">NSLog</span><span class="p">(@</span><span class="err">“</span><span class="n">Do</span> <span class="n">NOT</span> <span class="n">tap</span> <span class="n">until</span> <span class="n">animation</span> <span class="k">for</span> <span class="o">%</span><span class="p">@</span> <span class="n">stopped</span><span class="err">”</span><span class="p">,</span> <span class="nb">self</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="nb">super</span> <span class="n">tapped</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">animationDidStop</span><span class="p">:(</span><span class="bp">CAAnimation</span> <span class="o">*</span><span class="p">)</span><span class="n">anim</span> <span class="nl">finished</span><span class="p">:(</span><span class="kt">BOOL</span><span class="p">)</span><span class="n">flag</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="p">[[</span><span class="bp">UIApplication</span> <span class="n">sharedApplication</span><span class="p">]</span> <span class="n">endIgnoringInteractionEvents</span><span class="p">];</span>
+</span><span class='line'>  <span class="nb">self</span><span class="p">.</span><span class="n">inAnimating</span> <span class="o">=</span> <span class="nb">NO</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="p">[</span><span class="nb">super</span> <span class="n">tapped</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p></li>
 </ul>
 
 
 <p>当然也可以判断是否有其他控件处于inAnimating状态，以决定是否忽略当前控件的触摸事件（gestureRecognizer:shouldReceiveTouch:）。</p>
 
 <p>如何避免在Push过程中再次发送Push请求呢？我们可以在UIGestureRecognizerDelegate方法（方法名前面刚刚提过）中判断：
-``` objc
-- (BOOL)gestureRecognizer:(UIGestureRecognizer <em>)recogniser shouldReceiveTouch:(UITouch </em>)touch {</p>
-
-<pre><code>if ([self.navigationController isKindOfClass:[NavController class]]) {
-    NavController *nav = (NavController *)self.navigationController;
-    return !nav.inTransition;
-}
-
-return YES;
-</code></pre>
-
-<p>}
-```</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">gestureRecognizer:</span><span class="p">(</span><span class="bp">UIGestureRecognizer</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">recogniser</span> <span class="nf">shouldReceiveTouch:</span><span class="p">(</span><span class="bp">UITouch</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">touch</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">if</span> <span class="p">([</span><span class="nb">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">isKindOfClass</span><span class="p">:[</span><span class="n">NavController</span> <span class="k">class</span><span class="p">]])</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">NavController</span> <span class="o">*</span><span class="n">nav</span> <span class="o">=</span> <span class="p">(</span><span class="n">NavController</span> <span class="o">*</span><span class="p">)</span><span class="nb">self</span><span class="p">.</span><span class="n">navigationController</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">return</span> <span class="o">!</span><span class="n">nav</span><span class="p">.</span><span class="n">inTransition</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>完整的代码可以从Github获得，<a href="https://github.com/balloonsys/PushVC">PushVC之最新commit</a>。</p>
 

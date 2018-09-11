@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 3rd-party-lib | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/3rd-party-lib/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2018-09-11T09:24:45+08:00</updated>
+  <updated>2018-09-11T10:45:07+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -151,33 +151,57 @@ if ([url hasPrefix:@"image://"]) {
 </code></p>
 
 <p>当需要加载某个cell view时，会调用viewForItemAtIndex，我们需在该方法里确保用于显示新闻头条图片的imageView被构建并设置相应地image。
-``` objc
-- (UIView <em>)carousel:(iCarousel </em>)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView <em>)view
-{
-    UIImageView </em>headlineImageView = nil;</p>
-
-<pre><code>// Create new view if no view is available for recycling
-if (view == nil) {
-    view = [[UIView alloc] initWithFrame:self.headlinesView.bounds];
-    headlineImageView = [[UIImageView alloc] initWithFrame:view.bounds];
-    [headlineImageView setImage:[UIImage imageNamed:@"Headline_Placehold"]];
-    headlineImageView.tag = kHeadlineImageViewTag;
-    [view addSubview:headlineImageView];
-}
-else {
-    headlineImageView = (UIImageView *)[view viewWithTag:kHeadlineImageViewTag];
-}
-
-// Load image for headline news
-if (index &lt; self.headlineNews.count) {
-    [headlineImageView setImageWithURL:[NSURL URLWithString:[self.headlineNews[index] img]]];
-}
-
-return view;
-</code></pre>
-
-<p>}
-```
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">-</span> <span class="p">(</span><span class="bp">UIView</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nf">carousel:</span><span class="p">(</span><span class="n">iCarousel</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">carousel</span> <span class="nf">viewForItemAtIndex:</span><span class="p">(</span><span class="bp">NSUInteger</span><span class="p">)</span><span class="nv">index</span> <span class="nf">reusingView:</span><span class="p">(</span><span class="bp">UIView</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">view</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="bp">UIImageView</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="n">headlineImageView</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="c1">// Create new view if no view is available for recycling</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="n">view</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">view</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">UIView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame</span><span class="p">:</span><span class="nb">self</span><span class="p">.</span><span class="n">headlinesView</span><span class="p">.</span><span class="n">bounds</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">headlineImageView</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">UIImageView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame</span><span class="p">:</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">headlineImageView</span> <span class="nl">setImage</span><span class="p">:[</span><span class="bp">UIImage</span> <span class="nl">imageNamed</span><span class="p">:</span><span class="s">@&quot;Headline_Placehold&quot;</span><span class="p">]];</span>
+</span><span class='line'>    <span class="n">headlineImageView</span><span class="p">.</span><span class="n">tag</span> <span class="o">=</span> <span class="n">kHeadlineImageViewTag</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">view</span> <span class="nl">addSubview</span><span class="p">:</span><span class="n">headlineImageView</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">headlineImageView</span> <span class="o">=</span> <span class="p">(</span><span class="bp">UIImageView</span> <span class="o">*</span><span class="p">)[</span><span class="n">view</span> <span class="nl">viewWithTag</span><span class="p">:</span><span class="n">kHeadlineImageViewTag</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// Load image for headline news</span>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="n">index</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="nb">self</span><span class="p">.</span><span class="n">headlineNews</span><span class="p">.</span><span class="n">count</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">headlineImageView</span> <span class="nl">setImageWithURL</span><span class="p">:[</span><span class="bp">NSURL</span> <span class="nl">URLWithString</span><span class="p">:[</span><span class="nb">self</span><span class="p">.</span><span class="n">headlineNews</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="n">img</span><span class="p">]]];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">return</span> <span class="n">view</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 上面代码中的headlineNews是一个数组，用来存从远程服务器获得的头条新闻（Model）列表，其中img属性（头条新闻的字段）为对应图片的URL。当加载cell view时headlineNews可能还没有数据，所以上述代码做了个判断，即if (index &lt; self.headlineNews.count)。</p>
 
 <p>当远端数据加载完毕，我们可以调用[self.headlinesView reloadData]以更新界面。</p>

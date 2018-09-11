@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python, | Balloonsys Inc.]]></title>
   <link href="http://balloonsys.github.io/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://balloonsys.github.io/"/>
-  <updated>2018-09-11T09:24:45+08:00</updated>
+  <updated>2018-09-11T10:45:07+08:00</updated>
   <id>http://balloonsys.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -220,18 +220,27 @@ virtualenv venv
 <h2>测试Flask是否正常工作</h2>
 
 <p>编写一个Hello World程序，如下：
-``` python
-from flask import Flask</p>
-
-<p>app = Flask(<strong>name</strong>)</p>
-
-<p>@app.route(&lsquo;/&rsquo;)
-def index():
-    return &ldquo;Hello, World!&rdquo;</p>
-
-<p>if <strong>name</strong> == &lsquo;<strong>main</strong>&rsquo;:
-    app.run(debug = True)
-```
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nd">@app.route</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/&amp;</span><span class="n">rsquo</span><span class="p">;)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span><span class='line'>    <span class="k">return</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="err">!</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">if</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">==</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">main</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;&amp;</span><span class="n">rsquo</span><span class="p">;:</span>
+</span><span class='line'>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 保存为~/Desktop/todo-api/app.py，添加可执行权限后，敲python app.py开始运行Flask。此时打开浏览器，访问localhost:5000即可看到Hello, World!</p>
 
 <h2>开始设计RESTful API</h2>
@@ -239,33 +248,57 @@ def index():
 <h3>获取所有的tasks</h3>
 
 <p>一个task由id、title、description、done等属性构成，获取task列表的url可以设计成/todo/tasks。具体代码如下，
-``` python
-from flask import Flask, jsonify</p>
-
-<p>app = Flask(<strong>name</strong>)</p>
-
-<p>tasks = [
-    {
-        &lsquo;id&rsquo;: 1,
-        &lsquo;title&rsquo;: u'Buy groceries',
-        &lsquo;description&rsquo;: u'Milk, Cheese, Pizza, Fruit, Tylenol',
-        &lsquo;done&rsquo;: False
-    },
-    {
-        &lsquo;id&rsquo;: 2,
-        &lsquo;title&rsquo;: u'Learn Python',
-        &lsquo;description&rsquo;: u'Need to find a good Python tutorial on the web',
-        &lsquo;done&rsquo;: False
-    },
-]</p>
-
-<p>@app.route(&lsquo;/todo/tasks&rsquo;, methods = [&lsquo;GET&rsquo;])
-def get_tasks():
-    return jsonify({&lsquo;tasks&rsquo;: tasks})</p>
-
-<p>if <strong>name</strong> == &lsquo;<strong>main</strong>&rsquo;:
-    app.run(debug = True)
-```
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="nb">id</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span class='line'>        <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">title</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span> <span class="s">u&#39;Buy groceries&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">description</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span> <span class="s">u&#39;Milk, Cheese, Pizza, Fruit, Tylenol&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">done</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span> <span class="bp">False</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="nb">id</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span> <span class="mi">2</span><span class="p">,</span>
+</span><span class='line'>        <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">title</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span> <span class="s">u&#39;Learn Python&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">description</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span> <span class="s">u&#39;Need to find a good Python tutorial on the web&#39;</span><span class="p">,</span>
+</span><span class='line'>        <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">done</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span> <span class="bp">False</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'><span class="p">]</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nd">@app.route</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/</span><span class="n">todo</span><span class="o">/</span><span class="n">tasks</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">GET</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;])</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_tasks</span><span class="p">():</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">tasks</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span> <span class="n">tasks</span><span class="p">})</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">if</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">==</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">main</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;&amp;</span><span class="n">rsquo</span><span class="p">;:</span>
+</span><span class='line'>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 因为Flask运行在debug模式下会自动reload，所以代码写完后保存文件即可。</p>
 
 <p>Mac上有一款名为<a href="https://itunes.apple.com/app/id584653203?ls=1&amp;mt=12">Paw</a>的HTTP Client，算是我见过、用过的各种API测试工具中的佼佼者，力荐。</p>
@@ -391,19 +424,29 @@ def delete_task(task_id):
 <h2>为WEB服务增加安全机制</h2>
 
 <p>基于Flask的HTTBasicAuth扩展，定义两个函数如下，
-``` python
-auth = HTTPBasicAuth()</p>
-
-<p>@auth.get_password
-def get_password(username):
-    if username == &lsquo;linkoubian&rsquo;:
-        return &lsquo;7c4a8d09ca3762af61e59520943dc26494f8941b&rsquo;
-    return None</p>
-
-<p>@auth.error_handler
-def unauthorized():
-    return make_response(jsonify( { &lsquo;error&rsquo;: &lsquo;Unauthorized access&rsquo; } ), 401)
-```</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">auth</span> <span class="o">=</span> <span class="n">HTTPBasicAuth</span><span class="p">()</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nd">@auth.get_password</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">get_password</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">username</span> <span class="o">==</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">linkoubian</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span>
+</span><span class='line'>        <span class="k">return</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="mi">7</span><span class="n">c4a8d09ca3762af61e59520943dc26494f8941b</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">return</span> <span class="bp">None</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nd">@auth.error_handler</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">unauthorized</span><span class="p">():</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">make_response</span><span class="p">(</span><span class="n">jsonify</span><span class="p">(</span> <span class="p">{</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">error</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">Unauthorized</span> <span class="n">access</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span> <span class="p">}</span> <span class="p">),</span> <span class="mi">401</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></p>
 
 <p>其中get_password方法是返回指定用户的密码信息（通常是从数据库用户表查询得到），当此处返回的值和客户端传递的值匹配时（匹配过程由HTTPBasicAuth完成）成功，否则执行error_handler返回错误信息。</p>
 

@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>关于 iOS 私有 API 扫描 - Balloonsys Inc.</title>
+  <meta name="author" content="Linkou Bian">
+
+  
+  <meta name="description" content="近期研究了关于私有 API 扫描这个主题。研读了业界现有的相关文章后发现，很多都是简单的摘录，也不对存在的谬误做任何点评。本人在阅读了网易游戏开源的 iOS private api checker 项目后，对如何构建私有 API 库、该项目又是如何识别 APP 中的私有 API、该方案存在哪些问题 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://balloonsys.github.io/blog/2018/09/11/scan-private-api/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Balloonsys Inc." type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+function addBlankTargetForLinks () {
+  $('a[href^="http"]').each(function(){
+      $(this).attr('target', '_blank');
+  });
+}
+
+$(document).bind('DOMNodeInserted', function(event) {
+ addBlankTargetForLinks();
+});
+</script>
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Balloonsys Inc.</a></h1>
+  
+    <h2>Just a blog now.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="balloonsys.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">关于 iOS 私有 API 扫描</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2018-09-11T09:23:16+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2018</span></span> <span class='time'>9:23 am</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://balloonsys.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>近期研究了关于私有 API 扫描这个主题。研读了业界现有的相关文章后发现，很多都是简单的摘录，也不对存在的谬误做任何点评。本人在阅读了网易游戏开源的 iOS private api checker 项目后，对如何构建私有 API 库、该项目又是如何识别 APP 中的私有 API、该方案存在哪些问题，一一做了阐述。</p>
+
+<!--more-->
+
+
+<h2>审核案例</h2>
+
+<ol>
+<li><p><a href="http://www.cocoachina.com/bbs/read.php?tid=12514&amp;page=1">自定义方法和私有 API 重名</a></p>
+
+<p>APP 没有被拒绝，但是 Apple 提醒下次更新时修改相关 API 名称。</p>
+
+<p>然而多年前，广为使用的 Three20 里包含和私有 API 重名的<a href="https://stackoverflow.com/questions/1865778/iphone-app-rejected-because-of-three20-non-public-api-lineheight-and-previo">方法</a>，导致很多使用该框架的 APP 审核不通过。</p></li>
+<li><p><a href="https://stackoverflow.com/questions/18756906/apple-reject-my-app-because-using-private-api-allowsanyhttpscertificateforhos">使用了非公开方法</a></p>
+
+<p>Apple 发现 APP 使用了非公开的方法 <strong><code>allowsAnyHTTPSCertificateForHost:</code></strong>，拒绝的同时还提供开发者自查的方法。</p></li>
+<li><p>未执行到的私有 API 调用</p>
+
+<p>Qzone 中曾自定义接口 <strong><code>_define:</code></strong> 但是并没有调用过，结果也被 Apple 发现并拒绝上架。<code>UITextView</code> 导出的头文件中有该方法。</p></li>
+<li><p><a href="https://www.nytimes.com/2017/04/23/technology/travis-kalanick-pushes-uber-and-himself-to-the-precipice.html">Tim Cook 威胁下架 Uber 应用</a></p>
+
+<p>Uber 使用私有 API获取设备的序列号，苹果 CEO 严厉斥责该行为并威胁要下架。</p></li>
+</ol>
+
+
+<h2>调用方式</h2>
+
+<h3>直接调用</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span> <span class="n">recursiveDescription</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>因为私有 API 没有暴露出来，编译会报错。可以添加匿名 <code>Category</code> 声明下私有方法。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">@interface</span> <span class="bp">UIView</span><span class="p">()</span>
+</span><span class='line'><span class="o">-</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">recursiveDescription</span><span class="p">;</span>
+</span><span class='line'><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>字符拼接</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="bp">NSArray</span> <span class="o">*</span><span class="n">parts</span> <span class="o">=</span> <span class="l">@[</span><span class="s">@&quot;_priva&quot;</span><span class="p">,</span> <span class="s">@&quot;teMethod&quot;</span><span class="l">]</span><span class="p">;</span>
+</span><span class='line'><span class="bp">NSString</span> <span class="o">*</span><span class="n">selectorString</span> <span class="o">=</span> <span class="p">[</span><span class="n">parts</span> <span class="nl">componentsJoinedByString</span><span class="p">:</span><span class="s">@&quot;&quot;</span><span class="p">];</span>
+</span><span class='line'><span class="p">[</span><span class="nb">self</span> <span class="nl">performSelector</span><span class="p">:</span><span class="n">NSSelectorFromString</span><span class="p">(</span><span class="n">selectorString</span><span class="p">)</span> <span class="nl">withObject</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>代码混淆</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="c1">// statusBar</span>
+</span><span class='line'><span class="bp">NSData</span> <span class="o">*</span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSData</span> <span class="nl">dataWithBytes</span><span class="p">:(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="p">[]){</span><span class="mh">0x73</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">,</span> <span class="mh">0x61</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">,</span> <span class="mh">0x75</span><span class="p">,</span> <span class="mh">0x73</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">,</span> <span class="mh">0x61</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">}</span> <span class="nl">length</span><span class="p">:</span><span class="mi">9</span><span class="p">];</span>
+</span><span class='line'><span class="bp">NSString</span> <span class="o">*</span><span class="n">key</span> <span class="o">=</span> <span class="p">[[</span><span class="bp">NSString</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithData</span><span class="p">:</span><span class="n">data</span> <span class="nl">encoding</span><span class="p">:</span><span class="n">NSASCIIStringEncoding</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>检测方法</h2>
+
+<h3>符号表</h3>
+
+<p>用 <code>nm</code>, <code>otool</code> 等工具导出二进制包的函数符号表，以检查私有 API 的调用。缺点是无法检测字符串拼接方法的私有 API 调用。</p>
+
+<h3>动态扫描</h3>
+
+<p>动态扫描需要应用运行起来，每当调用方法时就判断是否是私有 API，但是效率会很低，而且不能保证代码完全覆盖。</p>
+
+<h3>静态分析</h3>
+
+<p>在对二进制文件反汇编结果的基础上，进行静态分析：</p>
+
+<ol>
+<li>找出动态调用 API 方法如 <code>performSelector:</code> ，以及调用对象的类</li>
+<li>检查参数，如果参数是拼接方法生成，推导求得拼接的结果</li>
+</ol>
+
+
+<p>如何推导，请阅读加拿大 <code>Laval University</code> 发表的题为 <code>Static Analysis of Binary Code to Isolate Malicious Behaviors</code> 的<a href="https://pdfs.semanticscholar.org/70cd/4cd765313852369a2100301fde45dc09fbd5.pdf">论文</a>。如果拼接字符串由服务端下发，依旧可以避开检查。</p>
+
+<h2>网易方案</h2>
+
+<h3>构建私有 API 库</h3>
+
+<p>从 <code>Github</code> 下载 <a href="https://github.com/NetEaseGame/iOS-private-api-checker">iOS-private-api-checker</a> 后，可使用 WEB 的方式上传一个 <code>IPA</code> 进行扫描。我们可以使用 virtualenv 创建一个虚拟环境，来安装所需的依赖库，以免影响系统级的 Python 环境。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="cp"># 创建虚拟环境</span>
+</span><span class='line'><span class="n">virtualenv</span> <span class="n">venv</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp"># 启用虚拟环境</span>
+</span><span class='line'><span class="p">.</span> <span class="n">venv</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp"># 安装依赖的库</span>
+</span><span class='line'><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp"># 启动监测服务</span>
+</span><span class='line'><span class="n">python</span> <span class="n">run_web</span><span class="p">.</span><span class="n">py</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>工程的 <code>app/templates/main/index_page.html</code> 里介绍了检查的原理：</p>
+
+<ol>
+<li>通过 <code>class-dump</code> 导出 <code>Frameworks</code> 及 <code>PrivateFrameworks</code> 的头文件，分别设置为集合 PU 和 PR</li>
+<li>通过 Xcode 代码提示的 SQLite 数据库查询出所有的 documented API，设置为集合 DA</li>
+<li>那么 PU - DA 为公有 Framework 中的私有 API，设置为 A</li>
+<li>PR 为私有 Framework 中的 API，都不能使用。则私有 API 集合 PRAPI = A + PR</li>
+<li>使用 <code>class-dump</code> 反编译 ipa 中的 APP 文件，然后和 PRAPI 集合取交集即可获得</li>
+</ol>
+
+
+<p>但是，项目根目录下的 <code>README.md</code> 写道：</p>
+
+<blockquote><p>私有的api ＝ (class-dump Framework下的库生成的头文件中的api - (Framework下的头文件里的api = 有文档的api + 没有文档的api)) + PrivateFramework下的api</p></blockquote>
+
+<p>我第一眼看到这个公式，对其中每一个运算项的含义不是非常肯定，对括号里写上等于号也是有疑问的。另外，这个公式里还提到了 Framework 下的头文件里的 API，而在 index_page.html 中完全没有提到。所以，<strong>建议先无视这个公式</strong>，对 index_page.html 里的文字也不要纠结。</p>
+
+<p>阅读 <code>build_api_db.py</code> 时，看到方法 <code>rebuild_private_api</code> 中的注释里写道：</p>
+
+<blockquote><p>set_E private api<br/>
+undocument_api = set_B - set_C<br/>
+set_E = set_A - set_C - undocument_api = set_A - set_B<br/>
+if include_private_framework: set_E = set_E + set_D</p></blockquote>
+
+<p>单从集合运算的角度看 set_E = set_A - set_C - undocument_api 和 set_A - set_B 能不能划等号？讲道理，应该是 <strong>set_E = set_A - (set_B + set_C)</strong> 吧。这里的 <code>+</code> 是套用原作者的简化写法，指集合的 <code>∪</code> 运算。所以，<strong>建议无视这个注释</strong>。</p>
+
+<p>注释表述的虽有问题，但通读代码发现实际实现的逻辑是没有问题的。现根据 <code>build_api_db.py</code> 及相关的代码所对应的构建私有 API 库的原理做一简要阐述：</p>
+
+<ol>
+<li>set_A，表示从系统 Frameworks 目录下所有的 <code>.framework</code> 文件 dump 出的头文件解析出的 API 集合。对应 <code>ios_private.db</code> 中的 <code>framework_dump_apis</code> 表记录。</li>
+<li>set_B，表示从系统 Frameworks 目录下所有的 <code>.framework</code> 文件中的头文件解析出的 API 集合。对应 <code>ios_private.db</code> 中的 <code>framework_header_apis</code> 表记录。</li>
+<li>set_C，表示从 docSet 中索引文件解析出来的 API 集合。对应 <code>ios_private.db</code> 中的 <code>document_apis</code> 表记录。</li>
+<li>set_D，表示从系统 PrivateFrameworks 目录下所有的 <code>.framework</code> 文件 dump 出的头文件解析出的 API 集合。对应 <code>ios_private.db</code> 中的 <code>private_framework_dump_apis</code> 表记录。</li>
+<li>set_E，表示私有 API，从 set_A 中识别出的私有 API 对应 <code>framework_private_apis</code> 中的记录，表 <code>private_apis</code> 中的是加上 set_D 的记录。</li>
+<li>如果 <code>rebuild_sdk_private_api</code> 函数的第二个参数是 <code>False</code> 则 set_D 不会被加入到 <code>private_apis</code> 表中。</li>
+</ol>
+
+
+<h4>构建集合 A</h4>
+
+<p>api_utils.py 中已经封装好了使用 class-dump 导出 framework 的头文件。所以不需要  DumpFrameworks.pl 这类的外部脚本，而且 DumpFrameworks.pl 生成的头文件目录结构和本项目不吻合。也不需要下载 <a href="http://seriot.ch">Nicolas Seiot</a> 基于 <a href="https://github.com/nst/RuntimeBrowser">RuntimeBrowser</a> 导出的<a href="https://github.com/nst/iOS-Runtime-Headers">头文件</a>。</p>
+
+<p>我们需要做的是，保证目标系统 (比如 8.1) 的模拟器在本机已经安装，并且知道 Frameworks 及 PrivateFrameworks 的路径。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Developer</span><span class="o">/</span><span class="n">CoreSimulator</span><span class="o">/</span><span class="n">Profiles</span><span class="o">/</span><span class="n">Runtimes</span><span class="o">/</span><span class="n">iOS</span> <span class="mf">8.1</span><span class="p">.</span><span class="n">simruntime</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">Resources</span><span class="o">/</span><span class="n">RuntimeRoot</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>需要注意的是，上述路径 iOS 和 8.1 之间存在一个空格。这个空格会引起执行 class-dump 的脚本出问题，具体如何修复后面会给出建议。</p>
+
+<p>根据我的实验结果，将上述路径的 8.1 改成 9.3 或者 10.3 即为不同系统下的路径。iOS 11.4 的路径是：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">/</span><span class="n">Applications</span><span class="o">/</span><span class="n">Xcode</span><span class="p">.</span><span class="n">app</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">Developer</span><span class="o">/</span><span class="n">Platforms</span><span class="o">/</span><span class="n">iPhoneOS</span><span class="p">.</span><span class="n">platform</span><span class="o">/</span><span class="n">Developer</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">CoreSimulator</span><span class="o">/</span><span class="n">Profiles</span><span class="o">/</span><span class="n">Runtimes</span><span class="o">/</span><span class="n">iOS</span><span class="p">.</span><span class="n">simruntime</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">Resources</span><span class="o">/</span><span class="n">RuntimeRoot</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>我们不需要记住这些路径，需要的是掌握获取路径的方法，用 find 命令也是 OK 的。</p>
+
+<h4>构建集合 B</h4>
+
+<p>Frameworks 路径已经在构建集合 A 的部分介绍过，<code>api_utils.py</code> 中 <code>framework_header_apis</code> 方法就是用于构建 Frameworks 目录下所有的 <code>.framework</code> 文件中的头文件解析出的 API 集合。看出和集合 A 的区别了吧？一个是直接处理 <code>.framework</code> 中包含的头文件，一个是从 <code>.framework</code> 中的 Mach-O 文件导出对应的头文件。</p>
+
+<p>构建集合 A/D 其实就比构建集合 B 多一步，即 dump 的过程。这也是为何在 dump 时，导出头文件的目录和系统 framework 文件内部结构一致，这样使得接下来的构建集合过程的代码可以通用。</p>
+
+<h4>构建集合 C</h4>
+
+<p>生成 documented API 集合的主要障碍在于，本机缺乏 docSet。本文写于 2018 年 9 月初，我的工作机上只有 Xcode 9，而新版本的 Xcode 已经使用新的文档格式并直接集成在 Xcode 中。其实苹果官方提供了一个包含各版本文档链接等信息的 <a href="https://developer.apple.com/library/downloads/docset-index.dvtdownloadableindex">XML</a>，将该 XML 下载到本地即可从中找到 iOS 8.1 等的文档下载链接。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># 各版本 iOS docSet 的元信息</span>
+</span><span class='line'>https://developer.apple.com/library/downloads/docset-index.dvtdownloadableindex
+</span><span class='line'>
+</span><span class='line'><span class="c"># iOS 8.1 docSet</span>
+</span><span class='line'>https://devimages-cdn.apple.com/docsets/20141020/031-07735-A.dmg
+</span><span class='line'>
+</span><span class='line'><span class="c"># iOS 9.3.5 docSet</span>
+</span><span class='line'>https://devimages-cdn.apple.com/docsets/20160321/031-52212-A.dmg
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安装下载下来的 dmg 后，在 Mac OS 根目录下便出现 docSet 文件了，你可以随意挪位置。docSet 内部的 Contents/Resources/docSet.dsidx 是我们获得集合 C 的数据源。</p>
+
+<p>本人习惯使用 SQLPro for SQLite 工具查看 sqlite 数据库文件，将 docSet.dsidx 重命名为 docSet.sqlite 即可双击打开。其中 <code>ZTOKENTYPE</code> 表中的 <strong>func</strong>，<strong>instm</strong>，<strong>clm</strong>，<strong>intfm</strong>，<strong>intfcm</strong> 五种类型是我们要关注的：</p>
+
+<ul>
+<li>func 表示全局 C 函数</li>
+<li>instm 表示实例方法 instance method</li>
+<li>clm 表示类方法 class method</li>
+<li>intfm 表示协议方法，- 开头</li>
+<li>intfcm 表示协议方法，+ 开头</li>
+</ul>
+
+
+<blockquote><p>凭感觉猜测 intf 是 interface 的缩写，interface 即 OOP 的接口而不是 Obj-C 定义类的那个 interface</p></blockquote>
+
+<p>至于最新版 iOS 的 documented API 怎么获得，本人没有研究。既然 Dash 的作者能生成 Apple API Reference 那理论上讲应该是可以生成 dsidx 文件的。记录有些许价值的 Dash Release Notes 作为日后研究的线索：</p>
+
+<p>&ldquo;Xcode 8 doesn’t come with docsets anymore and that means Dash won’t automatically support the iOS 10, macOS 10.12, watchOS 3 and tvOS 10 docs. I’m working on a version of Dash that supports the new docs and will release an update as soon as possible.&rdquo; &ndash; <a href="https://blog.kapeli.com/dash-xcode-8-and-macos-sierra">Jun 14th, 2016</a></p>
+
+<p>&ldquo;Apple API Reference Support. Apple has new API docs. You can use them in Dash by installing the Apple API Reference docset.&rdquo; &ndash; <a href="https://blog.kapeli.com/dash-3-dot-3">Jul 2nd, 2016</a></p>
+
+<p>&ldquo;<strong>The Apple API Reference docset now reads the docs from within Xcode 8</strong>. This reduces disk space usage while also allowing me to modify &amp; improve the docs at display-time. Thanks a lot to the Xcode team at Apple for helping me understand the new documentation format!&rdquo; &ndash; <a href="https://blog.kapeli.com/dash-3-dot-4">Oct 25th, 2016</a></p>
+
+<h4>构建集合 D</h4>
+
+<p>同构建集合 A，路径的 Frameworks 改成 PrivateFrameworks 即可：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 8.1.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>构建集合 E</h4>
+
+<p>以 set_A 为处理对象：</p>
+
+<ol>
+<li>所有以 <code>_</code> 开头的方法，全部加到 set_E 中；</li>
+<li>其他 API，如果不在 set_B 也不在 set_C 中，则加到 set_E 中</li>
+<li>在不在 set_B / set_C 中的比较基准是 api_name，class_name，sdk 三个值</li>
+<li>步骤 3 是基于 db 查询来实现的</li>
+</ol>
+
+
+<h4>代码缺陷</h4>
+
+<ol>
+<li><p>build_api_db.py 中  rebuild_sdk_private_api(sdk_version, False)，需改成 True</p></li>
+<li><p>build_api_db.py 中  <code>if include_private_framework</code> 之后应该是把 private_framework_apis 插入到数据表中，而不是 <code>framework_dump_private_apis</code></p></li>
+<li><p>api/api_utils.py 中 <code>all_headers_path += iterate_dir(framework, "", os.path.join(framework_folder, header_path))</code> 应该改成 <code>all_headers_path += iterate_dir(framework, "", header_path)</code></p></li>
+<li><p>db/dsidx_dbs.py 中 sql = balabala 需要确认 dsidx 文件中五种 TOKEN 类型对应的 ID</p>
+
+<p>比如我从 Apple 下载下来的 8.1 docSet 对应相同 <code>ZTOKENTYPE</code> 的 ID 不是 (<strong>3,9,12,13,16</strong>) 而是 (<strong>11,13,1,8,19</strong>)。</p>
+
+<p>如果你是从百度网盘等地方直接下载别人的 ios_private.db，请打开这个 db 检查下 document_apis 表中的数据真的都是 API 么。</p>
+
+<p>另，原作者写 (3,9,12,13,16)  是因为当时 iOS 7.0 docSet 里确实是这几个 ID，这一点我通过往前翻 <a href="https://github.com/NetEaseGame/iOS-private-api-checker/commit/c2b14cc4788ad8e8a8bd2ef1ffac5877251204b2">commit</a> 记录得到了确认。所以灵活一点的写法是根据 <code>ZTYPENAME</code> 筛选数据。</p></li>
+<li><p>dump/class_dump_utils.py 中 <code>ret = subprocess.call(cmd.split())</code> 健壮性不够</p>
+
+<p>我在 Xcode 9 安装 iOS 8.1 模拟器后看到 Frameworks 路径是带空格的，经过 split 就会导致路径被拆分成两段。改成 ret = subprocess.call([class_dump_path, &lsquo;-H&rsquo;, frame_path, &lsquo;-o&rsquo;, out_path]) 应该就可以规避该问题。</p></li>
+</ol>
+
+
+<h3>扫描私有 API</h3>
+
+<h4>主要逻辑</h4>
+
+<p>阅读 <code>iOS_private.py</code> 梳理出识别 APP 中私有 API 的主要逻辑如下：</p>
+
+<ol>
+<li>基于 <code>strings</code> 工具从 Mach-O 文件导出字符串，按空格拆解得到集合1</li>
+<li>使用 <code>otool -L</code> 从 Mach-O 文件获得用到的 Frameworks 及 PrivateFrameworks 列表</li>
+<li>基于 <code>class-dump</code> 从 Mach-O 文件导出的头文件信息，解析出类名变量名集合2、方法集合3</li>
+<li>集合4 = 集合1 - 集合2（比较基准是 api_name）</li>
+<li>表 <code>framework_private_apis</code> 中按 api_name, class_name 分组得到类名方法名组合的集合5</li>
+<li>对集合5 和集合4 按 api_name 匹配，得到集中6</li>
+<li>集合6 和集合 3 按 api_name, class_name 匹配，得到最终的私有 API 集合</li>
+</ol>
+
+
+<p>步骤2 的结果可以作为步骤5 的部分条件。白名单表 <code>whitelist</code> 里的数据，会从结果集中排除，对应到代码逻辑上也是在步骤5 被过滤掉。</p>
+
+<h4>代码缺陷</h4>
+
+<p>因上述步骤6 中是按 api_name, class_name 的组合做匹配条件的，故原始代码的 SQL 语句中 group by 不仅要有 api_name 还应该加上 class_name 这个字端。</p>
+
+<h3>改进建议</h3>
+
+<p>直接使用网易方案大概率是发现不了私有 API 的。检测逻辑只考虑了 api_name, class_name 全匹配，局限性太大。</p>
+
+<ol>
+<li><p>在私有 API 数据库的建设上，TSRC 实验室的做法是进一步增加条件，比如一些纯小写字母的 API，大多是一些 C 函数，再过滤掉一批</p></li>
+<li><p>在扫描算法的设计上，如果步骤5 只 group by api_name，步骤6 只匹配 api_name，同时在源代码中存在 <code>@selector(XXX)</code> 这样的字符串，基本可以认定该 api_name 为私有 API</p></li>
+<li><p>对于静态拼接或者加解密的 API，可以通过动态 hook 的方式进行识别，但也存在一些局限性</p></li>
+<li>加入 <code>prefs:</code> 及 <code>App-Prefs:</code> 协议的扫描</li>
+</ol>
+
+
+<h2>验证特定 API</h2>
+
+<p>苹果审核提出使用了不该用的某某 API，那么我们势必要支持筛查该 API 用在何处，是我们的 APP 还是第三方 SDK 中。在代码工程根目录，执行：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>find . -type f <span class="p">|</span> grep <span class="s2">&quot;.a&quot;</span> <span class="p">|</span> grep -v <span class="s2">&quot;.app&quot;</span> <span class="p">|</span> xargs grep advertisingIdentifier
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>遗留主题</h2>
+
+<p>在研读网易游戏的开源方案时，对于 iOS 10+ 如何构建 documented API 数据集这个问题直接跳了过去，后续可进一步调研。</p>
+
+<h2>参考资料</h2>
+
+<p>[ 1 ] Arming Lee. 腾讯 Qzone 工程师. <a href="https://github.com/mrmign/iOS-private-api-scanner/blob/master/iOS-api-scan.md">iOS私有API扫描工作总结</a>. 2014~2015<br/>
+[ 2 ] 刘笑江. 腾讯 WeRead 工程师. <a href="http://davidlau.me/2017/08/23/ios-private-api-detection/">iOS 私有 API 调用检测机制探讨</a>. 2017.08.23<br/>
+[ 3 ] 郑文明. <a href="https://blog.csdn.net/wenmingzheng/article/details/50475671">iOS状态栏操作</a>. 2016.01.07<br/>
+[ 4 ] KFAaron. <a href="https://www.jianshu.com/p/6484ac07c513">导出系统库的头文件</a>. 2016.05.18<br/>
+[ 5 ] Friedrich Markgraf. <a href="https://gist.github.com/fzwo/01d62cebd21032683d87f51d094575d3">LegacyDocsets</a>. 2017.05.11<br/>
+[ 6 ] 林桠泉. 腾讯安全应急响应中心. <a href="https://security.tencent.com/index.php/blog/msg/105">浅谈 iOS 应用安全自动化审计</a>. 2016.06.23<br/>
+[ 7 ] Rumin Shah. <a href="https://stackoverflow.com/a/31779425">How do I check where my app is using IDFA</a>. 2015.08.03<br/>
+[ 8 ] Zuik. <a href="https://zuikyo.github.io/2016/10/10/%E7%A7%81%E6%9C%89API-iOS10%20openURL%E6%96%B9%E6%B3%95%E8%B7%B3%E8%BD%AC%E5%88%B0%E8%AE%BE%E7%BD%AE%E7%95%8C%E9%9D%A2%E5%A4%B1%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">使用私有 API 跳转到设置界面</a>. 2016.10.10</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Linkou Bian</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2018-09-11T09:23:16+08:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2018</span></span> <span class='time'>9:23 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/05/19/tech-notes-49/" title="Previous Post: 平安好房iOS开发团队技术周报（第四十九期）">&laquo; 平安好房iOS开发团队技术周报（第四十九期）</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/09/11/scan-private-api/">关于 iOS 私有 API 扫描</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/05/19/tech-notes-49/">平安好房iOS开发团队技术周报（第四十九期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/05/10/tech-notes-48/">平安好房iOS开发团队技术周报（第四十八期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/05/02/tech-notes-47/">平安好房iOS开发团队技术周报（第四十七期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/04/24/tech-notes-46/">平安好房iOS开发团队技术周报（第四十六期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/04/21/tech-notes-45/">平安好房iOS开发团队技术周报（第四十五期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/04/15/tech-notes-44/">平安好房iOS开发团队技术周报（第四十四期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/04/07/tech-notes-43/">平安好房iOS开发团队技术周报（第四十三期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/03/23/tech-notes-42/">平安好房iOS开发团队技术周报（第四十二期）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/03/13/tech-notes-41/">平安好房iOS开发团队技术周报（第四十一期）</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2018 - Linkou Bian -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'balloonsys';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://balloonsys.github.io/blog/2018/09/11/scan-private-api/';
+        var disqus_url = 'http://balloonsys.github.io/blog/2018/09/11/scan-private-api/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
