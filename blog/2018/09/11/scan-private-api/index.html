@@ -259,7 +259,7 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
 
 <h4>构建集合 A</h4>
 
-<p>api_utils.py 中已经封装好了使用 class-dump 导出 framework 的头文件。所以不需要  DumpFrameworks.pl 这类的外部脚本，而且 DumpFrameworks.pl 生成的头文件目录结构和本项目不吻合。也不需要下载 <a href="http://seriot.ch">Nicolas Seiot</a> 基于 <a href="https://github.com/nst/RuntimeBrowser">RuntimeBrowser</a> 导出的<a href="https://github.com/nst/iOS-Runtime-Headers">头文件</a>。</p>
+<p>在 <code>api_utils.py</code> 中已经封装好了使用 <code>class-dump</code> 导出 <code>.framework</code> 的头文件。所以不需要 <code>DumpFrameworks.pl</code> 这类的外部脚本，而且 <code>DumpFrameworks.pl</code> 生成的头文件目录结构和本项目不吻合。也不需要下载 <a href="http://seriot.ch">Nicolas Seiot</a> 基于 <a href="https://github.com/nst/RuntimeBrowser">RuntimeBrowser</a> 导出的<a href="https://github.com/nst/iOS-Runtime-Headers">头文件</a>。</p>
 
 <p>我们需要做的是，保证目标系统 (比如 8.1) 的模拟器在本机已经安装，并且知道 Frameworks 及 PrivateFrameworks 的路径。</p>
 
