@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Flask | Balloonsys Inc.]]></title>
-  <link href="http://linkoubian.github.io/blog/categories/flask/atom.xml" rel="self"/>
-  <link href="http://linkoubian.github.io/"/>
-  <updated>2019-05-13T16:27:31+08:00</updated>
-  <id>http://linkoubian.github.io/</id>
+  <link href="https://linkoubian.github.io/blog/categories/flask/atom.xml" rel="self"/>
+  <link href="https://linkoubian.github.io/"/>
+  <updated>2019-05-13T16:36:08+08:00</updated>
+  <id>https://linkoubian.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[利用Flask的RESTful插件简化API开发]]></title>
-    <link href="http://linkoubian.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension/"/>
+    <link href="https://linkoubian.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension/"/>
     <updated>2014-03-12T13:45:07+08:00</updated>
-    <id>http://linkoubian.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension</id>
+    <id>https://linkoubian.github.io/blog/2014/03/12/update-restful-api-with-flask-restful-extension</id>
     <content type="html"><![CDATA[<p>今天尝试用Flask的RESTful插件改造昨天写的API，使之更清晰明了。</p>
 
 <!--more-->
@@ -186,9 +186,9 @@ task_fields = {
   
   <entry>
     <title type="html"><![CDATA[基于Flask设计RESTful API]]></title>
-    <link href="http://linkoubian.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask/"/>
+    <link href="https://linkoubian.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask/"/>
     <updated>2014-03-11T19:12:58+08:00</updated>
-    <id>http://linkoubian.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask</id>
+    <id>https://linkoubian.github.io/blog/2014/03/11/design-restful-api-with-python-and-flask</id>
     <content type="html"><![CDATA[<p>Flask是一个Python WEB开发框架。接下来一段闲暇时间打算做的“西子快讯”项目中，我打算拿它来做RESTful API。虽然之前对Python并不了解，对Flask更是陌生，但爱折腾的本性促使我不断去学习。于是今天看blog、看文档，小有收获，略记一二。</p>
 
 <!--more-->

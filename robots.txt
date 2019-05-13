@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://linkoubian.github.io/sitemap.xml 
+Sitemap: https://linkoubian.github.io/sitemap.xml 

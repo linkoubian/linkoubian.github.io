@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Tools | Balloonsys Inc.]]></title>
-  <link href="http://linkoubian.github.io/blog/categories/tools/atom.xml" rel="self"/>
-  <link href="http://linkoubian.github.io/"/>
-  <updated>2019-05-13T16:27:31+08:00</updated>
-  <id>http://linkoubian.github.io/</id>
+  <link href="https://linkoubian.github.io/blog/categories/tools/atom.xml" rel="self"/>
+  <link href="https://linkoubian.github.io/"/>
+  <updated>2019-05-13T16:36:08+08:00</updated>
+  <id>https://linkoubian.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[做iOS外包开发用到的工具]]></title>
-    <link href="http://linkoubian.github.io/blog/2014/04/04/ios-dev-tools/"/>
+    <link href="https://linkoubian.github.io/blog/2014/04/04/ios-dev-tools/"/>
     <updated>2014-04-04T16:27:54+08:00</updated>
-    <id>http://linkoubian.github.io/blog/2014/04/04/ios-dev-tools</id>
+    <id>https://linkoubian.github.io/blog/2014/04/04/ios-dev-tools</id>
     <content type="html"><![CDATA[<p>这个虚拟的Balloonsys工作室，总算发展到两位工程师了。</p>
 
 <!--more-->

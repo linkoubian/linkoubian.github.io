@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 3rd-party-lib | Balloonsys Inc.]]></title>
-  <link href="http://linkoubian.github.io/blog/categories/3rd-party-lib/atom.xml" rel="self"/>
-  <link href="http://linkoubian.github.io/"/>
-  <updated>2019-05-13T16:27:31+08:00</updated>
-  <id>http://linkoubian.github.io/</id>
+  <link href="https://linkoubian.github.io/blog/categories/3rd-party-lib/atom.xml" rel="self"/>
+  <link href="https://linkoubian.github.io/"/>
+  <updated>2019-05-13T16:36:08+08:00</updated>
+  <id>https://linkoubian.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[基于模板引擎的新闻内容展示]]></title>
-    <link href="http://linkoubian.github.io/blog/2014/04/05/template-engine-in-action/"/>
+    <link href="https://linkoubian.github.io/blog/2014/04/05/template-engine-in-action/"/>
     <updated>2014-04-05T18:45:39+08:00</updated>
-    <id>http://linkoubian.github.io/blog/2014/04/05/template-engine-in-action</id>
+    <id>https://linkoubian.github.io/blog/2014/04/05/template-engine-in-action</id>
     <content type="html"><![CDATA[<p>在为杭州市城管委开发贴心城管客户端时，城管动态这个模块的新闻展示是把新闻分成标题、时间、贴图、正文等部分，分别展示内容的。</p>
 
 <!--more-->
@@ -104,9 +104,9 @@ if ([url hasPrefix:@"image://"]) {
   
   <entry>
     <title type="html"><![CDATA[基于iCarousel构建新闻头条]]></title>
-    <link href="http://linkoubian.github.io/blog/2014/03/24/news-headline-in-action/"/>
+    <link href="https://linkoubian.github.io/blog/2014/03/24/news-headline-in-action/"/>
     <updated>2014-03-24T16:25:24+08:00</updated>
-    <id>http://linkoubian.github.io/blog/2014/03/24/news-headline-in-action</id>
+    <id>https://linkoubian.github.io/blog/2014/03/24/news-headline-in-action</id>
     <content type="html"><![CDATA[<p>市面上大部分新闻客户端的布局，都是顶部放一个可以左右滑动的头条，下方是新闻列表。像网易新闻的头条部分，通常是新闻与广告穿插。因为近期正在开发类似的一个APP，现总结头条部分的构建步骤。</p>
 
 <!--more-->

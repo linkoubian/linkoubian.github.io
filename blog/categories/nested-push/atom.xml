@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Nested-push | Balloonsys Inc.]]></title>
-  <link href="http://linkoubian.github.io/blog/categories/nested-push/atom.xml" rel="self"/>
-  <link href="http://linkoubian.github.io/"/>
-  <updated>2019-05-13T16:27:31+08:00</updated>
-  <id>http://linkoubian.github.io/</id>
+  <link href="https://linkoubian.github.io/blog/categories/nested-push/atom.xml" rel="self"/>
+  <link href="https://linkoubian.github.io/"/>
+  <updated>2019-05-13T16:36:08+08:00</updated>
+  <id>https://linkoubian.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Avoid Nested Push Animation]]></title>
-    <link href="http://linkoubian.github.io/blog/2015/07/04/avoid-nested-push-animation/"/>
+    <link href="https://linkoubian.github.io/blog/2015/07/04/avoid-nested-push-animation/"/>
     <updated>2015-07-04T21:28:39+08:00</updated>
-    <id>http://linkoubian.github.io/blog/2015/07/04/avoid-nested-push-animation</id>
+    <id>https://linkoubian.github.io/blog/2015/07/04/avoid-nested-push-animation</id>
     <content type="html"><![CDATA[<p>在iOS 8里使用UINavigationController把一个页面Push出来后，很短的时间内再次Push一个页面，并没有太大问题，两个页面相继显示。但在iOS 7里运行会遇到nested push animation can result in corrupted navigation bar问题。</p>
 
 <!--more-->

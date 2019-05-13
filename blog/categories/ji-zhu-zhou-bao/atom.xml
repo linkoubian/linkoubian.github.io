@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 技术周报 | Balloonsys Inc.]]></title>
-  <link href="http://linkoubian.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
-  <link href="http://linkoubian.github.io/"/>
-  <updated>2019-05-13T16:27:31+08:00</updated>
-  <id>http://linkoubian.github.io/</id>
+  <link href="https://linkoubian.github.io/blog/categories/ji-zhu-zhou-bao/atom.xml" rel="self"/>
+  <link href="https://linkoubian.github.io/"/>
+  <updated>2019-05-13T16:36:08+08:00</updated>
+  <id>https://linkoubian.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十九期）]]></title>
-    <link href="http://linkoubian.github.io/blog/2017/05/19/tech-notes-49/"/>
+    <link href="https://linkoubian.github.io/blog/2017/05/19/tech-notes-49/"/>
     <updated>2017-05-19T23:30:11+08:00</updated>
-    <id>http://linkoubian.github.io/blog/2017/05/19/tech-notes-49</id>
+    <id>https://linkoubian.github.io/blog/2017/05/19/tech-notes-49</id>
     <content type="html"><![CDATA[<p>本期周报主要包括 iPhone 用户忠诚度、RAC 中 weakify 这样的宏是如何定义的、基于 section name 在数据段存取数据、移动端开发之路在何方等。</p>
 
 <!--more-->
@@ -57,9 +57,9 @@
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十八期）]]></title>
-    <link href="http://linkoubian.github.io/blog/2017/05/10/tech-notes-48/"/>
+    <link href="https://linkoubian.github.io/blog/2017/05/10/tech-notes-48/"/>
     <updated>2017-05-10T09:31:00+08:00</updated>
-    <id>http://linkoubian.github.io/blog/2017/05/10/tech-notes-48</id>
+    <id>https://linkoubian.github.io/blog/2017/05/10/tech-notes-48</id>
     <content type="html"><![CDATA[<p>本期周报主要包括 Apple Watch 相关应用的发展趋势、Swift 异常手段的适用场景、基于 Target / Action 以及 Runtime 的组件化方案，以及与人相处时的一种 delta file 实践。</p>
 
 <!--more-->
@@ -109,9 +109,9 @@
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十七期）]]></title>
-    <link href="http://linkoubian.github.io/blog/2017/05/02/tech-notes-47/"/>
+    <link href="https://linkoubian.github.io/blog/2017/05/02/tech-notes-47/"/>
     <updated>2017-05-02T19:13:31+08:00</updated>
-    <id>http://linkoubian.github.io/blog/2017/05/02/tech-notes-47</id>
+    <id>https://linkoubian.github.io/blog/2017/05/02/tech-notes-47</id>
     <content type="html"><![CDATA[<p>本期周报主要包括如何为 React Native 开发配置 VS Code 插件以提高生产力、RN 在 Glow 的实践、Uber 的百名 iOS 工程师使用 Swift 重新架构移动应用的经验等内容。</p>
 
 <!--more-->
@@ -155,9 +155,9 @@
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十五期）]]></title>
-    <link href="http://linkoubian.github.io/blog/2017/04/21/tech-notes-45/"/>
+    <link href="https://linkoubian.github.io/blog/2017/04/21/tech-notes-45/"/>
     <updated>2017-04-21T13:46:19+08:00</updated>
-    <id>http://linkoubian.github.io/blog/2017/04/21/tech-notes-45</id>
+    <id>https://linkoubian.github.io/blog/2017/04/21/tech-notes-45</id>
     <content type="html"><![CDATA[<p>本期周报主要包括苹果对微信关闭赞赏的回应、天弘基金移动 App 架构演化、携程无线持续交付平台建设等内容。</p>
 
 <!--more-->
@@ -201,9 +201,9 @@
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十四期）]]></title>
-    <link href="http://linkoubian.github.io/blog/2017/04/15/tech-notes-44/"/>
+    <link href="https://linkoubian.github.io/blog/2017/04/15/tech-notes-44/"/>
     <updated>2017-04-15T10:53:56+08:00</updated>
-    <id>http://linkoubian.github.io/blog/2017/04/15/tech-notes-44</id>
+    <id>https://linkoubian.github.io/blog/2017/04/15/tech-notes-44</id>
     <content type="html"><![CDATA[<p>本期周报主要包括 Uber 外卖业务使用 React Native 过程中的权衡、手机 QQ Hybrid 的架构如何优化演进、微软在 RN 基础上推出的跨平台框架等内容。</p>
 
 <!--more-->
