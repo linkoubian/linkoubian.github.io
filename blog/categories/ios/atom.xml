@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Ios, | Balloonsys Inc.]]></title>
-  <link href="http://balloonsys.github.io/blog/categories/ios/atom.xml" rel="self"/>
-  <link href="http://balloonsys.github.io/"/>
-  <updated>2019-01-12T10:11:47+08:00</updated>
-  <id>http://balloonsys.github.io/</id>
+  <link href="http://linkoubian.github.io/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://linkoubian.github.io/"/>
+  <updated>2019-05-13T16:27:31+08:00</updated>
+  <id>http://linkoubian.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[hitTest示例]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/04/08/hit-test-sample/"/>
+    <link href="http://linkoubian.github.io/blog/2014/04/08/hit-test-sample/"/>
     <updated>2014-04-08T14:53:20+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/04/08/hit-test-sample</id>
+    <id>http://linkoubian.github.io/blog/2014/04/08/hit-test-sample</id>
     <content type="html"><![CDATA[<p>早上翻看Github本周排名靠前的Objective-C开源项目，瞄了几眼<a href="https://github.com/wpsteak/PWParallaxScrollView">PWParallaxScrollView</a>的代码。发现其在ScrollView中嵌入Button，然后为了使得Button能接受点击事件是借助- hitTest:withEvent:实现的。</p>
 
 <!--more-->
@@ -89,9 +89,9 @@
   
   <entry>
     <title type="html"><![CDATA[基于模板引擎的新闻内容展示]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action/"/>
+    <link href="http://linkoubian.github.io/blog/2014/04/05/template-engine-in-action/"/>
     <updated>2014-04-05T18:45:39+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/04/05/template-engine-in-action</id>
+    <id>http://linkoubian.github.io/blog/2014/04/05/template-engine-in-action</id>
     <content type="html"><![CDATA[<p>在为杭州市城管委开发贴心城管客户端时，城管动态这个模块的新闻展示是把新闻分成标题、时间、贴图、正文等部分，分别展示内容的。</p>
 
 <!--more-->
@@ -178,9 +178,9 @@ if ([url hasPrefix:@"image://"]) {
   
   <entry>
     <title type="html"><![CDATA[做iOS外包开发用到的工具]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/04/04/ios-dev-tools/"/>
+    <link href="http://linkoubian.github.io/blog/2014/04/04/ios-dev-tools/"/>
     <updated>2014-04-04T16:27:54+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/04/04/ios-dev-tools</id>
+    <id>http://linkoubian.github.io/blog/2014/04/04/ios-dev-tools</id>
     <content type="html"><![CDATA[<p>这个虚拟的Balloonsys工作室，总算发展到两位工程师了。</p>
 
 <!--more-->
@@ -227,9 +227,9 @@ if ([url hasPrefix:@"image://"]) {
   
   <entry>
     <title type="html"><![CDATA[基于iCarousel构建新闻头条]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/03/24/news-headline-in-action/"/>
+    <link href="http://linkoubian.github.io/blog/2014/03/24/news-headline-in-action/"/>
     <updated>2014-03-24T16:25:24+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/03/24/news-headline-in-action</id>
+    <id>http://linkoubian.github.io/blog/2014/03/24/news-headline-in-action</id>
     <content type="html"><![CDATA[<p>市面上大部分新闻客户端的布局，都是顶部放一个可以左右滑动的头条，下方是新闻列表。像网易新闻的头条部分，通常是新闻与广告穿插。因为近期正在开发类似的一个APP，现总结头条部分的构建步骤。</p>
 
 <!--more-->

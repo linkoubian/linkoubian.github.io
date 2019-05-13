@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Reactnative | Balloonsys Inc.]]></title>
-  <link href="http://balloonsys.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
-  <link href="http://balloonsys.github.io/"/>
-  <updated>2019-01-12T10:11:47+08:00</updated>
-  <id>http://balloonsys.github.io/</id>
+  <link href="http://linkoubian.github.io/blog/categories/reactnative/atom.xml" rel="self"/>
+  <link href="http://linkoubian.github.io/"/>
+  <updated>2019-05-13T16:27:31+08:00</updated>
+  <id>http://linkoubian.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[React Native 项目实战]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/10/18/rn-put-it-all-together/"/>
+    <link href="http://linkoubian.github.io/blog/2016/10/18/rn-put-it-all-together/"/>
     <updated>2016-10-18T15:02:29+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/10/18/rn-put-it-all-together</id>
+    <id>http://linkoubian.github.io/blog/2016/10/18/rn-put-it-all-together</id>
     <content type="html"><![CDATA[<p>本文以 Twitter 工程师 Bonnie Eisenman 撰写的 Learning React Native 一书的第九章内容为蓝本，总结了 React Native 项目实践的一些经验。</p>
 
 <!--more-->
@@ -234,9 +234,9 @@ export var DeckActions = Reflux.createActions([
   
   <entry>
     <title type="html"><![CDATA[React Native 组件间数据传递]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/10/11/rn-components-communication/"/>
+    <link href="http://linkoubian.github.io/blog/2016/10/11/rn-components-communication/"/>
     <updated>2016-10-11T11:14:48+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/10/11/rn-components-communication</id>
+    <id>http://linkoubian.github.io/blog/2016/10/11/rn-components-communication</id>
     <content type="html"><![CDATA[<p>在 React Native 项目试点过程中，封装的组件之间难免需要传递数据。本文总结了子组件如何将数据传递到使用方，以及对开发过程中遇到的一个 setState 问题的探究。</p>
 
 <!--more-->
@@ -323,9 +323,9 @@ export var DeckActions = Reflux.createActions([
   
   <entry>
     <title type="html"><![CDATA[创建一个 React Native 分隔线组件]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/09/30/create-your-first-reusable-react-native-component/"/>
+    <link href="http://linkoubian.github.io/blog/2016/09/30/create-your-first-reusable-react-native-component/"/>
     <updated>2016-09-30T10:24:06+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/09/30/create-your-first-reusable-react-native-component</id>
+    <id>http://linkoubian.github.io/blog/2016/09/30/create-your-first-reusable-react-native-component</id>
     <content type="html"><![CDATA[<p>在移动端表单页面里有不少分隔线绘制需求，构造一个组件以在不同页面复用是个很自然的做法。</p>
 
 <!--more-->

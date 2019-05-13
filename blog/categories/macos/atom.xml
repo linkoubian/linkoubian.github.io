@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Macos | Balloonsys Inc.]]></title>
-  <link href="http://balloonsys.github.io/blog/categories/macos/atom.xml" rel="self"/>
-  <link href="http://balloonsys.github.io/"/>
-  <updated>2019-01-12T10:11:47+08:00</updated>
-  <id>http://balloonsys.github.io/</id>
+  <link href="http://linkoubian.github.io/blog/categories/macos/atom.xml" rel="self"/>
+  <link href="http://linkoubian.github.io/"/>
+  <updated>2019-05-13T16:27:31+08:00</updated>
+  <id>http://linkoubian.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[我常用的软件]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/01/07/my-favourite-apps/"/>
+    <link href="http://linkoubian.github.io/blog/2017/01/07/my-favourite-apps/"/>
     <updated>2017-01-07T23:20:01+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/01/07/my-favourite-apps</id>
+    <id>http://linkoubian.github.io/blog/2017/01/07/my-favourite-apps</id>
     <content type="html"><![CDATA[<p>本文罗列了我在 iOS 及 macOS 上常用的约四十个软件。</p>
 
 <!--more-->

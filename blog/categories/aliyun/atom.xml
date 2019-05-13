@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Aliyun, | Balloonsys Inc.]]></title>
-  <link href="http://balloonsys.github.io/blog/categories/aliyun/atom.xml" rel="self"/>
-  <link href="http://balloonsys.github.io/"/>
-  <updated>2019-01-12T10:11:47+08:00</updated>
-  <id>http://balloonsys.github.io/</id>
+  <link href="http://linkoubian.github.io/blog/categories/aliyun/atom.xml" rel="self"/>
+  <link href="http://linkoubian.github.io/"/>
+  <updated>2019-05-13T16:27:31+08:00</updated>
+  <id>http://linkoubian.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[在CentOS 6.5环境下安装Redmine]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/09/07/install-redmine-on-centos-6-dot-5/"/>
+    <link href="http://linkoubian.github.io/blog/2014/09/07/install-redmine-on-centos-6-dot-5/"/>
     <updated>2014-09-07T16:33:08+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/09/07/install-redmine-on-centos-6-dot-5</id>
+    <id>http://linkoubian.github.io/blog/2014/09/07/install-redmine-on-centos-6-dot-5</id>
     <content type="html"><![CDATA[<p>GitLab的Issue管理比较弱，如果开发测试为同一人的话，用用也还好。对于一个团队来讲，还是搭建个Redmine吧。</p>
 
 <!--more-->
@@ -73,9 +73,9 @@ issues_tracker:
   
   <entry>
     <title type="html"><![CDATA[在CentOS 6.5环境下安装GitLab]]></title>
-    <link href="http://balloonsys.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5/"/>
+    <link href="http://linkoubian.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5/"/>
     <updated>2014-09-06T11:32:15+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5</id>
+    <id>http://linkoubian.github.io/blog/2014/09/06/install-gitlab-on-centos-6-dot-5</id>
     <content type="html"><![CDATA[<p>公司买了一台阿里云服务器部署项目测试坏境。看着服务器那么高的配置，便打算在上面搭建GitLab，以告别间歇性龟速的Bitbucket服务。当然喽，作为个人私有项目托管，我依然推荐使用BB。</p>
 
 <!--more-->

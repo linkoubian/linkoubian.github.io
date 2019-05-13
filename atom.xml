@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Balloonsys Inc.]]></title>
-  <link href="http://balloonsys.github.io/atom.xml" rel="self"/>
-  <link href="http://balloonsys.github.io/"/>
-  <updated>2019-01-12T10:11:47+08:00</updated>
-  <id>http://balloonsys.github.io/</id>
+  <link href="http://linkoubian.github.io/atom.xml" rel="self"/>
+  <link href="http://linkoubian.github.io/"/>
+  <updated>2019-05-13T16:27:31+08:00</updated>
+  <id>http://linkoubian.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Review 2018]]></title>
-    <link href="http://balloonsys.github.io/blog/2019/01/11/review-2018/"/>
+    <link href="http://linkoubian.github.io/blog/2019/01/11/review-2018/"/>
     <updated>2019-01-11T20:38:59+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2019/01/11/review-2018</id>
+    <id>http://linkoubian.github.io/blog/2019/01/11/review-2018</id>
     <content type="html"><![CDATA[<p>2018 年已经结束，离农历新年也不远矣。谨以此文简单回顾下过去一年里的工作、生活等，至少能回答自己时间都去哪儿了。</p>
 
 <!--more-->
@@ -115,9 +115,9 @@
   
   <entry>
     <title type="html"><![CDATA[关于 iOS 私有 API 扫描]]></title>
-    <link href="http://balloonsys.github.io/blog/2018/09/11/scan-private-api/"/>
+    <link href="http://linkoubian.github.io/blog/2018/09/11/scan-private-api/"/>
     <updated>2018-09-11T09:23:16+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2018/09/11/scan-private-api</id>
+    <id>http://linkoubian.github.io/blog/2018/09/11/scan-private-api</id>
     <content type="html"><![CDATA[<p>近期研究了关于私有 API 扫描这个主题。研读了业界现有的相关文章后发现，很多都是简单的摘录，也不对存在的谬误做任何点评。本人在阅读了网易游戏开源的 iOS private api checker 项目后，对如何构建私有 API 库、该项目又是如何识别 APP 中的私有 API、该方案存在哪些问题，一一做了阐述。</p>
 
 <!--more-->
@@ -453,9 +453,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十九期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/05/19/tech-notes-49/"/>
+    <link href="http://linkoubian.github.io/blog/2017/05/19/tech-notes-49/"/>
     <updated>2017-05-19T23:30:11+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/05/19/tech-notes-49</id>
+    <id>http://linkoubian.github.io/blog/2017/05/19/tech-notes-49</id>
     <content type="html"><![CDATA[<p>本期周报主要包括 iPhone 用户忠诚度、RAC 中 weakify 这样的宏是如何定义的、基于 section name 在数据段存取数据、移动端开发之路在何方等。</p>
 
 <!--more-->
@@ -495,9 +495,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十八期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/05/10/tech-notes-48/"/>
+    <link href="http://linkoubian.github.io/blog/2017/05/10/tech-notes-48/"/>
     <updated>2017-05-10T09:31:00+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/05/10/tech-notes-48</id>
+    <id>http://linkoubian.github.io/blog/2017/05/10/tech-notes-48</id>
     <content type="html"><![CDATA[<p>本期周报主要包括 Apple Watch 相关应用的发展趋势、Swift 异常手段的适用场景、基于 Target / Action 以及 Runtime 的组件化方案，以及与人相处时的一种 delta file 实践。</p>
 
 <!--more-->
@@ -547,9 +547,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十七期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/05/02/tech-notes-47/"/>
+    <link href="http://linkoubian.github.io/blog/2017/05/02/tech-notes-47/"/>
     <updated>2017-05-02T19:13:31+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/05/02/tech-notes-47</id>
+    <id>http://linkoubian.github.io/blog/2017/05/02/tech-notes-47</id>
     <content type="html"><![CDATA[<p>本期周报主要包括如何为 React Native 开发配置 VS Code 插件以提高生产力、RN 在 Glow 的实践、Uber 的百名 iOS 工程师使用 Swift 重新架构移动应用的经验等内容。</p>
 
 <!--more-->
@@ -593,9 +593,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十六期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/04/24/tech-notes-46/"/>
+    <link href="http://linkoubian.github.io/blog/2017/04/24/tech-notes-46/"/>
     <updated>2017-04-24T00:49:22+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/04/24/tech-notes-46</id>
+    <id>http://linkoubian.github.io/blog/2017/04/24/tech-notes-46</id>
     <content type="html"><![CDATA[<p>本期周报主要包括 App Store 佣金规则变更、iOS 中图片的解压缩过程、基于 React Native 高仿美团客户端、Appium 入门介绍等内容。</p>
 
 <!--more-->
@@ -639,9 +639,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十五期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/04/21/tech-notes-45/"/>
+    <link href="http://linkoubian.github.io/blog/2017/04/21/tech-notes-45/"/>
     <updated>2017-04-21T13:46:19+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/04/21/tech-notes-45</id>
+    <id>http://linkoubian.github.io/blog/2017/04/21/tech-notes-45</id>
     <content type="html"><![CDATA[<p>本期周报主要包括苹果对微信关闭赞赏的回应、天弘基金移动 App 架构演化、携程无线持续交付平台建设等内容。</p>
 
 <!--more-->
@@ -685,9 +685,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十四期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/04/15/tech-notes-44/"/>
+    <link href="http://linkoubian.github.io/blog/2017/04/15/tech-notes-44/"/>
     <updated>2017-04-15T10:53:56+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/04/15/tech-notes-44</id>
+    <id>http://linkoubian.github.io/blog/2017/04/15/tech-notes-44</id>
     <content type="html"><![CDATA[<p>本期周报主要包括 Uber 外卖业务使用 React Native 过程中的权衡、手机 QQ Hybrid 的架构如何优化演进、微软在 RN 基础上推出的跨平台框架等内容。</p>
 
 <!--more-->
@@ -733,9 +733,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十三期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/04/07/tech-notes-43/"/>
+    <link href="http://linkoubian.github.io/blog/2017/04/07/tech-notes-43/"/>
     <updated>2017-04-07T14:20:58+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/04/07/tech-notes-43</id>
+    <id>http://linkoubian.github.io/blog/2017/04/07/tech-notes-43</id>
     <content type="html"><![CDATA[<p>本期周报主要包括 Mac Pro 产品线的最新消息、JavaScriptCore 的方方面面、MVC/MVP/MVVM 架构的思路与优缺点、Instagram 的 React Native 实践等内容。</p>
 
 <!--more-->
@@ -779,9 +779,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十二期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/03/23/tech-notes-42/"/>
+    <link href="http://linkoubian.github.io/blog/2017/03/23/tech-notes-42/"/>
     <updated>2017-03-23T08:53:14+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/03/23/tech-notes-42</id>
+    <id>http://linkoubian.github.io/blog/2017/03/23/tech-notes-42</id>
     <content type="html"><![CDATA[<p>本期周报主要包括苹果产品更新摘要、基于 CollectionView 实现循环滚动的方案、网易的组件化实践、以及一位小米前员工的财务告白等内容。</p>
 
 <!--more-->
@@ -825,9 +825,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十一期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/03/13/tech-notes-41/"/>
+    <link href="http://linkoubian.github.io/blog/2017/03/13/tech-notes-41/"/>
     <updated>2017-03-13T09:14:10+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/03/13/tech-notes-41</id>
+    <id>http://linkoubian.github.io/blog/2017/03/13/tech-notes-41</id>
     <content type="html"><![CDATA[<p>本期周报主要包括如何高效添加圆角效果，线程同步相关的知识点、问答式掌握 HTTPS 基本概念，以及 iOS App 签名的原理等内容。</p>
 
 <!--more-->
@@ -871,9 +871,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第四十期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/03/11/tech-notes-40/"/>
+    <link href="http://linkoubian.github.io/blog/2017/03/11/tech-notes-40/"/>
     <updated>2017-03-11T09:46:40+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/03/11/tech-notes-40</id>
+    <id>http://linkoubian.github.io/blog/2017/03/11/tech-notes-40</id>
     <content type="html"><![CDATA[<p>本期周报主要包括苹果对 JSPatch / Rollout.io 使用者的警告、基于 HTTP/2 的全新 APNs 协议、IGListKit 使用教程、美团外卖前端团队使用 RN 的实践回顾等内容。</p>
 
 <!--more-->
@@ -913,9 +913,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十九期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/03/03/tech-notes-39/"/>
+    <link href="http://linkoubian.github.io/blog/2017/03/03/tech-notes-39/"/>
     <updated>2017-03-03T11:02:56+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/03/03/tech-notes-39</id>
+    <id>http://linkoubian.github.io/blog/2017/03/03/tech-notes-39</id>
     <content type="html"><![CDATA[<p>本期周报主要包括瑞银及凯基证券分析师的预测、iOS 10 nano_free 崩溃问题的解决方案、美团点评前端无痕埋点实践、Twitter 开源的 TIP 图片框架等内容。</p>
 
 <!--more-->
@@ -959,9 +959,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十八期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/02/24/tech-notes-38/"/>
+    <link href="http://linkoubian.github.io/blog/2017/02/24/tech-notes-38/"/>
     <updated>2017-02-24T11:44:36+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/02/24/tech-notes-38</id>
+    <id>http://linkoubian.github.io/blog/2017/02/24/tech-notes-38</id>
     <content type="html"><![CDATA[<p>本期周报主要包括苹果收购面部识别创业公司、iOS A/B Test 方案探索、去哪儿 React Native 应用实践分享等内容。</p>
 
 <!--more-->
@@ -1005,9 +1005,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十七期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/02/13/tech-notes-37/"/>
+    <link href="http://linkoubian.github.io/blog/2017/02/13/tech-notes-37/"/>
     <updated>2017-02-13T17:22:58+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/02/13/tech-notes-37</id>
+    <id>http://linkoubian.github.io/blog/2017/02/13/tech-notes-37</id>
     <content type="html"><![CDATA[<p>本期周报主要包括 App Store 点评功能的新玩法、沃尔玛的 React Native 实践分享、iOS 中 HTTPS 证书验证浅析等内容。</p>
 
 <!--more-->
@@ -1051,9 +1051,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十六期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/01/20/tech-notes-36/"/>
+    <link href="http://linkoubian.github.io/blog/2017/01/20/tech-notes-36/"/>
     <updated>2017-01-20T10:18:04+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/01/20/tech-notes-36</id>
+    <id>http://linkoubian.github.io/blog/2017/01/20/tech-notes-36</id>
     <content type="html"><![CDATA[<p>本期周报主要包括 iOS 应用崩溃自动修复、数据统计无埋点技术、仿网易云音乐导航栏的技术实现等内容。</p>
 
 <!--more-->
@@ -1097,9 +1097,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十五期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/01/13/tech-notes-35/"/>
+    <link href="http://linkoubian.github.io/blog/2017/01/13/tech-notes-35/"/>
     <updated>2017-01-13T09:14:13+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/01/13/tech-notes-35</id>
+    <id>http://linkoubian.github.io/blog/2017/01/13/tech-notes-35</id>
     <content type="html"><![CDATA[<p>本期周报主要包括 Swift 项目负责人变更、IGListKit 的应用实践、throttle 释疑、常用 iOS / Mac 软件推荐清单等内容。</p>
 
 <!--more-->
@@ -1147,9 +1147,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[我常用的软件]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/01/07/my-favourite-apps/"/>
+    <link href="http://linkoubian.github.io/blog/2017/01/07/my-favourite-apps/"/>
     <updated>2017-01-07T23:20:01+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/01/07/my-favourite-apps</id>
+    <id>http://linkoubian.github.io/blog/2017/01/07/my-favourite-apps</id>
     <content type="html"><![CDATA[<p>本文罗列了我在 iOS 及 macOS 上常用的约四十个软件。</p>
 
 <!--more-->
@@ -1319,9 +1319,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十四期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2017/01/06/tech-notes-34/"/>
+    <link href="http://linkoubian.github.io/blog/2017/01/06/tech-notes-34/"/>
     <updated>2017-01-06T16:44:39+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2017/01/06/tech-notes-34</id>
+    <id>http://linkoubian.github.io/blog/2017/01/06/tech-notes-34</id>
     <content type="html"><![CDATA[<p>本期周报主要包括苹果 2017 新年大促消息、微信 Mars 之 xlog 使用、APP 引导页的设计、Youtube 视频下载工具、常见算法的分析与实现等内容。</p>
 
 <!--more-->
@@ -1365,9 +1365,9 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十三期）]]></title>
-    <link href="http://balloonsys.github.io/blog/2016/12/30/tech-notes-33/"/>
+    <link href="http://linkoubian.github.io/blog/2016/12/30/tech-notes-33/"/>
     <updated>2016-12-30T18:09:58+08:00</updated>
-    <id>http://balloonsys.github.io/blog/2016/12/30/tech-notes-33</id>
+    <id>http://linkoubian.github.io/blog/2016/12/30/tech-notes-33</id>
     <content type="html"><![CDATA[<p>本期周报主要包括手机 QQ 牛逼的 iOS 动态化方案、拼图验证控件的实现的原理、AFNetworking 3.0 源代码阅读笔记、Xcode 8.2 Simulator 新特性介绍等内容。</p>
 
 <!--more-->
