@@ -4,7 +4,7 @@
   <title><![CDATA[Balloonsys Inc.]]></title>
   <link href="https://linkoubian.github.io/atom.xml" rel="self"/>
   <link href="https://linkoubian.github.io/"/>
-  <updated>2019-05-13T16:36:08+08:00</updated>
+  <updated>2019-05-27T22:22:45+08:00</updated>
   <id>https://linkoubian.github.io/</id>
   <author>
     <name><![CDATA[Linkou Bian]]></name>
@@ -12,6 +12,89 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[One Day in Hong Kong]]></title>
+    <link href="https://linkoubian.github.io/blog/2019/05/27/one-day-in-hkg/"/>
+    <updated>2019-05-27T21:05:13+08:00</updated>
+    <id>https://linkoubian.github.io/blog/2019/05/27/one-day-in-hkg</id>
+    <content type="html"><![CDATA[<p>上上周四从虹桥飞了趟深圳，周五在平安大学（深圳观澜）培训了一整天，周六从福田口岸去了趟香港、当天回到深圳，周日中午飞回上海。本文主要目的是记录一下办理香港银行账户的过程。</p>
+
+<!--more-->
+
+
+<h2>准备</h2>
+
+<h3>通行证</h3>
+
+<p>旧的本式通行证已被卡片式的取代了，直接在<a href="http://www.police.sh.cn/crj/">上海出入境</a>网站上预约即可办理。现场直接刷身份证打印申请表、采集出入境证件电子照，然后取号窗口办理。证 80 元，签注一次 15 元，可以扫码支付。</p>
+
+<p>收到取卡短信通知后，去现场可自助取卡，当然也可以选择快递上门。</p>
+
+<h3>预约开户</h3>
+
+<p>因为是周六去香港，预约周六营业的银行网点。招商永隆银行尖沙咀分行（加拿分道 4 号），周六营业时间是上午 9 点到下午 1 点。在线提交开户申请后，会拿到一个诸如 BK1905045960 这样的预约编号。我约的是 12:30 大概 12:15 去的现场。</p>
+
+<h3>开户材料</h3>
+
+<p>只需要身份证、通行证、住址证明，至于网上说的收入证明、工资流水、入境小票等等，统统不需要。住址证明可以采用招行寄送的纸质信用卡账单。</p>
+
+<h3>兑换港币</h3>
+
+<p>开户后直接存入 1 万港币（海关允许携带的现金上限是两万 RMB），这样可以豁免账户管理费（每月 100 HKD）。</p>
+
+<h2>开户</h2>
+
+<p>按照约定时间到达即可，到早了也不会给你提前办理。因为我一上来就亮明是该银行合作券商的客户，所以整个过程没有被「客户面谈（KYC）」，仅仅是核对了下材料。等了十来分钟就拿到了卡片、密码器等，然后去柜台存钱。</p>
+
+<p>网银密码是登录手机 APP 后需要修改的，ATM 取款密码暂时用不到。手机上就可以激活密码器，这个在银证转换登记服务时会用到。</p>
+
+<p>积累的几点经验：</p>
+
+<ol>
+<li>营业时间是到下午 1 点，但如果你的业务还没办理完毕，是不会赶你的啦</li>
+<li>柜台取款凭借签名，ATM 取款验证密码</li>
+<li>开户后的一周会收到支票本，这也解释了为何住址证明是必需的开户材料</li>
+<li>跨境汇款，收款银行也是要收费的，如果存在中间行也会收费（而且不便宜）</li>
+<li>存入的 1 万港币可以在手机端存为一年定期，会比柜台存定期的利率高一丢丢</li>
+</ol>
+
+
+<h2>港股</h2>
+
+<h3>入金</h3>
+
+<p>在大陆银行卡购汇，然后跨境汇款到香港银行账户。平安银行当天到账，而且手续费减半（25 RMB）、电报费 80 RMB。不过到达永隆银行账户时少了 200 HKD，想必是永隆收了 50、中间行（渣打）收了 150 HKD，下次（如果有下次）改用招行借记卡试试。</p>
+
+<p>从香港银行账户将钱转到证券账户，优先选用银证转换（快&amp;免费）。具体方法及通道，参考券商的官方教程（通常都非常详细）。建议入金的时机选择在该券商的活动期间，通常入 1 万多港币会返现几百块。</p>
+
+<h3>打新</h3>
+
+<p>目前选择的是多账户申购、开盘当天 11 点前卖出的策略。有些券商是以公司名义提交打新申请、有些是提交身份证号的。对于上报身份证的券商，建议只选一家，无论其上报身份证的后几位。</p>
+
+<p>不同券商的费率差别很大，互联网券商通常在获客期间有较大的优惠，不要错过。</p>
+
+<h3>预期</h3>
+
+<p>打新的收益预期，我目前设定在 -15% 到 30% 之间。</p>
+
+<h2>其他</h2>
+
+<p>开完户将近下午 1 点，排队办业务的人还不少，柜台的工作人员看起来也蛮着急的。我离开银行后，直奔尖沙咀码头，花 3.7 港币搭天星小轮到湾仔。然后坐地铁到铜锣湾，在希慎广场诚品书店买了本余英时回忆录（约 100 RMB，好贵）后再坐地铁到中环皇后广场。从中环坐回尖沙咀，逛完星光大道后坐地铁到落马洲回深圳。</p>
+
+<ol>
+<li>新办卡片式通行证时，留过指纹。所以，第一次进入香港，也是可以走自助通道的（先刷通行证、再指纹）</li>
+<li>返程东铁线是到罗湖的，所以在上水下车等下下一班车到落马洲（关注显示屏）</li>
+<li>游客过境旅游票 1 天（落马洲的地铁服务中心，100 HKD）比八达通更适合一日游</li>
+<li>电信流量漫游，连接代理服务器太慢，没法使用 Google Maps 等</li>
+</ol>
+
+
+<p>坐在香港地铁上，迎面而来的列车从右手边驶过，真切的感受到和大陆交通规则的差别。但逛街时大量靠右的行人分分钟教会你随大流是多么的必要。</p>
+
+<p>-EOF-</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Review 2018]]></title>
@@ -1358,56 +1441,6 @@ if include_private_framework: set_E = set_E + set_D</p></blockquote>
 <h4>1) <a href="http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/">Top 10 algorithms in Interview Questions</a> By GeeksforGeeks</h4>
 
 <p>针对八类问题分别给出了最常见的十道算法题及其解答，适合年后准备面试的同学。</p>
-
-<p>@end</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[平安好房iOS开发团队技术周报（第三十三期）]]></title>
-    <link href="https://linkoubian.github.io/blog/2016/12/30/tech-notes-33/"/>
-    <updated>2016-12-30T18:09:58+08:00</updated>
-    <id>https://linkoubian.github.io/blog/2016/12/30/tech-notes-33</id>
-    <content type="html"><![CDATA[<p>本期周报主要包括手机 QQ 牛逼的 iOS 动态化方案、拼图验证控件的实现的原理、AFNetworking 3.0 源代码阅读笔记、Xcode 8.2 Simulator 新特性介绍等内容。</p>
-
-<!--more-->
-
-
-<h2>资讯</h2>
-
-<h4>1) <a href="http://www.theverge.com/2016/12/24/14074654/apple-consumer-reports-macbook-pro-battery-test">Inconsistent MacBook Pro battery test results</a></h4>
-
-<p>全新 MacBook Pro 的续航飘忽不定，经过多次测试发现，MacBook Pro 的续航有时可以达到 10 多个小时，而有时却只有 3 个多小时。苹果全球营销高级副总裁 Phil Schiller 表示，苹果正在与《消费者报告》合作，解决 MacBook Pro 电池飘忽不定的问题。</p>
-
-<h2>开发</h2>
-
-<h4>1) <a href="http://mp.weixin.qq.com/s/DhGR6J5fx04BPi-kMsMBJg">手机 QQ 的 iOS 动态化方案</a> By OCSTeam</h4>
-
-<p>在iOS的发展历程上，涌现了很多动态化方案，有历史悠久的 WaxPatch 动态化方案，有远近闻名的JSPatch动态化方案。文中手机 QQ 团队向大家介绍一款堪称『史上最疯狂』的 iOS 动态化方案。</p>
-
-<h4>2) <a href="http://tutuge.me/2016/12/25/TTGPuzzleVerify/">拼图验证控件的实现</a> By 燕泽堃</h4>
-
-<p>拼图验证控件用以让用户通过水平、垂直，或者直接拖动拼图块，完成拼图图案，达到验证目的。作者来自阿里，对其开发的 TTGPuzzleVerify 控件做了整体设计思路和实现原理的分享。</p>
-
-<h4>3) <a href="http://balloonsys.com/blog/2016/12/27/afnetworking-in-a-nutshell/">AFNetworking 3.0 源码阅读笔记</a> By Linkou Bian</h4>
-
-<p>上周阅读了 AFNetworking 3.0 的源代码，对阅读中遇到的问题进行了些思考，整理成此文。干货 &amp; 原创，值得一读。</p>
-
-<h2>工具</h2>
-
-<h4>1) <a href="https://medium.com/@hollanderbart/new-features-in-xcode-8-2-simulator-fc64a4014a5f">New features in Xcode 8.2 Simulator</a> By Bart den Hollander</h4>
-
-<p>Xcode 8.2 新增了两项新特性，一是 xcrun 命令可以对模拟器截屏及录制，二是可以通过拖拽的方式安装 app 到模拟器。</p>
-
-<h4>2) <a href="http://balloonsys.com/blog/2016/12/27/spotify-proxy-on-mac/">Mac Spotify</a> By Linkou Bian</h4>
-
-<p>Mac 为了无障碍上网，开着 Surge；想用 Spotify 听听歌，却因公司网络而无法登录，怎么办？</p>
-
-<h2>其他</h2>
-
-<h4>1) <a href="http://mp.weixin.qq.com/s/XpjTQd-p9pNpkQich1ZZ_w">中国企业就是这样倒闭的</a></h4>
-
-<p>整天瞎分析个屁! 什么他妈的流程问题、职责问题、界面问题、考核问题，明明就是机构臃肿问题！</p>
 
 <p>@end</p>
 ]]></content>
