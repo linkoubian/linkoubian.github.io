@@ -1,0 +1,44 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第三十六期）
+date: 2017-01-20 10:18:04 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 iOS 应用崩溃自动修复、数据统计无埋点技术、仿网易云音乐导航栏的技术实现等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [New iPads Might Not Launch Until Sometime in the Second Half of 2017](http://www.macrumors.com/2017/01/19/new-ipads-second-half-of-2017/) By Mitchel Broussard
+
+供应链消息称，苹果将会在今年的下半年对外发布、销售三款新平板电脑。新推出的 9.7 英寸将是廉价版本，主要针对教育市场。
+
+## 开发
+
+#### 1) [iOS APP 运行时 Crash 自动修复系统](https://neyoufan.github.io/2017/01/13/ios/BayMax_HTSafetyGuard/) By 陶泽宇
+
+关于 app 运行时的 crash，我们是不是可以做的更多？是否可以做到实时抓取 app 运行时产生的 crash，然后直接自动修复它，从而不让 app crash 呢？
+
+#### 2) [数据统计无埋点技术](http://mp.weixin.qq.com/s?__biz=MzA3ODg4MDk0Ng==&mid=2651112803&idx=1&sn=061e10ff89c15f893511688f9c7864c2) By 唐星
+
+本文介绍百分点如何由原来的手动写代码的埋点，发展出不需要写代码的无埋点技术。也介绍了实践中遇到的一些问题和解决方法。
+
+## 工具
+
+#### 1) [RTRootNavigationController](https://github.com/rickytan/RTRootNavigationController) By Ricky Tan
+
+现在应用的导航栏的颜色不再是单一颜色，还有些需要隐藏 navigationBar 的需求。该项目实现了开发部分提到的网易云音乐导航栏的效果。
+
+#### 2) [simMagnifier](http://microedition.biz/simMagnifier/index.html) By Microedition
+
+类似于之前推荐过的 SimPholders 工具。除了访问模拟器应用沙盒，还能访问 Core Data 数据文件等。
+
+## 其他
+
+#### 1) [Seniority](http://merowing.info/2017/01/seniority/) By Krzysztof Zabłocki
+
+资深工程师何以为资深，都需要哪些基本素养？很不错的一篇文章，以作者梳理的各项标准对照自己，提升自己的 Soft Skills，岂不快哉。
+
+@end

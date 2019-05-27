@@ -1,0 +1,44 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第三十七期）
+date: 2017-02-13 17:22:58 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 App Store 点评功能的新玩法、沃尔玛的 React Native 实践分享、iOS 中 HTTPS 证书验证浅析等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Additional Details on the New App Store Review Features](http://daringfireball.net/2017/01/new_app_store_review_features) By John Gruber
+
+iOS 10.3 和 macOS 10.12.4 开始，每个 app 每年只能发三次「求评价」弹窗，用户点评不必离开 app，可以一键关闭所有求点评弹窗，开发者可以直接回复用户的评价。
+
+## 开发
+
+#### 1) [沃尔玛的 React Native 实践](https://medium.com/walmartlabs/react-native-at-walmartlabs-cdd140589560) By Matt Bresnan
+
+最近，美国零售巨头沃尔玛将它们的官方 App 从 Hybrid 转向了 React Native，获得了非常不错的结果，来看看他们是怎么做的。
+
+PS: Walmart App 背后原来有数百名工程师啊！！！
+
+#### 2) [iOS 中 HTTPS 证书验证浅析](https://mp.weixin.qq.com/s/-fLLTtip509K6pNOTkflPQ) By 李晴
+
+本文的目的：一是简要分析下对服务器身份验证的完整握手过程，二是证书链的验证，三是探索下 iOS 中原生库 NSURLConnection 或 NSURLSession 如何支持实现 https。
+
+## 工具
+
+#### 1) [细聊 Cocoapods 与 Xcode 工程配置](http://www.jianshu.com/p/ad2e37e741bb) By 张星宇
+
+对我最有用的信息是：通过 ar -x 解包 .a 文件，再对解出来的 __.SYMDEF SORTED 内容分析发现，其中没有 Category 的目标文件信息，或许这就是静态库中含有 Category 时为何需要专门配置 other linker flag 选项。
+
+作者虽是学生，但思路清晰，很不错的。
+
+## 其他
+
+#### 1) [一份优秀的程序员简历是什么样的](https://www.phodal.com/blog/how-to-write-a-resume/) By 黄峰达
+
+今年的行情虽然没有去年火热，但是你仍应该拾掇拾掇一下你的简历，万一机会来了呢？
+
+@end

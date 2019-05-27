@@ -1,0 +1,50 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第四十八期）
+date: 2017-05-10 09:31:00 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 Apple Watch 相关应用的发展趋势、Swift 异常手段的适用场景、基于 Target / Action 以及 Runtime 的组件化方案，以及与人相处时的一种 delta file 实践。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Major apps abandoning Apple Watch](http://appleinsider.com/articles/17/05/01/major-apps-abandoning-apple-watch-including-google-maps-amazon-ebay) By Neil Hughes
+
+第二季度财报会议上，库克表示 Apple Watch、AirPods 和 Beats 产品的销量收入现在已经是财富 500 强公司的规模。不过，不少大型主流 APP 正在移除对 Apple Watch 的支持。
+
+#### 2) [Apple has acquired a sleep-tracking app](http://www.cnbc.com/2017/05/09/apple-acquires-beddit-sleep-tracking-app.html) By Christina Farr
+
+近期苹果买下了好几款 APP，比如 Workflow。本周又收下了名为 Beddit 的睡眠追踪应用及相关设备。
+
+## 开发
+
+#### 1) [Picking the right way of failing in Swift](https://medium.com/@johnsundell/picking-the-right-way-of-failing-in-swift-e89125a6b5b5) By John Sundell
+
+本文针对 Swift 的多种异常处理手段做了介绍，分别适用于何种场景。
+
+#### 2) [Swift 性能相关](http://www.jianshu.com/p/0d3db4422954) By Damon Wong
+
+为什么说 Swift 相比较于 Objective-C 会更加快 ？为什么在编译 Swift 的时候这么慢 ？如何更优雅的去写 Swift ？可以听听本文作者的介绍。
+
+#### 3) [基于 CTMediator 的组件化方案](https://casatwy.com/modulization_in_action.html) By 田伟宇
+
+本周精读了这种基于 Target / Action 以及 Runtime 的组件化方案，思路确实非常棒！
+
+## 工具
+
+#### 1) [Visual Studio for Mac](https://www.visualstudio.com/vs/)
+
+微软继推出 VS Code 后，又发布了 Mac 版的 Visual Studio，支持 Xamarin 和 .NET Core 开发移动应用和网页等。
+
+## 其他
+
+#### 1) [别与精神病患者共事](https://medium.com/@livlab/dont-work-with-psychopaths-b1a848914455) By Livia Labate
+
+这种同事并非医学上的精神病患者，而是善于玩弄权术、爱撒谎、自负的人。他们评价别人是根据别人的行为，评价自己是根据自己的动机。
+
+文中提到一种实践，叫 the Delta File：自己创建一个秘密的只有自己才能看到的文档，记录下你的同事、上司表现出的让你很反感的行为；将来你处于他们那个位子了，对比 the Delta file 中你所记录的行为，你会怎么做？他们当时那些行为是合理的吗？
+
+@end

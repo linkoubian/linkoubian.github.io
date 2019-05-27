@@ -1,0 +1,44 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第三十九期）
+date: 2017-03-03 11:02:56 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括瑞银及凯基证券分析师的预测、iOS 10 nano_free 崩溃问题的解决方案、美团点评前端无痕埋点实践、Twitter 开源的 TIP 图片框架等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [瑞银: 苹果有上千名工程师在以色列研发 AR](http://www.businessinsider.com/ubs-apple-1000-engineers-ar-2017-2) By Hannah Roberts
+
+据 Business Insider 援引瑞士银行的一份研究报告称，分析师 Steven Milunovich 表示，苹果的下一个重大产品创新将与 AR 技术有关。
+
+#### 2) [凯基证券：今年所有新 iPhone 都支持 Lightning 快充](https://www.macx.cn/thread-2198592-1-1.html) By 郭明池
+
+根据凯基证券分析师郭明池的预测，苹果今年将要发布的三款 iPhone，包括旗舰级 OLED iPhone 8 仍然都会配备 Lightning 接口。不同的是，苹果今年会为 Lightning 接口加入快速充电功能。
+
+## 开发
+
+#### 1) [聊聊苹果的 Bug - iOS 10 nano_free Crash](https://mp.weixin.qq.com/s/hnwj24xqrtOhcjEt_TaQ9w) By 张三华
+
+很多开发者在 iOS 10 上遇到了一类堆栈为 nano_free 字样的 Crash，也有很多人向 Bugly 客服反馈遇到了这类问题，但并没有好的解决方案。正当大家都束手无策的时候，微信强大的技术团队针对这类Crash进行了深度研究，并提出了一个解决方案。
+
+#### 2) [美团点评前端无痕埋点实践](http://tech.meituan.com/mt-mobile-analytics-practice.html) By 富强 朝旭 吴凯
+
+为了解决前端埋点的准确性、及时性、开发效率等问题，业内各家公司从不同角度，提出了多种技术方案。美团在原有代码埋点方案的基础上，演化出了一套轻量的、声明式的前端埋点方案，并且在动态埋点、无痕埋点等方向做了进一步的探索和实践。
+
+## 工具
+
+#### 1) [Twitter Image Pipeline iOS framework](https://blog.twitter.com/2017/introducing-twitter-image-pipeline-ios-framework-for-open-source) By Nolan O'Brien
+
+Twitter 开源的 TIP 框架用于图片的加载与缓存，据称已内部迭代两年。其 Android 团队采用的是 Facebook 开源的 fresco 框架。
+
+## 其他
+
+#### 1) [iOS 开发技术栈与进阶](http://blog.cnbang.net/tech/3354/) By 陈振焯
+
+最近有一些开发朋友问我应该怎样提升自己的能力，回想起来做了这么久 iOS 开发，我也有过那种『让我做一个功能实现个需求我会做，但接下来怎样提高我不知道。』的时期，这里尝试列一下 iOS 开发的相关技术，再说说在学习进阶上我的一些想法。
+
+@end

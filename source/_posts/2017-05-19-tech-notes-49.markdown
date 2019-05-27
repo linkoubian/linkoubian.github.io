@@ -1,0 +1,40 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第四十九期）
+date: 2017-05-19 23:30:11 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 iPhone 用户忠诚度、RAC 中 weakify 这样的宏是如何定义的、基于 section name 在数据段存取数据、移动端开发之路在何方等。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [iPhone Scores 92% Loyalty Rate in Recent Survey Ahead of iPhone 8](https://www.macrumors.com/2017/05/17/iphone-92-percent-loyalty-rate-survey/) By Joe Rossignol
+
+本文介绍了摩根斯坦利做的一项调查，92% 的现有 iPhone 用户有兴趣在接下来的一年内购买新的 iPhone。相比于一年前类似调查的 86% 忠诚度，形势喜人！
+
+## 开发
+
+#### 1) [剖析 RAC 中的 @weakify、@strongify](http://ziecho.com/post/ios/2016-08-04) By 郑梓毅
+
+RAC 中的这个 weakify 版本脱胎于 libextobjc 项目。如果想自己实现一个简化版（只接收一个参数），可以参考 Arek Holko 的[文章](http://holko.pl/2015/05/31/weakify-strongify/)。
+
+#### 2) [解耦框架 BeeHive](https://lpd-ios.github.io/2017/03/06/iOS-BeeHive/) By 于德志
+
+BeeHive 是阿里去年开源的一个 iOS APP 模块化框架。文中介绍的基于 Annotation 的标记实现方案，很不错。我参考实现了一个将好房 APP 的 ViewController 和页面 URL 映射在一起的宏。
+
+## 工具
+
+#### 1) [iMate](http://blog.playstone.org/blog/2017/05/15/imate-for-ios-development/) By Lei Guo
+
+这是一个 iOS 开发辅助软件，查看 App 产生的文件，也可以快速将 Archive / Build 等文件删除。总的来说，类似之前推荐过的 SimPholders。
+
+## 其他
+
+#### 1) [移动端开发路在何方](http://limboy.me/essay/2017/05/12/mobile-dev-way-out.html) By 李忠
+
+最近一段时间，移动端开发好像不像以前那么吃香了，招的人少了，要求更高了，给人一种感觉：这个行业是不是不行了？这个行业没出问题，只是更加理性了。
+
+@end

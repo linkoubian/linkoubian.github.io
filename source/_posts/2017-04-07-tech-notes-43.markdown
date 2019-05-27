@@ -1,0 +1,44 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第四十三期）
+date: 2017-04-07 14:20:58 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 Mac Pro 产品线的最新消息、JavaScriptCore 的方方面面、MVC/MVP/MVVM 架构的思路与优缺点、Instagram 的 React Native 实践等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [苹果产品更新](https://daringfireball.net/2017/04/the_mac_pro_lives) By John Gruber
+
+苹果资深副总裁 Phil Schiller 透露，新 Mac Pro 将采用模块化程度更高、扩展性更强的设计，与之配套的专业显示器也在计划中，明年发布。
+
+## 开发
+
+#### 1) [深入浅出 JavaScriptCore](http://www.jianshu.com/p/3f5dc8042dfc)
+
+本篇文章是作者基于一次组内分享整理而成，包含 Objective-C 与 JavaScript 交互、内存管理、多线程等方面的内容。
+
+#### 2) [杂谈: MVC/MVP/MVVM](http://www.jianshu.com/p/eedbc820d40a)
+
+本文为回答一位朋友关于 MVC/MVP/MVVM 架构方面的疑问所写，旨在介绍 iOS 下这三种架构的设计思路以及各自的优缺点。
+
+## 工具
+
+#### 1) [Instagram 的 React Native 之路](https://engineering.instagram.com/react-native-at-instagram-dd828a9a90c7) By Martin Bigio
+
+来自 Facebook 的 Instagram 终于来强势支持了一把 React Native。快速迭代、代码复用、减少人力，这么多优点是否值得你去学习甚至在公司项目中引入 React Native 呢？
+
+#### 2) [Protocol Buffers](https://mp.weixin.qq.com/s/W9jC0W_b7xSWjqfFv7N5Bg) By 陶文
+
+Google 的 Protocol Buffers 在数据编码的效率上似乎被神化了，一直流传性能是 JSON 等本文格式 5 倍以上，本文通过代码测试来比较 JSON 与 PB 具体的性能差别到底是多少。
+
+## 其他
+
+#### 1) [Reactive Programming with Swift](https://www.raywenderlich.com/158026/introducing-rxswift-reactive-programming-swift) By raywenderlich.com
+
+刚出的一本关于 RxSwift 的技术书籍，Ray 家出品。
+
+@end

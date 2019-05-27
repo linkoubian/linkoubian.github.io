@@ -1,0 +1,45 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第四十六期）
+date: 2017-04-24 00:49:22 +0800
+comments: true
+categories: 
+---
+本期周报主要包括 App Store 佣金规则变更、iOS 中图片的解压缩过程、基于 React Native 高仿美团客户端、Appium 入门介绍等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [App Store Affiliate Program](https://affiliate.itunes.apple.com/resources/documentation/getting-started/)
+
+从 5 月 1 号开始，苹果将实行新的佣金规则，所有跟 App 相关的消费行为（比如购买应用、应用内购）将会降至 2.5%，其它类型的内容（音乐、电影、书、电视剧）返利比例则保持 7% 不变。
+
+## 开发
+
+#### 1) [谈谈 iOS 中图片的解压缩](http://blog.leichunfeng.com/blog/2017/02/20/talking-about-the-decompression-of-the-image-in-ios/) By 雷纯锋
+
+图片解压缩的过程其实就是将图片的二进制数据转换成像素数据的过程。了解这些知识，将有助于我们更好地处理图片，管理好它们所占用的内存。
+
+#### 2) [基于 React Native 高仿美团客户端](https://github.com/huanxsd/MeiTuan) By Daniel
+
+作者曾在百度工作四年，写了六年 Objective-C 代码。主要实现了美团的四个一级页面（团购、附近、订单、我的），以及部分二级页面（团购详情、Web 页面）。
+
+## 工具
+
+#### 1) [PPRows for Mac](https://github.com/jkpang/PPRows) By jkpang
+
+在 Mac 上计算你写了多少行代码的一款小工具。
+
+#### 2) [Appium 从入门到原理](http://www.jianshu.com/p/3932a1c24b93) By bestswifter
+
+本文主要会基于一些开源代码和个人实践，对 iOS 端的自动化测试原理做一个简单介绍。
+
+## 其他
+
+#### 1) [Price Tag 半年总结](https://61.life/price-tag-summary/amp/) By Liu Yi
+
+作者之前和微博干过口水仗，关于 Affiliate link 的事情。我也是从这个新闻才开始了解到 App Store 联盟计划这么个东西的。
+
+@end
+---

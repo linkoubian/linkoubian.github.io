@@ -1,0 +1,46 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第四十五期）
+date: 2017-04-21 13:46:19 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括苹果对微信关闭赞赏的回应、天弘基金移动 App 架构演化、携程无线持续交付平台建设等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [苹果回应微信关闭赞赏](http://tech.sina.com.cn/mobile/n/n/2017-04-20/doc-ifyepsch1830968.shtml) By 新浪科技
+
+苹果公司这份声明虽然简单但含义明确：赞赏功能并非是苹果逼停的。微信本可以像其他开发者一样，选择App内购方式给公众号运营者；App Store 生态对所有开发者的要求均是一样的。
+
+## 开发
+
+#### 1) [天弘基金移动 App 客户端架构优化之路](http://blog.csdn.net/yaoyu/article/details/70184539) By 姚宇
+
+天弘·爱理财在前端后端使用的阿里蚂蚁金融云平台。第一个 iOS 版本是在传统的MVC的架构基础上封装了一个网络服务层构建而成。从 2.4 版本开始逐步重构采用 MVVM + 分层架构模式解耦。
+
+#### 2) [iOS 静态库，动态库与 Framework](https://skyline75489.github.io/post/2015-8-14_ios_static_dynamic_framework_learning.html) By Chester Liu
+
+去年 11 月我总结过在好房移动架构团队做 Framework 开发中的一些经验。本文作者对静态库、动态库、Framework 等基础概念作了介绍。
+
+
+## 工具
+
+#### 1) [Danger](https://blog.dianqk.org/2017/02/28/use-danger/) By DianQK
+
+在 Code Review 时，我们可能经常要去检查各种事情，有时我们会忘记，而 Danger 可以友好地完成。其配置非常简单，很容易集成到现有 CI 中。
+
+#### 2) [携程无线持续交付平台](http://mp.weixin.qq.com/s/6kf1x0wV1XpH3ycHKCBA7Q) By 刘李丰
+
+本文从集成、测试、发布、运营四个子平台来展开分享携程是如何一步步打造无线持续交付平台的。
+
+## 其他
+
+#### 1) [How does HTTPS actually work](http://robertheaton.com/2014/03/27/how-does-https-actually-work) By Rob Heaton
+
+讲得不算很深的科普文章一篇。看懂后，你就会明白公司下发的标装机多不安全了吧。即使是 HTTPS 请求的内容，也被监控得体无完肤！
+
+@end
+---

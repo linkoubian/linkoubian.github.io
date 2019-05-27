@@ -1,0 +1,48 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第三十五期）
+date: 2017-01-13 09:14:13 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 Swift 项目负责人变更、IGListKit 的应用实践、throttle 释疑、常用 iOS / Mac 软件推荐清单等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [苹果 Swift 语言创始人离职](https://lists.swift.org/pipermail/swift-evolution/Week-of-Mon-20170109/030063.html) By Chris Lattner
+
+Chris Lattner 在邮件里说对 Swift 项目的发展没有影响，自己依旧会是该项目的积极贡献者。
+
+## 开发
+
+#### 1) [Migrating an UITableView to IGListCollectionView](https://medium.com/cocoaacademymag/iglistkit-migrating-an-uitableview-to-iglistkitcollectionview-65a30cf9bac9) By Rodrigo Cavalcante
+
+本文介绍了如何从 UITableView 迁移到 Instagram 开源的 IGListCollectionView 方案。
+
+#### 2) [iOS 编程中 throttle 那些事](http://mrpeak.cn/blog/ios-throttle/) By MrPeak
+
+读完此文，你便会理解为何多张图片上传使用多个请求比放在一个请求的好处，你也会理解 AFN 源码中 Request Serializer 设计 throttleBandwidthWithPacketSize:delay: 这个方法的背后考量。
+
+#### 3) [iOS Crash 问题排名](http://www.jianshu.com/p/c7efbc283480)
+
+作者总结了 5 大 crash 问题，解决了这 5 大 crash 问题，基本上你的 app 就相对健壮许多。其余的崩溃问题就需要具体问题具体分析了。
+
+## 工具
+
+#### 1) [一位 iOS 开发工程师的常用软件](http://balloonsys.com/blog/2017/01/07/my-favourite-apps/) By Linkou Bian
+
+本文罗列了我在 iOS 及 macOS 上常用的约四十个软件。其中很多工具之前都有推荐，此次做了个小结。
+
+#### 2) [移动云测试平台 Kobiton](https://kobiton.com) By Kobiton
+
+使用 Chrome 试用了下该服务，提供 24 台 Android 设备及 28 台 iOS 设备供测试 APP。测试期间的操作会记录在 Session 日志里，对应时刻的屏幕也可自动截图保存。自动化测试方面支持 Appium 和 Selenium 框架，目前我没有进一步尝试。
+
+## 其他
+
+#### 1) [WTF is a funding round?](https://techcrunch.com/2017/01/08/wtf-is-a-funding-round/) By Katie Roof
+
+经常在 TechCrunch 上看到某某公司融资数千万、估值几个亿。本文解释了啥是融资、啥是估值、为啥不贷款、N 轮融资是啥意思、巨额融资算是创业成功吗等。
+
+@end

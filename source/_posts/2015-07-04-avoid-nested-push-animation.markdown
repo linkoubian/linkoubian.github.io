@@ -27,7 +27,7 @@ categories: iOS Navigation Nested-Push
 ### 方法二
 实际项目里有两个基于View实现的控件，点击时首先缩放一下控件里的图标，然后push一个页面。当点击控件A后，若快速点击控件B，就会发生nested push问题。
 
-方法二中控件带有一定时长的缩放动画，给了用户足够的反应时间去连续点击。而方法一中是基于GCD代码模拟，可精确控制nested push的间隔。示例代码参见[PushVC示例之Initial Commit](https://github.com/balloonsys/PushVC)
+方法二中控件带有一定时长的缩放动画，给了用户足够的反应时间去连续点击。而方法一中是基于GCD代码模拟，可精确控制nested push的间隔。示例代码参见[PushVC示例之Initial Commit](https://github.com/linkoubian/PushVC)
 
 ## 问题剖析
 首先，从UINavigationController这一层面考虑，在第一个push的动画还没完成，到来的第二个push请求，是否可以忽略？印象中貌似iOS 6就是这么处理的。

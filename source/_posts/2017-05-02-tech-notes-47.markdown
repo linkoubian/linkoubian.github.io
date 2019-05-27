@@ -1,0 +1,44 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第四十七期）
+date: 2017-05-02 19:13:31 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括如何为 React Native 开发配置 VS Code 插件以提高生产力、RN 在 Glow 的实践、Uber 的百名 iOS 工程师使用 Swift 重新架构移动应用的经验等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [苹果的现金储备](https://wallstreetcn.com/articles/3007744) By Wall street CN
+
+苹果拥有的 2570 亿美元现金储备中，有 1480 亿美元投资了企业债，530 亿美元投资了美国政府国债，210 亿美元投资了抵押债券和资产担保债权。
+
+## 开发
+
+#### 1) [React Native 在 Glow 的实践](http://tech.glowing.com/cn/react-native-at-glow/) By Allen Hsu
+
+本文记录了 React Native 在 Glow 的实践经验，并主要从 iOS 角度展开一些细节实现。
+
+#### 2) [Swift with a hundred engineers](https://www.skilled.io/u/swiftsummit/swift-with-a-hundred-engineers) By Tuomas Artman
+
+Uber 的 iOS App 拥有 5k 个文件，共 50 万行代码。为了提高构建速度，拆分出 70 多个组件。为了不影响启动时间，在 build 后把各 framework 中的文件合在一起。
+
+## 工具
+
+#### 1) [Vanilla-hide Mac Menu bar icons](http://matthewpalmer.net/vanilla/) By Matthew Palmer
+
+这是一款将 Mac 菜单栏的一部分工具图标收起来的免费小工具。喜欢 Bartender 但不愿付费的朋友可以尝试下。
+
+#### 2) [为 React Native 开发准备的 VS Code 插件](http://www.jianshu.com/p/caa802ee055b) By 顾浩鑫
+
+本文详细介绍了如何为 React Native 开发配置 VSCode 各种插件以提高生产力。
+
+## 其他
+
+#### 1) [How to Talk About Yourself in an Interview](https://stackoverflow.blog/2017/04/27/how-to-talk-about-yourself-in-an-interview/) By Nick Larsen
+
+不只是面试，在很多社交场合都需要介绍自己，介绍自己做过的事，要会讲故事、让人有兴趣听下去。
+
+@end

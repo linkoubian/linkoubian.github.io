@@ -1,0 +1,44 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第三十八期）
+date: 2017-02-24 11:44:36 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括苹果收购面部识别创业公司、iOS A/B Test 方案探索、去哪儿 React Native 应用实践分享等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Apple buys Israel’s facial recognition firm RealFace](http://www.timesofisrael.com/apple-buys-israels-facial-recognition-firm-realface-report/) By Shoshanna Solomon
+
+根据以色列周报的报道，苹果用数百万美金收购了一家以色列的面部识别创业公司 Realface。该公司曾发布过一款名为 Pickeez 的应用，它能帮助用户在多个社交平台中找出用户的最佳照片。
+
+## 开发
+
+#### 1) [教你如何从0到1实现组件化架构](http://www.jianshu.com/p/7b4667cde80b) By 袁峥
+
+文章罗列的主要是组件化架构中 Cocoapods 如何用，对于组件化的架构设计本身并没有涉及。
+
+#### 2) [iOS A/B Test 方案探索](http://blog.flight.dev.qunar.com/2017/01/09/ios-abtest-explore/) By 李剑飞
+
+近期团队做了很多 AB Test 的业务需求，在这种需求日益见多的情况下，我们不得不提升我们的代码组织方式，以适应或更好的在此类需求上维护我们的代码。本文主要阐述了业务团队在做 AB Test 的一些想法和思路。
+
+## 工具
+
+#### 1) Launchpad 页面按住 Option
+
+这是 macOS 出现删除应用按钮的最快捷方式了吧？
+
+#### 2) [Atom](https://atom.io)
+
+之前一直在用 Sublime，现在逐渐换成 Atom 了。最近在读 BNR 出品的 Front-End Web Development 一书，配置了 emmet / autocomplete-paths / linter 等插件后 Atom 算是把利器。
+
+## 其他
+
+#### 1) [Qunar React Native 大规模应用实践](http://mp.weixin.qq.com/s/ARWJDxSB2wJehxgoydtFQw) By 殷文昭
+
+Qunar React Native 是去哪儿网基于 React Native 定制的一套框架，让 RN 用起来更方便快捷，2016 年 3 月上线后已在公司内部大规模应用。透过 QRN 的大规模实践我们可以看到如何更好地去使用 RN。
+
+@end

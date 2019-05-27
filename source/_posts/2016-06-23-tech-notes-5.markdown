@@ -24,7 +24,7 @@ categories: 技术周报 iOS
 
 #### 1) [Xcode Source Editor Extension](http://www.russbishop.net/xcode-extensions)
 
-在菜单触发插件，XCSourceEditorCommand 拦截到该消息。我们从 invocation 中拿到 buffer，根据当前行可以获取到需要的数据。我的[示例](https://github.com/balloonsys/PAXcodePlugin)是直接增加一行NSLog代码，所以把数据设置回去即可。
+在菜单触发插件，XCSourceEditorCommand 拦截到该消息。我们从 invocation 中拿到 buffer，根据当前行可以获取到需要的数据。我的[示例](https://github.com/linkoubian/PAXcodePlugin)是直接增加一行NSLog代码，所以把数据设置回去即可。
 
 该教程不仅教你怎么做，还将可能遇到的问题及可尝试的解决方案写的很明白。我实现了一个打印当前方法名的插件，用以快速插入代码。另外，如果需要中文教程，可参看钟颖的[文章](https://zhuanlan.zhihu.com/p/21374552)。
 

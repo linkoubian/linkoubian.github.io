@@ -1,0 +1,44 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第四十一期）
+date: 2017-03-13 09:14:10 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括如何高效添加圆角效果，线程同步相关的知识点、问答式掌握 HTTPS 基本概念，以及 iOS App 签名的原理等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [苹果将知名安全专家 Jonathan Zdziarski 招至麾下](https://www.zdziarski.com/blog/?p=7016#aplo)
+
+如题。用 Jonathan 自己的话来说，跟一群有共同语言的人一同来捍卫用户隐私是一件关涉到良知的事情。
+
+## 开发
+
+#### 1) [iOS 高效添加圆角效果](http://www.jianshu.com/p/f970872fdc22) By  bestswifter
+
+设置 masksToBounds 会导致离屏渲染，但 iOS 9 只在设置圆角的视图够多时才反应出性能问题。主要的优化方法是用 Core Graphic API 生成一个 UIImage 再插入到 UIView 的子视图中，对于 UIImageView 则是直接将其 Image 裁剪成圆角。
+
+#### 2) [iOS 线程同步](http://www.dreamingwish.com/article/the-ios-multithreaded-programming-guide-4-thread-synchronization.html) By Dreamingwish
+
+synchronized 最慢，OSSpinLock 最快。OSpinlock 效率奇高主要原因是，并没有进入系统 kernel，使用它可以节省系统调用和上下文切换，如果临界区的执行时间过长则不建议使用。
+
+## 工具
+
+#### 1) [九个问题从入门到熟悉 HTTPS](http://fullstack.blog/2017/03/12/九个问题从入门到熟悉HTTPS/) By bestswifter
+
+作者 95 年的，就职于百度。对 HTTPS 的理解程度远超我身边的绝大部分同事。
+
+#### 2) [octotree](https://github.com/buunguyen/octotree) By Buu Nguyen
+
+平常浏览 Github 时，常常需要在代码目录里切来切去，非常麻烦。安装此浏览器插件后，省时省心。
+
+## 其他
+
+#### 1) [iOS App 签名的原理](http://blog.cnbang.net/tech/3386/) By 陈振焯
+
+iOS 签名机制挺复杂，各种证书，Provisioning Profile，entitlements，CertificateSigningRequest，p12，AppID，概念一堆，也很容易出错，本文尝试从原理出发，一步步推出为什么会有这么多概念，希望能有助于理解 iOS App 签名的原理和流程。
+
+@end

@@ -1,0 +1,44 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第四十二期）
+date: 2017-03-23 08:53:14 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括苹果产品更新摘要、基于 CollectionView 实现循环滚动的方案、网易的组件化实践、以及一位小米前员工的财务告白等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) 苹果产品更新
+
+苹果推出红色 iPhone；iPad Air 2 退休，代之以 A9 芯片的新 9.7 寸 iPad；iPhone SE 和 iPad mini 4 的存储也有变化；还更新了 Apple Watch 表带。
+
+## 开发
+
+#### 1) [Building a Infinitely-Scrolling Gallery With a UICollectionView](https://adoptioncurve.net/archives/2013/07/building-a-circular-gallery-with-a-uicollectionview/) By Tim Duckett
+
+本文提供了支持广告图的循环滚动方案，如果你没有亲手写过而只是用别人的组件，很可能忽视了其中的玄机。
+
+#### 2) [iOS 组件化实践方案](http://www.jianshu.com/p/196f66d31543) By philon
+
+网易的 iOS 工程师在参考同行的讨论和之前的 LDBusBundle 方案基础上，提炼出了一个适合中小型应用的 LDBusMediator 中间件。
+
+## 工具
+
+#### 1) [UPCarouselFlowLayout](https://github.com/ink-spot/UPCarouselFlowLayout) By Paul Ulric
+
+我实现新版二手房首页的轮播图效果，很大程度的参考了作者的布局代码。
+
+#### 2) [在线工具](http://tool.lu)
+
+包含正则表达式测试工具、useragent 分析、时间戳转换...
+
+## 其他
+
+#### 1) [一位小米前员工的财务告白](http://mp.weixin.qq.com/s/fNZdQxx1C_DF3tw25hEt5Q) By 曲哲
+
+并不是每个人都有赶上时代与公司风口的洞察力，或者是运气。
+
+@end

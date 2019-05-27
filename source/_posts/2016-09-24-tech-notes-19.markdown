@@ -29,7 +29,7 @@ categories: 技术周报 iOS
 
 作者深入分析了 React Native 程序调试相关的原理与步骤。
 
-# 3) [React Native Tutorial: Building Apps with JavaScript](https://www.raywenderlich.com/126063/react-native-tutorial) By Tom Elliott
+#### 3) [React Native Tutorial: Building Apps with JavaScript](https://www.raywenderlich.com/126063/react-native-tutorial) By Tom Elliott
 
 著名的 Raywenderlich 博客发的一篇 React Native 教程，详细介绍了如何开发一个房产搜索应用。
 

@@ -1,0 +1,46 @@
+---
+layout: post
+title: 平安好房iOS开发团队技术周报（第四十四期）
+date: 2017-04-15 10:53:56 +0800
+comments: true
+categories: 技术周报 iOS
+---
+本期周报主要包括 Uber 外卖业务使用 React Native 过程中的权衡、手机 QQ Hybrid 的架构如何优化演进、微软在 RN 基础上推出的跨平台框架等内容。
+
+<!--more-->
+
+## 资讯
+
+#### 1) [Apple Said to Near Road Tests of Self-Driving Car Software](https://www.bloomberg.com/amp/news/articles/2017-04-14/apple-gets-dmv-approval-to-test-self-driving-cars-in-california) By Mark Gurman
+
+苹果已经获得加州的许可，可以在该州测试无人驾驶汽车。
+
+## 开发
+
+#### 1) [Powering UberEATS with React Native](https://eng.uber.com/ubereats-react-native/) By Chris Lewis
+
+Uber 基于 React Native 技术构建的 Restaurant Dashboard 应用为送餐业务 UberEATS 提供支持。本文介绍了决定使用 React Native，以及确保为餐厅提供可靠、稳健的用户体验过程中所进行的权衡和考虑。
+
+#### 2) [手机 QQ Hybrid 的架构演进](http://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2650995689&idx=1&sn=4f77f121345004ae6e18f4b945e46f8e) By 涂强
+
+随着前端开发的兴起，QQ也逐渐演变为Web与原生终端混合的开发模式。QQ 团队除了采用动态 CDN、后台渲染等全栈手段优化体验，也构建了围绕速度、成功率、页面异常等维度的监控体系来保障服务质量。
+
+## 工具
+
+#### 1) [React XP](https://github.com/Microsoft/reactxp) By Microsoft
+
+微软 Skype 团队开源的跨平台框架, 目前支持 web (React JS), iOS (React Native), Android (React Native) and Windows UWP (React Native) 等平台。
+
+#### 2) [iOS Continous Integration](http://thebugcode.github.io/ios-continous-integration-choosing-a-build-server-and-tooling/) By The Code Bug
+
+本文对比了 Xcode Server, Jenkins, Travis 以及 fastlane 等多种持续集成工具。
+
+## 其他
+
+#### 1) [Education of a Programmer](https://hackernoon.com/education-of-a-programmer-aaecf2d35312) By Terry Crowley
+
+作者在微软服役 21 年离职后写就的长文，其中有句话很受欢迎：
+
+> The deepest learning happens when you struggle with truly hard problems.
+
+@end

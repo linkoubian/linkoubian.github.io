@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://balloonsys.github.io
+url: https://linkoubian.github.io
 title: Balloonsys Inc.
 subtitle: Just a blog now.
 author: Linkou Bian
@@ -91,8 +91,8 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: balloonsys
-disqus_show_comment_count: true
+disqus_short_name: 
+disqus_show_comment_count: false
 
 # Google Analytics
 google_analytics_tracking_id:
